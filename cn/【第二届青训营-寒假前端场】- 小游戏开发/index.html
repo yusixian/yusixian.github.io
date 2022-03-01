@@ -1,0 +1,1567 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
+<head>
+  <!-- Google Analytics -->
+  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-xxxxxx-xx"></script>
+    <script type="text/javascript">
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-xxxxxx-xx');
+    </script>
+  
+
+  <!-- Baidu Tongji -->
+  
+    <script type="text/javascript">
+      // Originial
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  <!-- Baidu Push -->
+  
+    <script>
+      (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+      })();
+    </script>
+  
+
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <meta name="google-site-verification" content="lxDfCplOZbIzjhG34NuQBgu2gdyRlAtMB4utP5AgEBc"/>
+  <meta name="baidu-site-verification" content="PpzM9WxOJU"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="一个正在努力学习前端的程序媛qwq"/>
+  <meta name="keyword" content="前端, cos, blog, css, html, c++"/>
+  <link rel="shortcut icon" href="/img/avatar/cos.jpg"/>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
+
+  
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/beantech.min.css"/>
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="/css/highlight.css"/>
+    <link rel="stylesheet" href="/css/widget.css"/>
+    <link rel="stylesheet" href="/css/rocket.css"/>
+    <link rel="stylesheet" href="/css/signature.css"/>
+    <link rel="stylesheet" href="/css/catalog.css"/>
+    <link rel="stylesheet" href="/css/livemylife.css"/>
+
+    
+      <!-- wave start -->
+      <link rel="stylesheet" href="/css/wave.css"/>
+      <!-- wave end -->
+    
+
+    
+      <!-- top start (article top hot config) -->
+      <link rel="stylesheet" href="/css/top.css"/>
+      <!-- top end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="/css/scroll.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+      <!-- viewer start (Picture preview) -->
+      <link rel="stylesheet" href="/css/viewer.min.css"/>
+      <!-- viewer end -->
+    
+
+    
+      <!-- Search start -->
+      <link rel="stylesheet" href="/css/search.css"/>
+      <!-- Search end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="/css/themecolor.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+
+    
+      <!-- gitalk start -->
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"> -->
+      <link rel="stylesheet" href="/css/gitalk.css"/>
+      <!-- gitalk end -->
+    
+  
+
+  <!-- Custom Fonts -->
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+  <!-- Hux change font-awesome CDN to qiniu -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Hux Delete, sad but pending in China <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> <link
+  href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/ css'> -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+
+  <!-- ga & ba script hoook -->
+  <link rel="canonical" href="http://yoursite-url/cn/【第二届青训营-寒假前端场】- 小游戏开发/">
+  <title>
+    
+      【第二届青训营-寒假前端场】- 「小游戏开发」笔记 - cos的博客 - WA的一声就哭了
+    
+  </title>
+<meta name="generator" content="Hexo 5.4.1"></head>
+
+
+<!-- hack iOS CSS :active style -->
+
+	<body ontouchstart="" class="body--light body--light">
+
+
+		<!-- ThemeColor -->
+		
+		<!-- ThemeColor -->
+<style type="text/css">
+  .body--light {
+    --light-mode: none;
+    --dark-mode: block;
+  }
+  .body--dark {
+    --light-mode: block;
+    --dark-mode: none;
+  }
+  i.mdui-icon.material-icons.light-mode {
+    display: var(--light-mode);
+  }
+  i.mdui-icon.material-icons.dark-mode {
+    display: var(--dark-mode);
+  }
+</style>
+<div class="toggle" onclick="document.body.classList.toggle('body--dark')">
+  <i class="mdui-icon material-icons light-mode"></i>
+  <i class="mdui-icon material-icons dark-mode"></i>
+</div>
+<script>
+  //getCookieValue
+  function getCookieValue(a) {
+    var b = document.cookie.match('(^|[^;]+)\\s*' + a + '\\s*=\\s*([^;]+)');
+    return b
+      ? b.pop()
+      : '';
+  }
+  let themeMode = 'light';
+  if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
+    let dbody = document.body.classList;
+    themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
+  }
+
+  //setCookieValue
+  var toggleBtn = document.querySelector(".toggle");
+  toggleBtn.addEventListener("click", function () {
+    var e = document.body.classList.contains("body--dark");
+    var cookieString = e
+      ? "dark"
+      : "light";
+    var exp = new Date();
+    exp.setTime(exp.getTime() + 3 * 24 * 60 * 60 * 1000); //3天过期
+    document.cookie = "sb-color-mode=" + cookieString + ";expires=" + exp.toGMTString() + ";path=/";
+  });
+</script>
+
+		
+
+		<!-- Gitter -->
+		
+		<!-- Gitter -->
+<!-- Docs:https://gitter.im/?utm_source=left-menu-logo -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'cosine_yu_blog/community'
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+		
+
+		<!-- Navigation (contains search)-->
+		<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">cos的博客</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- Known Issue, found by Hux: <nav>'s height woule be hold on by its content. so, when navbar scale out, the <nav> will cover tags. also mask any touch event of tags, unfortunately. -->
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/">首页</a>
+          </li>
+
+          
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/archive/">
+              
+              归档
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              标签
+              
+              
+            </a>
+          </li>
+          
+          
+
+          
+          <li>
+            <a class="popup-trigger">
+              <span class="search-icon"></span>搜索</a>
+          </li>
+          
+
+          <!-- LangSelect -->
+          
+          
+          
+          
+          
+        </ul>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+<!-- progress -->
+<div id="progress">
+  <div class="line" style="width: 0%;"></div>
+</div>
+
+<script>
+  // Drop Bootstarp low-performance Navbar Use customize navbar with high-quality material design animation in high-perf jank-free CSS3 implementation
+  var $body = document.body;
+  var $toggle = document.querySelector('.navbar-toggle');
+  var $navbar = document.querySelector('#huxblog_navbar');
+  var $collapse = document.querySelector('.navbar-collapse');
+
+  $toggle.addEventListener('click', handleMagic)
+
+  function handleMagic(e) {
+    if ($navbar.className.indexOf('in') > 0) {
+      // CLOSE
+      $navbar.className = " ";
+      // wait until animation end.
+      setTimeout(function() {
+        // prevent frequently toggle
+        if ($navbar.className.indexOf('in') < 0) {
+          $collapse.style.height = "0px"
+        }
+      }, 400)
+    } else {
+      // OPEN
+      $collapse.style.height = "auto"
+      $navbar.className += " in";
+    }
+  }
+</script>
+
+
+		<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
+		<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+
+  <style type="text/css">
+    .body--light {
+      /* intro-header */
+      --intro-header-background-image-url-home: url('/img/header_img/76445057_p0.jpg');
+      --intro-header-background-image-url-post: url('/img/header_img/lml_bg.jpg');
+      --intro-header-background-image-url-page: url('//img/header_img/lml_bg.jpg');
+    }
+    .body--dark {
+      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/76445057_p0.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/lml_bg.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('//img/header_img/lml_bg.jpg');
+    }
+
+    header.intro-header {
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('/img/header_img/lml_bg.jpg'); */
+      
+    }
+
+    
+      #signature {/*signature*/
+        background-image: url('/img/signature/mysignature.png');
+      }
+    
+  </style>
+
+
+
+
+
+<header class="intro-header">
+  <!-- Signature -->
+  <div id="signature">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#前端" title="前端">前端</a>
+              
+              <a class="tag" href="/tags/#游戏开发" title="游戏开发">游戏开发</a>
+              
+              <a class="tag" href="/tags/#游戏引擎" title="游戏引擎">游戏引擎</a>
+              
+            </div>
+            <h1>【第二届青训营-寒假前端场】- 「小游戏开发」笔记</h1>
+            <h2 class="subheading">本节课讲了前端游戏场景下的游戏开发与普通游戏开发的差异，并且介绍了一些游戏引擎，给出了游戏开发的技能树，在最后也简单介绍了利用Cocos Creator或PixiJS进行游戏开发的步骤。</h2>
+            <span class="meta">
+              Posted by cos on
+              2022-01-29
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              Estimated Reading Time <span class="post-count">14</span> Minutes
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              Words <span class="post-count">3.9k</span> In Total
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- waveoverlay start -->
+  <div class="preview-overlay">
+    <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+      </defs>
+      <g class="preview-parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill=var(--gentle-wave1)></use>
+        <use xlink:href="#gentle-wave" x="48" y="3" fill=var(--gentle-wave2)></use>
+        <use xlink:href="#gentle-wave" x="48" y="5" fill=var(--gentle-wave3)></use>
+        <use xlink:href="#gentle-wave" x="48" y="7" fill=var(--gentle-wave)></use>
+      </g>
+    </svg>
+  </div>
+  <!-- waveoverlay end -->
+  
+
+</header>
+
+
+
+		<!-- Main Content (Post contains
+	Pager、
+	tip、
+	socialshare、
+	gitalk、gitment、disqus-comment、
+	Catalog、
+	Sidebar、
+	Featured-Tags、
+	Friends Blog、
+	anchorjs、
+	) -->
+		<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <h1>前端场景下的游戏开发</h1>
+<h2 id="开发角色和链路">开发角色和链路</h2>
+<p>游戏开发的团队分工</p>
+<p>组建一个最小但最完整的游戏开发团队只需要3个人:策划、程序、美术。</p>
+<p>当然，能力足够强的话可以作为独立开发者。</p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d2b19ef48261481ab4cbb48c14295e0f~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
+<p><strong>基本链路</strong></p>
+<p>立项阶段 -&gt; 原型阶段 -&gt; Alpha版本 -&gt; Beta阶段 -&gt; 运营阶段</p>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/93319b604a4d46df9d49cbf8f80f7969~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
+<h2 id="为什么要用游戏引擎">为什么要用游戏引擎</h2>
+<p>游戏引擎最大的优势：渲染</p>
+<blockquote>
+<p>引擎的诞生就是因为一家公司做了一款游戏，做下一款游戏时复用了上一款游戏的代码，后来发现这些代码几乎每个游戏都会用到，抽离出来就成了一个引擎。</p>
+<p>如果不使用引擎，你可以做复杂的动效渲染和交互吗？当然可以。方便吗?不一定。</p>
+<p>所以游戏引擎更像是<strong>一套解决方案</strong>，让你在制作某一类型的产品的时候能够提高你的开发效率。</p>
+<p>你要做多平台移植? React Native、Weex、 Cordova等方案也可以做到。</p>
+<p>你要做物理效果? MatterJS、 ammo.js等物理引擎可以用。</p>
+<p>你要做动画?？CSS实现又不是不行。复杂点？封装一个动画库。</p>
+</blockquote>
+<p>那为什么要用游戏引擎呢？</p>
+<ul>
+<li>提供一套完整的实现方案，不需要你再自己去拼凑、封装</li>
+<li><strong>花更少的时间做出更好的效果</strong>，特别是关于渲染效率和性能优化。</li>
+<li>提供游戏开发时需要的常见功能
+<ul>
+<li>引擎会提供许多组件，使用这些组件能缩短开发时间，让游戏开发变得更简单</li>
+<li>专业引擎通常会能比自制引擎表现出更好的性能。</li>
+</ul>
+</li>
+</ul>
+<p>游戏引擎通常会包含渲染器，2D/3D图形元素，碰撞检测，物理引擎，声音，控制器支持，动画等<br>
+部分。</p>
+<h2 id="前端过渡到游戏开发">前端过渡到游戏开发</h2>
+<p>首先要有一个明确的认知：<strong>前端开发和游戏开发不是相斥的。</strong></p>
+<p>现在市场上很多<strong>H5游戏、小游戏</strong>都是Web前端开发制作的，而不是专门的游戏开发团队、专业的游戏研发同学开发。其原因可能在于:</p>
+<ol>
+<li>接触前端开发的研发数量远大于接触游戏开发的数量（<strong>招聘成本高</strong>）</li>
+<li>2d游戏引擎的上手门槛已经足够低（<strong>易上手</strong>）</li>
+<li>活动H5中的游戏玩法的实现方式比较模糊（<strong>开发界限模糊</strong>）</li>
+<li>现在很多主流的2d游戏引擎都支持使用Javascript进行开发同时使用相关的工程化能力，也是游戏开发向web前端开发靠拢的一种表现。</li>
+</ol>
+<p>因此，以web前端开发的视角看2d游戏引擎，无非是一套框架、一套解决方案而已。</p>
+<p>但是开发理念上还是有差别的：<strong>传统游戏开发更关注内容。</strong></p>
+<h1>游戏引擎</h1>
+<h2 id="市面上常见游戏引擎">市面上常见游戏引擎</h2>
+<p>我们暂且不讨论一些端游的引擎， 比如</p>
+<ul>
+<li>Unreal （虚幻引擎，代表作《PUBG》、《GTA5》）、</li>
+<li>Source （起源引擎，代表作(《Cs》 、《Dota2》 ）</li>
+<li>Frostbite Engine （寒霜引擎，代表作《战地》、《极品飞车18》）、、</li>
+<li>Unity3D （代表作《炉石传说》、《王者荣耀》）。</li>
+</ul>
+<p>路要一步步走，我们先看看我们<strong>作为前端开发最容易上手的引擎。</strong></p>
+<h3 id="特定类型的客户端游戏引擎">特定类型的客户端游戏引擎</h3>
+<h4 id="The-NVL-Maker">The NVL Maker</h4>
+<p><a target="_blank" rel="noopener" href="https://www.nvlmaker.net/">THE NVL Maker</a>文字冒险游戏制作器</p>
+<p><strong>NoCode</strong>形式的开发，只需要写文字脚本加上一定的配置就可以生成一个文字冒险游戏。</p>
+<p>代表作：《Fate/stay night》和steam上一众GAL Game。</p>
+<p>当然，由于缺乏迭代和运营，该游戏引擎算是比较小众的。也有一个适用于前端的库AVG.js Project。（内核是PixiJS作为渲染引擎）</p>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/37668e7d322248d9b0f17683d94e7e3e~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
+<h4 id="RPG-Maker"><strong>RPG Maker</strong></h4>
+<p>RPG Maker可以<strong>Low Code</strong>搭建一个关卡类型的游戏，适合代码能力不强但是想发挥自己的创意的开发者。</p>
+<ul>
+<li>由RPGMaker系列游戏引擎创造的Steam畅销游戏《To The Moon》</li>
+</ul>
+<h3 id="Web游戏引擎">Web游戏引擎</h3>
+<p>利用Canvas和WebGL为底层技术抽象的图像绘制库（往往还附带一些其他的功能）</p>
+<p>Web游戏引擎的通用能力:</p>
+<ul>
+<li><strong>预加载</strong>
+<ul>
+<li>游戏中大量<strong>的静态素材，包括场景、元素、声音、动画、模型、贴图等，如果以原生JS进行请求，并统筹请求时间和加载的时机，将会非常麻烦。</strong></li>
+<li>预加载引擎将加载时机、加载过程加以<strong>抽象</strong>，<strong>解决加载编码中的效率问题</strong>。</li>
+</ul>
+</li>
+<li><strong>展示与图层、组合系统</strong>
+<ul>
+<li>对于Web游戏编程而言，往往选择Canvas或WebGL作为渲染方式（大家可以想想为什么不用DOM作为渲染方式? ）。</li>
+<li>Canvas和WebGL作为底层的APl，接口非常基础，需要<strong>大量的编码来编写简单的展示</strong>。而且图形之间没有组合和图层，<strong>很难处理元素组合和图层问题。</strong></li>
+<li><strong>渲染引擎和图层、组合系统应运而生</strong>。</li>
+</ul>
+</li>
+<li><strong>动画系统</strong>：动画往往被分为<strong>缓动动画</strong>和<strong>逐帧动画</strong>，这里讨论缓动动画系统。
+<ul>
+<li>缓动动画系统在原生JS中需要<strong>搭配帧渲染</strong>进行考量而进行书写，代码量和思考量巨大，抽象程度低，所以需要游戏引擎动画系统。</li>
+</ul>
+</li>
+<li><strong>音效和声音系统</strong>：
+<ul>
+<li>游戏相较于普通的Web前端而言需要更加<strong>立体、及时的反馈</strong>，声音和音效是反馈的重要组成部分。</li>
+<li><strong>声音和音效系统往往包含了声音的播放、音量、截止、暂停等功能的集成。</strong></li>
+</ul>
+</li>
+</ul>
+<h4 id="Cocos">Cocos</h4>
+<p><strong>优势</strong></p>
+<ul>
+<li>平台支持能力好</li>
+<li>完善的游戏功能支持</li>
+<li>生态较好</li>
+</ul>
+<p><strong>缺点</strong></p>
+<ul>
+<li>3D能力仍在建设中</li>
+<li>版本迭代过快</li>
+</ul>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/50f2a6ea4fb24aa1b1e586c2f90c44db~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
+<h4 id="Laya">Laya</h4>
+<p><strong>优势</strong></p>
+<ul>
+<li>3D能力比较成熟，号称市场占有率90%</li>
+<li>支持]S、TS、AS</li>
+<li>引擎体积小</li>
+</ul>
+<p><strong>缺点</strong></p>
+<ul>
+<li>界面能力不友好</li>
+<li>生态很差</li>
+</ul>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9512c8eb4d534053ac9cd6e7499b3c38~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
+<h4 id="Egret">Egret</h4>
+<p><strong>优势</strong></p>
+<ul>
+<li>工具链比较完善</li>
+<li>第三方库支持好</li>
+<li>企业定制能力强</li>
+</ul>
+<p><strong>缺点</strong></p>
+<ul>
+<li>更新迭代遭瓶颈</li>
+<li>生态较差</li>
+</ul>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7bf568c8ee034a14a27f0d91d339c833~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
+<p>可以看到上述游戏引擎的界面都是很相似的</p>
+<h4 id="CreateJS-Phaser">CreateJS &amp; Phaser</h4>
+<p>这两个游戏引擎没有可视化界面。</p>
+<p>以CreateJS为例:<img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c42808563fa241948b06a224a94303c1~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
+<p>它是多个库的集合</p>
+<ul>
+<li>
+<p>EASELS (控制素材展示与组合) 、TWEENJS (控制素材缓动动画)、 SOUNDIS（控制声音）、PRELOADIS （控制加载），通过预加载后的素材展示、动画、声音构成游戏。Phaser游戏引擎，除了CreateJS 为基础的展示、声音、动画、加载系统</p>
+</li>
+<li>
+<p>还设计了摄像机、物理引擎、内置浏览器、插件系统等高级功能。</p>
+</li>
+</ul>
+<h3 id="功能引擎">功能引擎</h3>
+<p>大型游戏引擎往往是由小的功能引擎组装成的，一个大型游戏引擎往往包含渲染引擎、物理引擎、UI系统、声音系统、动画系统、粒子系统、骨骼系统、网络系统等组合而成。其中最重要的便是渲染引擎和物理引擎。功能引擎是专注某个方向能力的引擎，其特点是体积小、功能完善。特别是Pixi.js和Three.js这两个渲染引擎，通常被误以为是一个完整的游戏引擎，但它们是专注渲染能力的渲染引擎。</p>
+<p>下面介绍几种可能会经常接触的功能引擎:</p>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/600c9e3952394924b790c74d06c3b247~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
+<ul>
+<li>Pixi.js
+<ul>
+<li>2D渲染能力强（尤其是WebGL）</li>
+<li>复杂动画系统、复杂图片渲染形式、制作自己的2d游戏引擎等</li>
+</ul>
+</li>
+<li>Three.js
+<ul>
+<li>3D渲染能力强</li>
+<li>适合3D效果演示或3D类的H5游戏或小游戏</li>
+</ul>
+</li>
+<li>Box2D.js
+<ul>
+<li>2d物理引擎</li>
+<li>物体仿真能力</li>
+</ul>
+</li>
+</ul>
+<h2 id="2D游戏引擎的技术架构">2D游戏引擎的技术架构</h2>
+<p>以Cocos引擎的架构为例子：</p>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a7ea1a5dd8ff42a396872d8472b06f7f~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
+<ul>
+<li>
+<p>render（渲染器）、collision（）、Physical（）</p>
+</li>
+<li>
+<p>适配器 for PC、IOS、Andriod、H5…… 以及各平台的构建工具</p>
+</li>
+<li>
+<p>运行时</p>
+</li>
+</ul>
+<h2 id="Web游戏引擎的渲染原理">Web游戏引擎的渲染原理</h2>
+<p>以Pixi的渲染流程为例子</p>
+<p>大致流程如下</p>
+<ol>
+<li>
+<p>创建一个Renderer渲染器，获取它的view (一个canvas对象) ，添加到Dom Tree中。（或者指定Dom Tree中已经存在的canvas对象作为view）</p>
+</li>
+<li>
+<p>在MainLoop (主循环）中调用Renderer.render()并传入一个<strong>DisplayObject作为根节点开发渲染</strong>。</p>
+</li>
+<li>
+<p>从场景树的根节点开始，<strong>以zIndex为序从小到大进行深度优先遍历</strong>，对每个节点进行渲染操作，由后往前把整个场景绘制一次。(CanvasRenderer)</p>
+</li>
+<li>
+<p>WebGL的render方法执行过程（科普）</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">render</span>(<span class="params">displayObject, renderTexture, clear, transform, skipUpdateTransform</span>) &#123;</span><br><span class="line">    <span class="comment">// 1.应用变换(GPU级别) </span></span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">projection</span>.<span class="property">transform</span> = transform;</span><br><span class="line">    <span class="comment">// 2.渲染纹理绑定与BatchRendering处理</span></span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">renderTexture</span>.<span class="title function_">bind</span>(renderTexture);</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">batch</span>.<span class="property">currentRenderer</span>.<span class="title function_">start</span>();</span><br><span class="line">    <span class="comment">// 3.执行元素渲染，将顶点、索引和纹理等数据添加到BatchRendering中</span></span><br><span class="line">    display0bject.<span class="title function_">render</span>();</span><br><span class="line">    <span class="comment">// 4.执行renderer的绘制方法</span></span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">batch</span>.<span class="property">currentRenderer</span>.<span class="title function_">flush</span>();</span><br><span class="line">    <span class="comment">//根据传入的C Lear与renderTexture参数对纹理的处理.。.</span></span><br><span class="line">    <span class="comment">// 5.清空变换</span></span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">projection</span>.<span class="property">transform</span> = <span class="literal">null</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>Canvas的render方法执行过程</p>
+<p>以Pixi的渲染流程为例子：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">render</span>(<span class="params">displayobject, renderTexture, clear, transform, skipUpdateTransform</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> context = <span class="variable language_">this</span>.<span class="property">context</span>;</span><br><span class="line">    <span class="comment">// 1.当前状态压入状态栈</span></span><br><span class="line">    context.<span class="title function_">save</span>();</span><br><span class="line">    <span class="comment">// 2.初始化变换及样式属性</span></span><br><span class="line">    context.<span class="title function_">setTransform</span>(<span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line">    context.<span class="property">globaLAlpha</span> = <span class="number">1</span>;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">_activeBlendMode</span> = <span class="variable constant_">BLEND_MODES</span>.<span class="property">NORMAL</span>;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">_outerBlend</span> = <span class="literal">false</span>;</span><br><span class="line">    context.<span class="property">globalCompositeOperation</span> = <span class="variable language_">this</span>.<span class="property">blendModes</span>[<span class="variable constant_">BLEND_MODES</span>.<span class="property">NORMAL</span>];</span><br><span class="line">    <span class="comment">// 3.执行元素渲染</span></span><br><span class="line">    <span class="keyword">const</span> tempContext = <span class="variable language_">this</span>.<span class="property">context</span>;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">context</span> = context;</span><br><span class="line">    display0bject.<span class="title function_">renderCanvas</span>(<span class="variable language_">this</span>); </span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">context</span> = tempContext;</span><br><span class="line">    <span class="comment">// 4.从状态栈恢复之前状态</span></span><br><span class="line">    context.<span class="title function_">restore</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h1>游戏开发的技能树</h1>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0eefa193458c4de386328b087ebe7bf6~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
+<h1>PixiJS+Web开发</h1>
+<h2 id="Pixi简介">Pixi简介</h2>
+<p><a target="_blank" rel="noopener" href="https://pixijs.com/">PixiJS</a>官网乍一看很像一个游戏引擎，但是上面也明确说了：“用最快、最灵活的2DWebGL渲染器创建精美的数字内容”(谷歌机翻)。</p>
+<ul>
+<li>它本质上还是一个<strong>渲染引擎</strong>，而且自称做得最好。</li>
+<li>它<strong>不仅仅能做游戏</strong>，还能使用这个技术去<strong>创建任何交互式内容</strong>，比如<strong>APP</strong>， 还能够在它的基础上做自己的游戏引擎。(AVG.js 和Phaserjs 的渲染引擎就是Pixi)</li>
+</ul>
+<p>前置技术栈</p>
+<ul>
+<li>Web前端开发基础</li>
+<li>用过JSON文件，知道是用来干什么的</li>
+<li>了解过Canvas的绘图API</li>
+</ul>
+<h2 id="在web项目中加载一个游戏玩法">在web项目中加载一个游戏玩法</h2>
+<ol>
+<li>
+<p>安装和引入</p>
+<ul>
+<li><strong>npm安装</strong> 或者 通过script标签引入<code>&lt;script src=”pixi.min.js&quot; &gt;&lt;/script&gt;</code></li>
+</ul>
+</li>
+<li>
+<p>创建Pixi应用和舞台（Stage）</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 第一步，创建一个显示的矩形区域，创建一个Pixi应用实例的时候会自动创建一个canvas并计算出怎么让你的图片在canvas中显示。</span></span><br><span class="line"><span class="keyword">let</span> app = <span class="keyword">new</span> <span class="variable constant_">PIXI</span>.<span class="title class_">Application</span>(&#123;<span class="attr">width</span>: <span class="number">250</span>, <span class="attr">height</span>: <span class="number">250</span> &#125;);</span><br><span class="line"><span class="comment">// app.stage就是一个[舞台] 它包含了所有你想用Pixi显示的东西。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 第二步，把canvas添加到DOM Tree中。这个时候就显示了一个250*250的纯黑色的界面</span></span><br><span class="line"><span class="variable language_">document</span>.<span class="property">body</span>.<span class="title function_">appendChild</span>(app.<span class="property">view</span>);</span><br><span class="line"><span class="comment">// PIXI.Application计算了应该使用Canvas还是WebGL去渲染图像，取决于当前浏览器支持哪一个， 一般优先使用WebGL。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 如果你希望Canvas是透明的，或者强制使用Canvas模式，可以设置</span></span><br><span class="line"><span class="keyword">let</span> app = <span class="keyword">new</span> <span class="variable constant_">PIXI</span>.<span class="title class_">Application</span>(&#123;</span><br><span class="line">    <span class="attr">width</span>: <span class="number">250</span>,</span><br><span class="line">    <span class="attr">height</span>: <span class="number">250</span>,</span><br><span class="line">    <span class="attr">transparent</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">forceCanvas</span>: <span class="literal">true</span>,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>显示一张图片</p>
+<p>概念理解：Sprite（精灵）</p>
+<ul>
+<li>
+<p>学习CSS的时候可能有听过精灵图/雪碧图的概念，但是不一样。Pixi或者更多游戏引擎中Sprite的概念是一个用于<strong>承载图像的对象</strong>，你能够<strong>控制</strong>它的大小、位置等属性来产生交互、动画。<strong>创建和控制 Sprite</strong> 是学习Pixi很重要的部分</p>
+</li>
+<li>
+<p>而创建一个Sprite需要了解图片怎么加载到Pixi中。这里就有一个概念：<strong>纹理缓存（指可以被GPU处理的图像）</strong></p>
+<ul>
+<li>
+<p>Pixi使用纹理缓存来存储和引用Sprite所需要的纹理。纹理的名称字符串就是图像的地址。比如现在有一个&quot;images/cat.png&quot;,我们就可以使用<code>PIXl.utils.TextureCache[&quot;images/cat.png&quot;]</code>来在纹理缓存找到他</p>
+</li>
+<li>
+<p>找到它当然要先把它<strong>转化成纹理存储</strong>在纹理缓存中，可以使用<code>PIXI.loader</code>加载进来。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable constant_">PIXI</span>.<span class="property">loader</span>.<span class="title function_">add</span>(<span class="string">&quot;images/cat.png&quot;</span>).<span class="title function_">load</span>(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">let</span> sprite = <span class="keyword">new</span> <span class="variable constant_">PIXI</span>.<span class="title class_">Sprite</span>(</span><br><span class="line">        <span class="variable constant_">PIXI</span>.<span class="property">loader</span>.<span class="property">resources</span>[<span class="string">&quot;images/cat.png&quot;</span>].<span class="property">texture</span></span><br><span class="line">    );</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li>
+<p>现在已经创建了一个Sprite了，下一步就是显示它，将他添加到舞台中</p>
+<p><code>app.stage.addChild(sprite);</code></p>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3576ca213d864276b857da604d86fe74~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
+</li>
+</ul>
+</li>
+<li>
+<p>让图片动起来</p>
+<p>前面我们说到了可以设置Sprite的位置和大小，那如果我希望每帧移动一个像素呢？这时候就需要用到游戏循环。（<strong>任何游戏循环的代码都会每帧调用一次</strong>）</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">app.<span class="property">tiker</span>.<span class="title function_">add</span>(<span class="function"><span class="params">delta</span> =&gt;</span> &#123;</span><br><span class="line">	sprite.<span class="property">x</span> += <span class="number">11</span>;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>然后加亿点点细节<a target="_blank" rel="noopener" href="https://pixijs.io/examples/#/demos-basic/cacheAsBitmap.js">CacheAsBitmap - PixiJS Examples</a></p>
+</li>
+</ol>
+<h1>Cocos Creator编辑器开发</h1>
+<h2 id="Cocos-Creater介绍">Cocos Creater介绍</h2>
+<p>Q：Cocos Creator是游戏引擎吗?</p>
+<p>A：Cocos+界面编辑 它是一个<strong>完整的游戏开发解决方案</strong>，包含了轻量高效的<strong>跨平台游戏引擎</strong>，以及能让你更快速开发<br>
+游戏所需要的各种<strong>图形界面工具</strong>。</p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7f167c9df12c4eeaab85ad179a4c7686~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
+<h2 id="编辑器集成的能力">编辑器集成的能力</h2>
+<h3 id="Cocos的工作流">Cocos的工作流</h3>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/980f6078f6d54e45b6954cf615eccbfc~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
+<p>下载并创建 -&gt; 设计场景&amp;开发 -&gt; 预览和调试 -&gt;  ANYSDK接入 -&gt; 打包发布 -&gt; Cocos Runtime</p>
+<p>上图展示了Cocos的工作流</p>
+<h3 id="创建项目">创建项目</h3>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/67121fdac5f043a1b213bdf59228178f~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
+<h3 id="搭建场景">搭建场景</h3>
+<p>Cocos的工作流——<strong>数据驱动</strong>和场景为核心、组件式开发为核心</p>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/02f481104d614872bea1d70292760d3b~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
+<p>可以看到，不需要了解css等直接通过右侧的属性检查器就可以调整图片大小等，低代码</p>
+<p>结点（cc.Node）是承载组建的实体，我们将具有各种功能的组件（如Sprite、SPine、Label）挂载到节点上来让节点具有各式各样的表现和功能。</p>
+<p>由节点来构成节点树，节点树影响真实的渲染层级</p>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/27368cab4d7e412d8419396ebf210a28~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
+<h3 id="导入资源-显示资源">导入资源 + 显示资源</h3>
+<p>从操作系统中的其他窗口拖拽文件到Cocos Creator窗口中的资源管理器面板上，就能够从外部导入资源。该操作会自动复制资源文件到项目资源文件夹下，并完成导入操作。然后把图片拖到层级管理器即可以生成一个cc.Sprite。</p>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4dd195a77f8f436084e7f9a2e88c564f~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
+<h3 id="脚本挂载">脚本挂载</h3>
+<p>test.js</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123; property, ccclass &#125; = cc.<span class="property">_decorator</span>;</span><br><span class="line">@cc<span class="keyword">class</span></span><br><span class="line"><span class="title class_">export</span> <span class="keyword">default</span> <span class="keyword">class</span> <span class="title class_">TestComp</span> <span class="keyword">extends</span> <span class="title class_ inherited__">cc.Component</span> &#123;</span><br><span class="line">    <span class="title function_">onLoad</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;TestComp onload&#x27;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="title function_">start</span>(<span class="params"></span>) &#123;&#125;</span><br><span class="line">    </span><br><span class="line">    <span class="title function_">update</span>(<span class="params">dt</span>) &#123;&#125;</span><br><span class="line"></span><br><span class="line">    <span class="title function_">onDestroy</span>(<span class="params"></span>) &#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>然后在Cocos Creator中对应的节点把脚本挂载上去。</p>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/fc5a271f557344329dba8a40efc35d9d~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
+<h3 id="运行调试">运行调试</h3>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ca330d4fbcc74bc288c6e07e9ee576b5~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
+<h2 id="游戏的上线">游戏的上线</h2>
+<h3 id="构建">构建</h3>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9cd3c931bd594cd98d4ca30d421b810d~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
+<p>构建游戏，可以选择多平台，产物即对应生成，比如Web Mobile</p>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6c91d97b6e864b0f94ff25c3424edff3~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
+<p>产物可以直接部署在对应的平台，比如web产物部署到服务器、小游戏产物部署到开发者平台。</p>
+<h1>小游戏“小”在哪里</h1>
+<h2 id="游戏发布平台的差异性">游戏发布平台的差异性</h2>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c8565eb975b4490983eb4211b1ca467b~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
+<ul>
+<li>
+<p>游戏逻辑上，没有什么差别</p>
+</li>
+<li>
+<p>游戏引擎的不同</p>
+</li>
+<li>
+<p>平台API的差异（最需要关注）</p>
+</li>
+<li>
+<p>渲染等差异不大</p>
+</li>
+</ul>
+<h2 id="游戏开发的重要理念">游戏开发的重要理念</h2>
+<p><strong>激发创造</strong></p>
+<ul>
+<li>把游戏开发过程当做一个游戏，在规则（自己的技术栈、限定主题、限定资源）的约束下通过创意和技术力挑战个高质量的游戏吧！</li>
+<li>创意不要被约束了</li>
+</ul>
+<h1>总结感想</h1>
+<p>本节课讲了前端游戏场景下的游戏开发与普通游戏开发的差异，并且介绍了一些游戏引擎，给出了游戏开发的技能树，在最后也简单介绍了利用Cocos Creator或PixiJS进行游戏开发的步骤。</p>
+<blockquote>
+<p>本文引用的内容大部分来自ycaptain老师的课</p>
+</blockquote>
+
+
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
+          
+          <li class="previous">
+            <a href="/cn/【第二届青训营-寒假前端场】- 小程序技术全解/" data-toggle="tooltip" data-placement="top" title="【第二届青训营-寒假前端场】- 「小程序技术全解」笔记">&larr; Previous Post</a>
+          </li>
+          
+          
+          <li class="next">
+            <a href="/cn/【第二届青训营-寒假前端场】- TypeScript入门/" data-toggle="tooltip" data-placement="top" title="【第二届青训营-寒假前端场】- 「TypeScript入门」笔记">Next Post &rarr;</a>
+          </li>
+          
+        </ul>
+
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    
+      如果您喜欢此博客或发现它对您有用，则欢迎对此发表评论。 也欢迎您共享此博客，以便更多人可以参与。 如果博客中使用的图像侵犯了您的版权，请与作者联系以将其删除。 谢谢 ！
+    
+  </p>
+</div>
+<!-- tip end -->
+
+        <!-- tip end -->
+        
+
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=【第二届青训营-寒假前端场】- 「小游戏开发」笔记&body=Hi,I found this website and thought you might like it http://yoursite-url/cn/【第二届青训营-寒假前端场】- 小游戏开发/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+        <!-- Sharing End -->
+        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+  <!-- gitalk start -->
+  <!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
+
+  <div id="gitalk-container"></div>
+
+  
+    <!-- <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.js"></script> -->
+    <script src="/js/comment/gitalk.js"></script>
+  
+
+  <script>
+    var gitalk = new Gitalk({
+      clientID: '',
+      clientSecret: '',
+      repo: '',
+      owner: '',
+      admin: '',
+      id: 'Sat Jan 29 2022 14:30:17 GMT+0800', // Ensure uniqueness and length less than 50
+      distractionFreeMode: false, // Facebook-like distraction free mode
+      perPage: 10,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      language: 'zh-CN',
+      proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'
+    });
+    gitalk.render('gitalk-container');
+
+    var gtFolded = () => {
+      setTimeout(function () {
+        let markdownBody = document.getElementsByClassName("markdown-body");
+        let list = Array.from(markdownBody);
+        list.forEach(item => {
+          if (item.clientHeight > 250) {
+            item.classList.add('gt-comment-body-folded');
+            item.style.maxHeight = '250px';
+            item.title = 'Click to Expand';
+            item.onclick = function () {
+              item.classList.remove('gt-comment-body-folded');
+              item.style.maxHeight = '';
+              item.title = '';
+              item.onclick = null;
+            };
+          }
+        })
+      }, 800);
+    }
+  </script>
+
+  <!-- gitalk end -->
+
+
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">目录</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">前端场景下的游戏开发</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%BC%80%E5%8F%91%E8%A7%92%E8%89%B2%E5%92%8C%E9%93%BE%E8%B7%AF"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">开发角色和链路</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E7%94%A8%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">为什么要用游戏引擎</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%89%8D%E7%AB%AF%E8%BF%87%E6%B8%A1%E5%88%B0%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">前端过渡到游戏开发</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">游戏引擎</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%B8%82%E9%9D%A2%E4%B8%8A%E5%B8%B8%E8%A7%81%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">市面上常见游戏引擎</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%89%B9%E5%AE%9A%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E"><span class="toc-nav-number">2.1.1.</span> <span class="toc-nav-text">特定类型的客户端游戏引擎</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#The-NVL-Maker"><span class="toc-nav-number">2.1.1.1.</span> <span class="toc-nav-text">The NVL Maker</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#RPG-Maker"><span class="toc-nav-number">2.1.1.2.</span> <span class="toc-nav-text">RPG Maker</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Web%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E"><span class="toc-nav-number">2.1.2.</span> <span class="toc-nav-text">Web游戏引擎</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Cocos"><span class="toc-nav-number">2.1.2.1.</span> <span class="toc-nav-text">Cocos</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Laya"><span class="toc-nav-number">2.1.2.2.</span> <span class="toc-nav-text">Laya</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Egret"><span class="toc-nav-number">2.1.2.3.</span> <span class="toc-nav-text">Egret</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#CreateJS-Phaser"><span class="toc-nav-number">2.1.2.4.</span> <span class="toc-nav-text">CreateJS &amp; Phaser</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%8A%9F%E8%83%BD%E5%BC%95%E6%93%8E"><span class="toc-nav-number">2.1.3.</span> <span class="toc-nav-text">功能引擎</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#2D%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E%E7%9A%84%E6%8A%80%E6%9C%AF%E6%9E%B6%E6%9E%84"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">2D游戏引擎的技术架构</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Web%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E%E7%9A%84%E6%B8%B2%E6%9F%93%E5%8E%9F%E7%90%86"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">Web游戏引擎的渲染原理</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">游戏开发的技能树</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">PixiJS+Web开发</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Pixi%E7%AE%80%E4%BB%8B"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">Pixi简介</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%9C%A8web%E9%A1%B9%E7%9B%AE%E4%B8%AD%E5%8A%A0%E8%BD%BD%E4%B8%80%E4%B8%AA%E6%B8%B8%E6%88%8F%E7%8E%A9%E6%B3%95"><span class="toc-nav-number">4.2.</span> <span class="toc-nav-text">在web项目中加载一个游戏玩法</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">Cocos Creator编辑器开发</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Cocos-Creater%E4%BB%8B%E7%BB%8D"><span class="toc-nav-number">5.1.</span> <span class="toc-nav-text">Cocos Creater介绍</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%BC%96%E8%BE%91%E5%99%A8%E9%9B%86%E6%88%90%E7%9A%84%E8%83%BD%E5%8A%9B"><span class="toc-nav-number">5.2.</span> <span class="toc-nav-text">编辑器集成的能力</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Cocos%E7%9A%84%E5%B7%A5%E4%BD%9C%E6%B5%81"><span class="toc-nav-number">5.2.1.</span> <span class="toc-nav-text">Cocos的工作流</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE"><span class="toc-nav-number">5.2.2.</span> <span class="toc-nav-text">创建项目</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%90%AD%E5%BB%BA%E5%9C%BA%E6%99%AF"><span class="toc-nav-number">5.2.3.</span> <span class="toc-nav-text">搭建场景</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AF%BC%E5%85%A5%E8%B5%84%E6%BA%90-%E6%98%BE%E7%A4%BA%E8%B5%84%E6%BA%90"><span class="toc-nav-number">5.2.4.</span> <span class="toc-nav-text">导入资源 + 显示资源</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%84%9A%E6%9C%AC%E6%8C%82%E8%BD%BD"><span class="toc-nav-number">5.2.5.</span> <span class="toc-nav-text">脚本挂载</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%BF%90%E8%A1%8C%E8%B0%83%E8%AF%95"><span class="toc-nav-number">5.2.6.</span> <span class="toc-nav-text">运行调试</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%B8%B8%E6%88%8F%E7%9A%84%E4%B8%8A%E7%BA%BF"><span class="toc-nav-number">5.3.</span> <span class="toc-nav-text">游戏的上线</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%9E%84%E5%BB%BA"><span class="toc-nav-number">5.3.1.</span> <span class="toc-nav-text">构建</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">小游戏“小”在哪里</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%B8%B8%E6%88%8F%E5%8F%91%E5%B8%83%E5%B9%B3%E5%8F%B0%E7%9A%84%E5%B7%AE%E5%BC%82%E6%80%A7"><span class="toc-nav-number">6.1.</span> <span class="toc-nav-text">游戏发布平台的差异性</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91%E7%9A%84%E9%87%8D%E8%A6%81%E7%90%86%E5%BF%B5"><span class="toc-nav-number">6.2.</span> <span class="toc-nav-text">游戏开发的重要理念</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">7.</span> <span class="toc-nav-text">总结感想</span></a></li></ol>
+        
+        </div>
+      </aside>
+    
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">特色标签</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#前端" title="前端">前端</a>
+            
+            <a class="tag" href="/tags/#游戏开发" title="游戏开发">游戏开发</a>
+            
+            <a class="tag" href="/tags/#游戏引擎" title="游戏引擎">游戏引擎</a>
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr>
+        <h5>友链</h5>
+        <ul class="list-inline">
+
+          
+          <li>
+            <a href="https://sadose.github.io/" target="_blank">大森的博客</a>
+          </li>
+          
+          <li>
+            <a href="https://www.xiaocao.cloud/" target="_blank">小曹同学的百草园</a>
+          </li>
+          
+          <li>
+            <a href="https://gelxgx.github.io/blog/" target="_blank">瘦虎的博客</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
+
+
+		<!-- Footer (contains ThemeColor、viewer) -->
+		<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center">
+          
+
+          
+            <li>
+              <a target="_blank" href="https://github.com/yusixian">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+            <li>
+              <a target="_blank" href="https://www.zhihu.com/people/qi-jiu-en">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa  fa-stack-1x fa-inverse">知</i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+
+        </ul>
+        <p class="copyright text-muted">
+          Copyright &copy;
+          cos
+          2022
+          <br>
+          Theme by
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
+          <span style="display: inline-block; margin: 0 5px;">
+            <i class="fa fa-heart"></i>
+          </span>
+          re-Ported by
+          <a target="_blank" rel="noopener" href="https://v-vincen.life/">Live My Life</a>
+          |
+          <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=V-Vincen&repo=V-Vincen.github.io&type=star&count=true"></iframe>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a id="rocket" href="#top" class=""></a>
+
+
+  <!-- jQuery -->
+  <script type="text/javascript" src="/js/jquery.min.js"></script>
+  <!-- Bootstrap Core JavaScript -->
+  <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+  <!-- Custom Theme JavaScript -->
+  <script type="text/javascript" src="/js/hux-blog.min.js"></script>
+  <!-- catalog -->
+  <script async="true" type="text/javascript" src="/js/catalog.js"></script>
+  <!-- totop(rocket) -->
+  <script async="true" type="text/javascript" src="/js/totop.js"></script>
+
+  
+    <!-- Busuanzi JavaScript -->
+    <script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <!-- Scroll start -->
+    <script async="async" type="text/javascript" src="/js/scroll.js"></script>
+    <!-- Scroll end -->
+  
+
+  
+    <!-- LangSelect start -->
+    <script type="text/javascript" src="/js/langselect.js"></script>
+    <!-- LangSelect end -->
+  
+
+  
+    <!-- Mouseclick -->
+    <script type="text/javascript" src="/js/mouseclick.js" content='❤,❤,❤,❤,❤,❤,❤,❤,❤' color='#ffa940,#f5222d,#fa541c,#FF99CC,#a8071a,#faad14,#1890ff,#eb2f96,#13c2c2'></script>
+  
+
+  
+    <!-- ribbon -->
+    <script type="text/javascript" src="/js/ribbonDynamic.js"></script>
+  
+
+  
+
+
+
+
+
+
+  <!-- viewer start -->
+  <!-- viewer start (Picture preview) -->
+  
+    <script async="async" type="text/javascript" src="/js/viewer/viewer.min.js"></script>
+    <script async="async" type="text/javascript" src="/js/viewer/pic-viewer.js"></script>
+  
+
+  <!-- viewer end -->
+
+
+<script>
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function (e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  // fastClick.js
+  async ("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+    var $nav = document.querySelector("nav");
+    if ($nav)
+      FastClick.attach($nav);
+    }
+  )
+</script>
+
+<!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
+https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+<!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
+
+<!-- jquery.tagcloud.js -->
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("http://yoursite-url/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
+
+
+		<!-- Search -->
+		
+		<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-9 col-md-offset-1"> -->
+      <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1 local-search-content">
+
+        <div class="local-search-header clearfix">
+
+          <div class="local-search-input-wrapper">
+            <span class="search-icon">
+              <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
+            </span>
+            <input autocomplete="off" placeholder="搜索..." type="text" id="local-search-input">
+          </div>
+        </div>
+        <div id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+    <script src="/js/ziploader.js"></script>
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+    // get search zip version
+    $.get('/searchVersion.json?t=' + (+new Date()), function (res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson() {
+      initLoad(['/search.flv'], {
+        loadOptions: {
+          success: function (obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function (e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions: {
+          'json': 'application/json'
+        }
+      })
+    }
+    // search function;
+    var searchFunc = function (search_id, content_id) {
+      'use strict';
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      // console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function () {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function (data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title
+              ? data.title.trim()
+              : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content
+              ? data.content.trim().replace(/<[^>]+>/g, "")
+              : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+
+            var date = data.date;
+            var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
+            var imgUrl = data.header_img;
+            
+
+
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function (keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0,
+                  position = [],
+                  index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+            // show search results
+            if (isMatch) {
+              // sort index by position of keyword
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+              // merge hits into slices
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+                  // move to next position of hit
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {hits: hits, start: start, end: end, searchTextCount: searchTextCountInSlice};
+              }
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if (start < 0) {
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if (end > content.length) {
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+              // sort slices in content by search text's count and hits' count
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+              // select top N slices in content
+              var upperBound = parseInt('1');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+              // highlight title and content
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+              var resultItem = '';
+
+              // if (slicesOfTitle.length != 0) {   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>"; } else {   resultItem += "<li><a target='_blank' href='" +
+              // articleUrl + "' class='search-result-title'>" + title + "</a>"; } slicesOfContent.forEach(function (slice) {   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) +
+              // "...</p></a>"; }); resultItem += "</li>";
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              } else {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              }
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
+              });
+              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
+
+              resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
+            }
+          })
+        };
+
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<div class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</div>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+      // remove loading animation
+      $('body').css('overflow', '');
+      proceedsearch();
+    }
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function (e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function (e) {
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 && $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      var _con = document.querySelector(".local-search-content");
+      if (_con) {
+        if (!_con.contains(e.target)) {
+          onPopupClose();
+        }
+      }
+    });
+  </script>
+
+
+		
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>
