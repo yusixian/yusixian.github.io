@@ -1,0 +1,1433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
+<head>
+  <!-- Google Analytics -->
+  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-xxxxxx-xx"></script>
+    <script type="text/javascript">
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-xxxxxx-xx');
+    </script>
+  
+
+  <!-- Baidu Tongji -->
+  
+    <script type="text/javascript">
+      // Originial
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  <!-- Baidu Push -->
+  
+    <script>
+      (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+      })();
+    </script>
+  
+
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <meta name="google-site-verification" content="lxDfCplOZbIzjhG34NuQBgu2gdyRlAtMB4utP5AgEBc"/>
+  <meta name="baidu-site-verification" content="PpzM9WxOJU"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="一个正在努力学习前端的程序媛qwq"/>
+  <meta name="keyword" content="前端, cos, blog, css, html, c++"/>
+  <link rel="shortcut icon" href="/img/avatar/cos.jpg"/>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
+
+  
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/beantech.min.css"/>
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="/css/highlight.css"/>
+    <link rel="stylesheet" href="/css/widget.css"/>
+    <link rel="stylesheet" href="/css/rocket.css"/>
+    <link rel="stylesheet" href="/css/signature.css"/>
+    <link rel="stylesheet" href="/css/catalog.css"/>
+    <link rel="stylesheet" href="/css/livemylife.css"/>
+
+    
+      <!-- wave start -->
+      <link rel="stylesheet" href="/css/wave.css"/>
+      <!-- wave end -->
+    
+
+    
+      <!-- top start (article top hot config) -->
+      <link rel="stylesheet" href="/css/top.css"/>
+      <!-- top end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="/css/scroll.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+      <!-- viewer start (Picture preview) -->
+      <link rel="stylesheet" href="/css/viewer.min.css"/>
+      <!-- viewer end -->
+    
+
+    
+      <!-- Search start -->
+      <link rel="stylesheet" href="/css/search.css"/>
+      <!-- Search end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="/css/themecolor.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+
+    
+      <!-- gitalk start -->
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"> -->
+      <link rel="stylesheet" href="/css/gitalk.css"/>
+      <!-- gitalk end -->
+    
+  
+
+  <!-- Custom Fonts -->
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+  <!-- Hux change font-awesome CDN to qiniu -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Hux Delete, sad but pending in China <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> <link
+  href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/ css'> -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+
+  <!-- ga & ba script hoook -->
+  <link rel="canonical" href="http://yoursite-url/cn/深入JavaScript学习之路（一）对象、类与面向对象编程/">
+  <title>
+    
+      深入JavaScript学习之路（一）对象、类与面向对象编程 - cos的博客 - WA的一声就哭了
+    
+  </title>
+<meta name="generator" content="Hexo 5.4.1"></head>
+
+
+<!-- hack iOS CSS :active style -->
+
+	<body ontouchstart="" class="body--light body--light">
+
+
+		<!-- ThemeColor -->
+		
+		<!-- ThemeColor -->
+<style type="text/css">
+  .body--light {
+    --light-mode: none;
+    --dark-mode: block;
+  }
+  .body--dark {
+    --light-mode: block;
+    --dark-mode: none;
+  }
+  i.mdui-icon.material-icons.light-mode {
+    display: var(--light-mode);
+  }
+  i.mdui-icon.material-icons.dark-mode {
+    display: var(--dark-mode);
+  }
+</style>
+<div class="toggle" onclick="document.body.classList.toggle('body--dark')">
+  <i class="mdui-icon material-icons light-mode"></i>
+  <i class="mdui-icon material-icons dark-mode"></i>
+</div>
+<script>
+  //getCookieValue
+  function getCookieValue(a) {
+    var b = document.cookie.match('(^|[^;]+)\\s*' + a + '\\s*=\\s*([^;]+)');
+    return b
+      ? b.pop()
+      : '';
+  }
+  let themeMode = 'light';
+  if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
+    let dbody = document.body.classList;
+    themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
+  }
+
+  //setCookieValue
+  var toggleBtn = document.querySelector(".toggle");
+  toggleBtn.addEventListener("click", function () {
+    var e = document.body.classList.contains("body--dark");
+    var cookieString = e
+      ? "dark"
+      : "light";
+    var exp = new Date();
+    exp.setTime(exp.getTime() + 3 * 24 * 60 * 60 * 1000); //3天过期
+    document.cookie = "sb-color-mode=" + cookieString + ";expires=" + exp.toGMTString() + ";path=/";
+  });
+</script>
+
+		
+
+		<!-- Gitter -->
+		
+		<!-- Gitter -->
+<!-- Docs:https://gitter.im/?utm_source=left-menu-logo -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'cosine_yu_blog/community'
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+		
+
+		<!-- Navigation (contains search)-->
+		<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">cos的博客</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- Known Issue, found by Hux: <nav>'s height woule be hold on by its content. so, when navbar scale out, the <nav> will cover tags. also mask any touch event of tags, unfortunately. -->
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/">首页</a>
+          </li>
+
+          
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/archive/">
+              
+              归档
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              标签
+              
+              
+            </a>
+          </li>
+          
+          
+
+          
+          <li>
+            <a class="popup-trigger">
+              <span class="search-icon"></span>搜索</a>
+          </li>
+          
+
+          <!-- LangSelect -->
+          
+          
+          
+          
+          
+        </ul>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+<!-- progress -->
+<div id="progress">
+  <div class="line" style="width: 0%;"></div>
+</div>
+
+<script>
+  // Drop Bootstarp low-performance Navbar Use customize navbar with high-quality material design animation in high-perf jank-free CSS3 implementation
+  var $body = document.body;
+  var $toggle = document.querySelector('.navbar-toggle');
+  var $navbar = document.querySelector('#huxblog_navbar');
+  var $collapse = document.querySelector('.navbar-collapse');
+
+  $toggle.addEventListener('click', handleMagic)
+
+  function handleMagic(e) {
+    if ($navbar.className.indexOf('in') > 0) {
+      // CLOSE
+      $navbar.className = " ";
+      // wait until animation end.
+      setTimeout(function() {
+        // prevent frequently toggle
+        if ($navbar.className.indexOf('in') < 0) {
+          $collapse.style.height = "0px"
+        }
+      }, 400)
+    } else {
+      // OPEN
+      $collapse.style.height = "auto"
+      $navbar.className += " in";
+    }
+  }
+</script>
+
+
+		<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
+		<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+
+  <style type="text/css">
+    .body--light {
+      /* intro-header */
+      --intro-header-background-image-url-home: url('/img/header_img/93604793_p0.jpg');
+      --intro-header-background-image-url-post: url('/img/header_img/galaxy-ngc-3190-wallpaper-for-2880x1800-60-653.jpg');
+      --intro-header-background-image-url-page: url('//img/header_img/galaxy-ngc-3190-wallpaper-for-2880x1800-60-653.jpg');
+    }
+    .body--dark {
+      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/93604793_p0.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/galaxy-ngc-3190-wallpaper-for-2880x1800-60-653.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('//img/header_img/galaxy-ngc-3190-wallpaper-for-2880x1800-60-653.jpg');
+    }
+
+    header.intro-header {
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('/img/header_img/galaxy-ngc-3190-wallpaper-for-2880x1800-60-653.jpg'); */
+      
+    }
+
+    
+  </style>
+
+
+
+
+
+<header class="intro-header">
+  <!-- Signature -->
+  <div id="signature">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#前端" title="前端">前端</a>
+              
+              <a class="tag" href="/tags/#JavaScript" title="JavaScript">JavaScript</a>
+              
+            </div>
+            <h1>深入JavaScript学习之路（一）对象、类与面向对象编程</h1>
+            <h2 class="subheading">红宝书读书笔记 第八章 p205</h2>
+            <span class="meta">
+              Posted by cos on
+              2022-03-07
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              Estimated Reading Time <span class="post-count">17</span> Minutes
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              Words <span class="post-count">4.3k</span> In Total
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- waveoverlay start -->
+  <div class="preview-overlay">
+    <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+      </defs>
+      <g class="preview-parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill=var(--gentle-wave1)></use>
+        <use xlink:href="#gentle-wave" x="48" y="3" fill=var(--gentle-wave2)></use>
+        <use xlink:href="#gentle-wave" x="48" y="5" fill=var(--gentle-wave3)></use>
+        <use xlink:href="#gentle-wave" x="48" y="7" fill=var(--gentle-wave)></use>
+      </g>
+    </svg>
+  </div>
+  <!-- waveoverlay end -->
+  
+
+</header>
+
+
+
+		<!-- Main Content (Post contains
+	Pager、
+	tip、
+	socialshare、
+	gitalk、gitment、disqus-comment、
+	Catalog、
+	Sidebar、
+	Featured-Tags、
+	Friends Blog、
+	anchorjs、
+	) -->
+		<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <p>本章将学习：对象创建过程、原型链及继承实现方式、JS中的类等</p>
+<span id="more"></span>
+<h1>理解对象</h1>
+<blockquote>
+<p>ECMA-262将对象定义为<strong>一组属性的无序集合</strong>，每个属性或方法都有一个名称来表示，可将其想象为一张<strong>散列表</strong>，值可以为数据/函数</p>
+</blockquote>
+<ul>
+<li>例1</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 使用 new Object() 进行创建</span></span><br><span class="line"><span class="keyword">let</span> person = <span class="keyword">new</span> <span class="title class_">Object</span>();</span><br><span class="line">person.<span class="property">name</span> = <span class="string">&quot;cosine&quot;</span>;</span><br><span class="line">person.<span class="property">age</span> = <span class="number">29</span></span><br><span class="line">person.<span class="property">job</span> = <span class="string">&quot;Software Engineer&quot;</span>; </span><br><span class="line">person.<span class="property">sayName</span> = <span class="keyword">function</span>(<span class="params"></span>) &#123; </span><br><span class="line"> <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>.<span class="property">name</span>); </span><br><span class="line">&#125;; </span><br><span class="line"><span class="comment">// 使用对象字面量创建</span></span><br><span class="line"><span class="keyword">let</span> person = &#123;</span><br><span class="line">  <span class="attr">name</span>: <span class="string">&#x27;cosine&#x27;</span>,</span><br><span class="line">  <span class="attr">age</span>: <span class="number">29</span>, </span><br><span class="line">  <span class="attr">job</span>: <span class="string">&quot;Software Engineer&quot;</span>, </span><br><span class="line">  <span class="title function_">sayName</span>(<span class="params"></span>) &#123; </span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>.<span class="property">name</span>); </span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>以上两种对象是等价的，其属性和方法都一样<br>
+可以思考一下： <strong>new 的过程中做了什么？</strong> 后面也会提到</p>
+<h2 id="属性类型">属性类型</h2>
+<p>ECMA-262 使用一些内部特性来描述属性的特征。这些特性是由为 JavaScript 实现引擎的规范定义的。因此，开发者不能在 JavaScript 中直接访问这些特性。为了将某个特性标识为内部特性，规范会用<strong>两个中括号</strong>把特性的名称括起来，比如<code>[[Enumerable]]</code><br>
+属性分两种：<strong>数据属性</strong>和 <strong>访问器属性</strong></p>
+<h3 id="数据属性">数据属性</h3>
+<p>包含一个<strong>保存数据值</strong>的位置。值会从这个位置读取，也会写入到这个位置。数据属性有 4 个特性描述它们的行为</p>
+<ul>
+<li><code>[[Configurable]]</code> 可配置
+<ul>
+<li>表示属性是否可以通过  <code>delete</code> <strong>删除</strong>并<strong>重新定义</strong></li>
+<li>是否可以<strong>修改</strong>它的特性</li>
+<li>是否可以把它<strong>改为访问器属性</strong></li>
+<li>默认情况下，所有<strong>直接定义</strong>在对象上的属性的这个特性都是 <code>true</code></li>
+</ul>
+</li>
+<li><code>[[Enumerable]]</code>  可枚举
+<ul>
+<li>表示属性是否可以通过 <code>for-in</code> 循环返回</li>
+<li>默认： <code>true</code></li>
+</ul>
+</li>
+<li><code>[[Writable]]</code>  可写
+<ul>
+<li>表示属性的值<strong>是否可以被修改</strong></li>
+<li>默认： <code>true</code></li>
+</ul>
+</li>
+<li><code>[[Value]]</code>  可写
+<ul>
+<li>包含属性<strong>实际的值</strong></li>
+<li>这就是前面提到的那个<strong>读取和写入属性值的位置</strong></li>
+<li>默认： <code>undefined</code></li>
+</ul>
+</li>
+</ul>
+<p>在像前面例子中那样将属性显式添加到对象之后，<code>[[Configurable]]</code>、<code>[[Enumerable]]</code> 和 <code>[[Writable]]</code>都会被设置为 true，而 <code>[[Value]]</code> 特性会被设置为指定的值。</p>
+<h4 id="Object-defineProperty-方法">Object.defineProperty()方法</h4>
+<p>要修改属性的默认特性，就必须使用  <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty"><code>Object.defineProperty()</code></a>方法。这个方法接收 3 个参数：</p>
+<ul>
+<li><code>obj</code> 待添加属性的<strong>对象</strong></li>
+<li><code>prop</code> 待定义或修改的<strong>属性名称</strong>或 <strong>Symbol</strong></li>
+<li><code>descriptor</code> 要定义或修改的<strong>属性描述符</strong></li>
+</ul>
+<p>设置方法如下例</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Object.defineProperty()设置属性</span></span><br><span class="line"><span class="keyword">let</span> person = &#123;&#125;;</span><br><span class="line"><span class="title class_">Object</span>.<span class="title function_">defineProperty</span>(person, <span class="string">&quot;name&quot;</span>, &#123;</span><br><span class="line">  <span class="attr">writable</span>: <span class="literal">false</span>,    <span class="comment">// 看这儿！ 不可修改</span></span><br><span class="line">  <span class="attr">value</span>: <span class="string">&quot;cosine&quot;</span></span><br><span class="line">&#125;);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(person.<span class="property">name</span>); <span class="comment">// cosine</span></span><br><span class="line">person.<span class="property">name</span> = <span class="string">&quot;NaHCOx&quot;</span>;   <span class="comment">// 试图修改 </span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(person.<span class="property">name</span>); <span class="comment">// 修改无效 print: cosine </span></span><br></pre></td></tr></table></figure>
+<p>创建了一个名为 <code>name</code> 的属性并给它赋予了一个<strong>只读</strong>的值，则这个属性的值不能修改了</p>
+<ul>
+<li><strong>非严格模式</strong>下，尝试给这个属性重新赋值会被<strong>忽略</strong>。</li>
+<li><strong>严格模式</strong>下，尝试修改只读属性的值会<strong>抛出错误</strong></li>
+</ul>
+<p>类似的规则也适用于创建<strong>不可配置</strong>的属性<br>
+把 <code>configurable</code> 设置为 <code>false</code>，意味着这个属性<strong>不能从对象上删除</strong>。</p>
+<p>注意：<strong>一个属性被定义为不可配置之后，就不能再变回可配置的了！！</strong></p>
+<blockquote>
+<p>再次调用 <code>Object.defineProperty()</code> 并修改任何非 <code>writable</code> 属性则会导致错误</p>
+</blockquote>
+<p>在调用 <code>Object.defineProperty()</code>时，<code>configurable</code>、<code>enumerable</code> 和 <code>writable</code> 的值如果不指定，则都默认为 <code>false</code>。</p>
+<h3 id="访问器属性">访问器属性</h3>
+<p>访问器属性<strong>不包含数据值</strong>。相反，它们包含一个获取（<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/get"><code>getter</code></a>）函数和一个设置（<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/set"><code>setter</code></a>）函数，不过这两个函数不是必需的。</p>
+<ul>
+<li>读取访问器属性时，会调用 <code>getter</code> 函数，返回一个有效的值</li>
+<li>写入访问器属性时，会调用 <code>setter</code> 函数并传入新值，这个函数必须决定对数据做出什么修改</li>
+</ul>
+<p>访问器属性有 4 个特性描述它们的行为:</p>
+<ul>
+<li><code>[[Configurable]]</code>：表示属性
+<ul>
+<li>是否可以通过 delete 删除并重新定义</li>
+<li>是否可以修改它的特性</li>
+<li>是否可以把它<strong>改为数据属性</strong></li>
+<li>默认：<code>true</code></li>
+</ul>
+</li>
+<li><code>[[Enumerable]]</code>：表示属性是否可以通过 for-in 循环返回。默认<code>true</code></li>
+<li><code>[[Get]]</code>：获取函数，在读取属性时调用。默认值为 <code>undefined</code></li>
+<li><code>[[Set]]</code>：设置函数，在写入属性时调用。默认值为 <code>undefined</code></li>
+</ul>
+<p>注意，上述属性的默认值都表示在直接定义对象上时的默认值，若用<code>Object.defineProperty()</code>，则没有定义的都为 <code>undefined</code></p>
+<p>下面是一个例子</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 访问器属性定义</span></span><br><span class="line"><span class="comment">// 定义一个对象，包含伪私有成员 year_和公共成员 edition </span></span><br><span class="line"><span class="keyword">let</span> book = &#123; </span><br><span class="line">  <span class="attr">year_</span>: <span class="number">2017</span>, </span><br><span class="line">  <span class="attr">edition</span>: <span class="number">1</span> </span><br><span class="line">&#125;;</span><br><span class="line"><span class="title class_">Object</span>.<span class="title function_">defineProperty</span>(book, <span class="string">&quot;year&quot;</span>, &#123;</span><br><span class="line">  <span class="title function_">get</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="variable language_">this</span>.<span class="property">year_</span>;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="title function_">set</span>(<span class="params">newVal</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span>(newVal &gt; <span class="number">2017</span>) &#123;</span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">year_</span> = newVal;</span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">edition</span> += newVal - <span class="number">2017</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line">book.<span class="property">year</span> = <span class="number">1999</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(book.<span class="property">year</span>);   <span class="comment">// 2017</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(book.<span class="property">edition</span>);  <span class="comment">// 1</span></span><br><span class="line">book.<span class="property">year</span> = <span class="number">2018</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(book.<span class="property">year</span>);   <span class="comment">// 2018</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(book.<span class="property">edition</span>);  <span class="comment">// 2</span></span><br></pre></td></tr></table></figure>
+<p>对象 book 有两个默认属性：year_和 edition<br>
+<strong>year_中的下划线常用来表示该属性并不希望在对象方法的外部被访问</strong><br>
+另一个属性 year 被定义为一个访问器属性，其中，</p>
+<ul>
+<li>getter简单返回 year_的值</li>
+<li>setter会做一些计算以决定正确的版本（edition）</li>
+</ul>
+<p>因此，把 year 属性修改为 2018 会导致 year_变成 2018，edition 变成 2。而试图修改为1999则不会有变化，这是访问器属性的典型使用场景，即设置一个属性值会导致一些其他变化发生。</p>
+<p>获取函数和设置函数不一定都要定义。</p>
+<ul>
+<li>只定义<code>getter</code> 函数意味着属性是<strong>只读</strong>的，尝试修改属性会被<strong>忽略</strong>。在严格模式下，尝试写入只定义了获取函数的属性会抛出错误。</li>
+<li>类似地，只有定义<code>setter</code>的属性是<strong>不能读取</strong>的，非严格模式下读取会返回 <code>undefined</code>，严格模式下会抛出错误。</li>
+</ul>
+<h2 id="其他定义属性函数">其他定义属性函数</h2>
+<p>其他还可通过 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperties"><code>Object.defineProperties()</code></a> 定义多个属性，使用 <code>Object.getOwnPropertyDescriptor()</code>方法可以取得指定属性的属性描述符 ， <code>Object.getOwnPropertyDescriptors()</code> 方法可以取得每个自有属性的属性描述符并在一个新对象中返回。</p>
+<h3 id="合并对象">合并对象</h3>
+<p>把源对象所有的属性一起复制到目标对象上，这种操作也被称为“混入”（mixin），因为目标对象通过混入源对象的属性从而得到了增强。<br>
+<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/assign"><code>Object.assign()</code> </a> 方法用于将所有<strong>可枚举属性/自有属性</strong>的值从一个或多个源对象分配到目标对象，返回目标对象。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> target = &#123; <span class="attr">a</span>: <span class="number">1</span>, <span class="attr">b</span>: <span class="number">2</span> &#125;;</span><br><span class="line"><span class="keyword">const</span> source = &#123; <span class="attr">b</span>: <span class="number">4</span>, <span class="attr">c</span>: <span class="number">5</span> &#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> returnedTarget = <span class="title class_">Object</span>.<span class="title function_">assign</span>(target, source);</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(target);</span><br><span class="line"><span class="comment">// expected output: Object &#123; a: 1, b: 4, c: 5 &#125;</span></span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(returnedTarget);</span><br><span class="line"><span class="comment">// expected output: Object &#123; a: 1, b: 4, c: 5 &#125;</span></span><br></pre></td></tr></table></figure>
+<p><code>Object.assign()</code> 实际上执行的是<strong>浅复制</strong>，只会复制对象的引用</p>
+<ul>
+<li>若多个源对象都有相同的属性，则用<strong>最后一个复制的值</strong>。</li>
+<li>从源对象<strong>访问器属性</strong>取得的值，比如获取函数，会<strong>作为一个静态值</strong>赋给目标对象。也就是说：<strong>不能在两个对象间转移获取函数和设置函数。</strong></li>
+<li>赋值期间出错，则操作会中止并退出，同时抛出错误。没有“回滚”之前赋值的概念，因此它是一个尽力而为、<strong>可能只会完成部分复制</strong>的方法。</li>
+</ul>
+<h2 id="对象标识及相等判定">对象标识及相等判定</h2>
+<p>ES6之前，有些情况利用===操作符进行判断是无法成功的，如</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 这些情况在不同 JavaScript 引擎中表现不同，但仍被认为相等</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(+<span class="number">0</span> === -<span class="number">0</span>); <span class="comment">// true </span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(+<span class="number">0</span> === <span class="number">0</span>); <span class="comment">// true </span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(-<span class="number">0</span> === <span class="number">0</span>); <span class="comment">// true </span></span><br><span class="line"><span class="comment">// 要确定 NaN 的相等性，必须使用极为讨厌的 isNaN() </span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">NaN</span> === <span class="title class_">NaN</span>); <span class="comment">// false </span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="built_in">isNaN</span>(<span class="title class_">NaN</span>)); <span class="comment">// true </span></span><br></pre></td></tr></table></figure>
+<p>ES6规范改善了这类情况，新增了 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/is"><code>Object.is()</code> </a> 方法用于判断两个值是否为同一个值</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 正确的 0、-0、+0 相等/不等判定</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Object</span>.<span class="title function_">is</span>(+<span class="number">0</span>, -<span class="number">0</span>)); <span class="comment">// false </span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Object</span>.<span class="title function_">is</span>(+<span class="number">0</span>, <span class="number">0</span>)); <span class="comment">// true </span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Object</span>.<span class="title function_">is</span>(-<span class="number">0</span>, <span class="number">0</span>)); <span class="comment">// false </span></span><br><span class="line"><span class="comment">// 正确的 NaN 相等判定</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Object</span>.<span class="title function_">is</span>(<span class="title class_">NaN</span>, <span class="title class_">NaN</span>)); <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<p>要检查超过两个值，可递归地利用相等性传递即可</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">recursivelyCheckEqual</span>(<span class="params">x, ...rest</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="title class_">Object</span>.<span class="title function_">is</span>(x, rest[<span class="number">0</span>]) &amp;&amp; </span><br><span class="line">  (rest.<span class="property">length</span> &lt; <span class="number">2</span> || <span class="title function_">recursivelyCheckEqual</span>(...rest));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="ES6-语法糖">ES6 语法糖</h2>
+<p>ECMAScript 6 为定义和操作对象新增了很多极其有用的语法糖特性。这些特性都没有改变现有引擎的行为，但极大地提升了处理对象的方便程度。</p>
+<h3 id="属性名简写">属性名简写</h3>
+<p>给对象添加变量的时候，经常会发现属性名和变量名是一样的。这个时候就可以使用变量名，不用再写冒号，如果没有找到同名变量，则会抛出 <code>ReferenceError</code>。<br>
+例如：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> name = <span class="string">&#x27;cosine&#x27;</span>; </span><br><span class="line"><span class="keyword">let</span> person = &#123; <span class="attr">name</span>: name &#125;; </span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(person); <span class="comment">// &#123; name: &#x27;cosine&#x27; &#125;</span></span><br><span class="line"><span class="comment">// 使用语法糖 等价于上面那个</span></span><br><span class="line"><span class="keyword">let</span> person = &#123; name &#125;; </span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(person); <span class="comment">// &#123; name: &#x27;cosine&#x27; &#125;</span></span><br></pre></td></tr></table></figure>
+<p>代码压缩程序会在不同作用域间保留属性名，以防止找不到引用。</p>
+<h3 id="可计算属性">可计算属性</h3>
+<p>可在对象字面量中直接动态的命名属性：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> nameKey = <span class="string">&#x27;name&#x27;</span>; </span><br><span class="line"><span class="keyword">const</span> ageKey = <span class="string">&#x27;age&#x27;</span>; </span><br><span class="line"><span class="keyword">const</span> jobKey = <span class="string">&#x27;job&#x27;</span>; </span><br><span class="line"><span class="keyword">let</span> uniqueToken = <span class="number">0</span>; </span><br><span class="line"><span class="keyword">function</span> <span class="title function_">getUniqueKey</span>(<span class="params">key</span>) &#123; </span><br><span class="line"> <span class="keyword">return</span> <span class="string">`<span class="subst">$&#123;key&#125;</span>_<span class="subst">$&#123;uniqueToken++&#125;</span>`</span>; </span><br><span class="line">&#125; </span><br><span class="line"><span class="keyword">let</span> person = &#123; </span><br><span class="line"> [nameKey]: <span class="string">&#x27;cosine&#x27;</span>, </span><br><span class="line"> [ageKey]: <span class="number">21</span>, </span><br><span class="line"> [jobKey]: <span class="string">&#x27;Software engineer&#x27;</span>,</span><br><span class="line"> <span class="comment">// 也可以是表达式！</span></span><br><span class="line"> [<span class="title function_">getUniqueKey</span>(jobKey+ageKey)]: <span class="string">&#x27;test&#x27;</span></span><br><span class="line">&#125;; </span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(person); </span><br><span class="line"><span class="comment">// &#123; name: &#x27;cosine&#x27;, age: 21, job: &#x27;Software engineer&#x27;, jobage_0: &#x27;test&#x27; &#125;</span></span><br></pre></td></tr></table></figure>
+<h3 id="简写方法名">简写方法名</h3>
+<p>直接看：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> person = &#123; </span><br><span class="line"><span class="keyword">let</span> person = &#123; </span><br><span class="line">    <span class="comment">// sayName: function(name) &#123; // 旧</span></span><br><span class="line">    <span class="comment">//     console.log(`My name is $&#123;name&#125;`); </span></span><br><span class="line">    <span class="comment">// &#125; </span></span><br><span class="line">    <span class="title function_">sayName</span>(<span class="params">name</span>) &#123; <span class="comment">// 新</span></span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`My name is <span class="subst">$&#123;name&#125;</span>`</span>); </span><br><span class="line">    &#125; </span><br><span class="line">&#125;; </span><br><span class="line">person.<span class="title function_">sayName</span>(<span class="string">&#x27;Matt&#x27;</span>); <span class="comment">// My name is Matt </span></span><br></pre></td></tr></table></figure>
+<p>简写方法名对获取函数和设置函数也是适用的，并且简写方法名与可计算属性键相互兼容，也为后文的类打下了基础</p>
+<h3 id="对象解构">对象解构</h3>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 对象解构</span></span><br><span class="line"><span class="keyword">let</span> person = &#123; </span><br><span class="line">    <span class="attr">name</span>: <span class="string">&#x27;cosine&#x27;</span>, </span><br><span class="line">    <span class="attr">age</span>: <span class="number">21</span> </span><br><span class="line">&#125;; </span><br><span class="line"><span class="keyword">let</span> &#123; <span class="attr">name</span>: personName, <span class="attr">age</span>: personAge &#125; = person; </span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(personName, personAge); <span class="comment">// cosine 21 </span></span><br><span class="line"><span class="comment">// 让变量直接使用属性的名称 定义默认值 若未定义默认值则不存在的则为undefined</span></span><br><span class="line"><span class="keyword">let</span> &#123; name, age, job = <span class="string">&#x27;test&#x27;</span>, score &#125; = person; </span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(name, age, job, score); <span class="comment">// cosine 21 test undefined</span></span><br></pre></td></tr></table></figure>
+<p>解构在内部使用函数 <code>ToObject()</code>（不能在运行时环境中直接访问）把源数据结构转换为对象。<br>
+这意味着在对象解构的上下文中，原始值会被当成对象。也就是说：<code>null</code> 和 <code>undefined</code> 不能被解构，否则会抛出错误</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> &#123; length &#125; = <span class="string">&#x27;foobar&#x27;</span>; </span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(length); <span class="comment">// 6 </span></span><br><span class="line"><span class="keyword">let</span> &#123; <span class="attr">constructor</span>: c &#125; = <span class="number">4</span>; </span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(c === <span class="title class_">Number</span>); <span class="comment">// true </span></span><br><span class="line"><span class="keyword">let</span> &#123; _ &#125; = <span class="literal">null</span>; <span class="comment">// TypeError </span></span><br><span class="line"><span class="keyword">let</span> &#123; _ &#125; = <span class="literal">undefined</span>; <span class="comment">// TypeError</span></span><br></pre></td></tr></table></figure>
+<p>想要给<strong>事先声明的变量</strong>解构赋值，则赋值表达式必须<strong>包含在一对括号</strong>中</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> personName, personAge; </span><br><span class="line"><span class="keyword">let</span> person = &#123; </span><br><span class="line"> <span class="attr">name</span>: <span class="string">&#x27;cosine&#x27;</span>, </span><br><span class="line"> <span class="attr">age</span>: <span class="number">21</span></span><br><span class="line">&#125;; </span><br><span class="line">(&#123;<span class="attr">name</span>: personName, <span class="attr">age</span>: personAge&#125; = person); </span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(personName, personAge); <span class="comment">// cosine 21</span></span><br></pre></td></tr></table></figure>
+<h4 id="1、嵌套解构">1、嵌套解构</h4>
+<p>解构对于引用嵌套的属性或赋值目标没有限制。为此，可以通过解构来复制对象属性(浅复制)</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> person = &#123; </span><br><span class="line">    <span class="attr">name</span>: <span class="string">&#x27;cosine&#x27;</span>, </span><br><span class="line">    <span class="attr">age</span>: <span class="number">21</span>, </span><br><span class="line">    <span class="attr">job</span>: &#123; </span><br><span class="line">        <span class="attr">title</span>: <span class="string">&#x27;Software engineer&#x27;</span> </span><br><span class="line">    &#125; </span><br><span class="line">&#125;; </span><br><span class="line"><span class="comment">// 声明 title 变量并将 person.job.title 的值赋给它</span></span><br><span class="line"><span class="keyword">let</span> &#123; <span class="attr">job</span>: &#123; title &#125; &#125; = person; </span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(title); <span class="comment">// Software engineer </span></span><br></pre></td></tr></table></figure>
+<p>在外层属性没有定义的情况下不能使用嵌套解构。无论源对象还是目标对象都一样</p>
+<h4 id="2、部分解构">2、部分解构</h4>
+<p>涉及多个属性的解构赋值是一个输出无关的顺序化操作。如果一个解构表达式涉及多个赋值，开始的赋值成功而<strong>后面的赋值出错</strong>（对不能解构的undefined || null进行解构），则整个解构赋值<strong>只会完成一部分</strong></p>
+<h4 id="3、参数上下文匹配">3、参数上下文匹配</h4>
+<p>在函数参数列表中也可以进行解构赋值。对参数的解构赋值不会影响 arguments 对象，但可以在函数签名中声明在函数体内使用局部变量：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> person = &#123; </span><br><span class="line">    <span class="attr">name</span>: <span class="string">&#x27;cosine&#x27;</span>, </span><br><span class="line">    <span class="attr">age</span>: <span class="number">21</span></span><br><span class="line">&#125;; </span><br><span class="line"><span class="keyword">function</span> <span class="title function_">printPerson</span>(<span class="params">foo, &#123;name, age&#125;, bar</span>) &#123; </span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">arguments</span>); </span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(name, age); </span><br><span class="line">&#125; </span><br><span class="line"><span class="keyword">function</span> <span class="title function_">printPerson2</span>(<span class="params">foo, &#123;name: personName, age: personAge&#125;, bar</span>) &#123; </span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">arguments</span>); </span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(personName, personAge); </span><br><span class="line">&#125; </span><br><span class="line"><span class="title function_">printPerson</span>(<span class="string">&#x27;1st&#x27;</span>, person, <span class="string">&#x27;2nd&#x27;</span>); </span><br><span class="line"><span class="comment">// [&#x27;1st&#x27;, &#123; name: &#x27;cosine&#x27;, age: 21 &#125;, &#x27;2nd&#x27;] </span></span><br><span class="line"><span class="comment">// &#x27;cosine&#x27; 21 </span></span><br><span class="line"><span class="title function_">printPerson2</span>(<span class="string">&#x27;1st&#x27;</span>, person, <span class="string">&#x27;2nd&#x27;</span>); </span><br><span class="line"><span class="comment">// [&#x27;1st&#x27;, &#123; name: &#x27;cosine&#x27;, age: 21 &#125;, &#x27;2nd&#x27;] </span></span><br><span class="line"><span class="comment">// &#x27;cosine&#x27; 21 </span></span><br></pre></td></tr></table></figure>
+<h1>创建对象</h1>
+<p>ES6开始，正式支持了类和继承，不过这种支持其实是封装了ES5.1构造函数加原型继承的语法糖。</p>
+<h2 id="工厂模式">工厂模式</h2>
+<p>在设计模式那篇博客有提到一些设计模式 (<a target="_blank" rel="noopener" href="https://ysx.cosine.ren/cn/%E3%80%90%E7%AC%AC%E4%BA%8C%E5%B1%8A%E9%9D%92%E8%AE%AD%E8%90%A5-%E5%AF%92%E5%81%87%E5%89%8D%E7%AB%AF%E5%9C%BA%E3%80%91-%20%E5%89%8D%E7%AB%AF%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%BA%94%E7%94%A8/">前端设计模式应用笔记</a>)， 而工厂模式也是一种广泛使用的设计模式，它提供了一种创建对象的最佳方式。在工厂模式中，我们在创建对象时不会对客户端暴露创建逻辑，并且是通过使用一个共同的接口来指向新创建的对象。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">createPerson</span>(<span class="params">name, age, job</span>) &#123; </span><br><span class="line">    <span class="keyword">let</span> o = <span class="keyword">new</span> <span class="title class_">Object</span>(); </span><br><span class="line">    o.<span class="property">name</span> = name; </span><br><span class="line">    o.<span class="property">age</span> = age; </span><br><span class="line">    o.<span class="property">job</span> = job; </span><br><span class="line">    o.<span class="property">sayName</span> = <span class="keyword">function</span>(<span class="params"></span>) &#123; </span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>.<span class="property">name</span>); </span><br><span class="line">    &#125;; </span><br><span class="line">    <span class="keyword">return</span> o; </span><br><span class="line">&#125; </span><br><span class="line"><span class="keyword">let</span> person1 = <span class="title function_">createPerson</span>(<span class="string">&quot;cosine&quot;</span>, <span class="number">21</span>, <span class="string">&quot;Software Engineer&quot;</span>); </span><br><span class="line"><span class="keyword">let</span> person2 = <span class="title function_">createPerson</span>(<span class="string">&quot;Greg&quot;</span>, <span class="number">27</span>, <span class="string">&quot;Doctor&quot;</span>); </span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(person1);   <span class="comment">// &#123; name: &#x27;cosine&#x27;, age: 21, job: &#x27;Software Engineer&#x27;, sayName: [Function (anonymous)] &#125;</span></span><br><span class="line">person1.<span class="title function_">sayName</span>();  <span class="comment">// cosine</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(person2); <span class="comment">// &#123; name: &#x27;Greg&#x27;, age: 27, job: &#x27;Doctor&#x27;, sayName: [Function (anonymous)] &#125;</span></span><br><span class="line">person2.<span class="title function_">sayName</span>();  <span class="comment">// Greg</span></span><br></pre></td></tr></table></figure>
+<p>这种模式可以解决创建多个类似对象的问题，但没有解决对象标识问题（即新创建的对象是<strong>什么类型</strong>）</p>
+<h2 id="构造函数模式">构造函数模式</h2>
+<p>自定义构造函数，以函数的形式为自己的对象类型定义属性和方法。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">Person</span>(<span class="params">name, age, job</span>)&#123; </span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">name</span> = name; </span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">age</span> = age; </span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">job</span> = job; </span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">sayName</span> = <span class="keyword">function</span>(<span class="params"></span>) &#123; </span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>.<span class="property">name</span>); </span><br><span class="line">    &#125;; </span><br><span class="line">&#125; </span><br><span class="line"><span class="keyword">let</span> person1 = <span class="keyword">new</span> <span class="title class_">Person</span>(<span class="string">&quot;cosine&quot;</span>, <span class="number">21</span>, <span class="string">&quot;Software Engineer&quot;</span>); </span><br><span class="line">person1.<span class="title function_">sayName</span>(); <span class="comment">// cosine</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>没有显式地创建对象</li>
+<li>属性和方法直接赋值给了 this</li>
+<li>没有 return</li>
+<li>要创建 Person 的实例，应使用 new 操作符</li>
+</ul>
+<h3 id="new-过程中发生了什么？">new 过程中发生了什么？</h3>
+<p>划重点，使用new调用构造函数会执行如下几个操作：</p>
+<ol>
+<li>在内存中创建一个新对象</li>
+<li>将新对象内部的 <code>[[Prototype]]</code> 赋值为构造函数的prototype属性。</li>
+<li>构造函数内部的 <code>this</code> 指向这个新对象</li>
+<li>执行构造函数内部的代码（为对象添加属性）</li>
+<li><strong>若构造函数返回非空对象，则返回该对象。否则，返回刚创建的新对象！</strong></li>
+</ol>
+<p>上一个栗子的最后，person1有一个constructor属性指向Person</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(person1.<span class="property">constructor</span>)    <span class="comment">// [Function: Person]</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(person1.<span class="property">constructor</span> === <span class="title class_">Person</span>)    <span class="comment">// true</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(person1 <span class="keyword">instanceof</span> <span class="title class_">Object</span>); <span class="comment">// true </span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(person1 <span class="keyword">instanceof</span> <span class="title class_">Person</span>); <span class="comment">// true </span></span><br></pre></td></tr></table></figure>
+<p>定义自定义构造函数可以<strong>确保实例被标识为特定类型</strong>，相比于工厂模式，这是一个很大的好处。<br>
+person1 之所以也被认为是 Object 的实例，是因为所有自定义对象都继承自 Object（后文会提到）</p>
+<p>注意以下几点：</p>
+<ol>
+<li><strong>构造函数也是函数</strong> ：任何函数只要使用 new 操作符调用就是构造函数，而不使用 new 操作符调用的函数就是普通函数</li>
+<li><strong>构造函数的主要问题</strong>：其定义的方法会在每个实例上都创建一遍，因此不同实例上的函数虽然同名却不相等，而因为都是做一样的事，所以没必要定义两个不同的 Function 实例。</li>
+</ol>
+<p>this 对象可以把函数与对象的绑定<strong>推迟到运行时</strong>，所以可以将函数定义转移到构造函数外部。<br>
+这样虽然解决了相同逻辑的函数重复定义的问题，但全局作用域也因此被搞乱了，因为那个函数实际上只能在一个对象上调用。如果这个对象需要多个方法，那么就要在全局作用域中定义多个函数。这会导致自定义类型引用的代码不能很好地聚集一起。而这个新问题可以通过原型模式来解决</p>
+<h2 id="原型模式">原型模式</h2>
+<ul>
+<li>每个函数都会创建一个 <code>prototype</code> 属性指向原型对象</li>
+<li>在原型对象上定义的属性和方法可以被所有对象实例共享</li>
+<li>原来在构造函数中赋给对象实例的值，可以直接赋值给它们的原型</li>
+</ul>
+<h3 id="1、理解原型">1、理解原型</h3>
+<ul>
+<li>无论何时，只要创建一个函数，就会按照特定的规则为这个函数创建一个 <code>prototype</code> 属性指向原型对象</li>
+<li>所有原型对象会获得一个名为 <code>constructor</code> 的属性，指回与之关联的构造函数
+<ul>
+<li>如<code>Person.prototype.constructor</code> 指向 <code>Person</code></li>
+</ul>
+</li>
+<li>然后，可通过构造函数给原型对象添加其他属性和方法</li>
+<li>原型对象默认只会获得 <code>constructor</code> 属性，其他的所有方法都继承自 <code>Object</code></li>
+<li>每次调用构造函数创建一个新实例，其的内部<code>[[Prototype]]</code>指针就会被赋值为构造函数的原型对象</li>
+<li>脚本中没有访问这个 <code>[[Prototype]]</code> 特性的标准方式，但 Firefox、Safari 和 Chrome 会在每个对象上暴露 <code>__proto__</code> 属性，通过这个属性可以访问<strong>对象的原型</strong></li>
+</ul>
+
+
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
+          
+          <li class="previous">
+            <a href="/cn/冲刺春招-精选笔面试 66 题大通关 day1/" data-toggle="tooltip" data-placement="top" title="冲刺春招-精选笔面试 66 题大通关 day1">&larr; Previous Post</a>
+          </li>
+          
+          
+          <li class="next">
+            <a href="/cn/Redux学习之路（一）Redux三原则、createSore原理及实现/" data-toggle="tooltip" data-placement="top" title="Redux学习之路（一）Redux三原则、createSore原理及实现">Next Post &rarr;</a>
+          </li>
+          
+        </ul>
+
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    
+      如果您喜欢此博客或发现它对您有用，则欢迎对此发表评论。 也欢迎您共享此博客，以便更多人可以参与。 如果博客中使用的图像侵犯了您的版权，请与作者联系以将其删除。 谢谢 ！
+    
+  </p>
+</div>
+<!-- tip end -->
+
+        <!-- tip end -->
+        
+
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=深入JavaScript学习之路（一）对象、类与面向对象编程&body=Hi,I found this website and thought you might like it http://yoursite-url/cn/深入JavaScript学习之路（一）对象、类与面向对象编程/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+        <!-- Sharing End -->
+        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+  <!-- gitalk start -->
+  <!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
+
+  <div id="gitalk-container"></div>
+
+  
+    <!-- <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.js"></script> -->
+    <script src="/js/comment/gitalk.js"></script>
+  
+
+  <script>
+    var gitalk = new Gitalk({
+      clientID: '',
+      clientSecret: '',
+      repo: '',
+      owner: '',
+      admin: '',
+      id: 'Mon Mar 07 2022 16:50:52 GMT+0800', // Ensure uniqueness and length less than 50
+      distractionFreeMode: false, // Facebook-like distraction free mode
+      perPage: 10,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      language: 'zh-CN',
+      proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'
+    });
+    gitalk.render('gitalk-container');
+
+    var gtFolded = () => {
+      setTimeout(function () {
+        let markdownBody = document.getElementsByClassName("markdown-body");
+        let list = Array.from(markdownBody);
+        list.forEach(item => {
+          if (item.clientHeight > 250) {
+            item.classList.add('gt-comment-body-folded');
+            item.style.maxHeight = '250px';
+            item.title = 'Click to Expand';
+            item.onclick = function () {
+              item.classList.remove('gt-comment-body-folded');
+              item.style.maxHeight = '';
+              item.title = '';
+              item.onclick = null;
+            };
+          }
+        })
+      }, 800);
+    }
+  </script>
+
+  <!-- gitalk end -->
+
+
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">目录</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">理解对象</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%B1%9E%E6%80%A7%E7%B1%BB%E5%9E%8B"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">属性类型</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%95%B0%E6%8D%AE%E5%B1%9E%E6%80%A7"><span class="toc-nav-number">1.1.1.</span> <span class="toc-nav-text">数据属性</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Object-defineProperty-%E6%96%B9%E6%B3%95"><span class="toc-nav-number">1.1.1.1.</span> <span class="toc-nav-text">Object.defineProperty()方法</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%AE%BF%E9%97%AE%E5%99%A8%E5%B1%9E%E6%80%A7"><span class="toc-nav-number">1.1.2.</span> <span class="toc-nav-text">访问器属性</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%85%B6%E4%BB%96%E5%AE%9A%E4%B9%89%E5%B1%9E%E6%80%A7%E5%87%BD%E6%95%B0"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">其他定义属性函数</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%90%88%E5%B9%B6%E5%AF%B9%E8%B1%A1"><span class="toc-nav-number">1.2.1.</span> <span class="toc-nav-text">合并对象</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%AF%B9%E8%B1%A1%E6%A0%87%E8%AF%86%E5%8F%8A%E7%9B%B8%E7%AD%89%E5%88%A4%E5%AE%9A"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">对象标识及相等判定</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#ES6-%E8%AF%AD%E6%B3%95%E7%B3%96"><span class="toc-nav-number">1.4.</span> <span class="toc-nav-text">ES6 语法糖</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%B1%9E%E6%80%A7%E5%90%8D%E7%AE%80%E5%86%99"><span class="toc-nav-number">1.4.1.</span> <span class="toc-nav-text">属性名简写</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%8F%AF%E8%AE%A1%E7%AE%97%E5%B1%9E%E6%80%A7"><span class="toc-nav-number">1.4.2.</span> <span class="toc-nav-text">可计算属性</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%AE%80%E5%86%99%E6%96%B9%E6%B3%95%E5%90%8D"><span class="toc-nav-number">1.4.3.</span> <span class="toc-nav-text">简写方法名</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AF%B9%E8%B1%A1%E8%A7%A3%E6%9E%84"><span class="toc-nav-number">1.4.4.</span> <span class="toc-nav-text">对象解构</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#1%E3%80%81%E5%B5%8C%E5%A5%97%E8%A7%A3%E6%9E%84"><span class="toc-nav-number">1.4.4.1.</span> <span class="toc-nav-text">1、嵌套解构</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#2%E3%80%81%E9%83%A8%E5%88%86%E8%A7%A3%E6%9E%84"><span class="toc-nav-number">1.4.4.2.</span> <span class="toc-nav-text">2、部分解构</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#3%E3%80%81%E5%8F%82%E6%95%B0%E4%B8%8A%E4%B8%8B%E6%96%87%E5%8C%B9%E9%85%8D"><span class="toc-nav-number">1.4.4.3.</span> <span class="toc-nav-text">3、参数上下文匹配</span></a></li></ol></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">创建对象</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">工厂模式</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E6%A8%A1%E5%BC%8F"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">构造函数模式</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#new-%E8%BF%87%E7%A8%8B%E4%B8%AD%E5%8F%91%E7%94%9F%E4%BA%86%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-nav-number">2.2.1.</span> <span class="toc-nav-text">new 过程中发生了什么？</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">原型模式</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1%E3%80%81%E7%90%86%E8%A7%A3%E5%8E%9F%E5%9E%8B"><span class="toc-nav-number">2.3.1.</span> <span class="toc-nav-text">1、理解原型</span></a></li></ol></li></ol></li></ol>
+        
+        </div>
+      </aside>
+    
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">特色标签</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#前端" title="前端">前端</a>
+            
+            <a class="tag" href="/tags/#JavaScript" title="JavaScript">JavaScript</a>
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr>
+        <h5>友链</h5>
+        <ul class="list-inline">
+
+          
+          <li>
+            <a href="https://sadose.github.io/" target="_blank">大森的博客</a>
+          </li>
+          
+          <li>
+            <a href="https://www.xiaocao.cloud/" target="_blank">小曹同学的百草园</a>
+          </li>
+          
+          <li>
+            <a href="https://gelxgx.github.io/blog/" target="_blank">瘦虎的博客</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
+
+
+		<!-- Footer (contains ThemeColor、viewer) -->
+		<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center">
+          
+
+          
+            <li>
+              <a target="_blank" href="https://github.com/yusixian">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+            <li>
+              <a target="_blank" href="https://www.zhihu.com/people/qi-jiu-en">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa  fa-stack-1x fa-inverse">知</i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+
+        </ul>
+        <p class="copyright text-muted">
+          Copyright &copy;
+          cos
+          2022
+          <br>
+          Theme by
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
+          <span style="display: inline-block; margin: 0 5px;">
+            <i class="fa fa-heart"></i>
+          </span>
+          re-Ported by
+          <a target="_blank" rel="noopener" href="https://v-vincen.life/">Live My Life</a>
+          |
+          <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=V-Vincen&repo=V-Vincen.github.io&type=star&count=true"></iframe>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a id="rocket" href="#top" class=""></a>
+
+
+  <!-- jQuery -->
+  <script type="text/javascript" src="/js/jquery.min.js"></script>
+  <!-- Bootstrap Core JavaScript -->
+  <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+  <!-- Custom Theme JavaScript -->
+  <script type="text/javascript" src="/js/hux-blog.min.js"></script>
+  <!-- catalog -->
+  <script async="true" type="text/javascript" src="/js/catalog.js"></script>
+  <!-- totop(rocket) -->
+  <script async="true" type="text/javascript" src="/js/totop.js"></script>
+
+  
+    <!-- Busuanzi JavaScript -->
+    <script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <!-- Scroll start -->
+    <script async="async" type="text/javascript" src="/js/scroll.js"></script>
+    <!-- Scroll end -->
+  
+
+  
+    <!-- LangSelect start -->
+    <script type="text/javascript" src="/js/langselect.js"></script>
+    <!-- LangSelect end -->
+  
+
+  
+    <!-- Mouseclick -->
+    <script type="text/javascript" src="/js/mouseclick.js" content='❤,❤,❤,❤,❤,❤,❤,❤,❤' color='#ffa940,#f5222d,#fa541c,#FF99CC,#a8071a,#faad14,#1890ff,#eb2f96,#13c2c2'></script>
+  
+
+  
+    <!-- ribbon -->
+    <script type="text/javascript" src="/js/ribbonDynamic.js"></script>
+  
+
+  
+
+
+
+
+
+
+  <!-- viewer start -->
+  <!-- viewer start (Picture preview) -->
+  
+    <script async="async" type="text/javascript" src="/js/viewer/viewer.min.js"></script>
+    <script async="async" type="text/javascript" src="/js/viewer/pic-viewer.js"></script>
+  
+
+  <!-- viewer end -->
+
+
+<script>
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function (e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  // fastClick.js
+  async ("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+    var $nav = document.querySelector("nav");
+    if ($nav)
+      FastClick.attach($nav);
+    }
+  )
+</script>
+
+<!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
+https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+<!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
+
+<!-- jquery.tagcloud.js -->
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("http://yoursite-url/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
+
+
+		<!-- Search -->
+		
+		<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-9 col-md-offset-1"> -->
+      <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1 local-search-content">
+
+        <div class="local-search-header clearfix">
+
+          <div class="local-search-input-wrapper">
+            <span class="search-icon">
+              <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
+            </span>
+            <input autocomplete="off" placeholder="搜索..." type="text" id="local-search-input">
+          </div>
+        </div>
+        <div id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+    <script src="/js/ziploader.js"></script>
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+    // get search zip version
+    $.get('/searchVersion.json?t=' + (+new Date()), function (res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson() {
+      initLoad(['/search.flv'], {
+        loadOptions: {
+          success: function (obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function (e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions: {
+          'json': 'application/json'
+        }
+      })
+    }
+    // search function;
+    var searchFunc = function (search_id, content_id) {
+      'use strict';
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      // console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function () {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function (data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title
+              ? data.title.trim()
+              : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content
+              ? data.content.trim().replace(/<[^>]+>/g, "")
+              : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+
+            var date = data.date;
+            var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
+            var imgUrl = data.header_img;
+            
+
+
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function (keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0,
+                  position = [],
+                  index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+            // show search results
+            if (isMatch) {
+              // sort index by position of keyword
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+              // merge hits into slices
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+                  // move to next position of hit
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {hits: hits, start: start, end: end, searchTextCount: searchTextCountInSlice};
+              }
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if (start < 0) {
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if (end > content.length) {
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+              // sort slices in content by search text's count and hits' count
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+              // select top N slices in content
+              var upperBound = parseInt('1');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+              // highlight title and content
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+              var resultItem = '';
+
+              // if (slicesOfTitle.length != 0) {   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>"; } else {   resultItem += "<li><a target='_blank' href='" +
+              // articleUrl + "' class='search-result-title'>" + title + "</a>"; } slicesOfContent.forEach(function (slice) {   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) +
+              // "...</p></a>"; }); resultItem += "</li>";
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              } else {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              }
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
+              });
+              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
+
+              resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
+            }
+          })
+        };
+
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<div class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</div>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+      // remove loading animation
+      $('body').css('overflow', '');
+      proceedsearch();
+    }
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function (e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function (e) {
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 && $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      var _con = document.querySelector(".local-search-content");
+      if (_con) {
+        if (!_con.contains(e.target)) {
+          onPopupClose();
+        }
+      }
+    });
+  </script>
+
+
+		
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>
