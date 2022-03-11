@@ -406,7 +406,7 @@
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">755</span> In Total
+              Words <span class="post-count">758</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -468,14 +468,17 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <p>仓库链接：<a target="_blank" rel="noopener" href="https://github.com/cosineLearn/cosine-ui">组件地址</a><br>
-自己的CodePen在线预览链接：<a target="_blank" rel="noopener" href="https://codepen.io/yusixian/pen/wvPLgWN">DatePicker（by cos）</a><br>
-对应组件demo：<a target="_blank" rel="noopener" href="https://ant.design/components/date-picker-cn/">Ant Design DatePicker日期选择框</a></p>
+        <ul>
+<li>对应组件为：<a target="_blank" rel="noopener" href="https://ant.design/components/date-picker-cn/">Ant Design DatePicker日期选择框</a></li>
+<li>仓库链接：<a target="_blank" rel="noopener" href="https://github.com/cosineLearn/cosine-ui">组件地址</a></li>
+<li>自己的CodePen在线预览链接：<a target="_blank" rel="noopener" href="https://codepen.io/yusixian/pen/wvPLgWN">DatePicker（by cos）</a></li>
+</ul>
 <h2 id="心得">心得</h2>
 <ul>
 <li>~契机是什么才不说呢~</li>
-<li>也算是第一次用React写自己的小组件，可能封装性还不行bug也还有不少，写的代码自己复盘的时候也很想吐槽2333不过也是个很有意思的事！比如点击日期选择器外关闭日期选择器这个功能就纠结了我好长时间qwq，但是写完真的很快乐！</li>
-<li>使用了React的ref判断点击事件发生在组件内部还是外部</li>
+<li>也算是第一次用React写自己的小组件，可能封装性还不行，bug也还有不少，写的代码自己复盘的时候也很想吐槽2333</li>
+<li>不过也真的是个很有意思的事！比如点击日期选择器外关闭日期选择器这个功能就纠结了我好长时间qwq，但是写完真的很快乐！</li>
+<li>使用了React的来ref判断点击事件发生在组件内部还是外部~</li>
 <li>实现自己的组件是很cool的事！~虽然有时候也会感觉有点重复造轮子~</li>
 <li>在学习antd组件的实现同时也感受到了其实现的不少细节，望尘莫及ovo，以后有机会还会有优化哒，增加更多api和功能和自定义大小设置等。</li>
 </ul>
@@ -507,31 +510,33 @@ b. 支持日期的获取 <code>onDateChange</code> 通过日期变化的回调�
 <ul>
 <li>初始值</li>
 </ul>
-<p><img src="https://github.com/cosineLearn/cosine-ui/raw/master/src/statics/imgs/%E5%88%9D%E5%A7%8B%E5%80%BC.png" alt="初始值"></p>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7e080154069a41de9dadf3c3ace7af3e~tplv-k3u1fbpfcp-watermark.image?" alt="初始值.png"></p>
 <ul>
-<li>选择其他日期</li>
+<li>
+<p>选择其他日期<br>
+<img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/091cd5f2e98c4b6aaa1fc14fd7a5afef~tplv-k3u1fbpfcp-watermark.image?" alt="选择其他日期.png"></p>
+</li>
+<li>
+<p>下一年<br>
+<img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/818dbc4607d948d3a1ef1cb5fed45890~tplv-k3u1fbpfcp-watermark.image?" alt="下一年.png"></p>
+</li>
+<li>
+<p>上一个月<br>
+<img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/715976c98a404bd0ba1f7765bf4485fa~tplv-k3u1fbpfcp-watermark.image?" alt="上一个月.png"></p>
+</li>
+<li>
+<p>进入年面板<br>
+<img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b6ad473c7fe34cb4a34a0d83268a14db~tplv-k3u1fbpfcp-watermark.image?" alt="进入年面板.png"></p>
+</li>
+<li>
+<p>切换年面板<br>
+<img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0045f8ac75bf47119b2c00368784461f~tplv-k3u1fbpfcp-watermark.image?" alt="切换年面板.png"></p>
+</li>
+<li>
+<p>月面板</p>
+</li>
 </ul>
-<p><img src="https://github.com/cosineLearn/cosine-ui/raw/master/src/statics/imgs/%E9%80%89%E6%8B%A9%E5%85%B6%E4%BB%96%E6%97%A5%E6%9C%9F.png" alt="选择其他日期"></p>
-<ul>
-<li>下一年</li>
-</ul>
-<p><img src="https://github.com/cosineLearn/cosine-ui/raw/master/src/statics/imgs/%E4%B8%8B%E4%B8%80%E5%B9%B4.png" alt="下一年"></p>
-<ul>
-<li>上一个月</li>
-</ul>
-<p><img src="https://github.com/cosineLearn/cosine-ui/raw/master/src/statics/imgs/%E4%B8%8A%E4%B8%80%E4%B8%AA%E6%9C%88.png" alt="上一个月"></p>
-<ul>
-<li>进入年面板</li>
-</ul>
-<p><img src="https://github.com/cosineLearn/cosine-ui/raw/master/src/statics/imgs/%E8%BF%9B%E5%85%A5%E5%B9%B4%E9%9D%A2%E6%9D%BF.png" alt="进入年面板"></p>
-<ul>
-<li>切换年面板</li>
-</ul>
-<p><img src="https://github.com/cosineLearn/cosine-ui/raw/master/src/statics/imgs/%E5%88%87%E6%8D%A2%E5%B9%B4%E9%9D%A2%E6%9D%BF.png" alt="切换年面板"></p>
-<ul>
-<li>月面板</li>
-</ul>
-<p><img src="https://github.com/cosineLearn/cosine-ui/raw/master/src/statics/imgs/%E6%9C%88%E9%9D%A2%E6%9D%BF.png" alt="月面板"></p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e91c94487f0d4ff7822798f4d39f722c~tplv-k3u1fbpfcp-watermark.image?" alt="月面板.png"></p>
 
 
         <hr>
