@@ -139,10 +139,10 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="http://yoursite-url/cn/仿Antd组件之DatePicker组件实现（简易）/">
+  <link rel="canonical" href="http://yoursite-url/cn/美团笔试2023暑期实习笔试题复盘（5道编程）/">
   <title>
     
-      仿Antd组件之DatePicker组件实现（简易） - cos的博客 - WA的一声就哭了
+      美团笔试2023暑期实习笔试题复盘（5道编程） - cos的博客 - WA的一声就哭了
     
   </title>
 <meta name="generator" content="Hexo 5.4.1"></head>
@@ -352,19 +352,19 @@
     .body--light {
       /* intro-header */
       --intro-header-background-image-url-home: url('/img/header_img/93604793_p0.jpg');
-      --intro-header-background-image-url-post: url('/img/header_img/milky-way-over-bow-lake-alberta-canada-wallpaper-for-1920x1080-63-873.jpg');
-      --intro-header-background-image-url-page: url('//img/header_img/milky-way-over-bow-lake-alberta-canada-wallpaper-for-1920x1080-63-873.jpg');
+      --intro-header-background-image-url-post: url('/img/header_img/galaxy-ngc-3190-wallpaper-for-2880x1800-60-653.jpg');
+      --intro-header-background-image-url-page: url('//img/header_img/galaxy-ngc-3190-wallpaper-for-2880x1800-60-653.jpg');
     }
     .body--dark {
       --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/93604793_p0.jpg');
-      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/milky-way-over-bow-lake-alberta-canada-wallpaper-for-1920x1080-63-873.jpg');
-      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('//img/header_img/milky-way-over-bow-lake-alberta-canada-wallpaper-for-1920x1080-63-873.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/galaxy-ngc-3190-wallpaper-for-2880x1800-60-653.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('//img/header_img/galaxy-ngc-3190-wallpaper-for-2880x1800-60-653.jpg');
     }
 
     header.intro-header {
        /*post*/
         background-image: var(--intro-header-background-image-url-post);
-        /* background-image: url('/img/header_img/milky-way-over-bow-lake-alberta-canada-wallpaper-for-1920x1080-63-873.jpg'); */
+        /* background-image: url('/img/header_img/galaxy-ngc-3190-wallpaper-for-2880x1800-60-653.jpg'); */
       
     }
 
@@ -385,16 +385,18 @@
           <div class="post-heading">
             <div class="tags">
               
-              <a class="tag" href="/tags/#前端" title="前端">前端</a>
+              <a class="tag" href="/tags/#c++" title="c++">c++</a>
               
-              <a class="tag" href="/tags/#组件" title="组件">组件</a>
+              <a class="tag" href="/tags/#数据结构" title="数据结构">数据结构</a>
+              
+              <a class="tag" href="/tags/#笔试题" title="笔试题">笔试题</a>
               
             </div>
-            <h1>仿Antd组件之DatePicker组件实现（简易）</h1>
-            <h2 class="subheading">DatePicker组件初试手</h2>
+            <h1>美团笔试2023暑期实习笔试题复盘（5道编程）</h1>
+            <h2 class="subheading">就a了3道半qwq这次难度偏简单的</h2>
             <span class="meta">
               Posted by cos on
-              2022-03-11
+              2022-03-12
             </span>
 
 
@@ -402,11 +404,11 @@
             <!-- WordCount start -->
             <div class="blank_box"></div>
             <span class="meta">
-              Estimated Reading Time <span class="post-count">3</span> Minutes
+              Estimated Reading Time <span class="post-count">10</span> Minutes
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">758</span> In Total
+              Words <span class="post-count">2.3k</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -468,88 +470,175 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <ul>
-<li>对应组件为：<a target="_blank" rel="noopener" href="https://ant.design/components/date-picker-cn/">Ant Design DatePicker日期选择框</a></li>
-<li>仓库链接：<a target="_blank" rel="noopener" href="https://github.com/cosineLearn/cosine-ui">组件地址</a></li>
-<li>自己的CodePen在线预览链接：<a target="_blank" rel="noopener" href="https://codepen.io/yusixian/pen/wvPLgWN">DatePicker（by cos）</a></li>
-</ul>
-<h2 id="心得">心得</h2>
-<ul>
-<li>~契机是什么才不说呢~</li>
-<li>也算是第一次用React写自己的小组件，可能封装性还不行，bug也还有不少，写的代码自己复盘的时候也很想吐槽2333</li>
-<li>不过也真的是个很有意思的事！比如点击日期选择器外关闭日期选择器这个功能就纠结了我好长时间qwq，但是写完真的很快乐！</li>
-<li>使用了React的来ref判断点击事件发生在组件内部还是外部~</li>
-<li>实现自己的组件是很cool的事！~虽然有时候也会感觉有点重复造轮子~</li>
-<li>在学习antd组件的实现同时也感受到了其实现的不少细节，望尘莫及ovo，以后有机会还会有优化哒，增加更多api和功能和自定义大小设置等。</li>
-</ul>
-<h2 id="组件介绍">组件介绍</h2>
-<h3 id="DatePicker组件">DatePicker组件</h3>
-<p>DatePicker 组件开发<br>
-代码及在线预览地址：<a target="_blank" rel="noopener" href="https://codepen.io/yusixian/pen/wvPLgWN">DatePicker（by cos）</a></p>
+        <p>1、幸运数 （AC 100%）<br>
+2、乘积为正（AC 100%）<br>
+3、做饭（输出2可骗27%）<br>
+4、炸弹 （AC45%）<br>
+5、黑白树涂色（AC 100%）</p>
+<p>今天的美团笔试结束了，上牛客一看，嚯，好家伙人均4题，这么简单咩。（我好菜哦）</p>
+<h1>1、幸运数 （AC 100%）</h1>
+<p>小美现在相信一些数字能给他带来好运。<br>
+这些数字至少满足以下两个特征中的一种：</p>
 <ol>
-<li>日、月、年选择面板的实现<br>
-交互：<br>
-a.日面板实现：实现点击日期选择具体日期，点击头部面部左右箭头可前往上一年/下一年、上一月/下一月<br>
-b.月面板实现：点击日面板头部月份进入，点击月份则选择具体月份并返回日面板，点击头部面部左右箭头前往上一年/下一年<br>
-c.年面板实现：点击日面板头部月份进入，以十年为区间，点击年份则选择该年并返回日面板，点击头部面部左右箭头前往上个十年/下个十年<br>
-d.根据输入框输入实时变换日期</li>
-<li>对外API的实现<br>
-a. 支持默认日期的设置 <code>defaultDate</code> 通过设置defaultDate为moment对象实现默认日期的设置<br>
-b. 支持日期的获取 <code>onDateChange</code> 通过日期变化的回调函数获取当前日期，返回moment对象<br>
-示例：</li>
+<li>
+<p>数字是11的整数倍。</p>
+</li>
+<li>
+<p>数字中至少包含两个1。</p>
+</li>
 </ol>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">App</span> <span class="keyword">extends</span> <span class="title class_ inherited__">Component</span> &#123;</span><br><span class="line">    <span class="title function_">constructor</span>(<span class="params">props</span>) &#123;</span><br><span class="line">        <span class="variable language_">super</span>(props);</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">state</span> = &#123;</span><br><span class="line">            <span class="attr">nowDate</span>: <span class="string">&#x27;No Value!&#x27;</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="title function_">handleDateChange</span>(<span class="params">date</span>) &#123;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="title function_">setState</span>(&#123;<span class="attr">nowDate</span>: date.<span class="title function_">format</span>(<span class="string">&#x27;YYYY-MM-DD&#x27;</span>)&#125;);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="title function_">render</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> (</span><br><span class="line">            <span class="language-xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">className</span>=<span class="string">&quot;App&quot;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">                <span class="tag">&lt;<span class="name">div</span>&gt;</span>nowDate: &#123;this.state.nowDate&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">                <span class="tag">&lt;<span class="name">DatePicker</span> <span class="attr">defaultDate</span>=<span class="string">&#123;moment()&#125;</span> <span class="attr">onDateChange</span>=<span class="string">&#123;(date)</span> =&gt;</span> this.handleDateChange(date)&#125; /&gt;</span></span><br><span class="line"><span class="language-xml">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">        );</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ol start="3">
-<li>面板展示与切换动画<br>
-通过 <code>picker-panel</code> 中初始透明度 <code>opacity</code>为 0，变化原点<code>transform-origin</code>为左上角，初始大小为 <code>scale(0)</code> ，通过自定义属性 <code>data-active</code> 为true控制显示</li>
-</ol>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.picker-panel</span> &#123;</span><br><span class="line">    <span class="attribute">z-index</span>: <span class="number">10</span>;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">background-color</span>: white;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">30px</span>;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">300px</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">3px</span>;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">1px</span> solid $gray-<span class="number">4</span>;</span><br><span class="line">    <span class="attribute">box-shadow</span>:<span class="number">2px</span> <span class="number">2px</span> <span class="number">10px</span> <span class="built_in">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.4</span>);</span><br><span class="line"></span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">    <span class="attribute">flex-direction</span>: column;</span><br><span class="line"></span><br><span class="line">    <span class="attribute">opacity</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">scale</span>(<span class="number">0</span>);</span><br><span class="line">    <span class="attribute">transform-origin</span>: top left;</span><br><span class="line">    <span class="attribute">transition</span>: all <span class="number">300ms</span> ease-in-out;</span><br><span class="line">    &amp;<span class="selector-attr">[data-active=true]</span> &#123;</span><br><span class="line">        <span class="attribute">transform</span>: <span class="built_in">scale</span>(<span class="number">1</span>);</span><br><span class="line">        <span class="attribute">opacity</span>: <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ol start="5">
-<li>界面展示</li>
-</ol>
+<p>小美现在给你若干数字，希望你回答这个数字是不是幸运数。</p>
+<p>例如：132是11的12倍，满足条件1，101有两个1，满足条件2。</p>
+<blockquote>
+<p>输入描述<br>
+第一行一个数字n，表示小美有n组询问<br>
+接下来每一行一个正整数表示小美询问的数字。<br>
+数据保证1 &lt;= n &lt;= 500, 每个询问的数字在 [1, 1e9]范围内</p>
+</blockquote>
+<blockquote>
+<p>输出描述<br>
+对于每组询问，如果是幸运数，输出yes，不是，输出no。</p>
+</blockquote>
+<blockquote>
+<p>样例输入<br>
+6<br>
+22<br>
+101<br>
+1234<br>
+555<br>
+10001<br>
+132</p>
+</blockquote>
+<blockquote>
+<p>样例输出<br>
+yes<br>
+yes<br>
+no<br>
+no<br>
+yes<br>
+yes</p>
+</blockquote>
+<h2 id="思路-代码">思路&amp;代码</h2>
+<p>AC很快啊，签到题，暴力就行了，范围也不大</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line"><span class="type">int</span> a[<span class="number">505</span>];</span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">judge</span><span class="params">(<span class="type">int</span> x)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(x % <span class="number">11</span> == <span class="number">0</span>) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">else</span> &#123;</span><br><span class="line">        string s = <span class="built_in">to_string</span>(x);</span><br><span class="line">        <span class="type">int</span> len = s.<span class="built_in">length</span>();</span><br><span class="line">        <span class="type">int</span> cnt = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; len; ++i) &#123;</span><br><span class="line">            <span class="keyword">if</span>(s[i] == <span class="string">&#x27;1&#x27;</span>) ++cnt;</span><br><span class="line">            <span class="keyword">if</span>(cnt == <span class="number">2</span>) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line">        cin &gt;&gt; a[i];</span><br><span class="line">        cout &lt;&lt; (<span class="built_in">judge</span>(a[i])?<span class="string">&quot;yes&quot;</span>:<span class="string">&quot;no&quot;</span>) &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1>2、乘积为正（AC 100%）</h1>
+<p>小美现在有一个序列，序列中仅包含1和-1两种数字。</p>
+<p>小美现在想要知道，有多少个连续的子序列，序列中的数字乘积为正。</p>
+<blockquote>
+<p>输入描述<br>
+第一行一个正整数n，表示小美手中的序列长度。<br>
+第二行n个空格隔开的数字，每个数字只能是1和-1中的一种。<br>
+对于80%的数据保证1 &lt;= n &lt;= 500<br>
+对于剩余20%的数据保证1 &lt;= n &lt;= 5000</p>
+</blockquote>
+<blockquote>
+<p>输出描述<br>
+一行一个正整数表示有多少连续的子序列满足题目要求。</p>
+</blockquote>
+<blockquote>
+<p><strong>样例输入</strong><br>
+4<br>
+1 1 -1 -1<br>
+<strong>样例输出</strong><br>
+6<br>
+<strong>提示</strong><br>
+共有6个连续子序列满足要求。<br>
+[1], [1], [1, 1], [-1, -1], [1, -1, -1], [1, 1, -1, -1]</p>
+</blockquote>
+<h2 id="思路-代码-2">思路&amp;代码</h2>
+<p>我是一眼用dp过的（AC 100%<br>
+dp[i][j] 代表i~j子序列乘积是否为正，A掉了（</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> maxn = <span class="number">5005</span>;</span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line">ll a[maxn], ans;</span><br><span class="line">ll dp[maxn][maxn];</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line">        cin &gt;&gt; a[i];</span><br><span class="line">        <span class="keyword">if</span>(a[i] == <span class="number">-1</span>) dp[i][i] = <span class="number">-1</span>;</span><br><span class="line">        <span class="keyword">else</span> dp[i][i] = <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> k = <span class="number">2</span>; k &lt;= n; ++k) &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i+k<span class="number">-1</span> &lt; n; ++i) &#123;</span><br><span class="line">            <span class="type">int</span> j = i+k<span class="number">-1</span>;</span><br><span class="line">            <span class="keyword">if</span>(a[j] == <span class="number">-1</span>) dp[i][j] = -dp[i][j<span class="number">-1</span>];</span><br><span class="line">            <span class="keyword">else</span> dp[i][j] = dp[i][j<span class="number">-1</span>];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j = <span class="number">0</span>; j &lt; n; ++j) &#123;</span><br><span class="line">            <span class="keyword">if</span>(dp[i][j] == <span class="number">1</span>) ++ans;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; ans &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1>3、做饭（输出2可骗27%）</h1>
+<p>小美现在在厨房做饭。小美发现食材现在只够每种菜做一份。</p>
+<p>现在同一时刻（即不分先后顺序）来了n个顾客。每个顾客都有想两份要点的菜。只有当顾客吃到全部自己想要的菜的时候，顾客才会满意。</p>
+<p>现在你的任务是，合理地接取顾客的订单要求，尽可能让更多的顾客满意，并输出最多有多少顾客可以满意。</p>
+<blockquote>
+<p><strong>输入描述</strong><br>
+第一行两个正整数n, m<br>
+n表明有多少顾客前来点菜，m表示小美现在能做的菜的编号范围在[1, m]。<br>
+接下来n行，每行两个数字，表明一名顾客的所点的两道菜的编号。<br>
+其中80%的数据保证2 &lt;= n &lt;= 10, 2 &lt;= m &lt;= 20<br>
+另外20%的数据保证2 &lt;= n &lt;= 20, 2 &lt;= m &lt;= 40<br>
+<strong>输出描述</strong><br>
+一行一个正整数表示最多有多少顾客可以满意。</p>
+</blockquote>
+<blockquote>
+<p><strong>样例输入</strong><br>
+3 4<br>
+1 2<br>
+2 3<br>
+3 4<br>
+<strong>样例输出</strong><br>
+2<br>
+样例解释<br>
+显然此时最佳方案是满足第一个和第三个顾客。</p>
+</blockquote>
+<p>不会做——考后看了看别人的题解说是状压dp</p>
+<h1>4、炸弹 （AC45%）</h1>
+<p>小美现在打音游。这个音游的玩法是这样的：</p>
+<p>—— 共有n个房间。小美初始拥有一个指针，指在一号房间。</p>
+<p>—— 游戏共持续m秒，每秒会有一个房间产生炸弹，小美的指针不能在这个房间中。</p>
+<p>—— 每秒结束的瞬间，小美可以使用一次魔法，把指针切换到另一个房间中，该过程会消耗一个能量。</p>
+<p>你的任务是计算小美无伤通过音游所需要消耗的最小能量。</p>
+<p>保证第一秒的炸弹不发生在一号房间中。</p>
+<blockquote>
+<p><strong>输入描述</strong><br>
+第一行两个正整数 n 和 m，表示房间有 n 个，游戏持续 m 秒。<br>
+第二行 m 个正整数，每个正整数在1~n 的范围内，第 i 个正整数表示第 i 秒时炸弹在哪个房间生成。<br>
+数字间有空格隔开<br>
+数据保证 n ＜= 10 , 1 &lt;= m &lt;= 10000<br>
+<strong>输出描述</strong><br>
+一行一个正整数，表示小美无伤通过音游所需要消耗的最少能量。</p>
+</blockquote>
+<blockquote>
+<p><strong>样例输入</strong><br>
+2 4<br>
+2 1 1 2<br>
+<strong>样例输出</strong><br>
+2</p>
+</blockquote>
+<h2 id="思路及代码">思路及代码</h2>
+<p>我的思路是贪心，能呆着不动就不动弹，实在等到要被轰炸了转移就往后面被最少轰炸的房间转移，若某个房间没有被轰炸或者最后轰炸时间是当前时间之前就转到这个房间，结束，可能复杂度高了也可能边界问题没处理好一直过不去。<br>
+一些能跑过的测试用例，如有问题欢迎评论指出</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Input:</span><br><span class="line"><span class="number">4</span> <span class="number">1</span></span><br><span class="line"><span class="number">1</span></span><br><span class="line">Output:</span><br><span class="line"><span class="number">1</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Input:</span><br><span class="line"><span class="number">7</span> <span class="number">8</span></span><br><span class="line"><span class="number">2</span> <span class="number">1</span> <span class="number">4</span> <span class="number">5</span> <span class="number">3</span> <span class="number">6</span> <span class="number">1</span> <span class="number">7</span></span><br><span class="line">Output:</span><br><span class="line"><span class="number">2</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Input:</span><br><span class="line"><span class="number">10</span> <span class="number">11</span></span><br><span class="line"><span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span> <span class="number">5</span> <span class="number">6</span> <span class="number">7</span> <span class="number">8</span> <span class="number">9</span> <span class="number">10</span> <span class="number">10</span></span><br><span class="line">Output:</span><br><span class="line"><span class="number">2</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Input:</span><br><span class="line"><span class="number">10</span> <span class="number">14</span></span><br><span class="line"><span class="number">3</span> <span class="number">10</span> <span class="number">3</span> <span class="number">4</span> <span class="number">5</span> <span class="number">6</span> <span class="number">7</span> <span class="number">8</span> <span class="number">9</span> <span class="number">1</span> <span class="number">9</span> <span class="number">8</span> <span class="number">1</span> <span class="number">2</span></span><br><span class="line">Output:</span><br><span class="line"><span class="number">1</span></span><br></pre></td></tr></table></figure>
+<p>代码如下：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;map&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> maxn = <span class="number">10005</span>;</span><br><span class="line"><span class="type">int</span> n, m, ans, nowp;</span><br><span class="line"><span class="type">int</span> a[maxn];</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="literal">false</span>); cin.<span class="built_in">tie</span>(<span class="number">0</span>); cout.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line">    cin &gt;&gt; n &gt;&gt; m;</span><br><span class="line">    map&lt;<span class="type">int</span>, <span class="type">int</span>&gt; map;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; m; ++i) &#123;</span><br><span class="line">        cin &gt;&gt; a[i];</span><br><span class="line">        map[a[i]] = i;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">bool</span> flag = <span class="literal">false</span>;</span><br><span class="line">    nowp = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; m; ++i) &#123;</span><br><span class="line">        <span class="keyword">if</span>(nowp != a[i]) <span class="keyword">continue</span>;  <span class="comment">// 不被轰炸 不用换</span></span><br><span class="line">        <span class="type">int</span> maxp = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j = <span class="number">1</span>; j &lt;= n; ++j) &#123;</span><br><span class="line">            <span class="keyword">if</span>(j == a[i]) <span class="keyword">continue</span>;</span><br><span class="line">            <span class="keyword">if</span>(map.<span class="built_in">find</span>(j) == map.<span class="built_in">end</span>() || map[j] &lt; i<span class="number">-1</span>) &#123;<span class="comment">// 轰炸已经过去了</span></span><br><span class="line">                flag = <span class="literal">true</span>;</span><br><span class="line">                nowp = map[j];</span><br><span class="line">                ++ans;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span>(map[j] &gt; maxp) &#123;    <span class="comment">// 轰炸最远的</span></span><br><span class="line">                maxp = map[j];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(flag) <span class="keyword">break</span>;</span><br><span class="line">        nowp = a[maxp];</span><br><span class="line">        ++ans;</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; ans &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1>5、黑白树涂色（AC 100%）</h1>
+<p>现在给你一颗树，每个树上的节点会被涂成黑色或白色。</p>
+<p>现在定义好节点：</p>
 <ul>
-<li>初始值</li>
+<li>对于白色的节点：若该节点没有子节点，或该节点子节点中至少有一个为黑色节点，则该节点是好节点</li>
+<li>对于黑色的节点：若该节点没有子节点，或该节点的所有子节点均为白色节点，则该节点是好节点</li>
 </ul>
-<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7e080154069a41de9dadf3c3ace7af3e~tplv-k3u1fbpfcp-watermark.image?" alt="初始值.png"></p>
-<ul>
-<li>
-<p>选择其他日期<br>
-<img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/091cd5f2e98c4b6aaa1fc14fd7a5afef~tplv-k3u1fbpfcp-watermark.image?" alt="选择其他日期.png"></p>
-</li>
-<li>
-<p>下一年<br>
-<img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/818dbc4607d948d3a1ef1cb5fed45890~tplv-k3u1fbpfcp-watermark.image?" alt="下一年.png"></p>
-</li>
-<li>
-<p>上一个月<br>
-<img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/715976c98a404bd0ba1f7765bf4485fa~tplv-k3u1fbpfcp-watermark.image?" alt="上一个月.png"></p>
-</li>
-<li>
-<p>进入年面板<br>
-<img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b6ad473c7fe34cb4a34a0d83268a14db~tplv-k3u1fbpfcp-watermark.image?" alt="进入年面板.png"></p>
-</li>
-<li>
-<p>切换年面板<br>
-<img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0045f8ac75bf47119b2c00368784461f~tplv-k3u1fbpfcp-watermark.image?" alt="切换年面板.png"></p>
-</li>
-<li>
-<p>月面板</p>
-</li>
-</ul>
-<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e91c94487f0d4ff7822798f4d39f722c~tplv-k3u1fbpfcp-watermark.image?" alt="月面板.png"></p>
-
+<p>你的任务是找出这棵树上黑色的好节点和白色的好节点各有几个。</p>
+<p><strong>输入描述</strong><br>
+第一行一个正整数n，表示这棵树共有n个节点，编号1到n。</p>
+<p>第二行n个空格隔开的正整数，代表每个节点的颜色。0是白色，1是黑色。</p>
+<p>接下来n个空格隔开的正整数，第 i 个正整数v表示节点 i 的父节点是v。其中，数字0表示这个节点是根。</p>
+<p>1 &lt;= n &lt;= 10000</p>
+<p><strong>输出描述</strong><br>
+一行两个正整数，以空格分开，第一个正整数表示白色的好节点有几个，第二个正整数表示黑色的好节点有几个。</p>
+<p><strong>样例输入</strong><br>
+6<br>
+1 0 1 1 0 0<br>
+0 1 2 1 4 4<br>
+<strong>样例输出</strong><br>
+3 2</p>
+<h2 id="思路-代码-3">思路&amp;代码</h2>
+<p>这题说的很玄乎，其实很简单就是建个树罢了，甚至不需要左右指针（只需要统计左右节点数（只包括了下边一层的子节点，如果更深的话就难了）</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> Null = <span class="number">-1</span>;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> maxn = <span class="number">10010</span>;</span><br><span class="line"><span class="type">int</span> n, pa;</span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">Node</span> &#123;</span><br><span class="line">    <span class="type">int</span> val;</span><br><span class="line">    <span class="type">int</span> Bnum, Wnum;</span><br><span class="line">    <span class="built_in">Node</span>():<span class="built_in">val</span>(Null), <span class="built_in">Bnum</span>(<span class="number">0</span>), <span class="built_in">Wnum</span>(<span class="number">0</span>) &#123;&#125;</span><br><span class="line">&#125; a[maxn];</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; ++i) &#123;</span><br><span class="line">        cin &gt;&gt; a[i].val;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> root;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; ++i) &#123;</span><br><span class="line">        cin &gt;&gt; pa;</span><br><span class="line">        <span class="keyword">if</span>(pa == <span class="number">0</span>) root = i;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(a[i].val == <span class="number">1</span>) &#123;    <span class="comment">// 黑色</span></span><br><span class="line">            a[pa].Bnum++;</span><br><span class="line">        &#125; <span class="keyword">else</span> a[pa].Wnum++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> ansB, ansW;</span><br><span class="line">    ansB = ansW = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; ++i) &#123;</span><br><span class="line">        <span class="keyword">if</span>(a[i].val == <span class="number">1</span>) &#123; <span class="comment">// 黑节点</span></span><br><span class="line">            <span class="keyword">if</span>(a[i].Bnum == <span class="number">0</span>) ++ansB;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span>((a[i].Bnum == <span class="number">0</span> &amp;&amp; a[i].Wnum == <span class="number">0</span>) || a[i].Bnum &gt; <span class="number">0</span>) ++ansW;</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; ansW &lt;&lt; <span class="string">&#x27; &#x27;</span> &lt;&lt; ansB &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
         <hr>
         <!-- Pager -->
         <ul class="pager">
           
-          <li class="previous">
-            <a href="/cn/美团笔试2023暑期实习笔试题复盘（5道编程）/" data-toggle="tooltip" data-placement="top" title="美团笔试2023暑期实习笔试题复盘（5道编程）">&larr; Previous Post</a>
-          </li>
-          
           
           <li class="next">
-            <a href="/cn/冲刺春招-精选笔面试 66 题大通关 day4/" data-toggle="tooltip" data-placement="top" title="冲刺春招-精选笔面试 66 题大通关 day4">Next Post &rarr;</a>
+            <a href="/cn/仿Antd组件之DatePicker组件实现（简易）/" data-toggle="tooltip" data-placement="top" title="仿Antd组件之DatePicker组件实现（简易）">Next Post &rarr;</a>
           </li>
           
         </ul>
@@ -598,7 +687,7 @@ b. 支持日期的获取 <code>onDateChange</code> 通过日期变化的回调�
       </a>
     </li>
     <li class="social-share-li">
-      <a target="_blank" class="social-share-icon" href="mailto:?subject=仿Antd组件之DatePicker组件实现（简易）&body=Hi,I found this website and thought you might like it http://yoursite-url/cn/仿Antd组件之DatePicker组件实现（简易）/">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=美团笔试2023暑期实习笔试题复盘（5道编程）&body=Hi,I found this website and thought you might like it http://yoursite-url/cn/美团笔试2023暑期实习笔试题复盘（5道编程）/">
         <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
       </a>
     </li>
@@ -633,7 +722,7 @@ b. 支持日期的获取 <code>onDateChange</code> 通过日期变化的回调�
       repo: '',
       owner: '',
       admin: '',
-      id: 'Fri Mar 11 2022 21:30:22 GMT+0800', // Ensure uniqueness and length less than 50
+      id: 'Sat Mar 12 2022 18:24:56 GMT+0800', // Ensure uniqueness and length less than 50
       distractionFreeMode: false, // Facebook-like distraction free mode
       perPage: 10,
       pagerDirection: 'last',
@@ -686,7 +775,7 @@ b. 支持日期的获取 <code>onDateChange</code> 通过日期变化的回调�
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%BF%83%E5%BE%97"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">心得</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%BB%84%E4%BB%B6%E4%BB%8B%E7%BB%8D"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">组件介绍</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#DatePicker%E7%BB%84%E4%BB%B6"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">DatePicker组件</span></a></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">1、幸运数 （AC 100%）</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%9D%E8%B7%AF-%E4%BB%A3%E7%A0%81"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">思路&amp;代码</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">2、乘积为正（AC 100%）</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%9D%E8%B7%AF-%E4%BB%A3%E7%A0%81-2"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">思路&amp;代码</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">3、做饭（输出2可骗27%）</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">4、炸弹 （AC45%）</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%9D%E8%B7%AF%E5%8F%8A%E4%BB%A3%E7%A0%81"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">思路及代码</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">5、黑白树涂色（AC 100%）</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%9D%E8%B7%AF-%E4%BB%A3%E7%A0%81-3"><span class="toc-nav-number">5.1.</span> <span class="toc-nav-text">思路&amp;代码</span></a></li></ol></li></ol>
         
         </div>
       </aside>
@@ -709,9 +798,11 @@ b. 支持日期的获取 <code>onDateChange</code> 通过日期变化的回调�
           </h5>
           <div class="tags">
             
-            <a class="tag" href="/tags/#前端" title="前端">前端</a>
+            <a class="tag" href="/tags/#c++" title="c++">c++</a>
             
-            <a class="tag" href="/tags/#组件" title="组件">组件</a>
+            <a class="tag" href="/tags/#数据结构" title="数据结构">数据结构</a>
+            
+            <a class="tag" href="/tags/#笔试题" title="笔试题">笔试题</a>
             
           </div>
         </section>
