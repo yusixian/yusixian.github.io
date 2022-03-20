@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="ysx">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <title>布局练习</title>
+</head>
+<body>
+    <div class="personal-center flex-column">
+        <div class="bar">个人中心</div>
+        <div class="content flex-column">
+            <img class="avatar" src="images/avatar.jpg" alt="这是一个头像"/>
+            <div class="nickname">cos</div>
+            <div class="mail">3450414733@qq.com</div>
+            <div class="navicons flex-row">
+                <div class="icon">
+                    <img class="icon"src="images/setting.png" alt = "设置图标"/>
+                </div>
+                <div class="icon">
+                    <img class="icon"src="images/mails.png" alt = "邮箱图标"/>
+                    <div class="superscript">8</div>
+                </div>
+                <div class="icon">
+                    <img class="icon"src="images/notice.png" alt = "通知图标"/>
+                    <div class="superscript">99</div>
+                </div>
+            </div>
+            <button class="notice-btn">展开显示动态消息 V</button>
+        </div>
+    </div>
+    <div class="main-container flex-column">
+        <div class="topbar flex-row">
+             <div class="search-box flex-row">
+                <img class="icon" src="images/search.png" alt="这是一个搜索按钮"/>
+                <input type="text" placeholder="您可在此处进行搜索...">
+             </div>
+             <div class="select-box flex-row">
+                 <div class="selected-item">邮箱</div>
+                 <div class="item">日历</div>
+             </div>
+        </div>
+        <div class="content">
+            <div class="notepad">
+                <div class="title">记事本</div>
+                <img class="earth-img" src="images/earth.jpg" alt="这是一个哭泣的地球"/>
+                <div class="change">我爱地球。地球是我家。环境靠大家!地球日走起!（我也不知道为什么要放个地球在这里欸嘿）</div>
+                <div>劳逸结合是不错，但也别放松过头。耽误太多时间，事情可就做不完了</div>
+                <div>云婵娟来花婵娟，风流尽在山水间。</div>
+                <div>浮世景色百千年依旧，而人之在世却如白露与泡影。虚无。</div>
+                <div>无人相陪，此般花鸟余情，也不过衬托我身不移不变的背景罢了。</div>
+                <div>大丘丘病了，二丘丘瞧；三丘丘采药，四丘丘熬；五丘丘死了，六丘丘抬~欸…呼。</div>
+                <div>风在云中，在雨中，在梦与花海之中， 你在我身旁，在我眼中，在我因爱而波澜不断的心中。</div>
+                <p class="btn-box"><button>添加 +</button></p>
+            </div>
+            <div class="inbox">
+                <div class="head"><strong>收件箱</strong>/已发送</div>
+                <hr/>
+                <div class="author-info">
+                    <img class="avatar" src="images/avatar2.jpg" alt="这是一个头像"/>
+                    <div class="info">
+                        <strong>李雷</strong>
+                        <p>2019 年 2 月 22 日 星期五 上午9点20</p>
+                    </div>
+                </div>
+                <hr/>
+                <div class="mail-content">
+                    <iframe src="letter/letter.html" width="100%" height="90%"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

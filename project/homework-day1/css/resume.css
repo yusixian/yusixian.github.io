@@ -1,0 +1,32 @@
+div {
+    background-color: #fdfcf8;
+    margin: auto;
+    padding: 10px;
+    text-align:center;
+}
+li {
+    padding: 20px;
+}
+.headtext {
+    color: #e9686b;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+}
+.toc {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.toc-inner {
+    font-size: 18px;
+    margin: 10px;
+}
+.info-box {
+    display: flex;
+    justify-content: center;
+}
+
+.info-box-item{
+    font-size: 20px;
+}

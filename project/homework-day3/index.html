@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="ysx">
+    <link href="statics\css\style.css" rel="stylesheet" type="text/css" />
+    <script src="statics\js\treetran.js"></script>
+    <title>js练习</title>
+</head>
+<body>
+    <h1>预习作业</h1>
+    <h2>1、将目录树的数组转换成HTML字符，如下：</h2>
+    <script>
+        let dTree = [
+            'index.html',
+            'js',
+                ['index.js', 'test.js'],
+            'css',
+                ['index.css'],
+            'else',
+                ['test2.css', 
+                    ['test3.css','test4.css']]
+        ];
+        // console.log(fileTree);
+        let t = tree2html(dTree)
+        let ans = `<ul>${t}</ul>`;
+        console.log(ans);
+        document.write(ans);
+    </script>
+    <h2>2、写一个函数，可以将任意层级的文件树数组转换为字符串</h2>
+    <p>转换后的字符串如下：</p>
+    <p id="change">欸嘿，还没有转换哦</p>
+    <script>
+        let fileTree = [
+            'index.html',
+            'js',
+                ['index.js'], 
+                ['test2.js'],
+                ['test', 
+                    ['test3.js']
+                ],
+            'css',
+                ['index.css']
+        ];
+        let ans2 = tree2str(fileTree, 0)
+        console.log(ans2);
+        document.getElementById("change").innerHTML = ans2;
+    </script>
+    <h2>3、写一个函数，可以实现简单的对象深拷贝</h2>
+    <p>见clone.js</p>
+    <h2>4、使用 setInterval 与 Date，在页面上显示一个动态的数字时钟。格式为：20:00:00。</h2>
+    <p id="digital-clock">sss</p>
+    <script>
+        function setNowTime() {
+            let d = new Date();
+            let h = d.getHours();
+            let m = d.getMinutes();
+            let s = d.getSeconds();
+            h = (h>=10)?h:'0'+h;
+            m = (m>=10)?m:'0'+m;
+            s = (s>=10)?s:'0'+s;
+            let dc = document.getElementById('digital-clock');
+            dc.innerHTML = `${h}:${m}:${s}`;
+        }
+        var interval = setInterval(setNowTime,0);
+    </script>
+</body>
+</html>

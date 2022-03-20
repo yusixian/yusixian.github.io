@@ -1,0 +1,277 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+body {  
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: white;
+  align-items: center;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: space-between;
+}
+.flex-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* 最左侧个人中心flex容器 */
+.personal-center {
+  height: 100%;
+  width: 250px;
+  flex-grow: 1;
+  flex-shrink: 2;
+  background-color: white;
+}
+.personal-center .bar{
+  width: 100%;
+  border: 1px solid #A9A9A9;
+  line-height: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  color: gray;
+  text-align: center;
+}
+/* 个人中心内容flex容器 */
+.personal-center .content{
+  height: 100%;
+  border: 1px solid #A9A9A9;
+  width: 100%;
+  flex-grow: 1;
+  flex-shrink: 2;
+  gap: 10px;
+}
+.personal-center .content .avatar{
+  margin: 10px 25%;
+  margin-top: 20px;
+  border: 3px solid #A9A9A9;
+  border-radius: 50%;
+}
+.personal-center .content .nickname{
+  font-size: 28px;
+  font-weight: bolder;
+  text-align: center;
+}
+.personal-center .content .mail{
+  font-size: 16px;
+  text-align: center;
+}
+.personal-center .content .navicons{
+  margin-top: 15px;
+  gap: 10px;
+  height: 30px;
+}
+.personal-center .content .navicons .icon{
+  position: relative;
+  height: 100%;
+  padding: 2px 2px;
+  background-color: rgb(240,240,240);
+  border-radius: 50%;
+}
+.personal-center .content .navicons .icon .superscript{
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  text-align: center;
+  font-size: 10px;
+  top: -20%;
+  right: -20%;
+  padding: 2px 2px;
+  color: white;
+  background-color: red;
+  border-radius: 50%;
+}
+.personal-center .content .notice-btn{
+  margin: 10px 10px;
+  text-align:  center;
+  background-color: #A9A9A9;
+  color: white;
+  font-size: 18px;
+  line-height: 35px;
+  border-radius: 8px;
+}
+/* 右侧功能区顶部菜单栏、记事本、邮箱栏目 */
+.main-container {
+  height: 100%;
+  width: 750px;
+  border: 1px solid #A9A9A9;
+  flex-grow: 3;
+}
+/* 功能区顶部栏 flex */
+.main-container .topbar {
+  height: 50px;
+  justify-content: flex-start;
+  border: 1px solid #A9A9A9;
+}
+.main-container .topbar .search-box{
+  width: 80%;
+}
+.main-container .topbar .search-box .icon{
+  height: 30px;
+  padding: 3px 10px;
+}
+input {
+  height: 95%;
+  width: 95%;
+  color: #A9A9A9;
+  font-size: 18px;
+  border: none;
+  outline: none;
+}
+.main-container .topbar .select-box{
+  width: 20%;
+  min-width: 120px;
+  height: 85%;
+  background-color: rgb(220,220,220);
+  border-radius: 15px;
+  margin-right: 10px;
+  text-align: center;
+  font-size: 18px;
+}
+.main-container .topbar .select-box .item{
+  width: 50%;
+  background-color: rgb(220,220,220);
+  color: black;
+}
+.main-container .topbar .select-box .selected-item{
+  width: 50%;
+  padding: 5px 0;
+  margin-left: 8px;
+  background-color: rgb(67,104,226);
+  border-radius: 14px;
+  color: white;
+}
+/* 功能区-下方内容 */
+.main-container .content{
+  display: flex;
+  flex-grow: 1;
+}
+/* 功能区-记事本 */
+.main-container .content .notepad{
+  background-color: rgb(65,105,226);
+  width: 40%;
+  min-width: 300px;
+  flex-grow: 4;
+  border: 1px solid #A9A9A9;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: space-between;
+  position: relative;
+}
+.main-container .content .notepad .title{
+  border-left: 4px solid purple;
+  line-height: 50px;
+  text-align: left;
+  font-size: 22px;
+  font-weight: bold;
+}
+.main-container .content .notepad>div{
+  background-color: white;
+  padding: 12px 15px;
+  max-height: 160px;
+  line-height: 36px;
+  font-size: 17px;
+  border: 1px solid #A9A9A9;
+  overflow: auto;
+}
+.main-container .content .notepad .change{
+  padding-left: 190px;
+  line-height: 36px;
+  font-size: 17px;
+  border: 1px solid #A9A9A9;
+}
+.main-container .content .notepad .earth-img{
+  height: 135px;
+  top: 80px;
+  left: 10px;
+  position:absolute;
+  z-index: 2;
+}
+.main-container .content .notepad .btn-box{
+  width: 100%;
+  min-width: 300px;
+  background-color: rgb(65,105,226);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.main-container .content .notepad .btn-box>button{
+  width: 30%;
+  min-width: 100px;
+  margin: 10px 20px;
+  padding: 5px 10px;
+  border: 1px solid #A9A9A9;
+  border-radius: 20px;
+  background-color: white;
+  font-size: 25px;
+  color: rgb(65,105,226);
+  box-shadow: 4px 4px  3px  black;
+}
+/* 功能区-收件箱 */
+.main-container .content .inbox{
+  height: 100%;
+  width: 60%;
+  flex-grow: 6;
+  border: 1px solid #A9A9A9;
+  flex-flow: column wrap;
+  padding: 0 10px;
+}
+
+.main-container .content .inbox .head{
+  margin-top: 20px;
+  text-align: right;
+  font-size: 20px;
+  font-style: italic;
+}
+.main-container .content .inbox .head>strong{
+  font-size: 20px;
+  font-weight: bold;
+  font-style: normal;
+}
+/* 功能区-收件箱作者信息 */
+.main-container .content .inbox .author-info{
+  /* background-color: aqua; */
+  height: 8%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-container .content .inbox .author-info .avatar{
+  /* height: 60px; */
+  height: 90%;
+  margin-left: 10px;
+  border: 3px solid #A9A9A9;
+  border-radius: 50%;
+}
+.main-container .content .inbox .author-info .info{
+  height: 90%;
+  flex-grow: 1;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+.main-container .content .inbox .author-info .info>strong{
+  flex-grow: 1;
+  margin-left: 10px;
+  font-size: 20px;
+}
+.main-container .content .inbox .author-info .info>p{
+  flex-grow: 1;
+  margin-left: 10px;
+  font-size: 15px;
+  color: gray;
+}
+/* 功能区-收件箱邮件详情 */
+.main-container .content .inbox .mail-content{
+  height: 90%;
+  flex-flow: column wrap;
+}

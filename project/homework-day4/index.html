@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="cos">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no"> 
+    <!-- <link href="src/css/style.css" rel="stylesheet" type="text/css" /> -->
+    <script src="./dist/bundle.js"></script>
+    <title>HomeWork_Day4</title>
+</head>
+<body>
+    <div class="card">
+        <div class="title">1、添加数据</div>
+        <div class="content">
+            <form class="input-form">
+                <div>
+                    <label>姓名:</label>
+                    <input id="submitted-name" placeholder="请输入姓名"> 
+                </div>
+                <div>
+                    <label>年龄:</label>
+                    <input id="submitted-age" placeholder="请输入年龄">
+                </div>
+            </form>
+            <div class="btns-box">
+                <button id="btn-addrow">添加</button>
+                <button id="btn-submit">上传</button>
+            </div>
+        </div>
+    </div> 
+    <div class="card">
+        <div class="title">2、列表如下</div>
+        <div class="content">
+            <div class="display-table">
+                <table class="data-table" id="data-table">
+                    <thead>
+                        <tr>
+                            <th>姓名</th>
+                            <th>年龄</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>现在这里是空滴</td>
+                            <td>快来添加数据吧</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div>
+
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="title">3、以数组形式输出已上传数据</div>
+        <div class="content">
+            点击添加时，数据仅会添加至列表不会上传（上传至本地localStorage），刷新就会消失；点击上传时，会将数据上传并在控制台输出当前所有数据，刷新仍然存在。
+        </div>
+    </div>
+</body>
+</html>

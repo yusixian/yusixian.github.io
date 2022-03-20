@@ -1,0 +1,122 @@
+body {
+    background-color:#97ABFF;
+}
+
+.todo-checkbox { /* checkbox */
+    min-width: 24px;
+    height: 18px;
+    width: 24px; 
+}
+.todolist-bar .title {
+    color: white;
+    font-weight: bold;
+    font-size: 36px;
+    text-align: center;
+}
+.todolist {
+    display: flex;
+    flex-direction: column;
+}
+.taskCard {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: rgba(0,0,0,0.1);
+    box-shadow: 0 5px 5px rgba(0,0,0,0.4);
+    color: white;
+    padding: 5px 10px;
+    margin: 10px 10px;
+}
+.taskCard .taskCard-head {
+    line-height: 50px;
+    font-size: 22px;
+}
+.taskCard .taskCard-content {
+    width: 100%;
+    display: flex;
+    justify-content: stretch;
+    align-items: stretch;
+    gap: 10px;
+}
+.taskCard .taskCard-content >input{
+    flex-basis: 85%;
+}
+.todolist .taskCard .taskCard-list {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    line-height: 30px;
+}
+.todolist .taskCard .taskCard-list >div {
+    line-height: 40px;
+    box-sizing: border-box; 
+    background: rgba(0,0,0,0);
+    border: 2px solid rgba(0,0,0,0);
+    padding: 0 10px;
+    display: flex;
+    align-items: center; 
+    justify-content: flex-start;
+}
+.todolist .taskCard .taskCard-list >div:hover {
+    border-radius: 10px;
+    border: 2px solid white; 
+    background-color: rgba(255, 246, 246, 0.2);
+}
+.todolist .taskCard .finish >div{
+    background: rgba(0,0,0,0);
+    border: 2px solid rgba(0,0,0,0);
+    font-style: italic;
+    display: flex;
+    align-items: center;
+    justify-content: stretch;
+    position: relative;
+}
+.todolist .taskCard .finish >div:hover{
+    border-radius: 10px;
+    border: 2px solid white; 
+    background-color: rgba(255, 246, 246, 0.2);
+}
+.todolist .taskCard .finish >div:before {
+    z-index: 1;
+    border-top: 2px solid white;
+    content:"";
+    margin: 0; /* this centers the line to the full width specified */
+    position: absolute; /* positioning must be absolute here, and relative positioning must be applied to the parent */
+    top: 50%; left: 0; right: 100px; bottom: 0;
+    width: 100%;
+}
+.todolist .taskCard .finish >label {
+    text-decoration:line-through;
+}
+label {
+    width: 100%;
+}
+.delete-btn {
+    /* flex-basis: 15%; */
+    min-width: 60px;
+}
+#add-btn {
+    flex-basis: 10%;
+    min-width: 60px;
+}
+button {
+    text-align: center;
+    min-width: 10px;
+    border-radius: 10px;
+    border: 2px solid white; 
+    background-color: gray;
+    color: white;
+    z-index: 2;
+    padding: 5px 10px;
+}
+button:active {
+    border: 2px solid grey;
+    background-color: whitesmoke;
+    color: grey;
+}
+input {
+    outline: none;
+}

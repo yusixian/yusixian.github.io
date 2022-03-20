@@ -1,0 +1,12 @@
+body {
+    background-color: whitesmoke;
+}
+li {
+    font-size: 18px;
+    line-height: 25px;
+}
+#digital-clock {
+    text-align: center;
+    font-size: 34px;
+    font-weight: bold;
+}

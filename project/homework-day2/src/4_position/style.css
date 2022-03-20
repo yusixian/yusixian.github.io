@@ -1,0 +1,17 @@
+html, body {  
+  height: 100%;
+  weight: 100%;
+}
+div {
+  position: absolute;
+  border: thick double Steelblue;
+  width: 150px; height: 150px;
+  left: 0; 
+  top: 0; 
+  right: 0; 
+  bottom: 0;
+  margin: auto; /* 自动设置外边距 */
+}
+.square--blue {
+  background-color: blue;
+}

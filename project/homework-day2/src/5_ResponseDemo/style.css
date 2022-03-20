@@ -1,0 +1,23 @@
+html, body {  
+  height: 100%;
+  weight: 100%;
+}
+div {
+  position: absolute;
+  border: thick double Steelblue;
+  width: 150px; height: 150px;
+  left: 0; 
+  top: 0; 
+  right: 0; 
+  bottom: 0;
+  margin: auto; /* 自动设置外边距 */
+}
+.square--blue {
+  background-color: blue;
+}
+/* 使用媒体查询 窗口小于700px时 改变背景颜色为红色 */
+@media only screen and (max-width: 700px) {
+  [class="square--blue"] {
+    background-color: red;
+  }
+}

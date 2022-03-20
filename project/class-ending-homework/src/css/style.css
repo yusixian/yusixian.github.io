@@ -1,0 +1,376 @@
+/* 调用定义的动画（传入实参name）*/
+@keyframes myfadeIn {
+  0% {
+    opacity: 0;
+    /*初始状态 透明度为0*/
+  }
+  20% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.5;
+    /*中间状态 透明度为0.5*/
+  }
+  70% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+    /*结尾状态 透明度为1*/
+  }
+}
+/* 
+定义动画属性,此处只需引入需要的属性，不需要的不能引入，否则会报错 
+*/
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  background-color: #f5f5f5;
+  width: 100%;
+  margin: 0;
+  gap: 20px;
+}
+header {
+  height: 450px;
+  background: url("../image/header-bg.png") no-repeat;
+  background-size: cover;
+}
+header .header-title {
+  font-size: 45px;
+  color: white;
+  text-shadow: 0 0 20px hsla(0, 0%, 0%, 0.5);
+  text-align: center;
+  margin-top: 130px;
+}
+.nav-container {
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 10px;
+}
+.nav-container .brand {
+  float: left;
+  position: absolute;
+  height: 30px;
+  width: 180px;
+  margin-top: 10px;
+  margin-left: 10px;
+  background-image: url("../image/home_logo.png");
+  background-size: cover;
+}
+.nav-container nav {
+  float: right;
+  max-width: 1000px;
+  font-size: 18px;
+}
+@media screen and (max-width: 750px) {
+  .nav-container nav ul {
+    visibility: hidden;
+  }
+}
+.nav-container nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.nav-container nav ul li {
+  float: left;
+  position: relative;
+}
+.nav-container nav ul li a,
+.nav-container nav ul li a:visited {
+  display: block;
+  padding: 0 15px;
+  line-height: 50px;
+  color: white;
+  text-decoration: none;
+}
+.nav-container nav ul li button {
+  text-align: center;
+  background-color: gray;
+  border-radius: 10px;
+  margin-top: 2px;
+  height: 50px;
+  font-size: 18px;
+}
+.nav-container nav ul li button a,
+.nav-container nav ul li button a:visited {
+  line-height: 100%;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+  padding: 10px 10%;
+}
+main h1 {
+  font-size: 32px;
+}
+main ul {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: large;
+}
+main ul li {
+  flex-basis: 25%;
+}
+main ul li img {
+  margin-top: 5px;
+}
+main #course-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+main #course-list .course {
+  animation: myfadeIn 0.5s 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 10px;
+}
+main #course-list .course img {
+  margin: 10px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+main #course-list .course .content {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+}
+main #course-list .course .content .title {
+  margin: 0 0 8px 0;
+}
+footer {
+  height: 150px;
+  background-color: gainsboro;
+  padding: 20px 5%;
+}
+@media screen and (max-width: 840px) {
+  footer {
+    height: 300px;
+  }
+}
+footer .footer-logo {
+  margin-top: 30px;
+  float: left;
+  display: flex;
+  gap: 10px;
+}
+footer .footer-logo p {
+  font-size: 24px;
+  line-height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: #343434;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+footer .links-container {
+  float: right;
+  display: flex;
+  gap: 40px;
+}
+footer .links-container .linker .title {
+  font-size: 18px;
+  font-weight: bold;
+}
+footer .links-container .linker ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+footer .links-container .linker ul a,
+footer .links-container .linker ul a:visited {
+  display: block;
+  padding: 2px 0;
+  color: black;
+  text-decoration: none;
+  font-size: 14px;
+}
+.register-container {
+  box-shadow: 0 0 20px hsla(0, 0%, 0%, 0.5);
+  border-radius: 10px;
+  background-color: white;
+  height: 150px;
+  margin: 0 5%;
+  margin-top: -75px;
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+}
+@media screen and (max-width: 600px) {
+  .register-container {
+    height: 210px;
+  }
+}
+.regist-area {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  padding: 5px;
+  gap: 10px;
+}
+.regist-area .selecter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  font-size: 17px;
+  font-weight: bold;
+  padding: 5px;
+  gap: 10px;
+}
+.regist-area .selecter input {
+  width: 100%;
+  border-radius: 10px;
+  font-size: 17px;
+  line-height: 40px;
+  border: 2px solid #f0f0f0;
+  outline: none;
+  background-color: #f0f0f0;
+}
+.regist-area .selecter input:hover,
+.regist-area .selecter input:active {
+  border: 2px solid #2599ee;
+}
+.regist-area button {
+  margin: 0 5px;
+  width: 100%;
+  border: 2px solid #2599ee;
+  font-size: 17px;
+  background-color: #2599ee;
+  color: white;
+  border-radius: 15px;
+  padding: 0 5px;
+  align-self: center;
+  line-height: 40px;
+}
+.regist-area button:hover {
+  color: #2599ee;
+  background-color: white;
+  border: 2px solid #2599ee;
+}
+#course-fliter {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+#course-fliter ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-bottom: 2px solid #8c8c8c;
+}
+#course-fliter ul li {
+  float: left;
+  font-size: 16px;
+  margin: 0;
+  padding: 20px 10px;
+  margin-bottom: -3px;
+  text-align: center;
+  width: 80px;
+}
+@media screen and (max-width: 600px) {
+  #course-fliter ul li {
+    width: 40px;
+  }
+}
+#course-fliter ul li:hover a,
+#course-fliter ul li:hover a.vis {
+  color: #2599ee;
+}
+#course-fliter ul li a,
+#course-fliter ul li a.vis {
+  color: #8c8c8c;
+  text-decoration: none;
+}
+#course-fliter ul li:active {
+  font-weight: bold;
+  border-bottom: 4px solid #434343;
+}
+#course-fliter ul li:active a {
+  color: #434343;
+}
+#course-fliter .active {
+  font-weight: bold;
+  border-bottom: 4px solid #434343;
+}
+#course-fliter .active a {
+  color: #434343;
+}
+.label-bar {
+  display: flex;
+  align-self: flex-start;
+}
+.label-bar .tag {
+  margin-right: 10px;
+  font-size: 14px;
+  padding: 0 15px;
+  border-radius: 8px;
+  line-height: 30px;
+}
+.label-bar .t1 {
+  background-color: #abb7ff;
+  color: white;
+}
+.label-bar .t2 {
+  background-color: #407341;
+  color: white;
+}
+.label-bar .t3 {
+  background-color: #36516c;
+  color: white;
+}
+.registed {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: auto;
+  padding: 5px;
+  gap: 5px;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+}
+.registed div {
+  flex-basis: 90%;
+}
+.registed button {
+  flex-basis: 10%;
+  border: none;
+  background-color: transparent;
+  font-size: 17px;
+  color: gray;
+  padding: 0 5px;
+  align-self: flex-end;
+  justify-self: flex-end;
+  line-height: 40px;
+}
+.registed button:hover {
+  color: #2599ee;
+}

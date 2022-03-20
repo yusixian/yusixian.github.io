@@ -1,0 +1,371 @@
+@import "../component/animation.less";
+@head-height:450px;
+@nav-height:50px;
+@nav-content-height: 1000px;
+@footer-height:150px;
+
+@main-imageSize: 120px;
+@footer-logo-imageSize: 40px;
+@main-space: 100px; // 左右的留白
+@regist-area-space: 155px; // 左右的留白
+
+@shadow: 0 0 20px hsla(0,0%,0%, .5);
+@nav-font-color:white;
+@footer-font-color:black;
+@nav-font-size: 18px;
+@header-font-size: 45px;
+@main-h1-font-size: 32px;
+@footer-logo-fontSize: 24px;
+
+@nav-bgcolor:rgba(0,0,0,0.8);
+@footer-bgcolor: gainsboro;
+@footer-logo-color: #343434;
+@bgcolor: white;
+
+@head-bgimgURL: url("../image/header-bg.png");
+@logo-imgURL: url("../image/home_logo.png");
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+body {
+    .flex-column();
+    align-items: stretch;
+    background-color: #f5f5f5;
+    width: 100%;
+    margin: 0;
+    gap:20px;
+}
+header {
+    height: @head-height;
+    background: @head-bgimgURL no-repeat;
+    // background-size: 100% auto;
+    background-size: cover;
+    .header-title {
+        font-size: @header-font-size;
+        color: white;
+        text-shadow: @shadow;
+        text-align: center;
+        margin-top: 130px;
+    }
+}
+.nav-container {
+    height: @nav-height;
+    background-color: @nav-bgcolor;
+    padding: 10px;
+    .brand {
+        float: left;
+        position: absolute;
+        height: @nav-height*0.6;
+        width: @nav-height*3.6;
+        margin-top: 10px;
+        margin-left: 10px;
+        background-image: @logo-imgURL;
+        background-size: cover;
+    }
+    nav {
+        float: right;
+        max-width: @nav-content-height;
+        font-size: @nav-font-size;
+        @media screen and (max-width: 750px){
+            ul{visibility: hidden;}
+        }
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            li {
+                float: left;
+                position: relative;
+                a,a:visited {
+                    display: block;
+                    padding: 0 15px;
+                    line-height: @nav-height;
+                    color: @nav-font-color;
+                    text-decoration: none;
+                }
+                button {
+                    text-align: center;
+                    background-color: gray;
+                    border-radius: 10px;
+                    margin-top: 2px;
+                    height: 50px;
+                    font-size: @nav-font-size;
+                    a,a:visited {
+                        line-height: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+main{
+    .flex-column();
+    gap: 30px;
+    padding: 10px 10%; 
+    h1{
+        font-size: @main-h1-font-size;
+    }
+    ul {
+        display: flex;
+        justify-content: center;
+        gap:20px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        font-size: large;
+        li {
+            flex-basis: 25%;
+            img {margin-top: 5px}
+        }
+    }
+    #course-list {
+        .flex-column();
+        gap:20px;
+        .course {
+            .animation(myfadeIn,0.5s,1);
+            display:  flex;
+            justify-content: flex-start;
+            align-items: stretch;
+            gap:10px;
+            img {
+                margin: 10px;
+                width: @main-imageSize; height: @main-imageSize;
+                border-radius: 50%;
+            }
+            .content {
+                margin: 0;
+                .flex-column();
+                align-items: stretch;
+                .title{
+                    margin: 0 0 8px 0;
+                }
+            }
+        }
+    }
+}
+footer {
+    height: @footer-height;
+    background-color: @footer-bgcolor;
+    padding: 20px 5%;
+    @media screen and (max-width: 840px){
+        height: @footer-height*2;
+    }
+    .footer-logo {
+        margin-top: 30px;
+        float: left;
+        display: flex;
+        gap:10px;
+        p {
+            font-size: @footer-logo-fontSize;
+            line-height: @footer-logo-imageSize;
+            width: @footer-logo-imageSize;
+            border-radius: 50%;
+            background-color: @footer-logo-color;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+        }
+    }
+    .links-container {
+        float: right;
+        display: flex;
+        gap:40px;
+        .linker{
+            .title {
+                font-size: 18px;
+                font-weight: bold;
+            }
+            ul {
+                .flex-column();
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                a,a:visited {
+                    display: block;
+                    padding: 2px 0;
+                    color: @footer-font-color;
+                    text-decoration: none;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+// step2:选择区域&课程筛选
+@register-height:150px;
+@selecter-color:#f0f0f0;
+@selecter-hover-color:#bfbfbf;
+@btn-color: #2599ee;
+@selecter-font-size: 17px;
+@selecter-border: 2px solid @btn-color;
+@underline-space: 20px; 
+@underline-color: #8c8c8c; 
+@underline-active-color: #434343; 
+@underline: 2px solid @underline-color; 
+@underline-active: 4px solid @underline-active-color; 
+.register-container {
+    box-shadow: @shadow;
+    border-radius: 10px;
+    background-color: white;
+    height: @register-height;
+    margin: 0 5%;
+    margin-top: -@register-height*0.5;
+    @media screen and (max-width:600px) {
+        height: @register-height*1.4;
+    }
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+}
+.regist-area {
+    // background-color: salmon;
+    width: 100%;
+    height: @register-height;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    padding: 5px;
+    gap: 10px;
+    .selecter {
+        // width: 60px;
+        .flex-column();
+        align-items: stretch;
+
+        font-size: @selecter-font-size;
+        font-weight: bold;
+        padding: 5px;
+        gap:10px;
+        input {
+            width: 100%;
+            border-radius: 10px;
+            font-size: @selecter-font-size;
+            line-height: 40px;
+            border: 2px solid @selecter-color;
+            outline: none;
+            background-color: @selecter-color;
+        }
+        input:hover,input:active {
+            border: @selecter-border;
+        }
+    }
+    button {
+        margin: 0 5px;
+        width: 100%;
+        border:2px solid @btn-color;
+        font-size: @selecter-font-size;
+        background-color: @btn-color;
+        color:white;
+        border-radius: 15px;
+        padding: 0 5px;
+        align-self: center;
+        line-height: 40px;
+    }
+    button:hover {
+        color: @btn-color;
+        background-color: white;
+        border: @selecter-border;
+    }
+}
+#course-fliter {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+    ul { 
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        border-bottom: @underline;
+        li {
+            float: left;
+            font-size: 16px;
+            margin: 0;
+            padding: 20px 10px;
+            margin-bottom: -3px;
+            text-align: center;
+            width: 80px;
+            @media screen and (max-width: 600px) {
+                width: 40px;
+            }
+            &:hover {
+                a, a.vis{
+                    color: #2599ee;
+                }
+            }
+            a, a.vis{
+                color: @underline-color;
+                text-decoration: none;
+            }
+        }
+        
+        li:active {
+            .active();
+        }
+    }
+    .active {
+        font-weight: bold;
+        border-bottom: @underline-active;
+        a{color: @underline-active-color;}
+    }
+   
+}
+.label-bar {
+    display: flex;
+    align-self: flex-start;
+    .tag {
+        margin-right: 10px;
+        font-size: 14px;
+        padding: 0 15px;
+        border-radius: 8px;
+        line-height: 30px;
+    }
+    .t1 {
+        background-color: #abb7ff;
+        color: white;
+    }    
+    .t2 {
+        background-color: #407341;
+        color: white;
+    }    
+    .t3 {
+        background-color: #36516c;
+        color: white;
+    }    
+}
+
+.registed {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: auto;
+    // flex-wrap: nowrap;
+    padding: 5px;
+    gap: 5px;
+
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    div {
+        flex-basis: 90%;
+    }
+    button {
+        flex-basis: 10%;
+        border: none;
+        background-color: transparent;
+        font-size: @selecter-font-size;
+        color:gray;
+        padding: 0 5px;
+        align-self: flex-end;
+        justify-self: flex-end;
+        line-height: 40px;
+    }
+    button:hover {
+        color: @btn-color;
+    }
+}

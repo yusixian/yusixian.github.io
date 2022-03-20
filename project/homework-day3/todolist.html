@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="cos"> 
+    <!-- 适配手机 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no"> 
+    <link href="statics\css\todolist.css" rel="stylesheet" type="text/css" />
+    <title>todolist(by cos)</title>
+</head>
+<body>
+    <div class="todolist-bar">
+        <div class="title">我的待办</div>
+    </div>
+    <div class="taskCard">
+        <div class="taskCard-head">添加代办</div>
+        <div class="taskCard-content">
+            <input type="text" id="addtodoText" placeholder="请在此输入待办事项">
+            <button id="add-btn">添加</button>
+        </div> 
+    </div>
+    <div class="todolist">
+        <div class="taskCard">
+            <div class="taskCard-head">待完成QAQ</div>
+            <div class="taskCard-list" id="todoTask">
+                <!-- <div>
+                    <input type="checkbox" class="todo-checkbox" id="todo-1">
+                    <label>我是一个待办</label>
+                    <button class="delete-btn" id = "todo-delete-1">删除</button>
+                </div>
+                <div>
+                    <input type="checkbox" class="todo-checkbox" id="todo-2">
+                    <label>我是第二个待办^_^</label>
+                    <button class="delete-btn" id = "todo-delete-2">删除</button>
+                </div> -->
+            </div>
+            <div class="taskCard-head">已完成^_^</div>
+            <div class="taskCard-list finish" id="finishTask">
+                <!-- <div>
+                    <input type="checkbox" class="todo-checkbox" id="finsh-1" disabled="disabled" checked="checked">
+                    <label>我好啦</label>
+                    <button class="delete-btn" id = "finsh-delete-1">删除</button>
+                </div>
+                <div>
+                    <input type="checkbox" class="todo-checkbox" id="finsh-2"  disabled="disabled" checked="checked">
+                    <label>好耶完成了 dddd</label>
+                    <button class="delete-btn" id = "finsh-delete-2">删除</button>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    <script src="statics\js\todolist.js"></script>
+</body>
+</html>

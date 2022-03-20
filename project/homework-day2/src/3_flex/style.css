@@ -1,0 +1,23 @@
+html {
+  weight: 100%;
+  height:100%;
+}
+body {  
+  height: 100%;
+  weight: 100%;
+  display: flex; 
+  justify-content: center;  
+  align-items: center;
+}
+div {
+  border: thick double Steelblue;
+  width: 150px;
+  height: 150px;
+}
+.square--blue {
+  background-color: blue;
+}
+.square--red {
+  background-color: red;
+}
+  
