@@ -1,0 +1,1728 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>前端设计模式应用 · cos的前端学习记录</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="【第二届青训营-寒假前端场】- 「前端设计模式应用」笔记">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="cos">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="web-biao-zhun-yu-qian-duan-kai-fa.html" />
+    
+    
+    <link rel="prev" href="qian-duan-bi-xu-zhi-dao-de-kai-fa-tiao-shi-zhi-shi.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://ysx.cosine.ren/" target="_blank" class="custom-link">cos的博客</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://github.com/yusixian" target="_blank" class="custom-link">Github</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    前言及目录
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">前端基础</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../javascript/">
+            
+                <a href="../javascript/">
+            
+                    
+                    JavaScript
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../javascript/gen-zhuo-yue-ying-xue-javascript.html">
+            
+                <a href="../javascript/gen-zhuo-yue-ying-xue-javascript.html">
+            
+                    
+                    跟着月影学JavaScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../javascript/prototype-and-inherit.html">
+            
+                <a href="../javascript/prototype-and-inherit.html">
+            
+                    
+                    JavaScript之对象、原型链及继承
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../javascript/javascript-zhong-de-lei.html">
+            
+                <a href="../javascript/javascript-zhong-de-lei.html">
+            
+                    
+                    JavaScript中的类
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../html.html">
+            
+                <a href="../html.html">
+            
+                    
+                    HTML
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../css/">
+            
+                <a href="../css/">
+            
+                    
+                    CSS
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="../css/css-xue-xi-zhi-bu-ju.html">
+            
+                <a href="../css/css-xue-xi-zhi-bu-ju.html">
+            
+                    
+                    CSS学习之布局
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../http-yu-liu-lan-qi/">
+            
+                <a href="../http-yu-liu-lan-qi/">
+            
+                    
+                    HTTP与浏览器
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1" data-path="../http-yu-liu-lan-qi/http-shi-yong-zhi-nan.html">
+            
+                <a href="../http-yu-liu-lan-qi/http-shi-yong-zhi-nan.html">
+            
+                    
+                    HTTP实用指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.2" data-path="../http-yu-liu-lan-qi/web-kai-fa-de-an-quan-zhi-lv.html">
+            
+                <a href="../http-yu-liu-lan-qi/web-kai-fa-de-an-quan-zhi-lv.html">
+            
+                    
+                    Web开发的安全之旅
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    通用知识
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.5.1" data-path="qian-duan-bi-xu-zhi-dao-de-kai-fa-tiao-shi-zhi-shi.html">
+            
+                <a href="qian-duan-bi-xu-zhi-dao-de-kai-fa-tiao-shi-zhi-shi.html">
+            
+                    
+                    前端必须知道的开发调试知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.5.2" data-path="qian-duan-she-ji-mo-shi-ying-yong.html">
+            
+                <a href="qian-duan-she-ji-mo-shi-ying-yong.html">
+            
+                    
+                    前端设计模式应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.3" data-path="web-biao-zhun-yu-qian-duan-kai-fa.html">
+            
+                <a href="web-biao-zhun-yu-qian-duan-kai-fa.html">
+            
+                    
+                    Web 标准与前端开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">数据结构及算法</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../data-structures-and-algorithms/leetcode/">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/">
+            
+                    
+                    LeetCode
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/">
+            
+                    
+                    冲刺春招-精选笔面试 66 题大通关
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1.1" data-path="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day1.html">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day1.html">
+            
+                    
+                    day1：21. 合并两个有序链表、146. LRU 缓存、25. K 个一组翻转链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.2" data-path="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day2.html">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day2.html">
+            
+                    
+                    day2：14. 最长公共前缀、3. 无重复字符的最长子串、124. 二叉树中的最大路径和
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.3" data-path="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day3.html">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day3.html">
+            
+                    
+                    day3：206. 反转链表、199. 二叉树的右视图、bytedance-016最短移动距离
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.4" data-path="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day4.html">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day4.html">
+            
+                    
+                    day4：1. 两数之和、15. 三数之和、42. 接雨水
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.5" data-path="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day5.html">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day5.html">
+            
+                    
+                    day5：7. 整数反转、215. 数组中的第K个最大元素、23. 合并K个升序链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.6" data-path="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day6.html">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day6.html">
+            
+                    
+                    day6：33. 搜索旋转排序数组、54. 螺旋矩阵、bytedance-006. 夏季特惠
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.7" data-path="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day7.html">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day7.html">
+            
+                    
+                    day7：53. 最大子数组和、152. 乘积最大子数组、41. 缺失的第一个正数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.8" data-path="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day8.html">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day8.html">
+            
+                    
+                    day8：20. 有效的括号、200. 岛屿数量、76. 最小覆盖子串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.9" data-path="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day9.html">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day9.html">
+            
+                    
+                    day9：105. 从前序与中序遍历序列构造二叉树、103. 二叉树的锯齿形层序遍历、bytedance-010. 数组组成最大数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.10" data-path="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day10.html">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day10.html">
+            
+                    
+                    day10：94. 二叉树的中序遍历、102. 二叉树的层序遍历、394. 字符串解码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.11" data-path="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day11.html">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day11.html">
+            
+                    
+                    day11：415. 字符串相加、5. 最长回文子串、72. 编辑距离
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.12" data-path="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day12.html">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day12.html">
+            
+                    
+                    day12：64. 最小路径和、300. 最长递增子序列、bytedance-004. 机器人跳跃问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.13" data-path="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day13.html">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day13.html">
+            
+                    
+                    day13：88. 合并两个有序数组、31. 下一个排列、4. 寻找两个正序数组的中位数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.14" data-path="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day14.html">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day14.html">
+            
+                    
+                    day14：121. 买卖股票的最佳时机、56. 合并区间、135. 分发糖果
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.15" data-path="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day15.html">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day15.html">
+            
+                    
+                    day15：232. 用栈实现队列、22. 括号生成、128. 最长连续序列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.16" data-path="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day16.html">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day16.html">
+            
+                    
+                    day16：bytedance-007. 化学公式解析、129. 求根节点到叶节点数字之和、239. 滑动窗口最大值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.17" data-path="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day17.html">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day17.html">
+            
+                    
+                    day17：141. 环形链表、236. 二叉树的最近公共祖先、92. 反转链表 II
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.18" data-path="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day18.html">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day18.html">
+            
+                    
+                    day18：322. 零钱兑换、198. 打家劫舍、 bytedance-003. 古生物血缘远近判定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.19" data-path="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day19.html">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day19.html">
+            
+                    
+                    day19：160. 相交链表、143. 重排链表、142. 环形链表 II
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.20" data-path="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day20.html">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day20.html">
+            
+                    
+                    day20：704. 二分查找、43. 字符串相乘、bytedance-002. 发下午茶
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../../data-structures-and-algorithms/data-structure/">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/">
+            
+                    
+                    数据结构
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="../../data-structures-and-algorithms/data-structure/1-xian-xing-biao-list.html">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/1-xian-xing-biao-list.html">
+            
+                    
+                    1、线性表（List）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2" data-path="../../data-structures-and-algorithms/data-structure/2-dui-zhan-stack.html">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/2-dui-zhan-stack.html">
+            
+                    
+                    2、堆栈（Stack）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.3" data-path="../../data-structures-and-algorithms/data-structure/3-dui-lie-queue.html">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/3-dui-lie-queue.html">
+            
+                    
+                    3、队列（Queue）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.4" data-path="../../data-structures-and-algorithms/data-structure/4-er-cha-shu-binary-tree.html">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/4-er-cha-shu-binary-tree.html">
+            
+                    
+                    4、二叉树（Binary Tree）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.5" data-path="../../data-structures-and-algorithms/data-structure/5-er-cha-sou-suo-shu-yu-ping-heng-er-cha-shu-bst-avl.html">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/5-er-cha-sou-suo-shu-yu-ping-heng-er-cha-shu-bst-avl.html">
+            
+                    
+                    5、二叉搜索树与平衡二叉树（BST & AVL）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.6" data-path="../../data-structures-and-algorithms/data-structure/6-dui-stack-ha-fu-man-shu-bing-cha-ji.html">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/6-dui-stack-ha-fu-man-shu-bing-cha-ji.html">
+            
+                    
+                    6、堆（Stack）& 哈夫曼树 & 并查集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.7" data-path="../../data-structures-and-algorithms/data-structure/7-tu-graph/">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/7-tu-graph/">
+            
+                    
+                    7、图（Graph）
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.7.1" data-path="../../data-structures-and-algorithms/data-structure/7-tu-graph/tu-lun-jie-jue-zui-xiao-sheng-cheng-shu-wen-ti-kruskal-suan-fa-prim-suan-fa.html">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/7-tu-graph/tu-lun-jie-jue-zui-xiao-sheng-cheng-shu-wen-ti-kruskal-suan-fa-prim-suan-fa.html">
+            
+                    
+                    图论——解决最小生成树问题(Kruskal算法\&Prim算法)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.8" data-path="../../data-structures-and-algorithms/data-structure/8-pai-xu-sort.html">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/8-pai-xu-sort.html">
+            
+                    
+                    8、排序（sort）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.9" data-path="../../data-structures-and-algorithms/data-structure/9-san-lie-biao-hash.html">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/9-san-lie-biao-hash.html">
+            
+                    
+                    9、散列表（hash）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10" data-path="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/">
+            
+                    
+                    数据结构习题
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.10.1" data-path="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-yi-zhou-zui-da-zi-lie-he-suan-fa-er-fen-cha-zhao.html">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-yi-zhou-zui-da-zi-lie-he-suan-fa-er-fen-cha-zhao.html">
+            
+                    
+                    第一周：最大子列和算法、二分查找
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10.2" data-path="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-er-zhou-xian-xing-jie-gou.html">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-er-zhou-xian-xing-jie-gou.html">
+            
+                    
+                    第二周：线性结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10.3" data-path="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-san-zhou-zai-shu-er-cha-shu-deng.html">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-san-zhou-zai-shu-er-cha-shu-deng.html">
+            
+                    
+                    第三周：栽树（二叉树等）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10.4" data-path="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-si-zhou-er-cha-sou-suo-shu-er-cha-ping-heng-shu.html">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-si-zhou-er-cha-sou-suo-shu-er-cha-ping-heng-shu.html">
+            
+                    
+                    第四周：二叉搜索树&二叉平衡树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10.5" data-path="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-wu-zhou-dui-ha-fu-man-shu-bing-cha-ji.html">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-wu-zhou-dui-ha-fu-man-shu-bing-cha-ji.html">
+            
+                    
+                    第五周：堆&哈夫曼树&并查集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10.6" data-path="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-liu-zhou-tu-shang-lian-tong-ji-dfsbfs.html">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-liu-zhou-tu-shang-lian-tong-ji-dfsbfs.html">
+            
+                    
+                    第六周：图（上）连通集 、DFS\&BFS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10.7" data-path="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-qi-zhou-tu-zhong-floyd-suan-fa-qiu-zui-duan-lu.html">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-qi-zhou-tu-zhong-floyd-suan-fa-qiu-zui-duan-lu.html">
+            
+                    
+                    第七周：图（中）Floyd算法求最短路
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10.8" data-path="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-ba-zhou-tu-xia.html">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-ba-zhou-tu-xia.html">
+            
+                    
+                    第八周：图（下）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10.9" data-path="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-jiu-zhou-pai-xu-shang-gui-bing-dui-pai-xu.html">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-jiu-zhou-pai-xu-shang-gui-bing-dui-pai-xu.html">
+            
+                    
+                    第九周：排序（上）归并&堆排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10.10" data-path="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-shi-zhou-pai-xu-xia.html">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-shi-zhou-pai-xu-xia.html">
+            
+                    
+                    第十周：排序（下）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10.11" data-path="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-shi-yi-zhou-san-lie-cha-zhao-kmp.html">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-shi-yi-zhou-san-lie-cha-zhao-kmp.html">
+            
+                    
+                    第十一周：散列查找 & KMP
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">前端进阶</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../../morelearning/qian-duan-jin-jie.html">
+            
+                <a href="../../morelearning/qian-duan-jin-jie.html">
+            
+                    
+                    React
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../../morelearning/react/xiang-ying-shi-xi-tong-yu-react.html">
+            
+                <a href="../../morelearning/react/xiang-ying-shi-xi-tong-yu-react.html">
+            
+                    
+                    响应式系统与 React
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="../../morelearning/react/react-xue-xi-xiao-ji.html">
+            
+                <a href="../../morelearning/react/react-xue-xi-xiao-ji.html">
+            
+                    
+                    React学习小记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="../../morelearning/react/redux-xue-xi-zhi-redux-san-yuan-ze-createsore-yuan-li-ji-shi-xian.html">
+            
+                <a href="../../morelearning/react/redux-xue-xi-zhi-redux-san-yuan-ze-createsore-yuan-li-ji-shi-xian.html">
+            
+                    
+                    Redux学习之Redux三原则、createSore原理及实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../../morelearning/typescript/">
+            
+                <a href="../../morelearning/typescript/">
+            
+                    
+                    TypeScript
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.2.1" data-path="../../morelearning/typescript/typescript-ru-men.html">
+            
+                <a href="../../morelearning/typescript/typescript-ru-men.html">
+            
+                    
+                    TypeScript入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../../morelearning/webpack/">
+            
+                <a href="../../morelearning/webpack/">
+            
+                    
+                    Webpack
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.3.1" data-path="../../morelearning/webpack/webpack-zhi-shi-ti-xi.html">
+            
+                <a href="../../morelearning/webpack/webpack-zhi-shi-ti-xi.html">
+            
+                    
+                    Webpack知识体系
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../../morelearning/animation/">
+            
+                <a href="../../morelearning/animation/">
+            
+                    
+                    前端动画与绘图
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.4.1" data-path="../../morelearning/animation/webgl-ji-chu.html">
+            
+                <a href="../../morelearning/animation/webgl-ji-chu.html">
+            
+                    
+                    WebGL基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4.2" data-path="../../morelearning/animation/qian-duan-dong-hua-jian-jie.html">
+            
+                <a href="../../morelearning/animation/qian-duan-dong-hua-jian-jie.html">
+            
+                    
+                    前端动画简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">笔面试记录</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../../interview-record/collection-interview/">
+            
+                <a href="../../interview-record/collection-interview/">
+            
+                    
+                    面经集锦
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.1" data-path="../../interview-record/collection-interview/2022-spring-metaapp.html">
+            
+                <a href="../../interview-record/collection-interview/2022-spring-metaapp.html">
+            
+                    
+                    2022春暑期实习MetaApp一二面面经
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.2" data-path="../../interview-record/collection-interview/2022-spring-bytedance.html">
+            
+                <a href="../../interview-record/collection-interview/2022-spring-bytedance.html">
+            
+                    
+                    2022春暑期实习字节前端一面凉经
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../../interview-record/written-examination-reply/">
+            
+                <a href="../../interview-record/written-examination-reply/">
+            
+                    
+                    笔试复盘
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.2.1" data-path="../../interview-record/written-examination-reply/2022-chun-mei-tuan-bi-shi-shu-qi-shi-xi-bi-shi-ti-fu-pan.html">
+            
+                <a href="../../interview-record/written-examination-reply/2022-chun-mei-tuan-bi-shi-shu-qi-shi-xi-bi-shi-ti-fu-pan.html">
+            
+                    
+                    2022春美团笔试暑期实习笔试题复盘
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.2" data-path="../../interview-record/written-examination-reply/2022-chun-360-bi-shi-ti-mu-fu-pan-yan-faejuan.html">
+            
+                <a href="../../interview-record/written-examination-reply/2022-chun-360-bi-shi-ti-mu-fu-pan-yan-faejuan.html">
+            
+                    
+                    2022春360笔试题目复盘-研发E卷
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.3" data-path="../../interview-record/written-examination-reply/2022-chun-jing-dong-qian-duan-bi-shi-ti-mu-fu-pan.html">
+            
+                <a href="../../interview-record/written-examination-reply/2022-chun-jing-dong-qian-duan-bi-shi-ti-mu-fu-pan.html">
+            
+                    
+                    2022春京东前端笔试题目复盘
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.4" data-path="../../interview-record/written-examination-reply/2022-chun-wang-yi-lei-huo-qian-duan-shu-qi-shi-xi-bi-shi-ak.html">
+            
+                <a href="../../interview-record/written-examination-reply/2022-chun-wang-yi-lei-huo-qian-duan-shu-qi-shi-xi-bi-shi-ak.html">
+            
+                    
+                    2022春网易雷火前端暑期实习笔试(AK)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >前端设计模式应用</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x524D;&#x7AEF;&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;&#x5E94;&#x7528;">&#x524D;&#x7AEF;&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;&#x5E94;&#x7528;</h1>
+<h2 id="&#x4EC0;&#x4E48;&#x662F;&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;">&#x4EC0;&#x4E48;&#x662F;&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;</h2>
+<p>&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;&#x662F;&#x8F6F;&#x4EF6;&#x8BBE;&#x8BA1;&#x4E2D;&#x5E38;&#x89C1;&#x95EE;&#x9898;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x6A21;&#x578B;&#xFF0C;&#x662F;&#x5386;&#x53F2;&#x7ECF;&#x9A8C;&#x7684;&#x603B;&#x7ED3;&#xFF0C;&#x4E0E;&#x7279;&#x5B9A;&#x8BED;&#x8A00;&#x65E0;&#x5173;</p>
+<p>&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;&#x5927;&#x81F4;&#x5206;&#x4E3A;23&#x79CD;&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;</p>
+<ul>
+<li>&#x521B;&#x5EFA;&#x578B;&#x2014;&#x2014;&#x5982;&#x4F55;&#x9AD8;&#x6548;&#x7075;&#x6D3B;&#x7684;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;</li>
+<li>&#x7ED3;&#x6784;&#x578B;&#x2014;&#x2014;&#x5982;&#x4F55;&#x7075;&#x6D3B;&#x7684;&#x5C06;&#x5BF9;&#x8C61;&#x7EC4;&#x88C5;&#x6210;&#x8F83;&#x5927;&#x7684;&#x7ED3;&#x6784;</li>
+<li>&#x884C;&#x4E3A;&#x578B;&#x2014;&#x2014;&#x8D1F;&#x8D23;&#x5BF9;&#x8C61;&#x95F4;&#x7684;&#x9AD8;&#x6548;&#x901A;&#x4FE1;&#x548C;&#x804C;&#x8D23;&#x5212;&#x5206;</li>
+</ul>
+<h2 id="&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x7684;&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;">&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x7684;&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;</h2>
+<h3 id="&#x5355;&#x4F8B;&#x6A21;&#x5F0F;">&#x5355;&#x4F8B;&#x6A21;&#x5F0F;</h3>
+<p>&#x5355;&#x4F8B;&#x6A21;&#x5F0F;&#x2014;&#x2014;&#x5B58;&#x5728;&#x4E00;&#x4E2A;&#x5168;&#x5C40;&#x8BBF;&#x95EE;&#x5BF9;&#x8C61;&#xFF0C;&#x5728;&#x4EFB;&#x610F;&#x5730;&#x65B9;&#x8BBF;&#x95EE;&#x548C;&#x4FEE;&#x6539;&#x90FD;&#x4F1A;&#x53CD;&#x6620;&#x5728;&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#x4E0A;</p>
+<p>&#x6700;&#x5E38;&#x7528;&#x7684;&#x5176;&#x5B9E;&#x5C31;&#x662F;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x7684;window&#x5BF9;&#x8C61;&#xFF0C;&#x63D0;&#x4F9B;&#x4E86;&#x5BF9;&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x64CD;&#x4F5C;&#x7684;&#x5C01;&#x88C5;&#xFF0C;&#x5E38;&#x7528;&#x4E8E;&#x7F13;&#x5B58;&#x4E0E;&#x5168;&#x5C40;&#x72B6;&#x6001;&#x7BA1;&#x7406;&#x7B49;</p>
+<h4 id="&#x5355;&#x4F8B;&#x6A21;&#x5F0F;&#x5B9E;&#x73B0;&#x8BF7;&#x6C42;&#x7F13;&#x5B58;">&#x5355;&#x4F8B;&#x6A21;&#x5F0F;&#x5B9E;&#x73B0;&#x8BF7;&#x6C42;&#x7F13;&#x5B58;</h4>
+<p>&#x7528;&#x5355;&#x4F8B;&#x6A21;&#x5F0F;&#x5B9E;&#x73B0;&#x8BF7;&#x6C42;&#x7F13;&#x5B58;&#xFF1A;&#x76F8;&#x540C;&#x7684;url&#x8BF7;&#x6C42;&#xFF0C;&#x5E0C;&#x671B;&#x7B2C;&#x4E8C;&#x6B21;&#x53D1;&#x9001;&#x8BF7;&#x6C42;&#x7684;&#x65F6;&#x5019;&#x53EF;&#x4EE5;&#x590D;&#x7528;&#x4E4B;&#x524D;&#x7684;&#x4E00;&#x4E9B;&#x503C;</p>
+<p>&#x9996;&#x5148;&#x521B;&#x5EFA;Request&#x7C7B;&#xFF0C;&#x8BE5;&#x7C7B;&#x5305;&#x542B;&#x4E00;&#x4E2A;&#x521B;&#x5EFA;&#x5355;&#x4F8B;&#x5BF9;&#x8C61;&#x7684;&#x9759;&#x6001;&#x65B9;&#x6CD5;getinstance&#xFF0C;&#x7136;&#x540E;&#x771F;&#x6B63;&#x8BF7;&#x6C42;&#x7684;&#x64CD;&#x4F5C;&#x4E3A;request&#x65B9;&#x6CD5;&#xFF0C;&#x5411;url&#x53D1;&#x9001;&#x8BF7;&#x6C42;&#xFF0C;&#x82E5;&#x7F13;&#x5B58;&#x4E2D;&#x5B58;&#x5728;&#x8BE5;url&#x5219;&#x76F4;&#x63A5;&#x8FD4;&#x56DE;&#xFF0C;&#x53CD;&#x4E4B;&#x5219;&#x7F13;&#x5B58;&#x5230;&#x8BE5;&#x5355;&#x4F8B;&#x5BF9;&#x8C61;&#x4E2D;&#x3002;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x5982;&#x4E0B;&#x662F;&#x4E0A;&#x8282;&#x8BFE;&#x8BB2;&#x8FC7;&#x7684;&#x8BED;&#x6CD5;~</p>
+<pre><code class="lang-ts"><span class="hljs-keyword">import</span> {api} from <span class="hljs-string">&apos;./utils&apos;</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> Request {
+    <span class="hljs-keyword">static</span> instance: Request;
+    <span class="hljs-keyword">private</span> cache: Record&lt;<span class="hljs-built_in">string</span>, <span class="hljs-built_in">string</span>&gt;;
+    <span class="hljs-keyword">constructor</span>() {
+        <span class="hljs-keyword">this</span>.cache = {};
+    }
+    <span class="hljs-keyword">static</span> getinstance() {
+        <span class="hljs-keyword">if</span>(<span class="hljs-keyword">this</span>.instance) {
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.instance;
+        }
+        <span class="hljs-keyword">this</span>.instance = <span class="hljs-keyword">new</span> Request();  <span class="hljs-comment">// &#x4E4B;&#x524D;&#x8FD8;&#x672A;&#x6709;&#x8FC7;&#x8BF7;&#x6C42;&#xFF0C;&#x521D;&#x59CB;&#x5316;&#x8BE5;&#x5355;&#x4F8B;</span>
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.instance;
+    }
+    <span class="hljs-keyword">public</span> async request(url:<span class="hljs-built_in">string</span>) {
+        <span class="hljs-keyword">if</span>(<span class="hljs-keyword">this</span>.cache[url]) {
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.cache[url];
+        }
+        <span class="hljs-keyword">const</span> response = await api(url);
+        <span class="hljs-keyword">this</span>.cache[url] = response;
+
+        <span class="hljs-keyword">return</span> response;
+    }
+}
+</code></pre>
+<p>&#x5B9E;&#x9645;&#x4E2D;&#x4F7F;&#x7528;&#x5982;&#x4E0B;&#xFF1A;&#x5229;&#x7528;getInstance&#x9759;&#x6001;&#x65B9;&#x6CD5;&#x521B;&#x5EFA;&#x8BE5;&#x5355;&#x4F8B;&#x5BF9;&#x8C61;&#xFF0C;&#x5E76;&#x6D4B;&#x8BD5;&#x8D77;&#x6267;&#x884C;&#x65F6;&#x95F4;&#x8FDB;&#x884C;&#x5BF9;&#x6BD4;&#x3002;</p>
+<blockquote>
+<p>ps: &#x8FD9;&#x91CC;&#x7684;&#x6D4B;&#x8BD5;&#x662F;&#x4F7F;&#x7528;<a href="https://www.jestjs.cn" target="_blank">Jest </a>&#x8FDB;&#x884C;&#x7684;&#xFF0C;&#x5176;&#x4E2D;&#x7528;&#x5230;&#x4E86;&#x90E8;&#x5206;<a href="https://www.jestjs.cn/docs/expect" target="_blank">expect</a>&#x7684;api&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x6587;&#x6863;&#x4E86;&#x89E3;&#x5176;&#x7528;&#x9014;</p>
+</blockquote>
+<pre><code class="lang-ts"><span class="hljs-comment">// &#x4E0D;&#x9884;&#x5148;&#x8FDB;&#x884C;&#x8BF7;&#x6C42;&#xFF0C;&#x6D4B;&#x8BD5;&#x5176;&#x65F6;&#x95F4;&#x3002;</span>
+test(<span class="hljs-string">&apos;should response more than 500ms with class&apos;</span>, async() =&gt; {
+    <span class="hljs-keyword">const</span> request = Request.getinstance();  <span class="hljs-comment">//&#x83B7;&#x53D6;/&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5355;&#x4F8B;&#x5BF9;&#x8C61;&#xFF08;&#x82E5;&#x4E4B;&#x524D;&#x672A;&#x521B;&#x5EFA;&#x8FC7;&#x5219;&#x521B;&#x5EFA;&#xFF09;</span>
+    <span class="hljs-keyword">const</span> startTime = <span class="hljs-built_in">Date</span>.now();
+    await request.request(<span class="hljs-string">&apos;/user/1&apos;</span>);
+    <span class="hljs-keyword">const</span> endTime = <span class="hljs-built_in">Date</span>.now();
+
+    <span class="hljs-keyword">const</span> costTime = endTime-startTime;
+    expect(costTime).toBeGreaterThanOrEqual(<span class="hljs-number">500</span>);
+});
+<span class="hljs-comment">// &#x5148;&#x8FDB;&#x884C;&#x4E00;&#x6B21;&#x8BF7;&#x6C42;&#xFF0C;&#x5728;&#x6D4B;&#x8BD5;&#x7B2C;&#x4E8C;&#x6B21;&#x8BF7;&#x6C42;&#x7684;&#x65F6;&#x95F4;</span>
+test(<span class="hljs-string">&apos;should response quickly second time with class&apos;</span>, async() =&gt; {
+    <span class="hljs-keyword">const</span> request1 = Request.getinstance();
+    await request1.request(<span class="hljs-string">&apos;/user/1&apos;</span>);
+
+    <span class="hljs-keyword">const</span> startTime = <span class="hljs-built_in">Date</span>.now();   <span class="hljs-comment">// &#x6D4B;&#x8BD5;&#x8FD9;&#x4E00;&#x90E8;&#x5206;&#x7684;&#x65F6;&#x95F4;</span>
+    <span class="hljs-keyword">const</span> request2 = Request.getinstance();
+    await request2.request(<span class="hljs-string">&apos;/user/1&apos;</span>);
+    <span class="hljs-keyword">const</span> endTime = <span class="hljs-built_in">Date</span>.now();        <span class="hljs-comment">//</span>
+
+    <span class="hljs-keyword">const</span> costTime = endTime-startTime;
+    expect(costTime).toBeLessThan(<span class="hljs-number">50</span>);
+});
+</code></pre>
+<p>&#x800C;&#x5728;js&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x4E5F;&#x53EF;&#x4EE5;&#x4E0D;&#x7528;class&#x5199;&#xFF0C;&#x8FD9;&#x662F;&#x56E0;&#x4E3A;&#x4F20;&#x7EDF;&#x7684;&#x8BED;&#x8A00;&#x4E2D;&#x65E0;&#x6CD5;export&#x51FA;&#x6765;&#x4E00;&#x4E2A;&#x72EC;&#x7ACB;&#x7684;&#x65B9;&#x6CD5;&#x7B49;&#xFF0C;&#x53EA;&#x80FD;export&#x51FA;&#x6765;&#x4E00;&#x4E2A;&#x7C7B;</p>
+<pre><code class="lang-ts"><span class="hljs-comment">// &#x4E0D;&#x7528;class&#xFF1F;&#x53EF;&#x4EE5;&#x66F4;&#x7B80;&#x6D01;</span>
+<span class="hljs-keyword">import</span> {api} from <span class="hljs-string">&apos;./utils&apos;</span>;
+<span class="hljs-keyword">const</span> cache: Record&lt;<span class="hljs-built_in">string</span>,<span class="hljs-built_in">string</span>&gt; = {};
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> request = async (url:<span class="hljs-built_in">string</span>) =&gt; {
+    <span class="hljs-keyword">if</span>(cache[url]) {    <span class="hljs-comment">// &#x4E0E;class&#x4E2D;&#x4E00;&#x81F4;</span>
+        <span class="hljs-keyword">return</span> cache[url];
+    }
+    <span class="hljs-keyword">const</span> response = await api(url);
+
+    cache[url] = response;
+    <span class="hljs-keyword">return</span> response;
+};
+<span class="hljs-comment">// &#x4F7F;&#x7528;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x51FA;&#x6765;&#x8BE5;&#x65B9;&#x6CD5;&#x4E5F;&#x7B26;&#x5408;&#x5355;&#x4F8B;&#x6A21;&#x5F0F;&#xFF0C;&#x4F46;&#x66F4;&#x52A0;&#x7B80;&#x6D01;&#x3002;</span>
+test(<span class="hljs-string">&apos;should response quickly second time&apos;</span>, async() =&gt; {
+    await request(<span class="hljs-string">&apos;/user/1&apos;</span>);
+    <span class="hljs-keyword">const</span> startTime = <span class="hljs-built_in">Date</span>.now();   <span class="hljs-comment">// &#x6D4B;&#x8BD5;&#x8FD9;&#x4E00;&#x90E8;&#x5206;&#x7684;&#x65F6;&#x95F4;</span>
+    await request(<span class="hljs-string">&apos;/user/1&apos;</span>);
+    <span class="hljs-keyword">const</span> endTime = <span class="hljs-built_in">Date</span>.now();
+
+    <span class="hljs-keyword">const</span> costTime = endTime-startTime;
+    expect(costTime).toBeLessThan(<span class="hljs-number">50</span>);
+});
+</code></pre>
+<h3 id="&#x53D1;&#x5E03;&#x8BA2;&#x9605;&#x6A21;&#x5F0F;&#xFF08;&#x89C2;&#x5BDF;&#x8005;&#x6A21;&#x5F0F;&#xFF09;">&#x53D1;&#x5E03;&#x8BA2;&#x9605;&#x6A21;&#x5F0F;&#xFF08;&#x89C2;&#x5BDF;&#x8005;&#x6A21;&#x5F0F;&#xFF09;</h3>
+<p>&#x5E94;&#x7528;&#x975E;&#x5E38;&#x5E7F;&#x6CDB;&#x7684;&#x4E00;&#x79CD;&#x6A21;&#x5F0F;&#xFF0C;&#x5728;&#x88AB;&#x8BA2;&#x9605;&#x5BF9;&#x8C61;&#x53D1;&#x751F;&#x53D8;&#x5316;&#x65F6;&#x901A;&#x77E5;&#x8BA2;&#x9605;&#x8005;&#xFF0C;&#x5E38;&#x89C1;&#x573A;&#x666F;&#x5F88;&#x591A;&#xFF0C;&#x4ECE;&#x7CFB;&#x7EDF;&#x67B6;&#x6784;&#x4E4B;&#x95F4;&#x7684;&#x89E3;&#x8026;&#x5230;&#x4E1A;&#x52A1;&#x4E2D;&#x7684;&#x4E00;&#x4E9B;&#x5B9E;&#x73B0;&#x6A21;&#x5F0F;&#x3001;&#x90AE;&#x4EF6;&#x8BA2;&#x9605;&#x7B49;&#x7B49;&#x3002;&#x7C7B;&#x4F3C;&#x4E8E;&#x6DFB;&#x52A0;&#x4E8B;&#x4EF6;</p>
+<h4 id="&#x53D1;&#x5E03;&#x8BA2;&#x9605;&#x6A21;&#x5F0F;&#x5B9E;&#x73B0;&#x7528;&#x6237;&#x4E0A;&#x7EBF;&#x8BA2;&#x9605;">&#x53D1;&#x5E03;&#x8BA2;&#x9605;&#x6A21;&#x5F0F;&#x5B9E;&#x73B0;&#x7528;&#x6237;&#x4E0A;&#x7EBF;&#x8BA2;&#x9605;</h4>
+<p>&#x4E3E;&#x4E2A;&#x5B9E;&#x9645;&#x5E94;&#x7528;&#x7684;&#x4F8B;&#x5B50;&#xFF1A;&#x901A;&#x8FC7;&#x8BE5;&#x6A21;&#x5F0F;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x7528;&#x6237;&#x7684;&#x76F8;&#x4E92;&#x8BA2;&#x9605;&#xFF0C;&#x5728;&#x8BE5;&#x7528;&#x6237;&#x4E0A;&#x7EBF;&#x65F6;&#x8C03;&#x7528;&#x76F8;&#x5E94;&#x7684;&#x901A;&#x77E5;&#x51FD;&#x6570;&#x3002;</p>
+<p>&#x5982;&#x56FE;&#x521B;&#x5EFA;&#x4E86;&#x4E00;&#x4E2A;User&#x7C7B;&#xFF0C; &#x6784;&#x9020;&#x5668;&#x4E2D;&#x521D;&#x59CB;&#x72B6;&#x6001;&#x7F6E;&#x4E3A;&#x79BB;&#x7EBF;&#xFF0C;&#x5176;&#x62E5;&#x6709;&#x4E00;&#x4E2A;followers&#x5BF9;&#x8C61;&#x6570;&#x7EC4;&#xFF0C;&#x5305;&#x62EC;&#x4E86;&#x8BE5;&#x7528;&#x6237;&#x8BA2;&#x9605;&#x7684;&#x6240;&#x6709;{&#x7528;&#x6237;&#xFF0C;&#x8C03;&#x7528;&#x51FD;&#x6570;}&#xFF0C;&#x6BCF;&#x6B21;&#x5728;&#x8BE5;&#x7528;&#x6237;&#x4E0A;&#x7EBF;&#x65F6;&#xFF0C;&#x904D;&#x5386;&#x5176;followers&#x8FDB;&#x884C;&#x901A;&#x77E5;</p>
+<pre><code class="lang-ts"><span class="hljs-keyword">type</span> Notify = (user: User) =&gt; <span class="hljs-built_in">void</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> User {
+    name: <span class="hljs-built_in">string</span>;
+    status: <span class="hljs-string">&quot;offline&quot;</span> | <span class="hljs-string">&quot;online&quot;</span>;<span class="hljs-comment">// &#x72B6;&#x6001; &#x79BB;&#x7EBF;/&#x5728;&#x7EBF;</span>
+    followers: { user:User; notify: Notify }[]; <span class="hljs-comment">// &#x8BA2;&#x9605;&#x4ED6;&#x4EBA;&#x7684;&#x6570;&#x7EC4;&#xFF0C;&#x5305;&#x62EC;&#x7528;&#x6237;&#x53CA;&#x5176;&#x4E0A;&#x7EBF;&#x65F6;&#x7684;&#x901A;&#x77E5;&#x51FD;&#x6570;</span>
+    <span class="hljs-keyword">constructor</span>(name: string) {
+        <span class="hljs-keyword">this</span>.name = name;
+        <span class="hljs-keyword">this</span>.status = <span class="hljs-string">&quot;offline&quot;</span>;
+        <span class="hljs-keyword">this</span>.followers = [];
+    }
+    subscribe(user:User, notify: Notify) {
+        user.followers.push({user, notify});
+    }
+    online() { <span class="hljs-comment">// &#x8BE5;&#x7528;&#x6237;&#x4E0A;&#x7EBF; &#x8C03;&#x7528;&#x5176;&#x8BA2;&#x9605;&#x51FD;&#x6570;</span>
+        <span class="hljs-keyword">this</span>.status = <span class="hljs-string">&quot;online&quot;</span>;
+        <span class="hljs-keyword">this</span>.followers.forEach( ({notify}) =&gt; {
+            notify(<span class="hljs-keyword">this</span>);
+        });
+    }
+}
+</code></pre>
+<p>&#x6D4B;&#x8BD5;&#x51FD;&#x6570;&#xFF1A;&#x8FD8;&#x662F;&#x7528;jest&#xFF0C;&#x521B;&#x5EFA;&#x5047;&#x7684;&#x8BA2;&#x9605;&#x51FD;&#x6570;&#x8FDB;&#x884C;&#x6D4B;&#x8BD5;&#xFF08;</p>
+<pre><code class="lang-ts">test(<span class="hljs-string">&quot;should notify followers when user is online for multiple users&quot;</span>, () =&gt; {
+   <span class="hljs-keyword">const</span> user1 = <span class="hljs-keyword">new</span> User(<span class="hljs-string">&quot;user1&quot;</span>);
+   <span class="hljs-keyword">const</span> user2 = <span class="hljs-keyword">new</span> User(<span class="hljs-string">&quot;user2&quot;</span>); 
+   <span class="hljs-keyword">const</span> user3 = <span class="hljs-keyword">new</span> User(<span class="hljs-string">&quot;user3&quot;</span>); 
+   <span class="hljs-keyword">const</span> mockNotifyUser1 = jest.fn();   <span class="hljs-comment">// &#x901A;&#x77E5;user1&#x7684;&#x51FD;&#x6570;</span>
+   <span class="hljs-keyword">const</span> mockNotifyUser2 = jest.fn();   <span class="hljs-comment">// &#x901A;&#x77E5;user2&#x7684;&#x51FD;&#x6570;</span>
+   user1.subscribe(user3, mockNotifyUser1); <span class="hljs-comment">// 1&#x8BA2;&#x9605;&#x4E86;3</span>
+   user2.subscribe(user3, mockNotifyUser2); <span class="hljs-comment">// 2&#x8BA2;&#x9605;&#x4E86;3</span>
+   user3.online();  <span class="hljs-comment">// 3&#x4E0A;&#x7EBF;&#xFF0C;&#x8C03;&#x7528;mockNotifyUser1&#x548C;mockNotifyUser2</span>
+   expect(mockNotifyUser1).toBeCalledWith(user3);
+   expect(mockNotifyUser2).toBeCalledWith(user3);
+});
+</code></pre>
+<h2 id="javascript&#x4E2D;&#x7684;&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;">JavaScript&#x4E2D;&#x7684;&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;</h2>
+<h3 id="&#x539F;&#x578B;&#x6A21;&#x5F0F;">&#x539F;&#x578B;&#x6A21;&#x5F0F;</h3>
+<p>&#x53EF;&#x4EE5;&#x60F3;&#x5230;javascript&#x4E2D;&#x7684;&#x5E38;&#x89C1;&#x8BED;&#x8A00;&#x7279;&#x6027;&#xFF1A;&#x539F;&#x578B;&#x94FE;&#xFF0C;&#x539F;&#x578B;&#x6A21;&#x5F0F;&#x6307;&#x7684;&#x5176;&#x5B9E;&#x5C31;&#x662F;&#x590D;&#x5236;&#x4E00;&#x4E2A;&#x5DF2;&#x6709;&#x7684;&#x5BF9;&#x8C61;&#x6765;&#x521B;&#x5EFA;&#x65B0;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x8FD9;&#x5728;&#x5BF9;&#x8C61;&#x5341;&#x5206;&#x5E9E;&#x5927;&#x7684;&#x65F6;&#x5019;&#x4F1A;&#x6709;&#x6BD4;&#x8F83;&#x597D;&#x7684;&#x6027;&#x80FD;&#xFF08;&#x76F8;&#x6BD4;&#x8D77;&#x76F4;&#x63A5;&#x521B;&#x5EFA;&#xFF09;&#x3002;&#x5E38;&#x7528;&#x4E8E;js&#x4E2D;&#x5BF9;&#x8C61;&#x7684;&#x521B;&#x5EFA;</p>
+<h4 id="&#x539F;&#x578B;&#x6A21;&#x5F0F;&#x521B;&#x5EFA;&#x4E0A;&#x7EBF;&#x8BA2;&#x9605;&#x4E2D;&#x7684;&#x7528;&#x6237;">&#x539F;&#x578B;&#x6A21;&#x5F0F;&#x521B;&#x5EFA;&#x4E0A;&#x7EBF;&#x8BA2;&#x9605;&#x4E2D;&#x7684;&#x7528;&#x6237;</h4>
+<p>&#x9996;&#x5148;&#xFF0C;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x539F;&#x578B;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x8FD9;&#x4E2A;&#x539F;&#x578B;&#x76F8;&#x6BD4;&#x8D77;&#x4E4B;&#x524D;&#x7684;&#x6765;&#x8BF4;&#x6CA1;&#x6709;&#x5B9A;&#x4E49;&#x6784;&#x9020;&#x5668;&#x3002;</p>
+<pre><code class="lang-ts"><span class="hljs-comment">// &#x539F;&#x578B;&#x6A21;&#x5F0F;&#xFF0C;&#x5F53;&#x7136;&#x8981;&#x6709;&#x539F;&#x578B;&#x5566;</span>
+<span class="hljs-keyword">const</span> baseUser:User = { 
+    name: <span class="hljs-string">&quot;&quot;</span>,
+    status: <span class="hljs-string">&quot;offline&quot;</span>,
+    followers: [],
+    subscribe(user, notify) {
+        user.followers.push({user, notify});
+    },
+    online() { <span class="hljs-comment">// &#x8BE5;&#x7528;&#x6237;&#x4E0A;&#x7EBF; &#x8C03;&#x7528;&#x5176;&#x8BA2;&#x9605;&#x51FD;&#x6570;</span>
+        <span class="hljs-keyword">this</span>.status = <span class="hljs-string">&quot;online&quot;</span>;
+        <span class="hljs-keyword">this</span>.followers.forEach( ({notify}) =&gt; {
+            notify(<span class="hljs-keyword">this</span>);
+        });
+    }
+}
+</code></pre>
+<p>&#x5BFC;&#x51FA;&#x5728;&#x8BE5;&#x539F;&#x578B;&#x4E4B;&#x4E0A;&#x521B;&#x5EFA;&#x5BF9;&#x8C61;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x8BE5;&#x51FD;&#x6570;&#x63A5;&#x53D7;&#x4E00;&#x4E2A;name&#x53C2;&#x6570;&#xFF0C;&#x5229;&#x7528;<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global\_Objects/Object/create" target="_blank">Object.create()</a> &#x4F7F;&#x7528;&#x539F;&#x578B;&#x6765;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x5BF9;&#x8C61;&#xFF0C;&#x5E76;&#x5728;&#x5176;&#x57FA;&#x7840;&#x4E0A;&#x8FDB;&#x884C;&#x589E;&#x52A0;&#x6216;&#x4FEE;&#x6539;</p>
+<pre><code class="lang-ts"><span class="hljs-comment">// &#x7136;&#x540E;&#x5BFC;&#x51FA;&#x5728;&#x8BE5;&#x539F;&#x578B;&#x4E4B;&#x4E0A;&#x521B;&#x5EFA;&#x5BF9;&#x8C61;&#x7684;&#x51FD;&#x6570;</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> createUser = (name:<span class="hljs-built_in">string</span>) =&gt; {
+    <span class="hljs-keyword">const</span> user:User = <span class="hljs-built_in">Object</span>.create(baseUser);
+    user.name = name;
+    user.followers = [];
+    <span class="hljs-keyword">return</span> user;
+};
+</code></pre>
+<p>&#x5B9E;&#x9645;&#x4F7F;&#x7528;&#xFF1A;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x5C06;new User&#x53D8;&#x6210;&#x4E86;createUser</p>
+<pre><code class="lang-ts">test(<span class="hljs-string">&quot;should notify followers when user is online for user prototypes&quot;</span>, () =&gt; {
+    <span class="hljs-keyword">const</span> user1 = createUser(<span class="hljs-string">&quot;user1&quot;</span>);
+    <span class="hljs-keyword">const</span> user2 = createUser(<span class="hljs-string">&quot;user2&quot;</span>);
+    <span class="hljs-keyword">const</span> user3 = createUser(<span class="hljs-string">&quot;user3&quot;</span>);
+    <span class="hljs-keyword">const</span> mockNotifyUser1 = jest.fn();   <span class="hljs-comment">// &#x901A;&#x77E5;user1&#x7684;&#x51FD;&#x6570;</span>
+    <span class="hljs-keyword">const</span> mockNotifyUser2 = jest.fn();   <span class="hljs-comment">// &#x901A;&#x77E5;user2&#x7684;&#x51FD;&#x6570;</span>
+    user1.subscribe(user3, mockNotifyUser1); <span class="hljs-comment">// 1&#x8BA2;&#x9605;&#x4E86;3</span>
+    user2.subscribe(user3, mockNotifyUser2); <span class="hljs-comment">// 2&#x8BA2;&#x9605;&#x4E86;3</span>
+    user3.online();  <span class="hljs-comment">// 3&#x4E0A;&#x7EBF;&#xFF0C;&#x8C03;&#x7528;mockNotifyUser1&#x548C;mockNotifyUser2</span>
+    expect(mockNotifyUser1).toBeCalledWith(user3);
+    expect(mockNotifyUser2).toBeCalledWith(user3);
+});
+</code></pre>
+<h3 id="&#x4EE3;&#x7406;&#x6A21;&#x5F0F;">&#x4EE3;&#x7406;&#x6A21;&#x5F0F;</h3>
+<p>&#x53EF;&#x81EA;&#x5B9A;&#x4E49;&#x63A7;&#x5236;&#x961F;&#x5458;&#x5BF9;&#x8C61;&#x7684;&#x8BBF;&#x95EE;&#x65B9;&#x5F0F;&#xFF0C;&#x5E76;&#x4E14;&#x5141;&#x8BB8;&#x5728;&#x66F4;&#x65B0;&#x524D;&#x540E;&#x505A;&#x4E00;&#x4E9B;&#x989D;&#x5916;&#x5904;&#x7406;&#xFF0C;&#x5E38;&#x7528;&#x4E8E;&#x76D1;&#x63A7;&#x3001;&#x4EE3;&#x7406;&#x5DE5;&#x5177;&#x3001;&#x524D;&#x7AEF;&#x6846;&#x67B6;&#x7B49;&#x7B49;&#x3002;JS&#x4E2D;&#x6709;&#x81EA;&#x5E26;&#x7684;&#x4EE3;&#x7406;&#x5BF9;&#x8C61;&#xFF1A;<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global\_Objects/Proxy/Proxy" target="_blank">Proxy()</a> &#xFF0C;&#x5728;&#x7EA2;&#x5B9D;&#x4E66;&#x4E2D;&#x4EE3;&#x7406;&#x90A3;&#x7AE0;&#x4E5F;&#x6709;&#x8BE6;&#x7EC6;&#x9610;&#x8FF0;&#x3002;</p>
+<h4 id="&#x4EE3;&#x7406;&#x6A21;&#x5F0F;&#x5B9E;&#x73B0;&#x7528;&#x6237;&#x72B6;&#x6001;&#x8BA2;&#x9605;">&#x4EE3;&#x7406;&#x6A21;&#x5F0F;&#x5B9E;&#x73B0;&#x7528;&#x6237;&#x72B6;&#x6001;&#x8BA2;&#x9605;</h4>
+<p>&#x8FD8;&#x662F;&#x4E0A;&#x8FF0;&#x89C2;&#x5BDF;&#x8005;&#x6A21;&#x5F0F;&#x7684;&#x4F8B;&#x5B50;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4EE3;&#x7406;&#x6A21;&#x5F0F;&#x5BF9;&#x5176;&#x8FDB;&#x884C;&#x4F18;&#x5316;&#xFF0C;&#x8BA9;&#x4ED6;&#x7684;online&#x51FD;&#x6570;&#x53EA;&#x505A;&#x4E00;&#x4EF6;&#x4E8B;&#xFF1A;&#x66F4;&#x6539;&#x72B6;&#x6001;&#x4E3A;&#x4E0A;&#x7EBF;&#x3002;</p>
+<pre><code class="lang-ts"><span class="hljs-keyword">type</span> Notify = (user: User) =&gt; <span class="hljs-built_in">void</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> User {
+    name: <span class="hljs-built_in">string</span>;
+    status: <span class="hljs-string">&quot;offline&quot;</span> | <span class="hljs-string">&quot;online&quot;</span>;<span class="hljs-comment">// &#x72B6;&#x6001; &#x79BB;&#x7EBF;/&#x5728;&#x7EBF;</span>
+    followers: { user:User; notify: Notify }[]; <span class="hljs-comment">// &#x8BA2;&#x9605;&#x4ED6;&#x4EBA;&#x7684;&#x6570;&#x7EC4;&#xFF0C;&#x5305;&#x62EC;&#x7528;&#x6237;&#x53CA;&#x5176;&#x4E0A;&#x7EBF;&#x65F6;&#x7684;&#x901A;&#x77E5;&#x51FD;&#x6570;</span>
+    <span class="hljs-keyword">constructor</span>(name: string) {
+        <span class="hljs-keyword">this</span>.name = name;
+        <span class="hljs-keyword">this</span>.status = <span class="hljs-string">&quot;offline&quot;</span>;
+        <span class="hljs-keyword">this</span>.followers = [];
+    }
+    subscribe(user:User, notify: Notify) {
+        user.followers.push({user, notify});
+    }
+    online() { <span class="hljs-comment">// &#x8BE5;&#x7528;&#x6237;&#x4E0A;&#x7EBF; &#x8C03;&#x7528;&#x5176;&#x8BA2;&#x9605;&#x51FD;&#x6570;</span>
+        <span class="hljs-keyword">this</span>.status = <span class="hljs-string">&quot;online&quot;</span>;
+        <span class="hljs-comment">// this.followers.forEach( ({notify}) =&gt; {</span>
+        <span class="hljs-comment">//     notify(this);</span>
+        <span class="hljs-comment">// });</span>
+    }
+}
+</code></pre>
+<p>&#x521B;&#x5EFA;User&#x7684;&#x4E00;&#x4E2A;&#x4EE3;&#x7406;&#xFF1A;ProxyUser</p>
+<blockquote>
+<p>Proxy&#x51FD;&#x6570;&#x8BF4;&#x660E;</p>
+<p><code>target</code></p>
+<p>&#x8981;&#x4F7F;&#x7528; <code>Proxy</code> &#x5305;&#x88C5;&#x7684;&#x76EE;&#x6807;&#x5BF9;&#x8C61;&#xFF08;&#x53EF;&#x4EE5;&#x662F;&#x4EFB;&#x4F55;&#x7C7B;&#x578B;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x5305;&#x62EC;&#x539F;&#x751F;&#x6570;&#x7EC4;&#xFF0C;&#x51FD;&#x6570;&#xFF0C;&#x751A;&#x81F3;&#x53E6;&#x4E00;&#x4E2A;&#x4EE3;&#x7406;&#xFF09;&#x3002;</p>
+<p><code>handler</code></p>
+<p>&#x4E00;&#x4E2A;&#x901A;&#x5E38;&#x4EE5;&#x51FD;&#x6570;&#x4F5C;&#x4E3A;&#x5C5E;&#x6027;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x5404;&#x5C5E;&#x6027;&#x4E2D;&#x7684;&#x51FD;&#x6570;&#x5206;&#x522B;&#x5B9A;&#x4E49;&#x4E86;&#x5728;&#x6267;&#x884C;&#x5404;&#x79CD;&#x64CD;&#x4F5C;&#x65F6;&#x4EE3;&#x7406; <code>p</code> &#x7684;&#x884C;&#x4E3A;&#x3002;</p>
+</blockquote>
+<pre><code class="lang-ts"><span class="hljs-comment">// &#x521B;&#x5EFA;&#x4EE3;&#x7406;&#xFF0C;&#x76D1;&#x542C;&#x5176;&#x4E0A;&#x7EBF;&#x72B6;&#x6001;&#x7684;&#x53D8;&#x5316;</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> createProxyUser = (name:<span class="hljs-built_in">string</span>) =&gt; {
+    <span class="hljs-keyword">const</span> user = <span class="hljs-keyword">new</span> User(name); <span class="hljs-comment">//&#x6B63;&#x5E38;&#x7684;user</span>
+    <span class="hljs-comment">// &#x4EE3;&#x7406;&#x7684;&#x5BF9;&#x8C61;</span>
+    <span class="hljs-keyword">const</span> proxyUser = <span class="hljs-keyword">new</span> Proxy(user, { 
+        <span class="hljs-keyword">set</span>: (target, prop: keyof User, value) =&gt; {
+            target[prop] = value;
+            <span class="hljs-keyword">if</span>(prop === <span class="hljs-string">&apos;status&apos;</span>) {
+                notifyStatusHandlers(target, value);
+            }
+            <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+        }
+    })
+    <span class="hljs-keyword">const</span> notifyStatusHandlers = (user: User, status: <span class="hljs-string">&quot;online&quot;</span> | <span class="hljs-string">&quot;offline&quot;</span>) =&gt; {
+        <span class="hljs-keyword">if</span>(status === <span class="hljs-string">&quot;online&quot;</span>) {
+            user.followers.forEach(({notify}) =&gt; {
+                notify(user);
+            });
+        }
+    };
+    <span class="hljs-keyword">return</span> proxyUser;
+}
+</code></pre>
+<h3 id="&#x8FED;&#x4EE3;&#x5668;&#x6A21;&#x5F0F;">&#x8FED;&#x4EE3;&#x5668;&#x6A21;&#x5F0F;</h3>
+<p>&#x5728;&#x4E0D;&#x66B4;&#x9732;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x8BBF;&#x95EE;&#x96C6;&#x5408;&#x4E2D;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x5E38;&#x7528;&#x4E8E;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x4E2D;&#x62E5;&#x6709;&#x591A;&#x79CD;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF08;&#x5217;&#x8868;&#x3001;</p>
+<p>&#x6811;&#x7B49;&#xFF09;&#xFF0C;&#x63D0;&#x4F9B;&#x901A;&#x7528;&#x7684;&#x64CD;&#x4F5C;&#x63A5;&#x53E3;&#x3002;</p>
+<h4 id="&#x7528;for-of-&#x8FED;&#x4EE3;&#x6240;&#x6709;&#x7EC4;&#x4EF6;">&#x7528;for of &#x8FED;&#x4EE3;&#x6240;&#x6709;&#x7EC4;&#x4EF6;</h4>
+<p>&#x7528;&#x5230;&#x4E86; <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global\_Objects/Symbol/iterator" target="_blank">Symbol.iterator</a> &#x8BE5;&#x8FED;&#x4EE3;&#x5668;&#x53EF;&#x4EE5;&#x88AB; <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of" target="_blank"><code>for...of</code></a> &#x5FAA;&#x73AF;&#x4F7F;&#x7528;&#x3002;</p>
+<p>&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;list &#x961F;&#x5217;&#xFF0C;&#x6BCF;&#x6B21;&#x4ECE;&#x961F;&#x9996;&#x53D6;&#x4E2A;&#x8282;&#x70B9;&#x51FA;&#x6765;&#xFF0C;&#x5982;&#x679C;&#x8FD9;&#x4E2A;&#x8282;&#x70B9;&#x6709;&#x5B69;&#x5B50;&#x7ED3;&#x70B9;&#x5C06;&#x5176;&#x5168;&#x90E8;&#x6DFB;&#x52A0;&#x5230;&#x961F;&#x5C3E;&#xFF0C;&#x6BCF;&#x6B21;&#x8C03;&#x7528;next&#x90FD;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x7ED3;&#x70B9;~&#x8BE6;&#x89C1;&#x4EE3;&#x7801;</p>
+<pre><code class="lang-ts"><span class="hljs-keyword">class</span> MyDomElement {
+    tag: <span class="hljs-built_in">string</span>;
+    children: MyDomElement[];
+    <span class="hljs-keyword">constructor</span>(tag:string) {
+        <span class="hljs-keyword">this</span>.tag = tag;
+        <span class="hljs-keyword">this</span>.children = [];
+    }
+    addChildren(component: MyDomElement) {
+        <span class="hljs-keyword">this</span>.children.push(component);
+    }
+    [Symbol.iterator]() {
+        <span class="hljs-keyword">const</span> list = [...this.children];
+        <span class="hljs-keyword">let</span> node;
+        <span class="hljs-keyword">return</span> {
+            next: () =&gt; {
+                <span class="hljs-keyword">while</span>((node = list.shift())) { <span class="hljs-comment">// &#x6BCF;&#x6B21;&#x4ECE;&#x961F;&#x9996;&#x53D6;&#x4E2A;&#x8282;&#x70B9;&#x51FA;&#x6765;&#xFF0C;&#x5982;&#x679C;&#x6709;&#x5B69;&#x5B50;&#x7ED3;&#x70B9;&#x5C06;&#x5176;&#x6DFB;&#x52A0;&#x5230;&#x961F;&#x5C3E;</span>
+                    node.children.length &gt; <span class="hljs-number">0</span> &amp;&amp; list.push(...node.children);
+                    <span class="hljs-keyword">return</span> { value: node, done: <span class="hljs-literal">false</span> };
+                }
+                <span class="hljs-keyword">return</span> { value:<span class="hljs-literal">null</span>, done:<span class="hljs-literal">true</span> };
+            },
+        };
+    }
+}
+</code></pre>
+<p>&#x4F7F;&#x7528;&#x573A;&#x666F;&#x5982;&#x4E0B;&#xFF1A;&#x901A;&#x8FC7;for of&#x8FED;&#x4EE3;body&#x4E2D;&#x7684;&#x6240;&#x6709;&#x5B50;&#x5143;&#x7D20;</p>
+<pre><code class="lang-ts">test(<span class="hljs-string">&quot;can iterate root element&quot;</span>, () =&gt; {
+    <span class="hljs-keyword">const</span> body = <span class="hljs-keyword">new</span> MyDomElement(<span class="hljs-string">&quot;body&quot;</span>);
+    <span class="hljs-keyword">const</span> header = <span class="hljs-keyword">new</span> MyDomElement(<span class="hljs-string">&quot;header&quot;</span>);
+    <span class="hljs-keyword">const</span> main = <span class="hljs-keyword">new</span> MyDomElement(<span class="hljs-string">&quot;main&quot;</span>);
+    <span class="hljs-keyword">const</span> banner = <span class="hljs-keyword">new</span> MyDomElement(<span class="hljs-string">&quot;banner&quot;</span>);
+    <span class="hljs-keyword">const</span> content = <span class="hljs-keyword">new</span> MyDomElement(<span class="hljs-string">&quot;content&quot;</span>);
+    <span class="hljs-keyword">const</span> footer = <span class="hljs-keyword">new</span> MyDomElement(<span class="hljs-string">&quot;footer&quot;</span>);
+
+    body.addChildren(header);
+    body.addChildren(main);
+    body.addChildren(footer);
+
+    main.addChildren(banner);
+    main.addChildren(content);
+
+    <span class="hljs-keyword">const</span> expectTags: <span class="hljs-built_in">string</span>[] = [];
+    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">const</span> element of body) {    <span class="hljs-comment">// &#x8FED;&#x4EE3;body&#x7684;&#x6240;&#x6709;&#x5143;&#x7D20;&#xFF0C;&#x9700;&#x8981;&#x5305;&#x542B;main&#x4E2D;&#x7684;&#x5B50;&#x5143;&#x7D20;</span>
+        <span class="hljs-keyword">if</span>(element) {
+            expectTags.push(element.tag);
+        }
+    }
+
+    expect(expectTags.length).toBe(<span class="hljs-number">5</span>);
+});
+</code></pre>
+<h2 id="&#x524D;&#x7AEF;&#x6846;&#x67B6;&#x4E2D;&#x7684;&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;&#xFF08;react&#x3001;vue&#xFF09;">&#x524D;&#x7AEF;&#x6846;&#x67B6;&#x4E2D;&#x7684;&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;&#xFF08;React&#x3001;Vue...&#xFF09;</h2>
+<h3 id="&#x4EE3;&#x7406;&#x6A21;&#x5F0F;">&#x4EE3;&#x7406;&#x6A21;&#x5F0F;</h3>
+<p>&#x4E0E;&#x4E4B;&#x524D;&#x8BB2;&#x7684;Proxy&#x4E0D;&#x592A;&#x4E00;&#x6837;</p>
+<h4 id="vue&#x7EC4;&#x4EF6;&#x5B9E;&#x73B0;&#x8BA1;&#x6570;&#x5668;">Vue&#x7EC4;&#x4EF6;&#x5B9E;&#x73B0;&#x8BA1;&#x6570;&#x5668;</h4>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">&quot;count++&quot;</span>&gt;</span>count is:<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">setup</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;ts&quot;</span>&gt;</span><span class="javascript">
+<span class="hljs-keyword">import</span> {ref} <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;vue&quot;</span>;
+<span class="hljs-keyword">const</span> count = ref(<span class="hljs-number">0</span>);
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<p>&#x4E0A;&#x8FF0;&#x4EE3;&#x7801;&#xFF0C;&#x4E3A;&#x4EC0;&#x4E48;count&#x80FD;&#x968F;&#x70B9;&#x51FB;&#x800C;&#x53D8;&#x5316;&#xFF1F;&#x8FD9;&#x5C31;&#x8981;&#x8BF4;&#x5230;&#x524D;&#x7AEF;&#x6846;&#x67B6;&#x4E2D;&#x5BF9;DOM&#x64CD;&#x4F5C;&#x7684;&#x4EE3;&#x7406;&#x4E86;&#xFF1A;</p>
+<p>&#x66F4;&#x6539;DOM&#x5C5E;&#x6027; -&gt; &#x89C6;&#x56FE;&#x66F4;&#x65B0;</p>
+<p>&#x66F4;&#x6539;DOM&#x5C5E;&#x6027; -&gt; &#x66F4;&#x65B0;&#x865A;&#x62DF;DOM -Diff-&gt; &#x89C6;&#x56FE;&#x66F4;&#x65B0;</p>
+<p>&#x5982;&#x4E0B;&#x5C31;&#x662F;&#x524D;&#x7AEF;&#x6846;&#x67B6;&#x5BF9;DOM&#x7684;&#x4E00;&#x4E2A;&#x4EE3;&#x7406;&#xFF0C;&#x901A;&#x8FC7;&#x5176;&#x63D0;&#x4F9B;&#x7684;&#x94A9;&#x5B50;&#x53EF;&#x4EE5;&#x5728;&#x66F4;&#x65B0;&#x524D;&#x540E;&#x8FDB;&#x884C;&#x64CD;&#x4F5C;&#xFF1A;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">&quot;count++&quot;</span>&gt;</span>count is:<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">setup</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;ts&quot;</span>&gt;</span><span class="javascript">
+<span class="hljs-keyword">import</span> { ref, onBeforeUpdate, onUpdated } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;vue&quot;</span>;
+<span class="hljs-keyword">const</span> count = ref(<span class="hljs-number">0</span>);
+<span class="hljs-keyword">const</span> dom = ref&lt;HTMLButtonElement&gt;();
+onBeforeUpdate(() =&gt; {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;Dom before update&quot;</span>, dom.value?.innerText);
+});
+onUpdated(() =&gt; {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;Dom after update&quot;</span>, dom.value?.innerText);
+});
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<h3 id="&#x7EC4;&#x5408;&#x6A21;&#x5F0F;">&#x7EC4;&#x5408;&#x6A21;&#x5F0F;</h3>
+<p>&#x53EF;&#x4EE5;&#x591A;&#x4E2A;&#x5BF9;&#x8C61;&#x7EC4;&#x5408;&#x4F7F;&#x7528;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x5355;&#x4E2A;&#x5BF9;&#x8C61;&#x72EC;&#x7ACB;&#x4F7F;&#x7528;&#xFF0C;&#x5E38;&#x5E94;&#x7528;&#x4E8E;&#x524D;&#x7AEF;&#x7EC4;&#x4EF6;&#xFF0C;&#x6700;&#x7ECF;&#x5178;&#x7684;&#x5C31;&#x662F;React&#x7684;&#x7EC4;&#x4EF6;&#x7ED3;&#x6784;&#xFF1A;</p>
+<h4 id="react&#x7EC4;&#x4EF6;&#x7ED3;&#x6784;">React&#x7EC4;&#x4EF6;&#x7ED3;&#x6784;</h4>
+<p>&#x8FD8;&#x662F;&#x8BA1;&#x6570;&#x5668;&#x7684;&#x4F8B;&#x5B50;~</p>
+<pre><code class="lang-tsx">export const Count = () =&gt; {
+    const [count, setCount] = useState(0);
+    return (
+        &lt;button onClick={() =&gt; setCount((count) =&gt; count+1)}&gt;
+            count is: {count}
+        &lt;/button&gt;
+    );
+};
+</code></pre>
+<p>&#x8BE5;Count&#xFF0C;&#x65E2;&#x53EF;&#x4EE5;&#x72EC;&#x7ACB;&#x6E32;&#x67D3;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x6E32;&#x67D3;&#x5728;App&#x4E2D;&#xFF0C;&#x540E;&#x8005;&#x5C31;&#x662F;&#x4E00;&#x79CD;&#x7EC4;&#x5408;</p>
+<pre><code>function App() {
+    return (
+        &lt;div className = &quot;App&quot;&gt;
+            &lt;Header /&gt;
+            &lt;Count /&gt;
+            &lt;Footer /&gt;
+        &lt;/div&gt;
+    );
+}
+</code></pre><h2 id="&#x603B;&#x7ED3;&#x611F;&#x60F3;">&#x603B;&#x7ED3;&#x611F;&#x60F3;</h2>
+<p>&#x4E0B;&#x9762;&#x662F;&#x8001;&#x5E08;&#x7684;&#x4E00;&#x4E9B;&#x603B;&#x7ED3;&#xFF1A;</p>
+<blockquote>
+<p>&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;&#x4E0D;&#x662F;&#x94F6;&#x5F39;&#xFF0C;&#x603B;&#x7ED3;&#x51FA;&#x62BD;&#x8C61;&#x7684;&#x6A21;&#x5F0F;&#x542C;&#x8D77;&#x6765;&#x6BD4;&#x8F83;&#x7B80;&#x5355;&#xFF0C;&#x4F46;&#x662F;&#x60F3;&#x8981;&#x5C06;&#x62BD;&#x8C61;&#x7684;&#x6A21;&#x5F0F;&#x5957;&#x7528;&#x5230;&#x5B9E;&#x9645;&#x7684;&#x573A;&#x666F;&#x4E2D;&#x5374;&#x975E;&#x5E38;&#x56F0;&#x96BE;&#xFF0C;&#x73B0;&#x4EE3;&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#x7684;&#x591A;&#x7F16;&#x7A0B;&#x8303;&#x5F0F;&#x5E26;&#x6765;&#x4E86;&#x66F4;&#x591A;&#x7684;&#x53EF;&#x80FD;&#x6027;&#xFF0C;&#x6211;&#x4EEC;&#x8981;&#x5728;&#x771F;&#x6B63;&#x4F18;&#x79C0;&#x7684;&#x5F00;&#x6E90;&#x9879;&#x76EE;&#x4E2D;&#x5B66;&#x4E60;&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;&#x5E76;&#x4E0D;&#x65AD;&#x5B9E;&#x8DF5;</p>
+</blockquote>
+<p>&#x8FD9;&#x8282;&#x8BFE;&#x8BB2;&#x4E86;&#x6D4F;&#x89C8;&#x5668;&#x548C;js&#x4E2D;&#x5E38;&#x7528;&#x7684;&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;&#xFF0C;&#x5305;&#x62EC;&#x5355;&#x4F8B;&#x6A21;&#x5F0F;&#x3001;&#x89C2;&#x5BDF;&#x8005;&#x6A21;&#x5F0F;&#x3001;&#x539F;&#x578B;&#x6A21;&#x5F0F;&#x3001;&#x4EE3;&#x7406;&#x6A21;&#x5F0F;&#x3001;&#x8FED;&#x4EE3;&#x5668;&#x6A21;&#x5F0F;&#x7B49;&#xFF0C;&#x8FD8;&#x8BB2;&#x4E86;&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;&#x7A76;&#x7ADF;&#x6709;&#x4EC0;&#x4E48;&#x7528;~&#x5728;&#x6211;&#x770B;&#x6765;&#xFF0C;&#x4ECE;&#x5B9E;&#x9645;&#x7684;&#x9879;&#x76EE;&#x4E2D;&#x5B66;&#x4E60;&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;&#x786E;&#x5B9E;&#x662F;&#x4E00;&#x79CD;&#x6BD4;&#x8F83;&#x597D;&#x7684;&#x65B9;&#x6CD5;&#x3002;</p>
+<blockquote>
+<p>&#x672C;&#x6587;&#x5F15;&#x7528;&#x7684;&#x5927;&#x90E8;&#x5206;&#x5185;&#x5BB9;&#x6765;&#x81EA;&#x5434;&#x7ACB;&#x5B81;&#x8001;&#x5E08;&#x7684;&#x8BFE;</p>
+</blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="qian-duan-bi-xu-zhi-dao-de-kai-fa-tiao-shi-zhi-shi.html" class="navigation navigation-prev " aria-label="Previous page: 前端必须知道的开发调试知识">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="web-biao-zhun-yu-qian-duan-kai-fa.html" class="navigation navigation-next " aria-label="Next page: Web 标准与前端开发">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"description":"【第二届青训营-寒假前端场】- 「前端设计模式应用」笔记","title":"前端设计模式应用","level":"2.5.2","depth":2,"next":{"title":"Web 标准与前端开发","level":"2.5.3","depth":2,"path":"front-end-basics/tong-yong-zhi-shi/web-biao-zhun-yu-qian-duan-kai-fa.md","ref":"front-end-basics/tong-yong-zhi-shi/web-biao-zhun-yu-qian-duan-kai-fa.md","articles":[]},"previous":{"title":"前端必须知道的开发调试知识","level":"2.5.1","depth":2,"path":"front-end-basics/tong-yong-zhi-shi/qian-duan-bi-xu-zhi-dao-de-kai-fa-tiao-shi-zhi-shi.md","ref":"front-end-basics/tong-yong-zhi-shi/qian-duan-bi-xu-zhi-dao-de-kai-fa-tiao-shi-zhi-shi.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"cos","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"cos的前端学习记录","language":"zh-hans","links":{"sidebar":{"cos的博客":"https://ysx.cosine.ren/","Github":"https://github.com/yusixian"}},"gitbook":"*","description":"主要分享自己的前端学习心得，与一些学习记录"},"file":{"path":"front-end-basics/tong-yong-zhi-shi/qian-duan-she-ji-mo-shi-ying-yong.md","mtime":"2022-03-27T14:00:04.003Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-03-27T14:21:36.549Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

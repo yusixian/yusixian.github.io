@@ -1,0 +1,1646 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>CSS学习之布局 · cos的前端学习记录</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="【第二届青训营-寒假前端场】-  「CSS布局」">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="cos">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../http-yu-liu-lan-qi/" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://ysx.cosine.ren/" target="_blank" class="custom-link">cos的博客</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://github.com/yusixian" target="_blank" class="custom-link">Github</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    前言及目录
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">前端基础</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../javascript/">
+            
+                <a href="../javascript/">
+            
+                    
+                    JavaScript
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../javascript/gen-zhuo-yue-ying-xue-javascript.html">
+            
+                <a href="../javascript/gen-zhuo-yue-ying-xue-javascript.html">
+            
+                    
+                    跟着月影学JavaScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../javascript/prototype-and-inherit.html">
+            
+                <a href="../javascript/prototype-and-inherit.html">
+            
+                    
+                    JavaScript之对象、原型链及继承
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../javascript/javascript-zhong-de-lei.html">
+            
+                <a href="../javascript/javascript-zhong-de-lei.html">
+            
+                    
+                    JavaScript中的类
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../html.html">
+            
+                <a href="../html.html">
+            
+                    
+                    HTML
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    CSS
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="2.3.1" data-path="css-xue-xi-zhi-bu-ju.html">
+            
+                <a href="css-xue-xi-zhi-bu-ju.html">
+            
+                    
+                    CSS学习之布局
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../http-yu-liu-lan-qi/">
+            
+                <a href="../http-yu-liu-lan-qi/">
+            
+                    
+                    HTTP与浏览器
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1" data-path="../http-yu-liu-lan-qi/http-shi-yong-zhi-nan.html">
+            
+                <a href="../http-yu-liu-lan-qi/http-shi-yong-zhi-nan.html">
+            
+                    
+                    HTTP实用指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.2" data-path="../http-yu-liu-lan-qi/web-kai-fa-de-an-quan-zhi-lv.html">
+            
+                <a href="../http-yu-liu-lan-qi/web-kai-fa-de-an-quan-zhi-lv.html">
+            
+                    
+                    Web开发的安全之旅
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../tong-yong-zhi-shi/">
+            
+                <a href="../tong-yong-zhi-shi/">
+            
+                    
+                    通用知识
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.5.1" data-path="../tong-yong-zhi-shi/qian-duan-bi-xu-zhi-dao-de-kai-fa-tiao-shi-zhi-shi.html">
+            
+                <a href="../tong-yong-zhi-shi/qian-duan-bi-xu-zhi-dao-de-kai-fa-tiao-shi-zhi-shi.html">
+            
+                    
+                    前端必须知道的开发调试知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.2" data-path="../tong-yong-zhi-shi/qian-duan-she-ji-mo-shi-ying-yong.html">
+            
+                <a href="../tong-yong-zhi-shi/qian-duan-she-ji-mo-shi-ying-yong.html">
+            
+                    
+                    前端设计模式应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.3" data-path="../tong-yong-zhi-shi/web-biao-zhun-yu-qian-duan-kai-fa.html">
+            
+                <a href="../tong-yong-zhi-shi/web-biao-zhun-yu-qian-duan-kai-fa.html">
+            
+                    
+                    Web 标准与前端开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">数据结构及算法</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../data-structures-and-algorithms/leetcode/">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/">
+            
+                    
+                    LeetCode
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/">
+            
+                    
+                    冲刺春招-精选笔面试 66 题大通关
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1.1" data-path="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day1.html">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day1.html">
+            
+                    
+                    day1：21. 合并两个有序链表、146. LRU 缓存、25. K 个一组翻转链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.2" data-path="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day2.html">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day2.html">
+            
+                    
+                    day2：14. 最长公共前缀、3. 无重复字符的最长子串、124. 二叉树中的最大路径和
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.3" data-path="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day3.html">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day3.html">
+            
+                    
+                    day3：206. 反转链表、199. 二叉树的右视图、bytedance-016最短移动距离
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.4" data-path="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day4.html">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day4.html">
+            
+                    
+                    day4：1. 两数之和、15. 三数之和、42. 接雨水
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.5" data-path="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day5.html">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day5.html">
+            
+                    
+                    day5：7. 整数反转、215. 数组中的第K个最大元素、23. 合并K个升序链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.6" data-path="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day6.html">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day6.html">
+            
+                    
+                    day6：33. 搜索旋转排序数组、54. 螺旋矩阵、bytedance-006. 夏季特惠
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.7" data-path="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day7.html">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day7.html">
+            
+                    
+                    day7：53. 最大子数组和、152. 乘积最大子数组、41. 缺失的第一个正数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.8" data-path="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day8.html">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day8.html">
+            
+                    
+                    day8：20. 有效的括号、200. 岛屿数量、76. 最小覆盖子串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.9" data-path="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day9.html">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day9.html">
+            
+                    
+                    day9：105. 从前序与中序遍历序列构造二叉树、103. 二叉树的锯齿形层序遍历、bytedance-010. 数组组成最大数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.10" data-path="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day10.html">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day10.html">
+            
+                    
+                    day10：94. 二叉树的中序遍历、102. 二叉树的层序遍历、394. 字符串解码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.11" data-path="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day11.html">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day11.html">
+            
+                    
+                    day11：415. 字符串相加、5. 最长回文子串、72. 编辑距离
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.12" data-path="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day12.html">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day12.html">
+            
+                    
+                    day12：64. 最小路径和、300. 最长递增子序列、bytedance-004. 机器人跳跃问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.13" data-path="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day13.html">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day13.html">
+            
+                    
+                    day13：88. 合并两个有序数组、31. 下一个排列、4. 寻找两个正序数组的中位数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.14" data-path="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day14.html">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day14.html">
+            
+                    
+                    day14：121. 买卖股票的最佳时机、56. 合并区间、135. 分发糖果
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.15" data-path="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day15.html">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day15.html">
+            
+                    
+                    day15：232. 用栈实现队列、22. 括号生成、128. 最长连续序列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.16" data-path="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day16.html">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day16.html">
+            
+                    
+                    day16：bytedance-007. 化学公式解析、129. 求根节点到叶节点数字之和、239. 滑动窗口最大值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.17" data-path="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day17.html">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day17.html">
+            
+                    
+                    day17：141. 环形链表、236. 二叉树的最近公共祖先、92. 反转链表 II
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.18" data-path="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day18.html">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day18.html">
+            
+                    
+                    day18：322. 零钱兑换、198. 打家劫舍、 bytedance-003. 古生物血缘远近判定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.19" data-path="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day19.html">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day19.html">
+            
+                    
+                    day19：160. 相交链表、143. 重排链表、142. 环形链表 II
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.20" data-path="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day20.html">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day20.html">
+            
+                    
+                    day20：704. 二分查找、43. 字符串相乘、bytedance-002. 发下午茶
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../../data-structures-and-algorithms/data-structure/">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/">
+            
+                    
+                    数据结构
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="../../data-structures-and-algorithms/data-structure/1-xian-xing-biao-list.html">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/1-xian-xing-biao-list.html">
+            
+                    
+                    1、线性表（List）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2" data-path="../../data-structures-and-algorithms/data-structure/2-dui-zhan-stack.html">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/2-dui-zhan-stack.html">
+            
+                    
+                    2、堆栈（Stack）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.3" data-path="../../data-structures-and-algorithms/data-structure/3-dui-lie-queue.html">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/3-dui-lie-queue.html">
+            
+                    
+                    3、队列（Queue）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.4" data-path="../../data-structures-and-algorithms/data-structure/4-er-cha-shu-binary-tree.html">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/4-er-cha-shu-binary-tree.html">
+            
+                    
+                    4、二叉树（Binary Tree）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.5" data-path="../../data-structures-and-algorithms/data-structure/5-er-cha-sou-suo-shu-yu-ping-heng-er-cha-shu-bst-avl.html">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/5-er-cha-sou-suo-shu-yu-ping-heng-er-cha-shu-bst-avl.html">
+            
+                    
+                    5、二叉搜索树与平衡二叉树（BST & AVL）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.6" data-path="../../data-structures-and-algorithms/data-structure/6-dui-stack-ha-fu-man-shu-bing-cha-ji.html">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/6-dui-stack-ha-fu-man-shu-bing-cha-ji.html">
+            
+                    
+                    6、堆（Stack）& 哈夫曼树 & 并查集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.7" data-path="../../data-structures-and-algorithms/data-structure/7-tu-graph/">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/7-tu-graph/">
+            
+                    
+                    7、图（Graph）
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.7.1" data-path="../../data-structures-and-algorithms/data-structure/7-tu-graph/tu-lun-jie-jue-zui-xiao-sheng-cheng-shu-wen-ti-kruskal-suan-fa-prim-suan-fa.html">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/7-tu-graph/tu-lun-jie-jue-zui-xiao-sheng-cheng-shu-wen-ti-kruskal-suan-fa-prim-suan-fa.html">
+            
+                    
+                    图论——解决最小生成树问题(Kruskal算法\&Prim算法)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.8" data-path="../../data-structures-and-algorithms/data-structure/8-pai-xu-sort.html">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/8-pai-xu-sort.html">
+            
+                    
+                    8、排序（sort）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.9" data-path="../../data-structures-and-algorithms/data-structure/9-san-lie-biao-hash.html">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/9-san-lie-biao-hash.html">
+            
+                    
+                    9、散列表（hash）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10" data-path="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/">
+            
+                    
+                    数据结构习题
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.10.1" data-path="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-yi-zhou-zui-da-zi-lie-he-suan-fa-er-fen-cha-zhao.html">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-yi-zhou-zui-da-zi-lie-he-suan-fa-er-fen-cha-zhao.html">
+            
+                    
+                    第一周：最大子列和算法、二分查找
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10.2" data-path="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-er-zhou-xian-xing-jie-gou.html">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-er-zhou-xian-xing-jie-gou.html">
+            
+                    
+                    第二周：线性结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10.3" data-path="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-san-zhou-zai-shu-er-cha-shu-deng.html">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-san-zhou-zai-shu-er-cha-shu-deng.html">
+            
+                    
+                    第三周：栽树（二叉树等）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10.4" data-path="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-si-zhou-er-cha-sou-suo-shu-er-cha-ping-heng-shu.html">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-si-zhou-er-cha-sou-suo-shu-er-cha-ping-heng-shu.html">
+            
+                    
+                    第四周：二叉搜索树&二叉平衡树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10.5" data-path="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-wu-zhou-dui-ha-fu-man-shu-bing-cha-ji.html">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-wu-zhou-dui-ha-fu-man-shu-bing-cha-ji.html">
+            
+                    
+                    第五周：堆&哈夫曼树&并查集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10.6" data-path="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-liu-zhou-tu-shang-lian-tong-ji-dfsbfs.html">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-liu-zhou-tu-shang-lian-tong-ji-dfsbfs.html">
+            
+                    
+                    第六周：图（上）连通集 、DFS\&BFS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10.7" data-path="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-qi-zhou-tu-zhong-floyd-suan-fa-qiu-zui-duan-lu.html">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-qi-zhou-tu-zhong-floyd-suan-fa-qiu-zui-duan-lu.html">
+            
+                    
+                    第七周：图（中）Floyd算法求最短路
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10.8" data-path="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-ba-zhou-tu-xia.html">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-ba-zhou-tu-xia.html">
+            
+                    
+                    第八周：图（下）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10.9" data-path="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-jiu-zhou-pai-xu-shang-gui-bing-dui-pai-xu.html">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-jiu-zhou-pai-xu-shang-gui-bing-dui-pai-xu.html">
+            
+                    
+                    第九周：排序（上）归并&堆排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10.10" data-path="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-shi-zhou-pai-xu-xia.html">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-shi-zhou-pai-xu-xia.html">
+            
+                    
+                    第十周：排序（下）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10.11" data-path="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-shi-yi-zhou-san-lie-cha-zhao-kmp.html">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-shi-yi-zhou-san-lie-cha-zhao-kmp.html">
+            
+                    
+                    第十一周：散列查找 & KMP
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">前端进阶</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../../morelearning/qian-duan-jin-jie.html">
+            
+                <a href="../../morelearning/qian-duan-jin-jie.html">
+            
+                    
+                    React
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../../morelearning/react/xiang-ying-shi-xi-tong-yu-react.html">
+            
+                <a href="../../morelearning/react/xiang-ying-shi-xi-tong-yu-react.html">
+            
+                    
+                    响应式系统与 React
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="../../morelearning/react/react-xue-xi-xiao-ji.html">
+            
+                <a href="../../morelearning/react/react-xue-xi-xiao-ji.html">
+            
+                    
+                    React学习小记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="../../morelearning/react/redux-xue-xi-zhi-redux-san-yuan-ze-createsore-yuan-li-ji-shi-xian.html">
+            
+                <a href="../../morelearning/react/redux-xue-xi-zhi-redux-san-yuan-ze-createsore-yuan-li-ji-shi-xian.html">
+            
+                    
+                    Redux学习之Redux三原则、createSore原理及实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../../morelearning/typescript/">
+            
+                <a href="../../morelearning/typescript/">
+            
+                    
+                    TypeScript
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.2.1" data-path="../../morelearning/typescript/typescript-ru-men.html">
+            
+                <a href="../../morelearning/typescript/typescript-ru-men.html">
+            
+                    
+                    TypeScript入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../../morelearning/webpack/">
+            
+                <a href="../../morelearning/webpack/">
+            
+                    
+                    Webpack
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.3.1" data-path="../../morelearning/webpack/webpack-zhi-shi-ti-xi.html">
+            
+                <a href="../../morelearning/webpack/webpack-zhi-shi-ti-xi.html">
+            
+                    
+                    Webpack知识体系
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../../morelearning/animation/">
+            
+                <a href="../../morelearning/animation/">
+            
+                    
+                    前端动画与绘图
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.4.1" data-path="../../morelearning/animation/webgl-ji-chu.html">
+            
+                <a href="../../morelearning/animation/webgl-ji-chu.html">
+            
+                    
+                    WebGL基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4.2" data-path="../../morelearning/animation/qian-duan-dong-hua-jian-jie.html">
+            
+                <a href="../../morelearning/animation/qian-duan-dong-hua-jian-jie.html">
+            
+                    
+                    前端动画简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">笔面试记录</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../../interview-record/collection-interview/">
+            
+                <a href="../../interview-record/collection-interview/">
+            
+                    
+                    面经集锦
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.1" data-path="../../interview-record/collection-interview/2022-spring-metaapp.html">
+            
+                <a href="../../interview-record/collection-interview/2022-spring-metaapp.html">
+            
+                    
+                    2022春暑期实习MetaApp一二面面经
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.2" data-path="../../interview-record/collection-interview/2022-spring-bytedance.html">
+            
+                <a href="../../interview-record/collection-interview/2022-spring-bytedance.html">
+            
+                    
+                    2022春暑期实习字节前端一面凉经
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../../interview-record/written-examination-reply/">
+            
+                <a href="../../interview-record/written-examination-reply/">
+            
+                    
+                    笔试复盘
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.2.1" data-path="../../interview-record/written-examination-reply/2022-chun-mei-tuan-bi-shi-shu-qi-shi-xi-bi-shi-ti-fu-pan.html">
+            
+                <a href="../../interview-record/written-examination-reply/2022-chun-mei-tuan-bi-shi-shu-qi-shi-xi-bi-shi-ti-fu-pan.html">
+            
+                    
+                    2022春美团笔试暑期实习笔试题复盘
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.2" data-path="../../interview-record/written-examination-reply/2022-chun-360-bi-shi-ti-mu-fu-pan-yan-faejuan.html">
+            
+                <a href="../../interview-record/written-examination-reply/2022-chun-360-bi-shi-ti-mu-fu-pan-yan-faejuan.html">
+            
+                    
+                    2022春360笔试题目复盘-研发E卷
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.3" data-path="../../interview-record/written-examination-reply/2022-chun-jing-dong-qian-duan-bi-shi-ti-mu-fu-pan.html">
+            
+                <a href="../../interview-record/written-examination-reply/2022-chun-jing-dong-qian-duan-bi-shi-ti-mu-fu-pan.html">
+            
+                    
+                    2022春京东前端笔试题目复盘
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.4" data-path="../../interview-record/written-examination-reply/2022-chun-wang-yi-lei-huo-qian-duan-shu-qi-shi-xi-bi-shi-ak.html">
+            
+                <a href="../../interview-record/written-examination-reply/2022-chun-wang-yi-lei-huo-qian-duan-shu-qi-shi-xi-bi-shi-ak.html">
+            
+                    
+                    2022春网易雷火前端暑期实习笔试(AK)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >CSS学习之布局</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="css&#x5B66;&#x4E60;&#x4E4B;&#x5E03;&#x5C40;">CSS&#x5B66;&#x4E60;&#x4E4B;&#x5E03;&#x5C40;</h1>
+<h2 id="&#x5E03;&#x5C40;&#xFF08;layout&#xFF09;">&#x5E03;&#x5C40;&#xFF08;layout&#xFF09;</h2>
+<ul>
+<li>&#x786E;&#x5B9A;&#x5185;&#x5BB9;&#x7684;&#x5927;&#x5C0F;&#x548C;&#x4F4D;&#x7F6E;&#x7684;&#x7B97;&#x6CD5;</li>
+<li>&#x4F9D;&#x636E;&#x5143;&#x7D20;&#x3001;&#x5BB9;&#x5668;&#x3001;&#x5144;&#x5F1F;&#x8282;&#x70B9;&#x548C;&#x5185;&#x5BB9;&#x7B49;&#x4FE1;&#x606F;&#x6765;&#x8BA1;&#x7B97; <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS\_Box\_Model/Introduction\_to\_the\_CSS\_box\_model" target="_blank">CSS &#x57FA;&#x7840;&#x6846;&#x76D2;&#x6A21;&#x578B;&#x4ECB;&#x7ECD; - CSS&#xFF08;&#x5C42;&#x53E0;&#x6837;&#x5F0F;&#x8868;&#xFF09; | MDN (mozilla.org)</a></li>
+</ul>
+<blockquote>
+<p>&#x5F53;&#x5BF9;&#x4E00;&#x4E2A;&#x6587;&#x6863;&#x8FDB;&#x884C;&#x5E03;&#x5C40;&#xFF08;lay out&#xFF09;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x6E32;&#x67D3;&#x5F15;&#x64CE;&#x4F1A;&#x6839;&#x636E;&#x6807;&#x51C6;&#x4E4B;&#x4E00;&#x7684; <strong>CSS &#x57FA;&#x7840;&#x6846;&#x76D2;&#x6A21;&#x578B;</strong>&#xFF08;<strong>CSS basic box model</strong>&#xFF09;&#xFF0C;&#x5C06;&#x6240;&#x6709;&#x5143;&#x7D20;&#x8868;&#x793A;&#x4E3A;&#x4E00;&#x4E2A;&#x4E2A;&#x77E9;&#x5F62;&#x7684;&#x76D2;&#x5B50;&#xFF08;box&#xFF09;&#x3002;CSS &#x51B3;&#x5B9A;&#x8FD9;&#x4E9B;&#x76D2;&#x5B50;&#x7684;&#x5927;&#x5C0F;&#x3001;&#x4F4D;&#x7F6E;&#x4EE5;&#x53CA;&#x5C5E;&#x6027;&#xFF08;&#x4F8B;&#x5982;&#x989C;&#x8272;&#x3001;&#x80CC;&#x666F;&#x3001;&#x8FB9;&#x6846;&#x5C3A;&#x5BF8;&#x2026;&#xFF09;&#x3002; &#x6BCF;&#x4E2A;&#x76D2;&#x5B50;&#x7531;&#x56DB;&#x4E2A;&#x90E8;&#x5206;&#xFF08;&#x6216;&#x79F0;<em>&#x533A;&#x57DF;</em>&#xFF09;&#x7EC4;&#x6210;&#xFF0C;&#x5176;&#x6548;&#x7528;&#x7531;&#x5B83;&#x4EEC;&#x5404;&#x81EA;&#x7684;&#x8FB9;&#x754C;&#xFF08;Edge&#xFF09;&#x6240;&#x5B9A;&#x4E49;&#xFF08;&#x539F;&#x6587;&#xFF1A;defined by their respective edges&#xFF0C;&#x53EF;&#x80FD;&#x610F;&#x6307;&#x5BB9;&#x7EB3;&#x3001;&#x5305;&#x542B;&#x3001;&#x9650;&#x5236;&#x7B49;&#xFF09;&#x3002;&#x5982;&#x56FE;&#xFF0C;&#x4E0E;&#x76D2;&#x5B50;&#x7684;&#x56DB;&#x4E2A;&#x7EC4;&#x6210;&#x533A;&#x57DF;&#x76F8;&#x5BF9;&#x5E94;&#xFF0C;&#x6BCF;&#x4E2A;&#x76D2;&#x5B50;&#x6709;&#x56DB;&#x4E2A;&#x8FB9;&#x754C;&#xFF1A;<em>&#x5185;&#x5BB9;&#x8FB9;&#x754C;</em> <em>Content edge</em>&#x3001;<em>&#x5185;&#x8FB9;&#x8DDD;&#x8FB9;&#x754C;</em> <em>Padding Edge</em>&#x3001;<em>&#x8FB9;&#x6846;&#x8FB9;&#x754C;</em> <em>Border Edge</em>&#x3001;<em>&#x5916;&#x8FB9;&#x6846;&#x8FB9;&#x754C;</em> <em>Margin Edge</em>&#x3002;</p>
+</blockquote>
+<h3 id="width">width</h3>
+<p>&#x6307;&#x5B9A;content box &#x5BBD;&#x5EA6;&#xFF0C;&#x53EF;&#x53D6;&#x503C;&#x4E3A;&#x957F;&#x5EA6;&#x3001;&#x767E;&#x5206;&#x6570;&#x3001;auto&#x7B49;&#xFF0C;&#x767E;&#x5206;&#x6570;&#x662F;&#x76F8;&#x5BF9;&#x4E8E;content box&#x7684;&#x5BBD;&#x5EA6;&#x3002;</p>
+<h3 id="height">height</h3>
+<p>&#x6307;&#x5B9A;content box &#x9AD8;&#x5EA6;&#x53EF;&#x53D6;&#x503C;&#x4E3A;&#x957F;&#x5EA6;&#x3001;&#x767E;&#x5206;&#x6570;&#x3001;auto&#x7B49;&#xFF0C;&#x767E;&#x5206;&#x6570;&#x662F;&#x76F8;&#x5BF9;&#x4E8E;content box&#x7684;&#x9AD8;&#x5EA6;&#x3002;weight/height&#x90FD;&#x9700;&#x6CE8;&#x610F;&#x7684;&#x82E5;&#x4F7F;&#x7528;&#x767E;&#x5206;&#x6BD4;&#x5219;&#x5176;content box&#x9700;&#x6307;&#x5B9A;&#x5BBD;&#x5EA6;/&#x9AD8;&#x5EA6;&#x5426;&#x5219;&#x4E0D;&#x751F;&#x6548;&#x3002;</p>
+<h3 id="padding">padding</h3>
+<p>&#x6307;&#x5B9A;&#x56DB;&#x4E2A;&#x65B9;&#x5411;&#x4E0A;&#x7684;&#x5185;&#x8FB9;&#x8DDD;&#x3002;&#x5176;&#x767E;&#x5206;&#x6BD4;&#x662F;&#x76F8;&#x5BF9;&#x4E8E;&#x5BB9;&#x5668;&#x5BBD;&#x5EA6;,&#x8BF4;&#x660E;&#x89C1; <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/padding" target="_blank">padding - CSS&#xFF08;&#x5C42;&#x53E0;&#x6837;&#x5F0F;&#x8868;&#xFF09; | MDN (mozilla.org)</a></p>
+<ul>
+<li>&#x5F53;&#x53EA;&#x6307;&#x5B9A;<strong>&#x4E00;&#x4E2A;</strong>&#x503C;&#x65F6;&#xFF0C;&#x8BE5;&#x503C;&#x4F1A;&#x7EDF;&#x4E00;&#x5E94;&#x7528;&#x5230;<strong>&#x5168;&#x90E8;&#x56DB;&#x4E2A;&#x8FB9;</strong>&#x7684;&#x5185;&#x8FB9;&#x8DDD;&#x4E0A;&#x3002;</li>
+<li>&#x6307;&#x5B9A;<strong>&#x4E24;&#x4E2A;</strong>&#x503C;&#x65F6;&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;&#x503C;&#x4F1A;&#x5E94;&#x7528;&#x4E8E;<strong>&#x4E0A;&#x8FB9;&#x548C;&#x4E0B;&#x8FB9;</strong>&#x7684;&#x5185;&#x8FB9;&#x8DDD;&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x503C;&#x5E94;&#x7528;&#x4E8E;<strong>&#x5DE6;&#x8FB9;&#x548C;&#x53F3;&#x8FB9;</strong>&#x3002;</li>
+<li>&#x6307;&#x5B9A;<strong>&#x4E09;&#x4E2A;</strong>&#x503C;&#x65F6;&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;&#x503C;&#x5E94;&#x7528;&#x4E8E;<strong>&#x4E0A;&#x8FB9;</strong>&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x503C;&#x5E94;&#x7528;&#x4E8E;<strong>&#x53F3;&#x8FB9;&#x548C;&#x5DE6;&#x8FB9;</strong>&#xFF0C;&#x7B2C;&#x4E09;&#x4E2A;&#x5219;&#x5E94;&#x7528;&#x4E8E;<strong>&#x4E0B;&#x8FB9;</strong>&#x7684;&#x5185;&#x8FB9;&#x8DDD;&#x3002;</li>
+<li>&#x6307;&#x5B9A;<strong>&#x56DB;&#x4E2A;</strong>&#x503C;&#x65F6;&#xFF0C;&#x4F9D;&#x6B21;&#xFF08;&#x987A;&#x65F6;&#x9488;&#x65B9;&#x5411;&#xFF09;&#x4F5C;&#x4E3A;<strong>&#x4E0A;&#x8FB9;</strong>&#xFF0C;<strong>&#x53F3;&#x8FB9;</strong>&#xFF0C;<strong>&#x4E0B;&#x8FB9;</strong>&#xFF0C;&#x548C;<strong>&#x5DE6;&#x8FB9;</strong>&#x7684;&#x5185;&#x8FB9;&#x8DDD;&#x3002; <img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/51e8ae436fdf407182f4831a9092759a\~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></li>
+</ul>
+<h3 id="margin">margin</h3>
+<p>&#x6307;&#x5B9A;&#x56DB;&#x4E2A;&#x65B9;&#x5411;&#x4E0A;&#x7684;&#x5916;&#x8FB9;&#x8DDD;&#x3002;&#x5176;&#x767E;&#x5206;&#x6BD4;&#x662F;&#x76F8;&#x5BF9;&#x4E8E;&#x5BB9;&#x5668;&#x5BBD;&#x5EA6;,&#x8BF4;&#x660E;&#x89C1;<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/margin" target="_blank">margin - CSS&#xFF08;&#x5C42;&#x53E0;&#x6837;&#x5F0F;&#x8868;&#xFF09; | MDN (mozilla.org)</a></p>
+<ul>
+<li>&#x5F53;&#x53EA;&#x6307;&#x5B9A;<strong>&#x4E00;&#x4E2A;</strong>&#x503C;&#x65F6;&#xFF0C;&#x8BE5;&#x503C;&#x4F1A;&#x7EDF;&#x4E00;&#x5E94;&#x7528;&#x5230;<strong>&#x5168;&#x90E8;&#x56DB;&#x4E2A;&#x8FB9;</strong>&#x7684;&#x5916;&#x8FB9;&#x8DDD;&#x4E0A;&#x3002;</li>
+<li>&#x6307;&#x5B9A;<strong>&#x4E24;&#x4E2A;</strong>&#x503C;&#x65F6;&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;&#x503C;&#x4F1A;&#x5E94;&#x7528;&#x4E8E;<strong>&#x4E0A;&#x8FB9;&#x548C;&#x4E0B;&#x8FB9;</strong>&#x7684;&#x5916;&#x8FB9;&#x8DDD;&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x503C;&#x5E94;&#x7528;&#x4E8E;<strong>&#x5DE6;&#x8FB9;&#x548C;&#x53F3;&#x8FB9;</strong>&#x3002;</li>
+<li>&#x6307;&#x5B9A;<strong>&#x4E09;&#x4E2A;</strong>&#x503C;&#x65F6;&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;&#x503C;&#x5E94;&#x7528;&#x4E8E;<strong>&#x4E0A;&#x8FB9;</strong>&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x503C;&#x5E94;&#x7528;&#x4E8E;<strong>&#x53F3;&#x8FB9;&#x548C;&#x5DE6;&#x8FB9;</strong>&#xFF0C;&#x7B2C;&#x4E09;&#x4E2A;&#x5219;&#x5E94;&#x7528;&#x4E8E;<strong>&#x4E0B;&#x8FB9;</strong>&#x7684;&#x5916;&#x8FB9;&#x8DDD;&#x3002;</li>
+<li>&#x6307;&#x5B9A;<strong>&#x56DB;&#x4E2A;</strong>&#x503C;&#x65F6;&#xFF0C;&#x4F9D;&#x6B21;&#xFF08;&#x987A;&#x65F6;&#x9488;&#x65B9;&#x5411;&#xFF09;&#x4F5C;&#x4E3A;<strong>&#x4E0A;&#x8FB9;</strong>&#xFF0C;<strong>&#x53F3;&#x8FB9;</strong>&#xFF0C;<strong>&#x4E0B;&#x8FB9;</strong>&#xFF0C;&#x548C;<strong>&#x5DE6;&#x8FB9;</strong>&#x7684;&#x5916;&#x8FB9;&#x8DDD;&#x3002; margin collapse&#xFF1A;<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS\_Box\_Model/Mastering\_margin\_collapsing" target="_blank">&#x5916;&#x8FB9;&#x8DDD;&#x91CD;&#x53E0; - CSS&#xFF08;&#x5C42;&#x53E0;&#x6837;&#x5F0F;&#x8868;&#xFF09; | MDN (mozilla.org)</a>&#x3002;&#x76F8;&#x90BB;&#x7684;&#x4E24;&#x4E2A;&#x5143;&#x7D20;&#x4E4B;&#x95F4;&#x7684;&#x5916;&#x8FB9;&#x8DDD;&#x91CD;&#x53E0;&#xFF0C;&#x4F1A;&#x5728;&#x5782;&#x76F4;&#x65B9;&#x5411;&#x4E0A;&#x53D1;&#x751F;&#x8FB9;&#x754C;&#x6298;&#x53E0;&#xFF0C;&#x6311;&#x9009;&#x6700;&#x5927;&#x8FB9;&#x754C;&#x8303;&#x56F4;&#x7559;&#x4E0B;&#x3002;</li>
+</ul>
+<h3 id="border">border</h3>
+<p>&#x6307;&#x5B9A;&#x8FB9;&#x6846;&#xFF0C;border-width&#x6307;&#x5B9A;&#x5BBD;&#x5EA6;&#x3001;border-style&#x6307;&#x5B9A;&#x7C7B;&#x578B;&#xFF08;&#x5B9E;&#x7EBF;/&#x865A;&#x7EBF;&#xFF09;&#x3001;border-color&#x6307;&#x5B9A;&#x8FB9;&#x6846;&#x989C;&#x8272;&#x3002;&#x901A;&#x5E38;&#x76F4;&#x63A5;&#x5C06;&#x4E09;&#x8005;&#x7ED3;&#x5408;&#x7B80;&#x5199;&#x4E3A; border ,MDN&#x63CF;&#x8FF0;&#x89C1;<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/border" target="_blank">border - CSS&#xFF08;&#x5C42;&#x53E0;&#x6837;&#x5F0F;&#x8868;&#xFF09; | MDN (mozilla.org)</a></p>
+<ul>
+<li>border&#x5DE7;&#x7528;&#xFF1A;&#x5236;&#x4F5C;&#x4E09;&#x89D2;&#x5F62;<ul>
+<li>&#x9996;&#x5148;&#x56DB;&#x4E2A;&#x8FB9;&#x6846;&#x8BBE;&#x7F6E;&#x4E86;&#x4E0D;&#x540C;&#x7684;&#x989C;&#x8272;&#x3002;&#x53EF;&#x4EE5;&#x53D1;&#x73B0;&#x8FB9;&#x89D2;&#x662F;&#x7531;&#x659C;&#x7EBF;&#x5207;&#x5F00;&#x7684;&#x3002; <img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9e30527c58ae4a09b158bd1a888961d7\~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></li>
+<li>&#x90A3;&#x4E48;&#x5F53;&#x5BB9;&#x5668;&#x9AD8;&#x5EA6;&#x548C;&#x5BBD;&#x5EA6;&#x4E3A;0&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x5982;&#x56FE; <img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/51749d92b6bd4a1f8b7c8cac57c551e8\~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></li>
+<li>&#x90A3;&#x5982;&#x679C;&#x5C06;&#x5176;&#x4ED6;&#x7684;&#x8FB9;&#x6846;&#x989C;&#x8272;&#x8BBE;&#x4E3A;&#x900F;&#x660E;&#xFF08;transport&#xFF09;&#x53EF;&#x4EE5;&#x53D1;&#x73B0;&#xFF0C;&#x5236;&#x9020;&#x4E86;&#x4E00;&#x4E2A;&#x7EA2;&#x8272;&#x7684;&#x4E09;&#x89D2;&#x5F62;&#x51FA;&#x6765;&#x3002; <img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6b3c7bf5d0084c5bb48c827cd23e73e6\~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></li>
+</ul>
+</li>
+</ul>
+<h3 id="box-sizing">box-sizing</h3>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/box-sizing" target="_blank">box-sizing - CSS&#xFF08;&#x5C42;&#x53E0;&#x6837;&#x5F0F;&#x8868;&#xFF09; | MDN (mozilla.org)</a></p>
+<blockquote>
+<p>&#x5728; <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS\_Box\_Model/Introduction\_to\_the\_CSS\_box\_model" target="_blank">CSS &#x76D2;&#x5B50;&#x6A21;&#x578B;</a>&#x7684;&#x9ED8;&#x8BA4;&#x5B9A;&#x4E49;&#x91CC;&#xFF0C;&#x5BF9;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x6240;&#x8BBE;&#x7F6E;&#x7684; <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/width" target="_blank"><code>width</code></a> &#x4E0E; <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/height" target="_blank"><code>height</code></a> &#x53EA;&#x4F1A;&#x5E94;&#x7528;&#x5230;&#x8FD9;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x5185;&#x5BB9;&#x533A;&#x3002;&#x5982;&#x679C;&#x8FD9;&#x4E2A;&#x5143;&#x7D20;&#x6709;&#x4EFB;&#x4F55;&#x7684; <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/border" target="_blank"><code>border</code></a> &#x6216; <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/padding" target="_blank"><code>padding</code></a> &#xFF0C;&#x7ED8;&#x5236;&#x5230;&#x5C4F;&#x5E55;&#x4E0A;&#x65F6;&#x7684;&#x76D2;&#x5B50;&#x5BBD;&#x5EA6;&#x548C;&#x9AD8;&#x5EA6;&#x4F1A;&#x52A0;&#x4E0A;&#x8BBE;&#x7F6E;&#x7684;&#x8FB9;&#x6846;&#x548C;&#x5185;&#x8FB9;&#x8DDD;&#x503C;&#x3002;&#x8FD9;&#x610F;&#x5473;&#x7740;&#x5F53;&#x4F60;&#x8C03;&#x6574;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x5BBD;&#x5EA6;&#x548C;&#x9AD8;&#x5EA6;&#x65F6;&#x9700;&#x8981;&#x65F6;&#x523B;&#x6CE8;&#x610F;&#x5230;&#x8FD9;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x8FB9;&#x6846;&#x548C;&#x5185;&#x8FB9;&#x8DDD;&#x3002;&#x5F53;&#x6211;&#x4EEC;&#x5B9E;&#x73B0;&#x54CD;&#x5E94;&#x5F0F;&#x5E03;&#x5C40;&#x65F6;&#xFF0C;&#x8FD9;&#x4E2A;&#x7279;&#x70B9;&#x5C24;&#x5176;&#x70E6;&#x4EBA;&#x3002;</p>
+</blockquote>
+<p>box-sizing &#x5C5E;&#x6027;&#x53EF;&#x4EE5;&#x88AB;&#x7528;&#x6765;&#x8C03;&#x6574;&#x8FD9;&#x4E9B;&#x8868;&#x73B0;:</p>
+<ul>
+<li><code>content-box</code> &#x662F;&#x9ED8;&#x8BA4;&#x503C;&#x3002;&#x5982;&#x679C;&#x4F60;&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x5BBD;&#x4E3A;100px&#xFF0C;&#x90A3;&#x4E48;&#x8FD9;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x5185;&#x5BB9;&#x533A;&#x4F1A;&#x6709;100px &#x5BBD;&#xFF0C;&#x5E76;&#x4E14;&#x4EFB;&#x4F55;&#x8FB9;&#x6846;&#x548C;&#x5185;&#x8FB9;&#x8DDD;&#x7684;&#x5BBD;&#x5EA6;&#x90FD;&#x4F1A;&#x88AB;&#x589E;&#x52A0;&#x5230;&#x6700;&#x540E;&#x7ED8;&#x5236;&#x51FA;&#x6765;&#x7684;&#x5143;&#x7D20;&#x5BBD;&#x5EA6;&#x4E2D;&#x3002;</li>
+<li><code>border-box</code> &#x544A;&#x8BC9;&#x6D4F;&#x89C8;&#x5668;&#xFF1A;&#x4F60;&#x60F3;&#x8981;&#x8BBE;&#x7F6E;&#x7684;&#x8FB9;&#x6846;&#x548C;&#x5185;&#x8FB9;&#x8DDD;&#x7684;&#x503C;&#x662F;&#x5305;&#x542B;&#x5728;width&#x5185;&#x7684;&#x3002;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x5C06;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x7684;width&#x8BBE;&#x4E3A;100px&#xFF0C;&#x90A3;&#x4E48;&#x8FD9;100px&#x4F1A;&#x5305;&#x542B;&#x5B83;&#x7684;border&#x548C;padding&#xFF0C;&#x5185;&#x5BB9;&#x533A;&#x7684;&#x5B9E;&#x9645;&#x5BBD;&#x5EA6;&#x662F;width&#x51CF;&#x53BB;(border + padding)&#x7684;&#x503C;&#x3002;&#x5927;&#x591A;&#x6570;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x8FD9;&#x4F7F;&#x5F97;&#x6211;&#x4EEC;&#x66F4;&#x5BB9;&#x6613;&#x5730;&#x8BBE;&#x5B9A;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x5BBD;&#x9AD8;&#x3002;</li>
+</ul>
+<h3 id="overflow">overflow</h3>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/overflow" target="_blank">overflow - CSS&#xFF08;&#x5C42;&#x53E0;&#x6837;&#x5F0F;&#x8868;&#xFF09; | MDN (mozilla.org)</a></p>
+<blockquote>
+<p>CSS&#x5C5E;&#x6027; <strong>overflow</strong> &#x5B9A;&#x4E49;&#x5F53;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x5185;&#x5BB9;&#x592A;&#x5927;&#x800C;&#x65E0;&#x6CD5;&#x9002;&#x5E94; <a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Block\_formatting\_context" target="_blank">&#x5757;&#x7EA7;&#x683C;&#x5F0F;&#x5316;&#x4E0A;&#x4E0B;&#x6587;</a> &#x65F6;&#x5019;&#x8BE5;&#x505A;&#x4EC0;&#x4E48;&#x3002;&#x5B83;&#x662F; <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/overflow-x" target="_blank"><code>overflow-x</code></a> &#x548C;<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/overflow-y" target="_blank"><code>overflow-y</code></a>&#x7684; <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Shorthand\_properties" target="_blank">&#x7B80;&#x5199;&#x5C5E;&#x6027; </a>&#x3002;</p>
+</blockquote>
+<p>&#x5C06;&#x5176;&#x8BBE;&#x7F6E;&#x4E3A;auto&#xFF0C;&#x5219;&#x5F53;&#x5185;&#x5BB9;&#x8FC7;&#x591A;&#x7684;&#x65F6;&#x5019;&#x4F1A;&#x663E;&#x793A;&#x6EDA;&#x52A8;&#x6761;&#xFF0C;&#x5426;&#x5219;&#x4E0D;&#x663E;&#x793A;&#x3002;&#x800C;&#x4E3A;&#x4F7F; <code>overflow</code> &#x6709;&#x6548;&#x679C;&#xFF0C;&#x5757;&#x7EA7;&#x5BB9;&#x5668;&#x5FC5;&#x987B;&#x6709;&#x4E00;&#x4E2A;&#x6307;&#x5B9A;&#x7684;&#x9AD8;&#x5EA6;&#xFF08;<code>height</code>&#x6216;&#x8005;<code>max-height</code>&#xFF09;&#x6216;&#x8005;&#x5C06;<code>white-space</code>&#x8BBE;&#x7F6E;&#x4E3A;<code>nowrap</code>&#x3002;</p>
+<h3 id="&#x5757;&#x7EA7;&#x5143;&#x7D20;">&#x5757;&#x7EA7;&#x5143;&#x7D20;</h3>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Block-level\_elements#block-level\_example" target="_blank">&#x5757;&#x7EA7;&#x5143;&#x7D20; - HTML&#xFF08;&#x8D85;&#x6587;&#x672C;&#x6807;&#x8BB0;&#x8BED;&#x8A00;&#xFF09; | MDN (mozilla.org)</a></p>
+<blockquote>
+<p>&#x5757;&#x7EA7;&#x5143;&#x7D20;&#x5360;&#x636E;&#x5176;&#x7236;&#x5143;&#x7D20;&#xFF08;&#x5BB9;&#x5668;&#xFF09;&#x7684;&#x6574;&#x4E2A;&#x6C34;&#x5E73;&#x7A7A;&#x95F4;&#xFF0C;&#x5782;&#x76F4;&#x7A7A;&#x95F4;&#x7B49;&#x4E8E;&#x5176;&#x5185;&#x5BB9;&#x9AD8;&#x5EA6;&#xFF0C;&#x901A;&#x5E38;&#x6D4F;&#x89C8;&#x5668;&#x4F1A;&#x5728;&#x5757;&#x7EA7;&#x5143;&#x7D20;&#x524D;&#x540E;&#x53E6;&#x8D77;&#x4E00;&#x4E2A;&#x65B0;&#x884C;&#x3002;</p>
+</blockquote>
+<ul>
+<li>&#x5E38;&#x89C1;&#x7684;&#x6709;body&#x3001;article&#x3001;div&#x3001;main&#x3001;section&#x3001;h1-h6&#x3001;p&#x3001;ul&#x3001;li</li>
+<li>display: block</li>
+</ul>
+<h3 id="&#x884C;&#x7EA7;&#x5143;&#x7D20;">&#x884C;&#x7EA7;&#x5143;&#x7D20;</h3>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Inline\_elements" target="_blank">&#x884C;&#x5185;&#x5143;&#x7D20; - HTML&#xFF08;&#x8D85;&#x6587;&#x672C;&#x6807;&#x8BB0;&#x8BED;&#x8A00;&#xFF09; | MDN (mozilla.org)</a></p>
+<blockquote>
+<p>&#x4E00;&#x4E2A;&#x884C;&#x5185;&#x5143;&#x7D20;&#x53EA;&#x5360;&#x636E;&#x5B83;&#x5BF9;&#x5E94;&#x6807;&#x7B7E;&#x7684;&#x8FB9;&#x6846;&#x6240;&#x5305;&#x542B;&#x7684;&#x7A7A;&#x95F4; &#x884C;&#x7EA7;&#x5143;&#x7D20;&#x548C;&#x5176;&#x4ED6;&#x884C;&#x7EA7;&#x5143;&#x7D20;&#x4E00;&#x8D77;&#xFF0C;&#x4E0D;&#x4F7F;&#x7528;&#x76D2;&#x6A21;&#x578B;&#x4E2D;&#x7684;width&#x3001;height&#x5C5E;&#x6027;</p>
+</blockquote>
+<ul>
+<li>&#x5E38;&#x89C1;&#x7684;&#x6709;span&#x3001;em&#x3001;strong&#x3001;cite&#x3001;section&#x3001;code&#x7B49;</li>
+<li>display: inline</li>
+</ul>
+<p>&#x8BF4;&#x5230;display&#x5C5E;&#x6027;&#xFF0C;&#x5176;&#x8BF4;&#x660E;<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/display" target="_blank">display - CSS&#xFF08;&#x5C42;&#x53E0;&#x6837;&#x5F0F;&#x8868;&#xFF09; | MDN (mozilla.org)</a>&#xFF1A;</p>
+<blockquote>
+<p><strong><code>display</code></strong> &#x5C5E;&#x6027;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#x5143;&#x7D20;&#x7684;&#x5185;&#x90E8;&#x548C;&#x5916;&#x90E8;&#x663E;&#x793A;&#x7C7B;&#x578B; <em>display types</em>&#x3002;&#x5143;&#x7D20;&#x7684;&#x5916;&#x90E8;&#x663E;&#x793A;&#x7C7B;&#x578B; <em>outer display types</em> &#x5C06;&#x51B3;&#x5B9A;&#x8BE5;&#x5143;&#x7D20;&#x5728;<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS\_Flow\_Layout" target="_blank">&#x6D41;&#x5F0F;&#x5E03;&#x5C40;</a>&#x4E2D;&#x7684;&#x8868;&#x73B0;&#xFF08;<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS\_Flow\_Layout" target="_blank">&#x5757;&#x7EA7;&#x6216;&#x5185;&#x8054;&#x5143;&#x7D20;</a>&#xFF09;&#xFF1B;&#x5143;&#x7D20;&#x7684;&#x5185;&#x90E8;&#x663E;&#x793A;&#x7C7B;&#x578B; <em>inner display types</em> &#x53EF;&#x4EE5;&#x63A7;&#x5236;&#x5176;&#x5B50;&#x5143;&#x7D20;&#x7684;&#x5E03;&#x5C40;&#xFF08;&#x4F8B;&#x5982;&#xFF1A;<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS\_Flow\_Layout" target="_blank">flow layout</a>&#xFF0C;<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS\_Grid\_Layout" target="_blank">grid</a> &#x6216; <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS\_Flexible\_Box\_Layout" target="_blank">flex</a>&#xFF09;&#x3002;</p>
+</blockquote>
+<ul>
+<li>block &#x5757;&#x7EA7;&#x76D2;&#x5B50;</li>
+<li>inline &#x884C;&#x7EA7;&#x76D2;&#x5B50;</li>
+<li>inline-block &#x672C;&#x8EAB;&#x662F;&#x884C;&#x7EA7;&#xFF0C;&#x53EF;&#x4EE5;&#x88AB;&#x653E;&#x5728;&#x884C;&#x7EA7;&#x76D2;&#x5B50;&#x4E2D;&#xFF0C;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#x5BBD;&#x9AD8;&#xFF0C;&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x6574;&#x4F53;&#x4E0D;&#x4F1A;&#x88AB;&#x62C6;&#x6563;&#x6210;&#x591A;&#x884C;&#x3002;</li>
+<li>none &#x6392;&#x7248;&#x65F6;&#x88AB;&#x5B8C;&#x5168;&#x5FFD;&#x7565;</li>
+</ul>
+<h3 id="&#x5E38;&#x89C4;&#x6D41;&#xFF08;normal-flow&#xFF09;">&#x5E38;&#x89C4;&#x6D41;&#xFF08;Normal Flow&#xFF09;</h3>
+<ul>
+<li>&#x6839;&#x5143;&#x7D20;&#x3001;&#x6D6E;&#x52A8;&#x548C;&#x7EDD;&#x5BF9;&#x5B9A;&#x4F4D;&#x7684;&#x5143;&#x7D20;&#x4F1A;&#x8131;&#x79BB;&#x5E38;&#x89C4;&#x6D41;&#xFF0C;&#x5176;&#x4ED6;&#x5143;&#x7D20;&#x90FD;&#x5728;&#x5E38;&#x89C4;&#x6D41;&#x4E4B;&#x5185;&#xFF08;in-flow&#xFF09;&#x3002;&#x5E38;&#x89C4;&#x6D41;&#x4E2D;&#x7684;&#x76D2;&#x5B50;&#xFF0C;&#x5728;&#x67D0;&#x79CD;&#x6392;&#x7248;&#x4E0A;&#x4E0B;&#x6587;&#x4E2D;&#x53C2;&#x4E0E;&#x5E03;&#x5C40;&#x3002;</li>
+<li>&#x884C;&#x7EA7;&#x6392;&#x7248;&#x4E0A;&#x4E0B;&#x6587;&#x3001;&#x5757;&#x7EA7;&#x6392;&#x7248;&#x4E0A;&#x4E0B;&#x6587;&#x3001;Table&#x6392;&#x7248;&#x4E0A;&#x4E0B;&#x6587;&#x3001;Flex&#x6392;&#x7248;&#x4E0A;&#x4E0B;&#x6587;&#x3001;Grid&#x6392;&#x7248;&#x4E0A;&#x4E0B;&#x6587;&#x2026;&#x2026;</li>
+</ul>
+<h4 id="&#x884C;&#x5185;&#x683C;&#x5F0F;&#x5316;&#x4E0A;&#x4E0B;&#x6587;&#xFF08;inline-formatting-context&#xFF09;">&#x884C;&#x5185;&#x683C;&#x5F0F;&#x5316;&#x4E0A;&#x4E0B;&#x6587;&#xFF08;Inline formatting context&#xFF09;</h4>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Inline\_formatting\_context" target="_blank">&#x884C;&#x5185;&#x683C;&#x5F0F;&#x5316;&#x4E0A;&#x4E0B;&#x6587;&#xFF08;Inline formatting context&#xFF09; - CSS&#xFF08;&#x5C42;&#x53E0;&#x6837;&#x5F0F;&#x8868;&#xFF09; | MDN</a></p>
+<blockquote>
+<p>&#x884C;&#x5185;&#x683C;&#x5F0F;&#x5316;&#x4E0A;&#x4E0B;&#x6587;&#x662F;&#x4E00;&#x4E2A;&#x7F51;&#x9875;&#x7684;&#x6E32;&#x67D3;&#x7ED3;&#x679C;&#x7684;&#x4E00;&#x90E8;&#x5206;&#x3002;&#x5176;&#x4E2D;&#xFF0C;&#x5404;&#x884C;&#x5185;&#x6846;&#xFF08;inline boxes&#xFF09;&#x4E00;&#x4E2A;&#x63A5;&#x4E00;&#x4E2A;&#x5730;&#x6392;&#x5217;&#xFF0C;&#x5176;&#x6392;&#x5217;&#x987A;&#x5E8F;&#x6839;&#x636E;&#x4E66;&#x5199;&#x6A21;&#x5F0F;&#xFF08;writing-mode&#xFF09;&#x7684;&#x8BBE;&#x7F6E;&#x6765;&#x51B3;&#x5B9A;&#xFF1A;</p>
+<ul>
+<li>&#x5BF9;&#x4E8E;&#x6C34;&#x5E73;&#x4E66;&#x5199;&#x6A21;&#x5F0F;&#xFF0C;&#x5404;&#x4E2A;&#x6846;&#x4ECE;&#x5DE6;&#x8FB9;&#x5F00;&#x59CB;&#x6C34;&#x5E73;&#x5730;&#x6392;&#x5217;</li>
+<li>&#x5BF9;&#x4E8E;&#x5782;&#x76F4;&#x4E66;&#x5199;&#x6A21;&#x5F0F;&#xFF0C;&#x5404;&#x4E2A;&#x6846;&#x4ECE;&#x9876;&#x90E8;&#x5F00;&#x59CB;&#x6C34;&#x5E73;&#x5730;&#x6392;&#x5217;</li>
+</ul>
+<p>&#x5728;&#x4E0B;&#x9762;&#x7ED9;&#x51FA;&#x7684;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;&#x5E26;&#x9ED1;&#x8272;&#x8FB9;&#x6846;&#x7684;&#x4E24;&#x4E2A;(<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/div" target="_blank"><code>&lt;div&gt;</code></a>)&#x5143;&#x7D20;&#x7EC4;&#x6210;&#x4E86;&#x4E00;&#x4E2A;<a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Block\_formatting\_context" target="_blank">&#x5757;&#x7EA7;&#x683C;&#x5F0F;&#x5316;&#x4E0A;&#x4E0B;&#x6587;&#xFF08;block formatting context&#xFF09;</a>&#xFF0C;&#x5176;&#x4E2D;&#x7684;&#x6BCF;&#x4E00;&#x4E2A;&#x5355;&#x8BCD;&#x90FD;&#x53C2;&#x4E0E;&#x4E00;&#x4E2A;&#x884C;&#x5185;&#x683C;&#x5F0F;&#x5316;&#x4E0A;&#x4E0B;&#x6587;&#x4E2D;&#x3002;&#x6C34;&#x5E73;&#x4E66;&#x5199;&#x6A21;&#x5F0F;&#x4E0B;&#x7684;&#x5404;&#x4E2A;&#x6846;&#x6C34;&#x5E73;&#x5730;&#x6392;&#x5217;&#xFF0C;&#x5782;&#x76F4;&#x4E66;&#x5199;&#x6A21;&#x5F0F;&#x4E0B;&#x7684;&#x5404;&#x4E2A;&#x6846;&#x5782;&#x76F4;&#x5730;&#x6392;&#x5217;&#x3002;</p>
+</blockquote>
+<ul>
+<li>&#x53EA;&#x5305;&#x542B;&#x884C;&#x7EA7;&#x76D2;&#x5B50;&#x7684;&#x5BB9;&#x5668;&#x4F1A;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;IFC&#xFF0C;IFC&#x4E2D;&#x6392;&#x7248;&#x89C4;&#x5219;&#x5982;&#x4E0B;<ul>
+<li>&#x76D2;&#x5B50;&#x5728;&#x4E00;&#x884C;&#x5185;&#x6C34;&#x5E73;&#x6446;&#x653E;&#xFF0C;&#x5F53;&#x4E00;&#x884C;&#x653E;&#x4E0D;&#x4E0B;&#x65F6;&#x4F1A;&#x6362;&#x884C;&#x663E;&#x793A;&#x3002;</li>
+<li><code>text-align</code> &#x51B3;&#x5B9A;&#x4E00;&#x884C;&#x5185;&#x76D2;&#x5B50;&#x7684;<strong>&#x6C34;&#x5E73;&#x5BF9;&#x9F50;</strong></li>
+<li><code>vertical-align</code> &#x51B3;&#x5B9A;&#x4E00;&#x4E2A;&#x76D2;&#x5B50;&#x5728;&#x884C;&#x5185;&#x7684;<strong>&#x5782;&#x76F4;&#x5BF9;&#x9F50;</strong></li>
+<li>&#x907F;&#x5F00; <a href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS\_layout/Floats" target="_blank">&#x6D6E;&#x52A8;</a> &#x5143;&#x7D20;</li>
+</ul>
+</li>
+<li>&#x4E00;&#x4E2A;&#x6BB5;&#x843D;&#x5B9E;&#x9645;&#x4E0A;&#x662F;&#x4E00;&#x7CFB;&#x5217;&#x884C;&#x6846;&#x7684;&#x96C6;&#x5408;&#xFF0C;&#x8FD9;&#x4E9B;&#x884C;&#x6846;&#x5728;&#x5757;&#x7684;&#x65B9;&#x5411;&#x4E0A;&#x6392;&#x5217;&#x3002;</li>
+<li>&#x4E00;&#x4E2A;&#x884C;&#x5185;&#x6846;&#xFF08;inline box&#xFF09;&#x88AB;&#x5206;&#x5272;&#x5230;&#x591A;&#x884C;&#x4E2D;&#x65F6;&#xFF0C; margins, borders, &#x4EE5;&#x53CA; padding &#x7684;&#x8BBE;&#x5B9A;&#x5747;&#x4E0D;&#x4F1A;&#x5728;&#x65AD;&#x88C2;&#x5904;&#x751F;&#x6548;&#x3002; &#x4E0B;&#x4F8B;&#x4E2D;&#x6709;&#x4E00;&#x4E2A; (<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/span" target="_blank"><code>&lt;span&gt;</code></a>) &#x5143;&#x7D20;&#xFF0C;&#x5B83;&#x5305;&#x88F9;&#x4E86;&#x4E00;&#x7CFB;&#x5217;&#x5355;&#x8BCD;&#xFF0C;&#x5360;&#x636E;&#x4E86;&#x4E24;&#x884C;&#x3002;&#x53EF;&#x4EE5;&#x770B;&#x89C1;&#x5728;&#x65AD;&#x88C2;&#x5904;&#xFF0C;<code>&lt;span&gt;</code> &#x7684; border &#x540C;&#x6837;&#x53D1;&#x751F;&#x4E86;&#x65AD;&#x88C2;&#x3002;</li>
+</ul>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ae65b47548d540e4ac46b9e9ddb2e6d3\~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
+<h4 id="&#x5757;&#x7EA7;&#x683C;&#x5F0F;&#x5316;&#x4E0A;&#x4E0B;&#x6587;&#xFF08;block-formatting-context&#xFF09;">&#x5757;&#x7EA7;&#x683C;&#x5F0F;&#x5316;&#x4E0A;&#x4E0B;&#x6587;&#xFF08;Block Formatting Context&#xFF09;</h4>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Block\_formatting\_context" target="_blank">&#x5757;&#x683C;&#x5F0F;&#x5316;&#x4E0A;&#x4E0B;&#x6587; | MDN</a></p>
+<ul>
+<li>Block Formatting Context&#xFF08;BFC&#xFF09;</li>
+<li>&#x76D2;&#x5B50;&#x4ECE;&#x4E0A;&#x5230;&#x4E0B;&#x6446;&#x653E;</li>
+<li><strong>BFC&#x5185;</strong>&#x7684;<strong>&#x5782;&#x76F4;margin&#x4F1A;&#x5408;&#x5E76;</strong>&#xFF08;&#x89C1;&#x524D;&#x6587;margin&#x4E2D;&#x7684;margin collapse&#xFF0C;&#x5916;&#x8FB9;&#x8DDD;&#x91CD;&#x53E0;&#xFF09;</li>
+<li><strong>BFC&#x5185;</strong>&#x76D2;&#x5B50;&#x7684;margin&#x5219;<strong>&#x4E0D;&#x4F1A;&#x4E0E;&#x5916;&#x9762;&#x7684;&#x5408;&#x5E76;</strong></li>
+<li>BFC &#x4E0D;&#x4F1A;&#x4E0E;&#x6D6E;&#x52A8;&#x5143;&#x7D20;&#x91CD;&#x53E0;</li>
+</ul>
+<h3 id="flexbox">FlexBox</h3>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS\_Flexible\_Box\_Layout/Basic\_Concepts\_of\_Flexbox" target="_blank">flex &#x5E03;&#x5C40;&#x7684;&#x57FA;&#x672C;&#x6982;&#x5FF5; | MDN</a></p>
+<ul>
+<li>&#x4E00;&#x79CD;&#x65B0;&#x7684;&#x6392;&#x7248;&#x4E0A;&#x4E0B;&#x6587;</li>
+<li>&#x53EF;&#x4EE5;&#x63A7;&#x5236;&#x5B50;&#x7EA7;&#x76D2;&#x5B50;&#x7684;&#xFF1A;<ul>
+<li>&#x6446;&#x653E;&#x6D41;&#x5411;(flex-direction)<ul>
+<li>&#x9ED8;&#x8BA4;&#xFF08;<code>row</code>&#xFF09;&#xFF1A;&#x7531;&#x5DE6;&#x5F80;&#x53F3; &#x2192;</li>
+<li><code>row-reverse</code>&#xFF1A;&#x7531;&#x53F3;&#x5F80;&#x5DE6;&#x2190;</li>
+<li><code>column</code>&#xFF1A;&#x7531;&#x4E0A;&#x5230;&#x4E0B; &#x2193;</li>
+<li><code>column-reverse</code>&#xFF1A;&#x7531;&#x4E0B;&#x5230;&#x4E0A;&#x2191;</li>
+</ul>
+</li>
+<li>&#x6446;&#x653E;&#x987A;&#x5E8F;</li>
+<li>&#x76D2;&#x5B50;&#x9AD8;&#x5EA6;&#x548C;&#x5BBD;&#x5EA6;</li>
+<li>&#x6C34;&#x5E73;&#x4E0E;&#x5782;&#x76F4;&#x65B9;&#x5411;&#x7684;&#x5BF9;&#x9F50;&#xFF08;&#x4E25;&#x683C;&#x6765;&#x8BF4;&#xFF0C;&#x4E3B;&#x8F74;&#x548C;&#x4EA4;&#x53C9;&#x8F74;&#x65B9;&#x5411;&#x4E0A;&#x7684;&#x5BF9;&#x9F50;&#xFF0C;&#x89C1;<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/justify-content" target="_blank"><code>justify-content</code></a>&#x548C; <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS\_Flexible\_Box\_Layout/Basic\_Concepts\_of\_Flexbox#align-items" target="_blank"><code>align-items</code> </a>&#xFF09;</li>
+<li>&#x662F;&#x5426;&#x5141;&#x8BB8;&#x6298;&#x884C;&#xFF08;<code>wrap</code> &#x3001;<code>nowrap</code> &#x3001;<code>wrap-reverse</code>&#xFF09;</li>
+<li>&#x5176;&#x4ED6;&#x8FD8;&#x6709;<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS\_Flexible\_Box\_Layout/Basic\_Concepts\_of\_Flexbox#flex\_%E5%85%83%E7%B4%A0%E4%B8%8A%E7%9A%84%E5%B1%9E%E6%80%A7" target="_blank"> flex &#x5143;&#x7D20;&#x4E0A;&#x7684;&#x5C5E;&#x6027;</a>&#xFF08;<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-grow" target="_blank"><code>flex-grow</code></a>&#x3001;<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-shrink" target="_blank"><code>flex-shrink</code></a>&#x3001;<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-basis" target="_blank"><code>flex-basis</code></a>&#xFF09;&#x7B49;</li>
+</ul>
+</li>
+<li>flex&#x5B50;&#x9879;&#x4F1A;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;BFC</li>
+</ul>
+<p>&#x91CD;&#x70B9;&#x518D;&#x8BB2;&#x4E00;&#x4E0B;&#x4E3B;&#x8F74;&#x548C;&#x4EA4;&#x53C9;&#x8F74;&#x7684;&#x5BF9;&#x9F50;&#xFF0C;&#x4EE5;&#x9ED8;&#x8BA4;&#x7684;&#x7531;&#x53F3;&#x5F80;&#x5DE6;&#x6392;&#x5217;&#xFF08;row&#xFF09;&#xFF0C;&#x5176;&#x4E3B;&#x8F74;&#x4E3A;&#x6C34;&#x5E73;&#x8F74;&#xFF0C;&#x4EA4;&#x53C9;&#x8F74;&#x4E3A;&#x5782;&#x76F4;&#x8F74;&#x3002;&#x5176;&#x4E2D;&#x4E3B;&#x8F74;&#xFF08;justify-content&#xFF09;&#x7684;&#x5BF9;&#x9F50;&#x65B9;&#x5F0F;&#x6709;&#x4EE5;&#x4E0B;&#x51E0;&#x79CD;&#xFF08;&#x521D;&#x59CB;&#x503C;&#x4E3A;flex-start &#xFF09;&#xFF1A;</p>
+<ul>
+<li>flex-start &#x5728;&#x4E3B;&#x8F74;&#x5F00;&#x59CB;&#x7684;&#x5730;&#x65B9;&#x5BF9;&#x9F50;</li>
+<li>flex-end &#x5728;&#x4E3B;&#x8F74;&#x7ED3;&#x675F;&#x7684;&#x5730;&#x65B9;&#x5BF9;&#x9F50;</li>
+<li>center &#x5728;&#x4E3B;&#x8F74;&#x4E0A;&#x5C45;&#x4E2D;&#x5BF9;&#x9F50;</li>
+<li>space-between &#x5728;&#x4E3B;&#x8F74;&#x4E0A;&#x4E24;&#x7AEF;&#x5BF9;&#x9F50;&#xFF0C;&#x4E2D;&#x95F4;&#x7A7F;&#x63D2;&#x7A7A;&#x95F4;</li>
+<li>space-around &#x5728;&#x4E3B;&#x8F74;&#x4E0A;&#x4E24;&#x8FB9;&#x4E5F;&#x52A0;&#x4E0A;&#x7A7A;&#x767D;&#xFF0C;&#x4FDD;&#x6301;&#x5143;&#x7D20;&#x5360;&#x7528;&#x5927;&#x5C0F;&#x4E0D;&#x53D8;</li>
+<li>space-evenly &#x4E24;&#x8FB9;&#x4E0E;&#x4E2D;&#x95F4;&#x7684;&#x7A7A;&#x767D;&#x5927;&#x5C0F;&#x76F8;&#x540C; <img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8774e61bcdd34fa4802aeaaa87f311f5\~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></li>
+</ul>
+<p>&#x4EA4;&#x53C9;&#x8F74;&#x7684;&#x5BF9;&#x9F50;&#x65B9;&#x5F0F;&#x5982;&#x4E0B;&#xFF08;&#x521D;&#x59CB;&#x503C;&#x4E3A;stretch&#xFF09;&#xFF1A;</p>
+<ul>
+<li>flex-start&#xFF1A;&#x5728;&#x4EA4;&#x53C9;&#x8F74;&#x5F00;&#x59CB;&#x7684;&#x5730;&#x65B9;&#x5BF9;&#x9F50;</li>
+<li>flex-end&#xFF1A;&#x5728;&#x4EA4;&#x53C9;&#x8F74;&#x7ED3;&#x675F;&#x7684;&#x5730;&#x65B9;&#x5BF9;&#x9F50;</li>
+<li>center&#xFF1A;&#x5728;&#x4EA4;&#x53C9;&#x8F74;&#x4E0A;&#x5C45;&#x4E2D;&#x5BF9;&#x9F50;</li>
+<li>stretch&#xFF1A;&#x5728;&#x4EA4;&#x53C9;&#x8F74;&#x4E0A;&#xFF0C;&#x62C9;&#x4F38;&#x5143;&#x7D20;&#x4EE5;&#x9002;&#x5E94;&#x5BB9;&#x5668;</li>
+<li>baseline&#xFF1A;&#x4E24;&#x8FB9;&#x4E0E;&#x4E2D;&#x95F4;&#x7684;&#x7A7A;&#x767D;&#x5927;&#x5C0F;&#x76F8;&#x540C;</li>
+<li><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/36b54bd7d27d403e883c75633d8f8c91\~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></li>
+</ul>
+<p>&#x5982;&#x679C;&#x60F3;&#x7ED9;flex&#x4E2D;&#x7684;&#x67D0;&#x4E2A;&#x5143;&#x7D20;&#x641E;&#x7279;&#x6B8A;&#xFF0C;&#x90A3;&#x4E48;&#x53EF;&#x4EE5;&#x7ED9;&#x4ED6;&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;align-self&#x5C5E;&#x6027;&#xFF0C;&#x5982;&#x56FE;</p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3c8cde0097674919bb6007fd308536bf\~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/order" target="_blank">order</a> &#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#x5143;&#x7D20;&#x4EEC;&#x5728;&#x5E03;&#x5C40;&#x65F6;&#x7684;&#x987A;&#x5E8F;</p>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/486de4617acc4684b76d89c45bc1b083\~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
+<p>&#x90A3;&#x5982;&#x679C;&#x7F51;&#x9875;&#x62C9;&#x4F38;&#x6216;&#x8005;&#x7F29;&#x5C0F;&#xFF0C;flex&#x5BB9;&#x5668;&#x4E2D;&#x7684;&#x5185;&#x5BB9;&#x4F1A;&#x5982;&#x4F55;&#x53D8;&#x5462;&#xFF1F;</p>
+<ul>
+<li>&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8BBE;&#x7F6E;flex-grow&#x5728;&#x6709;&#x5269;&#x4F59;&#x7A7A;&#x95F4;&#x7684;&#x65F6;&#x5019;&#x63A7;&#x5236;&#x4F38;&#x5C55;&#x80FD;&#x529B;&#xFF0C;flex-shrink&#x5728;&#x5269;&#x4F59;&#x7A7A;&#x95F4;&#x4E0D;&#x8DB3;&#x7684;&#x65F6;&#x5019;&#x63A7;&#x5236;&#x6536;&#x7F29;&#x3002;</li>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS\_Flexible\_Box\_Layout/Basic\_Concepts\_of\_Flexbox#flex\_%E5%85%83%E7%B4%A0%E5%B1%9E%E6%80%A7%EF%BC%9Aflex-grow" target="_blank"><code>flex-grow</code></a> &#x5C5E;&#x6027;&#x53EF;&#x4EE5;&#x6309;&#x6BD4;&#x4F8B;&#x5206;&#x914D;&#x7A7A;&#x95F4;&#x3002;&#x5982;&#x679C;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20; <code>flex-grow</code> &#x503C;&#x4E3A;2&#xFF0C; &#x5176;&#x4ED6;&#x5143;&#x7D20;&#x503C;&#x4E3A;1&#xFF0C;&#x5219;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x5C06;&#x5360;&#x6709;2/4, &#x53E6;&#x5916;&#x4E24;&#x4E2A;&#x5143;&#x7D20;&#x5404;&#x5360;&#x6709;1/4&#x3002;</li>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS\_Flexible\_Box\_Layout/Basic\_Concepts\_of\_Flexbox#flex\_%E5%85%83%E7%B4%A0%E5%B1%9E%E6%80%A7%EF%BC%9A\_flex-shrink" target="_blank"><code>flex-shrink</code></a> &#x4E0E; <code>flex-grow</code> &#x5C5E;&#x6027;&#x4E00;&#x6837;&#xFF0C;&#x53EF;&#x4EE5;&#x8D4B;&#x4E88;&#x4E0D;&#x540C;&#x7684;&#x503C;&#x6765;&#x63A7;&#x5236;flex&#x5143;&#x7D20;&#x6536;&#x7F29;&#x7684;&#x7A0B;&#x5EA6; &#x2014;&#x2014; &#x7ED9;<code>flex-shrink</code>&#x5C5E;&#x6027;&#x8D4B;&#x4E88;&#x66F4;&#x5927;&#x7684;&#x6570;&#x503C;&#x53EF;&#x4EE5;&#x6BD4;&#x8D4B;&#x4E88;&#x5C0F;&#x6570;&#x503C;&#x7684;&#x540C;&#x7EA7;&#x5143;&#x7D20;&#x6536;&#x7F29;&#x7A0B;&#x5EA6;&#x66F4;&#x5927;&#x3002;</li>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS\_Flexible\_Box\_Layout/Basic\_Concepts\_of\_Flexbox#flex\_%E5%85%83%E7%B4%A0%E5%B1%9E%E6%80%A7%EF%BC%9Aflex-basis" target="_blank"><code>flex-basis</code> </a>&#x6CA1;&#x6709;&#x4F38;&#x5C55;&#x6216;&#x8005;&#x6536;&#x7F29;&#x65F6;&#x7684;&#x57FA;&#x7840;&#x957F;&#x5EA6;</li>
+</ul>
+<p>&#x5173;&#x4E8E;flex&#x5E03;&#x5C40;&#xFF0C;&#x4E4B;&#x524D;&#x5728;codepen&#x770B;&#x5230;&#x8FC7;&#x4E00;&#x4E2A;&#x6F14;&#x793A;&#x9879;&#x76EE;&#xFF0C;&#x53EF;&#x4EE5;&#x4E86;&#x89E3;&#x5176;&#x6BCF;&#x4E2A;&#x5C5E;&#x6027;&#x7684;&#x76F8;&#x5E94;&#x4F5C;&#x7528;&#xFF0C;&#x5F3A;&#x70C8;&#x63A8;&#x8350;&#x81EA;&#x5DF1;&#x591A;&#x8BD5;&#x8BD5;&#xFF1A;<a href="https://codepen.io/enxaneta/details/adLPwv" target="_blank">Flexbox playground (codepen.io)</a></p>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d5df5c8648ad432e84b600cef93fc53a\~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
+<h3 id="grid&#x5E03;&#x5C40;">Grid&#x5E03;&#x5C40;</h3>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Glossary/Grid" target="_blank">Grid - &#x672F;&#x8BED;&#x8868; | MDN (mozilla.org)</a></p>
+<ul>
+<li>display&#xFF1A;grid&#x4F1A;&#x4F7F;&#x5143;&#x7D20;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x5757;&#x7EA7;&#x7684;Grid&#x5BB9;&#x5668;</li>
+<li>&#x53EF;&#x4EE5;&#x4F7F;&#x7528;grid-template&#x76F8;&#x5173;&#x5C5E;&#x6027;&#x5C06;&#x5BB9;&#x5668;&#x5212;&#x5206;&#x4E3A;&#x7F51;&#x683C;<ul>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/grid-template-rows" target="_blank"><code>grid-template-rows</code></a> &#x57FA;&#x4E8E; <a href="https://developer.mozilla.org/zh-CN/docs/Glossary/Grid\_Rows" target="_blank">&#x7F51;&#x683C;&#x884C;</a> &#x7684;&#x7EF4;&#x5EA6;&#xFF0C;&#x53BB;&#x5B9A;&#x4E49;&#x7F51;&#x683C;&#x7EBF;&#x7684;&#x540D;&#x79F0;&#x548C;&#x7F51;&#x683C;&#x8F68;&#x9053;&#x7684;&#x5C3A;&#x5BF8;&#x5927;&#x5C0F;</li>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/grid-template-columns" target="_blank"><code>grid-template-columns</code></a> &#x8BE5;&#x5C5E;&#x6027;&#x662F;&#x57FA;&#x4E8E; <a href="https://developer.mozilla.org/zh-CN/docs/Glossary/Grid\_Column" target="_blank">&#x7F51;&#x683C;&#x5217;</a>.&#x7684;&#x7EF4;&#x5EA6;&#xFF0C;&#x53BB;&#x5B9A;&#x4E49;&#x7F51;&#x683C;&#x7EBF;&#x7684;&#x540D;&#x79F0;&#x548C;&#x7F51;&#x683C;&#x8F68;&#x9053;&#x7684;&#x5C3A;&#x5BF8;&#x5927;&#x5C0F;</li>
+<li>&#x53EF;&#x4EE5;&#x5B9A;&#x4E49;<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/minmax\(\" target="_blank"><code>minmax(min, max)</code></a>) &#xFF0C;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x6765;&#x5B9A;&#x4E49;&#x5927;&#x5C0F;&#x8303;&#x56F4;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x5927;&#x4E8E;&#x7B49;&#x4E8E;min&#x503C;&#xFF0C;&#x5E76;&#x4E14;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;max&#x503C;&#x3002;&#x5982;&#x679C;max&#x503C;&#x5C0F;&#x4E8E;min&#x503C;&#xFF0C;&#x5219;&#x8BE5;&#x503C;&#x4F1A;&#x88AB;&#x89C6;&#x4E3A;min&#x503C;&#x3002;&#x6700;&#x5927;&#x503C;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#x4E3A;&#x7F51;&#x683C;&#x8F68;&#x9053;&#x7CFB;&#x6570;&#x503C; <code>fr</code> &#xFF0C;&#x4F46;&#x6700;&#x5C0F;&#x503C;&#x5219;&#x4E0D;&#x884C;</li>
+<li>&#x4E5F;&#x53EF;&#x4EE5;&#x7528;&#x5355;&#x4F4D; <code>fr</code> &#x6765;&#x5B9A;&#x4E49;&#x4E0A;&#x8FF0;&#x7F51;&#x683C;&#x8F68;&#x9053;&#x5927;&#x5C0F;&#x7684;&#x5F39;&#x6027;&#x7CFB;&#x6570;&#x3002; &#x6BCF;&#x4E2A;&#x5B9A;&#x4E49;&#x4E86; <code>fr</code> &#x7684;&#x7F51;&#x683C;&#x8F68;&#x9053;&#x4F1A;&#x6309;&#x6BD4;&#x4F8B;&#x5206;&#x914D;&#x5269;&#x4F59;&#x7684;&#x53EF;&#x7528;&#x7A7A;&#x95F4;&#x3002;&#x5F53;&#x5916;&#x5C42;&#x7528;&#x4E00;&#x4E2A; <code>minmax()</code> &#x8868;&#x793A;&#x65F6;&#xFF0C;&#x5B83;&#x5C06;&#x662F;&#x4E00;&#x4E2A;&#x81EA;&#x52A8;&#x6700;&#x5C0F;&#x503C;(&#x5373; <code>minmax(auto, &lt;flex&gt;)</code> )</li>
+<li>&#x60F3;&#x8981;&#x5143;&#x7D20;&#x8DE8;&#x8D8A;&#x591A;&#x884C;/&#x591A;&#x5217;&#xFF1F;<ul>
+<li>grid line &#x7F51;&#x683C;&#x7EBF;</li>
+<li>grid area&#x7F51;&#x683C;&#x533A;&#x57DF;</li>
+<li>&#x4F7F;&#x7528;grid-template-columns-start/grid-template-columns-end&#x7B49;&#xFF0C;&#x53EF;&#x7B80;&#x5199;&#x4E3A;grid-area;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>&#x7167;&#x7740;&#x8BFE;&#x4E0A;&#x5199;&#x7684;&#x4E00;&#x4E2A;&#x5C0F;demo&#xFF1A;<a href="https://codepen.io/yusixian/pen/jOGJNqx?editors=0100" target="_blank">Grid (codepen.io)</a>,&#x4E5F;&#x7B97;&#x662F;&#x4E00;&#x4E2A;&#x76F4;&#x89C2;&#x7684;&#x4F8B;&#x5B50;&#x4E86;&#x3002;</p>
+<ul>
+<li>&#x9996;&#x5148;&#x5C06;&#x5BB9;&#x5668;&#x8BBE;&#x7F6E;&#x4E3A;&#x8BBE;&#x7F6E;&#x4E3A;&#x4E00;&#x4E2A;4&#x884C;2&#x5217;&#x7684;grid</li>
+</ul>
+<pre><code class="lang-css"><span class="hljs-selector-id">#container</span> {
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">300px</span>;
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">500px</span>;
+  <span class="hljs-attribute">display</span>: grid;
+  <span class="hljs-attribute">grid-template-columns</span>: <span class="hljs-number">1</span>fr <span class="hljs-number">1</span>fr;
+  <span class="hljs-attribute">grid-template-rows</span>: <span class="hljs-number">1</span>fr <span class="hljs-number">1</span>fr <span class="hljs-number">1</span>fr <span class="hljs-number">1</span>fr;
+}
+</code></pre>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f01af69e4f69457489dc8e5b800379b0\~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
+<ul>
+<li>&#x7136;&#x540E;&#x5C06;A&#x8FD9;&#x4E2A;&#x5143;&#x7D20;,&#x8BBE;&#x7F6E;&#x4ECE;&#x7B2C;1&#x4E2A;&#x7F51;&#x683C;&#x884C;&#x7EBF;&#x5F00;&#x59CB;&#x5230;&#x7B2C;3&#x4E2A;&#x7F51;&#x683C;&#x884C;&#x7EBF;,&#x5373;&#x5360;&#x4E24;&#x884C;,&#x5217;&#x540C;&#x7406;&#x5360;&#x4E24;&#x5217;,&#x5982;&#x56FE;</li>
+</ul>
+<pre><code class="lang-css"><span class="hljs-selector-class">.a</span> {
+  <span class="hljs-attribute">grid-row-start</span>: <span class="hljs-number">1</span>;
+  <span class="hljs-attribute">grid-column-start</span>: <span class="hljs-number">1</span>;
+  <span class="hljs-attribute">grid-row-end</span>: <span class="hljs-number">3</span>;
+  <span class="hljs-attribute">grid-column-end</span>: <span class="hljs-number">3</span>;
+}
+</code></pre>
+<p>&#x53EF;&#x7B80;&#x5199;&#x4E3A;:</p>
+<pre><code class="lang-css"><span class="hljs-selector-class">.a</span> {
+  <span class="hljs-attribute">grid-area</span>:<span class="hljs-number">1</span>/<span class="hljs-number">1</span>/<span class="hljs-number">3</span>/<span class="hljs-number">3</span>;
+}
+</code></pre>
+<p>&#x5982;&#x56FE;,&#x53EF;&#x4EE5;&#x53D1;&#x73B0;A&#x5360;&#x636E;&#x4E86;&#x4E24;&#x884C;&#x4E24;&#x5217; <img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f58bea121bf0411b99891ab77bd81c80\~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
+<ul>
+<li>&#x90A3;&#x4E48;&#x518D;&#x8FDB;&#x884C;&#x4E00;&#x4E9B;&#x66F4;&#x6539;,&#x5C06;a&#x6539;&#x4E3A;2-4&#x884C;/&#x5217;&#x5373;&#x5360;&#x636E;&#x4E86;&#x7B2C;2&#x3001;3&#x884C;/&#x5217;,b&#x6539;&#x4E3A;1-3&#x884C;/&#x5217;&#x5373;&#x5360;&#x636E;&#x4E86;&#x7B2C;1&#x3001;2&#x884C;/&#x5217;</li>
+</ul>
+<pre><code class="lang-css"><span class="hljs-selector-class">.a</span> {
+  <span class="hljs-attribute">grid-area</span>:<span class="hljs-number">2</span>/<span class="hljs-number">2</span>/<span class="hljs-number">4</span>/<span class="hljs-number">4</span>;
+}
+<span class="hljs-selector-class">.b</span> {
+  <span class="hljs-attribute">grid-area</span>:<span class="hljs-number">1</span>/<span class="hljs-number">1</span>/<span class="hljs-number">3</span>/<span class="hljs-number">3</span>;
+}
+</code></pre>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/dab65647e3cf4901a04a51c506ef36dc\~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
+<h3 id="&#x6D6E;&#x52A8;&#xFF08;float&#xFF09;">&#x6D6E;&#x52A8;&#xFF08;float&#xFF09;</h3>
+<p>&#x65E9;&#x671F;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x56FE;&#x6587;&#x73AF;&#x7ED5;&#x5229;&#x7528;float&#x5B9E;&#x73B0;&#xFF0C;&#x73B0;&#x5728;&#x53EA;&#x9700;&#x4E86;&#x89E3;&#x5373;&#x53EF;&#x3002;&#x8BE6;&#x7EC6;&#x7684;&#x8FD8;&#x662F;&#x770B;<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/float" target="_blank">float - CSS&#xFF08;&#x5C42;&#x53E0;&#x6837;&#x5F0F;&#x8868;&#xFF09; | MDN (mozilla.org)</a></p>
+<ul>
+<li>&#x6D6E;&#x52A8;&#x5141;&#x8BB8;&#x6587;&#x672C;&#x548C;&#x5185;&#x8054;&#x5143;&#x7D20;&#x73AF;&#x7ED5;&#x5B83;&#x3002;&#x5177;&#x6709;&#x6D6E;&#x52A8;&#x5C5E;&#x6027;&#x7684;&#x5143;&#x7D20;&#x4F1A;&#x4ECE;&#x7F51;&#x9875;&#x7684;&#x6B63;&#x5E38;&#x6D41;&#x52A8;(&#x6587;&#x6863;&#x6D41;)&#x4E2D;&#x79FB;&#x9664;</li>
+<li>&#x5F53;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x6D6E;&#x52A8;&#x4E4B;&#x540E;&#xFF0C;&#x5B83;&#x4F1A;&#x88AB;&#x79FB;&#x51FA;&#x6B63;&#x5E38;&#x7684;&#x6587;&#x6863;&#x6D41;&#xFF0C;&#x7136;&#x540E;&#x5411;&#x5DE6;&#x6216;&#x8005;&#x5411;&#x53F3;&#x5E73;&#x79FB;&#xFF0C;&#x4E00;&#x76F4;&#x5E73;&#x79FB;&#x76F4;&#x5230;&#x78B0;&#x5230;&#x4E86;&#x6240;&#x5904;&#x7684;&#x5BB9;&#x5668;&#x7684;&#x8FB9;&#x6846;&#xFF0C;&#x6216;&#x8005;&#x78B0;&#x5230;<strong>&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x6D6E;&#x52A8;&#x7684;&#x5143;&#x7D20;</strong></li>
+<li>&#x8981;&#x6CE8;&#x610F;&#x7684;&#x5C31;&#x662F;&#x5982;&#x679C;&#x4F7F;&#x7528;&#x6D6E;&#x52A8;&#x540E;&#xFF0C;&#x60F3;&#x8981;&#x63A5;&#x4E0B;&#x6765;&#x7684;&#x5143;&#x7D20;&#x5F3A;&#x5236;&#x79FB;&#x81F3;&#x4EFB;&#x4F55;&#x6D6E;&#x52A8;&#x5143;&#x7D20;&#x4E0B;&#x65B9;&#xFF0C;&#x5219;&#x987B;&#x4F7F;&#x7528;<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/clear" target="_blank">clear</a>&#x5C5E;&#x6027;</li>
+</ul>
+<h3 id="position&#x5B9A;&#x4F4D;">position&#x5B9A;&#x4F4D;</h3>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/position" target="_blank"><code>position</code></a> &#x5C5E;&#x6027;&#x7528;&#x4E8E;&#x6307;&#x5B9A;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x5728;&#x6587;&#x6863;&#x4E2D;&#x7684;&#x5B9A;&#x4F4D;&#x65B9;&#x5F0F;&#x3002;<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/top" target="_blank"><code>top</code></a>&#xFF0C;<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/right" target="_blank"><code>right</code></a>&#xFF0C;<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/bottom" target="_blank"><code>bottom</code></a> &#x548C; <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/left" target="_blank"><code>left</code></a> &#x5C5E;&#x6027;&#x5219;&#x51B3;&#x5B9A;&#x4E86;&#x8BE5;&#x5143;&#x7D20;&#x7684;&#x6700;&#x7EC8;&#x4F4D;&#x7F6E;&#x3002;</p>
+<p>position&#x6709;&#x5982;&#x4E0B;&#x51E0;&#x79CD;&#x5B9A;&#x4F4D;&#x7C7B;&#x578B;&#xFF1A;</p>
+<ul>
+<li>static&#xFF1A;&#x9ED8;&#x8BA4;&#x503C;&#xFF0C;&#x975E;&#x5B9A;&#x4F4D;&#x5143;&#x7D20;</li>
+<li>relative&#xFF1A;&#x76F8;&#x5BF9;&#x81EA;&#x8EAB;&#x539F;&#x672C;&#x4F4D;&#x7F6E;&#x504F;&#x79FB;&#xFF0C;&#x4E0D;&#x8131;&#x79BB;&#x6587;&#x6863;&#x6D41;</li>
+<li>absolute&#xFF1A;&#x7EDD;&#x5BF9;&#x5B9A;&#x4F4D;&#xFF0C;&#x76F8;&#x5BF9;&#x975E;static&#x7956;&#x5148;&#x5143;&#x7D20;&#x5B9A;&#x4F4D;</li>
+<li>fixed&#xFF1A;&#x76F8;&#x5BF9;&#x4E8E;&#x89C6;&#x53E3;&#x7EDD;&#x5BF9;&#x5B9A;&#x4F4D;</li>
+</ul>
+<h4 id="&#x76F8;&#x5BF9;&#x5B9A;&#x4F4D;relative">&#x76F8;&#x5BF9;&#x5B9A;&#x4F4D;(relative)</h4>
+<p>position:relative</p>
+<ul>
+<li>&#x5728;&#x5E38;&#x89C4;&#x6D41;&#x4E2D;&#x5E03;&#x5C40;</li>
+<li>&#x76F8;&#x5BF9;&#x4E8E;&#x81EA;&#x5DF1;&#x672C;&#x8BE5;&#x5728;&#x7684;&#x5730;&#x65B9;&#x8FDB;&#x884C;&#x504F;&#x79FB;&#xFF08;top&#x3001;left&#x3001;bottom&#x3001;right&#xFF09;</li>
+<li>&#x6D41;&#x5185;&#x5176;&#x4ED6;&#x5143;&#x7D20;&#x5F53;&#x5B83;&#x672A;&#x504F;&#x79FB;&#x4E00;&#x6837;&#x7167;&#x539F;&#x6837;&#x5E03;&#x5C40;</li>
+</ul>
+<h4 id="&#x7EDD;&#x5BF9;&#x5B9A;&#x4F4D;absolute">&#x7EDD;&#x5BF9;&#x5B9A;&#x4F4D;(absolute)</h4>
+<p>position:absolute</p>
+<ul>
+<li>&#x8131;&#x79BB;&#x5E38;&#x89C4;&#x6D41;</li>
+<li>&#x76F8;&#x5BF9;&#x4E8E;<strong>&#x6700;&#x8FD1;&#x7684;&#x975E;static&#x7956;&#x5148;</strong>&#x5B9A;&#x4F4D;<ul>
+<li>&#x6BD4;&#x5982;&#x4E00;&#x4E2A;&#x56FE;&#x6807;&#xFF0C;&#x8981;&#x4E3A;&#x5B83;&#x505A;&#x4E00;&#x4E2A;&#x89D2;&#x6807;&#xFF0C;&#x5219;&#x5C06;&#x56FE;&#x6807;&#x8BBE;&#x7F6E;&#x4E3A;position:relative&#xFF0C;&#x518D;&#x5C06;&#x5176;position&#x8BBE;&#x7F6E;&#x4E3A;absolute&#x8FDB;&#x884C;&#x504F;&#x79FB;&#x5373;&#x53EF;&#x5B9E;&#x73B0;&#x3002;</li>
+</ul>
+</li>
+<li>&#x4E0D;&#x4F1A;&#x5BF9;&#x6D41;&#x5185;&#x5143;&#x7D20;&#x5E03;&#x5C40;&#x9020;&#x6210;&#x5F71;&#x54CD;</li>
+</ul>
+<h2 id="&#x5EFA;&#x8BAE;&#x53CA;&#x611F;&#x60F3;">&#x5EFA;&#x8BAE;&#x53CA;&#x611F;&#x60F3;</h2>
+<blockquote>
+<ul>
+<li>&#x5145;&#x5206;&#x5229;&#x7528;<a href="https://developer.mozilla.org/zh-CN/" target="_blank">MDN</a> &#x548C; <a href="https://www.w3.org" target="_blank">World Wide Web Consortium (W3C)</a> CSS&#x89C4;&#x8303;</li>
+<li>&#x4FDD;&#x6301;&#x597D;&#x5947;&#x5FC3;&#xFF0C;&#x5584;&#x7528;&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;</li>
+<li>&#x6301;&#x7EED;&#x5B66;&#x4E60;&#xFF0C;CSS&#x65B0;&#x7279;&#x6027;&#x8FD8;&#x5728;&#x4E0D;&#x65AD;&#x51FA;&#x73B0;</li>
+</ul>
+</blockquote>
+<p>&#x4E5F;&#x7B97;&#x662F;&#x7ED9;&#x81EA;&#x5DF1;CSS&#x5B66;&#x4E60;&#x7684;&#x4E00;&#x4E2A;&#x68B3;&#x7406;&#xFF0C;&#x5173;&#x4E8E;&#x4EE5;&#x4E0A;&#x5E03;&#x5C40;&#xFF0C;&#x4E3B;&#x8981;&#x8FD8;&#x662F;&#x591A;&#x7528;&#xFF0C;&#x591A;&#x67E5;&#xFF0C;&#x5728;&#x5B9E;&#x8DF5;&#x4E2D;&#x6210;&#x957F;&#xFF0C;&#x7528;&#x591A;&#x4E86;&#x81EA;&#x7136;&#x800C;&#x7136;&#x7684;&#x5C31;&#x8BB0;&#x4F4F;&#x4E86;&#xFF0C;&#x7136;&#x540E;&#x5E73;&#x65F6;&#x770B;&#x5230;&#x611F;&#x5174;&#x8DA3;&#x7684;&#x524D;&#x7AEF;&#x9879;&#x76EE;&#x4E5F;&#x8981;&#x8FDB;&#x884C;&#x5B66;&#x4E60;&#xFF0C;&#x770B;&#x770B;&#x4F18;&#x79C0;&#x7684;&#x9879;&#x76EE;&#x662F;&#x5982;&#x4F55;&#x8FDB;&#x884C;&#x5E03;&#x5C40;&#x7684;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: CSS">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../http-yu-liu-lan-qi/" class="navigation navigation-next " aria-label="Next page: HTTP与浏览器">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"description":"【第二届青训营-寒假前端场】-  「CSS布局」","title":"CSS学习之布局","level":"2.3.1","depth":2,"next":{"title":"HTTP与浏览器","level":"2.4","depth":1,"path":"front-end-basics/http-yu-liu-lan-qi/README.md","ref":"front-end-basics/http-yu-liu-lan-qi/README.md","articles":[{"title":"HTTP实用指南","level":"2.4.1","depth":2,"path":"front-end-basics/http-yu-liu-lan-qi/http-shi-yong-zhi-nan.md","ref":"front-end-basics/http-yu-liu-lan-qi/http-shi-yong-zhi-nan.md","articles":[]},{"title":"Web开发的安全之旅","level":"2.4.2","depth":2,"path":"front-end-basics/http-yu-liu-lan-qi/web-kai-fa-de-an-quan-zhi-lv.md","ref":"front-end-basics/http-yu-liu-lan-qi/web-kai-fa-de-an-quan-zhi-lv.md","articles":[]}]},"previous":{"title":"CSS","level":"2.3","depth":1,"path":"front-end-basics/css/README.md","ref":"front-end-basics/css/README.md","articles":[{"title":"CSS学习之布局","level":"2.3.1","depth":2,"path":"front-end-basics/css/css-xue-xi-zhi-bu-ju.md","ref":"front-end-basics/css/css-xue-xi-zhi-bu-ju.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"cos","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"cos的前端学习记录","language":"zh-hans","links":{"sidebar":{"cos的博客":"https://ysx.cosine.ren/","Github":"https://github.com/yusixian"}},"gitbook":"*","description":"主要分享自己的前端学习心得，与一些学习记录"},"file":{"path":"front-end-basics/css/css-xue-xi-zhi-bu-ju.md","mtime":"2022-03-27T14:00:03.993Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-03-27T14:21:36.549Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

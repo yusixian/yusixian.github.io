@@ -1,0 +1,1589 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>响应式系统与 React · cos的前端学习记录</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="【第二届青训营-寒假前端场】- 「响应式系统与 React」">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="cos">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="react-xue-xi-xiao-ji.html" />
+    
+    
+    <link rel="prev" href="../qian-duan-jin-jie.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://ysx.cosine.ren/" target="_blank" class="custom-link">cos的博客</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://github.com/yusixian" target="_blank" class="custom-link">Github</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    前言及目录
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">前端基础</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../front-end-basics/javascript/">
+            
+                <a href="../../front-end-basics/javascript/">
+            
+                    
+                    JavaScript
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../../front-end-basics/javascript/gen-zhuo-yue-ying-xue-javascript.html">
+            
+                <a href="../../front-end-basics/javascript/gen-zhuo-yue-ying-xue-javascript.html">
+            
+                    
+                    跟着月影学JavaScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../../front-end-basics/javascript/prototype-and-inherit.html">
+            
+                <a href="../../front-end-basics/javascript/prototype-and-inherit.html">
+            
+                    
+                    JavaScript之对象、原型链及继承
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../../front-end-basics/javascript/javascript-zhong-de-lei.html">
+            
+                <a href="../../front-end-basics/javascript/javascript-zhong-de-lei.html">
+            
+                    
+                    JavaScript中的类
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../../front-end-basics/html.html">
+            
+                <a href="../../front-end-basics/html.html">
+            
+                    
+                    HTML
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../../front-end-basics/css/">
+            
+                <a href="../../front-end-basics/css/">
+            
+                    
+                    CSS
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="../../front-end-basics/css/css-xue-xi-zhi-bu-ju.html">
+            
+                <a href="../../front-end-basics/css/css-xue-xi-zhi-bu-ju.html">
+            
+                    
+                    CSS学习之布局
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../../front-end-basics/http-yu-liu-lan-qi/">
+            
+                <a href="../../front-end-basics/http-yu-liu-lan-qi/">
+            
+                    
+                    HTTP与浏览器
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1" data-path="../../front-end-basics/http-yu-liu-lan-qi/http-shi-yong-zhi-nan.html">
+            
+                <a href="../../front-end-basics/http-yu-liu-lan-qi/http-shi-yong-zhi-nan.html">
+            
+                    
+                    HTTP实用指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.2" data-path="../../front-end-basics/http-yu-liu-lan-qi/web-kai-fa-de-an-quan-zhi-lv.html">
+            
+                <a href="../../front-end-basics/http-yu-liu-lan-qi/web-kai-fa-de-an-quan-zhi-lv.html">
+            
+                    
+                    Web开发的安全之旅
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../../front-end-basics/tong-yong-zhi-shi/">
+            
+                <a href="../../front-end-basics/tong-yong-zhi-shi/">
+            
+                    
+                    通用知识
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.5.1" data-path="../../front-end-basics/tong-yong-zhi-shi/qian-duan-bi-xu-zhi-dao-de-kai-fa-tiao-shi-zhi-shi.html">
+            
+                <a href="../../front-end-basics/tong-yong-zhi-shi/qian-duan-bi-xu-zhi-dao-de-kai-fa-tiao-shi-zhi-shi.html">
+            
+                    
+                    前端必须知道的开发调试知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.2" data-path="../../front-end-basics/tong-yong-zhi-shi/qian-duan-she-ji-mo-shi-ying-yong.html">
+            
+                <a href="../../front-end-basics/tong-yong-zhi-shi/qian-duan-she-ji-mo-shi-ying-yong.html">
+            
+                    
+                    前端设计模式应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.3" data-path="../../front-end-basics/tong-yong-zhi-shi/web-biao-zhun-yu-qian-duan-kai-fa.html">
+            
+                <a href="../../front-end-basics/tong-yong-zhi-shi/web-biao-zhun-yu-qian-duan-kai-fa.html">
+            
+                    
+                    Web 标准与前端开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">数据结构及算法</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../data-structures-and-algorithms/leetcode/">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/">
+            
+                    
+                    LeetCode
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/">
+            
+                    
+                    冲刺春招-精选笔面试 66 题大通关
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1.1" data-path="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day1.html">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day1.html">
+            
+                    
+                    day1：21. 合并两个有序链表、146. LRU 缓存、25. K 个一组翻转链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.2" data-path="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day2.html">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day2.html">
+            
+                    
+                    day2：14. 最长公共前缀、3. 无重复字符的最长子串、124. 二叉树中的最大路径和
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.3" data-path="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day3.html">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day3.html">
+            
+                    
+                    day3：206. 反转链表、199. 二叉树的右视图、bytedance-016最短移动距离
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.4" data-path="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day4.html">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day4.html">
+            
+                    
+                    day4：1. 两数之和、15. 三数之和、42. 接雨水
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.5" data-path="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day5.html">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day5.html">
+            
+                    
+                    day5：7. 整数反转、215. 数组中的第K个最大元素、23. 合并K个升序链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.6" data-path="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day6.html">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day6.html">
+            
+                    
+                    day6：33. 搜索旋转排序数组、54. 螺旋矩阵、bytedance-006. 夏季特惠
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.7" data-path="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day7.html">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day7.html">
+            
+                    
+                    day7：53. 最大子数组和、152. 乘积最大子数组、41. 缺失的第一个正数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.8" data-path="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day8.html">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day8.html">
+            
+                    
+                    day8：20. 有效的括号、200. 岛屿数量、76. 最小覆盖子串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.9" data-path="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day9.html">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day9.html">
+            
+                    
+                    day9：105. 从前序与中序遍历序列构造二叉树、103. 二叉树的锯齿形层序遍历、bytedance-010. 数组组成最大数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.10" data-path="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day10.html">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day10.html">
+            
+                    
+                    day10：94. 二叉树的中序遍历、102. 二叉树的层序遍历、394. 字符串解码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.11" data-path="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day11.html">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day11.html">
+            
+                    
+                    day11：415. 字符串相加、5. 最长回文子串、72. 编辑距离
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.12" data-path="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day12.html">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day12.html">
+            
+                    
+                    day12：64. 最小路径和、300. 最长递增子序列、bytedance-004. 机器人跳跃问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.13" data-path="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day13.html">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day13.html">
+            
+                    
+                    day13：88. 合并两个有序数组、31. 下一个排列、4. 寻找两个正序数组的中位数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.14" data-path="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day14.html">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day14.html">
+            
+                    
+                    day14：121. 买卖股票的最佳时机、56. 合并区间、135. 分发糖果
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.15" data-path="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day15.html">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day15.html">
+            
+                    
+                    day15：232. 用栈实现队列、22. 括号生成、128. 最长连续序列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.16" data-path="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day16.html">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day16.html">
+            
+                    
+                    day16：bytedance-007. 化学公式解析、129. 求根节点到叶节点数字之和、239. 滑动窗口最大值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.17" data-path="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day17.html">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day17.html">
+            
+                    
+                    day17：141. 环形链表、236. 二叉树的最近公共祖先、92. 反转链表 II
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.18" data-path="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day18.html">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day18.html">
+            
+                    
+                    day18：322. 零钱兑换、198. 打家劫舍、 bytedance-003. 古生物血缘远近判定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.19" data-path="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day19.html">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day19.html">
+            
+                    
+                    day19：160. 相交链表、143. 重排链表、142. 环形链表 II
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.20" data-path="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day20.html">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day20.html">
+            
+                    
+                    day20：704. 二分查找、43. 字符串相乘、bytedance-002. 发下午茶
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../../data-structures-and-algorithms/data-structure/">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/">
+            
+                    
+                    数据结构
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="../../data-structures-and-algorithms/data-structure/1-xian-xing-biao-list.html">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/1-xian-xing-biao-list.html">
+            
+                    
+                    1、线性表（List）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2" data-path="../../data-structures-and-algorithms/data-structure/2-dui-zhan-stack.html">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/2-dui-zhan-stack.html">
+            
+                    
+                    2、堆栈（Stack）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.3" data-path="../../data-structures-and-algorithms/data-structure/3-dui-lie-queue.html">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/3-dui-lie-queue.html">
+            
+                    
+                    3、队列（Queue）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.4" data-path="../../data-structures-and-algorithms/data-structure/4-er-cha-shu-binary-tree.html">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/4-er-cha-shu-binary-tree.html">
+            
+                    
+                    4、二叉树（Binary Tree）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.5" data-path="../../data-structures-and-algorithms/data-structure/5-er-cha-sou-suo-shu-yu-ping-heng-er-cha-shu-bst-avl.html">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/5-er-cha-sou-suo-shu-yu-ping-heng-er-cha-shu-bst-avl.html">
+            
+                    
+                    5、二叉搜索树与平衡二叉树（BST & AVL）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.6" data-path="../../data-structures-and-algorithms/data-structure/6-dui-stack-ha-fu-man-shu-bing-cha-ji.html">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/6-dui-stack-ha-fu-man-shu-bing-cha-ji.html">
+            
+                    
+                    6、堆（Stack）& 哈夫曼树 & 并查集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.7" data-path="../../data-structures-and-algorithms/data-structure/7-tu-graph/">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/7-tu-graph/">
+            
+                    
+                    7、图（Graph）
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.7.1" data-path="../../data-structures-and-algorithms/data-structure/7-tu-graph/tu-lun-jie-jue-zui-xiao-sheng-cheng-shu-wen-ti-kruskal-suan-fa-prim-suan-fa.html">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/7-tu-graph/tu-lun-jie-jue-zui-xiao-sheng-cheng-shu-wen-ti-kruskal-suan-fa-prim-suan-fa.html">
+            
+                    
+                    图论——解决最小生成树问题(Kruskal算法\&Prim算法)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.8" data-path="../../data-structures-and-algorithms/data-structure/8-pai-xu-sort.html">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/8-pai-xu-sort.html">
+            
+                    
+                    8、排序（sort）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.9" data-path="../../data-structures-and-algorithms/data-structure/9-san-lie-biao-hash.html">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/9-san-lie-biao-hash.html">
+            
+                    
+                    9、散列表（hash）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10" data-path="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/">
+            
+                    
+                    数据结构习题
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.10.1" data-path="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-yi-zhou-zui-da-zi-lie-he-suan-fa-er-fen-cha-zhao.html">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-yi-zhou-zui-da-zi-lie-he-suan-fa-er-fen-cha-zhao.html">
+            
+                    
+                    第一周：最大子列和算法、二分查找
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10.2" data-path="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-er-zhou-xian-xing-jie-gou.html">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-er-zhou-xian-xing-jie-gou.html">
+            
+                    
+                    第二周：线性结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10.3" data-path="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-san-zhou-zai-shu-er-cha-shu-deng.html">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-san-zhou-zai-shu-er-cha-shu-deng.html">
+            
+                    
+                    第三周：栽树（二叉树等）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10.4" data-path="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-si-zhou-er-cha-sou-suo-shu-er-cha-ping-heng-shu.html">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-si-zhou-er-cha-sou-suo-shu-er-cha-ping-heng-shu.html">
+            
+                    
+                    第四周：二叉搜索树&二叉平衡树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10.5" data-path="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-wu-zhou-dui-ha-fu-man-shu-bing-cha-ji.html">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-wu-zhou-dui-ha-fu-man-shu-bing-cha-ji.html">
+            
+                    
+                    第五周：堆&哈夫曼树&并查集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10.6" data-path="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-liu-zhou-tu-shang-lian-tong-ji-dfsbfs.html">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-liu-zhou-tu-shang-lian-tong-ji-dfsbfs.html">
+            
+                    
+                    第六周：图（上）连通集 、DFS\&BFS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10.7" data-path="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-qi-zhou-tu-zhong-floyd-suan-fa-qiu-zui-duan-lu.html">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-qi-zhou-tu-zhong-floyd-suan-fa-qiu-zui-duan-lu.html">
+            
+                    
+                    第七周：图（中）Floyd算法求最短路
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10.8" data-path="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-ba-zhou-tu-xia.html">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-ba-zhou-tu-xia.html">
+            
+                    
+                    第八周：图（下）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10.9" data-path="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-jiu-zhou-pai-xu-shang-gui-bing-dui-pai-xu.html">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-jiu-zhou-pai-xu-shang-gui-bing-dui-pai-xu.html">
+            
+                    
+                    第九周：排序（上）归并&堆排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10.10" data-path="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-shi-zhou-pai-xu-xia.html">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-shi-zhou-pai-xu-xia.html">
+            
+                    
+                    第十周：排序（下）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10.11" data-path="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-shi-yi-zhou-san-lie-cha-zhao-kmp.html">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-shi-yi-zhou-san-lie-cha-zhao-kmp.html">
+            
+                    
+                    第十一周：散列查找 & KMP
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">前端进阶</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../qian-duan-jin-jie.html">
+            
+                <a href="../qian-duan-jin-jie.html">
+            
+                    
+                    React
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="4.1.1" data-path="xiang-ying-shi-xi-tong-yu-react.html">
+            
+                <a href="xiang-ying-shi-xi-tong-yu-react.html">
+            
+                    
+                    响应式系统与 React
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="react-xue-xi-xiao-ji.html">
+            
+                <a href="react-xue-xi-xiao-ji.html">
+            
+                    
+                    React学习小记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="redux-xue-xi-zhi-redux-san-yuan-ze-createsore-yuan-li-ji-shi-xian.html">
+            
+                <a href="redux-xue-xi-zhi-redux-san-yuan-ze-createsore-yuan-li-ji-shi-xian.html">
+            
+                    
+                    Redux学习之Redux三原则、createSore原理及实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../typescript/">
+            
+                <a href="../typescript/">
+            
+                    
+                    TypeScript
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.2.1" data-path="../typescript/typescript-ru-men.html">
+            
+                <a href="../typescript/typescript-ru-men.html">
+            
+                    
+                    TypeScript入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../webpack/">
+            
+                <a href="../webpack/">
+            
+                    
+                    Webpack
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.3.1" data-path="../webpack/webpack-zhi-shi-ti-xi.html">
+            
+                <a href="../webpack/webpack-zhi-shi-ti-xi.html">
+            
+                    
+                    Webpack知识体系
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../animation/">
+            
+                <a href="../animation/">
+            
+                    
+                    前端动画与绘图
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.4.1" data-path="../animation/webgl-ji-chu.html">
+            
+                <a href="../animation/webgl-ji-chu.html">
+            
+                    
+                    WebGL基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4.2" data-path="../animation/qian-duan-dong-hua-jian-jie.html">
+            
+                <a href="../animation/qian-duan-dong-hua-jian-jie.html">
+            
+                    
+                    前端动画简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">笔面试记录</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../../interview-record/collection-interview/">
+            
+                <a href="../../interview-record/collection-interview/">
+            
+                    
+                    面经集锦
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.1" data-path="../../interview-record/collection-interview/2022-spring-metaapp.html">
+            
+                <a href="../../interview-record/collection-interview/2022-spring-metaapp.html">
+            
+                    
+                    2022春暑期实习MetaApp一二面面经
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.2" data-path="../../interview-record/collection-interview/2022-spring-bytedance.html">
+            
+                <a href="../../interview-record/collection-interview/2022-spring-bytedance.html">
+            
+                    
+                    2022春暑期实习字节前端一面凉经
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../../interview-record/written-examination-reply/">
+            
+                <a href="../../interview-record/written-examination-reply/">
+            
+                    
+                    笔试复盘
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.2.1" data-path="../../interview-record/written-examination-reply/2022-chun-mei-tuan-bi-shi-shu-qi-shi-xi-bi-shi-ti-fu-pan.html">
+            
+                <a href="../../interview-record/written-examination-reply/2022-chun-mei-tuan-bi-shi-shu-qi-shi-xi-bi-shi-ti-fu-pan.html">
+            
+                    
+                    2022春美团笔试暑期实习笔试题复盘
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.2" data-path="../../interview-record/written-examination-reply/2022-chun-360-bi-shi-ti-mu-fu-pan-yan-faejuan.html">
+            
+                <a href="../../interview-record/written-examination-reply/2022-chun-360-bi-shi-ti-mu-fu-pan-yan-faejuan.html">
+            
+                    
+                    2022春360笔试题目复盘-研发E卷
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.3" data-path="../../interview-record/written-examination-reply/2022-chun-jing-dong-qian-duan-bi-shi-ti-mu-fu-pan.html">
+            
+                <a href="../../interview-record/written-examination-reply/2022-chun-jing-dong-qian-duan-bi-shi-ti-mu-fu-pan.html">
+            
+                    
+                    2022春京东前端笔试题目复盘
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.4" data-path="../../interview-record/written-examination-reply/2022-chun-wang-yi-lei-huo-qian-duan-shu-qi-shi-xi-bi-shi-ak.html">
+            
+                <a href="../../interview-record/written-examination-reply/2022-chun-wang-yi-lei-huo-qian-duan-shu-qi-shi-xi-bi-shi-ak.html">
+            
+                    
+                    2022春网易雷火前端暑期实习笔试(AK)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >响应式系统与 React</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x54CD;&#x5E94;&#x5F0F;&#x7CFB;&#x7EDF;&#x4E0E;-react">&#x54CD;&#x5E94;&#x5F0F;&#x7CFB;&#x7EDF;&#x4E0E; React</h1>
+<h3 id="react&#x7684;&#x5386;&#x53F2;&#x4E0E;&#x5E94;&#x7528;">React&#x7684;&#x5386;&#x53F2;&#x4E0E;&#x5E94;&#x7528;</h3>
+<p><strong>&#x5E94;&#x7528;</strong></p>
+<ul>
+<li>&#x524D;&#x7AEF;&#x5E94;&#x7528;&#x5F00;&#x53D1;&#xFF0C;&#x5982; Facebook&#xFF0C;Instagram&#xFF0C;Netflix&#x7F51;&#x9875;&#x7248;&#x3002;</li>
+<li>&#x79FB;&#x52A8;&#x539F;&#x751F;&#x5E94;&#x7528;&#x5F00;&#x53D1;&#xFF0C;&#x5982;Instagram&#xFF0C;Discord&#xFF0C;Oculus&#x3002;</li>
+<li>&#x7ED3;&#x5408;Electron&#xFF0C;&#x8FDB;&#x884C;&#x684C;&#x9762;&#x5E94;&#x7528;&#x5F00;&#x53D1;&#x3002;</li>
+</ul>
+<p><strong>&#x5386;&#x53F2;</strong></p>
+<ul>
+<li>2010&#x5E74; Facebook &#x5728;&#x5176;php&#x751F;&#x6001;&#x4E2D;&#xFF0C;&#x5F15;&#x5165;&#x4E86;xhp&#x6846;&#x67B6;&#xFF0C;&#x9996;&#x6B21;&#x5F15;&#x5165;&#x4E86;&#x7EC4;&#x5408;&#x5F0F;&#x7EC4;&#x4EF6;&#x7684;&#x601D;&#x60F3;&#xFF0C;&#x542F;&#x53D1;&#x4E86;&#x540E;&#x6765;&#x7684;React&#x7684;&#x8BBE;&#x8BA1;&#x3002;</li>
+<li>2011&#x5E74;Jordan Walke&#x521B;&#x9020;&#x4E86;FaxJS&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x540E;&#x6765;&#x7684;React&#x539F;&#x578B;:<ul>
+<li>&#x65E2;&#x53EF;&#x4EE5;&#x5728;&#x5BA2;&#x6237;&#x7AEF;&#x6E32;&#x67D3;&#x4E5F;&#x53EF;&#x4EE5;&#x5728;&#x670D;&#x52A1;&#x7AEF;&#x6E32;&#x67D3;</li>
+<li>&#x54CD;&#x5E94;&#x5F0F;&#xFF0C;&#x5F53;&#x72B6;&#x6001;&#x53D8;&#x66F4;&#x65F6;&#xFF0C;UI&#x4F1A;&#x81EA;&#x52A8;&#x66F4;&#x65B0;&#x3002;</li>
+<li>&#x6027;&#x80FD;&#x597D;&#xFF0C;&#x5FEB;&#x901F;&#x6E32;&#x67D3;</li>
+<li>&#x9AD8;&#x5EA6;&#x5C01;&#x88C5;&#x7EC4;&#x4EF6;&#xFF0C;&#x51FD;&#x6570;&#x5F0F;&#x58F0;&#x660E;&#xFF0C;</li>
+</ul>
+</li>
+<li>2013&#x5E74;React &#x6B63;&#x5F0F;&#x5F00;&#x6E90;&#xFF0C;&#x5728;2013 JSConf &#x4E0A; Jordan Walke&#x4ECB;&#x7ECD;&#x4E86;&#x8FD9;&#x6B3E;&#x5168;&#x65B0;&#x7684;&#x6846;&#x67B6;&#xFF1A;React</li>
+<li>2014&#x5E74; - &#x4ECA;&#x5929; &#x751F;&#x6001;&#x5927;&#x7206;&#x53D1;&#xFF0C;&#x5404;&#x79CD;&#x56F4;&#x7ED5;React&#x7684;&#x65B0;&#x5DE5;&#x5177;/&#x65B0;&#x6846;&#x67B6;&#x5F00;&#x59CB;&#x6D8C;&#x73B0;</li>
+</ul>
+<h3 id="react&#x8BBE;&#x8BA1;&#x601D;&#x8DEF;">React&#x8BBE;&#x8BA1;&#x601D;&#x8DEF;</h3>
+<h4 id="ui&#x7F16;&#x7A0B;&#x75DB;&#x70B9;">UI&#x7F16;&#x7A0B;&#x75DB;&#x70B9;</h4>
+<ol>
+<li>&#x5F53;&#x72B6;&#x6001;&#x66F4;&#x65B0;&#x65F6;&#xFF0C;UI&#x4E0D;&#x4F1A;&#x81EA;&#x52A8;&#x66F4;&#x65B0;&#xFF0C;&#x9700;&#x8981;<strong>&#x624B;&#x52A8;&#x5730;&#x8C03;&#x7528;DOM</strong>&#x8FDB;&#x884C;&#x66F4;&#x65B0;&#x3002;</li>
+<li>&#x6B20;&#x7F3A;&#x57FA;&#x672C;&#x7684;&#x4EE3;&#x7801;&#x5C42;&#x9762;&#x7684;<strong>&#x5C01;&#x88C5;</strong>&#x548C;<strong>&#x9694;&#x79BB;</strong>&#xFF0C;&#x4EE3;&#x7801;&#x5C42;&#x9762;&#x6CA1;&#x6709;<strong>&#x7EC4;&#x4EF6;&#x5316;</strong>&#x3002;</li>
+<li>UI&#x4E4B;&#x95F4;&#x7684;&#x6570;&#x636E;&#x4F9D;&#x8D56;&#x5173;&#x7CFB;&#xFF0C;&#x9700;&#x8981;&#x624B;&#x52A8;&#x7EF4;&#x62A4;&#xFF0C;&#x5982;&#x679C;&#x4F9D;&#x8D56;&#x94FE;&#x8DEF;&#x957F;&#xFF0E;&#x5219;&#x4F1A;&#x9047;&#x5230;&#x201C;Callback Hell&#x201D;&#xFF08;&#x56DE;&#x8C03;&#x5730;&#x72F1;&#xFF09;&#x3002;</li>
+</ol>
+<h4 id="&#x54CD;&#x5E94;&#x5F0F;&#x4E0E;&#x8F6C;&#x6362;&#x5F0F;">&#x54CD;&#x5E94;&#x5F0F;&#x4E0E;&#x8F6C;&#x6362;&#x5F0F;</h4>
+<p>&#x8F6C;&#x6362;&#x5F0F;&#x7CFB;&#x7EDF;&#xFF1A;&#x7ED9;&#x5B9A;<strong>&#x8F93;&#x5165;</strong>&#x6C42;&#x89E3;<strong>&#x8F93;&#x51FA;</strong>&#xFF0C;&#x5982;&#x7F16;&#x8BD1;&#x5668;&#x3001;&#x6570;&#x503C;&#x8BA1;&#x7B97;</p>
+<p>&#x54CD;&#x5E94;&#x5F0F;&#x7CFB;&#x7EDF;&#xFF1A;&#x76D1;&#x542C;&#x4E8B;&#x4EF6;&#xFF0C;&#x6D88;&#x606F;&#x9A71;&#x52A8;&#xFF0C;&#x5982;&#x76D1;&#x63A7;&#x7CFB;&#x7EDF;&#x3001;UI&#x754C;&#x9762;</p>
+<p>&#x4E8B;&#x4EF6; -&gt; &#x6267;&#x884C;&#x65E2;&#x5B9A;&#x7684;&#x56DE;&#x8C03; -&gt; &#x72B6;&#x6001;&#x53D8;&#x66F4; -&gt; UI&#x66F4;&#x65B0;</p>
+<h4 id="&#x54CD;&#x5E94;&#x5F0F;&#x7F16;&#x7A0B;&#x548C;&#x7EC4;&#x4EF6;&#x5316;">&#x54CD;&#x5E94;&#x5F0F;&#x7F16;&#x7A0B;&#x548C;&#x7EC4;&#x4EF6;&#x5316;</h4>
+<p>&#x90A3;&#x4E48;&#x6211;&#x4EEC;&#x5C31;&#x5E0C;&#x671B;&#x89E3;&#x51B3;&#x4EE5;&#x4E0A;&#x75DB;&#x70B9;&#xFF1A;</p>
+<ul>
+<li>&#x72B6;&#x6001;&#x66F4;&#x65B0;&#xFF0C;UI&#x81EA;&#x52A8;&#x66F4;&#x65B0;&#x3002;</li>
+<li>&#x524D;&#x7AEF;&#x4EE3;&#x7801;&#x7EC4;&#x4EF6;&#x5316;,&#x53EF;&#x590D;&#x7528;&#xFF0C;&#x53EF;&#x5C01;&#x88C5;&#x3002;</li>
+<li>&#x72B6;&#x6001;&#x4E4B;&#x95F4;&#x7684;&#x4E92;&#x76F8;&#x4F9D;&#x8D56;&#x5173;&#x7CFB;&#xFF0C;&#x53EA;&#x9700;&#x58F0;&#x660E;&#x5373;&#x53EF;&#x3002;</li>
+</ul>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f0fb3eaa27394eb4a07ec92c11e62d3b\~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
+<p><strong>&#x7EC4;&#x4EF6;&#x5316;</strong></p>
+<ol>
+<li>&#x7EC4;&#x4EF6;&#x4E00;&#x4E2A;&#x662F; &#x539F;&#x5B50;&#x7EC4;&#x4EF6;/&#x6216;&#x7EC4;&#x4EF6;&#x7684;&#x7EC4;&#x5408;</li>
+<li>&#x7EC4;&#x4EF6;&#x5185;&#x90E8;&#x62E5;&#x6709;&#x72B6;&#x6001;&#xFF0C;&#x5916;&#x90E8;&#x4E0D;&#x53EF;&#x89C1;</li>
+<li>&#x7236;&#x7EC4;&#x4EF6;&#x53EF;&#x5C06;&#x72B6;&#x6001;&#x4F20;&#x5165;&#x7EC4;&#x4EF6;&#x5185;&#x90E8;&#xFF0C;&#x6765;&#x63A7;&#x5236;&#x5B50;&#x7EC4;&#x4EF6;&#x7684;&#x8FD0;&#x8F6C;&#x3002;</li>
+</ol>
+<h4 id="&#x72B6;&#x6001;&#x5F52;&#x5C5E;&#x95EE;&#x9898;">&#x72B6;&#x6001;&#x5F52;&#x5C5E;&#x95EE;&#x9898;</h4>
+<p><strong>&#x5F53;&#x524D;&#x4EF7;&#x683C;</strong> &#x5C5E;&#x4E8E;Root&#x7ED3;&#x70B9;&#xFF01;&#x56E0;&#x4E3A;&#x8981;&#x5411;&#x4E0B;&#x4F20;&#x9012;&#xFF0C;&#x8FD9;&#x5176;&#x5B9E;&#x4E0D;&#x5408;&#x7406;&#xFF0C;&#x5728;&#x4E0B;&#x9762;&#x7684;&#x72B6;&#x6001;&#x7BA1;&#x7406;&#x5E93;&#x91CC;&#x4F1A;&#x8BB2;&#x5230;&#x8FD9;&#x4E2A;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6CD5;&#x3002;</p>
+<p>&#x72B6;&#x6001;&#x5E94;&#x8BE5;&#x5F52;&#x5C5E;&#x4E8E;&#x4E24;&#x4E2A;&#x8282;&#x70B9;&#xFF08;&#x6216;&#x591A;&#x4E2A;&#xFF09;&#x5411;&#x4E0A;&#x5BFB;&#x627E;&#x5230;&#x7684;<strong>&#x6700;&#x8FD1;&#x5171;&#x540C;&#x7956;&#x5148;</strong>&#x3002;</p>
+<p>&#x601D;&#x8003;&#xFF1A;</p>
+<ol>
+<li>React&#x662F;&#x5355;&#x5411;&#x6570;&#x636E;&#x6D41;,&#x8FD8;&#x662F;&#x53CC;&#x5411;&#x6570;&#x636E;&#x6D41;?</li>
+</ol>
+<p>&#x7B54;&#xFF1A;&#x5355;&#x5411;&#x7684;&#xFF0C;&#x6C38;&#x8FDC;&#x662F;&#x53EA;&#x6709;&#x7236;&#x7EC4;&#x4EF6;&#x7ED9;&#x5B50;&#x7EC4;&#x4EF6;&#x4F20;&#x4E1C;&#x897F;&#xFF0C;&#x4F46;&#x8FD9;&#x5E76;&#x4E0D;&#x4EE3;&#x8868;&#x5B50;&#x7EC4;&#x4EF6;&#x4E0D;&#x80FD;&#x6539;&#x53D8;&#x7236;&#x7EC4;&#x4EF6;&#x7684;&#x72B6;&#x6001;&#x3002;</p>
+<ol>
+<li>&#x5982;&#x4F55;&#x89E3;&#x51B3;&#x72B6;&#x6001;&#x4E0D;&#x5408;&#x7406;&#x4E0A;&#x5347;&#x7684;&#x95EE;&#x9898;?</li>
+</ol>
+<p>&#x7B54;&#xFF1A;&#x901A;&#x8FC7;&#x72B6;&#x6001;&#x7BA1;&#x7406;&#x5E93;&#xFF0C;&#x63A5;&#x4E0B;&#x6765;&#x4E5F;&#x4F1A;&#x8BB2;&#x5230;&#x3002;</p>
+<ol>
+<li>&#x7EC4;&#x4EF6;&#x7684;&#x72B6;&#x6001;&#x6539;&#x53D8;&#x540E;&#xFF0C;&#x5982;&#x4F55;&#x66F4;&#x65B0;DOM?</li>
+</ol>
+<p>&#x7B54;&#xFF1A;&#x8BB2;&#x89E3;React&#x5B9E;&#x73B0;&#x4E2D;&#x4F1A;&#x63D0;&#x5230;&#x3002;</p>
+<p>&#x7EC4;&#x4EF6;&#x8BBE;&#x8BA1;&#xFF1A;</p>
+<ul>
+<li>&#x7EC4;&#x4EF6;&#x58F0;&#x660E;&#x4E86;&#x72B6;&#x6001;&#x548C;UI&#x7684;&#x6620;&#x5C04;</li>
+<li>&#x7EC4;&#x4EF6;&#x6709;Props&#xFF08;&#x5916;&#x90E8;&#xFF09;/State&#xFF08;&#x5185;&#x90E8;&#xFF09;&#x4E24;&#x79CD;&#x5C5E;&#x6027;<ul>
+<li>Props&#x63A5;&#x53D7;&#x7236;&#x7EC4;&#x4EF6;&#x4F20;&#x5165;&#x7684;&#x72B6;&#x6001;</li>
+<li>State&#x662F;&#x5185;&#x90E8;&#x7684;&#x5C5E;&#x6027;&#x3002;</li>
+</ul>
+</li>
+<li>&#x53EF;&#x88AB;&#x5176;&#x4ED6;&#x7EC4;&#x4EF6;&#x7EC4;&#x6210;</li>
+</ul>
+<blockquote>
+<p>ps&#xFF1A;&#x5B66;&#x8FC7;&#x5C0F;&#x7A0B;&#x5E8F;&#x7684;&#x540C;&#x5B66;&#x5E94;&#x8BE5;&#x77E5;&#x9053;&#xFF0C;&#x5C0F;&#x7A0B;&#x5E8F;&#x4E2D;&#x7684;&#x5C5E;&#x6027;&#x7684;&#x53CC;&#x5411;&#x7ED1;&#x5B9A;&#x5B9E;&#x9645;&#x4E0A;&#x5E94;&#x8BE5;&#x4E5F;&#x6709;&#x7528;&#x5230;&#x4E86;&#x8FD9;&#x4E2A;&#x601D;&#x60F3;&#x3002;</p>
+</blockquote>
+<h4 id="&#x751F;&#x547D;&#x5468;&#x671F;">&#x751F;&#x547D;&#x5468;&#x671F;</h4>
+<p>&#x6302;&#x8F7D; -&gt; &#x72B6;&#x6001;&#x66F4;&#x65B0; -&gt; &#x5378;&#x8F7D;</p>
+<h3 id="react&#xFF08;hooks&#xFF09;&#x7684;&#x5199;&#x6CD5;">React&#xFF08;hooks&#xFF09;&#x7684;&#x5199;&#x6CD5;</h3>
+<p>&#x5173;&#x4E8E;React Hook&#x53EF;&#x4EE5;&#x53C2;&#x770B;&#x5B98;&#x65B9;&#x6587;&#x6863;&#xFF0C;&#x4EE5;&#x4E0B;&#x5185;&#x5BB9;&#x5927;&#x90E8;&#x5206;&#x6458;&#x81EA;&#xFF1A;<a href="https://zh-hans.reactjs.org/docs/hooks-intro.html" target="_blank">Hook &#x7B80;&#x4ECB; &#x2013; React (reactjs.org)</a></p>
+<blockquote>
+<p><em>Hook</em> &#x662F; React 16.8 &#x7684;&#x65B0;&#x589E;&#x7279;&#x6027;&#x3002;&#x5B83;&#x53EF;&#x4EE5;&#x8BA9;&#x4F60;&#x5728;&#x4E0D;&#x7F16;&#x5199; class &#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x4F7F;&#x7528; state &#x4EE5;&#x53CA;&#x5176;&#x4ED6;&#x7684; React &#x7279;&#x6027;&#x3002;</p>
+</blockquote>
+<h4 id="state-hook">State Hook</h4>
+<pre><code>import React, {useState} from &apos;react&apos;;
+function Example() {
+    // &#x58F0;&#x660E;&#x4E00;&#x4E2A;&#x53EB; &#x201C;count&#x201D; &#x7684; state &#x53D8;&#x91CF;&#x3002;
+    const [count, setCount] = useState(0);
+    return (
+        &lt;div&gt;
+               &lt;p&gt;You clicked {count} times&lt;/p&gt;
+            &lt;button onClick={() =&gt; setCount(count + 1)}&gt;
+                Click me
+            &lt;/button&gt;
+        &lt;/div&gt;
+    );
+}
+</code></pre><p>&#x4E0A;&#x9762;&#x8FD9;&#x6BB5;&#x51FD;&#x6570;&#x7528;&#x6765;&#x663E;&#x793A;&#x4E00;&#x4E2A;&#x8BA1;&#x6570;&#x5668;&#xFF0C;&#x5F53;&#x70B9;&#x51FB;&#x6309;&#x94AE;&#x65F6;&#xFF0C;&#x8BA1;&#x6570;&#x5668;&#x7684;&#x503C;&#x5C31;&#x4F1A;&#x81EA;&#x52A8;&#x589E;&#x52A0;</p>
+<blockquote>
+<p>&#x5728;&#x8FD9;&#x91CC;&#xFF0C;<code>useState</code> &#x5C31;&#x662F;&#x4E00;&#x4E2A; <em>Hook</em> &#x3002;&#x901A;&#x8FC7;&#x5728;&#x51FD;&#x6570;&#x7EC4;&#x4EF6;&#x91CC;&#x8C03;&#x7528;&#x5B83;&#x6765;&#x7ED9;&#x7EC4;&#x4EF6;&#x6DFB;&#x52A0;&#x4E00;&#x4E9B;&#x5185;&#x90E8; state&#x3002;React &#x4F1A;&#x5728;&#x91CD;&#x590D;&#x6E32;&#x67D3;&#x65F6;&#x4FDD;&#x7559;&#x8FD9;&#x4E2A; state&#x3002;<code>useState</code> &#x4F1A;&#x8FD4;&#x56DE;&#x4E00;&#x5BF9;&#x503C;&#xFF1A;<strong>&#x5F53;&#x524D;&#x72B6;&#x6001;</strong>&#x548C;<strong>&#x5176;&#x66F4;&#x65B0;&#x51FD;&#x6570;</strong>&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x5728;&#x4E8B;&#x4EF6;&#x5904;&#x7406;&#x51FD;&#x6570;&#x4E2D;&#x6216;&#x5176;&#x4ED6;&#x4E00;&#x4E9B;&#x5730;&#x65B9;&#x8C03;&#x7528;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x3002;</p>
+<p><code>useState</code> &#x552F;&#x4E00;&#x7684;&#x53C2;&#x6570;&#x5C31;&#x662F;&#x521D;&#x59CB; state&#x3002;&#x5728;&#x4E0A;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x7684;&#x8BA1;&#x6570;&#x5668;&#x662F;&#x4ECE;&#x96F6;&#x5F00;&#x59CB;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x521D;&#x59CB; state &#x5C31;&#x662F; <code>0</code>&#x3002;&#x503C;&#x5F97;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x4E0D;&#x540C;&#x4E8E; <code>this.state</code>&#xFF0C;&#x8FD9;&#x91CC;&#x7684; state &#x4E0D;&#x4E00;&#x5B9A;&#x8981;&#x662F;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61; &#x2014;&#x2014; &#x5982;&#x679C;&#x4F60;&#x6709;&#x9700;&#x8981;&#xFF0C;&#x5B83;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x3002;&#x8FD9;&#x4E2A;&#x521D;&#x59CB; state &#x53C2;&#x6570;&#x53EA;&#x6709;&#x5728;&#x7B2C;&#x4E00;&#x6B21;&#x6E32;&#x67D3;&#x65F6;&#x4F1A;&#x88AB;&#x7528;&#x5230;&#x3002;</p>
+<p>Hook &#x662F;&#x4E00;&#x4E9B;&#x53EF;&#x4EE5;&#x8BA9;&#x4F60;&#x5728;&#x51FD;&#x6570;&#x7EC4;&#x4EF6;&#x91CC; <strong>&#x201C;&#x94A9;&#x5165;&#x201D;</strong> React state &#x53CA;&#x751F;&#x547D;&#x5468;&#x671F;&#x7B49;&#x7279;&#x6027;&#x7684;&#x51FD;&#x6570;&#x3002;</p>
+</blockquote>
+<p>&#x53EF;&#x4EE5;&#x5728;&#x4E00;&#x4E2A;&#x7EC4;&#x4EF6;&#x4E2D;&#x591A;&#x6B21;&#x4F7F;&#x7528; State Hook:</p>
+<pre><code>function ExampleWithManyStates() {
+  // &#x58F0;&#x660E;&#x591A;&#x4E2A; state &#x53D8;&#x91CF;&#xFF01;
+  const [age, setAge] = useState(42);
+  const [fruit, setFruit] = useState(&apos;banana&apos;);
+  const [todos, setTodos] = useState([{ text: &apos;Learn Hooks&apos; }]);
+  // ...
+}
+</code></pre><h4 id="effect-hook">Effect Hook</h4>
+<p><strong>&#x51FD;&#x6570;&#x526F;&#x4F5C;&#x7528;</strong>&#x662F;&#x6307;&#x5F53;&#x8C03;&#x7528;&#x51FD;&#x6570;&#x65F6;&#xFF0C;&#x9664;&#x4E86;<strong>&#x8FD4;&#x56DE;&#x503C;</strong>&#x4E4B;&#x5916;&#xFF0C;&#x8FD8;&#x4F1A;<strong>&#x5BF9;&#x4E3B;&#x8C03;&#x7528;&#x51FD;&#x6570;&#x4EA7;&#x751F;&#x5176;&#x4ED6;&#x9644;&#x52A0;&#x7684;&#x5F71;&#x54CD;</strong>&#x3002;&#x4F8B;&#x5982;&#x4FEE;&#x6539;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#xFF08;&#x51FD;&#x6570;&#x5916;&#x7684;&#x53D8;&#x91CF;&#xFF09;&#x6216;&#x4FEE;&#x6539;&#x53C2;&#x6570;&#x3002;&#x7EAF;&#x51FD;&#x6570;&#x5C31;&#x662F;&#x6307;&#x6CA1;&#x6709;&#x51FD;&#x6570;&#x526F;&#x4F5C;&#x7528;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x8FD9;&#x5728;js&#x90A3;&#x4E00;&#x8282;&#x91CC;&#x90FD;&#x6709;&#x8BB2;&#x8FC7;&#x3002;</p>
+<blockquote>
+<p>&#x4F8B;&#x5982;&#xFF0C;&#x4E0B;&#x9762;&#x8FD9;&#x4E2A;&#x7EC4;&#x4EF6;&#x5728; React &#x66F4;&#x65B0; DOM &#x540E;&#x4F1A;&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;&#x9875;&#x9762;&#x6807;&#x9898;&#xFF1A;</p>
+</blockquote>
+<pre><code>import React, { useState, useEffect } from &apos;react&apos;;
+
+function Example() {
+  const [count, setCount] = useState(0);
+
+  // &#x76F8;&#x5F53;&#x4E8E; componentDidMount &#x548C; componentDidUpdate:
+  useEffect(() =&gt; {
+    // &#x4F7F;&#x7528;&#x6D4F;&#x89C8;&#x5668;&#x7684; API &#x66F4;&#x65B0;&#x9875;&#x9762;&#x6807;&#x9898;
+    document.title = `You clicked ${count} times`;
+  });
+
+  return (
+    &lt;div&gt;
+      &lt;p&gt;You clicked {count} times&lt;/p&gt;
+      &lt;button onClick={() =&gt; setCount(count + 1)}&gt;
+        Click me
+      &lt;/button&gt;
+    &lt;/div&gt;
+  );
+}
+</code></pre><blockquote>
+<p>&#x5F53;&#x4F60;&#x8C03;&#x7528; <code>useEffect</code> &#x65F6;&#xFF0C;&#x5C31;&#x662F;&#x5728;&#x544A;&#x8BC9; React &#x5728; <strong>&#x5B8C;&#x6210;&#x5BF9; DOM &#x7684;&#x66F4;&#x6539;&#x540E;&#x8FD0;&#x884C;&#x4F60;&#x7684;&#x201C;&#x526F;&#x4F5C;&#x7528;&#x201D;&#x51FD;&#x6570;</strong> &#x3002;&#x7531;&#x4E8E;&#x526F;&#x4F5C;&#x7528;&#x51FD;&#x6570;&#x662F;&#x5728;&#x7EC4;&#x4EF6;&#x5185;&#x58F0;&#x660E;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x5B83;&#x4EEC;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x5230;&#x7EC4;&#x4EF6;&#x7684; props &#x548C; state&#x3002;</p>
+</blockquote>
+<h4 id="hook&#x7684;&#x4F7F;&#x7528;&#x6CD5;&#x5219;">Hook&#x7684;&#x4F7F;&#x7528;&#x6CD5;&#x5219;</h4>
+<p>Hook &#x5C31;&#x662F; JavaScript &#x51FD;&#x6570;&#xFF0C;&#x4F46;&#x662F;&#x4F7F;&#x7528;&#x5B83;&#x4EEC;&#x4F1A;&#x6709;&#x4E24;&#x4E2A;&#x989D;&#x5916;&#x7684;&#x89C4;&#x5219;&#xFF1A;</p>
+<ul>
+<li>&#x53EA;&#x80FD;&#x5728;<strong>&#x51FD;&#x6570;&#x6700;&#x5916;&#x5C42;</strong>&#x8C03;&#x7528; Hook&#x3002;<strong>&#x4E0D;&#x8981;</strong>&#x5728;<strong>&#x5FAA;&#x73AF;&#x3001;&#x6761;&#x4EF6;&#x5224;&#x65AD;&#x6216;&#x8005;&#x5B50;&#x51FD;&#x6570;</strong>&#x4E2D;&#x8C03;&#x7528;&#x3002;</li>
+<li>&#x53EA;&#x80FD;&#x5728; <strong>React &#x7684;&#x51FD;&#x6570;&#x7EC4;&#x4EF6;</strong>&#x4E2D;&#x8C03;&#x7528; Hook&#x3002;<strong>&#x4E0D;&#x8981;</strong>&#x5728;<strong>&#x5176;&#x4ED6; JavaScript &#x51FD;&#x6570;</strong>&#x4E2D;&#x8C03;&#x7528;&#x3002;&#xFF08;&#x8FD8;&#x6709;&#x4E00;&#x4E2A;&#x5730;&#x65B9;&#x53EF;&#x4EE5;&#x8C03;&#x7528; Hook &#x2014;&#x2014; &#x5C31;&#x662F;&#x81EA;&#x5B9A;&#x4E49;&#x7684; Hook &#x4E2D;&#xFF09;</li>
+</ul>
+<blockquote>
+<p>&#x540C;&#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x63D0;&#x4F9B;&#x4E86; <a href="https://www.npmjs.com/package/eslint-plugin-react-hooks" target="_blank">linter &#x63D2;&#x4EF6;</a>&#x6765;&#x81EA;&#x52A8;&#x6267;&#x884C;&#x8FD9;&#x4E9B;&#x89C4;&#x5219;&#x3002;&#x8FD9;&#x4E9B;&#x89C4;&#x5219;&#x4E4D;&#x770B;&#x8D77;&#x6765;&#x4F1A;&#x6709;&#x4E00;&#x4E9B;&#x9650;&#x5236;&#x548C;&#x4EE4;&#x4EBA;&#x56F0;&#x60D1;&#xFF0C;&#x4F46;&#x662F;&#x8981;&#x8BA9; Hook &#x6B63;&#x5E38;&#x5DE5;&#x4F5C;&#xFF0C;&#x5B83;&#x4EEC;&#x81F3;&#x5173;&#x91CD;&#x8981;&#x3002;</p>
+</blockquote>
+<p>&#x4EE5;&#x4E0A;&#x662F;React&#x5B98;&#x65B9;&#x6587;&#x6863;&#x7684;&#x8BF4;&#x6CD5;</p>
+<h3 id="react&#x7684;&#x5B9E;&#x73B0;">React&#x7684;&#x5B9E;&#x73B0;</h3>
+<p>&#x4E09;&#x4E2A;&#x95EE;&#x9898;&#xFF1A;</p>
+<ol>
+<li><a href="https://zh-hans.reactjs.org/docs/introducing-jsx.html#gatsby-focus-wrapper" target="_blank">JSX</a> &#x662F;&#x4E0D;&#x7B26;&#x5408;JS&#x6807;&#x51C6;&#x7684;&#x8BED;&#x6CD5;</li>
+<li>&#x8FD4;&#x56DE;&#x7684;JSX&#x6539;&#x53D8;&#x65F6;&#xFF0C;&#x5982;&#x4F55;&#x66F4;&#x65B0;DOM?</li>
+<li>State/Props&#x66F4;&#x65B0;&#x65F6;&#xFF0C; &#x8981;&#x91CD;&#x65B0;&#x89E6;&#x53D1;render&#x51FD;&#x6570;</li>
+</ol>
+<h4 id="problem1">Problem1</h4>
+<p>&#x89E3;&#x51B3;&#x529E;&#x6CD5;&#x4E5F;&#x5F88;&#x7B80;&#x5355;&#xFF0C;&#x5C31;&#x662F;&#x5C06;JSX&#x8F6C;&#x6362;&#x4E3A;&#x7B26;&#x5408;JS&#x8BED;&#x6CD5;&#x7684;</p>
+<pre><code>const element = (
+  &lt;h1 className=&quot;greeting&quot;&gt;
+    Hello, world!
+  &lt;/h1&gt;
+);
+// &#x7B49;&#x4EF7;&#x4E8E; 
+const element = React.createElement(
+  &apos;h1&apos;,
+  {className: &apos;greeting&apos;},
+  &apos;Hello, world!&apos;
+);
+</code></pre><h4 id="problem2">Problem2</h4>
+<p>&#x8FD4;&#x56DE;&#x7684;JSX&#x672C;&#x8EAB;&#x662F;&#x7C7B;&#x4F3C;DOM&#x7684;&#x4E00;&#x79CD;&#x4E1C;&#x897F;&#xFF0C;&#x4F46;&#x4E0D;&#x662F;DOM&#xFF0C;DOM&#x64CD;&#x4F5C;&#x672C;&#x8EAB;&#x662F;&#x5341;&#x5206;&#x8017;&#x8D39;&#x6027;&#x80FD;&#x7684;&#x3002;&#x6240;&#x4EE5;&#x9700;&#x8981;&#x5C06;&#x8FD4;&#x56DE;&#x7684;JSX&#x4E0E;&#x539F;&#x6765;&#x7684;DOM&#x7ED3;&#x6784;&#x8BA1;&#x7B97;&#x4E00;&#x4E2A;diff&#xFF08;&#x5DEE;&#x522B;&#xFF09;&#xFF1F;&#x4F46;&#x662F;&#x8FD9;&#x4E2A;diff&#x7B97;&#x6CD5;&#x672C;&#x8EAB;&#x4E0D;&#x80FD;&#x592A;&#x8017;&#x65F6;&#xFF0C;&#x5C3D;&#x53EF;&#x80FD;&#x5C0F;&#xFF0C;&#x5C3D;&#x53EF;&#x80FD;&#x77ED;&#x3002;</p>
+<p><strong>Virtual DOM &#xFF08;&#x865A;&#x62DF;DOM&#xFF09;</strong></p>
+<p><a href="https://zh-hans.reactjs.org/docs/faq-internals.html#gatsby-focus-wrapper" target="_blank">Virtual DOM</a> &#x662F;&#x4E00;&#x79CD;&#x7528;&#x4E8E;&#x4E0E;&#x771F;&#x5B9E;DOM&#x540C;&#x6B65;&#xFF0C;&#x800C;&#x5728;JS&#x5185;&#x5B58;&#x4E2D;&#x7EF4;&#x62A4;&#x7684;&#x4E00;&#x4E2A;<strong>&#x5BF9;&#x8C61;</strong>&#xFF0C;&#x5B83;&#x5177;&#x6709;&#x548C;DOM&#x7C7B;&#x4F3C;&#x7684;&#x6811;&#x72B6;&#x7ED3;&#x6784;&#x5E76;&#x53EF;&#x4EE5;&#x548C;DOM&#x5EFA;&#x7ACB;&#x4E00;&#x4E00;&#x5BF9;&#x5E94;&#x7684;&#x5173;&#x7CFB;&#x3002;</p>
+<blockquote>
+<p>&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x8D4B;&#x4E88;&#x4E86; React &#x58F0;&#x660E;&#x5F0F;&#x7684; API&#xFF1A;&#x60A8;&#x544A;&#x8BC9; React &#x5E0C;&#x671B;&#x8BA9; UI &#x662F;&#x4EC0;&#x4E48;&#x72B6;&#x6001;&#xFF0C;React &#x5C31;&#x786E;&#x4FDD; DOM &#x5339;&#x914D;&#x8BE5;&#x72B6;&#x6001;&#x3002;&#x8FD9;&#x4F7F;&#x60A8;&#x53EF;&#x4EE5;&#x4ECE;&#x5C5E;&#x6027;&#x64CD;&#x4F5C;&#x3001;&#x4E8B;&#x4EF6;&#x5904;&#x7406;&#x548C;&#x624B;&#x52A8; DOM &#x66F4;&#x65B0;&#x8FD9;&#x4E9B;&#x5728;&#x6784;&#x5EFA;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x65F6;&#x5FC5;&#x8981;&#x7684;&#x64CD;&#x4F5C;&#x4E2D;&#x89E3;&#x653E;&#x51FA;&#x6765;&#x3002;</p>
+</blockquote>
+<p>&#x72B6;&#x6001;&#x66F4;&#x65B0; -&gt; diff &#x6BD4;&#x5BF9;Virtual DOM&#x548C;&#x771F;&#x5B9E;DOM - &gt; Re-render Virtual DOM &#x6539;&#x53D8;&#x6211;&#x4EEC;&#x7684;&#x771F;&#x5B9E;DOM</p>
+<p><strong>How to Diff??</strong></p>
+<p>&#x66F4;&#x65B0;&#x6B21;&#x6570;&#x5C11; &lt;- &#x6743;&#x8861; -&gt; &#x8BA1;&#x7B97;&#x901F;&#x5EA6;&#x5FEB;</p>
+<p>&#x5B8C;&#x7F8E;&#x7684;&#x6700;&#x5C0F;Diff&#x7B97;&#x6CD5;&#xFF0C;&#x9700;&#x8981; O(n^3) &#x7684;&#x590D;&#x6742;&#x5EA6;</p>
+<p>&#x800C;&#x727A;&#x7272;&#x7406;&#x8BBA;&#x6700;&#x5C0F;Diff&#xFF0C;&#x6362;&#x53D6;&#x65F6;&#x95F4;&#xFF0C;&#x5F97;&#x5230;&#x4E86; O(n) &#x590D;&#x6742;&#x5EA6;&#x7684;&#x7B97;&#x6CD5;&#xFF0C;&#x4ED6;&#x662F;&#x5C40;&#x90E8;&#x6700;&#x4F18;&#x7684;&#x3002;Heuristic O(n) Algorithm &#xFF08;&#x542F;&#x53D1;&#x5F0F;&#x7B97;&#x6CD5;&#xFF09;</p>
+<ul>
+<li>&#x4E0D;&#x540C;&#x7C7B;&#x578B;&#x7684;&#x5143;&#x7D20; -&gt; &#x66FF;&#x6362;</li>
+<li>&#x540C;&#x7C7B;&#x578B;&#x7684;DOM&#x5143;&#x7D20; -&gt; &#x66F4;&#x65B0;</li>
+<li>&#x540C;&#x7C7B;&#x578B;&#x7684;&#x7EC4;&#x4EF6;&#x5143;&#x7D20; -&gt; &#x9012;&#x5F52;</li>
+</ul>
+<p>&#x8FD9;&#x4E2A;&#x7B97;&#x6CD5;&#x53EA;&#x904D;&#x5386;&#x4E86;&#x4E00;&#x904D;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x7B97;&#x51FA;diff&#x3002;</p>
+<p>&#x800C;&#x8FD9;&#x4E5F;&#x662F;React&#x4E00;&#x4E2A;&#x5F0A;&#x75C5;&#xFF0C;&#x4E00;&#x4E2A;&#x7EC4;&#x4EF6;&#x53D1;&#x751F;&#x6539;&#x53D8;&#x65F6;&#xFF0C;&#x5176;&#x5B50;&#x7EC4;&#x4EF6;&#x5168;&#x90E8;&#x4F1A;&#x91CD;&#x65B0;&#x6E32;&#x67D3;&#x3002;&#x8981;&#x89E3;&#x51B3;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#xFF0C;&#x5C31;&#x8981;&#x770B;&#x63A5;&#x4E0B;&#x6765;&#x7684;React&#x7684;&#x72B6;&#x6001;&#x7BA1;&#x7406;&#x5E93;&#x3002;</p>
+<h3 id="react&#x7684;&#x72B6;&#x6001;&#x7BA1;&#x7406;&#x5E93;">React&#x7684;&#x72B6;&#x6001;&#x7BA1;&#x7406;&#x5E93;</h3>
+<h4 id="&#x6838;&#x5FC3;&#x601D;&#x60F3;">&#x6838;&#x5FC3;&#x601D;&#x60F3;</h4>
+<p><strong>&#x5C06;&#x72B6;&#x6001;&#x62BD;&#x79BB;&#x5230;UI&#x5916;&#x90E8;&#x8FDB;&#x884C;&#x7EDF;&#x4E00;&#x7BA1;&#x7406;</strong>&#xFF0C;&#x4F46;&#x662F;&#x8FD9;&#x662F;&#x4F1A;&#x964D;&#x4F4E;&#x7EC4;&#x4EF6;&#x7684;&#x590D;&#x7528;&#x6027;&#xFF0C;&#x6240;&#x4EE5;&#x8FD9;&#x4E00;&#x822C;&#x51FA;&#x73B0;&#x5728;&#x4E1A;&#x52A1;&#x4EE3;&#x7801;&#x4E2D;&#x3002;&#x4EE5;&#x4E0B;&#x51E0;&#x79CD;&#x6846;&#x67B6;&#xFF0C;&#x7528;&#x54EA;&#x4E2A;&#x90FD;&#x884C;</p>
+<ul>
+<li><a href="https://www.redux.org.cn" target="_blank">Redux&#x4E2D;&#x6587;&#x6587;&#x6863;</a></li>
+<li><a href="https://xstate.js.org" target="_blank">XState - JavaScript State Machines and Statecharts</a></li>
+<li><a href="https://cn.mobx.js.org" target="_blank">MobX &#x4ECB;&#x7ECD; &#xB7; MobX &#x4E2D;&#x6587;&#x6587;&#x6863;</a></li>
+<li><a href="https://www.recoiljs.cn" target="_blank">Recoil &#x4E2D;&#x6587;&#x6587;&#x6863; | Recoil &#x4E2D;&#x6587;&#x7F51; (recoiljs.cn)</a></li>
+</ul>
+<h4 id="&#x72B6;&#x6001;&#x673A;">&#x72B6;&#x6001;&#x673A;</h4>
+<p>&#x6536;&#x5230;&#x5916;&#x90E8;&#x4E8B;&#x4EF6;&#x540E;&#x6839;&#x636E;&#x5F53;&#x524D;&#x72B6;&#x6001;&#xFF0C;&#x8FC1;&#x79FB;&#x5230;&#x4E0B;&#x4E00;&#x4E2A;&#x72B6;&#x6001;&#x3002;</p>
+<p>&#x54EA;&#x4E9B;&#x72B6;&#x6001;&#x9002;&#x5408;&#x653E;&#x5230;&#x72B6;&#x6001;&#x7BA1;&#x7406;&#x5E93;&#xFF1F;</p>
+<ul>
+<li>&#x53EF;&#x80FD;&#x4F1A;&#x88AB;&#x5F88;&#x591A;&#x5C42;&#x7EA7;&#x7684;&#x7EC4;&#x4EF6;&#x7528;&#x5230;&#x7684;&#x72B6;&#x6001;</li>
+</ul>
+<h3 id="&#x5E94;&#x7528;&#x7EA7;&#x6846;&#x67B6;&#x79D1;&#x666E;">&#x5E94;&#x7528;&#x7EA7;&#x6846;&#x67B6;&#x79D1;&#x666E;</h3>
+<p>React&#x672C;&#x8EAB;&#x662F;&#x6CA1;&#x6709;&#x63D0;&#x4F9B;&#x8DB3;&#x591F;&#x591A;&#x7684;&#x5DE5;&#x7A0B;&#x80FD;&#x529B;&#xFF0C;&#x5982;&#x8DEF;&#x7531;&#x3001;&#x9875;&#x9762;&#x914D;&#x7F6E;&#x7B49;&#x7B49;&#x3002;</p>
+<ul>
+<li><a href="https://www.nextjs.cn" target="_blank">Next.js - React &#x5E94;&#x7528;&#x5F00;&#x53D1;&#x6846;&#x67B6;</a> &#x7845;&#x8C37;&#x660E;&#x661F;&#x521B;&#x4E1A;&#x516C;&#x53F8;Vercel&#x7684; React&#x5F00;&#x53D1;&#x6846;&#x67B6;,&#x7A33;&#x5B9A;,&#x5F00;&#x53D1;&#x4F53;&#x9A8C;&#x597D;&#xFF0C;&#x652F;&#x6301;Unbundled Dev,sWC&#x7B49;,&#x5176;&#x540C;&#x6837;&#x6709;Serverless&#x4E00;&#x952E;&#x90E8;&#x7F72;&#x5E73;&#x53F0;&#x5E2E;&#x52A9;&#x5F00;&#x53D1;&#x8005;&#x5FEB;&#x901F;&#x5B8C;&#x6210;&#x90E8;&#x7F72;&#x3002;&#x53E3;&#x53F7;&#x662F;&quot;Let&apos;s Make Web Faster&quot;</li>
+<li><a href="https://modernjs.dev" target="_blank">Modern.js - &#x73B0;&#x4EE3; Web &#x5DE5;&#x7A0B;&#x4F53;&#x7CFB; (modernjs.dev)</a> &#x5B57;&#x8282;&#x8DF3;&#x52A8;Web Infra&#x56E2;&#x961F;&#x7814;&#x53D1;&#x7684;&#x5168;&#x6808;&#x5F00;&#x53D1;&#x6846;&#x67B6;,&#x5185;&#x74F7;&#x4E86;&#x5F88;&#x591A;&#x5F00;&#x7BB1;&#x5373;&#x7528;&#x7684;&#x80FD;&#x529B;&#x4E0E;&#x6700;&#x4F73;&#x5B9E;&#x8DF5;&#xFF0C;&#x53EF;&#x4EE5;&#x51CF;&#x5C11;&#x5F88;&#x591A;&#x8C03;&#x7814;&#x9009;&#x62E9;&#x5DE5;&#x5177;&#x7684;&#x65F6;&#x95F4;&#x3002;</li>
+<li><a href="https://blitzjs.com/docs/get-started" target="_blank">Get Started with Blitz (blitzjs.com)</a>&#x65E0;API&#x601D;&#x60F3;&#x7684;&#x5168;&#x6808;&#x5F00;&#x53D1;&#x6846;&#x67B6;,&#x5F00;&#x53D1;&#x8FC7;&#x7A0B;&#x4E2D;&#x65E0;&#x9700;&#x5199;API &#x8C03;&#x7528;&#x4E0E;CRUD&#x903B;&#x8F91;,&#x9002;&#x5408;&#x524D;&#x540E;&#x7AEF;&#x7D27;&#x5BC6;&#x5C0F;&#x56E2;&#x961F;&#x9879;&#x76EE;&#x3002;</li>
+</ul>
+<h3 id="&#x603B;&#x7ED3;&#x611F;&#x60F3;">&#x603B;&#x7ED3;&#x611F;&#x60F3;</h3>
+<p>&#x672C;&#x8282;&#x8BFE;&#x5927;&#x81F4;&#x4ECB;&#x7ECD;&#x4E86;React&#x53CA;&#x5176;&#x539F;&#x7406;&#xFF0C;&#x4ECB;&#x7ECD;&#x4E86;&#x7EC4;&#x4EF6;&#x5316;&#x3001;&#x4E00;&#x4E9B;&#x5E94;&#x7528;&#x7EA7;&#x6846;&#x67B6;</p>
+<blockquote>
+<p>&#x672C;&#x6587;&#x5F15;&#x7528;&#x7684;&#x5185;&#x5BB9;&#x5927;&#x90E8;&#x5206;&#x6765;&#x81EA;&#x725B;&#x5CB1;&#x8001;&#x5E08;&#x7684;&#x8BFE;&#xFF0C;&#x4EE5;&#x53CA;React&#x5B98;&#x65B9;&#x6587;&#x6863;</p>
+</blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../qian-duan-jin-jie.html" class="navigation navigation-prev " aria-label="Previous page: React">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="react-xue-xi-xiao-ji.html" class="navigation navigation-next " aria-label="Next page: React学习小记">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"description":"【第二届青训营-寒假前端场】- 「响应式系统与 React」","title":"响应式系统与 React","level":"4.1.1","depth":2,"next":{"title":"React学习小记","level":"4.1.2","depth":2,"path":"morelearning/react/react-xue-xi-xiao-ji.md","ref":"morelearning/react/react-xue-xi-xiao-ji.md","articles":[]},"previous":{"title":"React","level":"4.1","depth":1,"path":"morelearning/qian-duan-jin-jie.md","ref":"morelearning/qian-duan-jin-jie.md","articles":[{"title":"响应式系统与 React","level":"4.1.1","depth":2,"path":"morelearning/react/xiang-ying-shi-xi-tong-yu-react.md","ref":"morelearning/react/xiang-ying-shi-xi-tong-yu-react.md","articles":[]},{"title":"React学习小记","level":"4.1.2","depth":2,"path":"morelearning/react/react-xue-xi-xiao-ji.md","ref":"morelearning/react/react-xue-xi-xiao-ji.md","articles":[]},{"title":"Redux学习之Redux三原则、createSore原理及实现","level":"4.1.3","depth":2,"path":"morelearning/react/redux-xue-xi-zhi-redux-san-yuan-ze-createsore-yuan-li-ji-shi-xian.md","ref":"morelearning/react/redux-xue-xi-zhi-redux-san-yuan-ze-createsore-yuan-li-ji-shi-xian.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"cos","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"cos的前端学习记录","language":"zh-hans","links":{"sidebar":{"cos的博客":"https://ysx.cosine.ren/","Github":"https://github.com/yusixian"}},"gitbook":"*","description":"主要分享自己的前端学习心得，与一些学习记录"},"file":{"path":"morelearning/react/xiang-ying-shi-xi-tong-yu-react.md","mtime":"2022-03-27T14:00:04.019Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-03-27T14:21:36.549Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

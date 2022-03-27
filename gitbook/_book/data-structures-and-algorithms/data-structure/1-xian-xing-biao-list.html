@@ -1,0 +1,1777 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>1、线性表（List） · cos的前端学习记录</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="顺序表及链表">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="cos">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="2-dui-zhan-stack.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://ysx.cosine.ren/" target="_blank" class="custom-link">cos的博客</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://github.com/yusixian" target="_blank" class="custom-link">Github</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    前言及目录
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">前端基础</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../front-end-basics/javascript/">
+            
+                <a href="../../front-end-basics/javascript/">
+            
+                    
+                    JavaScript
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../../front-end-basics/javascript/gen-zhuo-yue-ying-xue-javascript.html">
+            
+                <a href="../../front-end-basics/javascript/gen-zhuo-yue-ying-xue-javascript.html">
+            
+                    
+                    跟着月影学JavaScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../../front-end-basics/javascript/prototype-and-inherit.html">
+            
+                <a href="../../front-end-basics/javascript/prototype-and-inherit.html">
+            
+                    
+                    JavaScript之对象、原型链及继承
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../../front-end-basics/javascript/javascript-zhong-de-lei.html">
+            
+                <a href="../../front-end-basics/javascript/javascript-zhong-de-lei.html">
+            
+                    
+                    JavaScript中的类
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../../front-end-basics/html.html">
+            
+                <a href="../../front-end-basics/html.html">
+            
+                    
+                    HTML
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../../front-end-basics/css/">
+            
+                <a href="../../front-end-basics/css/">
+            
+                    
+                    CSS
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="../../front-end-basics/css/css-xue-xi-zhi-bu-ju.html">
+            
+                <a href="../../front-end-basics/css/css-xue-xi-zhi-bu-ju.html">
+            
+                    
+                    CSS学习之布局
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../../front-end-basics/http-yu-liu-lan-qi/">
+            
+                <a href="../../front-end-basics/http-yu-liu-lan-qi/">
+            
+                    
+                    HTTP与浏览器
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1" data-path="../../front-end-basics/http-yu-liu-lan-qi/http-shi-yong-zhi-nan.html">
+            
+                <a href="../../front-end-basics/http-yu-liu-lan-qi/http-shi-yong-zhi-nan.html">
+            
+                    
+                    HTTP实用指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.2" data-path="../../front-end-basics/http-yu-liu-lan-qi/web-kai-fa-de-an-quan-zhi-lv.html">
+            
+                <a href="../../front-end-basics/http-yu-liu-lan-qi/web-kai-fa-de-an-quan-zhi-lv.html">
+            
+                    
+                    Web开发的安全之旅
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../../front-end-basics/tong-yong-zhi-shi/">
+            
+                <a href="../../front-end-basics/tong-yong-zhi-shi/">
+            
+                    
+                    通用知识
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.5.1" data-path="../../front-end-basics/tong-yong-zhi-shi/qian-duan-bi-xu-zhi-dao-de-kai-fa-tiao-shi-zhi-shi.html">
+            
+                <a href="../../front-end-basics/tong-yong-zhi-shi/qian-duan-bi-xu-zhi-dao-de-kai-fa-tiao-shi-zhi-shi.html">
+            
+                    
+                    前端必须知道的开发调试知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.2" data-path="../../front-end-basics/tong-yong-zhi-shi/qian-duan-she-ji-mo-shi-ying-yong.html">
+            
+                <a href="../../front-end-basics/tong-yong-zhi-shi/qian-duan-she-ji-mo-shi-ying-yong.html">
+            
+                    
+                    前端设计模式应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.3" data-path="../../front-end-basics/tong-yong-zhi-shi/web-biao-zhun-yu-qian-duan-kai-fa.html">
+            
+                <a href="../../front-end-basics/tong-yong-zhi-shi/web-biao-zhun-yu-qian-duan-kai-fa.html">
+            
+                    
+                    Web 标准与前端开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">数据结构及算法</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../leetcode/">
+            
+                <a href="../leetcode/">
+            
+                    
+                    LeetCode
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../leetcode/leetcode-schedule-66/">
+            
+                <a href="../leetcode/leetcode-schedule-66/">
+            
+                    
+                    冲刺春招-精选笔面试 66 题大通关
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1.1" data-path="../leetcode/leetcode-schedule-66/day1.html">
+            
+                <a href="../leetcode/leetcode-schedule-66/day1.html">
+            
+                    
+                    day1：21. 合并两个有序链表、146. LRU 缓存、25. K 个一组翻转链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.2" data-path="../leetcode/leetcode-schedule-66/day2.html">
+            
+                <a href="../leetcode/leetcode-schedule-66/day2.html">
+            
+                    
+                    day2：14. 最长公共前缀、3. 无重复字符的最长子串、124. 二叉树中的最大路径和
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.3" data-path="../leetcode/leetcode-schedule-66/day3.html">
+            
+                <a href="../leetcode/leetcode-schedule-66/day3.html">
+            
+                    
+                    day3：206. 反转链表、199. 二叉树的右视图、bytedance-016最短移动距离
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.4" data-path="../leetcode/leetcode-schedule-66/day4.html">
+            
+                <a href="../leetcode/leetcode-schedule-66/day4.html">
+            
+                    
+                    day4：1. 两数之和、15. 三数之和、42. 接雨水
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.5" data-path="../leetcode/leetcode-schedule-66/day5.html">
+            
+                <a href="../leetcode/leetcode-schedule-66/day5.html">
+            
+                    
+                    day5：7. 整数反转、215. 数组中的第K个最大元素、23. 合并K个升序链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.6" data-path="../leetcode/leetcode-schedule-66/day6.html">
+            
+                <a href="../leetcode/leetcode-schedule-66/day6.html">
+            
+                    
+                    day6：33. 搜索旋转排序数组、54. 螺旋矩阵、bytedance-006. 夏季特惠
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.7" data-path="../leetcode/leetcode-schedule-66/day7.html">
+            
+                <a href="../leetcode/leetcode-schedule-66/day7.html">
+            
+                    
+                    day7：53. 最大子数组和、152. 乘积最大子数组、41. 缺失的第一个正数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.8" data-path="../leetcode/leetcode-schedule-66/day8.html">
+            
+                <a href="../leetcode/leetcode-schedule-66/day8.html">
+            
+                    
+                    day8：20. 有效的括号、200. 岛屿数量、76. 最小覆盖子串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.9" data-path="../leetcode/leetcode-schedule-66/day9.html">
+            
+                <a href="../leetcode/leetcode-schedule-66/day9.html">
+            
+                    
+                    day9：105. 从前序与中序遍历序列构造二叉树、103. 二叉树的锯齿形层序遍历、bytedance-010. 数组组成最大数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.10" data-path="../leetcode/leetcode-schedule-66/day10.html">
+            
+                <a href="../leetcode/leetcode-schedule-66/day10.html">
+            
+                    
+                    day10：94. 二叉树的中序遍历、102. 二叉树的层序遍历、394. 字符串解码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.11" data-path="../leetcode/leetcode-schedule-66/day11.html">
+            
+                <a href="../leetcode/leetcode-schedule-66/day11.html">
+            
+                    
+                    day11：415. 字符串相加、5. 最长回文子串、72. 编辑距离
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.12" data-path="../leetcode/leetcode-schedule-66/day12.html">
+            
+                <a href="../leetcode/leetcode-schedule-66/day12.html">
+            
+                    
+                    day12：64. 最小路径和、300. 最长递增子序列、bytedance-004. 机器人跳跃问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.13" data-path="../leetcode/leetcode-schedule-66/day13.html">
+            
+                <a href="../leetcode/leetcode-schedule-66/day13.html">
+            
+                    
+                    day13：88. 合并两个有序数组、31. 下一个排列、4. 寻找两个正序数组的中位数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.14" data-path="../leetcode/leetcode-schedule-66/day14.html">
+            
+                <a href="../leetcode/leetcode-schedule-66/day14.html">
+            
+                    
+                    day14：121. 买卖股票的最佳时机、56. 合并区间、135. 分发糖果
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.15" data-path="../leetcode/leetcode-schedule-66/day15.html">
+            
+                <a href="../leetcode/leetcode-schedule-66/day15.html">
+            
+                    
+                    day15：232. 用栈实现队列、22. 括号生成、128. 最长连续序列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.16" data-path="../leetcode/leetcode-schedule-66/day16.html">
+            
+                <a href="../leetcode/leetcode-schedule-66/day16.html">
+            
+                    
+                    day16：bytedance-007. 化学公式解析、129. 求根节点到叶节点数字之和、239. 滑动窗口最大值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.17" data-path="../leetcode/leetcode-schedule-66/day17.html">
+            
+                <a href="../leetcode/leetcode-schedule-66/day17.html">
+            
+                    
+                    day17：141. 环形链表、236. 二叉树的最近公共祖先、92. 反转链表 II
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.18" data-path="../leetcode/leetcode-schedule-66/day18.html">
+            
+                <a href="../leetcode/leetcode-schedule-66/day18.html">
+            
+                    
+                    day18：322. 零钱兑换、198. 打家劫舍、 bytedance-003. 古生物血缘远近判定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.19" data-path="../leetcode/leetcode-schedule-66/day19.html">
+            
+                <a href="../leetcode/leetcode-schedule-66/day19.html">
+            
+                    
+                    day19：160. 相交链表、143. 重排链表、142. 环形链表 II
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.20" data-path="../leetcode/leetcode-schedule-66/day20.html">
+            
+                <a href="../leetcode/leetcode-schedule-66/day20.html">
+            
+                    
+                    day20：704. 二分查找、43. 字符串相乘、bytedance-002. 发下午茶
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    数据结构
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="3.2.1" data-path="1-xian-xing-biao-list.html">
+            
+                <a href="1-xian-xing-biao-list.html">
+            
+                    
+                    1、线性表（List）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2" data-path="2-dui-zhan-stack.html">
+            
+                <a href="2-dui-zhan-stack.html">
+            
+                    
+                    2、堆栈（Stack）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.3" data-path="3-dui-lie-queue.html">
+            
+                <a href="3-dui-lie-queue.html">
+            
+                    
+                    3、队列（Queue）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.4" data-path="4-er-cha-shu-binary-tree.html">
+            
+                <a href="4-er-cha-shu-binary-tree.html">
+            
+                    
+                    4、二叉树（Binary Tree）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.5" data-path="5-er-cha-sou-suo-shu-yu-ping-heng-er-cha-shu-bst-avl.html">
+            
+                <a href="5-er-cha-sou-suo-shu-yu-ping-heng-er-cha-shu-bst-avl.html">
+            
+                    
+                    5、二叉搜索树与平衡二叉树（BST & AVL）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.6" data-path="6-dui-stack-ha-fu-man-shu-bing-cha-ji.html">
+            
+                <a href="6-dui-stack-ha-fu-man-shu-bing-cha-ji.html">
+            
+                    
+                    6、堆（Stack）& 哈夫曼树 & 并查集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.7" data-path="7-tu-graph/">
+            
+                <a href="7-tu-graph/">
+            
+                    
+                    7、图（Graph）
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.7.1" data-path="7-tu-graph/tu-lun-jie-jue-zui-xiao-sheng-cheng-shu-wen-ti-kruskal-suan-fa-prim-suan-fa.html">
+            
+                <a href="7-tu-graph/tu-lun-jie-jue-zui-xiao-sheng-cheng-shu-wen-ti-kruskal-suan-fa-prim-suan-fa.html">
+            
+                    
+                    图论——解决最小生成树问题(Kruskal算法\&Prim算法)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.8" data-path="8-pai-xu-sort.html">
+            
+                <a href="8-pai-xu-sort.html">
+            
+                    
+                    8、排序（sort）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.9" data-path="9-san-lie-biao-hash.html">
+            
+                <a href="9-san-lie-biao-hash.html">
+            
+                    
+                    9、散列表（hash）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10" data-path="shu-ju-jie-gou-xi-ti/">
+            
+                <a href="shu-ju-jie-gou-xi-ti/">
+            
+                    
+                    数据结构习题
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.10.1" data-path="shu-ju-jie-gou-xi-ti/di-yi-zhou-zui-da-zi-lie-he-suan-fa-er-fen-cha-zhao.html">
+            
+                <a href="shu-ju-jie-gou-xi-ti/di-yi-zhou-zui-da-zi-lie-he-suan-fa-er-fen-cha-zhao.html">
+            
+                    
+                    第一周：最大子列和算法、二分查找
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10.2" data-path="shu-ju-jie-gou-xi-ti/di-er-zhou-xian-xing-jie-gou.html">
+            
+                <a href="shu-ju-jie-gou-xi-ti/di-er-zhou-xian-xing-jie-gou.html">
+            
+                    
+                    第二周：线性结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10.3" data-path="shu-ju-jie-gou-xi-ti/di-san-zhou-zai-shu-er-cha-shu-deng.html">
+            
+                <a href="shu-ju-jie-gou-xi-ti/di-san-zhou-zai-shu-er-cha-shu-deng.html">
+            
+                    
+                    第三周：栽树（二叉树等）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10.4" data-path="shu-ju-jie-gou-xi-ti/di-si-zhou-er-cha-sou-suo-shu-er-cha-ping-heng-shu.html">
+            
+                <a href="shu-ju-jie-gou-xi-ti/di-si-zhou-er-cha-sou-suo-shu-er-cha-ping-heng-shu.html">
+            
+                    
+                    第四周：二叉搜索树&二叉平衡树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10.5" data-path="shu-ju-jie-gou-xi-ti/di-wu-zhou-dui-ha-fu-man-shu-bing-cha-ji.html">
+            
+                <a href="shu-ju-jie-gou-xi-ti/di-wu-zhou-dui-ha-fu-man-shu-bing-cha-ji.html">
+            
+                    
+                    第五周：堆&哈夫曼树&并查集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10.6" data-path="shu-ju-jie-gou-xi-ti/di-liu-zhou-tu-shang-lian-tong-ji-dfsbfs.html">
+            
+                <a href="shu-ju-jie-gou-xi-ti/di-liu-zhou-tu-shang-lian-tong-ji-dfsbfs.html">
+            
+                    
+                    第六周：图（上）连通集 、DFS\&BFS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10.7" data-path="shu-ju-jie-gou-xi-ti/di-qi-zhou-tu-zhong-floyd-suan-fa-qiu-zui-duan-lu.html">
+            
+                <a href="shu-ju-jie-gou-xi-ti/di-qi-zhou-tu-zhong-floyd-suan-fa-qiu-zui-duan-lu.html">
+            
+                    
+                    第七周：图（中）Floyd算法求最短路
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10.8" data-path="shu-ju-jie-gou-xi-ti/di-ba-zhou-tu-xia.html">
+            
+                <a href="shu-ju-jie-gou-xi-ti/di-ba-zhou-tu-xia.html">
+            
+                    
+                    第八周：图（下）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10.9" data-path="shu-ju-jie-gou-xi-ti/di-jiu-zhou-pai-xu-shang-gui-bing-dui-pai-xu.html">
+            
+                <a href="shu-ju-jie-gou-xi-ti/di-jiu-zhou-pai-xu-shang-gui-bing-dui-pai-xu.html">
+            
+                    
+                    第九周：排序（上）归并&堆排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10.10" data-path="shu-ju-jie-gou-xi-ti/di-shi-zhou-pai-xu-xia.html">
+            
+                <a href="shu-ju-jie-gou-xi-ti/di-shi-zhou-pai-xu-xia.html">
+            
+                    
+                    第十周：排序（下）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10.11" data-path="shu-ju-jie-gou-xi-ti/di-shi-yi-zhou-san-lie-cha-zhao-kmp.html">
+            
+                <a href="shu-ju-jie-gou-xi-ti/di-shi-yi-zhou-san-lie-cha-zhao-kmp.html">
+            
+                    
+                    第十一周：散列查找 & KMP
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">前端进阶</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../../morelearning/qian-duan-jin-jie.html">
+            
+                <a href="../../morelearning/qian-duan-jin-jie.html">
+            
+                    
+                    React
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../../morelearning/react/xiang-ying-shi-xi-tong-yu-react.html">
+            
+                <a href="../../morelearning/react/xiang-ying-shi-xi-tong-yu-react.html">
+            
+                    
+                    响应式系统与 React
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="../../morelearning/react/react-xue-xi-xiao-ji.html">
+            
+                <a href="../../morelearning/react/react-xue-xi-xiao-ji.html">
+            
+                    
+                    React学习小记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="../../morelearning/react/redux-xue-xi-zhi-redux-san-yuan-ze-createsore-yuan-li-ji-shi-xian.html">
+            
+                <a href="../../morelearning/react/redux-xue-xi-zhi-redux-san-yuan-ze-createsore-yuan-li-ji-shi-xian.html">
+            
+                    
+                    Redux学习之Redux三原则、createSore原理及实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../../morelearning/typescript/">
+            
+                <a href="../../morelearning/typescript/">
+            
+                    
+                    TypeScript
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.2.1" data-path="../../morelearning/typescript/typescript-ru-men.html">
+            
+                <a href="../../morelearning/typescript/typescript-ru-men.html">
+            
+                    
+                    TypeScript入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../../morelearning/webpack/">
+            
+                <a href="../../morelearning/webpack/">
+            
+                    
+                    Webpack
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.3.1" data-path="../../morelearning/webpack/webpack-zhi-shi-ti-xi.html">
+            
+                <a href="../../morelearning/webpack/webpack-zhi-shi-ti-xi.html">
+            
+                    
+                    Webpack知识体系
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../../morelearning/animation/">
+            
+                <a href="../../morelearning/animation/">
+            
+                    
+                    前端动画与绘图
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.4.1" data-path="../../morelearning/animation/webgl-ji-chu.html">
+            
+                <a href="../../morelearning/animation/webgl-ji-chu.html">
+            
+                    
+                    WebGL基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4.2" data-path="../../morelearning/animation/qian-duan-dong-hua-jian-jie.html">
+            
+                <a href="../../morelearning/animation/qian-duan-dong-hua-jian-jie.html">
+            
+                    
+                    前端动画简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">笔面试记录</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../../interview-record/collection-interview/">
+            
+                <a href="../../interview-record/collection-interview/">
+            
+                    
+                    面经集锦
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.1" data-path="../../interview-record/collection-interview/2022-spring-metaapp.html">
+            
+                <a href="../../interview-record/collection-interview/2022-spring-metaapp.html">
+            
+                    
+                    2022春暑期实习MetaApp一二面面经
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.2" data-path="../../interview-record/collection-interview/2022-spring-bytedance.html">
+            
+                <a href="../../interview-record/collection-interview/2022-spring-bytedance.html">
+            
+                    
+                    2022春暑期实习字节前端一面凉经
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../../interview-record/written-examination-reply/">
+            
+                <a href="../../interview-record/written-examination-reply/">
+            
+                    
+                    笔试复盘
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.2.1" data-path="../../interview-record/written-examination-reply/2022-chun-mei-tuan-bi-shi-shu-qi-shi-xi-bi-shi-ti-fu-pan.html">
+            
+                <a href="../../interview-record/written-examination-reply/2022-chun-mei-tuan-bi-shi-shu-qi-shi-xi-bi-shi-ti-fu-pan.html">
+            
+                    
+                    2022春美团笔试暑期实习笔试题复盘
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.2" data-path="../../interview-record/written-examination-reply/2022-chun-360-bi-shi-ti-mu-fu-pan-yan-faejuan.html">
+            
+                <a href="../../interview-record/written-examination-reply/2022-chun-360-bi-shi-ti-mu-fu-pan-yan-faejuan.html">
+            
+                    
+                    2022春360笔试题目复盘-研发E卷
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.3" data-path="../../interview-record/written-examination-reply/2022-chun-jing-dong-qian-duan-bi-shi-ti-mu-fu-pan.html">
+            
+                <a href="../../interview-record/written-examination-reply/2022-chun-jing-dong-qian-duan-bi-shi-ti-mu-fu-pan.html">
+            
+                    
+                    2022春京东前端笔试题目复盘
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.4" data-path="../../interview-record/written-examination-reply/2022-chun-wang-yi-lei-huo-qian-duan-shu-qi-shi-xi-bi-shi-ak.html">
+            
+                <a href="../../interview-record/written-examination-reply/2022-chun-wang-yi-lei-huo-qian-duan-shu-qi-shi-xi-bi-shi-ak.html">
+            
+                    
+                    2022春网易雷火前端暑期实习笔试(AK)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >1、线性表（List）</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="1&#x3001;&#x7EBF;&#x6027;&#x8868;&#xFF08;list&#xFF09;">1&#x3001;&#x7EBF;&#x6027;&#x8868;&#xFF08;List&#xFF09;</h1>
+<h3 id="&#x4E00;&#x3001;&#x7EBF;&#x6027;&#x8868;&#x7684;&#x62BD;&#x8C61;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x63CF;&#x8FF0;">&#x4E00;&#x3001;&#x7EBF;&#x6027;&#x8868;&#x7684;&#x62BD;&#x8C61;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x63CF;&#x8FF0;</h3>
+<p>&#x7C7B;&#x578B;&#x540D;&#xFF1A;&#x7EBF;&#x6027;&#x8868;&#xFF08;List&#xFF09; &#x6570;&#x636E;&#x5BF9;&#x8C61;&#x96C6;&#xFF1A;&#x7EBF;&#x6027;&#x8868;&#x793A;n(&gt;=0)&#x4E2A;&#x5143;&#x7D20;&#x6784;&#x6210;&#x7684;&#x6709;&#x5E8F;&#x5E8F;&#x5217;(a1,a2,&#x2026;&#x2026;,an) &#x64CD;&#x4F5C;&#x96C6;&#xFF1A;&#x7EBF;&#x6027;&#x8868;L&#x2208;List, &#x6574;&#x6570;i&#x8868;&#x793A;&#x4F4D;&#x7F6E;,&#x5143;&#x7D20;X&#x2208;ElementType</p>
+<h3 id="&#x4E8C;&#x3001;&#x987A;&#x5E8F;&#x8868;">&#x4E8C;&#x3001;&#x987A;&#x5E8F;&#x8868;</h3>
+<h4 id="1&#x5B9A;&#x4E49;">1.&#x5B9A;&#x4E49;</h4>
+<pre><code class="lang-cpp"><span class="hljs-keyword">struct</span> LNode {
+    ElementType Data[MAXSIZE];<span class="hljs-comment">//&#x5B58;&#x4E86;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#xFF0C;&#x5176;&#x6700;&#x591A;&#x80FD;&#x5B58;MAXSIZE&#x4E2A;&#x5143;&#x7D20;</span>
+    <span class="hljs-keyword">int</span> Last;<span class="hljs-comment">//&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x4E0B;&#x6807;&#xFF01;</span>
+};
+<span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span> LNode *List;
+</code></pre>
+<p>&#x8BBF;&#x95EE;&#x4E0B;&#x6807;&#x4E3A;i&#x7684;&#x5143;&#x7D20;:L.Data[i]&#x6216;PtrL-&gt;Data[i] &#x7EBF;&#x6027;&#x8868;&#x7684;&#x957F;&#x5EA6;: L.Last+1 &#x6216; PtrL-&gt;Last+1;</p>
+<h4 id="2&#x64CD;&#x4F5C;">2.&#x64CD;&#x4F5C;</h4>
+<p>&#x5176;&#x57FA;&#x672C;&#x64CD;&#x4F5C;&#x6709;</p>
+<blockquote>
+<p><strong>1.List MakeEmpty();//&#x521D;&#x59CB;&#x5316;&#x4E00;&#x4E2A;&#x7A7A;&#x7EBF;&#x6027;&#x8868; 2.ElementType FindKth(int K, List Ptrl);//&#x8FD4;&#x56DE;&#x4E0B;&#x6807;&#x4E3A;K&#x7684;&#x76F8;&#x5E94;&#x5143;&#x7D20; 3.int Find(ElementType X, List Ptrl);//&#x5728;&#x7EBF;&#x6027;&#x8868;L&#x4E2D;&#x67E5;&#x627E;X&#x7684;&#x7B2C;&#x4E00;&#x6B21;&#x51FA;&#x73B0;&#x4F4D;&#x7F6E; 4.void Insert(ElementType X, int i, List Ptrl);//&#x5728;&#x4F4D;&#x5E8F;i&#x524D;&#x63D2;&#x5165;&#x4E00;&#x4E2A;&#x65B0;&#x5143;&#x7D20;X 5.void Delete(int i, List Ptrl);//&#x5220;&#x9664;&#x6307;&#x5B9A;&#x4F4D;&#x5E8F;i&#x7684;&#x5143;&#x7D20; 6.int Length(List Ptrl);//&#x8FD4;&#x56DE;&#x7EBF;&#x6027;&#x8868;&#x7684;&#x957F;&#x5EA6;n</strong>**</p>
+</blockquote>
+<p>&#x4E0B;&#x9762;&#x6211;&#x4EEC;&#x6765;&#x4E00;&#x4E00;&#x8FC7;&#x4E00;&#x904D;</p>
+<p><strong>(1)&#x521B;&#x5EFA;&#x7A7A;&#x8868;</strong></p>
+<pre><code class="lang-cpp"><span class="hljs-function">List <span class="hljs-title">MakeEmpty</span><span class="hljs-params">()</span> </span>{
+    List PtrL;
+    PtrL = (List)<span class="hljs-built_in">malloc</span>(<span class="hljs-keyword">sizeof</span>(<span class="hljs-keyword">struct</span> LNode));
+    PtrL -&gt; Last = <span class="hljs-number">-1</span>;
+    <span class="hljs-keyword">return</span> PtrL;
+}
+</code></pre>
+<p><strong>(2)&#x67E5;&#x627E;&#x4E0B;&#x6807;&#x4E3A;K&#x7684;&#x5143;&#x7D20;</strong></p>
+<p>&#x8FD4;&#x56DE;&#x4E0B;&#x6807;K&#x7684;&#x76F8;&#x5E94;&#x5143;&#x7D20;&#x3002;</p>
+<pre><code class="lang-cpp"><span class="hljs-function">ElementType <span class="hljs-title">FindKth</span><span class="hljs-params">(<span class="hljs-keyword">int</span> K, List Ptrl)</span> </span>{
+    <span class="hljs-keyword">return</span> Ptrl-&gt;Data[K];
+}
+</code></pre>
+<p><strong>(3)&#x67E5;&#x627E;&#x5143;&#x7D20;X</strong></p>
+<p>&#x8FD4;&#x56DE;&#x4E0B;&#x6807;&#xFF0C;&#x672A;&#x627E;&#x5230;&#x8FD4;&#x56DE;-1&#x3002;</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">Find</span><span class="hljs-params">(ElementType X, List Ptrl)</span> </span>{
+    <span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">while</span>(i &lt;= PtrL-&gt;Last &amp;&amp; PtrL-&gt;Data[i] != X)
+        i++;
+    <span class="hljs-keyword">if</span>(i &gt; PtrL-&gt;Last) <span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>;<span class="hljs-comment">//&#x5982;&#x679C;&#x6CA1;&#x627E;&#x5230;&#x8FD4;&#x56DE;-1</span>
+    <span class="hljs-keyword">else</span> <span class="hljs-keyword">return</span> i;<span class="hljs-comment">//&#x627E;&#x5230;&#x540E;&#x8FD4;&#x56DE;&#x7684;&#x662F;&#x5B58;&#x50A8;&#x4F4D;&#x7F6E; &#x5373;&#x4E0B;&#x6807;</span>
+}
+</code></pre>
+<p><strong>(4)&#x63D2;&#x5165;</strong></p>
+<p>&#x5728;&#x7B2C;i(1 &#x2264; i &#x2264; n+1)&#x4E2A;&#x4F4D;&#x7F6E;&#x4E0A;&#x63D2;&#x5165;&#x4E00;&#x4E2A;&#x503C;&#x4E3A;X&#x7684;&#x65B0;&#x5143;&#x7D20;</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Insert</span><span class="hljs-params">(ElementType X, <span class="hljs-keyword">int</span> i, List Ptrl)</span> </span>{
+    <span class="hljs-keyword">int</span> j;
+    <span class="hljs-keyword">if</span>(Ptrl-&gt;Last == MAXSIZE<span class="hljs-number">-1</span>) {<span class="hljs-comment">//&#x8868;&#x7A7A;&#x95F4;&#x5DF2;&#x6EE1;&#xFF0C;&#x5219;&#x4E0D;&#x80FD;&#x63D2;&#x5165;</span>
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;&#x8868;&#x6EE1;&quot;</span>);
+        <span class="hljs-keyword">return</span>;
+    }
+    <span class="hljs-keyword">if</span>(i &lt; <span class="hljs-number">1</span> || i &gt; Ptrl-&gt;Last+<span class="hljs-number">2</span>) {<span class="hljs-comment">//&#x68C0;&#x67E5;&#x8F93;&#x5165;&#x662F;&#x5426;&#x5408;&#x6CD5;</span>
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;&#x4F4D;&#x7F6E;&#x4E0D;&#x5408;&#x6CD5;&quot;</span>);
+        <span class="hljs-keyword">return</span>;
+    }
+    <span class="hljs-keyword">for</span>(j = Ptrl-&gt;Last; j &gt;= i<span class="hljs-number">-1</span>; j--) <span class="hljs-comment">//&#x6CE8;&#x610F;&#x8FD9;&#x91CC;&#x987A;&#x5E8F;&#x4E0D;&#x80FD;&#x4ECE;&#x524D;&#x5F80;&#x540E;</span>
+        Ptrl-&gt;Data[j+<span class="hljs-number">1</span>] = Ptrl-&gt;Data[j];
+    Ptrl-&gt;Data[i<span class="hljs-number">-1</span>] = X;
+    Ptrl-&gt;Last++;<span class="hljs-comment">//last&#x4ECD;&#x6307;&#x5411;&#x6700;&#x540E;&#x5143;&#x7D20;&#xFF01;</span>
+    <span class="hljs-keyword">return</span>;
+}
+</code></pre>
+<p><strong>(5)&#x5220;&#x9664;</strong></p>
+<p>&#x5220;&#x9664;&#x7B2C;i&#x4E2A;&#x5143;&#x7D20;&#xFF08;&#x4E0B;&#x6807;&#x4E3A;i-1&#xFF09;</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Delete</span><span class="hljs-params">(<span class="hljs-keyword">int</span> i, List Ptrl)</span> </span>{
+    <span class="hljs-keyword">int</span> j;
+    <span class="hljs-keyword">if</span>(i &lt; <span class="hljs-number">1</span> || i &gt; Ptrl-&gt;Last+<span class="hljs-number">1</span>) {<span class="hljs-comment">//&#x68C0;&#x67E5;&#x8F93;&#x5165;&#x662F;&#x5426;&#x5408;&#x6CD5;</span>
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;&#x4E0D;&#x5B58;&#x5728;&#x7B2C;%d&#x4E2A;&#x5143;&#x7D20;&quot;</span>,i);
+        <span class="hljs-keyword">return</span>;
+    }
+    <span class="hljs-keyword">for</span> (j = i; j &lt;= Ptrl-&gt;Last; j++) <span class="hljs-comment">//&#x5220;&#x9664;&#x64CD;&#x4F5C;&#x5C31;&#x5FC5;&#x987B;&#x4ECE;&#x524D;&#x5F80;&#x540E;&#x4E86;</span>
+        Ptrl-&gt;Data[j<span class="hljs-number">-1</span>] = Ptrl-&gt;Data[j];
+    Ptrl-&gt;Last--;
+    <span class="hljs-keyword">return</span>;
+}
+</code></pre>
+<p><strong>(6)&#x8FD4;&#x56DE;&#x7EBF;&#x6027;&#x8868;&#x7684;&#x957F;&#x5EA6;n</strong></p>
+<p>&#x5220;&#x9664;&#x7B2C;i&#x4E2A;&#x5143;&#x7D20;&#xFF08;&#x4E0B;&#x6807;&#x4E3A;i-1&#xFF09;</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">Length</span><span class="hljs-params">(List Ptrl)</span></span>{
+    <span class="hljs-keyword">return</span> Ptrl-&gt;Last + <span class="hljs-number">1</span>;
+}
+</code></pre>
+<h4 id="3&#x5B8C;&#x6574;&#x4EE3;&#x7801;&#x6F14;&#x793A;">3.&#x5B8C;&#x6574;&#x4EE3;&#x7801;&#x6F14;&#x793A;</h4>
+<pre><code class="lang-cpp"><span class="hljs-comment">//&#x987A;&#x5E8F;&#x8868;</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;
+<span class="hljs-keyword">typedef</span> <span class="hljs-keyword">int</span> ElementType;
+<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> MAXSIZE = <span class="hljs-number">1000</span>;
+<span class="hljs-comment">// 1.&#x5B9A;&#x4E49;&#x90E8;&#x5206;</span>
+<span class="hljs-keyword">struct</span> LNode {
+    ElementType Data[MAXSIZE];  <span class="hljs-comment">//&#x5B58;&#x4E86;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#xFF0C;&#x5176;&#x6700;&#x591A;&#x80FD;&#x5B58;MAXSIZE&#x4E2A;&#x5143;&#x7D20;</span>
+    <span class="hljs-keyword">int</span> Last;                    <span class="hljs-comment">//&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x4E0B;&#x6807;&#xFF01;</span>
+};
+<span class="hljs-keyword">typedef</span> LNode *List;
+<span class="hljs-comment">// 2.&#x64CD;&#x4F5C;&#x51FD;&#x6570;</span>
+<span class="hljs-comment">//(1) &#x5EFA;&#x7ACB;&#x7A7A;&#x7EBF;&#x6027;&#x8868;</span>
+<span class="hljs-function">List <span class="hljs-title">MakeEmpty</span><span class="hljs-params">()</span> </span>{
+    List Ptrl;                                    <span class="hljs-comment">//&#x5EFA;&#x7ACB;</span>
+    Ptrl = <span class="hljs-keyword">new</span> <span class="hljs-keyword">struct</span> LNode;  <span class="hljs-comment">//&#x4E3A;&#x5176;&#x5206;&#x914D;&#x7B2C;&#x4E00;&#x4E2A;&#x7ED3;&#x70B9;&#x7684;&#x7A7A;&#x95F4;</span>
+    Ptrl-&gt;Last = <span class="hljs-number">-1</span>;  <span class="hljs-comment">//&#x8FD8;&#x672A;&#x5B58;&#x6570;&#x636E;&#xFF0C;&#x4E0B;&#x8FB9;&#x8BBE;&#x4E3A;-1</span>
+    <span class="hljs-keyword">return</span> Ptrl;      <span class="hljs-comment">//&#x8FD4;&#x56DE;&#x8BE5;&#x6307;&#x9488;</span>
+}
+<span class="hljs-comment">//(2) &#x67E5;&#x627E;&#x4E0B;&#x6807;&#x4E3A;K&#x7684;&#x5143;&#x7D20; &#x8FD4;&#x56DE;&#x4E0B;&#x6807;K&#x7684;&#x76F8;&#x5E94;&#x5143;&#x7D20;</span>
+<span class="hljs-function">ElementType <span class="hljs-title">FindKth</span><span class="hljs-params">(<span class="hljs-keyword">int</span> K, List Ptrl)</span> </span>{
+    <span class="hljs-keyword">return</span> Ptrl-&gt;Data[K];
+}
+<span class="hljs-comment">//(3) &#x67E5;&#x627E;&#x5143;&#x7D20;X &#x8FD4;&#x56DE;&#x4E0B;&#x6807; &#x672A;&#x627E;&#x5230;&#x8FD4;&#x56DE;-1</span>
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">Find</span><span class="hljs-params">(ElementType X, List Ptrl)</span> </span>{
+    <span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">while</span> (i &lt;= Ptrl-&gt;Last &amp;&amp; Ptrl-&gt;Data[i] != X) {
+        i++;
+    }
+    <span class="hljs-keyword">if</span> (i &gt; Ptrl-&gt;Last)
+        <span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>;
+    <span class="hljs-keyword">else</span>
+        <span class="hljs-keyword">return</span> i;
+}
+<span class="hljs-comment">//(4) &#x63D2;&#x5165;&#x5143;&#x7D20;X &#x5728;&#x7B2C;i(1 &#x2264; i &#x2264; n+1)&#x4E2A;&#x4F4D;&#x7F6E;&#x4E0A;&#x63D2;&#x5165;&#x4E00;&#x4E2A;&#x503C;&#x4E3A;X&#x7684;&#x65B0;&#x5143;&#x7D20;</span>
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Insert</span><span class="hljs-params">(ElementType X, <span class="hljs-keyword">int</span> i, List Ptrl)</span> </span>{
+    <span class="hljs-keyword">if</span> (Ptrl-&gt;Last == MAXSIZE - <span class="hljs-number">1</span>) {  <span class="hljs-comment">//&#x8868;&#x7A7A;&#x95F4;&#x5DF2;&#x6EE1;&#xFF0C;&#x5219;&#x4E0D;&#x80FD;&#x63D2;&#x5165;</span>
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;&#x8868;&#x6EE1;&quot;</span>);
+        <span class="hljs-keyword">return</span>;
+    }
+    <span class="hljs-keyword">if</span> (i &lt; <span class="hljs-number">1</span> || i &gt; Ptrl-&gt;Last + <span class="hljs-number">2</span>) {  <span class="hljs-comment">//&#x68C0;&#x67E5;&#x8F93;&#x5165;&#x662F;&#x5426;&#x5408;&#x6CD5;</span>
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;&#x4F4D;&#x7F6E;&#x4E0D;&#x5408;&#x6CD5;&quot;</span>);
+        <span class="hljs-keyword">return</span>;
+    }
+    <span class="hljs-keyword">int</span> j;
+    <span class="hljs-keyword">for</span> (j = Ptrl-&gt;Last; j &gt;= i - <span class="hljs-number">1</span>; j--)  <span class="hljs-comment">//&#x6CE8;&#x610F;&#x8FD9;&#x91CC;&#x987A;&#x5E8F;&#x4E0D;&#x80FD;&#x4ECE;&#x524D;&#x5F80;&#x540E;</span>
+        Ptrl-&gt;Data[j + <span class="hljs-number">1</span>] = Ptrl-&gt;Data[j];
+    Ptrl-&gt;Data[i - <span class="hljs-number">1</span>] = X;
+    Ptrl-&gt;Last++;  <span class="hljs-comment">// last&#x4ECD;&#x6307;&#x5411;&#x6700;&#x540E;&#x5143;&#x7D20;&#xFF01;</span>
+    <span class="hljs-keyword">return</span>;
+}
+<span class="hljs-comment">//(5) &#x5220;&#x9664; &#x5220;&#x9664;&#x7B2C;i&#x4E2A;&#x5143;&#x7D20;&#xFF08;&#x4E0B;&#x6807;&#x4E3A;i-1&#xFF09;</span>
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Delete</span><span class="hljs-params">(<span class="hljs-keyword">int</span> i, List Ptrl)</span> </span>{
+    <span class="hljs-keyword">int</span> j;
+    <span class="hljs-keyword">if</span> (i &lt; <span class="hljs-number">1</span> || i &gt; Ptrl-&gt;Last + <span class="hljs-number">1</span>) {  <span class="hljs-comment">//&#x68C0;&#x67E5;&#x8F93;&#x5165;&#x662F;&#x5426;&#x5408;&#x6CD5;</span>
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;&#x4E0D;&#x5B58;&#x5728;&#x7B2C;%d&#x4E2A;&#x5143;&#x7D20;&quot;</span>, i);
+        <span class="hljs-keyword">return</span>;
+    }
+    <span class="hljs-keyword">for</span> (j = i; j &lt;= Ptrl-&gt;Last; j++)  <span class="hljs-comment">//&#x5220;&#x9664;&#x64CD;&#x4F5C;&#x5C31;&#x5FC5;&#x987B;&#x4ECE;&#x524D;&#x5F80;&#x540E;&#x4E86;</span>
+        Ptrl-&gt;Data[j - <span class="hljs-number">1</span>] = Ptrl-&gt;Data[j];
+    Ptrl-&gt;Last--;
+    <span class="hljs-keyword">return</span>;
+}
+<span class="hljs-comment">//(6) &#x8FD4;&#x56DE;&#x7EBF;&#x6027;&#x8868;&#x7684;&#x957F;&#x5EA6;n</span>
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">Length</span><span class="hljs-params">(List Ptrl)</span></span>{
+    <span class="hljs-keyword">return</span> Ptrl-&gt;Last + <span class="hljs-number">1</span>;
+}
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
+    List P;
+    P = MakeEmpty();
+    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">10</span>; i++){
+        Insert(i,i+<span class="hljs-number">1</span>,P);
+    }
+    <span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;&#x8BE5;&#x987A;&#x5E8F;&#x8868;&#x957F;&#x5EA6;&#x4E3A;&#xFF1A;&quot;</span> &lt;&lt; Length(P) &lt;&lt; <span class="hljs-built_in">endl</span>;
+    <span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;&#x7B2C;5&#x4E2A;&#x5143;&#x7D20;&#x4E3A;&#xFF1A;&quot;</span> &lt;&lt; FindKth(<span class="hljs-number">4</span>,P) &lt;&lt; <span class="hljs-built_in">endl</span>;
+    <span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;--&#x5220;&#x9664;&#x7B2C;4&#x4E2A;&#x5143;&#x7D20;--&quot;</span> &lt;&lt; <span class="hljs-built_in">endl</span>;
+    Delete(<span class="hljs-number">4</span>,P);
+    <span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;&#x5220;&#x9664;&#x540E;&#x7B2C;5&#x4E2A;&#x5143;&#x7D20;&#x4E3A;&#xFF1A;&quot;</span> &lt;&lt; FindKth(<span class="hljs-number">4</span>,P) &lt;&lt; <span class="hljs-built_in">endl</span>;
+    <span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;&#x8868;&#x4E2D;&#x662F;&#x5426;&#x6709;&#x5143;&#x7D20;3(&#x6709;&#x5219;&#x663E;&#x793A;&#x5176;&#x4E0B;&#x6807;&#x65E0;&#x5219;&#x663E;&#x793A;-1)&#xFF1A;&quot;</span> &lt;&lt; Find(<span class="hljs-number">3</span>,P) &lt;&lt; <span class="hljs-built_in">endl</span>;
+    <span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;&#x8868;&#x4E2D;&#x662F;&#x5426;&#x6709;&#x5143;&#x7D20;5(&#x6709;&#x5219;&#x663E;&#x793A;&#x5176;&#x4E0B;&#x6807;&#x65E0;&#x5219;&#x663E;&#x793A;-1)&#xFF1A;&quot;</span> &lt;&lt; Find(<span class="hljs-number">5</span>,P) &lt;&lt; <span class="hljs-built_in">endl</span>;
+    <span class="hljs-keyword">delete</span> [] P;
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<p>&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#x4E3A;&#xFF1A;</p>
+<blockquote>
+<p>&#x8BE5;&#x987A;&#x5E8F;&#x8868;&#x957F;&#x5EA6;&#x4E3A;&#xFF1A;10 &#x7B2C;5&#x4E2A;&#x5143;&#x7D20;&#x4E3A;&#xFF1A;4 --&#x5220;&#x9664;&#x7B2C;4&#x4E2A;&#x5143;&#x7D20;-- &#x5220;&#x9664;&#x540E;&#x7B2C;5&#x4E2A;&#x5143;&#x7D20;&#x4E3A;&#xFF1A;5 &#x8868;&#x4E2D;&#x662F;&#x5426;&#x6709;&#x5143;&#x7D20;3(&#x6709;&#x5219;&#x663E;&#x793A;&#x5176;&#x4E0B;&#x6807;&#x65E0;&#x5219;&#x663E;&#x793A;-1)&#xFF1A;-1 &#x8868;&#x4E2D;&#x662F;&#x5426;&#x6709;&#x5143;&#x7D20;5(&#x6709;&#x5219;&#x663E;&#x793A;&#x5176;&#x4E0B;&#x6807;&#x65E0;&#x5219;&#x663E;&#x793A;-1)&#xFF1A;4</p>
+</blockquote>
+<h3 id="&#x4E09;&#x3001;&#x7EBF;&#x6027;&#x8868;&#x7684;&#x94FE;&#x5F0F;&#x5B58;&#x50A8;">&#x4E09;&#x3001;&#x7EBF;&#x6027;&#x8868;&#x7684;&#x94FE;&#x5F0F;&#x5B58;&#x50A8;</h3>
+<p>&#x91CD;&#x8981;&#xFF01;&#xFF01;&#x94FE;&#x8868;&#x5373;&#x4E0D;&#x8981;&#x6C42;&#x903B;&#x8F91;&#x4E0A;&#x76F8;&#x90BB;&#x7684;&#x4E24;&#x4E2A;&#x5143;&#x7D20;&#x7269;&#x7406;&#x4E0A;&#x4E5F;&#x76F8;&#x90BB;&#xFF0C;&#x901A;&#x8FC7;&quot;&#x94FE;&quot;&#x5EFA;&#x7ACB;&#x8D77;&#x6570;&#x636E;&#x5143;&#x7D20;&#x4E4B;&#x95F4;&#x7684;&#x903B;&#x8F91;&#x5173;&#x7CFB;&#x3002; &#x5176;&#x63D2;&#x5165;&#x548C;&#x5220;&#x9664;&#x4E0D;&#x9700;&#x8981;&#x79FB;&#x52A8;&#x6570;&#x636E;&#x5143;&#x7D20;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x4FEE;&#x6539;&#x94FE;&#x3002;</p>
+<h4 id="1&#x5B9A;&#x4E49;">1.&#x5B9A;&#x4E49;</h4>
+<pre><code class="lang-cpp"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span> LNode *List;
+<span class="hljs-keyword">struct</span> LNode {
+    ElementType Data;
+    List Next;<span class="hljs-comment">//&#x5B58;&#x653E;&#x6307;&#x5411;&#x4E0B;&#x4E00;&#x4E2A;&#x7ED3;&#x70B9;&#x7684;&#x6307;&#x9488;</span>
+}L;
+List PtrL;
+</code></pre>
+<h4 id="2&#x64CD;&#x4F5C;">2.&#x64CD;&#x4F5C;</h4>
+<p>&#x5176;&#x57FA;&#x672C;&#x64CD;&#x4F5C;&#x6709;</p>
+<blockquote>
+<p><strong>1.List Insert(ElementType X, int i, List PtrL) ;//&#x63D2;&#x5165;(&#x5728;&#x7B2C;i-1(1&lt;=i&lt;=n+1)&#x4E2A;&#x7ED3;&#x70B9;&#x540E;&#x63D2;&#x5165;&#x4E00;&#x4E2A;&#x503C;&#x4E3A;X&#x7684;&#x65B0;&#x7ED3;&#x70B9;) 2.List FindKth(int K, List PtrL) ;//&#x6309;&#x5E8F;&#x53F7;&#x67E5;&#x627E;&#x67E5;&#x627E; &#x67E5;&#x627E;&#x94FE;&#x8868;&#x4E2D;&#x7B2C;K&#x4E2A;&#x5143;&#x7D20; List Find(ElementType X, List PtrL) ; //&#x6309;&#x503C;&#x67E5;&#x627E;: &#x67E5;&#x627E;&#x5143;&#x7D20;K 3.List Delete(int i, List PtrL);//&#x5220;&#x9664;&#x64CD;&#x4F5C;(&#x5220;&#x9664;&#x94FE;&#x8868;&#x7B2C;i&#x4E2A;&#x4F4D;&#x7F6E;&#x4E0A;&#x7684;&#x7ED3;&#x70B9;) 4.int Length(List PtrL)//&#x6C42;&#x8868;&#x957F;</strong></p>
+</blockquote>
+<p><strong>(1)&#x63D2;&#x5165;&#x64CD;&#x4F5C;</strong></p>
+<p>&#x5728;&#x7B2C;i-1(1 &#x2264; i &#x2264; n+1)&#x4E2A;&#x7ED3;&#x70B9;&#x540E;&#x63D2;&#x5165;&#x4E00;&#x4E2A;&#x503C;&#x4E3A;X&#x7684;&#x65B0;&#x7ED3;&#x70B9; (1)&#x5148;&#x6784;&#x9020;&#x4E00;&#x4E2A;&#x65B0;&#x7ED3;&#x70B9;&#xFF0C;&#x7528;s&#x6307;&#x5411; //malloc&#x5206;&#x914D;&#x7A7A;&#x95F4; &#x5C06;s&#x7684;&#x6570;&#x636E;Data&#x8D4B;&#x503C;&#x4E3A;X (2)&#x518D;&#x627E;&#x5230;&#x94FE;&#x8868;&#x7684;&#x7B2C;i-1&#x4E2A;&#x7ED3;&#x70B9;&#xFF0C;&#x7528;p&#x6307;&#x5411; (3)&#x7136;&#x540E;&#x4FEE;&#x6539;&#x6307;&#x9488;&#xFF0C;&#x63D2;&#x5165;&#x7ED3;&#x70B9;(p&#x4E4B;&#x540E;&#x63D2;&#x5165;&#x65B0;&#x7ED3;&#x70B9;&#x662F;s) // &#x5148;&#x5C06;p&#x539F;&#x5148;&#x7684;&#x6307;&#x5411;next&#x7ED9;s&#x7684;next&#x6307;&#x9488;&#xFF0C;&#x518D;&#x5C06;p&#x7684;next&#x6307;&#x9488;&#x6307;&#x5411;s</p>
+<pre><code class="lang-cpp"><span class="hljs-function">List <span class="hljs-title">Insert</span><span class="hljs-params">(ElementType X, <span class="hljs-keyword">int</span> i, List PtrL)</span> </span>{
+    List p, s;
+    <span class="hljs-keyword">if</span>(i == <span class="hljs-number">1</span>) {<span class="hljs-comment">//&#x65B0;&#x8282;&#x70B9;&#x63D2;&#x5165;&#x5230;&#x8868;&#x5934;</span>
+        s = (List)<span class="hljs-built_in">malloc</span>(<span class="hljs-keyword">sizeof</span>(<span class="hljs-keyword">struct</span> LNode));<span class="hljs-comment">//&#x7533;&#x8BF7;&#x3001;&#x586B;&#x88C5;&#x8282;&#x70B9;</span>
+        s-&gt;Data = X;
+        s-&gt;Next = PtrL;
+        <span class="hljs-keyword">return</span> s;       <span class="hljs-comment">//&#x8FD4;&#x56DE;&#x65B0;&#x8868;&#x5934;&#x6307;&#x9488;</span>
+    }
+    p = Find(i<span class="hljs-number">-1</span>,PtrL);         <span class="hljs-comment">//&#x67E5;&#x627E;&#x7B2C;i-1&#x4E2A;&#x7ED3;&#x70B9;</span>
+    <span class="hljs-keyword">if</span>(p == <span class="hljs-literal">NULL</span>) {             <span class="hljs-comment">//&#x7B2C;i-1&#x4E2A;&#x4E0D;&#x5B58;&#x5728; &#x65E0;&#x6CD5;&#x63D2;&#x5165;</span>
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;&#x53C2;&#x6570;i&#x9519;&quot;</span>);
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">NULL</span>;
+    } <span class="hljs-keyword">else</span> {
+        s = (List)<span class="hljs-built_in">malloc</span>(<span class="hljs-keyword">sizeof</span>(<span class="hljs-keyword">struct</span> LNode)); <span class="hljs-comment">//&#x7533;&#x8BF7;&#x3001;&#x586B;&#x88C5;&#x7ED3;&#x70B9;</span>
+        s-&gt;Data = X;
+        s-&gt;Next = p-&gt;Next;          <span class="hljs-comment">//&#x65B0;&#x8282;&#x70B9;&#x63D2;&#x5165;&#x5728;&#x7B2C;i-1&#x4E2A;&#x8282;&#x70B9;&#x7684;&#x540E;&#x9762;</span>
+        p-&gt;Next = s;
+        <span class="hljs-keyword">return</span> PtrL;
+    }
+}
+</code></pre>
+<p><strong>(2)&#x67E5;&#x627E;</strong></p>
+<p>&#x627E;&#x5230;&#x5219;&#x8FD4;&#x56DE;&#x6307;&#x5411;&#x8BE5;&#x7ED3;&#x70B9;&#x7684;&#x6307;&#x9488;&#xFF0C;&#x627E;&#x4E0D;&#x5230;&#x8FD4;&#x56DE;NULL</p>
+<p><strong>1.&#x6309;&#x503C;&#x67E5;&#x627E;:Find</strong></p>
+<p>&#x6309;&#x503C;&#x67E5;&#x627E;: &#x67E5;&#x627E;&#x5143;&#x7D20;K</p>
+<pre><code class="lang-cpp"><span class="hljs-function">List <span class="hljs-title">Find</span><span class="hljs-params">(ElementType X, List PtrL)</span> </span>{
+    List p = PtrL;
+    <span class="hljs-keyword">while</span>(p != <span class="hljs-literal">NULL</span> &amp;&amp; p-&gt;Data != X) 
+        p = p-&gt;Next;
+    <span class="hljs-keyword">if</span>(p == <span class="hljs-literal">NULL</span>) {          
+        <span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;&#x627E;&#x4E0D;&#x5230;&#x8BE5;&#x5143;&#x7D20;&quot;</span> &lt;&lt; <span class="hljs-built_in">endl</span>;
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">NULL</span>;
+    } <span class="hljs-keyword">else</span>  <span class="hljs-keyword">return</span> p;
+}
+</code></pre>
+<p><strong>2.&#x6309;&#x5E8F;&#x53F7;&#x67E5;&#x627E;&#xFF1A;FindKth</strong></p>
+<p>&#x6309;&#x5E8F;&#x53F7;&#x67E5;&#x627E;&#x67E5;&#x627E; &#x67E5;&#x627E;&#x94FE;&#x8868;&#x4E2D;&#x7B2C;K&#x4E2A;&#x5143;&#x7D20;</p>
+<pre><code class="lang-cpp"><span class="hljs-function">List <span class="hljs-title">FindKth</span><span class="hljs-params">(<span class="hljs-keyword">int</span> K, List PtrL)</span> </span>{
+    List p = PtrL;
+    <span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>;
+    <span class="hljs-keyword">while</span> (p != <span class="hljs-literal">NULL</span> &amp;&amp; i &lt; K) {
+        p = p-&gt;Next;
+        i++;
+    }
+    <span class="hljs-keyword">if</span>(i == K) <span class="hljs-keyword">return</span> p;<span class="hljs-comment">//&#x627E;&#x5230;&#x7B2C;K&#x4E2A;&#x8FD4;&#x56DE;&#x6307;&#x9488;</span>
+    <span class="hljs-keyword">else</span> {              <span class="hljs-comment">//&#x5426;&#x5219;&#x8FD4;&#x56DE;&#x7A7A;&#x6307;&#x9488;</span>
+        <span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;&#x627E;&#x4E0D;&#x5230;&#x8BE5;&#x5143;&#x7D20;&quot;</span> &lt;&lt; <span class="hljs-built_in">endl</span>;
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">NULL</span>;
+    }
+}
+</code></pre>
+<p><strong>(3)&#x5220;&#x9664;&#x64CD;&#x4F5C;</strong></p>
+<p>&#x5220;&#x9664;&#x94FE;&#x8868;&#x7B2C;i&#x4E2A;&#x4F4D;&#x7F6E;&#x4E0A;&#x7684;&#x7ED3;&#x70B9; (1)&#x5148;&#x627E;&#x5230;&#x94FE;&#x8868;&#x7684;&#x7B2C;i-1&#x4E2A;&#x7ED3;&#x70B9;&#xFF0C;&#x7528;p&#x6307;&#x5411;;//Find(i-1,PtrL); (2)&#x518D;&#x7528;&#x6307;&#x9488;s&#x6307;&#x5411;&#x8981;&#x88AB;&#x5220;&#x9664;&#x7684;&#x7ED3;&#x70B9;(p&#x7684;&#x4E0B;&#x4E00;&#x4E2A;&#x7ED3;&#x70B9;)//s = p-&gt;Next; (3)&#x7136;&#x540E;&#x4FEE;&#x6539;&#x6307;&#x9488;&#xFF0C;&#x5220;&#x9664;s&#x6240;&#x6307;&#x5411;&#x7684;&#x7ED3;&#x70B9;//p-&gt;Next = s-&gt;Next; (4)&#x6700;&#x540E;&#x91CA;&#x653E;s&#x6240;&#x6307;&#x7ED3;&#x70B9;&#x7684;&#x7A7A;&#x95F4;&#xFF01; //free(s)</p>
+<pre><code class="lang-cpp"><span class="hljs-function">List <span class="hljs-title">Delete</span><span class="hljs-params">(<span class="hljs-keyword">int</span> i, List PtrL)</span> </span>{
+    List p, s;
+    <span class="hljs-keyword">if</span>( i == <span class="hljs-number">1</span>) {   <span class="hljs-comment">//&#x82E5;&#x8981;&#x5220;&#x9664;&#x7684;&#x662F;&#x8868;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x7ED3;&#x70B9;</span>
+        s = PtrL;           <span class="hljs-comment">//s&#x6307;&#x5411;&#x7B2C;1&#x4E2A;&#x7ED3;&#x70B9;</span>
+        <span class="hljs-keyword">if</span> (PtrL != <span class="hljs-literal">NULL</span>)   PtrL = PtrL-&gt;Next;  <span class="hljs-comment">//&#x4ECE;&#x94FE;&#x8868;&#x4E2D;&#x5220;&#x9664;</span>
+        <span class="hljs-keyword">else</span> <span class="hljs-keyword">return</span> <span class="hljs-literal">NULL</span>;
+        <span class="hljs-built_in">free</span>(s);                            <span class="hljs-comment">//&#x91CA;&#x653E;&#x88AB;&#x5220;&#x9664;&#x7ED3;&#x70B9;</span>
+        <span class="hljs-keyword">return</span> PtrL;
+    }
+    p = FindKth(i<span class="hljs-number">-1</span>, PtrL);     <span class="hljs-comment">//&#x67E5;&#x627E;&#x7B2C;i-1&#x4E2A;&#x7ED3;&#x70B9;</span>
+    <span class="hljs-keyword">if</span> (p == <span class="hljs-literal">NULL</span>) {
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;&#x7B2C;%d&#x4E2A;&#x7ED3;&#x70B9;&#x4E0D;&#x5B58;&#x5728;&quot;</span>, i<span class="hljs-number">-1</span>);
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">NULL</span>;
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (p-&gt;Next == <span class="hljs-literal">NULL</span>) {
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;&#x7B2C;%d&#x4E2A;&#x7ED3;&#x70B9;&#x4E0D;&#x5B58;&#x5728;&quot;</span>,i);
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">NULL</span>;
+    } <span class="hljs-keyword">else</span> {
+        s = p-&gt;Next;            <span class="hljs-comment">//s&#x6307;&#x5411;&#x7B2C;i&#x4E2A;&#x7ED3;&#x70B9;</span>
+        p-&gt;Next = s-&gt;Next;      <span class="hljs-comment">//&#x4ECE;&#x94FE;&#x8868;&#x4E2D;&#x5220;&#x9664;</span>
+        <span class="hljs-built_in">free</span>(s);                <span class="hljs-comment">//&#x91CA;&#x653E;&#x88AB;&#x5220;&#x9664;&#x7ED3;&#x70B9;&#x7684;&#x7A7A;&#x95F4;</span>
+        <span class="hljs-keyword">return</span> PtrL;
+    }
+}
+</code></pre>
+<p><strong>(4)&#x6C42;&#x8868;&#x957F;</strong></p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">Length</span><span class="hljs-params">(List PtrL)</span> </span>{
+    List p = PtrL;<span class="hljs-comment">//p&#x6307;&#x5411;&#x8868;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x8282;&#x70B9;</span>
+    <span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">while</span>(p) {
+        p = p-&gt;Next;
+        j++;
+    }
+    <span class="hljs-keyword">return</span> j;
+}
+</code></pre>
+<h4 id="3&#x5B8C;&#x6574;&#x4EE3;&#x7801;&#x6F14;&#x793A;">3.&#x5B8C;&#x6574;&#x4EE3;&#x7801;&#x6F14;&#x793A;</h4>
+<pre><code class="lang-cpp"><span class="hljs-comment">//&#x94FE;&#x8868;</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;
+<span class="hljs-keyword">typedef</span> <span class="hljs-keyword">int</span> ElementType;
+<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> MAXSIZE = <span class="hljs-number">1000</span>;
+<span class="hljs-comment">// 1.&#x5B9A;&#x4E49;&#x90E8;&#x5206;</span>
+<span class="hljs-keyword">struct</span> LNode;
+<span class="hljs-keyword">typedef</span> LNode *List;
+<span class="hljs-keyword">struct</span> LNode {
+    ElementType Data;
+    List Next;  <span class="hljs-comment">//&#x5B58;&#x653E;&#x6307;&#x5411;&#x4E0B;&#x4E00;&#x4E2A;&#x7ED3;&#x70B9;&#x7684;&#x6307;&#x9488;</span>
+};
+<span class="hljs-function">List <span class="hljs-title">Insert</span><span class="hljs-params">(ElementType X,<span class="hljs-keyword">int</span> i,List PtrL)</span></span>;  
+<span class="hljs-comment">//&#x63D2;&#x5165;(&#x5728;&#x7B2C;i-1(1&lt;=i&lt;=n+1)&#x4E2A;&#x7ED3;&#x70B9;&#x540E;&#x63D2;&#x5165;&#x4E00;&#x4E2A;&#x503C;&#x4E3A;X&#x7684;&#x65B0;&#x7ED3;&#x70B9;)</span>
+<span class="hljs-function">List <span class="hljs-title">FindKth</span><span class="hljs-params">(<span class="hljs-keyword">int</span> K, List PtrL)</span></span>;  <span class="hljs-comment">//&#x6309;&#x5E8F;&#x53F7;&#x67E5;&#x627E;&#x67E5;&#x627E; &#x67E5;&#x627E;&#x94FE;&#x8868;&#x4E2D;&#x7B2C;K&#x4E2A;&#x5143;&#x7D20;</span>
+<span class="hljs-function">List <span class="hljs-title">Find</span><span class="hljs-params">(ElementType X, List PtrL)</span></span>;  <span class="hljs-comment">//&#x6309;&#x503C;&#x67E5;&#x627E;: &#x67E5;&#x627E;&#x5143;&#x7D20;K</span>
+<span class="hljs-function">List <span class="hljs-title">Delete</span><span class="hljs-params">(<span class="hljs-keyword">int</span> i, List PtrL)</span></span>;  <span class="hljs-comment">//&#x5220;&#x9664;&#x64CD;&#x4F5C;(&#x5220;&#x9664;&#x94FE;&#x8868;&#x7B2C;i&#x4E2A;&#x4F4D;&#x7F6E;&#x4E0A;&#x7684;&#x7ED3;&#x70B9;)</span>
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">Length</span><span class="hljs-params">(List PtrL)</span></span>;            <span class="hljs-comment">//&#x6C42;&#x8868;&#x957F;</span>
+<span class="hljs-comment">// 2.&#x64CD;&#x4F5C;&#x51FD;&#x6570;</span>
+<span class="hljs-comment">//(1) &#x63D2;&#x5165;&#x64CD;&#x4F5C; &#x5728;&#x7B2C;i-1(1 &#x2264; i &#x2264; n+1)&#x4E2A;&#x7ED3;&#x70B9;&#x540E;&#x63D2;&#x5165;&#x4E00;&#x4E2A;&#x503C;&#x4E3A;X&#x7684;&#x65B0;&#x7ED3;&#x70B9;</span>
+<span class="hljs-function">List <span class="hljs-title">Insert</span><span class="hljs-params">(ElementType X, <span class="hljs-keyword">int</span> i, List PtrL)</span> </span>{
+    List p, s;
+    <span class="hljs-keyword">if</span> (i == <span class="hljs-number">1</span>) {               <span class="hljs-comment">//&#x65B0;&#x8282;&#x70B9;&#x63D2;&#x5165;&#x5230;&#x8868;&#x5934;</span>
+        s = <span class="hljs-keyword">new</span> <span class="hljs-keyword">struct</span> LNode;  <span class="hljs-comment">//&#x7533;&#x8BF7;&#x3001;&#x586B;&#x88C5;&#x8282;&#x70B9;</span>
+        s-&gt;Data = X;
+        s-&gt;Next = PtrL;
+        <span class="hljs-keyword">return</span> s;  <span class="hljs-comment">//&#x8FD4;&#x56DE;&#x65B0;&#x8868;&#x5934;&#x6307;&#x9488;</span>
+    }
+    p = Find(i - <span class="hljs-number">1</span>, PtrL);  <span class="hljs-comment">//&#x67E5;&#x627E;&#x7B2C;i-1&#x4E2A;&#x7ED3;&#x70B9;</span>
+    <span class="hljs-keyword">if</span> (p == <span class="hljs-literal">NULL</span>) {        <span class="hljs-comment">//&#x7B2C;i-1&#x4E2A;&#x4E0D;&#x5B58;&#x5728; &#x65E0;&#x6CD5;&#x63D2;&#x5165;</span>
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;&#x53C2;&#x6570;i&#x9519;&quot;</span>);
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">NULL</span>;
+    } <span class="hljs-keyword">else</span> {
+        s = <span class="hljs-keyword">new</span> <span class="hljs-keyword">struct</span> LNode;  <span class="hljs-comment">//&#x7533;&#x8BF7;&#x3001;&#x586B;&#x88C5;&#x7ED3;&#x70B9;</span>
+        s-&gt;Data = X;
+        s-&gt;Next = p-&gt;Next;  <span class="hljs-comment">//&#x65B0;&#x8282;&#x70B9;&#x63D2;&#x5165;&#x5728;&#x7B2C;i-1&#x4E2A;&#x8282;&#x70B9;&#x7684;&#x540E;&#x9762;</span>
+        p-&gt;Next = s;
+        <span class="hljs-keyword">return</span> PtrL;
+    }
+}
+<span class="hljs-comment">//(2) &#x67E5;&#x627E; &#x627E;&#x5230;&#x5219;&#x8FD4;&#x56DE;&#x6307;&#x5411;&#x8BE5;&#x7ED3;&#x70B9;&#x7684;&#x6307;&#x9488;&#xFF0C;&#x627E;&#x4E0D;&#x5230;&#x8FD4;&#x56DE;NULL</span>
+<span class="hljs-function">List <span class="hljs-title">Find</span><span class="hljs-params">(ElementType X, List PtrL)</span> </span>{<span class="hljs-comment">//&#x6309;&#x503C;&#x67E5;&#x627E; &#x67E5;&#x627E;&#x5143;&#x7D20;X</span>
+    List p = PtrL;
+    <span class="hljs-keyword">while</span>(p != <span class="hljs-literal">NULL</span> &amp;&amp; p-&gt;Data != X) 
+        p = p-&gt;Next;
+    <span class="hljs-keyword">if</span>(p == <span class="hljs-literal">NULL</span>) {          
+        <span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;&#x627E;&#x4E0D;&#x5230;&#x8BE5;&#x5143;&#x7D20;&quot;</span> &lt;&lt; <span class="hljs-built_in">endl</span>;
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">NULL</span>;
+    } <span class="hljs-keyword">else</span>  <span class="hljs-keyword">return</span> p;
+}
+<span class="hljs-function">List <span class="hljs-title">FindKth</span><span class="hljs-params">(<span class="hljs-keyword">int</span> K, List PtrL)</span> </span>{<span class="hljs-comment">//&#x6309;&#x5E8F;&#x53F7;&#x67E5;&#x627E; &#x67E5;&#x627E;&#x7B2C;K&#x4E2A;&#x5143;&#x7D20;</span>
+    List p = PtrL;
+    <span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>;
+    <span class="hljs-keyword">while</span> (p != <span class="hljs-literal">NULL</span> &amp;&amp; i &lt; K) {
+        p = p-&gt;Next;
+        i++;
+    }
+    <span class="hljs-keyword">if</span>(i == K) <span class="hljs-keyword">return</span> p;<span class="hljs-comment">//&#x627E;&#x5230;&#x7B2C;K&#x4E2A;&#x8FD4;&#x56DE;&#x6307;&#x9488;</span>
+    <span class="hljs-keyword">else</span> {              <span class="hljs-comment">//&#x5426;&#x5219;&#x8FD4;&#x56DE;&#x7A7A;&#x6307;&#x9488;</span>
+        <span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;&#x627E;&#x4E0D;&#x5230;&#x8BE5;&#x5143;&#x7D20;&quot;</span> &lt;&lt; <span class="hljs-built_in">endl</span>;
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">NULL</span>;
+    }
+}
+<span class="hljs-comment">//(3) &#x5220;&#x9664; &#x5220;&#x9664;&#x94FE;&#x8868;&#x7B2C;i&#x4E2A;&#x4F4D;&#x7F6E;&#x4E0A;&#x7684;&#x7ED3;&#x70B9;</span>
+<span class="hljs-function">List <span class="hljs-title">Delete</span><span class="hljs-params">(<span class="hljs-keyword">int</span> i, List PtrL)</span> </span>{
+    List p, s;
+    <span class="hljs-keyword">if</span>( i == <span class="hljs-number">1</span>) {   <span class="hljs-comment">//&#x82E5;&#x8981;&#x5220;&#x9664;&#x7684;&#x662F;&#x8868;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x7ED3;&#x70B9;</span>
+        s = PtrL;           <span class="hljs-comment">//s&#x6307;&#x5411;&#x7B2C;1&#x4E2A;&#x7ED3;&#x70B9;</span>
+        <span class="hljs-keyword">if</span> (PtrL != <span class="hljs-literal">NULL</span>)   PtrL = PtrL-&gt;Next;  <span class="hljs-comment">//&#x4ECE;&#x94FE;&#x8868;&#x4E2D;&#x5220;&#x9664;</span>
+        <span class="hljs-keyword">else</span> <span class="hljs-keyword">return</span> <span class="hljs-literal">NULL</span>;
+        <span class="hljs-keyword">delete</span> [] s;                           <span class="hljs-comment">//&#x91CA;&#x653E;&#x88AB;&#x5220;&#x9664;&#x7ED3;&#x70B9;</span>
+        <span class="hljs-keyword">return</span> PtrL;
+    }
+    p = FindKth(i<span class="hljs-number">-1</span>, PtrL);     <span class="hljs-comment">//&#x67E5;&#x627E;&#x7B2C;i-1&#x4E2A;&#x7ED3;&#x70B9;</span>
+    <span class="hljs-keyword">if</span> (p == <span class="hljs-literal">NULL</span>) {
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;&#x7B2C;%d&#x4E2A;&#x7ED3;&#x70B9;&#x4E0D;&#x5B58;&#x5728;&quot;</span>, i<span class="hljs-number">-1</span>);
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">NULL</span>;
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (p-&gt;Next == <span class="hljs-literal">NULL</span>) {
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;&#x7B2C;%d&#x4E2A;&#x7ED3;&#x70B9;&#x4E0D;&#x5B58;&#x5728;&quot;</span>,i);
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">NULL</span>;
+    } <span class="hljs-keyword">else</span> {
+        s = p-&gt;Next;            <span class="hljs-comment">//s&#x6307;&#x5411;&#x7B2C;i&#x4E2A;&#x7ED3;&#x70B9;</span>
+        p-&gt;Next = s-&gt;Next;      <span class="hljs-comment">//&#x4ECE;&#x94FE;&#x8868;&#x4E2D;&#x5220;&#x9664;</span>
+        <span class="hljs-keyword">delete</span> [] s;                <span class="hljs-comment">//&#x91CA;&#x653E;&#x88AB;&#x5220;&#x9664;&#x7ED3;&#x70B9;&#x7684;&#x7A7A;&#x95F4;</span>
+        <span class="hljs-keyword">return</span> PtrL;
+    }
+}
+<span class="hljs-comment">//(4) &#x6C42;&#x8868;&#x957F;</span>
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">Length</span><span class="hljs-params">(List PtrL)</span> </span>{
+    List p = PtrL;<span class="hljs-comment">//p&#x6307;&#x5411;&#x8868;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x8282;&#x70B9;</span>
+    <span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">while</span>(p) {
+        p = p-&gt;Next;
+        j++;
+    }
+    <span class="hljs-keyword">return</span> j;
+}
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
+    List P = <span class="hljs-literal">NULL</span>;
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">10</span>; i++) {
+        P = Insert(i, <span class="hljs-number">1</span>, P);<span class="hljs-comment">// &#x5934;&#x63D2;&#x6CD5; &#x63D2;&#x5165;&#x5143;&#x7D20;&#x5728;&#x8868;&#x5934;</span>
+    }
+    List s;
+    <span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;&#x8BE5;&#x94FE;&#x8868;&#x957F;&#x5EA6;&#x4E3A;&#xFF1A;&quot;</span> &lt;&lt; Length(P) &lt;&lt; <span class="hljs-built_in">endl</span>;
+    <span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;&#x7B2C;4&#x4E2A;&#x5143;&#x7D20;&#x4E3A;&#xFF1A;&quot;</span>;
+    s = FindKth(<span class="hljs-number">4</span>, P);
+    <span class="hljs-keyword">if</span>(s) <span class="hljs-built_in">cout</span> &lt;&lt; s-&gt;Data &lt;&lt; <span class="hljs-built_in">endl</span>;
+    <span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;--&#x5220;&#x9664;&#x7B2C;4&#x4E2A;&#x5143;&#x7D20;--&quot;</span> &lt;&lt; <span class="hljs-built_in">endl</span>;
+    Delete(<span class="hljs-number">4</span>, P);
+    <span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;&#x5220;&#x9664;&#x540E;&#x7B2C;4&#x4E2A;&#x5143;&#x7D20;&#x4E3A;&#xFF1A;&quot;</span> ;
+    s = FindKth(<span class="hljs-number">4</span>, P);
+    <span class="hljs-keyword">if</span> (s) <span class="hljs-built_in">cout</span> &lt;&lt; s-&gt;Data &lt;&lt; <span class="hljs-built_in">endl</span>;
+    <span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;&#x8868;&#x4E2D;&#x662F;&#x5426;&#x6709;&#x5143;&#x7D20;6&#xFF1A;&quot;</span>;
+    s = Find(<span class="hljs-number">6</span>, P);
+    <span class="hljs-keyword">if</span> (s) <span class="hljs-built_in">cout</span> &lt;&lt; s-&gt;Data &lt;&lt; <span class="hljs-built_in">endl</span>;
+    <span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;&#x8868;&#x4E2D;&#x662F;&#x5426;&#x6709;&#x5143;&#x7D20;5&#xFF1A;&quot;</span>;
+    s = Find(<span class="hljs-number">5</span>, P);
+    <span class="hljs-keyword">if</span> (s) <span class="hljs-built_in">cout</span> &lt;&lt; s-&gt;Data &lt;&lt; <span class="hljs-built_in">endl</span>;
+    <span class="hljs-keyword">delete</span>[] P;
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<p>&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#x4E3A;&#xFF1A;</p>
+<blockquote>
+<p>&#x8BE5;&#x94FE;&#x8868;&#x957F;&#x5EA6;&#x4E3A;&#xFF1A;10 &#x7B2C;4&#x4E2A;&#x5143;&#x7D20;&#x4E3A;&#xFF1A;6 --&#x5220;&#x9664;&#x7B2C;4&#x4E2A;&#x5143;&#x7D20;-- &#x5220;&#x9664;&#x540E;&#x7B2C;4&#x4E2A;&#x5143;&#x7D20;&#x4E3A;&#xFF1A;5 &#x8868;&#x4E2D;&#x662F;&#x5426;&#x6709;&#x5143;&#x7D20;6&#xFF1A;&#x627E;&#x4E0D;&#x5230;&#x8BE5;&#x5143;&#x7D20; &#x8868;&#x4E2D;&#x662F;&#x5426;&#x6709;&#x5143;&#x7D20;5&#xFF1A;5</p>
+</blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: 数据结构">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="2-dui-zhan-stack.html" class="navigation navigation-next " aria-label="Next page: 2、堆栈（Stack）">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"description":"顺序表及链表","title":"1、线性表（List）","level":"3.2.1","depth":2,"next":{"title":"2、堆栈（Stack）","level":"3.2.2","depth":2,"path":"data-structures-and-algorithms/data-structure/2-dui-zhan-stack.md","ref":"data-structures-and-algorithms/data-structure/2-dui-zhan-stack.md","articles":[]},"previous":{"title":"数据结构","level":"3.2","depth":1,"path":"data-structures-and-algorithms/data-structure/README.md","ref":"data-structures-and-algorithms/data-structure/README.md","articles":[{"title":"1、线性表（List）","level":"3.2.1","depth":2,"path":"data-structures-and-algorithms/data-structure/1-xian-xing-biao-list.md","ref":"data-structures-and-algorithms/data-structure/1-xian-xing-biao-list.md","articles":[]},{"title":"2、堆栈（Stack）","level":"3.2.2","depth":2,"path":"data-structures-and-algorithms/data-structure/2-dui-zhan-stack.md","ref":"data-structures-and-algorithms/data-structure/2-dui-zhan-stack.md","articles":[]},{"title":"3、队列（Queue）","level":"3.2.3","depth":2,"path":"data-structures-and-algorithms/data-structure/3-dui-lie-queue.md","ref":"data-structures-and-algorithms/data-structure/3-dui-lie-queue.md","articles":[]},{"title":"4、二叉树（Binary Tree）","level":"3.2.4","depth":2,"path":"data-structures-and-algorithms/data-structure/4-er-cha-shu-binary-tree.md","ref":"data-structures-and-algorithms/data-structure/4-er-cha-shu-binary-tree.md","articles":[]},{"title":"5、二叉搜索树与平衡二叉树（BST & AVL）","level":"3.2.5","depth":2,"path":"data-structures-and-algorithms/data-structure/5-er-cha-sou-suo-shu-yu-ping-heng-er-cha-shu-bst-avl.md","ref":"data-structures-and-algorithms/data-structure/5-er-cha-sou-suo-shu-yu-ping-heng-er-cha-shu-bst-avl.md","articles":[]},{"title":"6、堆（Stack）& 哈夫曼树 & 并查集","level":"3.2.6","depth":2,"path":"data-structures-and-algorithms/data-structure/6-dui-stack-ha-fu-man-shu-bing-cha-ji.md","ref":"data-structures-and-algorithms/data-structure/6-dui-stack-ha-fu-man-shu-bing-cha-ji.md","articles":[]},{"title":"7、图（Graph）","level":"3.2.7","depth":2,"path":"data-structures-and-algorithms/data-structure/7-tu-graph/README.md","ref":"data-structures-and-algorithms/data-structure/7-tu-graph/README.md","articles":[{"title":"图论——解决最小生成树问题(Kruskal算法\\&Prim算法)","level":"3.2.7.1","depth":3,"path":"data-structures-and-algorithms/data-structure/7-tu-graph/tu-lun-jie-jue-zui-xiao-sheng-cheng-shu-wen-ti-kruskal-suan-fa-prim-suan-fa.md","ref":"data-structures-and-algorithms/data-structure/7-tu-graph/tu-lun-jie-jue-zui-xiao-sheng-cheng-shu-wen-ti-kruskal-suan-fa-prim-suan-fa.md","articles":[]}]},{"title":"8、排序（sort）","level":"3.2.8","depth":2,"path":"data-structures-and-algorithms/data-structure/8-pai-xu-sort.md","ref":"data-structures-and-algorithms/data-structure/8-pai-xu-sort.md","articles":[]},{"title":"9、散列表（hash）","level":"3.2.9","depth":2,"path":"data-structures-and-algorithms/data-structure/9-san-lie-biao-hash.md","ref":"data-structures-and-algorithms/data-structure/9-san-lie-biao-hash.md","articles":[]},{"title":"数据结构习题","level":"3.2.10","depth":2,"path":"data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/README.md","ref":"data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/README.md","articles":[{"title":"第一周：最大子列和算法、二分查找","level":"3.2.10.1","depth":3,"path":"data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-yi-zhou-zui-da-zi-lie-he-suan-fa-er-fen-cha-zhao.md","ref":"data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-yi-zhou-zui-da-zi-lie-he-suan-fa-er-fen-cha-zhao.md","articles":[]},{"title":"第二周：线性结构","level":"3.2.10.2","depth":3,"path":"data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-er-zhou-xian-xing-jie-gou.md","ref":"data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-er-zhou-xian-xing-jie-gou.md","articles":[]},{"title":"第三周：栽树（二叉树等）","level":"3.2.10.3","depth":3,"path":"data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-san-zhou-zai-shu-er-cha-shu-deng.md","ref":"data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-san-zhou-zai-shu-er-cha-shu-deng.md","articles":[]},{"title":"第四周：二叉搜索树&二叉平衡树","level":"3.2.10.4","depth":3,"path":"data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-si-zhou-er-cha-sou-suo-shu-er-cha-ping-heng-shu.md","ref":"data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-si-zhou-er-cha-sou-suo-shu-er-cha-ping-heng-shu.md","articles":[]},{"title":"第五周：堆&哈夫曼树&并查集","level":"3.2.10.5","depth":3,"path":"data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-wu-zhou-dui-ha-fu-man-shu-bing-cha-ji.md","ref":"data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-wu-zhou-dui-ha-fu-man-shu-bing-cha-ji.md","articles":[]},{"title":"第六周：图（上）连通集 、DFS\\&BFS","level":"3.2.10.6","depth":3,"path":"data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-liu-zhou-tu-shang-lian-tong-ji-dfsbfs.md","ref":"data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-liu-zhou-tu-shang-lian-tong-ji-dfsbfs.md","articles":[]},{"title":"第七周：图（中）Floyd算法求最短路","level":"3.2.10.7","depth":3,"path":"data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-qi-zhou-tu-zhong-floyd-suan-fa-qiu-zui-duan-lu.md","ref":"data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-qi-zhou-tu-zhong-floyd-suan-fa-qiu-zui-duan-lu.md","articles":[]},{"title":"第八周：图（下）","level":"3.2.10.8","depth":3,"path":"data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-ba-zhou-tu-xia.md","ref":"data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-ba-zhou-tu-xia.md","articles":[]},{"title":"第九周：排序（上）归并&堆排序","level":"3.2.10.9","depth":3,"path":"data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-jiu-zhou-pai-xu-shang-gui-bing-dui-pai-xu.md","ref":"data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-jiu-zhou-pai-xu-shang-gui-bing-dui-pai-xu.md","articles":[]},{"title":"第十周：排序（下）","level":"3.2.10.10","depth":3,"path":"data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-shi-zhou-pai-xu-xia.md","ref":"data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-shi-zhou-pai-xu-xia.md","articles":[]},{"title":"第十一周：散列查找 & KMP","level":"3.2.10.11","depth":3,"path":"data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-shi-yi-zhou-san-lie-cha-zhao-kmp.md","ref":"data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-shi-yi-zhou-san-lie-cha-zhao-kmp.md","articles":[]}]}]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"cos","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"cos的前端学习记录","language":"zh-hans","links":{"sidebar":{"cos的博客":"https://ysx.cosine.ren/","Github":"https://github.com/yusixian"}},"gitbook":"*","description":"主要分享自己的前端学习心得，与一些学习记录"},"file":{"path":"data-structures-and-algorithms/data-structure/1-xian-xing-biao-list.md","mtime":"2022-03-27T14:00:03.955Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-03-27T14:21:36.549Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

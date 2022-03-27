@@ -1,0 +1,1685 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Web开发的安全之旅 · cos的前端学习记录</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="【第二届青训营-寒假前端场】- Web开发的安全之旅">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="cos">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../tong-yong-zhi-shi/" />
+    
+    
+    <link rel="prev" href="http-shi-yong-zhi-nan.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://ysx.cosine.ren/" target="_blank" class="custom-link">cos的博客</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://github.com/yusixian" target="_blank" class="custom-link">Github</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    前言及目录
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">前端基础</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../javascript/">
+            
+                <a href="../javascript/">
+            
+                    
+                    JavaScript
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../javascript/gen-zhuo-yue-ying-xue-javascript.html">
+            
+                <a href="../javascript/gen-zhuo-yue-ying-xue-javascript.html">
+            
+                    
+                    跟着月影学JavaScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../javascript/prototype-and-inherit.html">
+            
+                <a href="../javascript/prototype-and-inherit.html">
+            
+                    
+                    JavaScript之对象、原型链及继承
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../javascript/javascript-zhong-de-lei.html">
+            
+                <a href="../javascript/javascript-zhong-de-lei.html">
+            
+                    
+                    JavaScript中的类
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../html.html">
+            
+                <a href="../html.html">
+            
+                    
+                    HTML
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../css/">
+            
+                <a href="../css/">
+            
+                    
+                    CSS
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="../css/css-xue-xi-zhi-bu-ju.html">
+            
+                <a href="../css/css-xue-xi-zhi-bu-ju.html">
+            
+                    
+                    CSS学习之布局
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    HTTP与浏览器
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1" data-path="http-shi-yong-zhi-nan.html">
+            
+                <a href="http-shi-yong-zhi-nan.html">
+            
+                    
+                    HTTP实用指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.4.2" data-path="web-kai-fa-de-an-quan-zhi-lv.html">
+            
+                <a href="web-kai-fa-de-an-quan-zhi-lv.html">
+            
+                    
+                    Web开发的安全之旅
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../tong-yong-zhi-shi/">
+            
+                <a href="../tong-yong-zhi-shi/">
+            
+                    
+                    通用知识
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.5.1" data-path="../tong-yong-zhi-shi/qian-duan-bi-xu-zhi-dao-de-kai-fa-tiao-shi-zhi-shi.html">
+            
+                <a href="../tong-yong-zhi-shi/qian-duan-bi-xu-zhi-dao-de-kai-fa-tiao-shi-zhi-shi.html">
+            
+                    
+                    前端必须知道的开发调试知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.2" data-path="../tong-yong-zhi-shi/qian-duan-she-ji-mo-shi-ying-yong.html">
+            
+                <a href="../tong-yong-zhi-shi/qian-duan-she-ji-mo-shi-ying-yong.html">
+            
+                    
+                    前端设计模式应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.3" data-path="../tong-yong-zhi-shi/web-biao-zhun-yu-qian-duan-kai-fa.html">
+            
+                <a href="../tong-yong-zhi-shi/web-biao-zhun-yu-qian-duan-kai-fa.html">
+            
+                    
+                    Web 标准与前端开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">数据结构及算法</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../data-structures-and-algorithms/leetcode/">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/">
+            
+                    
+                    LeetCode
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/">
+            
+                    
+                    冲刺春招-精选笔面试 66 题大通关
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1.1" data-path="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day1.html">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day1.html">
+            
+                    
+                    day1：21. 合并两个有序链表、146. LRU 缓存、25. K 个一组翻转链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.2" data-path="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day2.html">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day2.html">
+            
+                    
+                    day2：14. 最长公共前缀、3. 无重复字符的最长子串、124. 二叉树中的最大路径和
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.3" data-path="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day3.html">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day3.html">
+            
+                    
+                    day3：206. 反转链表、199. 二叉树的右视图、bytedance-016最短移动距离
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.4" data-path="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day4.html">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day4.html">
+            
+                    
+                    day4：1. 两数之和、15. 三数之和、42. 接雨水
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.5" data-path="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day5.html">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day5.html">
+            
+                    
+                    day5：7. 整数反转、215. 数组中的第K个最大元素、23. 合并K个升序链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.6" data-path="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day6.html">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day6.html">
+            
+                    
+                    day6：33. 搜索旋转排序数组、54. 螺旋矩阵、bytedance-006. 夏季特惠
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.7" data-path="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day7.html">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day7.html">
+            
+                    
+                    day7：53. 最大子数组和、152. 乘积最大子数组、41. 缺失的第一个正数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.8" data-path="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day8.html">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day8.html">
+            
+                    
+                    day8：20. 有效的括号、200. 岛屿数量、76. 最小覆盖子串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.9" data-path="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day9.html">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day9.html">
+            
+                    
+                    day9：105. 从前序与中序遍历序列构造二叉树、103. 二叉树的锯齿形层序遍历、bytedance-010. 数组组成最大数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.10" data-path="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day10.html">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day10.html">
+            
+                    
+                    day10：94. 二叉树的中序遍历、102. 二叉树的层序遍历、394. 字符串解码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.11" data-path="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day11.html">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day11.html">
+            
+                    
+                    day11：415. 字符串相加、5. 最长回文子串、72. 编辑距离
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.12" data-path="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day12.html">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day12.html">
+            
+                    
+                    day12：64. 最小路径和、300. 最长递增子序列、bytedance-004. 机器人跳跃问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.13" data-path="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day13.html">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day13.html">
+            
+                    
+                    day13：88. 合并两个有序数组、31. 下一个排列、4. 寻找两个正序数组的中位数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.14" data-path="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day14.html">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day14.html">
+            
+                    
+                    day14：121. 买卖股票的最佳时机、56. 合并区间、135. 分发糖果
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.15" data-path="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day15.html">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day15.html">
+            
+                    
+                    day15：232. 用栈实现队列、22. 括号生成、128. 最长连续序列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.16" data-path="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day16.html">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day16.html">
+            
+                    
+                    day16：bytedance-007. 化学公式解析、129. 求根节点到叶节点数字之和、239. 滑动窗口最大值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.17" data-path="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day17.html">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day17.html">
+            
+                    
+                    day17：141. 环形链表、236. 二叉树的最近公共祖先、92. 反转链表 II
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.18" data-path="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day18.html">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day18.html">
+            
+                    
+                    day18：322. 零钱兑换、198. 打家劫舍、 bytedance-003. 古生物血缘远近判定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.19" data-path="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day19.html">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day19.html">
+            
+                    
+                    day19：160. 相交链表、143. 重排链表、142. 环形链表 II
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.20" data-path="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day20.html">
+            
+                <a href="../../data-structures-and-algorithms/leetcode/leetcode-schedule-66/day20.html">
+            
+                    
+                    day20：704. 二分查找、43. 字符串相乘、bytedance-002. 发下午茶
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../../data-structures-and-algorithms/data-structure/">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/">
+            
+                    
+                    数据结构
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="../../data-structures-and-algorithms/data-structure/1-xian-xing-biao-list.html">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/1-xian-xing-biao-list.html">
+            
+                    
+                    1、线性表（List）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2" data-path="../../data-structures-and-algorithms/data-structure/2-dui-zhan-stack.html">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/2-dui-zhan-stack.html">
+            
+                    
+                    2、堆栈（Stack）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.3" data-path="../../data-structures-and-algorithms/data-structure/3-dui-lie-queue.html">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/3-dui-lie-queue.html">
+            
+                    
+                    3、队列（Queue）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.4" data-path="../../data-structures-and-algorithms/data-structure/4-er-cha-shu-binary-tree.html">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/4-er-cha-shu-binary-tree.html">
+            
+                    
+                    4、二叉树（Binary Tree）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.5" data-path="../../data-structures-and-algorithms/data-structure/5-er-cha-sou-suo-shu-yu-ping-heng-er-cha-shu-bst-avl.html">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/5-er-cha-sou-suo-shu-yu-ping-heng-er-cha-shu-bst-avl.html">
+            
+                    
+                    5、二叉搜索树与平衡二叉树（BST & AVL）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.6" data-path="../../data-structures-and-algorithms/data-structure/6-dui-stack-ha-fu-man-shu-bing-cha-ji.html">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/6-dui-stack-ha-fu-man-shu-bing-cha-ji.html">
+            
+                    
+                    6、堆（Stack）& 哈夫曼树 & 并查集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.7" data-path="../../data-structures-and-algorithms/data-structure/7-tu-graph/">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/7-tu-graph/">
+            
+                    
+                    7、图（Graph）
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.7.1" data-path="../../data-structures-and-algorithms/data-structure/7-tu-graph/tu-lun-jie-jue-zui-xiao-sheng-cheng-shu-wen-ti-kruskal-suan-fa-prim-suan-fa.html">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/7-tu-graph/tu-lun-jie-jue-zui-xiao-sheng-cheng-shu-wen-ti-kruskal-suan-fa-prim-suan-fa.html">
+            
+                    
+                    图论——解决最小生成树问题(Kruskal算法\&Prim算法)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.8" data-path="../../data-structures-and-algorithms/data-structure/8-pai-xu-sort.html">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/8-pai-xu-sort.html">
+            
+                    
+                    8、排序（sort）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.9" data-path="../../data-structures-and-algorithms/data-structure/9-san-lie-biao-hash.html">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/9-san-lie-biao-hash.html">
+            
+                    
+                    9、散列表（hash）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10" data-path="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/">
+            
+                    
+                    数据结构习题
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.10.1" data-path="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-yi-zhou-zui-da-zi-lie-he-suan-fa-er-fen-cha-zhao.html">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-yi-zhou-zui-da-zi-lie-he-suan-fa-er-fen-cha-zhao.html">
+            
+                    
+                    第一周：最大子列和算法、二分查找
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10.2" data-path="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-er-zhou-xian-xing-jie-gou.html">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-er-zhou-xian-xing-jie-gou.html">
+            
+                    
+                    第二周：线性结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10.3" data-path="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-san-zhou-zai-shu-er-cha-shu-deng.html">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-san-zhou-zai-shu-er-cha-shu-deng.html">
+            
+                    
+                    第三周：栽树（二叉树等）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10.4" data-path="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-si-zhou-er-cha-sou-suo-shu-er-cha-ping-heng-shu.html">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-si-zhou-er-cha-sou-suo-shu-er-cha-ping-heng-shu.html">
+            
+                    
+                    第四周：二叉搜索树&二叉平衡树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10.5" data-path="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-wu-zhou-dui-ha-fu-man-shu-bing-cha-ji.html">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-wu-zhou-dui-ha-fu-man-shu-bing-cha-ji.html">
+            
+                    
+                    第五周：堆&哈夫曼树&并查集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10.6" data-path="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-liu-zhou-tu-shang-lian-tong-ji-dfsbfs.html">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-liu-zhou-tu-shang-lian-tong-ji-dfsbfs.html">
+            
+                    
+                    第六周：图（上）连通集 、DFS\&BFS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10.7" data-path="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-qi-zhou-tu-zhong-floyd-suan-fa-qiu-zui-duan-lu.html">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-qi-zhou-tu-zhong-floyd-suan-fa-qiu-zui-duan-lu.html">
+            
+                    
+                    第七周：图（中）Floyd算法求最短路
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10.8" data-path="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-ba-zhou-tu-xia.html">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-ba-zhou-tu-xia.html">
+            
+                    
+                    第八周：图（下）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10.9" data-path="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-jiu-zhou-pai-xu-shang-gui-bing-dui-pai-xu.html">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-jiu-zhou-pai-xu-shang-gui-bing-dui-pai-xu.html">
+            
+                    
+                    第九周：排序（上）归并&堆排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10.10" data-path="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-shi-zhou-pai-xu-xia.html">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-shi-zhou-pai-xu-xia.html">
+            
+                    
+                    第十周：排序（下）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10.11" data-path="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-shi-yi-zhou-san-lie-cha-zhao-kmp.html">
+            
+                <a href="../../data-structures-and-algorithms/data-structure/shu-ju-jie-gou-xi-ti/di-shi-yi-zhou-san-lie-cha-zhao-kmp.html">
+            
+                    
+                    第十一周：散列查找 & KMP
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">前端进阶</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../../morelearning/qian-duan-jin-jie.html">
+            
+                <a href="../../morelearning/qian-duan-jin-jie.html">
+            
+                    
+                    React
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../../morelearning/react/xiang-ying-shi-xi-tong-yu-react.html">
+            
+                <a href="../../morelearning/react/xiang-ying-shi-xi-tong-yu-react.html">
+            
+                    
+                    响应式系统与 React
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="../../morelearning/react/react-xue-xi-xiao-ji.html">
+            
+                <a href="../../morelearning/react/react-xue-xi-xiao-ji.html">
+            
+                    
+                    React学习小记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="../../morelearning/react/redux-xue-xi-zhi-redux-san-yuan-ze-createsore-yuan-li-ji-shi-xian.html">
+            
+                <a href="../../morelearning/react/redux-xue-xi-zhi-redux-san-yuan-ze-createsore-yuan-li-ji-shi-xian.html">
+            
+                    
+                    Redux学习之Redux三原则、createSore原理及实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../../morelearning/typescript/">
+            
+                <a href="../../morelearning/typescript/">
+            
+                    
+                    TypeScript
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.2.1" data-path="../../morelearning/typescript/typescript-ru-men.html">
+            
+                <a href="../../morelearning/typescript/typescript-ru-men.html">
+            
+                    
+                    TypeScript入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../../morelearning/webpack/">
+            
+                <a href="../../morelearning/webpack/">
+            
+                    
+                    Webpack
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.3.1" data-path="../../morelearning/webpack/webpack-zhi-shi-ti-xi.html">
+            
+                <a href="../../morelearning/webpack/webpack-zhi-shi-ti-xi.html">
+            
+                    
+                    Webpack知识体系
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../../morelearning/animation/">
+            
+                <a href="../../morelearning/animation/">
+            
+                    
+                    前端动画与绘图
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.4.1" data-path="../../morelearning/animation/webgl-ji-chu.html">
+            
+                <a href="../../morelearning/animation/webgl-ji-chu.html">
+            
+                    
+                    WebGL基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4.2" data-path="../../morelearning/animation/qian-duan-dong-hua-jian-jie.html">
+            
+                <a href="../../morelearning/animation/qian-duan-dong-hua-jian-jie.html">
+            
+                    
+                    前端动画简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">笔面试记录</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../../interview-record/collection-interview/">
+            
+                <a href="../../interview-record/collection-interview/">
+            
+                    
+                    面经集锦
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.1" data-path="../../interview-record/collection-interview/2022-spring-metaapp.html">
+            
+                <a href="../../interview-record/collection-interview/2022-spring-metaapp.html">
+            
+                    
+                    2022春暑期实习MetaApp一二面面经
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.2" data-path="../../interview-record/collection-interview/2022-spring-bytedance.html">
+            
+                <a href="../../interview-record/collection-interview/2022-spring-bytedance.html">
+            
+                    
+                    2022春暑期实习字节前端一面凉经
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../../interview-record/written-examination-reply/">
+            
+                <a href="../../interview-record/written-examination-reply/">
+            
+                    
+                    笔试复盘
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.2.1" data-path="../../interview-record/written-examination-reply/2022-chun-mei-tuan-bi-shi-shu-qi-shi-xi-bi-shi-ti-fu-pan.html">
+            
+                <a href="../../interview-record/written-examination-reply/2022-chun-mei-tuan-bi-shi-shu-qi-shi-xi-bi-shi-ti-fu-pan.html">
+            
+                    
+                    2022春美团笔试暑期实习笔试题复盘
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.2" data-path="../../interview-record/written-examination-reply/2022-chun-360-bi-shi-ti-mu-fu-pan-yan-faejuan.html">
+            
+                <a href="../../interview-record/written-examination-reply/2022-chun-360-bi-shi-ti-mu-fu-pan-yan-faejuan.html">
+            
+                    
+                    2022春360笔试题目复盘-研发E卷
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.3" data-path="../../interview-record/written-examination-reply/2022-chun-jing-dong-qian-duan-bi-shi-ti-mu-fu-pan.html">
+            
+                <a href="../../interview-record/written-examination-reply/2022-chun-jing-dong-qian-duan-bi-shi-ti-mu-fu-pan.html">
+            
+                    
+                    2022春京东前端笔试题目复盘
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.4" data-path="../../interview-record/written-examination-reply/2022-chun-wang-yi-lei-huo-qian-duan-shu-qi-shi-xi-bi-shi-ak.html">
+            
+                <a href="../../interview-record/written-examination-reply/2022-chun-wang-yi-lei-huo-qian-duan-shu-qi-shi-xi-bi-shi-ak.html">
+            
+                    
+                    2022春网易雷火前端暑期实习笔试(AK)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Web开发的安全之旅</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="web&#x5F00;&#x53D1;&#x7684;&#x5B89;&#x5168;&#x4E4B;&#x65C5;">Web&#x5F00;&#x53D1;&#x7684;&#x5B89;&#x5168;&#x4E4B;&#x65C5;</h1>
+<p>&#x5B89;&#x5168;&#x95EE;&#x9898;&#x5F88;&#x5E38;&#x89C1;&#xFF0C;&#x4F1A;&#x5371;&#x5BB3;</p>
+<ul>
+<li>&#x7528;&#x6237;</li>
+<li>&#x516C;&#x53F8;</li>
+<li>&#x7A0B;&#x5E8F;&#x5458;&#xFF08;&#x796D;&#x5929;QAQ&#xFF09;</li>
+</ul>
+<h2 id="&#x4E24;&#x4E2A;&#x89D2;&#x5EA6;&#x770B;web&#x5B89;&#x5168;">&#x4E24;&#x4E2A;&#x89D2;&#x5EA6;&#x770B;web&#x5B89;&#x5168;</h2>
+<h3 id="&#x5047;&#x5982;&#x4F60;&#x662F;&#x4E00;&#x4E2A;hacker&#x2014;&#x2014;&#x653B;&#x51FB;">&#x5047;&#x5982;&#x4F60;&#x662F;&#x4E00;&#x4E2A;hacker&#x2014;&#x2014;&#x653B;&#x51FB;</h3>
+<h4 id="&#x8DE8;&#x7AD9;&#x811A;&#x672C;&#x653B;&#x51FB;xsscross-site-scripting">&#x8DE8;&#x7AD9;&#x811A;&#x672C;&#x653B;&#x51FB;XSS(Cross Site Scripting)</h4>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/642c367bce854aeba444870401a60cfa\~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
+<p>&#x6CE8;&#x5165;&#x6076;&#x610F;&#x811A;&#x672C;&#xFF0C;&#x5B8C;&#x6210;&#x653B;&#x51FB;&#xFF0C;&#x540E;&#x679C;&#xFF1A;&#x6CC4;&#x9732;&#x7528;&#x6237;&#x9690;&#x79C1;&#x7B49;</p>
+<p>XSS&#x4E3B;&#x8981;&#x5229;&#x7528;&#x4E86;&#x5F00;&#x53D1;&#x8005;&#x5BF9;&#x7528;&#x6237;&#x63D0;&#x4EA4;&#x5185;&#x5BB9;&#x7684;&#x76F2;&#x76EE;&#x4FE1;&#x4EFB;</p>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/46df16645186444fb853b329f03722a7\~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
+<p><strong>&#x7279;&#x70B9;</strong></p>
+<ul>
+<li>&#x901A;&#x5E38;<strong>&#x96BE;&#x4EE5;&#x4ECE;UI&#x4E0A;&#x611F;&#x77E5;</strong>&#xFF08;&#x4E00;&#x822C;&#x90FD;&#x662F;&#x6697;&#x5730;&#x91CC;&#x6267;&#x884C;&#x811A;&#x672C;&#xFF09;</li>
+<li>&#x7A83;&#x53D6;&#x7528;&#x6237;&#x4FE1;&#x606F;&#xFF08;<strong>cookie/token</strong>&#xFF09;</li>
+<li><strong>&#x7ED8;&#x5236;UI&#xFF08;&#x5982;&#x5F39;&#x7A97;&#x7B49;&#xFF09;</strong>&#xFF0C;&#x8BF1;&#x9A97;&#x7528;&#x6237;&#x70B9;&#x51FB;/&#x586B;&#x5199;&#x8868;&#x5355;</li>
+</ul>
+<p>&#x4E3E;&#x4E2A;&#x6817;&#x5B50;</p>
+<pre><code class="lang-js">public <span class="hljs-keyword">async</span> submit(ctx) {
+    <span class="hljs-keyword">const</span> {content, id} = ctx.request.body;
+    <span class="hljs-keyword">await</span> db.save({
+       content,    <span class="hljs-comment">// &#x6CA1;&#x6709;&#x5BF9;content&#x8FDB;&#x884C;&#x8FC7;&#x6EE4;&#xFF01;&#xFF01;</span>
+       id
+    });
+}
+public <span class="hljs-keyword">async</span> render(ctx) {
+    <span class="hljs-keyword">const</span> { content } = <span class="hljs-keyword">await</span> db.query({
+        id: ctx.query.id
+    });
+    <span class="hljs-comment">// &#x6CA1;&#x6709;&#x5BF9;content&#x8FDB;&#x884C;&#x8FC7;&#x6EE4;&#xFF01;&#xFF01;</span>
+    ctx.body = <span class="hljs-string">`&lt;div&gt;<span class="hljs-subst">${content}</span>&lt;/div&gt;`</span>;
+}
+</code></pre>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x4E0A;&#x8FF0;&#x4EE3;&#x7801;&#xFF0C;&#x538B;&#x6839;&#x6CA1;&#x6709;&#x5BF9;&#x7528;&#x6237;&#x8F93;&#x5165;&#x7684;content&#x5185;&#x5BB9;&#x8FDB;&#x884C;&#x4EFB;&#x4F55;&#x8FC7;&#x6EE4;&#x3002;&#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#x5C31;&#x53EF;&#x4EE5;&#x63D0;&#x4EA4;&#x4E00;&#x4E2A;<code>&lt;script&gt;alert(&apos;xss&apos;);&lt;/script&gt;</code>&#x811A;&#x672C;&#xFF0C;&#x8FDB;&#x884C;&#x653B;&#x51FB;</p>
+<p>xss&#x653B;&#x51FB;&#x4E5F;&#x5206;&#x51E0;&#x5927;&#x7C7B;&#xFF1A;Store XSS&#x3001;Reflected XSS&#x3001;DOM-based XSS&#x3001;Mutation-based XSS</p>
+<p><strong>Store XSS</strong></p>
+<ul>
+<li>&#x63D0;&#x4EA4;&#x7684;&#x6076;&#x610F;&#x811A;&#x672C;&#x88AB;<strong>&#x5B58;&#x5728;&#x6570;&#x636E;&#x5E93;</strong>&#x4E2D;</li>
+<li>&#x8BBF;&#x95EE;&#x9875;&#x9762; -&gt; &#x8BFB;&#x6570;&#x636E; == &#x88AB;&#x653B;&#x51FB;</li>
+<li><strong>&#x5371;&#x5BB3;&#x6700;&#x5927;</strong>&#xFF0C;&#x5BF9;&#x5168;&#x90E8;&#x7528;&#x6237;&#x53EF;&#x89C1;</li>
+<li>&#x5982;&#xFF1A;&#x67D0;&#x4E2A;&#x89C6;&#x9891;&#x7F51;&#x7AD9;&#xFF0C;&#x4E0A;&#x4F20;&#x4E86;&#x6076;&#x610F;&#x811A;&#x672C;&#x88AB;&#x5B58;&#x5230;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#xFF0C;&#x4ECE;&#x6B64;&#x7535;&#x5546;&#x7F51;&#x7AD9;&#x4E0A;&#x4FBF;&#x591A;&#x4E86;&#x4E00;&#x4E2A;&#x89C6;&#x9891;&#x5171;&#x4EAB;&#x8D26;&#x6237;&#x3002;</li>
+</ul>
+<p><strong>Reflected XSS</strong></p>
+<ul>
+<li>&#x4E0D;&#x6D89;&#x53CA;&#x6570;&#x636E;&#x5E93;</li>
+<li><p>&#x4ECE; <strong>URL</strong> &#x4E0A;&#x653B;&#x51FB;&#xFF0C;&#x5728;URL&#x4E0A;&#x5E26;&#x4E0A;&#x811A;&#x672C;</p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/88c27e79158645c1a293249378d971a6\~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
+</li>
+</ul>
+<p><strong>DOM-based XSS</strong></p>
+<ul>
+<li>&#x4E0D;&#x9700;&#x8981;&#x670D;&#x52A1;&#x5668;&#x7684;&#x53C2;&#x4E0E;</li>
+<li><p>&#x6076;&#x610F;&#x653B;&#x51FB;&#x7684;&#x53D1;&#x8D77;+&#x6267;&#x884C;&#xFF0C;&#x5168;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x5B8C;&#x6210;</p>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f120875727634ff7abeb41a2174c616e\~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
+</li>
+<li>&#x5B8C;&#x6210;&#x6CE8;&#x5165;&#x811A;&#x672C;&#x7684;&#x5730;&#x65B9;&#xFF0C;&#x662F;&#x7531;&#x6D4F;&#x89C8;&#x5668;&#x6765;&#x7684;&#xFF0C;&#x8FD9;&#x662F;&#x5B83;&#x4E0E;Reflected XSS&#x7684;&#x4E0D;&#x540C;&#x4E4B;&#x5904;</li>
+</ul>
+<p><strong>Mutation-based XSS</strong></p>
+<ul>
+<li><p>&#x4E00;&#x4E2A;&#x5DE7;&#x5999;&#x5730;&#x653B;&#x51FB;&#x65B9;&#x5F0F;&#xFF0C;&#x5229;&#x7528;&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x7279;&#x6027;</p>
+<blockquote>
+<p>&#x5982;&#x679C;&#x7528;&#x6237;&#x6240;&#x63D0;&#x4F9B;&#x7684;&#x5BCC;&#x6587;&#x672C;&#x5185;&#x5BB9;&#x901A;&#x8FC7;javascript&#x4EE3;&#x7801;&#x8FDB;&#x5165;innerHTML&#x5C5E;&#x6027;&#x540E;&#xFF0C;&#x4E00;&#x4E9B;&#x610F;&#x5916;&#x7684;&#x53D8;&#x5316;&#x4F1A;&#x4F7F;&#x5F97;&#x8FD9;&#x4E2A;&#x8BA4;&#x5B9A;&#x4E0D;&#x518D;&#x6210;&#x7ACB;&#xFF1A;&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x6E32;&#x67D3;&#x5F15;&#x64CE;&#x4F1A;&#x5C06;&#x672C;&#x6765;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x5371;&#x5BB3;&#x7684;HTML&#x4EE3;&#x7801;&#x6E32;&#x67D3;&#x6210;&#x5177;&#x6709;&#x6F5C;&#x5728;&#x5371;&#x9669;&#x7684;XSS&#x653B;&#x51FB;&#x4EE3;&#x7801;&#x3002;</p>
+</blockquote>
+</li>
+<li>&#x5DE7;&#x5999;&#xFF0C;&#x6700;&#x96BE;&#x9632;&#x5FA1;&#x7684;&#x4E00;&#x79CD;&#x65B9;&#x5F0F;,&#x653B;&#x51FB;&#x8005;&#x975E;&#x5E38;&#x7684;&#x61C2;&#x6D4F;&#x89C8;&#x5668;</li>
+</ul>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/337518efa2844250a0bcf70cfc76fd60\~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
+<h4 id="cross-site-request-forgery&#xFF08;csrf&#xFF0C;&#x8DE8;&#x7AD9;&#x4F2A;&#x9020;&#x8BF7;&#x6C42;&#xFF09;">Cross-site request forgery&#xFF08;CSRF&#xFF0C;&#x8DE8;&#x7AD9;&#x4F2A;&#x9020;&#x8BF7;&#x6C42;&#xFF09;</h4>
+<ul>
+<li>&#x5728;&#x7528;&#x6237;&#x4E0D;&#x77E5;&#x60C5;&#x7684;&#x524D;&#x63D0;&#x4E0B;</li>
+<li><strong>&#x5229;&#x7528;&#x7528;&#x6237;&#x6743;&#x9650;</strong>(cookie)</li>
+<li><p><strong>&#x6784;&#x9020;</strong>&#x6307;&#x5B9A;HTTP <strong>&#x8BF7;&#x6C42;</strong>&#xFF0C;&#x8FDB;&#x800C;&#x7A83;&#x53D6;&#x6216;&#x4FEE;&#x6539;&#x7528;&#x6237;&#x654F;&#x611F;&#x4FE1;&#x606F;</p>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1d29931c3bf24265bf503f964401c6e7\~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
+<p>&#x4E00;&#x4E2A;&#x7528;&#x6237;&#x8BBF;&#x95EE;&#x4E86;&#x4E00;&#x4E2A;&#x6076;&#x610F;&#x7684;&#x9875;&#x9762;&#xFF0C;&#x8FD9;&#x4E2A;&#x9875;&#x9762;&#x5411;&#x94F6;&#x884C;&#x53D1;&#x9001;&#x4E00;&#x4E2A;&#x8F6C;&#x8D26;&#x8BF7;&#x6C42;&#xFF0C;ServerA&#x4E3A;&#x94F6;&#x884C;&#x7684;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x53D1;&#x73B0;&#x8FD9;&#x4E2A;&#x8BF7;&#x6C42;&#x5E26;&#x6709;&#x7528;&#x6237;&#x7684;cookie&#xFF0C;&#x6210;&#x529F;</p>
+<blockquote>
+<p>CSRF&#x901A;&#x8FC7;&#x4F2A;&#x88C5;&#x6765;&#x81EA;&#x53D7;&#x4FE1;&#x4EFB;&#x7528;&#x6237;&#x7684;&#x8BF7;&#x6C42;&#x6765;&#x5229;&#x7528;&#x53D7;&#x4FE1;&#x4EFB;&#x7684;&#x7F51;&#x7AD9;&#x3002;&#x4E0E;<a href="https://link.jianshu.com/?t=http://baike.baidu.com/view/50325.htm" target="_blank">XSS</a>&#x653B;&#x51FB;&#x76F8;&#x6BD4;&#xFF0C;CSRF&#x653B;&#x51FB;&#x5F80;&#x5F80;&#x4E0D;&#x5927;&#x6D41;&#x884C;&#xFF08;&#x56E0;&#x6B64;&#x5BF9;&#x5176;&#x8FDB;&#x884C;&#x9632;&#x8303;&#x7684;&#x8D44;&#x6E90;&#x4E5F;&#x76F8;&#x5F53;&#x7A00;&#x5C11;&#xFF09;&#x548C;&#x96BE;&#x4EE5;&#x9632;&#x8303;&#xFF0C;&#x6240;&#x4EE5;&#x88AB;&#x8BA4;&#x4E3A;&#x6BD4;<a href="https://link.jianshu.com/?t=http://baike.baidu.com/view/50325.htm" target="_blank">XSS</a><code>&#x66F4;&#x5177;&#x5371;&#x9669;&#x6027;</code>&#x3002;</p>
+</blockquote>
+</li>
+</ul>
+<h4 id="injection&#xFF08;&#x6CE8;&#x5165;&#xFF09;">Injection&#xFF08;&#x6CE8;&#x5165;&#xFF09;</h4>
+<ul>
+<li><p>SQL&#x6CE8;&#x5165;&#xFF1A;&#x901A;&#x8FC7;SQL&#x53C2;&#x6570;&#x8FDB;&#x884C;&#x6CE8;&#x5165;</p>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4e0499bba56f4dc69093fb38c4fa06a8\~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
+<p>&#x6848;&#x4F8B;&#xFF1A;&#x8BFB;&#x53D6;&#x8BF7;&#x6C42;&#x5B57;&#x6BB5;&#xFF0C;&#x76F4;&#x63A5;&#x4EE5;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x5F62;&#x5F0F;&#x62FC;&#x63A5;SQL&#x8BED;&#x53E5;</p>
+<pre><code class="lang-js">public <span class="hljs-keyword">async</span> rederForm(ctx) {
+    <span class="hljs-keyword">const</span> {username, form_id } = ctx.query;
+    <span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> sql.query(<span class="hljs-string">`
+        SELECT a, b, c FROM table
+        WHERE username = <span class="hljs-subst">${username}</span>
+        AND form_id = <span class="hljs-subst">${form_id}</span>
+    `</span>);
+    ctx.body = renderForm(result);
+}
+</code></pre>
+<p>&#x90A3;&#x4E48;&#x653B;&#x51FB;&#x8005;&#x53EF;&#x4EE5;&#x4F20;&#x5165;&#x4E00;&#x4E2A;userName&#xFF1A;<code>any; DROP TABLE table;</code> &#xFF0C;&#x4E8E;&#x662F;&#x88AB;&#x52A8;&#x5220;&#x5E93;&#x8DD1;&#x8DEF;&#x6210;&#x5C31;&#x8FBE;&#x6210;&#x221A;</p>
+</li>
+<li>&#x547D;&#x4EE4;&#x884C;&#x6CE8;&#x5165;&#x7B49;<img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/5e3d42c1f4754e648fc9bf793c315e02\~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></li>
+<li><p>&#x8BFB;&#x53D6;+&#x6539;&#x8FDB;&#x884C;&#x6D41;&#x91CF;&#x653B;&#x51FB;</p>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/53c32ca224314a3394d709b9b08e3717\~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
+</li>
+</ul>
+<h4 id="denial-of-service&#xFF08;dos&#xFF09;&#x653B;&#x51FB;">Denial of Service&#xFF08;DOS&#xFF09;&#x653B;&#x51FB;</h4>
+<ul>
+<li>&#x901A;&#x8FC7;&#x67D0;&#x79CD;&#x65B9;&#x5F0F;(&#x6784;&#x9020;&#x7279;&#x5B9A;&#x8BF7;&#x6C42;)&#xFF0C;&#x5BFC;&#x81F4;&#x670D;&#x52A1;&#x5668;&#x8D44;&#x6E90;&#x88AB;&#x663E;&#x8457;&#x6D88;&#x8017;,</li>
+<li>&#x6765;&#x4E0D;&#x53CA;&#x54CD;&#x5E94;&#x66F4;&#x591A;&#x8BF7;&#x6C42;&#xFF0C;&#x5BFC;&#x81F4;&#x8BF7;&#x6C42;&#x6324;&#x538B;&#xFF0C;&#x8FDB;&#x800C;&#x96EA;&#x5D29;&#x6548;&#x5E94;&#x3002;</li>
+<li>&#x62D3;&#x5C55;&#xFF1A;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x2014;&#x2014;&#x8D2A;&#x5A6A;&#x6A21;&#x5F0F;<ul>
+<li>&#x91CD;&#x590D;&#x5339;&#x914D;&#x65F6;&#xFF0C;<code>?</code> /<code>no ?</code> &#xFF1A;&#x6EE1;&#x8DB3;<code>&#x201D;&#x4E00;&#x4E2A;&#x5373;&#x53EF;&#x201C;</code> / <code>&#x5C3D;&#x53EF;&#x80FD;&#x591A;</code></li>
+</ul>
+</li>
+<li>&#x4F8B;&#x5B50;&#xFF1A;ReDoS:&#x57FA;&#x4E8E;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x7684;DoS</li>
+<li><p>&#x8D2A;&#x5A6A;&#xFF1A;n&#x6B21;&#x4E0D;&#x884C; ? n-1&#x6B21;&#x518D;&#x8BD5;&#x8BD5;?&#x2014;&#x2014;&#x56DE;&#x6EAF;</p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ff22b364393045b99c3139a97e5c29ba\~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
+</li>
+<li><p>Distributed Dos &#xFF08;DDOS&#xFF09;</p>
+<ul>
+<li>&#x77ED;&#x65F6;&#x95F4;&#x5185;&#xFF0C;&#x6765;&#x81EA;&#x5927;&#x91CF;<strong>&#x50F5;&#x5C38;&#x8BBE;&#x5907;</strong>&#x7684;&#x8BF7;&#x6C42;&#x6D41;&#x91CF;&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x4E0D;&#x80FD;&#x53CA;&#x65F6;&#x5B8C;&#x6210;&#x5168;&#x90E8;&#x8BF7;&#x6C42;&#xFF0C;&#x5BFC;&#x81F4;&#x8BF7;&#x6C42;&#x5806;&#x79EF;&#xFF0C;&#x8FDB;&#x800C;&#x96EA;&#x5D29;&#x6548;&#x5E94;&#xFF0C;&#x65E0;&#x6CD5;&#x54CD;&#x5E94;&#x65B0;&#x8BF7;&#x6C42;&#x3002;&#xFF08;&#x91CF;&#x5927;&#x5C31;&#x5B8C;&#x4E8B;&#x513F;&#x4E86;&#xFF09;</li>
+<li><p>&#x7279;&#x70B9;&#xFF1A;</p>
+<ul>
+<li>&#x76F4;&#x63A5;&#x8BBF;&#x95EE;IP</li>
+<li>&#x4EFB;&#x610F;API</li>
+<li><p>&#x6D88;&#x8017;&#x5927;&#x91CF;&#x5E26;&#x5BBD;&#xFF08;&#x8017;&#x5C3D;&#xFF09;</p>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f866aa26f1a346e08b8f646137e0189b\~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="&#x4E2D;&#x95F4;&#x4EBA;&#x653B;&#x51FB;&#xFF08;&#x4F20;&#x8F93;&#x5C42;&#xFF09;">&#x4E2D;&#x95F4;&#x4EBA;&#x653B;&#x51FB;&#xFF08;&#x4F20;&#x8F93;&#x5C42;&#xFF09;</h4>
+<ul>
+<li><strong>&#x660E;&#x6587;&#x4F20;&#x8F93;</strong></li>
+<li><strong>&#x4FE1;&#x606F;&#x7BE1;&#x6539;&#x4E0D;&#x53EF;&#x77E5;</strong></li>
+<li><p><strong>&#x5BF9;&#x65B9;&#x8EAB;&#x4EFD;&#x672A;&#x9A8C;&#x8BC1;</strong></p>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/910915a7c3484d038d381b4d0990b51c\~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
+</li>
+</ul>
+<h3 id="&#x5047;&#x5982;&#x4F60;&#x662F;&#x4E00;&#x4E00;&#x4E2A;&#x5F00;&#x53D1;&#x8005;&#x4E00;&#x4E00;&#x9632;&#x5FA1;">&#x5047;&#x5982;&#x4F60;&#x662F;&#x4E00;&#x4E00;&#x4E2A;&#x5F00;&#x53D1;&#x8005;&#x4E00;&#x4E00;&#x9632;&#x5FA1;</h3>
+<h4 id="xss&#x653B;&#x51FB;&#x9632;&#x5FA1;">XSS&#x653B;&#x51FB;&#x9632;&#x5FA1;</h4>
+<ul>
+<li>&#x6C38;&#x8FDC;<strong>&#x4E0D;&#x8981;&#x4FE1;&#x4EFB;&#x7528;&#x6237;</strong>&#x7684;&#x63D0;&#x4EA4;&#x5185;&#x5BB9;<ul>
+<li><strong>&#x4E0D;&#x8981;</strong>&#x5C06;&#x7528;&#x6237;&#x7684;&#x63D0;&#x4EA4;&#x5185;&#x5BB9;<strong>&#x76F4;&#x63A5;&#x8F6C;&#x6362;&#x6210;DOM</strong></li>
+</ul>
+</li>
+<li>&#x73B0;&#x6210;&#x5DE5;&#x5177;<ul>
+<li>&#x4E3B;&#x6D41;&#x6846;&#x67B6;&#x9ED8;&#x8BA4;&#x9632;&#x5FA1;XSS&#xFF08;react&#x7B49;&#xFF09;</li>
+<li>google-closure-library</li>
+<li>&#x670D;&#x52A1;&#x7AEF;&#xFF1A;DOMPurify</li>
+</ul>
+</li>
+<li><p>&#x7528;&#x6237;&#x9700;&#x6C42;&#xFF1A;&#x4E0D;&#x8BB2;&#x6B66;&#x5FB7;&#xFF0C;&#x5FC5;&#x987B;&#x52A8;&#x6001;&#x751F;&#x6210;DOM&#xFF1F;</p>
+<ul>
+<li>new DOMParser();</li>
+<li>svg&#xFF1A;&#x4E5F;&#x8981;&#x626B;&#x63CF;&#xFF0C;&#x56E0;&#x4E3A;&#x5176;&#x4E2D;&#x4E5F;&#x53EF;&#x4EE5;&#x63D2;&#x5165;script&#x6807;&#x7B7E;</li>
+<li><p>&#x4E0D;&#x8981;&#x7528;&#x6237;&#x81EA;&#x5B9A;&#x4E49;&#x8DF3;&#x8F6C;&#x94FE;&#x63A5;&#xFF08;&#x6216;&#x8005;&#x505A;&#x597D;&#x8FC7;&#x6EE4;&#xFF09;&#xFF01;</p>
+<p><code>&lt;a href=&quot;javascript:alert(&apos;xss&apos;)&quot;&gt;&lt;/a&gt;</code></p>
+</li>
+</ul>
+</li>
+<li>&#x81EA;&#x5B9A;&#x4E49;&#x6837;&#x5F0F;&#x4E5F;&#x8981;&#x7559;&#x610F;<img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8e67055919de46148ce6f280d1ed61fe\~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></li>
+</ul>
+<p><strong>&#x540C;&#x6E90;&#x7B56;&#x7565;&#xFF08;CSP&#xFF09;</strong></p>
+<ul>
+<li>&#x534F;&#x8BAE;</li>
+<li>&#x57DF;&#x540D;</li>
+<li>&#x7AEF;&#x53E3;</li>
+</ul>
+<p>&#x4EFB;&#x610F;&#x4E00;&#x8005;&#x4E0D;&#x540C;&#xFF0C;&#x8DE8;&#x57DF;&#xD7;</p>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/Security/Same-origin\_policy" target="_blank">&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x540C;&#x6E90;&#x7B56;&#x7565; - Web &#x5B89;&#x5168; | MDN (mozilla.org)</a></p>
+<p>&#x4E00;&#x822C;&#x7684;&#x540C;&#x6E90;&#x8BF7;&#x6C42;&#x90FD;&#x662F;&#x6CA1;&#x6709;&#x95EE;&#x9898;&#x7684;&#xFF0C;&#x800C;&#x8DE8;&#x57DF;&#x7684;&#x4E0D;&#x884C;&#xFF0C;CSP&#x5141;&#x8BB8;&#x5F00;&#x53D1;&#x8005;&#x5B9A;&#x4E49;</p>
+<ul>
+<li>&#x54EA;&#x4E9B;&#x6E90;&#xFF08;&#x57DF;&#x540D;&#xFF09;&#x662F;&#x88AB;&#x8BA4;&#x4E3A;&#x662F;&#x5B89;&#x5168;&#x7684;</li>
+<li>&#x6765;&#x81EA;&#x5B89;&#x5168;&#x6E90;&#x7684;&#x811A;&#x672C;&#x53EF;&#x4EE5;&#x88AB;&#x6267;&#x884C;&#xFF0C;&#x5426;&#x5219;&#x76F4;&#x63A5;&#x629B;&#x9519;</li>
+<li>&#x5BF9;eval + inline script &#x76F4;&#x63A5;&#x62D2;&#x7EDD;</li>
+<li><p>&#x8BBE;&#x7F6E;</p>
+<ul>
+<li>&#x670D;&#x52A1;&#x5668;&#x7684;&#x54CD;&#x5E94;&#x5934;&#x90E8;</li>
+</ul>
+<pre><code> Content-Security-Policy: script-src &apos;self&apos;; // &#x540C;&#x6E90;
+ Content-Security-Policy: script-src &apos;self&apos; https://domain.com
+</code></pre><ul>
+<li>&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x54CD;&#x5E94;&#x5934;&#x90E8;</li>
+</ul>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">http-equiv</span>=<span class="hljs-string">&quot; Content-Security-Policy&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;script-src self&quot;</span>&gt;</span>
+</code></pre>
+</li>
+</ul>
+<h4 id="csrf&#x653B;&#x51FB;&#x9632;&#x5FA1;">CSRF&#x653B;&#x51FB;&#x9632;&#x5FA1;</h4>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/822df87c893e470aa6d84dfba6702e4a\~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
+<ul>
+<li>Origin + Referrer</li>
+<li>&#x5176;&#x4ED6;&#x5224;&#x65AD;&#x3010;&#x8BF7;&#x6C42;&#x6765;&#x81EA;&#x4E8E;&#x5408;&#x6CD5;&#x6765;&#x6E90;&#x3011;&#x7684;&#x65B9;&#x5F0F;<ul>
+<li>&#x5148;&#x6709;&#x9875;&#x9762;&#xFF0C;&#x540E;&#x6709;&#x8BF7;&#x6C42;<ul>
+<li>if &#x8BF7;&#x6C42;&#x6765;&#x81EA;&#x5408;&#x6CD5;&#x9875;&#x9762;</li>
+<li>then &#x670D;&#x52A1;&#x5668;&#x63A5;&#x53D7;&#x8FC7;&#x9875;&#x9762;&#x8BF7;&#x6C42;</li>
+<li>then &#x670D;&#x52A1;&#x5668;&#x53EF;&#x4EE5;&#x6807;&#x8BC6;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c328ef733885407e87d34d6cbf369a6f\~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></li>
+<li>iframe&#x653B;&#x51FB;&#xFF1A;&#x9650;&#x5236;Origin&#x662F;&#x5427;&#xFF0C;&#x90A3;&#x6211;&#x540C;&#x6E90;&#x8BF7;&#x6C42;</li>
+<li><p>&#x907F;&#x514D;GET + POST&#x4E00;&#x8D77;&#x8BF7;&#x6C42;&#xFF0C;&#x653B;&#x51FB;&#x8005;&#x4E00;&#x77F3;&#x4E8C;&#x9E1F;&#xFF01;</p>
+<pre><code class="lang-js"><span class="hljs-comment">// &#x4E0D;&#x8981;&#x50CF;&#x4E0B;&#x9762;&#x8FD9;&#x6837;&#x5C06;&#x66F4;&#x65B0;+&#x83B7;&#x53D6;&#x903B;&#x8F91;&#x653E;&#x5230;&#x540C;&#x4E00;&#x4E2A;GET&#x63A5;&#x53E3;</span>
+public <span class="hljs-keyword">async</span> getAndUpdate(ctx) {
+    <span class="hljs-keyword">const</span> { update, id } = ctx.query;
+    <span class="hljs-keyword">if</span> (update) {
+        <span class="hljs-keyword">await</span> <span class="hljs-keyword">this</span>.update(update);
+    }
+    ctx.body = <span class="hljs-keyword">await</span> <span class="hljs-keyword">this</span>.get(id);
+}
+</code></pre>
+</li>
+<li><p>SameSite Cookie</p>
+<ul>
+<li>&#x9650;&#x5236;Cookie domain</li>
+<li>&#x9875;&#x9762;&#x57DF;&#x540D;&#x662F;&#x5426;&#x5339;&#x914D;</li>
+<li><p>&#x4F9D;&#x8D56;cookie&#x7684;&#x7B2C;&#x4E09;&#x65B9;&#x670D;&#x52A1;&#x600E;&#x4E48;&#x529E;&#xFF1F;</p>
+<blockquote>
+<p>&#x5185;&#x5D4C;&#x4E00;&#x4E2A;X&#x7AD9;&#x64AD;&#x653E;&#x5668;&#xFF0C;&#x8BC6;&#x522B;&#x4E0D;&#x4E86;&#x7528;&#x6237;&#x767B;&#x5F55;&#x6001;&#xFF0C;&#x53D1;&#x4E0D;&#x4E86;&#x5F39;&#x5E55;</p>
+<p><code>Set-Cookie: SameSite=None; Secure ;</code></p>
+</blockquote>
+</li>
+</ul>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/229b150da1cc42faae95e8e03b5d9d82\~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
+</li>
+<li><p>SameSite vs CORS&#xFF08;&#x8DE8;&#x7AD9;&#x8D44;&#x6E90;&#x5171;&#x4EAB;&#xFF09;</p>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8617447577294e10a51366ec5fffa691\~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
+</li>
+</ul>
+<p>&#x4EE5;&#x4E0A;&#x8FD9;&#x4E48;&#x591A;&#x9632;&#x5FA1;CSRF&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x90A3;&#x4E48;&#x4EC0;&#x4E48;&#x662F;&#x9632;&#x5FA1;CSRF&#x7684;&#x6B63;&#x786E;&#x59FF;&#x52BF;&#x5462;&#xFF1F;&#x5199;&#x4E00;&#x4E2A;&#x4E2D;&#x95F4;&#x4EF6;&#xFF0C;&#x4E13;&#x95E8;&#x751F;&#x6210;&#x8FD9;&#x65B9;&#x9762;&#x7684;&#x9632;&#x5FA1;&#x3002;</p>
+<h4 id="injection&#x9632;&#x5FA1;">Injection&#x9632;&#x5FA1;</h4>
+<ul>
+<li>&#x627E;&#x5230;&#x9879;&#x76EE;&#x4E2D;&#x67E5;&#x8BE2;SQL&#x7684;&#x5730;&#x65B9;</li>
+<li><p>&#x4F7F;&#x7528;prepared statement</p>
+<pre><code>PREPARE q FROM &apos;SELECT user FROM users WHERE gender = ?&apos;;
+SET @gender = &apos;female&apos;;
+EXECUTE q USING @gender;
+DEALLOCATE PREPARE q;
+</code></pre></li>
+<li>&#x6700;&#x5C0F;&#x6743;&#x9650;&#x539F;&#x5219;<ul>
+<li>&#x6240;&#x6709;&#x547D;&#x4EE4;&#x90FD;&#x4E0D;&#x8981;&#x7528; sodo || root &#xD7;</li>
+</ul>
+</li>
+<li>&#x5EFA;&#x7ACB;&#x5141;&#x8BB8;&#x540D;&#x5355; + &#x8FC7;&#x6EE4;<ul>
+<li>rm &#x575A;&#x51B3;&#x62D2;&#x7EDD;</li>
+</ul>
+</li>
+<li>&#x5BF9;URL&#x7C7B;&#x578B;&#x53C2;&#x6570;&#x8FDB;&#x884C;&#x534F;&#x8BAE;&#x3001;&#x57DF;&#x540D;&#x3001;ip&#x7B49;&#x9650;&#x5236;<ul>
+<li>&#x907F;&#x514D;&#x653B;&#x51FB;&#x8005;&#x8BBF;&#x95EE;&#x5185;&#x7F51;</li>
+</ul>
+</li>
+</ul>
+<h4 id="&#x9632;&#x5FA1;dos">&#x9632;&#x5FA1;DoS</h4>
+<ul>
+<li>Code Review &#xFF08;&#x907F;&#x514D;&#x8D2A;&#x5A6A;&#x5339;&#x914D;&#x7B49;&#xFF09;</li>
+<li>&#x4EE3;&#x7801;&#x626B;&#x63CF; + &#x6B63;&#x5219;&#x6027;&#x80FD;&#x6D4B;&#x8BD5;</li>
+<li>&#x907F;&#x514D;&#x7528;&#x6237;&#x63D0;&#x4F9B;&#x7684;&#x4F7F;&#x7528;&#x6B63;&#x5219;</li>
+</ul>
+<h4 id="&#x9632;&#x5FA1;ddos">&#x9632;&#x5FA1;DDos</h4>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a226e027218f4859b2cc48e3a4d491e8\~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
+<h4 id="&#x4F20;&#x8F93;&#x5C42;&#x2014;&#x2014;&#x9632;&#x5FA1;&#x4E2D;&#x95F4;&#x4EBA;">&#x4F20;&#x8F93;&#x5C42;&#x2014;&#x2014;&#x9632;&#x5FA1;&#x4E2D;&#x95F4;&#x4EBA;</h4>
+<p>&#x642C;&#x51FA;&#x5927;&#x540D;&#x9F0E;&#x9F0E;&#x7684;HTTPS</p>
+<ul>
+<li>&#x53EF;&#x9760;&#x6027;&#xFF1A;&#x52A0;&#x5BC6;</li>
+<li>&#x5B8C;&#x6574;&#x6027;&#xFF1A;MAC&#x9A8C;&#x8BC1;</li>
+<li>&#x4E0D;&#x53EF;&#x62B5;&#x8D56;&#x6027;&#xFF1A;&#x6570;&#x5B57;&#x7B7E;&#x540D;</li>
+</ul>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6543366d374e40e2b3d5f416a1a13ec6\~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
+<ul>
+<li><p>&#x62D3;&#x5C55;&#xFF1A;&#x6570;&#x5B57;&#x7B7E;&#x540D;</p>
+<ul>
+<li>&#x79C1;&#x94A5;&#xFF08;&#x81EA;&#x5DF1;&#x85CF;&#x597D;&#xFF09;</li>
+<li>&#x516C;&#x94A5;&#xFF08;&#x516C;&#x5F00;&#x53EF;&#x89C1;&#xFF09;</li>
+<li>CA&#xFF1A;Certificate Authority &#x8BC1;&#x4E66;&#x673A;&#x6784;</li>
+<li><p>&#x6570;&#x5B57;&#x7B7E;&#x540D;&#xFF0C;&#x6D4F;&#x89C8;&#x5668;&#x5185;&#x7F6E;CA&#x516C;&#x94A5;</p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/5b365d8c14274b89ac46232184765713\~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1e477a3d38294c1a900b170673b124d2\~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
+<ul>
+<li>&#x5F53;&#x7B7E;&#x540D;&#x7B97;&#x6CD5;&#x4E0D;&#x591F;&#x5065;&#x58EE;&#x65F6;&#xFF1A;&#x88AB;&#x66B4;&#x529B;&#x7834;&#x89E3;&#xFF08;&#x73B0;&#x5728;&#x90FD;&#x5DF2;&#x6BD4;&#x8F83;&#x5B8C;&#x5584;&#xFF09;</li>
+</ul>
+<p><strong>HTTP Strict-Transport-Security&#xFF08;HSTS&#xFF09;</strong></p>
+<ul>
+<li>&#x5C06;HTTP&#x4E3B;&#x52A8;&#x5347;&#x7EA7;&#x5230;HTTPS</li>
+</ul>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/Security/Subresource\_Integrity" target="_blank"><strong>Subresource Integrity&#xFF08;SRI&#xFF09;</strong></a></p>
+<p>&#x9759;&#x6001;&#x8D44;&#x6E90;&#x88AB;&#x52AB;&#x6301;&#x7BE1;&#x6539;&#xFF1F;&#x5BF9;&#x6BD4;hash</p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/af0b7da8f78e4bc5b9ff452566d5d9d9\~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
+<h2 id="&#x5C3E;&#x58F0;">&#x5C3E;&#x58F0;</h2>
+<ul>
+<li>&#x5B89;&#x5168;&#x65E0;&#x5C0F;&#x4E8B;</li>
+<li>&#x4F7F;&#x7528;&#x7684;&#x4F9D;&#x8D56;(npm package&#xFF0C; &#x751A;&#x81F3;&#x662F;NodeJS)&#x53EF;&#x80FD;&#x6210;&#x4E3A;&#x6700;&#x8584;&#x5F31;&#x7684;&#x4E00;&#x73AF;<ul>
+<li><a href="https://blog.npmjs.org/post/141577284765/kik-left-pad-and-npm.html" target="_blank"><strong>left-pad&#x4E8B;&#x4EF6;</strong></a></li>
+<li><a href="https://eslint.org/blog/2018/07/postmortem-for-malicious-package-publishes" target="_blank"><strong>eslint-scope &#x4E8B;&#x4EF6;</strong></a></li>
+<li><a href="https://blog.npmjs.org/post/180565383195/details-about-the-event-stream-incident" target="_blank"><strong>event-stream &#x4E8B;&#x4EF6;</strong></a></li>
+</ul>
+</li>
+<li>&#x4FDD;&#x6301;&#x5B66;&#x4E60;&#x5FC3;&#x6001;</li>
+</ul>
+<h2 id="&#x603B;&#x7ED3;&#x611F;&#x60F3;">&#x603B;&#x7ED3;&#x611F;&#x60F3;</h2>
+<p>&#x8FD9;&#x8282;&#x8BFE;&#x8001;&#x5E08;&#x56FE;&#x6587;&#x5E76;&#x8302;&#x7684;&#x8BB2;&#x89E3;&#x4E86;Web&#x5B89;&#x5168;&#x76F8;&#x5173;&#x7684;&#x5F88;&#x591A;&#x77E5;&#x8BC6;&#xFF0C;&#x975E;&#x5E38;&#x6709;&#x610F;&#x601D;&#xFF0C;&#x5305;&#x62EC;Web&#x653B;&#x51FB;&#x7684;&#x79CD;&#x7C7B;&#x3001;&#x9632;&#x5FA1;&#x65B9;&#x5F0F;&#x7B49;</p>
+<blockquote>
+<p>&#x672C;&#x6587;&#x5F15;&#x7528;&#x7684;&#x5185;&#x5BB9;&#x5927;&#x90E8;&#x5206;&#x6765;&#x81EA;&#x5218;&#x5B87;&#x6668;&#x8001;&#x5E08;&#x7684;&#x8BFE;&#x3001;MDN&#x3001;&#x5916;&#x90E8;&#x535A;&#x5BA2;&#x5F15;&#x7528;&#xFF1A;<a href="https://juejin.cn/post/6912030758404259854#heading-17" target="_blank">&#x8FD9;&#x4E00;&#x6B21;&#xFF0C;&#x5F7B;&#x5E95;&#x7406;&#x89E3;XSS&#x653B;&#x51FB;</a>&#x3001;<a href="https://www.jianshu.com/p/7f33f9c7997b" target="_blank">&#x6D45;&#x8C08;CSRF</a></p>
+</blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="http-shi-yong-zhi-nan.html" class="navigation navigation-prev " aria-label="Previous page: HTTP实用指南">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../tong-yong-zhi-shi/" class="navigation navigation-next " aria-label="Next page: 通用知识">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"description":"【第二届青训营-寒假前端场】- Web开发的安全之旅","title":"Web开发的安全之旅","level":"2.4.2","depth":2,"next":{"title":"通用知识","level":"2.5","depth":1,"path":"front-end-basics/tong-yong-zhi-shi/README.md","ref":"front-end-basics/tong-yong-zhi-shi/README.md","articles":[{"title":"前端必须知道的开发调试知识","level":"2.5.1","depth":2,"path":"front-end-basics/tong-yong-zhi-shi/qian-duan-bi-xu-zhi-dao-de-kai-fa-tiao-shi-zhi-shi.md","ref":"front-end-basics/tong-yong-zhi-shi/qian-duan-bi-xu-zhi-dao-de-kai-fa-tiao-shi-zhi-shi.md","articles":[]},{"title":"前端设计模式应用","level":"2.5.2","depth":2,"path":"front-end-basics/tong-yong-zhi-shi/qian-duan-she-ji-mo-shi-ying-yong.md","ref":"front-end-basics/tong-yong-zhi-shi/qian-duan-she-ji-mo-shi-ying-yong.md","articles":[]},{"title":"Web 标准与前端开发","level":"2.5.3","depth":2,"path":"front-end-basics/tong-yong-zhi-shi/web-biao-zhun-yu-qian-duan-kai-fa.md","ref":"front-end-basics/tong-yong-zhi-shi/web-biao-zhun-yu-qian-duan-kai-fa.md","articles":[]}]},"previous":{"title":"HTTP实用指南","level":"2.4.1","depth":2,"path":"front-end-basics/http-yu-liu-lan-qi/http-shi-yong-zhi-nan.md","ref":"front-end-basics/http-yu-liu-lan-qi/http-shi-yong-zhi-nan.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"cos","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"cos的前端学习记录","language":"zh-hans","links":{"sidebar":{"cos的博客":"https://ysx.cosine.ren/","Github":"https://github.com/yusixian"}},"gitbook":"*","description":"主要分享自己的前端学习心得，与一些学习记录"},"file":{"path":"front-end-basics/http-yu-liu-lan-qi/web-kai-fa-de-an-quan-zhi-lv.md","mtime":"2022-03-27T14:00:03.996Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-03-27T14:21:36.549Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
