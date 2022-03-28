@@ -385,9 +385,11 @@
           <div class="post-heading">
             <div class="tags">
               
-              <a class="tag" href="/tags/#c++" title="c++">c++</a>
-              
               <a class="tag" href="/tags/#leetcode" title="leetcode">leetcode</a>
+              
+              <a class="tag" href="/tags/#树" title="树">树</a>
+              
+              <a class="tag" href="/tags/#层序遍历" title="层序遍历">层序遍历</a>
               
             </div>
             <h1>冲刺春招-精选笔面试 66 题大通关 day9</h1>
@@ -526,7 +528,7 @@ inorder <strong>保证</strong> 为二叉树的中序遍历序列</p>
 <h2 id="思路-3">思路</h2>
 <p>别问，问就是前些天面试刚碰到过，蚌，终生难忘，重载一下排序规则即可。<br>
 天哪真有人拿acm模式放核心输出的样例吗，输入输出还是看评论学的，蚌。<code>var input = require('fs').readFileSync('/dev/stdin', 'utf8').trim().split('\n')[0]; </code>，字符串处理还是js来吧，lei了。</p>
-<p>重载排序顺序，利用字符串排序规则，重载小于号a&lt;b 变为a+b&gt;b+a（字符串形式），这样的话比如30， 21 就是3021 &gt; 2130，12，2就是212&gt;12，990，9就是9990 &gt; 9909</p>
+<p>重载排序顺序，利用字符串排序规则，重载小于号a &lt; b 变为a+b &gt; b+a（字符串形式），这样的话比如30， 21 就是3021 &gt; 2130，12，2就是212&gt;12，990，9就是9990 &gt; 9909</p>
 <h2 id="代码-3">代码</h2>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> input = <span class="built_in">require</span>(<span class="string">&#x27;fs&#x27;</span>).<span class="title function_">readFileSync</span>(<span class="string">&#x27;/dev/stdin&#x27;</span>, <span class="string">&#x27;utf8&#x27;</span>).<span class="title function_">trim</span>().<span class="title function_">split</span>(<span class="string">&#x27;\n&#x27;</span>)[<span class="number">0</span>];</span><br><span class="line">input = input.<span class="title function_">slice</span>(<span class="number">1</span>, input.<span class="property">length</span>-<span class="number">1</span>).<span class="title function_">split</span>(<span class="string">&#x27;,&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> ans = input.<span class="title function_">sort</span>(<span class="function">(<span class="params">a, b</span>) =&gt;</span> ((b+a) - (a+b))).<span class="title function_">join</span>(<span class="string">&#x27;&#x27;</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(ans)</span><br></pre></td></tr></table></figure>
 
@@ -700,9 +702,11 @@ inorder <strong>保证</strong> 为二叉树的中序遍历序列</p>
           </h5>
           <div class="tags">
             
-            <a class="tag" href="/tags/#c++" title="c++">c++</a>
-            
             <a class="tag" href="/tags/#leetcode" title="leetcode">leetcode</a>
+            
+            <a class="tag" href="/tags/#树" title="树">树</a>
+            
+            <a class="tag" href="/tags/#层序遍历" title="层序遍历">层序遍历</a>
             
           </div>
         </section>
