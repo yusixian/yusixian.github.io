@@ -247,9 +247,9 @@
           
           
           <li>
-            <a href="/about/">
+            <a href="/archive/">
               
-              关于
+              归档
               
               
             </a>
@@ -269,9 +269,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/about/">
               
-              归档
+              关于
               
               
             </a>
@@ -520,7 +520,7 @@
 <li><strong>任意类型</strong>：是<strong>所有类型的子类型</strong></li>
 <li><strong>枚举类型</strong>：支持枚举值到枚举名的<strong>正、反向映射</strong></li>
 </ul>
-<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 空类型，表示无赋值 */</span></span><br><span class="line"><span class="keyword">type</span> <span class="title class_">IEmptyFunction</span> = <span class="function">() =&gt;</span> <span class="built_in">void</span>;</span><br><span class="line"><span class="comment">/* 任意类型，是所有类型的子类型 */</span></span><br><span class="line"><span class="keyword">type</span> <span class="title class_">IAnyType</span> = <span class="built_in">any</span>;</span><br><span class="line"><span class="comment">/* 枚举类型:支持枚举值到枚举名的正、反向映射 */</span></span><br><span class="line"><span class="built_in">enum</span> <span class="title class_">EnumExample</span> &#123;</span><br><span class="line">    add = <span class="string">&#x27;+&#x27;</span>,</span><br><span class="line">	mult = <span class="string">&#x27;*&#x27;</span>,</span><br><span class="line">&#125;</span><br><span class="line"><span class="title class_">EnumExample</span>[<span class="string">&#x27;add&#x27;</span>] === <span class="string">&#x27;+&#x27;</span>;</span><br><span class="line"><span class="title class_">EnumExample</span>[<span class="string">&#x27;+&#x27;</span>] === <span class="string">&#x27;add&#x27;</span>;</span><br><span class="line"><span class="built_in">enum</span> <span class="title class_">ECorlor</span> &#123; <span class="title class_">Mon</span>, <span class="title class_">Tue</span>, <span class="title class_">Wed</span>, <span class="title class_">Thu</span>, <span class="title class_">Fri</span>, <span class="title class_">Sat</span>, <span class="title class_">Sun</span> &#125;;</span><br><span class="line"><span class="title class_">ECorlor</span>[<span class="string">&#x27;Mon&#x27;</span>] === <span class="number">0</span>;</span><br><span class="line"><span class="title class_">ECorlor</span>[<span class="number">0</span>] === <span class="string">&#x27;Mon&#x27;</span> ;</span><br><span class="line"><span class="comment">/*泛型*/</span></span><br><span class="line"><span class="keyword">type</span> <span class="title class_">INumArr</span> = <span class="title class_">Array</span>&lt;<span class="built_in">number</span>&gt;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 空类型，表示无赋值 */</span></span><br><span class="line"><span class="keyword">type</span> <span class="title class_">IEmptyFunction</span> = <span class="function">() =&gt;</span> <span class="built_in">void</span>;</span><br><span class="line"><span class="comment">/* 任意类型，是所有类型的子类型 */</span></span><br><span class="line"><span class="keyword">type</span> <span class="title class_">IAnyType</span> = <span class="built_in">any</span>;</span><br><span class="line"><span class="comment">/* 枚举类型:支持枚举值到枚举名的正、反向映射 */</span></span><br><span class="line"><span class="keyword">enum</span> <span class="title class_">EnumExample</span> &#123;</span><br><span class="line">    add = <span class="string">&#x27;+&#x27;</span>,</span><br><span class="line">	mult = <span class="string">&#x27;*&#x27;</span>,</span><br><span class="line">&#125;</span><br><span class="line"><span class="title class_">EnumExample</span>[<span class="string">&#x27;add&#x27;</span>] === <span class="string">&#x27;+&#x27;</span>;</span><br><span class="line"><span class="title class_">EnumExample</span>[<span class="string">&#x27;+&#x27;</span>] === <span class="string">&#x27;add&#x27;</span>;</span><br><span class="line"><span class="keyword">enum</span> <span class="title class_">ECorlor</span> &#123; <span class="title class_">Mon</span>, <span class="title class_">Tue</span>, <span class="title class_">Wed</span>, <span class="title class_">Thu</span>, <span class="title class_">Fri</span>, <span class="title class_">Sat</span>, <span class="title class_">Sun</span> &#125;;</span><br><span class="line"><span class="title class_">ECorlor</span>[<span class="string">&#x27;Mon&#x27;</span>] === <span class="number">0</span>;</span><br><span class="line"><span class="title class_">ECorlor</span>[<span class="number">0</span>] === <span class="string">&#x27;Mon&#x27;</span> ;</span><br><span class="line"><span class="comment">/*泛型*/</span></span><br><span class="line"><span class="keyword">type</span> <span class="title class_">INumArr</span> = <span class="title class_">Array</span>&lt;<span class="built_in">number</span>&gt;;</span><br></pre></td></tr></table></figure>
 <h2 id="Typescript泛型">Typescript泛型</h2>
 <p><strong>泛型</strong>，之前学过c++的话dddd，跟c++中的差不多：<strong>不预先指定具体的类型，而在使用的时候再指定类型</strong>的一种特性</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">getRepeatArr</span>(<span class="params">target</span>) &#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Array</span>(<span class="number">100</span>).<span class="title function_">fill</span>(target); </span><br><span class="line">&#125;</span><br><span class="line">type <span class="title class_">IGetRepeatArr</span> = <span class="function">(<span class="params">target: any</span>) =&gt;</span> any[];</span><br><span class="line"><span class="comment">/* 不预先指定具体的类型，而在使用的时候再指定类型的一种特性 */</span></span><br><span class="line">type <span class="title class_">IGetRepeatArrR</span> = &lt;T&gt;<span class="function">(<span class="params">target: T</span>) =&gt;</span> T[];</span><br></pre></td></tr></table></figure>
@@ -1373,20 +1373,5 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-</body>
+	</body>
 </html>
