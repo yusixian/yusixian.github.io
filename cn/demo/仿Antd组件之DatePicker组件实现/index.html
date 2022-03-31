@@ -247,6 +247,17 @@
           
           
           <li>
+            <a href="/about/">
+              
+              关于
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
             <a href="/archive/">
               
               归档
@@ -261,17 +272,6 @@
             <a href="/categories/">
               
               分类
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="/about/">
-              
-              关于
               
               
             </a>
@@ -406,7 +406,7 @@
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">754</span> In Total
+              Words <span class="post-count">758</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -473,7 +473,8 @@
 <li>仓库链接：<a target="_blank" rel="noopener" href="https://github.com/cosineLearn/cosine-ui">组件地址</a></li>
 <li>自己的CodePen在线预览链接：<a target="_blank" rel="noopener" href="https://codepen.io/yusixian/pen/wvPLgWN">DatePicker（by cos）</a></li>
 </ul>
-<h2 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h2><ul>
+<h2 id="心得">心得</h2>
+<ul>
 <li>~契机是什么才不说呢~</li>
 <li>也算是第一次用React写自己的小组件，可能封装性还不行，bug也还有不少，写的代码自己复盘的时候也很想吐槽2333</li>
 <li>不过也真的是个很有意思的事！比如点击日期选择器外关闭日期选择器这个功能就纠结了我好长时间qwq，但是写完真的很快乐！</li>
@@ -481,11 +482,29 @@
 <li>实现自己的组件是很cool的事！~虽然有时候也会感觉有点重复造轮子~</li>
 <li>在学习antd组件的实现同时也感受到了其实现的不少细节，望尘莫及ovo，以后有机会还会有优化哒，增加更多api和功能和自定义大小设置等。</li>
 </ul>
-<h2 id="组件介绍"><a href="#组件介绍" class="headerlink" title="组件介绍"></a>组件介绍</h2><h3 id="DatePicker组件"><a href="#DatePicker组件" class="headerlink" title="DatePicker组件"></a>DatePicker组件</h3><p>DatePicker 组件开发<br>代码及在线预览地址：<a target="_blank" rel="noopener" href="https://codepen.io/yusixian/pen/wvPLgWN">DatePicker（by cos）</a></p>
+<h2 id="组件介绍">组件介绍</h2>
+<h3 id="DatePicker组件">DatePicker组件</h3>
+<p>DatePicker 组件开发<br>
+代码及在线预览地址：<a target="_blank" rel="noopener" href="https://codepen.io/yusixian/pen/wvPLgWN">DatePicker（by cos）</a></p>
 <ol>
-<li>日、月、年选择面板的实现<br>交互：<br>a.日面板实现：实现点击日期选择具体日期，点击头部面部左右箭头可前往上一年/下一年、上一月/下一月<br>b.月面板实现：点击日面板头部月份进入，点击月份则选择具体月份并返回日面板，点击头部面部左右箭头前往上一年/下一年<br>c.年面板实现：点击日面板头部月份进入，以十年为区间，点击年份则选择该年并返回日面板，点击头部面部左右箭头前往上个十年/下个十年<br>d.根据输入框输入实时变换日期</li>
-<li>对外API的实现<br>a. 支持默认日期的设置 <code>defaultDate</code> 通过设置defaultDate为moment对象实现默认日期的设置<br>b. 支持日期的获取 <code>onDateChange</code> 通过日期变化的回调函数获取当前日期，返回moment对象<br>示例：<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">App</span> <span class="keyword">extends</span> <span class="title class_ inherited__">Component</span> &#123;</span><br><span class="line">    <span class="title function_">constructor</span>(<span class="params">props</span>) &#123;</span><br><span class="line">        <span class="variable language_">super</span>(props);</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">state</span> = &#123;</span><br><span class="line">            <span class="attr">nowDate</span>: <span class="string">&#x27;No Value!&#x27;</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="title function_">handleDateChange</span>(<span class="params">date</span>) &#123;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="title function_">setState</span>(&#123;<span class="attr">nowDate</span>: date.<span class="title function_">format</span>(<span class="string">&#x27;YYYY-MM-DD&#x27;</span>)&#125;);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="title function_">render</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> (</span><br><span class="line">            <span class="language-xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">className</span>=<span class="string">&quot;App&quot;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">                <span class="tag">&lt;<span class="name">div</span>&gt;</span>nowDate: &#123;this.state.nowDate&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">                <span class="tag">&lt;<span class="name">DatePicker</span> <span class="attr">defaultDate</span>=<span class="string">&#123;moment()&#125;</span> <span class="attr">onDateChange</span>=<span class="string">&#123;(date)</span> =&gt;</span> this.handleDateChange(date)&#125; /&gt;</span></span><br><span class="line"><span class="language-xml">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">        );</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li>面板展示与切换动画<br>通过 <code>picker-panel</code> 中初始透明度 <code>opacity</code>为 0，变化原点<code>transform-origin</code>为左上角，初始大小为 <code>scale(0)</code> ，通过自定义属性 <code>data-active</code> 为true控制显示<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.picker-panel</span> &#123;</span><br><span class="line">    <span class="attribute">z-index</span>: <span class="number">10</span>;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">background-color</span>: white;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">30px</span>;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">300px</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">3px</span>;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">1px</span> solid $gray-<span class="number">4</span>;</span><br><span class="line">    <span class="attribute">box-shadow</span>:<span class="number">2px</span> <span class="number">2px</span> <span class="number">10px</span> <span class="built_in">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.4</span>);</span><br><span class="line"></span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">    <span class="attribute">flex-direction</span>: column;</span><br><span class="line"></span><br><span class="line">    <span class="attribute">opacity</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">scale</span>(<span class="number">0</span>);</span><br><span class="line">    <span class="attribute">transform-origin</span>: top left;</span><br><span class="line">    <span class="attribute">transition</span>: all <span class="number">300ms</span> ease-in-out;</span><br><span class="line">    &amp;<span class="selector-attr">[data-active=true]</span> &#123;</span><br><span class="line">        <span class="attribute">transform</span>: <span class="built_in">scale</span>(<span class="number">1</span>);</span><br><span class="line">        <span class="attribute">opacity</span>: <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>日、月、年选择面板的实现<br>
+交互：<br>
+a.日面板实现：实现点击日期选择具体日期，点击头部面部左右箭头可前往上一年/下一年、上一月/下一月<br>
+b.月面板实现：点击日面板头部月份进入，点击月份则选择具体月份并返回日面板，点击头部面部左右箭头前往上一年/下一年<br>
+c.年面板实现：点击日面板头部月份进入，以十年为区间，点击年份则选择该年并返回日面板，点击头部面部左右箭头前往上个十年/下个十年<br>
+d.根据输入框输入实时变换日期</li>
+<li>对外API的实现<br>
+a. 支持默认日期的设置 <code>defaultDate</code> 通过设置defaultDate为moment对象实现默认日期的设置<br>
+b. 支持日期的获取 <code>onDateChange</code> 通过日期变化的回调函数获取当前日期，返回moment对象<br>
+示例：</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">App</span> <span class="keyword">extends</span> <span class="title class_ inherited__">Component</span> &#123;</span><br><span class="line">    <span class="title function_">constructor</span>(<span class="params">props</span>) &#123;</span><br><span class="line">        <span class="variable language_">super</span>(props);</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">state</span> = &#123;</span><br><span class="line">            <span class="attr">nowDate</span>: <span class="string">&#x27;No Value!&#x27;</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="title function_">handleDateChange</span>(<span class="params">date</span>) &#123;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="title function_">setState</span>(&#123;<span class="attr">nowDate</span>: date.<span class="title function_">format</span>(<span class="string">&#x27;YYYY-MM-DD&#x27;</span>)&#125;);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="title function_">render</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> (</span><br><span class="line">            <span class="language-xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">className</span>=<span class="string">&quot;App&quot;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">                <span class="tag">&lt;<span class="name">div</span>&gt;</span>nowDate: &#123;this.state.nowDate&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">                <span class="tag">&lt;<span class="name">DatePicker</span> <span class="attr">defaultDate</span>=<span class="string">&#123;moment()&#125;</span> <span class="attr">onDateChange</span>=<span class="string">&#123;(date)</span> =&gt;</span> this.handleDateChange(date)&#125; /&gt;</span></span><br><span class="line"><span class="language-xml">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">        );</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>面板展示与切换动画<br>
+通过 <code>picker-panel</code> 中初始透明度 <code>opacity</code>为 0，变化原点<code>transform-origin</code>为左上角，初始大小为 <code>scale(0)</code> ，通过自定义属性 <code>data-active</code> 为true控制显示</li>
+</ol>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.picker-panel</span> &#123;</span><br><span class="line">    <span class="attribute">z-index</span>: <span class="number">10</span>;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">background-color</span>: white;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">30px</span>;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">300px</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">3px</span>;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">1px</span> solid $gray-<span class="number">4</span>;</span><br><span class="line">    <span class="attribute">box-shadow</span>:<span class="number">2px</span> <span class="number">2px</span> <span class="number">10px</span> <span class="built_in">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.4</span>);</span><br><span class="line"></span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">    <span class="attribute">flex-direction</span>: column;</span><br><span class="line"></span><br><span class="line">    <span class="attribute">opacity</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">scale</span>(<span class="number">0</span>);</span><br><span class="line">    <span class="attribute">transform-origin</span>: top left;</span><br><span class="line">    <span class="attribute">transition</span>: all <span class="number">300ms</span> ease-in-out;</span><br><span class="line">    &amp;<span class="selector-attr">[data-active=true]</span> &#123;</span><br><span class="line">        <span class="attribute">transform</span>: <span class="built_in">scale</span>(<span class="number">1</span>);</span><br><span class="line">        <span class="attribute">opacity</span>: <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="5">
 <li>界面展示</li>
 </ol>
 <ul>
@@ -493,17 +512,28 @@
 </ul>
 <p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7e080154069a41de9dadf3c3ace7af3e~tplv-k3u1fbpfcp-watermark.image?" alt="初始值.png"></p>
 <ul>
-<li><p>选择其他日期<br><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/091cd5f2e98c4b6aaa1fc14fd7a5afef~tplv-k3u1fbpfcp-watermark.image?" alt="选择其他日期.png"></p>
+<li>
+<p>选择其他日期<br>
+<img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/091cd5f2e98c4b6aaa1fc14fd7a5afef~tplv-k3u1fbpfcp-watermark.image?" alt="选择其他日期.png"></p>
 </li>
-<li><p>下一年<br><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/818dbc4607d948d3a1ef1cb5fed45890~tplv-k3u1fbpfcp-watermark.image?" alt="下一年.png"></p>
+<li>
+<p>下一年<br>
+<img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/818dbc4607d948d3a1ef1cb5fed45890~tplv-k3u1fbpfcp-watermark.image?" alt="下一年.png"></p>
 </li>
-<li><p>上一个月<br><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/715976c98a404bd0ba1f7765bf4485fa~tplv-k3u1fbpfcp-watermark.image?" alt="上一个月.png"></p>
+<li>
+<p>上一个月<br>
+<img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/715976c98a404bd0ba1f7765bf4485fa~tplv-k3u1fbpfcp-watermark.image?" alt="上一个月.png"></p>
 </li>
-<li><p>进入年面板<br><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b6ad473c7fe34cb4a34a0d83268a14db~tplv-k3u1fbpfcp-watermark.image?" alt="进入年面板.png"></p>
+<li>
+<p>进入年面板<br>
+<img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b6ad473c7fe34cb4a34a0d83268a14db~tplv-k3u1fbpfcp-watermark.image?" alt="进入年面板.png"></p>
 </li>
-<li><p>切换年面板<br><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0045f8ac75bf47119b2c00368784461f~tplv-k3u1fbpfcp-watermark.image?" alt="切换年面板.png"></p>
+<li>
+<p>切换年面板<br>
+<img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0045f8ac75bf47119b2c00368784461f~tplv-k3u1fbpfcp-watermark.image?" alt="切换年面板.png"></p>
 </li>
-<li><p>月面板</p>
+<li>
+<p>月面板</p>
 </li>
 </ul>
 <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e91c94487f0d4ff7822798f4d39f722c~tplv-k3u1fbpfcp-watermark.image?" alt="月面板.png"></p>
