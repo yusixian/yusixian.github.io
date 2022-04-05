@@ -139,10 +139,10 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="http://yoursite-url/cn/archives/8/">
+  <link rel="canonical" href="http://yoursite-url/cn/coding-train/leetcode/offer/day7/">
   <title>
     
-      cos的博客 - WA的一声就哭了
+      剑指offer day7 搜索与回溯算法（简单） - cos的博客 - WA的一声就哭了
     
   </title>
 <meta name="generator" content="Hexo 5.4.1"></head>
@@ -300,25 +300,7 @@
           <!-- LangSelect -->
           
           
-          <!-- LangSelect start -->
-          <!-- LangSelect -->
-<li>
-  <a id="lang-select-label"><i class="fa fa-globe"></i>
-    <span>
-      简体中文
-    </span>
-    <select id="lang-select" data-canonical="cn/archives/8/index.html">
-      
-      
-      <option value="cn"  selected >
-        简体中文
-      </option>
-      
-    </select>
-  </a>
-</li>
-
-          <!-- LangSelect end -->
+          
           
           
         </ul>
@@ -370,19 +352,19 @@
     .body--light {
       /* intro-header */
       --intro-header-background-image-url-home: url('/img/header_img/93604793_p0.jpg');
-      --intro-header-background-image-url-post: url('');
-      --intro-header-background-image-url-page: url('/img/header_img/94418447_p0.jpg');
+      --intro-header-background-image-url-post: url('/img/header_img/polygon-pony-wallpaper-for-1920x1080-63-1175.jpg');
+      --intro-header-background-image-url-page: url('//img/header_img/polygon-pony-wallpaper-for-1920x1080-63-1175.jpg');
     }
     .body--dark {
       --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/93604793_p0.jpg');
-      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('');
-      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/94418447_p0.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/polygon-pony-wallpaper-for-1920x1080-63-1175.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('//img/header_img/polygon-pony-wallpaper-for-1920x1080-63-1175.jpg');
     }
 
     header.intro-header {
-       /*config*/
-        background-image: var(--intro-header-background-image-url-home);
-        /* background-image: url('/img/header_img/93604793_p0.jpg'); */
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('/img/header_img/polygon-pony-wallpaper-for-1920x1080-63-1175.jpg'); */
       
     }
 
@@ -400,10 +382,46 @@
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
           
-          <div class="site-heading">
-            <h1>cos的博客</h1>
-            <!--<hr class="small">-->
-            <span class="subheading">WA的一声就哭了</span>
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#leetcode" title="leetcode">leetcode</a>
+              
+              <a class="tag" href="/tags/#dfs/bfs" title="dfs/bfs">dfs/bfs</a>
+              
+              <a class="tag" href="/tags/#二叉树" title="二叉树">二叉树</a>
+              
+            </div>
+            <h1>剑指offer day7 搜索与回溯算法（简单）</h1>
+            <h2 class="subheading">知识点：二叉树、dfs/bfs，难度为中等、简单、中等</h2>
+            <span class="meta">
+              Posted by cos on
+              2022-04-04
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              Estimated Reading Time <span class="post-count">3</span> Minutes
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              Words <span class="post-count">778</span> In Total
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
           </div>
           
         </div>
@@ -444,995 +462,345 @@
 	Friends Blog、
 	anchorjs、
 	) -->
-		<!-- Main Content -->
-<div class="container">
-  <div class="row">
+		<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <p>day7题目：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/shu-de-zi-jie-gou-lcof/">剑指 Offer 26. 树的子结构</a>、<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/er-cha-shu-de-jing-xiang-lcof/">剑指 Offer 27. 二叉树的镜像</a>、<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/dui-cheng-de-er-cha-shu-lcof/">剑指 Offer 28. 对称的二叉树</a></p>
+<p>知识点：二叉树、dfs/bfs，难度为中等、简单、简单</p>
+<p>学习计划链接：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/study-plan/lcof/?progress=7jn70jr">「剑指 Offer」 - 学习计划</a></p>
+<table>
+<thead>
+<tr>
+<th>题目</th>
+<th>知识点</th>
+<th>难度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/shu-de-zi-jie-gou-lcof/">剑指 Offer 26. 树的子结构</a></td>
+<td><a target="_blank" rel="noopener" href="https://leetcode-cn.com/tag/depth-first-search">深度优先搜索</a>、<a target="_blank" rel="noopener" href="https://leetcode-cn.com/tag/binary-tree">二叉树</a></td>
+<td>中等</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/er-cha-shu-de-jing-xiang-lcof/">剑指 Offer 27. 二叉树的镜像</a></td>
+<td><a target="_blank" rel="noopener" href="https://leetcode-cn.com/tag/depth-first-search">深度优先搜索</a>、<a target="_blank" rel="noopener" href="https://leetcode-cn.com/tag/binary-tree">二叉树</a></td>
+<td>简单</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/dui-cheng-de-er-cha-shu-lcof/">剑指 Offer 28. 对称的二叉树</a></td>
+<td><a target="_blank" rel="noopener" href="https://leetcode-cn.com/tag/depth-first-search">深度优先搜索</a>、<a target="_blank" rel="noopener" href="https://leetcode-cn.com/tag/binary-tree">二叉树</a></td>
+<td>简单</td>
+</tr>
+</tbody>
+</table>
+<h1><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/shu-de-zi-jie-gou-lcof/">剑指 Offer 26. 树的子结构</a></h1>
+<p>输入两棵二叉树A和B，判断B是不是A的子结构。(约定空树不是任意一个树的子结构)</p>
+<p>B是A的子结构， 即 A中有出现和B相同的结构和节点值。</p>
+<p>例如:<br>
+给定的树 A:</p>
+<figure class="highlight livescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">     <span class="number">3</span></span><br><span class="line">    / <span class="string">\</span></span><br><span class="line">   <span class="number">4</span>   <span class="number">5</span></span><br><span class="line">  / <span class="string">\</span></span><br><span class="line"> <span class="number">1</span>   <span class="number">2</span></span><br></pre></td></tr></table></figure>
+<p>给定的树 B：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">   4 </span><br><span class="line">  /</span><br><span class="line"> 1`</span><br></pre></td></tr></table></figure>
+<p>返回 true，因为 B 与 A 的一个子树拥有相同的结构和节点值。</p>
+<p><strong>示例 1：</strong></p>
+<figure class="highlight inform7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入： A = <span class="comment">[1,2,3]</span>, B = <span class="comment">[3,1]</span></span><br><span class="line">输出： false</span><br></pre></td></tr></table></figure>
+<p><strong>示例 2：</strong></p>
+<figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入： <span class="keyword">A</span> = [<span class="number">3,4,5,1</span>,<span class="number">2</span>], B = [<span class="number">4</span>,<span class="number">1</span>]</span><br><span class="line">输出： true</span><br></pre></td></tr></table></figure>
+<p><strong>限制：</strong></p>
+<p><code>0 &lt;= 节点个数 &lt;= 10000</code></p>
+<h2 id="思路及代码">思路及代码</h2>
+<p>每当A、B结点值相同时比较B是否为A的子树（isSame）</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> isSubStructure = <span class="keyword">function</span>(<span class="params">A, B</span>) &#123;</span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">isSame</span>(<span class="params">a, b</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span>(!a &amp;&amp; !b) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(!b) <span class="keyword">return</span> <span class="literal">true</span>;    <span class="comment">// b中不存在但a中存在,没问题</span></span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(!a) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        <span class="keyword">return</span> a.<span class="property">val</span> === b.<span class="property">val</span> &amp;&amp; <span class="title function_">isSame</span>(a.<span class="property">left</span>, b.<span class="property">left</span>) &amp;&amp; <span class="title function_">isSame</span>(a.<span class="property">right</span>, b.<span class="property">right</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(!A || !B) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    <span class="keyword">if</span>(A.<span class="property">val</span> === B.<span class="property">val</span> &amp;&amp; <span class="title function_">isSame</span>(A, B)) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="title function_">isSubStructure</span>(A.<span class="property">left</span>, B) || <span class="title function_">isSubStructure</span>(A.<span class="property">right</span>, B);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h1><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/er-cha-shu-de-jing-xiang-lcof/">剑指 Offer 27. 二叉树的镜像</a></h1>
+<p>请完成一个函数，输入一个二叉树，该函数输出它的镜像。</p>
+<p>例如输入：</p>
+<figure class="highlight livescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">     <span class="number">4</span></span><br><span class="line">   /   <span class="string">\</span></span><br><span class="line">  <span class="number">2</span>     <span class="number">7</span></span><br><span class="line"> / <span class="string">\</span>   / <span class="string">\</span></span><br><span class="line"><span class="number">1</span>   <span class="number">3</span> <span class="number">6</span>   <span class="number">9</span>`</span><br></pre></td></tr></table></figure>
+<p>镜像输出：</p>
+<figure class="highlight livescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">     <span class="number">4</span></span><br><span class="line">   /   <span class="string">\</span></span><br><span class="line">  <span class="number">7</span>     <span class="number">2</span></span><br><span class="line"> / <span class="string">\</span>   / <span class="string">\</span></span><br><span class="line"><span class="number">9</span>   <span class="number">6</span> <span class="number">3</span>   <span class="number">1</span>`</span><br></pre></td></tr></table></figure>
+<p><strong>示例 1：</strong></p>
+<figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入： root = <span class="string">[4,2,7,1,3,6,9]</span></span><br><span class="line">输出： <span class="string">[4,7,2,9,6,3,1]</span></span><br></pre></td></tr></table></figure>
+<p><strong>限制：</strong></p>
+<p><code>0 &lt;= 节点个数 &lt;= 1000</code></p>
+<p>注意：本题与主站 226 题相同：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/invert-binary-tree/">https://leetcode-cn.com/problems/invert-binary-tree/</a></p>
+<h2 id="思路及代码-2">思路及代码</h2>
+<p>简单的递归</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> mirrorTree = <span class="keyword">function</span>(<span class="params">root</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span>(!root) <span class="keyword">return</span> <span class="literal">null</span></span><br><span class="line">    <span class="keyword">let</span> newroot = <span class="keyword">new</span> <span class="title class_">TreeNode</span>(root.<span class="property">val</span>)</span><br><span class="line">    newroot.<span class="property">left</span> = <span class="title function_">mirrorTree</span>(root.<span class="property">right</span>)</span><br><span class="line">    newroot.<span class="property">right</span> = <span class="title function_">mirrorTree</span>(root.<span class="property">left</span>)</span><br><span class="line">    <span class="keyword">return</span> newroot</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h1><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/dui-cheng-de-er-cha-shu-lcof/">剑指 Offer 28. 对称的二叉树</a></h1>
+<p>请实现一个函数，用来判断一棵二叉树是不是对称的。如果一棵二叉树和它的镜像一样，那么它是对称的。</p>
+<p>例如，二叉树 [1,2,2,3,4,4,3] 是对称的。</p>
+<figure class="highlight livescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">    <span class="number">1</span></span><br><span class="line">   / <span class="string">\</span></span><br><span class="line">  <span class="number">2</span>   <span class="number">2</span></span><br><span class="line"> / <span class="string">\</span> / <span class="string">\</span></span><br><span class="line"><span class="number">3</span>  <span class="number">4</span> <span class="number">4</span>  <span class="number">3</span></span><br></pre></td></tr></table></figure>
+<p>但是下面这个 [1,2,2,null,3,null,3] 则不是镜像对称的:</p>
+<figure class="highlight livescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">    <span class="number">1</span></span><br><span class="line">   / <span class="string">\</span></span><br><span class="line">  <span class="number">2</span>   <span class="number">2</span></span><br><span class="line">   <span class="string">\</span>   <span class="string">\</span></span><br><span class="line">   <span class="number">3</span>    <span class="number">3</span>`</span><br></pre></td></tr></table></figure>
+<p><strong>示例 1：</strong></p>
+<figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：<span class="built_in"> root</span> = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">4</span>,<span class="number">3</span>]</span><br><span class="line">输出：<span class="built_in"> true</span></span><br></pre></td></tr></table></figure>
+<p><strong>示例 2：</strong></p>
+<figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入： <span class="attr">root</span> = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">2</span>,<span class="literal">null</span>,<span class="number">3</span>,<span class="literal">null</span>,<span class="number">3</span>]</span><br><span class="line">输出： <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+<p><strong>限制：</strong></p>
+<p><code>0 &lt;= 节点个数 &lt;= 1000</code></p>
+<p>注意：本题与主站 101 题相同：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/symmetric-tree/">https://leetcode-cn.com/problems/symmetric-tree/</a></p>
+<h2 id="思路及代码-3">思路及代码</h2>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">TreeNode</span>&#125; <span class="variable">root</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">boolean</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> isSymmetric = <span class="keyword">function</span>(<span class="params">root</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span>(!root) <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">isMirror</span>(<span class="params">a, b</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span>(!a &amp;&amp; !b) <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(!a || !b) <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">        <span class="keyword">return</span> a.<span class="property">val</span> === b.<span class="property">val</span> &amp;&amp; <span class="title function_">isMirror</span>(a.<span class="property">left</span>, b.<span class="property">right</span>) &amp;&amp; <span class="title function_">isMirror</span>(a.<span class="property">right</span>, b.<span class="property">left</span>)                </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="title function_">isMirror</span>(root.<span class="property">left</span>, root.<span class="property">right</span>)</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
+          
+          <li class="previous">
+            <a href="/cn/review-interview/面经/2022春暑期实习店匠一面前端面经/" data-toggle="tooltip" data-placement="top" title="2022春暑期实习店匠前端一面面经">&larr; Previous Post</a>
+          </li>
+          
+          
+          <li class="next">
+            <a href="/cn/coding-train/leetcode/offer/day5/" data-toggle="tooltip" data-placement="top" title="剑指offer day5 查找算法（中等）">Next Post &rarr;</a>
+          </li>
+          
+        </ul>
+
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    
+      如果您喜欢此博客或发现它对您有用，则欢迎对此发表评论。 也欢迎您共享此博客，以便更多人可以参与。 如果博客中使用的图像侵犯了您的版权，请与作者联系以将其删除。 谢谢 ！
+    
+  </p>
+</div>
+<!-- tip end -->
+
+        <!-- tip end -->
+        
+
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=剑指offer day7 搜索与回溯算法（简单）&body=Hi,I found this website and thought you might like it http://yoursite-url/cn/coding-train/leetcode/offer/day7/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+        <!-- Sharing End -->
+        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+  <!-- gitalk start -->
+  <!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
+
+  <div id="gitalk-container"></div>
+
+  
+    <!-- <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.js"></script> -->
+    <script src="/js/comment/gitalk.js"></script>
+  
+
+  <script>
+    var gitalk = new Gitalk({
+      clientID: '2f50b376c49e65b70db0',
+      clientSecret: '5bf5a8b7b0a9a22194ee1f0ee1e58dac2e19a359',
+      repo: 'yusixian.github.io',
+      owner: 'yusixian',
+      admin: 'yusixian',
+      id: 'Mon Apr 04 2022 17:26:00 GMT+0800', // Ensure uniqueness and length less than 50
+      distractionFreeMode: false, // Facebook-like distraction free mode
+      perPage: 10,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      language: 'zh-CN',
+      proxy: ''
+    });
+    gitalk.render('gitalk-container');
+
+    var gtFolded = () => {
+      setTimeout(function () {
+        let markdownBody = document.getElementsByClassName("markdown-body");
+        let list = Array.from(markdownBody);
+        list.forEach(item => {
+          if (item.clientHeight > 250) {
+            item.classList.add('gt-comment-body-folded');
+            item.style.maxHeight = '250px';
+            item.title = 'Click to Expand';
+            item.onclick = function () {
+              item.classList.remove('gt-comment-body-folded');
+              item.style.maxHeight = '';
+              item.title = '';
+              item.onclick = null;
+            };
+          }
+        })
+      }, 800);
+    }
+  </script>
+
+  <!-- gitalk end -->
+
+
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">目录</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">剑指 Offer 26. 树的子结构</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%9D%E8%B7%AF%E5%8F%8A%E4%BB%A3%E7%A0%81"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">思路及代码</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">剑指 Offer 27. 二叉树的镜像</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%9D%E8%B7%AF%E5%8F%8A%E4%BB%A3%E7%A0%81-2"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">思路及代码</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">剑指 Offer 28. 对称的二叉树</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%9D%E8%B7%AF%E5%8F%8A%E4%BB%A3%E7%A0%81-3"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">思路及代码</span></a></li></ol></li></ol>
+        
+        </div>
+      </aside>
     
 
-    <!-- USE SIDEBAR -->
-    <!-- Post Container -->
-    <div class="
+
+
+      <!-- Sidebar Container -->
+      <div class="
                 col-lg-8 col-lg-offset-1
-                col-md-8 col-md-offset-1
-                col-sm-12
-                col-xs-12
-                post-container
-            ">
+                col-md-10 col-md-offset-1
+                sidebar-container">
 
-      <!-- Main Content -->
-
-
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/note/cs-basics/计算机组成原理复习总结（三）多层次的存储器/">
-    <h2 class="post-title">
-      计算机组成原理复习总结（三）多层次的存储器
-    </h2>
-    <h3 class="post-subtitle">
-      本章内容较多，主要包括各种存储器及存储方式存储器，其中重点为存储器基本概念、DRAM、SRAM、cache、命中率与平均访问时间、主存与cache映射方式和虚存等
-    </h3>
-    <div class="post-content-preview">
-      第三章 多层次的存储器
-本章内容较多，主要包括各种存储器及存储方式存储器，其中重点为存储器基本概念、DRAM、SRAM、cache、命中率与平均访问时间、主存与cache映射方式和虚存等
-3.1 存储器概述
-3.1.1 存储器的分类
-
-存储器是计算机系统中的记忆设备，用来存放程序和数据。
-存储介质：目前主要采用半导体器件和磁性材料。
-存储位元：一个双稳态半导体电路或一个CMOS晶体管或磁性材......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by cos on
-    2021-06-17
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#计算机组成原理" title="计算机组成原理">计算机组成原理</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/note/cs-basics/计算机组成原理复习总结（二）运算方法和运算器/">
-    <h2 class="post-title">
-      计算机组成原理复习总结（二）运算方法和运算器
-    </h2>
-    <h3 class="post-subtitle">
-      包括数制与编码、定点数的表示和运算、浮点数的表示和运算、算术逻辑单元ALU
-    </h3>
-    <div class="post-content-preview">
-      第二章 运算方法和运算器
-2.1 数制与编码
-一、进位计数制及其相互转换
-10进制和R进制之间的转换
-R进制到10进制：
-$$ \sum_{i = n}^{-m} k_i × r^i$$
-eg:二进制数转换十进制数
-12345678//二转十int bToD(char str[]) &#123;    int sum = 0;    for(int i = 0; str[i] != &#x2......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by cos on
-    2021-06-15
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#计算机组成原理" title="计算机组成原理">计算机组成原理</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/note/cs-basics/计算机组成原理复习总结（一）计算机系统概论/">
-    <h2 class="post-title">
-      计算机组成原理复习总结（一）计算机系统概论
-    </h2>
-    <h3 class="post-subtitle">
-      包括计算机的分类、计算机发展简史、计算机的性能指标、冯·诺依曼体系结构和计算机系统的层次结构
-    </h3>
-    <div class="post-content-preview">
-      第一章 计算机系统概论
-1.1 计算机的分类
-电子模拟计算机
-特点：数值由连续量来表示，运算过程也是连续的
-电子数字计算机
-特点：按位运算，并且不连续地跳动计算。
-电子模拟计算机精度和解题能力有限，应用范围较小，习惯上所称的电子计算机，一般是指现在广泛应用的电子数字计算机。又分为专用计算机和通用计算机，
-
-专用计算机是最有效、最经济和最快速的计算机，但其适应性很差。
-通用计算机牺牲了效率、速......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by cos on
-    2021-06-15
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#计算机组成原理" title="计算机组成原理">计算机组成原理</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/note/cs-basics/操作系统实验——动态分区分配方式的模拟/">
-    <h2 class="post-title">
-      操作系统实验——动态分区分配方式的模拟
-    </h2>
-    <h3 class="post-subtitle">
-      超有意思一定要看看【滑稽】代码思路来源学校的慕课给出的代码，自己敲了一遍进行了亿点点改动不过核心思路没变，异常处理什么的没有
-    </h3>
-    <div class="post-content-preview">
-      慕课指路：操作系统原理
-超有意思一定要动手敲下试试的动态分区分配方式【滑稽】
-代码思路来源学校的慕课给出的代码，自己敲了一遍进行了亿点点改动
-不过核心思路没变，异常处理什么的没有
-一、实验目的
-了解动态分区分配方式中使用的数据结构和分配算法，并进一步加深对动态分区存储管理方式及其实现过程的理解。
-二、实验要求
-(1) 用C语言实现采用首次适应算法的动态分区分配过程alloc()和回收过程fr......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by cos on
-    2021-06-03
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#操作系统" title="操作系统">操作系统</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/note/cs-basics/操作系统编程实验——创建进程/">
-    <h2 class="post-title">
-      操作系统编程实验——创建进程
-    </h2>
-    <h3 class="post-subtitle">
-      记录下操作系统的实验&作业
-    </h3>
-    <div class="post-content-preview">
-      一、实验目的
-熟悉操作系统程序接口的使用。
-要装好虚拟机哦，这里用的是deepin
-二、实验内容
-编写一段程序，使用系统调用fork( )创建两个子进程。当此程序运行时，在系统中有一个父进程和两个子进程活动。让每一个进程在屏幕上显示一个字符：父进程显示’a’，子进程分别显示字符’b’和字符’c’。
-三、实验代码
-unistd.h 是Linux/Unix系统中内置头文件，包含了许多系统服务的函......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by cos on
-    2021-05-31
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#操作系统" title="操作系统">操作系统</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/note/back-end/python/python网络爬虫学习笔记(一) 爬取简单静态网页/">
-    <h2 class="post-title">
-      python网络爬虫学习笔记(一) 爬取简单静态网页
-    </h2>
-    <h3 class="post-subtitle">
-      python实现知乎热榜标题链接抓取等，本文以实战为主，仅作个人学习使用，不对概念过多阐述（好吧还是很多概念）
-    </h3>
-    <div class="post-content-preview">
-      一、使用urllib3实现HTTP请求
-1.生成请求
-
-通过request方法生成请求,原型如下
-
-
-urllib3.request(method,url,fields=None,headers=None,**urlopen_kw)
-
-
-
-
-参数
-说明
-
-
-
-
-method
-接收string。表示请求的类型，如&quot;GET&quot;（通常使用）、“HEAD”、&quot;DELETE......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by cos on
-    2021-02-03
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#python" title="python">python</a>
-    
-    <a href="/tags/#爬虫" title="爬虫">爬虫</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/note/cs-basics/data-structure/模板类封装(2)——顺序栈和链式栈/">
-    <h2 class="post-title">
-      模板类封装(2)——顺序栈和链式栈
-    </h2>
-    <h3 class="post-subtitle">
-      自封装栈模板类，c++实现
-    </h3>
-    <div class="post-content-preview">
-      ...
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by cos on
-    2020-10-23
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#c++" title="c++">c++</a>
-    
-    <a href="/tags/#数据结构" title="数据结构">数据结构</a>
-    
-    <a href="/tags/#栈" title="栈">栈</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/note/cs-basics/data-structure/链式前向星存图、二分图匹配之匈牙利算法 模板&分析（存用）/">
-    <h2 class="post-title">
-      链式前向星存图、二分图匹配之匈牙利算法 模板&分析（存用）
-    </h2>
-    <h3 class="post-subtitle">
-      暑假的专题训练8是二分图匹配，由于之前一直没有试过链式前向星存图，所学这次算法的前还学习了链式前向星存图（虽然二分图算法一般不用这样存图）
-    </h3>
-    <div class="post-content-preview">
-      参考博客：链式前向星–最通俗易懂的讲解、算法讲解：二分图匹配【图论】、趣写算法系列之–匈牙利算法、匈牙利算法与增广路径
-暑假整的忘了发2333
-
-一、链式前向星
-1.是什么
-
-如果说邻接表是不好写但效率好，邻接矩阵是好写但效率低的话，前向星就是一个相对中庸的数据结构。前向星固然好些，但效率并不高。而在优化为链式前向星后，效率也得到了较大的提升。虽然说，世界上对链式前向星的使用并不是很广泛，但......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by cos on
-    2020-10-23
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#c++" title="c++">c++</a>
-    
-    <a href="/tags/#二分图匹配" title="二分图匹配">二分图匹配</a>
-    
-    <a href="/tags/#链式前向星" title="链式前向星">链式前向星</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/note/cs-basics/data-structure/模板类封装(1)——单链表/">
-    <h2 class="post-title">
-      模板类封装(1)——单链表
-    </h2>
-    <h3 class="post-subtitle">
-      自封装链表模板类,c++实现
-    </h3>
-    <div class="post-content-preview">
-      加入了ReverseList函数，逆转单链表操作
-改了个bug，逆转链表时特判一个结点的情况
-又改了N个bug，特判空链表的情况
-...
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by cos on
-    2020-10-09
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#c++" title="c++">c++</a>
-    
-    <a href="/tags/#数据结构" title="数据结构">数据结构</a>
-    
-    <a href="/tags/#链表" title="链表">链表</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/life/2020暑假训练总结：ysx/">
-    <h2 class="post-title">
-      2020暑假训练总结：ysx
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      在这个由于疫情导致格外漫长的暑假里，我们没有办法线下集训，所以只能在网上刷学长拉的专题，更多的靠自己自学，并且由于在家诸多因素，实际上懈怠了很多，在此我总结一下在这个暑假里学的东西。
-暑假之前，我所掌握的算法极少，只有寒假蓝桥杯集训时的枚举、贪心、二分、并查集、基础的动态规划等，刷题也不多，而在这个暑假里，跟着学长拉的专题和推荐的博客自学，本次暑期集训共拉了8个专题：线段树、最短路、最小生成......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by cos on
-    2020-09-14
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#总结" title="总结">总结</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-
-  <!-- Pager -->
-  <ul class="pager">
-    
-    <li class="previous">
-      <a href="/cn/archives/7/">&larr; 上一页</a>
-    </li>
-    
-    
-    <li class="next">
-      <a href="/cn/archives/9/">下一页 &rarr;</a>
-    </li>
-    
-  </ul>
-
-
-      <!-- 如果开启评论功能 -->
-      
-    </div>
-
-    <!-- Sidebar Container -->
-<div class="
-    col-lg-3 col-lg-offset-0
-    col-md-3 col-md-offset-0
-    col-sm-12
-    col-xs-12
-    sidebar-container
-">
-    
-        <!-- RECENT POSTS -->
-
-<h5><a href="/">最近博文</a></h5>
-<div class="widget">
-  <ul>
-    
-    <a href="../../coding-train/leetcode/offer/day6/">
-      <li>剑指offer day6 搜索与回溯算法（简单）</li>
-    </a>
-    
-    <a href="../../note/front-end/review/onClick%E4%B8%8EaddEventListener%E5%8C%BA%E5%88%AB/">
-      <li>前端面试之onclick与addEventListener区别详述</li>
-    </a>
-    
-    <a href="../../review-interview/%E9%9D%A2%E7%BB%8F/2022%E6%98%A5%E6%9A%91%E6%9C%9F%E5%AE%9E%E4%B9%A0%E5%BA%97%E5%8C%A0%E4%B8%80%E9%9D%A2%E5%89%8D%E7%AB%AF%E9%9D%A2%E7%BB%8F/">
-      <li>2022春暑期实习店匠前端一面面经</li>
-    </a>
-    
-    <a href="../../coding-train/leetcode/offer/day7/">
-      <li>剑指offer day7 搜索与回溯算法（简单）</li>
-    </a>
-    
-    <a href="../../coding-train/leetcode/offer/day5/">
-      <li>剑指offer day5 查找算法（中等）</li>
-    </a>
-    
-  </ul>
-</div>
-
-
-        <hr>
-    
-        <!-- Short About -->
-<section class="visible-md visible-lg">
-  <h5><a href="/about/">关于自己</a></h5>
-  <div class="short-about">
-
-    
-    <img id="avatar_pic" src="/img/avatar/88865174_p0.jpg" alt="avatar_pic" style="box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);
-    -moz-box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);
-    -webkit-box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);" />
-    
-
-    
-    <p>诶嘿~~</p>
-    
-
-    <!-- SNS Link -->
-    <ul class="list-inline">
-      
-
-      
-      <li>
-        <a target="_blank" href="https://github.com/yusixian">
-          <span class="fa-stack fa-lg">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-          </span>
-        </a>
-      </li>
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-      <li>
-        <a target="_blank" href="https://www.zhihu.com/people/qi-jiu-en">
-          <span class="fa-stack fa-lg">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fa  fa-stack-1x fa-inverse">知</i>
-          </span>
-        </a>
-      </li>
-      
-
-      
-
-    </ul>
-  </div>
-</section>
-
-        <hr>
-    
-        <!-- Archives -->
-
-<h5><a href="/archives/">archives</a></h5>
-<div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2022/04/">April 2022</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2022/03/">March 2022</a><span class="archive-list-count">35</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2022/02/">February 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2022/01/">January 2022</a><span class="archive-list-count">15</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/12/">December 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/11/">November 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/10/">October 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/09/">September 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/06/">June 2021</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/05/">May 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/02/">February 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/10/">October 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/09/">September 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/08/">August 2020</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/07/">July 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/04/">April 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/03/">March 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/02/">February 2020</a><span class="archive-list-count">3</span></li></ul>
-</div>
-
-
-        <hr>
-    
-        <!-- Categories -->
-
-<h5><a href="/categories/">categories</a></h5>
-<div class="widget">
-  <ul>
-    
-    <a href="/categories/#笔记">
-      <li>笔记</li>
-    </a>
-    
-    <a href="/categories/#随笔">
-      <li>随笔</li>
-    </a>
-    
-    <a href="/categories/#题目记录">
-      <li>题目记录</li>
-    </a>
-    
-    <a href="/categories/#算法笔记">
-      <li>算法笔记</li>
-    </a>
-    
-    <a href="/categories/#笔记 - 算法">
-      <li>笔记 - 算法</li>
-    </a>
-    
-    <a href="/categories/#数据结构">
-      <li>数据结构</li>
-    </a>
-    
-    <a href="/categories/#CS基础">
-      <li>CS基础</li>
-    </a>
-    
-    <a href="/categories/#面经">
-      <li>面经</li>
-    </a>
-    
-    <a href="/categories/#学习笔记">
-      <li>学习笔记</li>
-    </a>
-    
-  </ul>
-</div>
-
-
-        <hr>
-    
-        <!-- Friends Blog -->
-
-<h5><a href="/">友链</a></h5>
-<ul class="list-inline">
-  
-  <li><a href="https://sadose.github.io/" target="_blank">大森的博客</a></li>
-  
-  <li><a href="https://www.xiaocao.cloud/" target="_blank">小曹同学的百草园</a></li>
-  
-  <li><a href="https://gelxgx.github.io/blog/" target="_blank">瘦虎的博客</a></li>
-  
-</ul>
-
-
-        <hr>
-    
         <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">特色标签</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#leetcode" title="leetcode">leetcode</a>
+            
+            <a class="tag" href="/tags/#dfs/bfs" title="dfs/bfs">dfs/bfs</a>
+            
+            <a class="tag" href="/tags/#二叉树" title="二叉树">二叉树</a>
+            
+          </div>
+        </section>
+        
 
-<section>
-  <h5><a href="/tags/">特色标签</a></h5>
-  <div class="tags">
-    
-    
-    <a href="/tags/#前端" title="前端" rel="31">前端</a>
-    
-    
-    
-    <a href="/tags/#组件" title="组件" rel="1">组件</a>
-    
-    
-    
-    <a href="/tags/#总结" title="总结" rel="1">总结</a>
-    
-    
-    
-    <a href="/tags/#c++" title="c++" rel="35">c++</a>
-    
-    
-    
-    <a href="/tags/#蓝桥杯" title="蓝桥杯" rel="1">蓝桥杯</a>
-    
-    
-    
-    <a href="/tags/#数据结构" title="数据结构" rel="29">数据结构</a>
-    
-    
-    
-    <a href="/tags/#后端" title="后端" rel="5">后端</a>
-    
-    
-    
-    <a href="/tags/#PAT乙级" title="PAT乙级" rel="2">PAT乙级</a>
-    
-    
-    
-    <a href="/tags/#ST表" title="ST表" rel="1">ST表</a>
-    
-    
-    
-    <a href="/tags/#线段树" title="线段树" rel="1">线段树</a>
-    
-    
-    
-    <a href="/tags/#算法" title="算法" rel="3">算法</a>
-    
-    
-    
-    <a href="/tags/#动态规划" title="动态规划" rel="7">动态规划</a>
-    
-    
-    
-    <a href="/tags/#博弈论" title="博弈论" rel="1">博弈论</a>
-    
-    
-    
-    <a href="/tags/#最小生成树" title="最小生成树" rel="2">最小生成树</a>
-    
-    
-    
-    <a href="/tags/#操作系统" title="操作系统" rel="2">操作系统</a>
-    
-    
-    
-    <a href="/tags/#计算机组成原理" title="计算机组成原理" rel="7">计算机组成原理</a>
-    
-    
-    
-    <a href="/tags/#软件工程" title="软件工程" rel="1">软件工程</a>
-    
-    
-    
-    <a href="/tags/#笔试题" title="笔试题" rel="5">笔试题</a>
-    
-    
-    
-    <a href="/tags/#面经" title="面经" rel="4">面经</a>
-    
-    
-    
-    <a href="/tags/#中台" title="中台" rel="1">中台</a>
-    
-    
-    
-    <a href="/tags/#leetcode" title="leetcode" rel="29">leetcode</a>
-    
-    
-    
-    <a href="/tags/#链表" title="链表" rel="8">链表</a>
-    
-    
-    
-    <a href="/tags/#树" title="树" rel="2">树</a>
-    
-    
-    
-    <a href="/tags/#字符串" title="字符串" rel="4">字符串</a>
-    
-    
-    
-    <a href="/tags/#模拟" title="模拟" rel="2">模拟</a>
-    
-    
-    
-    <a href="/tags/#二分" title="二分" rel="5">二分</a>
-    
-    
-    
-    <a href="/tags/#双指针" title="双指针" rel="3">双指针</a>
-    
-    
-    
-    <a href="/tags/#回溯" title="回溯" rel="1">回溯</a>
-    
-    
-    
-    <a href="/tags/#正则" title="正则" rel="1">正则</a>
-    
-    
-    
-    <a href="/tags/#dfs/bfs" title="dfs/bfs" rel="5">dfs/bfs</a>
-    
-    
-    
-    <a href="/tags/#滑动窗口" title="滑动窗口" rel="3">滑动窗口</a>
-    
-    
-    
-    <a href="/tags/#快慢指针" title="快慢指针" rel="1">快慢指针</a>
-    
-    
-    
-    <a href="/tags/#排序" title="排序" rel="2">排序</a>
-    
-    
-    
-    <a href="/tags/#递归" title="递归" rel="2">递归</a>
-    
-    
-    
-    <a href="/tags/#二叉树" title="二叉树" rel="6">二叉树</a>
-    
-    
-    
-    <a href="/tags/#单调栈" title="单调栈" rel="1">单调栈</a>
-    
-    
-    
-    <a href="/tags/#快速排序" title="快速排序" rel="1">快速排序</a>
-    
-    
-    
-    <a href="/tags/#背包" title="背包" rel="1">背包</a>
-    
-    
-    
-    <a href="/tags/#层序遍历" title="层序遍历" rel="1">层序遍历</a>
-    
-    
-    
-    <a href="/tags/#栈" title="栈" rel="2">栈</a>
-    
-    
-    
-    <a href="/tags/#队列" title="队列" rel="2">队列</a>
-    
-    
-    
-    <a href="/tags/#设计" title="设计" rel="1">设计</a>
-    
-    
-    
-    <a href="/tags/#哈希" title="哈希" rel="3">哈希</a>
-    
-    
-    
-    <a href="/tags/#Java" title="Java" rel="3">Java</a>
-    
-    
-    
-    <a href="/tags/#设计模式" title="设计模式" rel="3">设计模式</a>
-    
-    
-    
-    <a href="/tags/#Reflect" title="Reflect" rel="1">Reflect</a>
-    
-    
-    
-    <a href="/tags/#多线程" title="多线程" rel="1">多线程</a>
-    
-    
-    
-    <a href="/tags/#python" title="python" rel="1">python</a>
-    
-    
-    
-    <a href="/tags/#爬虫" title="爬虫" rel="1">爬虫</a>
-    
-    
-    
-    <a href="/tags/#PTA" title="PTA" rel="12">PTA</a>
-    
-    
-    
-    <a href="/tags/#最短路" title="最短路" rel="1">最短路</a>
-    
-    
-    
-    <a href="/tags/#排序算法" title="排序算法" rel="4">排序算法</a>
-    
-    
-    
-    <a href="/tags/#KMP" title="KMP" rel="1">KMP</a>
-    
-    
-    
-    <a href="/tags/#散列查找" title="散列查找" rel="2">散列查找</a>
-    
-    
-    
-    <a href="/tags/#堆栈" title="堆栈" rel="1">堆栈</a>
-    
-    
-    
-    <a href="/tags/#哈夫曼树" title="哈夫曼树" rel="1">哈夫曼树</a>
-    
-    
-    
-    <a href="/tags/#并查集" title="并查集" rel="1">并查集</a>
-    
-    
-    
-    <a href="/tags/#图" title="图" rel="1">图</a>
-    
-    
-    
-    <a href="/tags/#二分图匹配" title="二分图匹配" rel="1">二分图匹配</a>
-    
-    
-    
-    <a href="/tags/#链式前向星" title="链式前向星" rel="1">链式前向星</a>
-    
-    
-    
-    <a href="/tags/#动画" title="动画" rel="1">动画</a>
-    
-    
-    
-    <a href="/tags/#CSS" title="CSS" rel="3">CSS</a>
-    
-    
-    
-    <a href="/tags/#layout" title="layout" rel="1">layout</a>
-    
-    
-    
-    <a href="/tags/#JavaScript" title="JavaScript" rel="10">JavaScript</a>
-    
-    
-    
-    <a href="/tags/#调试" title="调试" rel="1">调试</a>
-    
-    
-    
-    <a href="/tags/#HTTP" title="HTTP" rel="1">HTTP</a>
-    
-    
-    
-    <a href="/tags/#网络协议" title="网络协议" rel="1">网络协议</a>
-    
-    
-    
-    <a href="/tags/#纯函数" title="纯函数" rel="1">纯函数</a>
-    
-    
-    
-    <a href="/tags/#游戏开发" title="游戏开发" rel="1">游戏开发</a>
-    
-    
-    
-    <a href="/tags/#游戏引擎" title="游戏引擎" rel="1">游戏引擎</a>
-    
-    
-    
-    <a href="/tags/#小程序" title="小程序" rel="1">小程序</a>
-    
-    
-    
-    <a href="/tags/#Node.js" title="Node.js" rel="1">Node.js</a>
-    
-    
-    
-    <a href="/tags/#响应式" title="响应式" rel="1">响应式</a>
-    
-    
-    
-    <a href="/tags/#React" title="React" rel="2">React</a>
-    
-    
-    
-    <a href="/tags/#Hook" title="Hook" rel="1">Hook</a>
-    
-    
-    
-    <a href="/tags/#TypeScript" title="TypeScript" rel="1">TypeScript</a>
-    
-    
-    
-    <a href="/tags/#图像编码" title="图像编码" rel="1">图像编码</a>
-    
-    
-    
-    <a href="/tags/#Web多媒体" title="Web多媒体" rel="1">Web多媒体</a>
-    
-    
-    
-    <a href="/tags/#Web安全" title="Web安全" rel="1">Web安全</a>
-    
-    
-    
-    <a href="/tags/#XSS" title="XSS" rel="1">XSS</a>
-    
-    
-    
-    <a href="/tags/#Web标准" title="Web标准" rel="1">Web标准</a>
-    
-    
-    
-    <a href="/tags/#W3C" title="W3C" rel="1">W3C</a>
-    
-    
-    
-    <a href="/tags/#WebGL" title="WebGL" rel="1">WebGL</a>
-    
-    
-    
-    <a href="/tags/#图形学" title="图形学" rel="1">图形学</a>
-    
-    
-    
-    <a href="/tags/#Webpack" title="Webpack" rel="1">Webpack</a>
-    
-    
-    
-    <a href="/tags/#Redux" title="Redux" rel="1">Redux</a>
-    
-    
-    
-    <a href="/tags/#数组" title="数组" rel="2">数组</a>
-    
-    
-    
-    <a href="/tags/#面试题" title="面试题" rel="1">面试题</a>
-    
-    
-  </div>
-</section>
-
-
+        <!-- Friends Blog -->
+        
         <hr>
-    
-</div>
+        <h5>友链</h5>
+        <ul class="list-inline">
 
-
-    
+          
+          <li>
+            <a href="https://sadose.github.io/" target="_blank">大森的博客</a>
+          </li>
+          
+          <li>
+            <a href="https://www.xiaocao.cloud/" target="_blank">小曹同学的百草园</a>
+          </li>
+          
+          <li>
+            <a href="https://gelxgx.github.io/blog/" target="_blank">瘦虎的博客</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
   </div>
-</div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
 
 
 		<!-- Footer (contains ThemeColor、viewer) -->
