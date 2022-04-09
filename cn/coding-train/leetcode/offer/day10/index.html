@@ -410,7 +410,7 @@
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">811</span> In Total
+              Words <span class="post-count">798</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -474,7 +474,7 @@
 
         <p>day10题目：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/ba-shu-zi-fan-yi-cheng-zi-fu-chuan-lcof/">剑指 Offer 46. 把数字翻译成字符串</a>、<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/zui-chang-bu-han-zhong-fu-zi-fu-de-zi-zi-fu-chuan-lcof/">剑指 Offer 48. 最长不含重复字符的子字符串</a></p>
 <p>知识点：字符串、动态规划、滑动窗口，难度为中等、中等</p>
-<p>学习计划链接：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/study-plan/lcof/?progress=7jn70jr">「剑指 Offer」 - 学习计划</a>、<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/lian-xu-zi-shu-zu-de-zui-da-he-lcof/">剑指 Offer 42. 连续子数组的最大和</a></p>
+<p>学习计划链接：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/study-plan/lcof/?progress=7jn70jr">「剑指 Offer」 - 学习计划</a></p>
 <table>
 <thead>
 <tr>
@@ -505,7 +505,7 @@
 <li><code>0 &lt;= num &lt; 2^31</code></li>
 </ul>
 <h2 id="思路及代码">思路及代码</h2>
-<p>类似前些天刷的打家劫舍，状态若能跟前面的组合翻译，则<code>dp[i] = dp[i-1]+dp[i-2]</code>（单独翻译+组合翻译），否则 <code>dp[i] = dp[i-1]</code>（单独翻译），同样可以用滚动数组优化。</p>
+<p>类似前些天刷的打家劫舍，状态若能跟前面的组合翻译，则 <code>dp[i] = dp[i-1]+dp[i-2]</code>（单独翻译+组合翻译），否则 <code>dp[i] = dp[i-1]</code>（单独翻译），同样可以用滚动数组优化。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">number</span>&#125; <span class="variable">num</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">number</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> translateNum = <span class="keyword">function</span>(<span class="params">num</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span>(num &lt; <span class="number">10</span>) <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">    <span class="keyword">let</span> [p, q, res] = [<span class="number">0</span>, <span class="number">1</span>, <span class="number">1</span>]</span><br><span class="line">    num = num.<span class="title function_">toString</span>()</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">1</span>; i &lt; num.<span class="property">length</span>; ++i) &#123;</span><br><span class="line">        p = q</span><br><span class="line">        q = res</span><br><span class="line">        <span class="keyword">if</span>(i &gt; <span class="number">0</span> &amp;&amp; num[i-<span class="number">1</span>]+num[i] &gt;= <span class="string">&quot;10&quot;</span> &amp;&amp; num[i-<span class="number">1</span>]+num[i] &lt;= <span class="string">&quot;25&quot;</span>)</span><br><span class="line">            res += p</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h1><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/zui-chang-bu-han-zhong-fu-zi-fu-de-zi-zi-fu-chuan-lcof/">剑指 Offer 48. 最长不含重复字符的子字符串</a></h1>
 <p>请从字符串中找出一个最长的不包含重复字符的子字符串，计算该最长子字符串的长度。</p>
@@ -531,6 +531,10 @@
         <hr>
         <!-- Pager -->
         <ul class="pager">
+          
+          <li class="previous">
+            <a href="/cn/coding-train/leetcode/offer/day11/" data-toggle="tooltip" data-placement="top" title="剑指offer day11 双指针（简单）">&larr; Previous Post</a>
+          </li>
           
           
           <li class="next">
