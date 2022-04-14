@@ -491,12 +491,12 @@
 </tr>
 <tr>
 <td><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/er-cha-sou-suo-shu-yu-shuang-xiang-lian-biao-lcof/">剑指 Offer 36. 二叉搜索树与双向链表</a></td>
-<td><a target="_blank" rel="noopener" href="https://leetcode-cn.com/tag/stack">栈</a>、<a target="_blank" rel="noopener" href="https://leetcode-cn.com/tag/tree">树</a>、<a target="_blank" rel="noopener" href="https://leetcode-cn.com/tag/depth-first-search">深度优先搜索</a>、<a target="_blank" rel="noopener" href="https://leetcode-cn.com/tag/binary-search-tree">二叉搜索树</a>、<a target="_blank" rel="noopener" href="https://leetcode-cn.com/tag/linked-list">链表</a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/tag/binary-tree">二叉树</a></td>
+<td><a target="_blank" rel="noopener" href="https://leetcode-cn.com/tag/stack">栈</a>、<a target="_blank" rel="noopener" href="https://leetcode-cn.com/tag/tree">树</a>、<a target="_blank" rel="noopener" href="https://leetcode-cn.com/tag/depth-first-search">深度优先搜索</a></td>
 <td>中等</td>
 </tr>
 <tr>
 <td><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/er-cha-sou-suo-shu-de-di-kda-jie-dian-lcof/">剑指 Offer 54. 二叉搜索树的第k大节点</a></td>
-<td><a target="_blank" rel="noopener" href="https://leetcode-cn.com/tag/tree">树</a>、<a target="_blank" rel="noopener" href="https://leetcode-cn.com/tag/depth-first-search">深度优先搜索</a>、<a target="_blank" rel="noopener" href="https://leetcode-cn.com/tag/binary-search-tree">二叉搜索树</a>、<a target="_blank" rel="noopener" href="https://leetcode-cn.com/tag/binary-tree">二叉树</a></td>
+<td><a target="_blank" rel="noopener" href="https://leetcode-cn.com/tag/tree">树</a>、<a target="_blank" rel="noopener" href="https://leetcode-cn.com/tag/depth-first-search">深度优先搜索</a>、<a target="_blank" rel="noopener" href="https://leetcode-cn.com/tag/binary-search-tree">二叉搜索树</a></td>
 <td>简单</td>
 </tr>
 </tbody>
@@ -550,9 +550,14 @@
 <p>上题也说了，二叉搜索树中序遍历是递增的，而先访问右侧结点的话，右中左则是递减的，因此取k个就好了。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">TreeNode</span>&#125; <span class="variable">root</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">number</span>&#125; <span class="variable">k</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">number</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> kthLargest = <span class="keyword">function</span>(<span class="params">root, k</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> [cnt, res] = [<span class="number">0</span>, <span class="number">0</span>];</span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">dfs</span>(<span class="params">rt</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span>(!rt) <span class="keyword">return</span></span><br><span class="line">        <span class="title function_">dfs</span>(rt.<span class="property">right</span>)</span><br><span class="line">        <span class="keyword">if</span>(++cnt === k) &#123;</span><br><span class="line">            res = rt.<span class="property">val</span></span><br><span class="line">            <span class="keyword">return</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="title function_">dfs</span>(rt.<span class="property">left</span>)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="title function_">dfs</span>(root)</span><br><span class="line">    <span class="keyword">return</span> res</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
+
         <hr>
         <!-- Pager -->
         <ul class="pager">
+          
+          <li class="previous">
+            <a href="/cn/coding-train/leetcode/offer/day16/" data-toggle="tooltip" data-placement="top" title="剑指offer day16 排序（简单）">&larr; Previous Post</a>
+          </li>
           
           
           <li class="next">
@@ -1287,20 +1292,5 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-</body>
+	</body>
 </html>
