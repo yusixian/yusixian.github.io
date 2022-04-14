@@ -139,7 +139,7 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="http://yoursite-url/cn/coding-train/leetcode/bytedance/bytedance-day21/">
+  <link rel="canonical" href="https://ysx.cosine.ren/cn/coding-train/leetcode/bytedance/bytedance-day21/">
   <title>
     
       冲刺春招-精选笔面试66题大通关day21 - cos的博客 - WA的一声就哭了
@@ -298,10 +298,6 @@
           
 
           <!-- LangSelect -->
-          
-          
-          
-          
           
         </ul>
       </div>
@@ -474,27 +470,23 @@
 <p>今日知识点：数组、排序、动态规划，难度为简单、中等、困难</p>
 <p>学习计划链接：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/study-plan/bytedancecampus/?progress=dcmyjb3">冲刺春招-精选笔面试 66 题大通关</a></p>
 <p>昨日题目链接：<a target="_blank" rel="noopener" href="https://juejin.cn/post/7079764184023433230">冲刺春招-精选笔面试 66 题大通关 day20</a></p>
-<h1><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/sqrtx/">69. x 的平方根</a></h1>
-<p>给你一个非负整数 <code>x</code> ，计算并返回 <code>x</code> 的 <strong>算术平方根</strong> 。</p>
-<p>由于返回类型是整数，结果只保留 <strong>整数部分</strong> ，小数部分将被 <strong>舍去 。</strong></p>
-<p><strong>注意：</strong> 不允许使用任何内置指数函数和算符，例如 <code>pow(x, 0.5)</code> 或者 <code>x ** 0.5</code> 。</p>
+<h1 id="69-x-的平方根"><a href="#69-x-的平方根" class="headerlink" title="69. x 的平方根"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/sqrtx/">69. x 的平方根</a></h1><p>给你一个非负整数 <code>x</code> ，计算并返回 <code>x</code> 的 <strong>算术平方根</strong> 。</p>
+<p>由于返回类型是整数，结果只保留 <strong>整数部分</strong> ，小数部分将被 <strong>舍去 。</strong></p>
+<p><strong>注意：</strong> 不允许使用任何内置指数函数和算符，例如 <code>pow(x, 0.5)</code> 或者 <code>x ** 0.5</code> 。</p>
 <p><strong>示例 1：</strong></p>
 <figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入： x <span class="operator">=</span> <span class="number">4</span></span><br><span class="line">输出： <span class="number">2</span></span><br></pre></td></tr></table></figure>
 <p><strong>示例 2：</strong></p>
 <figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入： x = <span class="number">8</span></span><br><span class="line">输出： <span class="number">2</span></span><br><span class="line">解释： <span class="number">8</span> 的算术平方根是 <span class="number">2.82842</span>..., 由于返回类型是整数，小数部分将被舍去。</span><br></pre></td></tr></table></figure>
 <p><strong>提示：</strong></p>
 <ul>
-<li><code>0 &lt;= x &lt;= 2^31 - 1</code></li>
+<li><code>0 &lt;= x &lt;= 2^31 - 1</code></li>
 </ul>
-<h2 id="思路">思路</h2>
-<ul>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><ul>
 <li>二分，平分根在<code>0</code>到<code>x</code>之间，且<code>0</code>到<code>x</code>有序。</li>
-<li>当 <code>mid*mid &lt;= x</code> 说明 <code>mid</code> 小了，在右半侧搜寻</li>
+<li>当 <code>mid*mid &lt;= x</code> 说明 <code>mid</code> 小了，在右半侧搜寻<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">number</span>&#125; <span class="variable">x</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">number</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> mySqrt = <span class="keyword">function</span>(<span class="params">x</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> [l, r] = [<span class="number">0</span>, x]</span><br><span class="line">    <span class="keyword">while</span> (l &lt;= r) &#123;</span><br><span class="line">        <span class="keyword">let</span> mid = (l+r)&gt;&gt;<span class="number">1</span></span><br><span class="line">        <span class="keyword">if</span> (mid*mid &lt;= x) &#123;</span><br><span class="line">            l = mid+<span class="number">1</span></span><br><span class="line">        &#125; <span class="keyword">else</span> r = mid-<span class="number">1</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> r</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h1 id="912-排序数组"><a href="#912-排序数组" class="headerlink" title="912. 排序数组"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/sort-an-array/">912. 排序数组</a></h1></li>
 </ul>
-<h2 id="代码">代码</h2>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">number</span>&#125; <span class="variable">x</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">number</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> mySqrt = <span class="keyword">function</span>(<span class="params">x</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> [l, r] = [<span class="number">0</span>, x]</span><br><span class="line">    <span class="keyword">while</span> (l &lt;= r) &#123;</span><br><span class="line">        <span class="keyword">let</span> mid = (l+r)&gt;&gt;<span class="number">1</span></span><br><span class="line">        <span class="keyword">if</span> (mid*mid &lt;= x) &#123;</span><br><span class="line">            l = mid+<span class="number">1</span></span><br><span class="line">        &#125; <span class="keyword">else</span> r = mid-<span class="number">1</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> r</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<h1><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/sort-an-array/">912. 排序数组</a></h1>
-<p>给你一个整数数组 <code>nums</code>，请你将该数组升序排列。</p>
+<p>给你一个整数数组 <code>nums</code>，请你将该数组升序排列。</p>
 <p><strong>示例 1：</strong></p>
 <figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入： nums = [<span class="number">5,2,3,1</span>]</span><br><span class="line">输出： [<span class="number">1,2,3,5</span>]</span><br></pre></td></tr></table></figure>
 <p><strong>示例 2：</strong></p>
@@ -502,46 +494,39 @@
 <p><strong>提示：</strong></p>
 <ul>
 <li><code>1 &lt;= nums.length &lt;= 5 * 10^4</code></li>
-<li><code>-5 * 10^4 &lt;= nums[i] &lt;= 5 * 10^4</code></li>
+<li><code>-5 * 10^4 &lt;= nums[i] &lt;= 5 * 10^4</code></li>
 </ul>
-<h2 id="思路-2">思路</h2>
-<ul>
-<li>不讲武德版：直接调用排序函数</li>
+<h2 id="思路-1"><a href="#思路-1" class="headerlink" title="思路"></a>思路</h2><ul>
+<li>不讲武德版：直接调用排序函数<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> sortArray = <span class="keyword">function</span>(<span class="params">nums</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> nums.<span class="title function_">sort</span>(<span class="function">(<span class="params">a, b</span>) =&gt;</span> a - b);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+要练习各种排序算法的话，这个题目就挺合适的，这里给一个归并排序的版本吧。</li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> sortArray = <span class="keyword">function</span>(<span class="params">nums</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> nums.<span class="title function_">sort</span>(<span class="function">(<span class="params">a, b</span>) =&gt;</span> a - b);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<p>要练习各种排序算法的话，这个题目就挺合适的，这里给一个归并排序的版本吧。</p>
 <p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/2bd159fb46df41c193aeaa62e5dcf87e~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
-<h2 id="代码-2">代码</h2>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">number[]</span>&#125; <span class="variable">nums</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">number[]</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> sortArray = <span class="keyword">function</span>(<span class="params">nums</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> merge = <span class="keyword">function</span>(<span class="params">arr, s, m, e, tmp</span>) &#123;</span><br><span class="line">        <span class="keyword">let</span> [i, j, k] = [s, m+<span class="number">1</span>, <span class="number">0</span>]</span><br><span class="line">        <span class="keyword">while</span>(i &lt;= m &amp;&amp; j &lt;= e)</span><br><span class="line">            tmp[k++] = arr[i] &lt; arr[j] ? arr[i++] : arr[j++]</span><br><span class="line">        <span class="keyword">while</span>(i &lt;= m) </span><br><span class="line">            tmp[k++] = arr[i++]</span><br><span class="line">        <span class="keyword">while</span>(j &lt;= e)</span><br><span class="line">            tmp[k++] = arr[j++]</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; k; i++) </span><br><span class="line">            arr[s+i] = tmp[i]</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> mergesort = <span class="keyword">function</span> (<span class="params">arr, s, e, tmp</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (s &gt;= e) <span class="keyword">return</span></span><br><span class="line">        <span class="keyword">let</span> mid = (s+e)&gt;&gt;<span class="number">1</span></span><br><span class="line">        <span class="title function_">mergesort</span>(arr, s, mid, tmp)        <span class="comment">// 归并左半部分</span></span><br><span class="line">        <span class="title function_">mergesort</span>(arr, mid + <span class="number">1</span>, e, tmp)    <span class="comment">// 归并右半部分</span></span><br><span class="line">        <span class="title function_">merge</span>(arr, s, mid, e, tmp)         <span class="comment">// 合并两部分</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="title function_">mergesort</span>(nums, <span class="number">0</span>, nums.<span class="property">length</span>-<span class="number">1</span>, <span class="keyword">new</span> <span class="title class_">Array</span>(nums.<span class="property">length</span>))</span><br><span class="line">    <span class="keyword">return</span> nums</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<h1><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/super-egg-drop/">887. 鸡蛋掉落</a></h1>
-<p>给你 <code>k</code> 枚相同的鸡蛋，并可以使用一栋从第 <code>1</code> 层到第 <code>n</code> 层共有 <code>n</code> 层楼的建筑。</p>
-<p>已知存在楼层 <code>f</code> ，满足 <code>0 &lt;= f &lt;= n</code> ，任何从 <strong>高于</strong> <code>f</code> 的楼层落下的鸡蛋都会碎，从 <code>f</code> 楼层或比它低的楼层落下的鸡蛋都不会破。</p>
-<p>每次操作，你可以取一枚没有碎的鸡蛋并把它从任一楼层 <code>x</code> 扔下（满足 <code>1 &lt;= x &lt;= n</code>）。如果鸡蛋碎了，你就不能再次使用它。如果某枚鸡蛋扔下后没有摔碎，则可以在之后的操作中 <strong>重复使用</strong> 这枚鸡蛋。</p>
-<p>请你计算并返回要确定 <code>f</code> <strong>确切的值</strong> 的 <strong>最小操作次数</strong> 是多少？</p>
+<h2 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">number[]</span>&#125; <span class="variable">nums</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">number[]</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> sortArray = <span class="keyword">function</span>(<span class="params">nums</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> merge = <span class="keyword">function</span>(<span class="params">arr, s, m, e, tmp</span>) &#123;</span><br><span class="line">        <span class="keyword">let</span> [i, j, k] = [s, m+<span class="number">1</span>, <span class="number">0</span>]</span><br><span class="line">        <span class="keyword">while</span>(i &lt;= m &amp;&amp; j &lt;= e)</span><br><span class="line">            tmp[k++] = arr[i] &lt; arr[j] ? arr[i++] : arr[j++]</span><br><span class="line">        <span class="keyword">while</span>(i &lt;= m) </span><br><span class="line">            tmp[k++] = arr[i++]</span><br><span class="line">        <span class="keyword">while</span>(j &lt;= e)</span><br><span class="line">            tmp[k++] = arr[j++]</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; k; i++) </span><br><span class="line">            arr[s+i] = tmp[i]</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> mergesort = <span class="keyword">function</span> (<span class="params">arr, s, e, tmp</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (s &gt;= e) <span class="keyword">return</span></span><br><span class="line">        <span class="keyword">let</span> mid = (s+e)&gt;&gt;<span class="number">1</span></span><br><span class="line">        <span class="title function_">mergesort</span>(arr, s, mid, tmp)        <span class="comment">// 归并左半部分</span></span><br><span class="line">        <span class="title function_">mergesort</span>(arr, mid + <span class="number">1</span>, e, tmp)    <span class="comment">// 归并右半部分</span></span><br><span class="line">        <span class="title function_">merge</span>(arr, s, mid, e, tmp)         <span class="comment">// 合并两部分</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="title function_">mergesort</span>(nums, <span class="number">0</span>, nums.<span class="property">length</span>-<span class="number">1</span>, <span class="keyword">new</span> <span class="title class_">Array</span>(nums.<span class="property">length</span>))</span><br><span class="line">    <span class="keyword">return</span> nums</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h1 id="887-鸡蛋掉落"><a href="#887-鸡蛋掉落" class="headerlink" title="887. 鸡蛋掉落"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/super-egg-drop/">887. 鸡蛋掉落</a></h1><p>给你 <code>k</code> 枚相同的鸡蛋，并可以使用一栋从第 <code>1</code> 层到第 <code>n</code> 层共有 <code>n</code> 层楼的建筑。</p>
+<p>已知存在楼层 <code>f</code> ，满足 <code>0 &lt;= f &lt;= n</code> ，任何从 <strong>高于</strong> <code>f</code> 的楼层落下的鸡蛋都会碎，从 <code>f</code> 楼层或比它低的楼层落下的鸡蛋都不会破。</p>
+<p>每次操作，你可以取一枚没有碎的鸡蛋并把它从任一楼层 <code>x</code> 扔下（满足 <code>1 &lt;= x &lt;= n</code>）。如果鸡蛋碎了，你就不能再次使用它。如果某枚鸡蛋扔下后没有摔碎，则可以在之后的操作中 <strong>重复使用</strong> 这枚鸡蛋。</p>
+<p>请你计算并返回要确定 <code>f</code> <strong>确切的值</strong> 的 <strong>最小操作次数</strong> 是多少？</p>
 <p><strong>示例 1：</strong></p>
 <figure class="highlight tap"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">输入： k = 1, n = 2</span><br><span class="line">输出： 2</span><br><span class="line">解释：</span><br><span class="line">鸡蛋从<span class="number"> 1 </span>楼掉落。如果它碎了，肯定能得出 f =<span class="number"> 0 </span>。 </span><br><span class="line">否则，鸡蛋从<span class="number"> 2 </span>楼掉落。如果它碎了，肯定能得出 f =<span class="number"> 1 </span>。 </span><br><span class="line">如果它没碎，那么肯定能得出 f =<span class="number"> 2 </span>。 </span><br><span class="line">因此，在最坏的情况下我们需要移动<span class="number"> 2 </span>次以确定 f 是多少。 </span><br></pre></td></tr></table></figure>
 <p><strong>示例 2：</strong></p>
-<figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入： k = <span class="number">2</span>, <span class="built_in">n</span> = <span class="number">6</span></span><br><span class="line">输出： <span class="number">3</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入： <span class="attr">k</span> = <span class="number">2</span>, <span class="attr">n</span> = <span class="number">6</span></span><br><span class="line">输出： <span class="number">3</span></span><br></pre></td></tr></table></figure>
 <p><strong>示例 3：</strong></p>
-<figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入： k = <span class="number">3</span>, <span class="built_in">n</span> = <span class="number">14</span></span><br><span class="line">输出： <span class="number">4</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入： <span class="attr">k</span> = <span class="number">3</span>, <span class="attr">n</span> = <span class="number">14</span></span><br><span class="line">输出： <span class="number">4</span></span><br></pre></td></tr></table></figure>
 <p><strong>提示：</strong></p>
 <ul>
 <li><code>1 &lt;= k &lt;= 100</code></li>
 <li><code>1 &lt;= n &lt;= 10^4</code></li>
 </ul>
-<h2 id="思路-3">思路</h2>
-<ul>
+<h2 id="思路-2"><a href="#思路-2" class="headerlink" title="思路"></a>思路</h2><ul>
 <li>又是一道完全没有思路的题，看了题解之后，感觉第三种解法最好理解，推荐阅读：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/super-egg-drop/solution/ji-ben-dong-tai-gui-hua-jie-fa-by-labuladong/">题目理解 + 基本解法 + 进阶解法 - 鸡蛋掉落</a></li>
-<li>逆向思维，将问题转换为 <code>k</code> 个鸡蛋，最少掉落次数为 <code>f</code> 次，最大能测的楼层数 <code>n</code> 是多少
-<ul>
+<li>逆向思维，将问题转换为 <code>k</code> 个鸡蛋，最少掉落次数为 <code>f</code> 次，最大能测的楼层数 <code>n</code> 是多少<ul>
 <li>当 <code>k == 1</code> 即只有一个鸡蛋或 <code>f == 1</code> 即只有一次掉落机会时，最大楼层数为 <code>f+1</code></li>
 <li>其他时候，最大楼层数为鸡蛋碎了的情况，与鸡蛋没碎的情况下能测的最大楼层数加起来</li>
 </ul>
 </li>
-<li>当最大能测的楼层数为 <code>n</code> 时，我们就返回当前 <code>f</code></li>
+<li>当最大能测的楼层数为 <code>n</code> 时，我们就返回当前 <code>f</code><h2 id="代码-2"><a href="#代码-2" class="headerlink" title="代码"></a>代码</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">number</span>&#125; <span class="variable">k</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">number</span>&#125; <span class="variable">n</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">number</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> superEggDrop = <span class="keyword">function</span>(<span class="params">k, n</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> check = <span class="keyword">function</span>(<span class="params">k, f</span>) &#123;    <span class="comment">// k个鸡蛋，f次掉落次数，返回最大的n</span></span><br><span class="line">        <span class="comment">// 1个鸡蛋或1次掉落，最大n为f+1</span></span><br><span class="line">        <span class="keyword">if</span>(k === <span class="number">1</span> || f === <span class="number">1</span>) <span class="keyword">return</span> f + <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">return</span> <span class="title function_">check</span>(k-<span class="number">1</span>, f-<span class="number">1</span>) + <span class="title function_">check</span>(k, f-<span class="number">1</span>)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> f = <span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span>(<span class="title function_">check</span>(k, f) &lt;= n) ++f</span><br><span class="line">    <span class="keyword">return</span> f</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></li>
 </ul>
-<h2 id="代码-3">代码</h2>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">number</span>&#125; <span class="variable">k</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">number</span>&#125; <span class="variable">n</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">number</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> superEggDrop = <span class="keyword">function</span>(<span class="params">k, n</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> check = <span class="keyword">function</span>(<span class="params">k, f</span>) &#123;    <span class="comment">// k个鸡蛋，f次掉落次数，返回最大的n</span></span><br><span class="line">        <span class="comment">// 1个鸡蛋或1次掉落，最大n为f+1</span></span><br><span class="line">        <span class="keyword">if</span>(k === <span class="number">1</span> || f === <span class="number">1</span>) <span class="keyword">return</span> f + <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">return</span> <span class="title function_">check</span>(k-<span class="number">1</span>, f-<span class="number">1</span>) + <span class="title function_">check</span>(k, f-<span class="number">1</span>)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> f = <span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span>(<span class="title function_">check</span>(k, f) &lt;= n) ++f</span><br><span class="line">    <span class="keyword">return</span> f</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
 
         <hr>
         <!-- Pager -->
@@ -553,7 +538,7 @@
           
           
           <li class="next">
-            <a href="/cn/review-interview/笔试/2022春网易互联网前端暑期实习笔试/" data-toggle="tooltip" data-placement="top" title="2022春网易互联网前端暑期实习笔试">Next Post &rarr;</a>
+            <a href="/cn/160-yanxuan-examination-2022-spring-frontend/" data-toggle="tooltip" data-placement="top" title="2022春网易互联网前端暑期实习笔试">Next Post &rarr;</a>
           </li>
           
         </ul>
@@ -602,7 +587,7 @@
       </a>
     </li>
     <li class="social-share-li">
-      <a target="_blank" class="social-share-icon" href="mailto:?subject=冲刺春招-精选笔面试66题大通关day21&body=Hi,I found this website and thought you might like it http://yoursite-url/cn/coding-train/leetcode/bytedance/bytedance-day21/">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=冲刺春招-精选笔面试66题大通关day21&body=Hi,I found this website and thought you might like it https://ysx.cosine.ren/cn/coding-train/leetcode/bytedance/bytedance-day21/">
         <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
       </a>
     </li>
@@ -690,7 +675,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">69. x 的平方根</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%9D%E8%B7%AF"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">思路</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BB%A3%E7%A0%81"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">代码</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">912. 排序数组</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%9D%E8%B7%AF-2"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">思路</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BB%A3%E7%A0%81-2"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">代码</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">887. 鸡蛋掉落</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%9D%E8%B7%AF-3"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">思路</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BB%A3%E7%A0%81-3"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">代码</span></a></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#69-x-%E7%9A%84%E5%B9%B3%E6%96%B9%E6%A0%B9"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">69. x 的平方根</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%9D%E8%B7%AF"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">思路</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BB%A3%E7%A0%81"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">代码</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#912-%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">912. 排序数组</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%9D%E8%B7%AF-1"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">思路</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BB%A3%E7%A0%81-1"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">代码</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#887-%E9%B8%A1%E8%9B%8B%E6%8E%89%E8%90%BD"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">887. 鸡蛋掉落</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%9D%E8%B7%AF-2"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">思路</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BB%A3%E7%A0%81-2"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">代码</span></a></li></ol></li></ol>
         
         </div>
       </aside>
@@ -886,10 +871,6 @@
   
 
   
-    <!-- LangSelect start -->
-    <script type="text/javascript" src="/js/langselect.js"></script>
-    <!-- LangSelect end -->
-  
 
   
     <!-- Mouseclick -->
@@ -948,7 +929,7 @@ https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0
 <!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
 
 <!-- jquery.tagcloud.js -->
-<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("http://yoursite-url/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("https://ysx.cosine.ren/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
 start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
 
 
@@ -1282,5 +1263,20 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
 </html>

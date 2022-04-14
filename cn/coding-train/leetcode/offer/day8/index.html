@@ -139,7 +139,7 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="http://yoursite-url/cn/coding-train/leetcode/offer/day8/">
+  <link rel="canonical" href="https://ysx.cosine.ren/cn/coding-train/leetcode/offer/day8/">
   <title>
     
       剑指offer day8 动态规划（简单） - cos的博客 - WA的一声就哭了
@@ -298,10 +298,6 @@
           
 
           <!-- LangSelect -->
-          
-          
-          
-          
           
         </ul>
       </div>
@@ -475,6 +471,7 @@
         <p>day8题目：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/fei-bo-na-qi-shu-lie-lcof/">剑指 Offer 10- I. 斐波那契数列</a>、<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/qing-wa-tiao-tai-jie-wen-ti-lcof/">剑指 Offer 10- II. 青蛙跳台阶问题</a>、<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/gu-piao-de-zui-da-li-run-lcof/">剑指 Offer 63. 股票的最大利润</a></p>
 <p>知识点：数组、记忆化搜索、动态规划 ，难度为简单、简单、中等</p>
 <p>学习计划链接：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/study-plan/lcof/?progress=7jn70jr">「剑指 Offer」 - 学习计划</a></p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -501,8 +498,8 @@
 </tr>
 </tbody>
 </table>
-<h1><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/fei-bo-na-qi-shu-lie-lcof/">剑指 Offer 10- I. 斐波那契数列</a></h1>
-<p>写一个函数，输入 <code>n</code> ，求斐波那契（Fibonacci）数列的第 <code>n</code> 项（即 <code>F(N)</code>）。斐波那契数列的定义如下：</p>
+</div>
+<h1 id="剑指-Offer-10-I-斐波那契数列"><a href="#剑指-Offer-10-I-斐波那契数列" class="headerlink" title="剑指 Offer 10- I. 斐波那契数列"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/fei-bo-na-qi-shu-lie-lcof/">剑指 Offer 10- I. 斐波那契数列</a></h1><p>写一个函数，输入 <code>n</code> ，求斐波那契（Fibonacci）数列的第 <code>n</code> 项（即 <code>F(N)</code>）。斐波那契数列的定义如下：</p>
 <figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">F</span><span class="params">(<span class="number">0</span>)</span></span> = <span class="number">0</span>,   <span class="built_in">F</span>(<span class="number">1</span>) = <span class="number">1</span></span><br><span class="line"><span class="function"><span class="title">F</span><span class="params">(N)</span></span> = <span class="built_in">F</span>(N - <span class="number">1</span>) + <span class="built_in">F</span>(N - <span class="number">2</span>), 其中 N &gt; <span class="number">1</span>.</span><br></pre></td></tr></table></figure>
 <p>斐波那契数列由 0 和 1 开始，之后的斐波那契数就是由之前的两数相加而得出。</p>
 <p>答案需要取模 1e9+7（1000000007），如计算初始结果为：1000000008，请返回 1。</p>
@@ -514,14 +511,11 @@
 <ul>
 <li><code>0 &lt;= n &lt;= 100</code></li>
 </ul>
-<h2 id="思路及代码">思路及代码</h2>
-<p>本题标签都打了<br>
-思路一：递归+记忆化搜索，记得取模</p>
+<h2 id="思路及代码"><a href="#思路及代码" class="headerlink" title="思路及代码"></a>思路及代码</h2><p>本题标签都打了<br>思路一：递归+记忆化搜索，记得取模</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">number</span>&#125; <span class="variable">n</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">number</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> fib = <span class="keyword">function</span>(<span class="params">n</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> f = <span class="keyword">new</span> <span class="title class_">Array</span>(n + <span class="number">1</span>)</span><br><span class="line">    f[<span class="number">0</span>] = <span class="number">0</span></span><br><span class="line">    f[<span class="number">1</span>] = <span class="number">1</span></span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">fibna</span>(<span class="params">n</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> f[n] !== <span class="literal">undefined</span>? f[n]: f[n] = (<span class="title function_">fibna</span>(n-<span class="number">1</span>) + <span class="title function_">fibna</span>(n-<span class="number">2</span>))%<span class="number">1000000007</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="title function_">fibna</span>(n)</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <p>思路二：迭代版，滚动数组优化，由于之受前两项影响，故每次只将前两项存储下来就好了</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">number</span>&#125; <span class="variable">n</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">number</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> fib = <span class="keyword">function</span>(<span class="params">n</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span>(n <span class="keyword">in</span> [<span class="number">0</span>, <span class="number">1</span>]) <span class="keyword">return</span> n</span><br><span class="line">    <span class="keyword">let</span> [p, q] = [<span class="number">0</span>, <span class="number">1</span>]</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">2</span>; i &lt;= n; i++) &#123;</span><br><span class="line">        <span class="keyword">let</span> temp = q</span><br><span class="line">        q = (p+q) % <span class="number">1000000007</span></span><br><span class="line">        p = temp</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> q</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<h1><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/qing-wa-tiao-tai-jie-wen-ti-lcof/">剑指 Offer 10- II. 青蛙跳台阶问题</a></h1>
-<p>一只青蛙一次可以跳上1级台阶，也可以跳上2级台阶。求该青蛙跳上一个 <code>n</code> 级的台阶总共有多少种跳法。</p>
+<h1 id="剑指-Offer-10-II-青蛙跳台阶问题"><a href="#剑指-Offer-10-II-青蛙跳台阶问题" class="headerlink" title="剑指 Offer 10- II. 青蛙跳台阶问题"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/qing-wa-tiao-tai-jie-wen-ti-lcof/">剑指 Offer 10- II. 青蛙跳台阶问题</a></h1><p>一只青蛙一次可以跳上1级台阶，也可以跳上2级台阶。求该青蛙跳上一个 <code>n</code> 级的台阶总共有多少种跳法。</p>
 <p>答案需要取模 1e9+7（1000000007），如计算初始结果为：1000000008，请返回 1。</p>
 <p><strong>示例 1：</strong></p>
 <figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入： n <span class="operator">=</span> <span class="number">2</span></span><br><span class="line">输出： <span class="number">2</span></span><br></pre></td></tr></table></figure>
@@ -534,11 +528,9 @@
 <li><code>0 &lt;= n &lt;= 100</code></li>
 </ul>
 <p>注意：本题与主站 70 题相同：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/climbing-stairs/">https://leetcode-cn.com/problems/climbing-stairs/</a></p>
-<h2 id="思路及代码-2">思路及代码</h2>
-<p>动态规划，设 <code>dp</code> 为第i台阶有多少种跳法，由于每次可以跳一层或二层，则 <code>dp[i] = dp[i-1]+dp[i-2]</code>（从 <code>i-1</code> 跳一层，从 <code>i-2</code> 跳两层）。其实就是上题斐波那契数列，只不过第一项由0变为1罢了。</p>
+<h2 id="思路及代码-1"><a href="#思路及代码-1" class="headerlink" title="思路及代码"></a>思路及代码</h2><p>动态规划，设 <code>dp</code> 为第i台阶有多少种跳法，由于每次可以跳一层或二层，则 <code>dp[i] = dp[i-1]+dp[i-2]</code>（从 <code>i-1</code> 跳一层，从 <code>i-2</code> 跳两层）。其实就是上题斐波那契数列，只不过第一项由0变为1罢了。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">number</span>&#125; <span class="variable">n</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">number</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> numWays = <span class="keyword">function</span>(<span class="params">n</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span>(n <span class="keyword">in</span> [<span class="number">0</span>, <span class="number">1</span>]) <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">    <span class="keyword">let</span> [p, q] = [<span class="number">1</span>, <span class="number">1</span>]</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">2</span>; i &lt;= n; i++) &#123;</span><br><span class="line">        <span class="keyword">let</span> temp = q</span><br><span class="line">        q = (p+q) % <span class="number">1000000007</span></span><br><span class="line">        p = temp</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> q</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<h1><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/gu-piao-de-zui-da-li-run-lcof/">剑指 Offer 63. 股票的最大利润</a></h1>
-<p>假设把某股票的价格按照时间先后顺序存储在数组中，请问买卖该股票一次可能获得的最大利润是多少？</p>
+<h1 id="剑指-Offer-63-股票的最大利润"><a href="#剑指-Offer-63-股票的最大利润" class="headerlink" title="剑指 Offer 63. 股票的最大利润"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/gu-piao-de-zui-da-li-run-lcof/">剑指 Offer 63. 股票的最大利润</a></h1><p>假设把某股票的价格按照时间先后顺序存储在数组中，请问买卖该股票一次可能获得的最大利润是多少？</p>
 <p><strong>示例 1:</strong></p>
 <figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">输入: [7,1,5,3,6,4]</span></span><br><span class="line"><span class="section">输出: 5</span></span><br><span class="line"><span class="section">解释: 在第 2 天（股票价格 = 1）的时候买入，在第 5 天（股票价格 = 6）的时候卖出，最大利润 = 6-1 = 5 。</span></span><br><span class="line">     注意利润不能是 7-1 = 6, 因为卖出价格需要大于买入价格。</span><br></pre></td></tr></table></figure>
 <p><strong>示例 2:</strong></p>
@@ -546,13 +538,11 @@
 <p><strong>限制：</strong></p>
 <p><code>0 &lt;= 数组长度 &lt;= 10^5</code></p>
 <p><strong>注意：</strong> 本题与主站 121 题相同：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/">https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/</a></p>
-<h2 id="思路及代码-3">思路及代码</h2>
-<p>之前day14里有做过哦：<a target="_blank" rel="noopener" href="https://ysx.cosine.ren/cn/coding-train/leetcode/bytedance/bytedance-day14/">冲刺春招-精选笔面试66题大通关day14</a></p>
+<h2 id="思路及代码-2"><a href="#思路及代码-2" class="headerlink" title="思路及代码"></a>思路及代码</h2><p>之前day14里有做过哦：<a href="https://ysx.cosine.ren/cn/coding-train/leetcode/bytedance/bytedance-day14/">冲刺春招-精选笔面试66题大通关day14</a></p>
 <p>本质上就是最小值与最大值的一个差使其最大化，且最大值必须在最小值之后出现</p>
 <ul>
-<li>用 <code>min</code> 记录当前最小值，<code>ans</code> 记录最大利润
-<ul>
-<li>若当前 <code>price[i] &lt;= min</code>，则更新 <code>min</code></li>
+<li>用 <code>min</code> 记录当前最小值，<code>ans</code> 记录最大利润<ul>
+<li>若当前 <code>price[i] &lt;= min</code>，则更新 <code>min</code></li>
 <li>否则，记录最大利润，<code>ans = max(ans, prices[i]-min)</code></li>
 </ul>
 </li>
@@ -619,7 +609,7 @@
       </a>
     </li>
     <li class="social-share-li">
-      <a target="_blank" class="social-share-icon" href="mailto:?subject=剑指offer day8 动态规划（简单）&body=Hi,I found this website and thought you might like it http://yoursite-url/cn/coding-train/leetcode/offer/day8/">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=剑指offer day8 动态规划（简单）&body=Hi,I found this website and thought you might like it https://ysx.cosine.ren/cn/coding-train/leetcode/offer/day8/">
         <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
       </a>
     </li>
@@ -707,7 +697,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">剑指 Offer 10- I. 斐波那契数列</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%9D%E8%B7%AF%E5%8F%8A%E4%BB%A3%E7%A0%81"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">思路及代码</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">剑指 Offer 10- II. 青蛙跳台阶问题</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%9D%E8%B7%AF%E5%8F%8A%E4%BB%A3%E7%A0%81-2"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">思路及代码</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">剑指 Offer 63. 股票的最大利润</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%9D%E8%B7%AF%E5%8F%8A%E4%BB%A3%E7%A0%81-3"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">思路及代码</span></a></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E5%89%91%E6%8C%87-Offer-10-I-%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">剑指 Offer 10- I. 斐波那契数列</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%9D%E8%B7%AF%E5%8F%8A%E4%BB%A3%E7%A0%81"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">思路及代码</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E5%89%91%E6%8C%87-Offer-10-II-%E9%9D%92%E8%9B%99%E8%B7%B3%E5%8F%B0%E9%98%B6%E9%97%AE%E9%A2%98"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">剑指 Offer 10- II. 青蛙跳台阶问题</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%9D%E8%B7%AF%E5%8F%8A%E4%BB%A3%E7%A0%81-1"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">思路及代码</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E5%89%91%E6%8C%87-Offer-63-%E8%82%A1%E7%A5%A8%E7%9A%84%E6%9C%80%E5%A4%A7%E5%88%A9%E6%B6%A6"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">剑指 Offer 63. 股票的最大利润</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%9D%E8%B7%AF%E5%8F%8A%E4%BB%A3%E7%A0%81-2"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">思路及代码</span></a></li></ol></li></ol>
         
         </div>
       </aside>
@@ -905,10 +895,6 @@
   
 
   
-    <!-- LangSelect start -->
-    <script type="text/javascript" src="/js/langselect.js"></script>
-    <!-- LangSelect end -->
-  
 
   
     <!-- Mouseclick -->
@@ -967,7 +953,7 @@ https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0
 <!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
 
 <!-- jquery.tagcloud.js -->
-<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("http://yoursite-url/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("https://ysx.cosine.ren/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
 start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
 
 
@@ -1301,5 +1287,20 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
 </html>

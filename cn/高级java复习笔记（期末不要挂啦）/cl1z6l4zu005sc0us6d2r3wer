@@ -1,0 +1,1439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
+<head>
+  <!-- Google Analytics -->
+  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-xxxxxx-xx"></script>
+    <script type="text/javascript">
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-xxxxxx-xx');
+    </script>
+  
+
+  <!-- Baidu Tongji -->
+  
+    <script type="text/javascript">
+      // Originial
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  <!-- Baidu Push -->
+  
+    <script>
+      (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+      })();
+    </script>
+  
+
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <meta name="google-site-verification" content="lxDfCplOZbIzjhG34NuQBgu2gdyRlAtMB4utP5AgEBc"/>
+  <meta name="baidu-site-verification" content="PpzM9WxOJU"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="一个正在努力学习前端的程序媛qwq"/>
+  <meta name="keyword" content="前端, cos, blog, css, html, c++"/>
+  <link rel="shortcut icon" href="/img/avatar/cos.jpg"/>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
+
+  
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/beantech.min.css"/>
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="/css/highlight.css"/>
+    <link rel="stylesheet" href="/css/widget.css"/>
+    <link rel="stylesheet" href="/css/rocket.css"/>
+    <link rel="stylesheet" href="/css/signature.css"/>
+    <link rel="stylesheet" href="/css/catalog.css"/>
+    <link rel="stylesheet" href="/css/livemylife.css"/>
+
+    
+      <!-- wave start -->
+      <link rel="stylesheet" href="/css/wave.css"/>
+      <!-- wave end -->
+    
+
+    
+      <!-- top start (article top hot config) -->
+      <link rel="stylesheet" href="/css/top.css"/>
+      <!-- top end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="/css/scroll.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+      <!-- viewer start (Picture preview) -->
+      <link rel="stylesheet" href="/css/viewer.min.css"/>
+      <!-- viewer end -->
+    
+
+    
+      <!-- Search start -->
+      <link rel="stylesheet" href="/css/search.css"/>
+      <!-- Search end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="/css/themecolor.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+
+    
+      <!-- gitalk start -->
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"> -->
+      <link rel="stylesheet" href="/css/gitalk.css"/>
+      <!-- gitalk end -->
+    
+  
+
+  <!-- Custom Fonts -->
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+  <!-- Hux change font-awesome CDN to qiniu -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Hux Delete, sad but pending in China <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> <link
+  href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/ css'> -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+
+  <!-- ga & ba script hoook -->
+  <link rel="canonical" href="https://ysx.cosine.ren/cn/高级java复习笔记（期末不要挂啦）/cl1z6l4zu005sc0us6d2r3wer">
+  <title>
+    
+      高级java复习笔记（期末不要挂啦） - cos的博客 - WA的一声就哭了
+    
+  </title>
+<meta name="generator" content="Hexo 5.4.1"></head>
+
+
+<!-- hack iOS CSS :active style -->
+
+	<body ontouchstart="" class="body--light body--light">
+
+
+		<!-- ThemeColor -->
+		
+		<!-- ThemeColor -->
+<style type="text/css">
+  .body--light {
+    --light-mode: none;
+    --dark-mode: block;
+  }
+  .body--dark {
+    --light-mode: block;
+    --dark-mode: none;
+  }
+  i.mdui-icon.material-icons.light-mode {
+    display: var(--light-mode);
+  }
+  i.mdui-icon.material-icons.dark-mode {
+    display: var(--dark-mode);
+  }
+</style>
+<div class="toggle" onclick="document.body.classList.toggle('body--dark')">
+  <i class="mdui-icon material-icons light-mode"></i>
+  <i class="mdui-icon material-icons dark-mode"></i>
+</div>
+<script>
+  //getCookieValue
+  function getCookieValue(a) {
+    var b = document.cookie.match('(^|[^;]+)\\s*' + a + '\\s*=\\s*([^;]+)');
+    return b
+      ? b.pop()
+      : '';
+  }
+  let themeMode = 'light';
+  if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
+    let dbody = document.body.classList;
+    themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
+  }
+
+  //setCookieValue
+  var toggleBtn = document.querySelector(".toggle");
+  toggleBtn.addEventListener("click", function () {
+    var e = document.body.classList.contains("body--dark");
+    var cookieString = e
+      ? "dark"
+      : "light";
+    var exp = new Date();
+    exp.setTime(exp.getTime() + 3 * 24 * 60 * 60 * 1000); //3天过期
+    document.cookie = "sb-color-mode=" + cookieString + ";expires=" + exp.toGMTString() + ";path=/";
+  });
+</script>
+
+		
+
+		<!-- Gitter -->
+		
+		<!-- Gitter -->
+<!-- Docs:https://gitter.im/?utm_source=left-menu-logo -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'cosine_yu_blog/community'
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+		
+
+		<!-- Navigation (contains search)-->
+		<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">cos的博客</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- Known Issue, found by Hux: <nav>'s height woule be hold on by its content. so, when navbar scale out, the <nav> will cover tags. also mask any touch event of tags, unfortunately. -->
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/">首页</a>
+          </li>
+
+          
+          
+          
+          
+          <li>
+            <a href="/archive/">
+              
+              归档
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              标签
+              
+              
+            </a>
+          </li>
+          
+          
+
+          
+          <li>
+            <a class="popup-trigger">
+              <span class="search-icon"></span>搜索</a>
+          </li>
+          
+
+          <!-- LangSelect -->
+          
+        </ul>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+<!-- progress -->
+<div id="progress">
+  <div class="line" style="width: 0%;"></div>
+</div>
+
+<script>
+  // Drop Bootstarp low-performance Navbar Use customize navbar with high-quality material design animation in high-perf jank-free CSS3 implementation
+  var $body = document.body;
+  var $toggle = document.querySelector('.navbar-toggle');
+  var $navbar = document.querySelector('#huxblog_navbar');
+  var $collapse = document.querySelector('.navbar-collapse');
+
+  $toggle.addEventListener('click', handleMagic)
+
+  function handleMagic(e) {
+    if ($navbar.className.indexOf('in') > 0) {
+      // CLOSE
+      $navbar.className = " ";
+      // wait until animation end.
+      setTimeout(function() {
+        // prevent frequently toggle
+        if ($navbar.className.indexOf('in') < 0) {
+          $collapse.style.height = "0px"
+        }
+      }, 400)
+    } else {
+      // OPEN
+      $collapse.style.height = "auto"
+      $navbar.className += " in";
+    }
+  }
+</script>
+
+
+		<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
+		<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+
+  <style type="text/css">
+    .body--light {
+      /* intro-header */
+      --intro-header-background-image-url-home: url('/img/header_img/93604793_p0.jpg');
+      --intro-header-background-image-url-post: url('/img/header_img/lml_bg.jpg');
+      --intro-header-background-image-url-page: url('//img/header_img/lml_bg.jpg');
+    }
+    .body--dark {
+      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/93604793_p0.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/lml_bg.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('//img/header_img/lml_bg.jpg');
+    }
+
+    header.intro-header {
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('/img/header_img/lml_bg.jpg'); */
+      
+    }
+
+    
+  </style>
+
+
+
+
+
+<header class="intro-header">
+  <!-- Signature -->
+  <div id="signature">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#后端" title="后端">后端</a>
+              
+              <a class="tag" href="/tags/#Java" title="Java">Java</a>
+              
+              <a class="tag" href="/tags/#设计模式" title="设计模式">设计模式</a>
+              
+            </div>
+            <h1>高级java复习笔记（期末不要挂啦）</h1>
+            <h2 class="subheading">设计模式 序列化 注册监听器 对象实例化方法 反射的作用 切面编程 套接字 同步 连接池 线程池 比较接口</h2>
+            <span class="meta">
+              Posted by cos on
+              2021-12-16
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              Estimated Reading Time <span class="post-count">18</span> Minutes
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              Words <span class="post-count">5.1k</span> In Total
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- waveoverlay start -->
+  <div class="preview-overlay">
+    <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+      </defs>
+      <g class="preview-parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill=var(--gentle-wave1)></use>
+        <use xlink:href="#gentle-wave" x="48" y="3" fill=var(--gentle-wave2)></use>
+        <use xlink:href="#gentle-wave" x="48" y="5" fill=var(--gentle-wave3)></use>
+        <use xlink:href="#gentle-wave" x="48" y="7" fill=var(--gentle-wave)></use>
+      </g>
+    </svg>
+  </div>
+  <!-- waveoverlay end -->
+  
+
+</header>
+
+
+
+		<!-- Main Content (Post contains
+	Pager、
+	tip、
+	socialshare、
+	gitalk、gitment、disqus-comment、
+	Catalog、
+	Sidebar、
+	Featured-Tags、
+	Friends Blog、
+	anchorjs、
+	) -->
+		<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <p><strong>老师：就看看基本的设计模式 序列化 注册监听器 对象实例化方法 反射的作用 切面编程 套接字 同步 连接池 线程池 比较接口 再看看代理模式 策略模式有什么应用 然后复习一下多线程编程 就好了</strong><br>
+肯定还有个重点叫数据库连接吧！（<br>
+<strong>行叭</strong></p>
+<p><s>虽然并不想用Java找工作但还是要学一下因为是必修，必修！</s></p>
+<h1>Java 对象实例化方法</h1>
+<p>参考： <a target="_blank" rel="noopener" href="https://blog.csdn.net/u014371184/article/details/78212895">Java实例化对象的几种方式</a><br>
+Java中实例化对象有好几种方式</p>
+<ul>
+<li><strong>使用new语句进行实例化</strong>，是最常用的创建对象方法</li>
+<li><strong>通过工厂模式中的方法返回对象</strong>，在下面的设计模式有介绍，eg： String str = String.valueOf(23); 没错，这就是</li>
+<li><strong>运用反射手段，调用Class.newInstance()函数</strong>（或者Constructor类的）实例方法来实例化</li>
+<li><strong>调用对象的Clone()方法</strong></li>
+<li><strong>通过I/O流（包括反序列化）</strong>，如运用反序列化，使用readObject方法读出一个对象实例化。</li>
+</ul>
+<h1>Java 设计模式</h1>
+<p>设计模式是一套被反复使用、多数人知晓的、经过分类编目的、代码设计经验的总结。使用设计模式是为了可重用代码、让代码更容易被他人理解、保证代码可靠性、程序的重用性。</p>
+<h2 id="工厂模式">工厂模式</h2>
+<p>参考：<a target="_blank" rel="noopener" href="https://www.runoob.com/design-pattern/factory-pattern.html">工厂模式 | 菜鸟教程</a></p>
+<blockquote>
+<p>工厂模式（Factory Pattern）是 Java 中最常用的设计模式之一。这种类型的设计模式属于创建型模式，它提供了一种创建对象的最佳方式。<strong>在工厂模式中，我们在创建对象时不会对客户端暴露创建逻辑，并且是通过使用一个共同的接口来指向新创建的对象。</strong></p>
+</blockquote>
+<p><strong>意图：定义一个创建对象的接口，让其子类自己决定实例化哪一个工厂类，工厂模式使其创建过程延迟到子类进行。</strong><br>
+<strong>主要解决</strong>：主要解决接口选择的问题。<br>
+<strong>何时使用</strong>：我们明确地计划不同条件下创建不同实例时。<br>
+<strong>如何解决</strong>：让其子类实现工厂接口，返回的也是一个抽象的产品。<br>
+<strong>关键代码</strong>：创建过程在其子类执行。<br>
+<strong>应用实例</strong>： 您需要一辆汽车，可以直接从工厂里面提货，而不用去管这辆汽车是怎么做出来的，也不需要知道这个汽车里面的具体实现。<br>
+<strong>优点：</strong><br>
+1、一个调用者想创建一个对象，只要知道其名称就可以了。<br>
+2、扩展性高，如果想增加一个产品，只要扩展一个工厂类就可以。<br>
+3、屏蔽产品的具体实现，调用者只关心产品的接口。</p>
+<p><strong>缺点：</strong>  每次增加一个产品时，都需要增加一个具体类和对象实现工厂，使得系统中类的个数成倍增加，在一定程度上增加了系统的复杂度，同时也增加了系统具体类的依赖。</p>
+<h2 id="装饰器模式">装饰器模式</h2>
+<p>参考：<a target="_blank" rel="noopener" href="https://www.runoob.com/design-pattern/decorator-pattern.html">装饰器模式 | 菜鸟教程</a></p>
+<blockquote>
+<p>装饰器模式（Decorator Pattern）<strong>允许向一个现有的对象添加新的功能，同时又不改变其结构。</strong> 这种类型的设计模式属于结构型模式，它是作为现有的类的一个包装。<br>
+<strong>这种模式创建了一个装饰类，用来包装原有的类，并在保持类方法签名完整性的前提下，提供了额外的功能。</strong></p>
+</blockquote>
+<p><strong>何时使用：</strong> 在不想增加很多子类的情况下扩展类。</p>
+<p><strong>如何解决：</strong> 将具体功能职责划分，同时继承装饰者模式。</p>
+<p><strong>关键代码：</strong>  1、Component 类充当抽象角色，不应该具体实现。<br>
+2、修饰类引用和继承 Component 类，具体扩展类重写父类方法。</p>
+<p>我们通过下面的实例来演示装饰器模式的用法。其中，我们将把一个形状装饰上不同的颜色，同时又不改变形状类。<br>
+<img src="https://img-blog.csdnimg.cn/bfd7a1979ed04bc5a20fc7f588f77aa8.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5L2ZY29z,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<h2 id="观察者模式">观察者模式</h2>
+<p>参考：<a target="_blank" rel="noopener" href="https://www.runoob.com/design-pattern/observer-pattern.html">观察者模式 | 菜鸟教程</a></p>
+<blockquote>
+<p>当对象间存在一对多关系时，则使用观察者模式（Observer Pattern）。比如，<strong>当一个对象被修改时，则会自动通知依赖它的对象并被自动<img src="https://img-blog.csdnimg.cn/24a769a7a72741f6803c729ee97e5f56.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5L2ZY29z,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>
+更新</strong>。观察者模式属于行为型模式。</p>
+</blockquote>
+<p><strong>关键代码：</strong> 在抽象类里有一个 ArrayList 存放观察者们。<br>
+<strong>应用实例：</strong>  拍卖的时候，拍卖师观察最高标价，然后通知给其他竞价者竞价。<br>
+<strong>优点：</strong><br>
+1、观察者和被观察者是抽象耦合的。<br>
+2、建立一套触发机制。</p>
+<p><strong>缺点：</strong><br>
+1、如果一个被观察者对象有很多的直接和间接的观察者的话，将所有的观察者都通知到会花费很多时间。<br>
+2、如果在观察者和观察目标之间有循环依赖的话，观察目标会触发它们之间进行循环调用，可能导致系统崩溃。<br>
+3、观察者模式没有相应的机制让观察者知道所观察的目标对象是怎么发生变化的，而仅仅只是知道观察目标发生了变化。</p>
+<h2 id="代理模式">代理模式</h2>
+<p>参考：<a target="_blank" rel="noopener" href="https://www.runoob.com/design-pattern/proxy-pattern.html">代理模式  | 菜鸟教程</a></p>
+<blockquote>
+<p>在代理模式（Proxy Pattern）中，<strong>一个类代表另一个类的功能</strong>。这种类型的设计模式属于结构型模式。<br>
+在代理模式中，我们创建具有现有对象的对象，以便向外界提供功能接口。</p>
+</blockquote>
+<p><strong>主要解决：</strong> 在直接访问对象时带来的问题，比如说：要访问的对象在远程的机器上。在面向对象系统中，有些对象由于某些原因（比如对象创建开销很大，或者某些操作需要安全控制，或者需要进程外的访问），直接访问会给使用者或者系统结构带来很多麻烦，我们可以在访问此对象时加上一个对此对象的访问层。<br>
+<strong>如何解决：</strong>  增加中间层。<br>
+<strong>应用实例：</strong>  1、Windows 里面的快捷方式。<br>
+2、买火车票不一定在火车站买，也可以去代售点。<br>
+3、一张支票或银行存单是账户中资金的代理。支票在市场交易中用来代替现金，并提供对签发人账号上资金的控制。<br>
+<strong>优点：</strong> 1、职责清晰。 2、高扩展性。 3、智能化。<br>
+<strong>缺点：</strong>  1、由于在客户端和真实主题之间增加了代理对象，因此有些类型的代理模式可能会造成请求的处理速度变慢。<br>
+2、实现代理模式需要额外的工作，有些代理模式的实现非常复杂。</p>
+<h2 id="策略模式">策略模式</h2>
+<p>参考：<a target="_blank" rel="noopener" href="https://www.runoob.com/design-pattern/strategy-pattern.html">策略模式 | 菜鸟教程</a></p>
+<blockquote>
+<ul>
+<li>在策略模式（Strategy Pattern）中，<strong>一个类的行为或其算法可以在运行时更改。</strong> 这种类型的设计模式属于行为型模式。</li>
+<li>在策略模式中，我们 <strong>创建表示各种策略的对象</strong> 和 <strong>一个行为随着策略对象改变而改变的 context 对象 。策略对象改变 context 对象的执行算法。</strong></li>
+</ul>
+</blockquote>
+<p><strong>意图</strong>：定义一系列的算法,把它们一个个封装起来, 并且使它们可相互替换。</p>
+<p><strong>主要解决</strong>：在有多种算法相似的情况下，使用 if…else 所带来的复杂和难以维护。</p>
+<p><strong>何时使用</strong>：一个系统有许多许多类，而区分它们的只是他们直接的行为。</p>
+<p><strong>如何解决</strong>：将这些算法封装成一个一个的类，任意地替换。</p>
+<p><strong>关键代码</strong>：实现同一个接口。</p>
+<p><strong>应用实例</strong>： 1、诸葛亮的锦囊妙计，每一个锦囊就是一个策略。<br>
+2、旅行的出游方式，选择骑自行车、坐汽车，每一种旅行方式都是一个策略。</p>
+<p><strong>优点</strong>： 1、算法可以自由切换。<br>
+2、避免使用多重条件判断。<br>
+3、扩展性良好。</p>
+<p><strong>缺点</strong>： 1、策略类会增多。<br>
+2、所有策略类都需要对外暴露。</p>
+<p>ps:策略模式的应用感觉这篇博客讲的特别好！<a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1385920">设计模式 | 策略模式及典型应用</a></p>
+<h1>Java 序列化</h1>
+<p><a target="_blank" rel="noopener" href="https://cosine.ren/index.php/2021/11/24/%E9%AB%98%E7%BA%A7java%E5%B0%8F%E6%B5%8B/">高级java小测-序列化对象输入输出</a></p>
+<ul>
+<li>Java 提供了一种对象序列化的机制，该机制中，<strong>一个对象可以被表示为一个字节序列，该字节序列包括该对象的数据、有关对象的类型的信息和存储在对象中数据的类型。</strong></li>
+<li><strong>将序列化对象写入文件之后，可以从文件中读取出来，并且对它进行反序列化</strong>，也就是说，对象的类型信息、对象的数据，还有对象中的数据类型可以用来在内存中新建对象。</li>
+<li>整个过程都是 Java 虚拟机（JVM）独立的，也就是说，<strong>在一个平台上序列化的对象可以在另一个完全不同的平台上反序列化该对象。</strong></li>
+</ul>
+<p>详见 <a target="_blank" rel="noopener" href="https://www.runoob.com/java/java-serialization.html">Java 序列化 | 菜鸟教程 </a></p>
+<h1>Java 事件处理 监听器</h1>
+<p>往大里讲有很多方面，这里简单记下<br>
+在Java事件处理体系结构中，主要涉及的对象事件（Event)、事件源(Event Source )、事件监听器(Event Listener)<br>
+基于监听器的事件处理机制是一种委派式的事件处理方式，实现步骤:</p>
+<ul>
+<li>委托:组件将事件处理委托给特定的事件处理对象</li>
+<li>通知∶触发指定的事件时，就通知所委托的事件处理</li>
+<li>对象处理∶事件处理对象调用相应的事件处理方法来处理该事件</li>
+</ul>
+<p>监听器模式：事件源注册监听器之后，当事件源触发事件，监听器就可以回调事件对象的方法；更形象地说，监听者模式是基于：注册-回调的事件/消息通知处理模式，就是被监控者将消息通知给所有监控者。</p>
+<p>1、注册监听器：事件源.setListener。<br>
+2、回调：事件源实现onListener。</p>
+<p>几种注册监听类的方法参考博客： <a target="_blank" rel="noopener" href="https://blog.csdn.net/bobo_93/article/details/52658694">Java 注册监听器的方法总结</a><br>
+其中，当监听的事件较简单的时候适合用匿名类实现监听类</p>
+<h1>Java 反射</h1>
+<p>参考博客：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/ysocean/p/6516248.html">Java 反射详解</a></p>
+<ul>
+<li>Java反射就是<strong>在运行状态中，对于任意一个类，都能够知道这个类的所有属性和方法</strong>；对于任意一个对象，都能够调用它的任意方法和属性；并且能改变它的属性。而这也是Java被视为动态语言的一个关键性质。</li>
+<li>具体实现，可以看之前写的作业- - <a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_45890533/article/details/121964482">高级java作业</a></li>
+</ul>
+<h1>Java 切面编程（AOP）</h1>
+<p>出处：<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_25827845/article/details/75208354">Spring核心AOP（面向切面编程）总结</a></p>
+<p>AOP（面向切面编程）是Spring框架的特色功能之一。<br>
+面向切面编程，指<strong>扩展功能不修改源代码，将功能代码从业务逻辑代码中分离出来。</strong><br>
+主要用于：日志记录，性能统计，安全控制，事务处理，异常处理等等。<br>
+主要意图：将日志记录，性能统计，安全控制，事务处理，异常处理等代码从业务逻辑代码中划分出来，通过对这些行为的分离，我们希望可以将它们独立到非指导业务逻辑的方法中，进而改变这些行为的时候不影响业务逻辑的代码。<br>
+主要看看概念，不会考太深（吧</p>
+<h1>基于Socket的网络编程（套接字）</h1>
+<p>参考博客：<a target="_blank" rel="noopener" href="https://blog.csdn.net/w252064/article/details/78713442">Java高级之Socket,反射</a>、<a target="_blank" rel="noopener" href="https://www.runoob.com/java/net-serversocket-socket.html">ServerSocket 和 Socket 通信实例 | 菜鸟教程</a></p>
+<p><strong>网络上的两个程序通过一个双向的通讯连接实现数据的交换，这个双向链路的一端称为一个Socket。</strong>  Socket通常用来实现客户方和服务方的连接，是TCP/IP协议的一个十分流行的编程界面，<strong>一个Socket由一个IP地址和一个端口号唯一确定</strong>。</p>
+<p>在Java环境下，Socket编程主要是指基于TCP/IP协议的网络编程。<br>
+代码可参照菜鸟教程中的，一看就懂，过程如下。</p>
+<p>1、建立服务器端</p>
+<ul>
+<li>服务器建立通信ServerSocket</li>
+<li>服务器建立Socket接收客户端连接</li>
+<li>建立IO输入流读取客户端发送的数据</li>
+<li>建立IO输出流向客户端发送数据消息</li>
+</ul>
+<p>2、建立客户端</p>
+<ul>
+<li>创建Socket通信，设置通信服务器的IP和Port</li>
+<li>建立IO输出流向服务器发送数据消息</li>
+<li>建立IO输入流读取服务器发送来的数据消息</li>
+</ul>
+<h1>多线程同步</h1>
+<p>应用详见作业2 <a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_45890533/article/details/121663399?spm=1001.2014.3001.5501">高级java小测2——线程</a></p>
+<p>线程（Thread）是独立于其他线程运行的程序执行单元，在Java的多任务处理中起着举足轻重的作用。</p>
+<p><strong>线程与进程之区别</strong></p>
+<ul>
+<li>线程(Thread)：轻量级程序，有开始、执行和结束。多个线程共享一块内存和资源</li>
+<li>进程(Process)：拥有自己独立的内存空间和资源，正在运行的程序。</li>
+<li>多线程：在一个程序中同时运行多个任务</li>
+<li>多进程：在操作系统中能同时运行多个任务（程序）</li>
+<li><strong>一个进程中可以包含若干个线程，它们可以利用进程所拥有的资源。通常把进程作为分配资源的基本单位，而把线程作为独立运行和独立调度的基本单位。</strong></li>
+<li>由于线程比进程更小，基本上不拥有系统资源，故对它的调度所付出的开销就会小得多，能更高效的提高系统内多个程序间并发执行的程度。</li>
+</ul>
+<p>线程状态</p>
+<ul>
+<li>born：新线程状态</li>
+<li>runnable：就绪状态</li>
+<li>running：运行状态</li>
+<li>blocked：阻塞状态</li>
+<li>sleeping：休眠状态</li>
+<li>waiting：等待状态</li>
+<li>dead：死亡状态</li>
+</ul>
+<p><strong>线程同步：保证某个资源在某一时刻只能由一个线程访问，以此保证共享数据及操作的完整性。</strong><br>
+<strong>线程同步的几种方式：</strong><a target="_blank" rel="noopener" href="https://www.cnblogs.com/XHJT/p/3897440.html">关于线程同步(7种方式)</a></p>
+<ul>
+<li>同步方法：方法前加synchonized关键字</li>
+<li>同步代码块：即有synchronized关键字修饰的语句块。</li>
+<li>使用特殊域变量(volatile)实现线程同步</li>
+<li>使用重入锁实现线程同步（ReentrantLock类）</li>
+<li>使用局部变量实现线程同步（ThreadLocal类）</li>
+<li>使用阻塞队列实现线程同步（实际开发，远离底层结构，LinkedBlockingQueue 类）</li>
+<li>使用原子变量实现线程同步（AtomicInteger 类）</li>
+</ul>
+<p>考试时前四个就够了（）</p>
+<h1>数据库连接池、线程池</h1>
+<p>在使用数据库的过程中，往往使用数据库连接池而不是直接使用数据库连接进行操作。因为每一个数据库连接的创建和销毁的代价是昂贵的，而<strong>池化技术则负责分配，管理和释放数据库连接，预先创建了资源，这些资源是可复用的</strong>,这样就保证了在多用户情况下只能使用指定数目的资源，<strong>避免了一个用户创建一个连接资源，造成程序运行开销过大</strong></p>
+<p>而线程池同理，<strong>首先创建一些线程，它们的集合称为线程池</strong>，使用线程池可以很好的提高性能，<strong>线程池在系统启动时既创建大量空闲的线程，程序将一个任务传给线程池。线程池就会启动一条线程来执行这个任务，执行结束后，该线程并不会死亡，而是再次返回线程池中成为空闲状态，等待执行下一个任务。</strong><br>
+<s>概念了解即可</s><br>
+更详细的，看这几篇博客：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/lalalagq/p/10286937.html">java并发实战：连接池实现 </a>、<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_40604313/article/details/119785027">Java中线程池详解<br>
+</a></p>
+<h1>Comparable/Comparator 比较接口</h1>
+<p>参照博客：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/Kevin-mao/p/5912775.html">Java中实现对象的比较：Comparable接口和Comparator接口</a><br>
+自己的应用： <a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_45890533/article/details/121964482">高级java作业</a></p>
+<h2 id="Comparable接口">Comparable接口</h2>
+<ul>
+<li><strong>此接口强行对实现它的每个类的对象进行整体排序。</strong></li>
+<li>此排序被称为该类的<strong>自然排序</strong></li>
+<li>类的 compareTo方法被称为它的自然比较方法 。实现此接口的对象列表（和数组）可以通过 Collections.sort（和 Arrays.sort ）进行自动排序。实现此接口的对象可以用作有序映射表中的键或有序集合中的元素，<strong>无需指定比较器Comparator</strong>。</li>
+<li>compareTo()方法，只有一个参数，返回值为int，返回值大于0表示对象大于参数对象；小于0表示对象小于参数对象；等于0表示两者相等</li>
+</ul>
+<h2 id="Comparator接口">Comparator接口</h2>
+<ul>
+<li>Comparable接口将比较代码嵌入需要进行比较的类的自身代码中，而<strong>Comparator接口在一个独立的类中实现比较。</strong></li>
+<li>如果前期类的设计没有考虑到类的Compare问题而没有实现Comparable接口，<strong>后期可以通过Comparator接口来实现比较算法进行排序</strong>，并可以为了使用不同的排序标准做准备，比如：升序、降序。</li>
+<li>Comparable接口强制进行自然排序，而<strong>Comparator接口不强制进行自然排序，可以指定排序顺序。</strong></li>
+</ul>
+<h1>JDBC连接数据库</h1>
+<p><a target="_blank" rel="noopener" href="http://cosine.ren/wp-content/uploads/2021/12/JavaExp_1.zip">我的项目文件</a><br>
+将数据库连接信息放在mysql.properties配置文件中，文件内容</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">driver=com.mysql.cj.jdbc.Driver</span><br><span class="line">url=jdbc:mysql:<span class="comment">//localhost:3306/exp_1</span></span><br><span class="line">user=root</span><br><span class="line">pwd= 你的数据库密码</span><br></pre></td></tr></table></figure>
+<p>Config类获取配置文件信息</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> config;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.FileInputStream;</span><br><span class="line"><span class="keyword">import</span> java.util.Properties;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Config</span> &#123;</span><br><span class="line">    <span class="keyword">private</span>  <span class="keyword">static</span> <span class="type">Properties</span> <span class="variable">p</span> <span class="operator">=</span> <span class="literal">null</span>;</span><br><span class="line">    <span class="keyword">static</span> &#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            p = <span class="keyword">new</span> <span class="title class_">Properties</span>();</span><br><span class="line">            p.load(<span class="keyword">new</span> <span class="title class_">FileInputStream</span>(<span class="string">&quot;config/mysql.properties&quot;</span>));</span><br><span class="line"></span><br><span class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> String <span class="title function_">getValue</span><span class="params">(String key)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> p.get(key).toString();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>定义数据库连接工具类DBUtil，包括配置字段，数据库连接对象Connection、查询结果集ResultSet，提交状态autoCommit(boolean型)、PreparedStatement等，方法包括</p>
+<ul>
+<li>获取数据库连接方法：getConnection</li>
+<li>释放资源：closeAll</li>
+<li>执行sql语句进行数据库数据的查询方法：executeQuery</li>
+<li>执行sql语句进行数据库数据的增加，删除，修改等更新方法：executeUpdate</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">DBUtil</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> String URL;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> String USER;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> String PASSWORD;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> String DRIVER;</span><br><span class="line">    <span class="keyword">private</span> PreparedStatement ps;</span><br><span class="line">    <span class="keyword">private</span> Connection connection;  <span class="comment">//数据库连接对象</span></span><br><span class="line">    <span class="keyword">private</span> ResultSet resultSet;    <span class="comment">//查询结果集</span></span><br><span class="line">    <span class="keyword">private</span> <span class="type">boolean</span> autoCommit;</span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">DBUtil</span><span class="params">()</span> &#123;</span><br><span class="line">        DRIVER = Config.getValue(<span class="string">&quot;driver&quot;</span>);</span><br><span class="line">        URL = Config.getValue(<span class="string">&quot;url&quot;</span>);</span><br><span class="line">        USER = Config.getValue(<span class="string">&quot;user&quot;</span>);</span><br><span class="line">        PASSWORD = Config.getValue(<span class="string">&quot;pwd&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 获取数据库连接</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> connection 数据库连接对象</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> Connection <span class="title function_">getConnection</span><span class="params">()</span> <span class="keyword">throws</span> SQLException &#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            Class.forName(DRIVER);</span><br><span class="line">            <span class="comment">// 获取数据库连接</span></span><br><span class="line">            connection = DriverManager.getConnection(URL, USER, PASSWORD);</span><br><span class="line">            System.out.println(<span class="string">&quot;数据库连接成功&quot;</span>);</span><br><span class="line">            <span class="keyword">return</span> connection;</span><br><span class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">            <span class="comment">// 如果连接过程出现异常，抛出异常信息</span></span><br><span class="line">            e.printStackTrace();</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">SQLException</span>(<span class="string">&quot;驱动错误或连接失败！&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 释放资源</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">closeAll</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="comment">// 关闭resultSet</span></span><br><span class="line">        <span class="keyword">if</span>(resultSet != <span class="literal">null</span>) &#123;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                resultSet.close();</span><br><span class="line">            &#125; <span class="keyword">catch</span> (SQLException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 关闭ps</span></span><br><span class="line">        <span class="keyword">if</span>(ps != <span class="literal">null</span>) &#123;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                ps.close();</span><br><span class="line">            &#125; <span class="keyword">catch</span> (SQLException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 关闭connection</span></span><br><span class="line">        <span class="keyword">if</span>(connection != <span class="literal">null</span>) &#123;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                connection.close();</span><br><span class="line">            &#125; <span class="keyword">catch</span> (SQLException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 执行sql语句进行数据库数据的查询</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> preSql 待填充参数的数据库查询语句</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> params 准备填充的参数列表</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@throws</span> SQLException 数据库更新异常</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> ResultSet 结果集</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> ResultSet <span class="title function_">executeQuery</span><span class="params">(String preSql, List&lt;Object&gt; params)</span> &#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            ps = connection.prepareStatement(preSql);</span><br><span class="line">            <span class="keyword">if</span> (ps != <span class="literal">null</span>) &#123;</span><br><span class="line">                <span class="comment">// 填充参数</span></span><br><span class="line">                <span class="keyword">for</span>(<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; params.size(); ++i) &#123;</span><br><span class="line">                    ps.setObject(i+<span class="number">1</span>, params.get(i));</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 执行sql语句</span></span><br><span class="line">            resultSet = ps.executeQuery();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (SQLException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> resultSet;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 执行sql语句进行数据库数据的增加，删除，修改等更新</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> sql 待填充参数的数据库查询语句</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> params 准备填充的参数列表</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@throws</span> SQLException 数据库更新异常</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> 是否更新成功</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">executeUpdate</span><span class="params">(String sql, List&lt;Object&gt; params)</span> <span class="keyword">throws</span> SQLException &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">rowNum</span> <span class="operator">=</span> -<span class="number">1</span>;        <span class="comment">// 如果行号小于零说明更新失败</span></span><br><span class="line">        ps = connection.prepareStatement(sql);</span><br><span class="line">        <span class="keyword">if</span> (params != <span class="literal">null</span> &amp;&amp; !params.isEmpty()) &#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; params.size();  ++i) &#123;</span><br><span class="line">                ps.setObject(i+<span class="number">1</span>, params.get(i));</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        rowNum = ps.executeUpdate(); <span class="comment">//executeUpdate的返回值是一个整数，指示受影响的行数（即更新计数）</span></span><br><span class="line">        <span class="keyword">return</span> rowNum &gt; <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
+          
+          <li class="previous">
+            <a href="/cn/note/front-end/bytedance-note/css-learning-layout/cl1z6l50r008jc0us6hw091fa" data-toggle="tooltip" data-placement="top" title="【第二届青训营-寒假前端场】- 「CSS布局」">&larr; Previous Post</a>
+          </li>
+          
+          
+          <li class="next">
+            <a href="/cn/高级java作业(反射、Collection、正则、工厂设计模式和观察者模式)/cl1z6l4zt005qc0us2z3u7yiu" data-toggle="tooltip" data-placement="top" title="高级java作业(反射、Collection、正则、工厂设计模式和观察者模式)">Next Post &rarr;</a>
+          </li>
+          
+        </ul>
+
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    
+      如果您喜欢此博客或发现它对您有用，则欢迎对此发表评论。 也欢迎您共享此博客，以便更多人可以参与。 如果博客中使用的图像侵犯了您的版权，请与作者联系以将其删除。 谢谢 ！
+    
+  </p>
+</div>
+<!-- tip end -->
+
+        <!-- tip end -->
+        
+
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=高级java复习笔记（期末不要挂啦）&body=Hi,I found this website and thought you might like it https://ysx.cosine.ren/cn/高级java复习笔记（期末不要挂啦）/cl1z6l4zu005sc0us6d2r3wer">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+        <!-- Sharing End -->
+        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+  <!-- gitalk start -->
+  <!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
+
+  <div id="gitalk-container"></div>
+
+  
+    <!-- <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.js"></script> -->
+    <script src="/js/comment/gitalk.js"></script>
+  
+
+  <script>
+    var gitalk = new Gitalk({
+      clientID: '2f50b376c49e65b70db0',
+      clientSecret: '5bf5a8b7b0a9a22194ee1f0ee1e58dac2e19a359',
+      repo: 'yusixian.github.io',
+      owner: 'yusixian',
+      admin: 'yusixian',
+      id: 'Thu Dec 16 2021 01:31:07 GMT+0800', // Ensure uniqueness and length less than 50
+      distractionFreeMode: false, // Facebook-like distraction free mode
+      perPage: 10,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      language: 'zh-CN',
+      proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'
+    });
+    gitalk.render('gitalk-container');
+
+    var gtFolded = () => {
+      setTimeout(function () {
+        let markdownBody = document.getElementsByClassName("markdown-body");
+        let list = Array.from(markdownBody);
+        list.forEach(item => {
+          if (item.clientHeight > 250) {
+            item.classList.add('gt-comment-body-folded');
+            item.style.maxHeight = '250px';
+            item.title = 'Click to Expand';
+            item.onclick = function () {
+              item.classList.remove('gt-comment-body-folded');
+              item.style.maxHeight = '';
+              item.title = '';
+              item.onclick = null;
+            };
+          }
+        })
+      }, 800);
+    }
+  </script>
+
+  <!-- gitalk end -->
+
+
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">目录</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Java 对象实例化方法</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Java 设计模式</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">工厂模式</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E8%A3%85%E9%A5%B0%E5%99%A8%E6%A8%A1%E5%BC%8F"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">装饰器模式</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">观察者模式</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">代理模式</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F"><span class="toc-nav-number">2.5.</span> <span class="toc-nav-text">策略模式</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Java 序列化</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Java 事件处理 监听器</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">Java 反射</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">Java 切面编程（AOP）</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">7.</span> <span class="toc-nav-text">基于Socket的网络编程（套接字）</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">8.</span> <span class="toc-nav-text">多线程同步</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">9.</span> <span class="toc-nav-text">数据库连接池、线程池</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">10.</span> <span class="toc-nav-text">Comparable&#x2F;Comparator 比较接口</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Comparable%E6%8E%A5%E5%8F%A3"><span class="toc-nav-number">10.1.</span> <span class="toc-nav-text">Comparable接口</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Comparator%E6%8E%A5%E5%8F%A3"><span class="toc-nav-number">10.2.</span> <span class="toc-nav-text">Comparator接口</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">11.</span> <span class="toc-nav-text">JDBC连接数据库</span></a></li></ol>
+        
+        </div>
+      </aside>
+    
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">特色标签</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#后端" title="后端">后端</a>
+            
+            <a class="tag" href="/tags/#Java" title="Java">Java</a>
+            
+            <a class="tag" href="/tags/#设计模式" title="设计模式">设计模式</a>
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr>
+        <h5>友链</h5>
+        <ul class="list-inline">
+
+          
+          <li>
+            <a href="https://sadose.github.io/" target="_blank">大森的博客</a>
+          </li>
+          
+          <li>
+            <a href="https://www.xiaocao.cloud/" target="_blank">小曹同学的百草园</a>
+          </li>
+          
+          <li>
+            <a href="https://gelxgx.github.io/blog/" target="_blank">瘦虎的博客</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
+
+
+		<!-- Footer (contains ThemeColor、viewer) -->
+		<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center">
+          
+
+          
+            <li>
+              <a target="_blank" href="https://github.com/yusixian">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+            <li>
+              <a target="_blank" href="https://www.zhihu.com/people/qi-jiu-en">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa  fa-stack-1x fa-inverse">知</i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+
+        </ul>
+        <p class="copyright text-muted">
+          Copyright &copy;
+          cos
+          2022
+          <br>
+          Theme by
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
+          <span style="display: inline-block; margin: 0 5px;">
+            <i class="fa fa-heart"></i>
+          </span>
+          re-Ported by
+          <a target="_blank" rel="noopener" href="https://v-vincen.life/">Live My Life</a>
+          |
+          <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=V-Vincen&repo=V-Vincen.github.io&type=star&count=true"></iframe>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a id="rocket" href="#top" class=""></a>
+
+
+  <!-- jQuery -->
+  <script type="text/javascript" src="/js/jquery.min.js"></script>
+  <!-- Bootstrap Core JavaScript -->
+  <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+  <!-- Custom Theme JavaScript -->
+  <script type="text/javascript" src="/js/hux-blog.min.js"></script>
+  <!-- catalog -->
+  <script async="true" type="text/javascript" src="/js/catalog.js"></script>
+  <!-- totop(rocket) -->
+  <script async="true" type="text/javascript" src="/js/totop.js"></script>
+
+  
+    <!-- Busuanzi JavaScript -->
+    <script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <!-- Scroll start -->
+    <script async="async" type="text/javascript" src="/js/scroll.js"></script>
+    <!-- Scroll end -->
+  
+
+  
+
+  
+    <!-- Mouseclick -->
+    <script type="text/javascript" src="/js/mouseclick.js" content='❤,❤,❤,❤,❤,❤,❤,❤,❤' color='#ffa940,#f5222d,#fa541c,#FF99CC,#a8071a,#faad14,#1890ff,#eb2f96,#13c2c2'></script>
+  
+
+  
+    <!-- ribbon -->
+    <script type="text/javascript" src="/js/ribbonDynamic.js"></script>
+  
+
+  
+
+
+
+
+
+
+  <!-- viewer start -->
+  <!-- viewer start (Picture preview) -->
+  
+    <script async="async" type="text/javascript" src="/js/viewer/viewer.min.js"></script>
+    <script async="async" type="text/javascript" src="/js/viewer/pic-viewer.js"></script>
+  
+
+  <!-- viewer end -->
+
+
+<script>
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function (e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  // fastClick.js
+  async ("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+    var $nav = document.querySelector("nav");
+    if ($nav)
+      FastClick.attach($nav);
+    }
+  )
+</script>
+
+<!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
+https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+<!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
+
+<!-- jquery.tagcloud.js -->
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("https://ysx.cosine.ren/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
+
+
+		<!-- Search -->
+		
+		<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-9 col-md-offset-1"> -->
+      <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1 local-search-content">
+
+        <div class="local-search-header clearfix">
+
+          <div class="local-search-input-wrapper">
+            <span class="search-icon">
+              <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
+            </span>
+            <input autocomplete="off" placeholder="搜索..." type="text" id="local-search-input">
+          </div>
+        </div>
+        <div id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+    <script src="/js/ziploader.js"></script>
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+    // get search zip version
+    $.get('/searchVersion.json?t=' + (+new Date()), function (res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson() {
+      initLoad(['/search.flv'], {
+        loadOptions: {
+          success: function (obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function (e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions: {
+          'json': 'application/json'
+        }
+      })
+    }
+    // search function;
+    var searchFunc = function (search_id, content_id) {
+      'use strict';
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      // console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function () {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function (data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title
+              ? data.title.trim()
+              : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content
+              ? data.content.trim().replace(/<[^>]+>/g, "")
+              : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+
+            var date = data.date;
+            var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
+            var imgUrl = data.header_img;
+            
+
+
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function (keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0,
+                  position = [],
+                  index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+            // show search results
+            if (isMatch) {
+              // sort index by position of keyword
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+              // merge hits into slices
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+                  // move to next position of hit
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {hits: hits, start: start, end: end, searchTextCount: searchTextCountInSlice};
+              }
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if (start < 0) {
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if (end > content.length) {
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+              // sort slices in content by search text's count and hits' count
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+              // select top N slices in content
+              var upperBound = parseInt('1');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+              // highlight title and content
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+              var resultItem = '';
+
+              // if (slicesOfTitle.length != 0) {   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>"; } else {   resultItem += "<li><a target='_blank' href='" +
+              // articleUrl + "' class='search-result-title'>" + title + "</a>"; } slicesOfContent.forEach(function (slice) {   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) +
+              // "...</p></a>"; }); resultItem += "</li>";
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              } else {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              }
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
+              });
+              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
+
+              resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
+            }
+          })
+        };
+
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<div class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</div>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+      // remove loading animation
+      $('body').css('overflow', '');
+      proceedsearch();
+    }
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function (e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function (e) {
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 && $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      var _con = document.querySelector(".local-search-content");
+      if (_con) {
+        if (!_con.contains(e.target)) {
+          onPopupClose();
+        }
+      }
+    });
+  </script>
+
+
+		
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>

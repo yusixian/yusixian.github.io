@@ -139,7 +139,7 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="http://yoursite-url/cn/coding-train/leetcode/offer/day2/">
+  <link rel="canonical" href="https://ysx.cosine.ren/cn/coding-train/leetcode/offer/day2/">
   <title>
     
       剑指offer day2 链表（简单） - cos的博客 - WA的一声就哭了
@@ -298,10 +298,6 @@
           
 
           <!-- LangSelect -->
-          
-          
-          
-          
           
         </ul>
       </div>
@@ -475,6 +471,7 @@
         <p>day2题目：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/cong-wei-dao-tou-da-yin-lian-biao-lcof/">剑指 Offer 06. 从尾到头打印链表</a>、<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/fan-zhuan-lian-biao-lcof/">剑指 Offer 24. 反转链表</a>、<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/fu-za-lian-biao-de-fu-zhi-lcof/">剑指 Offer 35. 复杂链表的复制</a></p>
 <p>知识点：链表、递归、哈希，难度为简单、中等、中等</p>
 <p>学习计划链接：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/study-plan/lcof/?progress=7jn70jr">「剑指 Offer」 - 学习计划</a></p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -501,27 +498,23 @@
 </tr>
 </tbody>
 </table>
-<h1><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/cong-wei-dao-tou-da-yin-lian-biao-lcof/">剑指 Offer 06. 从尾到头打印链表</a></h1>
-<p>输入一个链表的头节点，从尾到头反过来返回每个节点的值（用数组返回）。</p>
+</div>
+<h1 id="剑指-Offer-06-从尾到头打印链表"><a href="#剑指-Offer-06-从尾到头打印链表" class="headerlink" title="剑指 Offer 06. 从尾到头打印链表"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/cong-wei-dao-tou-da-yin-lian-biao-lcof/">剑指 Offer 06. 从尾到头打印链表</a></h1><p>输入一个链表的头节点，从尾到头反过来返回每个节点的值（用数组返回）。</p>
 <p><strong>示例 1：</strong></p>
 <figure class="highlight inform7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入： head = <span class="comment">[1,3,2]</span></span><br><span class="line">输出： <span class="comment">[2,3,1]</span></span><br></pre></td></tr></table></figure>
 <p><strong>限制：</strong></p>
 <p><code>0 &lt;= 链表长度 &lt;= 10000</code></p>
-<h2 id="思路及代码">思路及代码</h2>
-<p>反过来输出，那就用栈，后进先出。</p>
+<h2 id="思路及代码"><a href="#思路及代码" class="headerlink" title="思路及代码"></a>思路及代码</h2><p>反过来输出，那就用栈，后进先出。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">ListNode</span>&#125; <span class="variable">head</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">number[]</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> reversePrint = <span class="keyword">function</span>(<span class="params">head</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> res = []</span><br><span class="line">    <span class="keyword">while</span>(head)&#123;</span><br><span class="line">        res.<span class="title function_">unshift</span>(head.<span class="property">val</span>)</span><br><span class="line">        head = head.<span class="property">next</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<h1><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/fan-zhuan-lian-biao-lcof/">剑指 Offer 24. 反转链表</a></h1>
-<p>定义一个函数，输入一个链表的头节点，反转该链表并输出反转后链表的头节点。</p>
+<h1 id="剑指-Offer-24-反转链表"><a href="#剑指-Offer-24-反转链表" class="headerlink" title="剑指 Offer 24. 反转链表"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/fan-zhuan-lian-biao-lcof/">剑指 Offer 24. 反转链表</a></h1><p>定义一个函数，输入一个链表的头节点，反转该链表并输出反转后链表的头节点。</p>
 <p><strong>示例:</strong></p>
 <figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: <span class="number">1</span>-&gt;<span class="number">2</span>-&gt;<span class="number">3</span>-&gt;<span class="number">4</span>-&gt;<span class="number">5</span>-&gt;NULL</span><br><span class="line">输出: <span class="number">5</span>-&gt;<span class="number">4</span>-&gt;<span class="number">3</span>-&gt;<span class="number">2</span>-&gt;<span class="number">1</span>-&gt;NULL</span><br></pre></td></tr></table></figure>
 <p><strong>限制：</strong></p>
 <p><code>0 &lt;= 节点个数 &lt;= 5000</code></p>
 <p><strong>注意</strong>：本题与主站 206 题相同：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/reverse-linked-list/">https://leetcode-cn.com/problems/reverse-linked-list/</a></p>
-<h2 id="思路及代码-2">思路及代码</h2>
-<p>老题目了，第三次做，在遍历链表时，将当前节点的 <code>nowp</code> 指针改为指向前一个节点 <code>prev</code>，最后返回新的链表头 <code>prep</code>。</p>
+<h2 id="思路及代码-1"><a href="#思路及代码-1" class="headerlink" title="思路及代码"></a>思路及代码</h2><p>老题目了，第三次做，在遍历链表时，将当前节点的 <code>nowp</code> 指针改为指向前一个节点 <code>prev</code>，最后返回新的链表头 <code>prep</code>。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">ListNode</span>&#125; <span class="variable">head</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">ListNode</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> reverseList = <span class="keyword">function</span>(<span class="params">head</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> prep = <span class="literal">null</span></span><br><span class="line">    <span class="keyword">let</span> nowp = head</span><br><span class="line">    <span class="keyword">while</span>(nowp) &#123;</span><br><span class="line">        <span class="keyword">let</span> t = nowp.<span class="property">next</span> </span><br><span class="line">        nowp.<span class="property">next</span> = prep</span><br><span class="line">        prep = nowp</span><br><span class="line">        nowp = t</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> prep</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<h1><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/fu-za-lian-biao-de-fu-zhi-lcof/">剑指 Offer 35. 复杂链表的复制</a></h1>
-<p>请实现 <code>copyRandomList</code> 函数，复制一个复杂链表。在复杂链表中，每个节点除了有一个 <code>next</code> 指针指向下一个节点，还有一个 <code>random</code> 指针指向链表中的任意节点或者 <code>null</code>。</p>
+<h1 id="剑指-Offer-35-复杂链表的复制"><a href="#剑指-Offer-35-复杂链表的复制" class="headerlink" title="剑指 Offer 35. 复杂链表的复制"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/fu-za-lian-biao-de-fu-zhi-lcof/">剑指 Offer 35. 复杂链表的复制</a></h1><p>请实现 <code>copyRandomList</code> 函数，复制一个复杂链表。在复杂链表中，每个节点除了有一个 <code>next</code> 指针指向下一个节点，还有一个 <code>random</code> 指针指向链表中的任意节点或者 <code>null</code>。</p>
 <p><strong>示例 1：</strong></p>
 <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/007f0dd6a92d4301af466e05d131103a~tplv-k3u1fbpfcp-zoom-1.image" alt=""></p>
 <figure class="highlight inform7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入： head = <span class="comment">[<span class="comment">[7,null]</span>,<span class="comment">[13,0]</span>,<span class="comment">[11,4]</span>,<span class="comment">[10,2]</span>,<span class="comment">[1,0]</span>]</span></span><br><span class="line">输出： <span class="comment">[<span class="comment">[7,null]</span>,<span class="comment">[13,0]</span>,<span class="comment">[11,4]</span>,<span class="comment">[10,2]</span>,<span class="comment">[1,0]</span>]</span></span><br></pre></td></tr></table></figure>
@@ -535,16 +528,13 @@
 <p><strong>提示：</strong></p>
 <ul>
 <li><code>-10000 &lt;= Node.val &lt;= 10000</code></li>
-<li><code>Node.random</code> 为空（null）或指向链表中的节点。</li>
+<li><code>Node.random</code> 为空（null）或指向链表中的节点。</li>
 <li>节点数目不超过 1000 。</li>
 </ul>
 <p><strong>注意：</strong> 本题与主站 138 题相同：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/copy-list-with-random-pointer/">https://leetcode-cn.com/problems/copy-list-with-random-pointer/</a></p>
-<h2 id="思路及代码-3">思路及代码</h2>
-<h3 id="1、利用map存储拷贝过的结点">1、利用map存储拷贝过的结点</h3>
-<p>并且递归的进行拷贝，如果当前节点被拷贝过则直接返回拷贝后的节点指针</p>
+<h2 id="思路及代码-2"><a href="#思路及代码-2" class="headerlink" title="思路及代码"></a>思路及代码</h2><h3 id="1、利用map存储拷贝过的结点"><a href="#1、利用map存储拷贝过的结点" class="headerlink" title="1、利用map存储拷贝过的结点"></a>1、利用map存储拷贝过的结点</h3><p>并且递归的进行拷贝，如果当前节点被拷贝过则直接返回拷贝后的节点指针</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> m = <span class="keyword">new</span> <span class="title class_">Map</span>()</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">Node</span>&#125; <span class="variable">head</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">Node</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> copyRandomList = <span class="keyword">function</span>(<span class="params">head</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span>(!head) <span class="keyword">return</span> <span class="literal">null</span></span><br><span class="line">    <span class="keyword">if</span>(m.<span class="title function_">has</span>(head)) <span class="keyword">return</span> m.<span class="title function_">get</span>(head)</span><br><span class="line">    <span class="keyword">let</span> newv = <span class="keyword">new</span> <span class="title class_">Node</span>(head.<span class="property">val</span>, <span class="literal">null</span>, <span class="literal">null</span>)</span><br><span class="line">    m.<span class="title function_">set</span>(head, newv)</span><br><span class="line">    newv.<span class="property">next</span> = <span class="title function_">copyRandomList</span>(head.<span class="property">next</span>)</span><br><span class="line">    newv.<span class="property">random</span> = <span class="title function_">copyRandomList</span>(head.<span class="property">random</span>)</span><br><span class="line">    <span class="keyword">return</span> newv</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<h3 id="2、迭代，拆分节点">2、迭代，拆分节点</h3>
-<p>这个是看题解发现的思路，将该链表中每一个节点拆分为两个相连的节点，对于任意一个原节点 <code>S</code>，其拷贝节点 <code>S′</code> 即为其后继节点，然后将新节点的random正确赋值，再将新链表的next正确赋值。</p>
+<h3 id="2、迭代，拆分节点"><a href="#2、迭代，拆分节点" class="headerlink" title="2、迭代，拆分节点"></a>2、迭代，拆分节点</h3><p>这个是看题解发现的思路，将该链表中每一个节点拆分为两个相连的节点，对于任意一个原节点 <code>S</code>，其拷贝节点 <code>S′</code> 即为其后继节点，然后将新节点的random正确赋值，再将新链表的next正确赋值。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">Node</span>&#125; <span class="variable">head</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">Node</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> copyRandomList = <span class="keyword">function</span>(<span class="params">head</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span>(!head) <span class="keyword">return</span> <span class="literal">null</span></span><br><span class="line">    <span class="keyword">let</span> nowp = head</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> nowp = head; nowp; nowp = nowp.<span class="property">next</span>.<span class="property">next</span>) &#123;</span><br><span class="line">        <span class="keyword">let</span> t = <span class="keyword">new</span> <span class="title class_">Node</span>(nowp.<span class="property">val</span>, nowp.<span class="property">next</span>, <span class="literal">null</span>)</span><br><span class="line">        nowp.<span class="property">next</span> = t</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> nowp = head; nowp; nowp = nowp.<span class="property">next</span>.<span class="property">next</span>) &#123;</span><br><span class="line">        nowp.<span class="property">next</span>.<span class="property">random</span> = nowp.<span class="property">random</span> ? nowp.<span class="property">random</span>.<span class="property">next</span>: <span class="literal">null</span>    <span class="comment">// 新链表的random赋值</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> res = head.<span class="property">next</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> nowp = head; nowp; nowp = nowp.<span class="property">next</span>) &#123;</span><br><span class="line">        <span class="keyword">let</span> newNode = nowp.<span class="property">next</span></span><br><span class="line">        nowp.<span class="property">next</span> = newNode.<span class="property">next</span></span><br><span class="line">        newNode.<span class="property">next</span> = newNode.<span class="property">next</span>? nowp.<span class="property">next</span>.<span class="property">next</span>: <span class="literal">null</span>   <span class="comment">// 新链表的next赋值</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res</span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 
@@ -607,7 +597,7 @@
       </a>
     </li>
     <li class="social-share-li">
-      <a target="_blank" class="social-share-icon" href="mailto:?subject=剑指offer day2 链表（简单）&body=Hi,I found this website and thought you might like it http://yoursite-url/cn/coding-train/leetcode/offer/day2/">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=剑指offer day2 链表（简单）&body=Hi,I found this website and thought you might like it https://ysx.cosine.ren/cn/coding-train/leetcode/offer/day2/">
         <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
       </a>
     </li>
@@ -695,7 +685,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">剑指 Offer 06. 从尾到头打印链表</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%9D%E8%B7%AF%E5%8F%8A%E4%BB%A3%E7%A0%81"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">思路及代码</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">剑指 Offer 24. 反转链表</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%9D%E8%B7%AF%E5%8F%8A%E4%BB%A3%E7%A0%81-2"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">思路及代码</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">剑指 Offer 35. 复杂链表的复制</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%9D%E8%B7%AF%E5%8F%8A%E4%BB%A3%E7%A0%81-3"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">思路及代码</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1%E3%80%81%E5%88%A9%E7%94%A8map%E5%AD%98%E5%82%A8%E6%8B%B7%E8%B4%9D%E8%BF%87%E7%9A%84%E7%BB%93%E7%82%B9"><span class="toc-nav-number">3.1.1.</span> <span class="toc-nav-text">1、利用map存储拷贝过的结点</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2%E3%80%81%E8%BF%AD%E4%BB%A3%EF%BC%8C%E6%8B%86%E5%88%86%E8%8A%82%E7%82%B9"><span class="toc-nav-number">3.1.2.</span> <span class="toc-nav-text">2、迭代，拆分节点</span></a></li></ol></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E5%89%91%E6%8C%87-Offer-06-%E4%BB%8E%E5%B0%BE%E5%88%B0%E5%A4%B4%E6%89%93%E5%8D%B0%E9%93%BE%E8%A1%A8"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">剑指 Offer 06. 从尾到头打印链表</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%9D%E8%B7%AF%E5%8F%8A%E4%BB%A3%E7%A0%81"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">思路及代码</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E5%89%91%E6%8C%87-Offer-24-%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">剑指 Offer 24. 反转链表</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%9D%E8%B7%AF%E5%8F%8A%E4%BB%A3%E7%A0%81-1"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">思路及代码</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E5%89%91%E6%8C%87-Offer-35-%E5%A4%8D%E6%9D%82%E9%93%BE%E8%A1%A8%E7%9A%84%E5%A4%8D%E5%88%B6"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">剑指 Offer 35. 复杂链表的复制</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%9D%E8%B7%AF%E5%8F%8A%E4%BB%A3%E7%A0%81-2"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">思路及代码</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1%E3%80%81%E5%88%A9%E7%94%A8map%E5%AD%98%E5%82%A8%E6%8B%B7%E8%B4%9D%E8%BF%87%E7%9A%84%E7%BB%93%E7%82%B9"><span class="toc-nav-number">3.1.1.</span> <span class="toc-nav-text">1、利用map存储拷贝过的结点</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2%E3%80%81%E8%BF%AD%E4%BB%A3%EF%BC%8C%E6%8B%86%E5%88%86%E8%8A%82%E7%82%B9"><span class="toc-nav-number">3.1.2.</span> <span class="toc-nav-text">2、迭代，拆分节点</span></a></li></ol></li></ol></li></ol>
         
         </div>
       </aside>
@@ -893,10 +883,6 @@
   
 
   
-    <!-- LangSelect start -->
-    <script type="text/javascript" src="/js/langselect.js"></script>
-    <!-- LangSelect end -->
-  
 
   
     <!-- Mouseclick -->
@@ -955,7 +941,7 @@ https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0
 <!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
 
 <!-- jquery.tagcloud.js -->
-<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("http://yoursite-url/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("https://ysx.cosine.ren/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
 start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
 
 
@@ -1289,5 +1275,20 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
 </html>

@@ -139,7 +139,7 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="http://yoursite-url/cn/coding-train/leetcode/offer/day6/">
+  <link rel="canonical" href="https://ysx.cosine.ren/cn/coding-train/leetcode/offer/day6/">
   <title>
     
       剑指offer day6 搜索与回溯算法（简单） - cos的博客 - WA的一声就哭了
@@ -298,10 +298,6 @@
           
 
           <!-- LangSelect -->
-          
-          
-          
-          
           
         </ul>
       </div>
@@ -473,6 +469,7 @@
         <p>day6题目：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/cong-shang-dao-xia-da-yin-er-cha-shu-lcof/">剑指 Offer 32 - I. 从上到下打印二叉树</a>、<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/cong-shang-dao-xia-da-yin-er-cha-shu-ii-lcof/">剑指 Offer 32 - II. 从上到下打印二叉树 II</a>、<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/cong-shang-dao-xia-da-yin-er-cha-shu-iii-lcof/">剑指 Offer 32 - III. 从上到下打印二叉树 III</a></p>
 <p>知识点：二叉树、dfs/bfs，难度为中等、简单、中等</p>
 <p>学习计划链接：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/study-plan/lcof/?progress=7jn70jr">「剑指 Offer」 - 学习计划</a></p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -499,10 +496,9 @@
 </tr>
 </tbody>
 </table>
-<h1><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/cong-shang-dao-xia-da-yin-er-cha-shu-lcof/">剑指 Offer 32 - I. 从上到下打印二叉树</a></h1>
-<p>从上到下打印出二叉树的每个节点，同一层的节点按照从左到右的顺序打印。</p>
-<p>例如:<br>
-给定二叉树: <code>[3,9,20,null,null,15,7]</code>,</p>
+</div>
+<h1 id="剑指-Offer-32-I-从上到下打印二叉树"><a href="#剑指-Offer-32-I-从上到下打印二叉树" class="headerlink" title="剑指 Offer 32 - I. 从上到下打印二叉树"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/cong-shang-dao-xia-da-yin-er-cha-shu-lcof/">剑指 Offer 32 - I. 从上到下打印二叉树</a></h1><p>从上到下打印出二叉树的每个节点，同一层的节点按照从左到右的顺序打印。</p>
+<p>例如:<br>给定二叉树: <code>[3,9,20,null,null,15,7]</code>,</p>
 <figure class="highlight livescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  <span class="number">3</span></span><br><span class="line"> / <span class="string">\</span></span><br><span class="line"><span class="number">9</span>  <span class="number">20</span></span><br><span class="line">  /  <span class="string">\</span></span><br><span class="line"> <span class="number">15</span>   <span class="number">7</span></span><br></pre></td></tr></table></figure>
 <p>返回：</p>
 <figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">[3,9,20,15,7]</span></span><br></pre></td></tr></table></figure>
@@ -510,13 +506,10 @@
 <ol>
 <li><code>节点总数 &lt;= 1000</code></li>
 </ol>
-<h2 id="思路及代码">思路及代码</h2>
-<p>利用队列q存储，每次取出队列的第一个元素，然后将其左右子节点放入队列，直到队列为空。</p>
+<h2 id="思路及代码"><a href="#思路及代码" class="headerlink" title="思路及代码"></a>思路及代码</h2><p>利用队列q存储，每次取出队列的第一个元素，然后将其左右子节点放入队列，直到队列为空。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">TreeNode</span>&#125; <span class="variable">root</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">number[]</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> levelOrder = <span class="keyword">function</span>(<span class="params">root</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span>(!root) <span class="keyword">return</span> []</span><br><span class="line">    <span class="keyword">let</span> ans = []</span><br><span class="line">    <span class="keyword">let</span> q = []</span><br><span class="line">    q.<span class="title function_">push</span>(root)</span><br><span class="line">    <span class="keyword">while</span>(q.<span class="property">length</span> &gt; <span class="number">0</span>)&#123;</span><br><span class="line">        <span class="keyword">let</span> n = q.<span class="property">length</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line">            <span class="keyword">let</span> nowv = q.<span class="title function_">shift</span>()</span><br><span class="line">            ans.<span class="title function_">push</span>(nowv.<span class="property">val</span>)</span><br><span class="line">            <span class="keyword">if</span>(nowv.<span class="property">left</span>) q.<span class="title function_">push</span>(nowv.<span class="property">left</span>)</span><br><span class="line">            <span class="keyword">if</span>(nowv.<span class="property">right</span>) q.<span class="title function_">push</span>(nowv.<span class="property">right</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ans</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<h1><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/cong-shang-dao-xia-da-yin-er-cha-shu-ii-lcof/">剑指 Offer 32 - II. 从上到下打印二叉树 II</a></h1>
-<p>从上到下按层打印二叉树，同一层的节点按从左到右的顺序打印，每一层打印到一行。</p>
-<p>例如:<br>
-给定二叉树: <code>[3,9,20,null,null,15,7]</code>,</p>
+<h1 id="剑指-Offer-32-II-从上到下打印二叉树-II"><a href="#剑指-Offer-32-II-从上到下打印二叉树-II" class="headerlink" title="剑指 Offer 32 - II. 从上到下打印二叉树 II"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/cong-shang-dao-xia-da-yin-er-cha-shu-ii-lcof/">剑指 Offer 32 - II. 从上到下打印二叉树 II</a></h1><p>从上到下按层打印二叉树，同一层的节点按从左到右的顺序打印，每一层打印到一行。</p>
+<p>例如:<br>给定二叉树: <code>[3,9,20,null,null,15,7]</code>,</p>
 <figure class="highlight livescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  <span class="number">3</span></span><br><span class="line"> / <span class="string">\</span></span><br><span class="line"><span class="number">9</span>  <span class="number">20</span></span><br><span class="line">  /  <span class="string">\</span></span><br><span class="line"> <span class="number">15</span>   <span class="number">7</span></span><br></pre></td></tr></table></figure>
 <p>返回其层次遍历结果：</p>
 <figure class="highlight inform7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">[</span></span><br><span class="line"><span class="comment">  <span class="comment">[3]</span>,</span></span><br><span class="line"><span class="comment">  <span class="comment">[9,20]</span>,</span></span><br><span class="line"><span class="comment">  <span class="comment">[15,7]</span></span></span><br><span class="line"><span class="comment">]</span></span><br></pre></td></tr></table></figure>
@@ -524,13 +517,10 @@
 <ol>
 <li><code>节点总数 &lt;= 1000</code></li>
 </ol>
-<h2 id="思路及代码-2">思路及代码</h2>
-<p>在上一题基础上，增加一个暂存每一层元素的数组 <code>level</code>，每次该层元素放入 <code>level</code> 数组，遍历完该层后1 <code>level</code> 数组放入结果数组。</p>
+<h2 id="思路及代码-1"><a href="#思路及代码-1" class="headerlink" title="思路及代码"></a>思路及代码</h2><p>在上一题基础上，增加一个暂存每一层元素的数组 <code>level</code>，每次该层元素放入 <code>level</code> 数组，遍历完该层后1 <code>level</code> 数组放入结果数组。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">TreeNode</span>&#125; <span class="variable">root</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">number[]</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> levelOrder = <span class="keyword">function</span>(<span class="params">root</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span>(!root) <span class="keyword">return</span> []</span><br><span class="line">    <span class="keyword">let</span> ans = []</span><br><span class="line">    <span class="keyword">let</span> q = []</span><br><span class="line">    q.<span class="title function_">push</span>(root)</span><br><span class="line">    <span class="keyword">while</span>(q.<span class="property">length</span> &gt; <span class="number">0</span>)&#123;</span><br><span class="line">        <span class="keyword">let</span> n = q.<span class="property">length</span></span><br><span class="line">        <span class="keyword">let</span> level = []        </span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line">            <span class="keyword">let</span> nowv = q.<span class="title function_">shift</span>()</span><br><span class="line">            level.<span class="title function_">push</span>(nowv.<span class="property">val</span>)  </span><br><span class="line">            <span class="keyword">if</span>(nowv.<span class="property">left</span>) q.<span class="title function_">push</span>(nowv.<span class="property">left</span>)</span><br><span class="line">            <span class="keyword">if</span>(nowv.<span class="property">right</span>) q.<span class="title function_">push</span>(nowv.<span class="property">right</span>)</span><br><span class="line">        &#125;</span><br><span class="line">        ans.<span class="title function_">push</span>(level)      </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ans</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<h1><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/cong-shang-dao-xia-da-yin-er-cha-shu-iii-lcof/">剑指 Offer 32 - III. 从上到下打印二叉树 III</a></h1>
-<p>请实现一个函数按照之字形顺序打印二叉树，即第一行按照从左到右的顺序打印，第二层按照从右到左的顺序打印，第三行再按照从左到右的顺序打印，其他行以此类推。</p>
-<p>例如:<br>
-给定二叉树: <code>[3,9,20,null,null,15,7]</code>,</p>
+<h1 id="剑指-Offer-32-III-从上到下打印二叉树-III"><a href="#剑指-Offer-32-III-从上到下打印二叉树-III" class="headerlink" title="剑指 Offer 32 - III. 从上到下打印二叉树 III"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/cong-shang-dao-xia-da-yin-er-cha-shu-iii-lcof/">剑指 Offer 32 - III. 从上到下打印二叉树 III</a></h1><p>请实现一个函数按照之字形顺序打印二叉树，即第一行按照从左到右的顺序打印，第二层按照从右到左的顺序打印，第三行再按照从左到右的顺序打印，其他行以此类推。</p>
+<p>例如:<br>给定二叉树: <code>[3,9,20,null,null,15,7]</code>,</p>
 <figure class="highlight livescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  <span class="number">3</span></span><br><span class="line"> / <span class="string">\</span></span><br><span class="line"><span class="number">9</span>  <span class="number">20</span></span><br><span class="line">  /  <span class="string">\</span></span><br><span class="line"> <span class="number">15</span>   <span class="number">7</span></span><br></pre></td></tr></table></figure>
 <p>返回其层次遍历结果：</p>
 <figure class="highlight inform7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">[</span></span><br><span class="line"><span class="comment">  <span class="comment">[3]</span>,</span></span><br><span class="line"><span class="comment">  <span class="comment">[20,9]</span>,</span></span><br><span class="line"><span class="comment">  <span class="comment">[15,7]</span></span></span><br><span class="line"><span class="comment">]</span></span><br></pre></td></tr></table></figure>
@@ -538,8 +528,7 @@
 <ol>
 <li><code>节点总数 &lt;= 1000</code></li>
 </ol>
-<h2 id="思路及代码-3">思路及代码</h2>
-<p>这不就是之前的二叉树锯齿形遍历吗：<a target="_blank" rel="noopener" href="https://ysx.cosine.ren/cn/coding-train/leetcode/bytedance/bytedance-day9/#%E6%80%9D%E8%B7%AF-2">103. 二叉树的锯齿形层序遍历</a></p>
+<h2 id="思路及代码-2"><a href="#思路及代码-2" class="headerlink" title="思路及代码"></a>思路及代码</h2><p>这不就是之前的二叉树锯齿形遍历吗：<a href="https://ysx.cosine.ren/cn/coding-train/leetcode/bytedance/bytedance-day9/#%E6%80%9D%E8%B7%AF-2">103. 二叉树的锯齿形层序遍历</a></p>
 <p>在上一题的基础上，再加一个变量 <code>h</code> 判断高度，每次放入 <code>level</code> 数组时，通过 <code>h</code> 判断是从头放还是从尾放。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">TreeNode</span>&#125; <span class="variable">root</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">number[][]</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> levelOrder = <span class="keyword">function</span>(<span class="params">root</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span>(!root) <span class="keyword">return</span> []</span><br><span class="line">    <span class="keyword">let</span> ans = []</span><br><span class="line">    <span class="keyword">let</span> q = []</span><br><span class="line">    <span class="keyword">let</span> h = <span class="number">0</span></span><br><span class="line">    q.<span class="title function_">push</span>(root)</span><br><span class="line">    <span class="keyword">while</span>(q.<span class="property">length</span> &gt; <span class="number">0</span>)&#123;</span><br><span class="line">        <span class="keyword">let</span> n = q.<span class="property">length</span></span><br><span class="line">        <span class="keyword">let</span> level = []</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line">            <span class="keyword">let</span> nowv = q.<span class="title function_">shift</span>()</span><br><span class="line">            <span class="keyword">if</span>(h%<span class="number">2</span> === <span class="number">0</span>) level.<span class="title function_">push</span>(nowv.<span class="property">val</span>)</span><br><span class="line">            <span class="keyword">else</span> level.<span class="title function_">unshift</span>(nowv.<span class="property">val</span>)</span><br><span class="line">            <span class="keyword">if</span>(nowv.<span class="property">left</span>) q.<span class="title function_">push</span>(nowv.<span class="property">left</span>)</span><br><span class="line">            <span class="keyword">if</span>(nowv.<span class="property">right</span>) q.<span class="title function_">push</span>(nowv.<span class="property">right</span>)</span><br><span class="line">        &#125;</span><br><span class="line">        ans.<span class="title function_">push</span>(level)</span><br><span class="line">        ++h</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ans</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
@@ -549,7 +538,7 @@
         <ul class="pager">
           
           <li class="previous">
-            <a href="/cn/review-interview/面经/2022春暑期实习店匠一面前端面经/" data-toggle="tooltip" data-placement="top" title="2022春暑期实习店匠前端一面面经">&larr; Previous Post</a>
+            <a href="/cn/shoplazza-review-2022-spring-frontend/" data-toggle="tooltip" data-placement="top" title="2022春暑期实习店匠前端一二面面经">&larr; Previous Post</a>
           </li>
           
           
@@ -603,7 +592,7 @@
       </a>
     </li>
     <li class="social-share-li">
-      <a target="_blank" class="social-share-icon" href="mailto:?subject=剑指offer day6 搜索与回溯算法（简单）&body=Hi,I found this website and thought you might like it http://yoursite-url/cn/coding-train/leetcode/offer/day6/">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=剑指offer day6 搜索与回溯算法（简单）&body=Hi,I found this website and thought you might like it https://ysx.cosine.ren/cn/coding-train/leetcode/offer/day6/">
         <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
       </a>
     </li>
@@ -691,7 +680,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">剑指 Offer 32 - I. 从上到下打印二叉树</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%9D%E8%B7%AF%E5%8F%8A%E4%BB%A3%E7%A0%81"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">思路及代码</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">剑指 Offer 32 - II. 从上到下打印二叉树 II</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%9D%E8%B7%AF%E5%8F%8A%E4%BB%A3%E7%A0%81-2"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">思路及代码</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">剑指 Offer 32 - III. 从上到下打印二叉树 III</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%9D%E8%B7%AF%E5%8F%8A%E4%BB%A3%E7%A0%81-3"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">思路及代码</span></a></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E5%89%91%E6%8C%87-Offer-32-I-%E4%BB%8E%E4%B8%8A%E5%88%B0%E4%B8%8B%E6%89%93%E5%8D%B0%E4%BA%8C%E5%8F%89%E6%A0%91"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">剑指 Offer 32 - I. 从上到下打印二叉树</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%9D%E8%B7%AF%E5%8F%8A%E4%BB%A3%E7%A0%81"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">思路及代码</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E5%89%91%E6%8C%87-Offer-32-II-%E4%BB%8E%E4%B8%8A%E5%88%B0%E4%B8%8B%E6%89%93%E5%8D%B0%E4%BA%8C%E5%8F%89%E6%A0%91-II"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">剑指 Offer 32 - II. 从上到下打印二叉树 II</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%9D%E8%B7%AF%E5%8F%8A%E4%BB%A3%E7%A0%81-1"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">思路及代码</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E5%89%91%E6%8C%87-Offer-32-III-%E4%BB%8E%E4%B8%8A%E5%88%B0%E4%B8%8B%E6%89%93%E5%8D%B0%E4%BA%8C%E5%8F%89%E6%A0%91-III"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">剑指 Offer 32 - III. 从上到下打印二叉树 III</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%9D%E8%B7%AF%E5%8F%8A%E4%BB%A3%E7%A0%81-2"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">思路及代码</span></a></li></ol></li></ol>
         
         </div>
       </aside>
@@ -887,10 +876,6 @@
   
 
   
-    <!-- LangSelect start -->
-    <script type="text/javascript" src="/js/langselect.js"></script>
-    <!-- LangSelect end -->
-  
 
   
     <!-- Mouseclick -->
@@ -949,7 +934,7 @@ https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0
 <!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
 
 <!-- jquery.tagcloud.js -->
-<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("http://yoursite-url/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("https://ysx.cosine.ren/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
 start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
 
 
@@ -1283,5 +1268,20 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
 </html>

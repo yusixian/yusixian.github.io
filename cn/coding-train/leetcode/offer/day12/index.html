@@ -139,7 +139,7 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="http://yoursite-url/cn/coding-train/leetcode/offer/day12/">
+  <link rel="canonical" href="https://ysx.cosine.ren/cn/coding-train/leetcode/offer/day12/">
   <title>
     
       剑指offer day12 双指针（简单） - cos的博客 - WA的一声就哭了
@@ -298,10 +298,6 @@
           
 
           <!-- LangSelect -->
-          
-          
-          
-          
           
         </ul>
       </div>
@@ -475,6 +471,7 @@
         <p>day12题目：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/he-bing-liang-ge-pai-xu-de-lian-biao-lcof/">剑指 Offer 25. 合并两个排序的链表</a>、<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/liang-ge-lian-biao-de-di-yi-ge-gong-gong-jie-dian-lcof/">剑指 Offer 52. 两个链表的第一个公共节点</a></p>
 <p>知识点：链表、哈希、双指针，难度为简单、简单</p>
 <p>学习计划链接：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/study-plan/lcof/?progress=7jn70jr">「剑指 Offer」 - 学习计划</a></p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -496,54 +493,46 @@
 </tr>
 </tbody>
 </table>
-<h1><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/he-bing-liang-ge-pai-xu-de-lian-biao-lcof/">剑指 Offer 25. 合并两个排序的链表</a></h1>
-<p>输入两个递增排序的链表，合并这两个链表并使新链表中的节点仍然是递增排序的。</p>
+</div>
+<h1 id="剑指-Offer-25-合并两个排序的链表"><a href="#剑指-Offer-25-合并两个排序的链表" class="headerlink" title="剑指 Offer 25. 合并两个排序的链表"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/he-bing-liang-ge-pai-xu-de-lian-biao-lcof/">剑指 Offer 25. 合并两个排序的链表</a></h1><p>输入两个递增排序的链表，合并这两个链表并使新链表中的节点仍然是递增排序的。</p>
 <p><strong>示例1：</strong></p>
 <figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入： <span class="number">1</span>-&gt;<span class="number">2</span>-&gt;<span class="number">4</span>, <span class="number">1</span>-&gt;<span class="number">3</span>-&gt;<span class="number">4</span></span><br><span class="line">输出： <span class="number">1</span>-&gt;<span class="number">1</span>-&gt;<span class="number">2</span>-&gt;<span class="number">3</span>-&gt;<span class="number">4</span>-&gt;<span class="number">4</span></span><br></pre></td></tr></table></figure>
 <p><strong>限制：</strong></p>
 <p><code>0 &lt;= 链表长度 &lt;= 1000</code></p>
 <p>注意：本题与主站 21 题相同：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/merge-two-sorted-lists/">https://leetcode-cn.com/problems/merge-two-sorted-lists/</a></p>
-<h2 id="思路及代码">思路及代码</h2>
-<p>当 <code>l1</code> 和 <code>l2</code> 都不是空链表时，判断 <code>l1</code> 和 <code>l2</code> 哪个链表的当前节点的值更小，将较小值的节点添加到结果里，最终判断一下哪个链表还有剩的都接上去</p>
+<h2 id="思路及代码"><a href="#思路及代码" class="headerlink" title="思路及代码"></a>思路及代码</h2><p>当 <code>l1</code> 和 <code>l2</code> 都不是空链表时，判断 <code>l1</code> 和 <code>l2</code> 哪个链表的当前节点的值更小，将较小值的节点添加到结果里，最终判断一下哪个链表还有剩的都接上去</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">ListNode</span>&#125; <span class="variable">l1</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">ListNode</span>&#125; <span class="variable">l2</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">ListNode</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> mergeTwoLists = <span class="keyword">function</span>(<span class="params">l1, l2</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> ehead = <span class="keyword">new</span> <span class="title class_">ListNode</span>(<span class="number">0</span>)</span><br><span class="line">    <span class="keyword">let</span> nowv = ehead</span><br><span class="line">    <span class="keyword">while</span>(l1 &amp;&amp; l2) &#123;</span><br><span class="line">        <span class="keyword">if</span>(l1.<span class="property">val</span> &gt;= l2.<span class="property">val</span>) &#123;</span><br><span class="line">            nowv.<span class="property">next</span> = <span class="keyword">new</span> <span class="title class_">ListNode</span>(l2.<span class="property">val</span>)</span><br><span class="line">            l2 = l2.<span class="property">next</span></span><br><span class="line">            nowv = nowv.<span class="property">next</span></span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            nowv.<span class="property">next</span> = <span class="keyword">new</span> <span class="title class_">ListNode</span>(l1.<span class="property">val</span>)</span><br><span class="line">            l1 = l1.<span class="property">next</span></span><br><span class="line">            nowv = nowv.<span class="property">next</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(l1) nowv.<span class="property">next</span> = l1</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(l2) nowv.<span class="property">next</span> = l2</span><br><span class="line">    <span class="keyword">return</span> ehead.<span class="property">next</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<h1><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/liang-ge-lian-biao-de-di-yi-ge-gong-gong-jie-dian-lcof/">剑指 Offer 52. 两个链表的第一个公共节点</a></h1>
-<p>输入两个链表，找出它们的第一个公共节点。</p>
+<h1 id="剑指-Offer-52-两个链表的第一个公共节点"><a href="#剑指-Offer-52-两个链表的第一个公共节点" class="headerlink" title="剑指 Offer 52. 两个链表的第一个公共节点"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/liang-ge-lian-biao-de-di-yi-ge-gong-gong-jie-dian-lcof/">剑指 Offer 52. 两个链表的第一个公共节点</a></h1><p>输入两个链表，找出它们的第一个公共节点。</p>
 <p>如下面的两个链表 <strong>：</strong></p>
 <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/09630395c9ed409cbe6b6c29278aadc3~tplv-k3u1fbpfcp-zoom-1.image" alt=""></p>
 <p>在节点 c1 开始相交。</p>
-<p></p>
 <p><strong>示例 1：</strong></p>
 <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/5d68825371794dd48e36c7432e2f87ab~tplv-k3u1fbpfcp-zoom-1.image" alt=""></p>
-<figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入： intersectVal = <span class="number">8</span>, listA = [<span class="number">4,1,8,4</span>,<span class="number">5</span>], listB = [<span class="number">5,0,1,8</span>,<span class="number">4</span>,<span class="number">5</span>], skipA = <span class="number">2</span>, skipB = <span class="number">3</span></span><br><span class="line">输出： Reference of the node with value = <span class="number">8</span></span><br><span class="line">输入解释： 相交节点的值为 <span class="number">8</span> （注意，如果两个列表相交则不能为 <span class="number">0</span>）。从各自的表头开始算起，链表 <span class="keyword">A</span> 为 [<span class="number">4,1,8,4</span>,<span class="number">5</span>]，链表 B 为 [<span class="number">5,0,1,8</span>,<span class="number">4</span>,<span class="number">5</span>]。在 <span class="keyword">A</span> 中，相交节点前有 <span class="number">2</span> 个节点；在 B 中，相交节点前有 <span class="number">3</span> 个节点。</span><br></pre></td></tr></table></figure>
-<p></p>
-<p><strong>示例 2：</strong></p>
+<figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入： <span class="attr">intersectVal</span> = <span class="number">8</span>, <span class="attr">listA</span> = [<span class="number">4</span>,<span class="number">1</span>,<span class="number">8</span>,<span class="number">4</span>,<span class="number">5</span>], <span class="attr">listB</span> = [<span class="number">5</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">8</span>,<span class="number">4</span>,<span class="number">5</span>], <span class="attr">skipA</span> = <span class="number">2</span>, <span class="attr">skipB</span> = <span class="number">3</span></span><br><span class="line">输出： Reference of the node <span class="keyword">with</span> <span class="attr">value</span> = <span class="number">8</span></span><br><span class="line">输入解释： 相交节点的值为 <span class="number">8</span> （注意，如果两个列表相交则不能为 <span class="number">0</span>）。从各自的表头开始算起，链表 A 为 [<span class="number">4</span>,<span class="number">1</span>,<span class="number">8</span>,<span class="number">4</span>,<span class="number">5</span>]，链表 B 为 [<span class="number">5</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">8</span>,<span class="number">4</span>,<span class="number">5</span>]。在 A 中，相交节点前有 <span class="number">2</span> 个节点；在 B 中，相交节点前有 <span class="number">3</span> 个节点。</span><br></pre></td></tr></table></figure>
+<p><strong>示例 2：</strong></p>
 <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c0ef34bea01b4cad94002457175ac1e2~tplv-k3u1fbpfcp-zoom-1.image" alt=""></p>
-<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入： intersectVal = <span class="number">2</span>, listA = [<span class="number">0</span>,<span class="number">9</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">4</span>], listB = [<span class="number">3</span>,<span class="number">2</span>,<span class="number">4</span>], skipA = <span class="number">3</span>, skipB = <span class="number">1</span></span><br><span class="line">输出： <span class="keyword">Reference</span> of the <span class="keyword">node</span> <span class="title">with</span> value = <span class="number">2</span></span><br><span class="line">输入解释： 相交节点的值为 <span class="number">2</span> （注意，如果两个列表相交则不能为 <span class="number">0</span>）。从各自的表头开始算起，链表 A 为 [<span class="number">0</span>,<span class="number">9</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">4</span>]，链表 B 为 [<span class="number">3</span>,<span class="number">2</span>,<span class="number">4</span>]。在 A 中，相交节点前有 <span class="number">3</span> 个节点；在 B 中，相交节点前有 <span class="number">1</span> 个节点。</span><br></pre></td></tr></table></figure>
-<p></p>
-<p><strong>示例 3：</strong></p>
+<figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入： <span class="attr">intersectVal</span> = <span class="number">2</span>, <span class="attr">listA</span> = [<span class="number">0</span>,<span class="number">9</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">4</span>], <span class="attr">listB</span> = [<span class="number">3</span>,<span class="number">2</span>,<span class="number">4</span>], <span class="attr">skipA</span> = <span class="number">3</span>, <span class="attr">skipB</span> = <span class="number">1</span></span><br><span class="line">输出： Reference of the node <span class="keyword">with</span> <span class="attr">value</span> = <span class="number">2</span></span><br><span class="line">输入解释： 相交节点的值为 <span class="number">2</span> （注意，如果两个列表相交则不能为 <span class="number">0</span>）。从各自的表头开始算起，链表 A 为 [<span class="number">0</span>,<span class="number">9</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">4</span>]，链表 B 为 [<span class="number">3</span>,<span class="number">2</span>,<span class="number">4</span>]。在 A 中，相交节点前有 <span class="number">3</span> 个节点；在 B 中，相交节点前有 <span class="number">1</span> 个节点。</span><br></pre></td></tr></table></figure>
+<p><strong>示例 3：</strong></p>
 <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/928e6ca68669418286a9a3738a3c8f2e~tplv-k3u1fbpfcp-zoom-1.image" alt=""></p>
-<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">输入： <span class="built_in">int</span>ersectVal = <span class="number">0</span>, listA = [<span class="number">2</span>,<span class="number">6</span>,<span class="number">4</span>], listB = [<span class="number">1</span>,<span class="number">5</span>], skipA = <span class="number">3</span>, skipB = <span class="number">2</span></span><br><span class="line">输出： <span class="literal">null</span></span><br><span class="line">输入解释： 从各自的表头开始算起，链表 A 为 [<span class="number">2</span>,<span class="number">6</span>,<span class="number">4</span>]，链表 B 为 [<span class="number">1</span>,<span class="number">5</span>]。由于这两个链表不相交，所以 <span class="built_in">int</span>ersectVal 必须为 <span class="number">0</span>，而 skipA 和 skipB 可以是任意值。</span><br><span class="line">解释： 这两个链表不相交，因此返回 <span class="literal">null</span>。</span><br></pre></td></tr></table></figure>
+<figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">输入： <span class="attr">intersectVal</span> = <span class="number">0</span>, <span class="attr">listA</span> = [<span class="number">2</span>,<span class="number">6</span>,<span class="number">4</span>], <span class="attr">listB</span> = [<span class="number">1</span>,<span class="number">5</span>], <span class="attr">skipA</span> = <span class="number">3</span>, <span class="attr">skipB</span> = <span class="number">2</span></span><br><span class="line">输出： <span class="literal">null</span></span><br><span class="line">输入解释： 从各自的表头开始算起，链表 A 为 [<span class="number">2</span>,<span class="number">6</span>,<span class="number">4</span>]，链表 B 为 [<span class="number">1</span>,<span class="number">5</span>]。由于这两个链表不相交，所以 intersectVal 必须为 <span class="number">0</span>，而 skipA 和 skipB 可以是任意值。</span><br><span class="line">解释： 这两个链表不相交，因此返回 <span class="literal">null</span>。</span><br></pre></td></tr></table></figure>
 <p><strong>注意：</strong></p>
 <ul>
-<li>如果两个链表没有交点，返回 <code>null</code>.</li>
+<li>如果两个链表没有交点，返回 <code>null</code>.</li>
 <li>在返回结果后，两个链表仍须保持原有的结构。</li>
 <li>可假定整个链表结构中没有循环。</li>
 <li>程序尽量满足 O(<em>n</em>) 时间复杂度，且仅用 O(<em>1</em>) 内存。</li>
 <li>本题与主站 160 题相同：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/intersection-of-two-linked-lists/">https://leetcode-cn.com/problems/intersection-of-two-linked-lists/</a></li>
 </ul>
-<h2 id="思路及代码-2">思路及代码</h2>
-<p>思路1：简单粗暴的用哈希存储 <code>a</code>中出现过的结点，再遍历b链表判断，但这显然不满足O(1)内存。</p>
+<h2 id="思路及代码-1"><a href="#思路及代码-1" class="headerlink" title="思路及代码"></a>思路及代码</h2><p>思路1：简单粗暴的用哈希存储 <code>a</code>中出现过的结点，再遍历b链表判断，但这显然不满足O(1)内存。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">ListNode</span>&#125; <span class="variable">headA</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">ListNode</span>&#125; <span class="variable">headB</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">ListNode</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> getIntersectionNode = <span class="keyword">function</span>(<span class="params">headA, headB</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> m = <span class="keyword">new</span> <span class="title class_">Map</span>()</span><br><span class="line">    <span class="keyword">let</span> [a, b] = [headA, headB]</span><br><span class="line">    <span class="keyword">while</span>(a) &#123;</span><br><span class="line">        m.<span class="title function_">set</span>(a, a)</span><br><span class="line">        a = a.<span class="property">next</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span>(b) &#123;</span><br><span class="line">        <span class="keyword">if</span>(m.<span class="title function_">has</span>(b)) <span class="keyword">return</span> b</span><br><span class="line">        b = b.<span class="property">next</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">null</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <p>思路2：题解中提到利用双指针</p>
-<p>设 <code>a</code>、<code>b</code> 初始指向 <code>headA</code> 和 <code>headB</code>，<br>
-有两种情况，</p>
+<p>设 <code>a</code>、<code>b</code> 初始指向 <code>headA</code> 和 <code>headB</code>，<br>有两种情况，</p>
 <p><strong>情况1 两个链表相交</strong>，设链表 <code>headA</code> 的不相交部分有 a 个结点，链表 <code>headB</code> 的不相交部分有 b 个结点，两链表相交部分有c个结点，则有</p>
 <ul>
 <li><code>a = b</code> 时，两个指针同时到达第一个公共节点，此时返回这个公共节点就行。</li>
 <li><code>a != b</code> 时，指针 <code>pA</code>遍历完链表 <code>headA</code> 后去遍历 <code>headB</code>，在指针 <code>pA</code>移动了 <code>a+c+b</code>次、<code>pB</code>移动了 <code>b+c+a</code>次后两指针会同时抵达公共节点！此时返回的也是第一个公共节点</li>
 </ul>
-<p><strong>情况2：两个链表不相交</strong><br>
-不相交时，设链表 <code>headA</code>、<code>headB</code>长度分别为 <code>m</code>、<code>n</code>，则有</p>
+<p><strong>情况2：两个链表不相交</strong><br>不相交时，设链表 <code>headA</code>、<code>headB</code>长度分别为 <code>m</code>、<code>n</code>，则有</p>
 <ul>
 <li><code>m = n</code> 时，两个指针会同时到达尾节点同时变为 <code>null</code>，此时返回 <code>null</code></li>
 <li><code>m != n</code> 时，两个指针都会遍历完整个链表后遍历另一个，在指针 <code>pA</code> 移动了 <code>m + n</code>次、指针 <code>pB</code> 移动了 <code>n + m</code>次后两个指针又会同时变为 <code>null</code>，也返回 <code>null</code></li>
@@ -617,7 +606,7 @@
       </a>
     </li>
     <li class="social-share-li">
-      <a target="_blank" class="social-share-icon" href="mailto:?subject=剑指offer day12 双指针（简单）&body=Hi,I found this website and thought you might like it http://yoursite-url/cn/coding-train/leetcode/offer/day12/">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=剑指offer day12 双指针（简单）&body=Hi,I found this website and thought you might like it https://ysx.cosine.ren/cn/coding-train/leetcode/offer/day12/">
         <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
       </a>
     </li>
@@ -705,7 +694,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">剑指 Offer 25. 合并两个排序的链表</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%9D%E8%B7%AF%E5%8F%8A%E4%BB%A3%E7%A0%81"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">思路及代码</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">剑指 Offer 52. 两个链表的第一个公共节点</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%9D%E8%B7%AF%E5%8F%8A%E4%BB%A3%E7%A0%81-2"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">思路及代码</span></a></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E5%89%91%E6%8C%87-Offer-25-%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%8E%92%E5%BA%8F%E7%9A%84%E9%93%BE%E8%A1%A8"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">剑指 Offer 25. 合并两个排序的链表</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%9D%E8%B7%AF%E5%8F%8A%E4%BB%A3%E7%A0%81"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">思路及代码</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E5%89%91%E6%8C%87-Offer-52-%E4%B8%A4%E4%B8%AA%E9%93%BE%E8%A1%A8%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%85%AC%E5%85%B1%E8%8A%82%E7%82%B9"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">剑指 Offer 52. 两个链表的第一个公共节点</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%9D%E8%B7%AF%E5%8F%8A%E4%BB%A3%E7%A0%81-1"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">思路及代码</span></a></li></ol></li></ol>
         
         </div>
       </aside>
@@ -903,10 +892,6 @@
   
 
   
-    <!-- LangSelect start -->
-    <script type="text/javascript" src="/js/langselect.js"></script>
-    <!-- LangSelect end -->
-  
 
   
     <!-- Mouseclick -->
@@ -965,7 +950,7 @@ https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0
 <!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
 
 <!-- jquery.tagcloud.js -->
-<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("http://yoursite-url/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("https://ysx.cosine.ren/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
 start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
 
 
@@ -1299,5 +1284,20 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
 </html>

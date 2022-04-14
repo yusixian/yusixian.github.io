@@ -139,7 +139,7 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="http://yoursite-url/cn/note/front-end/bytedance-note/nodejs-develop/">
+  <link rel="canonical" href="https://ysx.cosine.ren/cn/note/front-end/bytedance-note/nodejs-develop/">
   <title>
     
       【第二届青训营-寒假前端场】- 「Node.js 与前端开发实战」 - cos的博客 - WA的一声就哭了
@@ -298,10 +298,6 @@
           
 
           <!-- LangSelect -->
-          
-          
-          
-          
           
         </ul>
       </div>
@@ -470,37 +466,26 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h1>本节课重点内容</h1>
-<h2 id="Node-js-的应用场景（why）">Node.js 的应用场景（why）</h2>
+        <h1 id="本节课重点内容"><a href="#本节课重点内容" class="headerlink" title="本节课重点内容"></a>本节课重点内容</h1><h2 id="Node-js-的应用场景（why）"><a href="#Node-js-的应用场景（why）" class="headerlink" title="Node.js 的应用场景（why）"></a>Node.js 的应用场景（why）</h2><ul>
+<li><p>前端工程化</p>
 <ul>
-<li>
-<p>前端工程化</p>
-<ul>
-<li>
-<p>早期的jQuery等库都是直接在页面中引入，后来模块化逐渐成熟，Node.js赋予了开发者在浏览器外运行代码的能力，前端逐渐模块化、</p>
+<li><p>早期的jQuery等库都是直接在页面中引入，后来模块化逐渐成熟，Node.js赋予了开发者在浏览器外运行代码的能力，前端逐渐模块化、</p>
 </li>
-<li>
-<p>Bundle：<a target="_blank" rel="noopener" href="https://www.webpackjs.com/">webpack</a>、<a target="_blank" rel="noopener" href="https://cn.vitejs.dev/">Vite</a>、<a target="_blank" rel="noopener" href="https://esbuild.docschina.org/">esbuild</a>、<a target="_blank" rel="noopener" href="https://www.parceljs.cn/">Parcel</a>等</p>
+<li><p>Bundle：<a target="_blank" rel="noopener" href="https://www.webpackjs.com/">webpack</a>、<a target="_blank" rel="noopener" href="https://cn.vitejs.dev/">Vite</a>、<a target="_blank" rel="noopener" href="https://esbuild.docschina.org/">esbuild</a>、<a target="_blank" rel="noopener" href="https://www.parceljs.cn/">Parcel</a>等</p>
 </li>
-<li>
-<p>Uglify：<a target="_blank" rel="noopener" href="https://lisperator.net/uglifyjs/">UglifyJS</a></p>
+<li><p>Uglify：<a target="_blank" rel="noopener" href="https://lisperator.net/uglifyjs/">UglifyJS</a></p>
 </li>
-<li>
-<p>Transplie：<a target="_blank" rel="noopener" href="https://babeljs.io/">babeljs</a>、<a target="_blank" rel="noopener" href="https://www.tslang.cn/">TypeScript</a></p>
+<li><p>Transplie：<a target="_blank" rel="noopener" href="https://babeljs.io/">babeljs</a>、<a target="_blank" rel="noopener" href="https://www.tslang.cn/">TypeScript</a></p>
 <blockquote>
-<p>个人理解：Transplie就是将ES6这样最新的语法转译成低版本的写法，实现浏览器兼容</p>
+<p>个人理解：Transplie就是将ES6这样最新的语法转译成低版本的写法，实现浏览器兼容  </p>
 </blockquote>
 </li>
-<li>
-<p>其他语言加入前段工程化的竞争：<a target="_blank" rel="noopener" href="https://esbuild.docschina.org/">esbuild</a>、<a target="_blank" rel="noopener" href="https://www.parceljs.cn/">Parcel</a> 、prisma等</p>
+<li><p>其他语言加入前段工程化的竞争：<a target="_blank" rel="noopener" href="https://esbuild.docschina.org/">esbuild</a>、<a target="_blank" rel="noopener" href="https://www.parceljs.cn/">Parcel</a> 、prisma等</p>
 </li>
-<li>
-<p>现状：Node.js难以替代</p>
-</li>
+<li>现状：Node.js难以替代</li>
 </ul>
 </li>
-<li>
-<p>Web服务端应用</p>
+<li><p>Web服务端应用</p>
 <ul>
 <li>学习曲线平缓，<strong>开发效率较高</strong></li>
 <li><strong>运行效率接近常见的编译语言</strong></li>
@@ -509,8 +494,7 @@
 <li>现状：竞争激烈，Node.js 有自己独特的优势</li>
 </ul>
 </li>
-<li>
-<p>Electron<strong>跨端</strong>桌面应用</p>
+<li><p>Electron<strong>跨端</strong>桌面应用</p>
 <ul>
 <li>商业应用: vscode、slack、discord、zoom</li>
 <li>大型公司内的效率工具</li>
@@ -518,13 +502,11 @@
 </ul>
 </li>
 </ul>
-<h2 id="Node-js运行时结构（what）">Node.js运行时结构（what）</h2>
-<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b4e16f59c5ba42b39cc07156fb27ef84~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
+<h2 id="Node-js运行时结构（what）"><a href="#Node-js运行时结构（what）" class="headerlink" title="Node.js运行时结构（what）"></a>Node.js运行时结构（what）</h2><p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b4e16f59c5ba42b39cc07156fb27ef84~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
 <ul>
 <li>N-API：用户代码中利用npm安装的一些包</li>
 <li><a target="_blank" rel="noopener" href="http://nodejs.cn/learn/the-v8-javascript-engine">V8</a>：JavaScript Runtime，诊断调试工具(inspector)</li>
-<li><a target="_blank" rel="noopener" href="https://luohaha.github.io/Chinese-uvbook/source/introduction.html">libuv</a>：eventloop (事件循环)，syscall (系统调用)
-<ul>
+<li><a target="_blank" rel="noopener" href="https://luohaha.github.io/Chinese-uvbook/source/introduction.html">libuv</a>：eventloop (事件循环)，syscall (系统调用)<ul>
 <li>举例：用node-fetch发起请求时</li>
 <li>整个过程中底层会调用非常多的c++代码</li>
 </ul>
@@ -532,49 +514,39 @@
 </ul>
 <p><strong>特点</strong></p>
 <ul>
-<li>
-<p>异步I/O：</p>
+<li><p>异步I/O：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;B&#x27;</span>);</span><br><span class="line">&#125;)</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;A&#x27;</span>);</span><br></pre></td></tr></table></figure>
 <ul>
-<li>
-<p>一个常见场景：<strong>读取文件</strong>时。当Node.js执行I/O操作时，会在响应返回后恢复操作，而<strong>不是阻塞线程并占用额外内存等待</strong>。（内存占用更少）</p>
+<li><p>一个常见场景：<strong>读取文件</strong>时。当Node.js执行I/O操作时，会在响应返回后恢复操作，而<strong>不是阻塞线程并占用额外内存等待</strong>。（内存占用更少）</p>
 <p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/68794c8de61049ed90ecc828b3436dc5~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
 </li>
 </ul>
 </li>
-<li>
-<p>单线程</p>
+<li><p>单线程</p>
 <ul>
-<li>
-<p>worker_thread可以起一个独立线程，但每个线程的模型没有太大变化</p>
+<li><p>worker_thread可以起一个独立线程，但每个线程的模型没有太大变化</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">fibonacci</span>(<span class="params">num:number</span>):number &#123;</span><br><span class="line">	<span class="keyword">if</span>(num === <span class="number">1</span> || num === <span class="number">2</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="title function_">fibonacci</span>(num-<span class="number">1</span>) + <span class="title function_">fibonacci</span>(num-<span class="number">2</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">fibonacci</span>(<span class="number">42</span>)</span><br><span class="line"><span class="title function_">fibonacci</span>(<span class="number">43</span>)</span><br></pre></td></tr></table></figure>
 </li>
-<li>
-<p>JS单线程</p>
+<li><p>JS单线程</p>
 <ul>
 <li>实际:JS线程 + uv线程池（4个线程） + V8任务线程池 + V8 Inspector线程</li>
 </ul>
 </li>
-<li>
-<p>优点：不用考虑多线程状态同步问题，<strong>也就不需要锁</strong>。同时还能比较高效地利用系统资源;</p>
+<li><p>优点：不用考虑多线程状态同步问题，<strong>也就不需要锁</strong>。同时还能比较高效地利用系统资源;</p>
 </li>
-<li>
-<p>缺点：<strong>阻塞会产生更多负面影响</strong>、异步问题、延时有要求的场景需要考虑。</p>
+<li><p>缺点：<strong>阻塞会产生更多负面影响</strong>、异步问题、延时有要求的场景需要考虑。</p>
 <ul>
 <li>解决办法：多进程或多线程</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>
-<p>跨平台（大部分功能、api）</p>
+<li><p>跨平台（大部分功能、api）</p>
 <ul>
-<li>
-<p>想用linux上的Socket，而不同平台上调用的又不一样，只需：</p>
+<li><p>想用linux上的Socket，而不同平台上调用的又不一样，只需：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> net = <span class="built_in">require</span>(<span class="string">&#x27;net&#x27;</span>)</span><br><span class="line"><span class="keyword">const</span> socket = <span class="keyword">new</span> net.<span class="title class_">Socket</span>(<span class="string">&#x27;/tmp/socket.sock&#x27;</span>)</span><br></pre></td></tr></table></figure>
 </li>
-<li>
-<p>Node.js跨平台 + <strong>JS无需编译环境</strong>（+ <strong>Web跨平台</strong> + 诊断工具跨平台）</p>
+<li><p>Node.js跨平台 + <strong>JS无需编译环境</strong>（+ <strong>Web跨平台</strong> + 诊断工具跨平台）</p>
 <ul>
 <li>= <strong>开发成本低</strong>（大部分场景无需担心跨平台问题），整体学习成本低</li>
 </ul>
@@ -582,83 +554,66 @@
 </ul>
 </li>
 </ul>
-<h2 id="编写Http-Server-（how）">编写Http Server （how）</h2>
-<h3 id="安装Node-js">安装Node.js</h3>
-<ul>
+<h2 id="编写Http-Server-（how）"><a href="#编写Http-Server-（how）" class="headerlink" title="编写Http Server （how）"></a>编写Http Server （how）</h2><h3 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h3><ul>
 <li>Mac, Linux推荐使用nvm。<strong>多版本管理。</strong></li>
 <li>Windows推荐nvm4w或是<a target="_blank" rel="noopener" href="https://nodejs.org/en/download/">官方安装包</a>。</li>
-<li>安装慢，安装失败的情况，设置安装源
-<ul>
-<li>NVM_ NODEJS_ORG_MIRROR=https://npmmirror.com/mirrors/node nvm install 16</li>
+<li>安装慢，安装失败的情况，设置安装源<ul>
+<li>NVM_ NODEJS_ORG_MIRROR=<a target="_blank" rel="noopener" href="https://npmmirror.com/mirrors/node">https://npmmirror.com/mirrors/node</a> nvm install 16</li>
 </ul>
 </li>
 </ul>
-<h3 id="编写Http-Server-Client-收发GET-POST请求">编写Http Server + Client, 收发GET, POST请求</h3>
-<ul>
+<h3 id="编写Http-Server-Client-收发GET-POST请求"><a href="#编写Http-Server-Client-收发GET-POST请求" class="headerlink" title="编写Http Server + Client, 收发GET, POST请求"></a>编写Http Server + Client, 收发GET, POST请求</h3><ul>
 <li>前提：安装好Node.js，以管理员权限打开cmd下转至当前文件目录下</li>
 </ul>
-<h4 id="Http-Server">Http Server</h4>
+<h4 id="Http-Server"><a href="#Http-Server" class="headerlink" title="Http Server"></a>Http Server</h4><ul>
+<li><p>首先编写一个server.js，如下</p>
 <ul>
-<li>
-<p>首先编写一个server.js，如下</p>
-<ul>
-<li>
-<p><a target="_blank" rel="noopener" href="https://nodejs.org/api/http.html#httpcreateserveroptions-requestlistener"><code>createServer</code></a> 说明</p>
+<li><p><a target="_blank" rel="noopener" href="https://nodejs.org/api/http.html#httpcreateserveroptions-requestlistener"><code>createServer</code></a> 说明</p>
 <blockquote>
 <p>req 请求，res响应</p>
 </blockquote>
-<p><a target="_blank" rel="noopener" href="https://nodejs.org/api/http.html#serverlisten"><code>server.listen</code></a> 说明</p>
+<p><a target="_blank" rel="noopener" href="https://nodejs.org/api/http.html#serverlisten"><code>server.listen</code></a> 说明 </p>
 <blockquote>
 <p>port 要监听的端口号，成功后的回调函数</p>
 </blockquote>
 </li>
-<li>
-<pre><code class="language-js">const http = require('http');
-const server = http.createServer((req, res) =&gt; &#123;
-    res.end('hello'); // 响应直接就是hello
-&#125;);
-const port = 3000;
-server.listen(port, () =&gt; &#123;
-    console.log(`server listens on:$&#123;port&#125;`);	// 监听3000端口
-&#125;)
-
-</code></pre>
+<li><p>```js<br>const http = require(‘http’);<br>const server = http.createServer((req, res) =&gt; {</p>
+<pre><code>res.end(&#39;hello&#39;); // 响应直接就是hello
+</code></pre><p>});<br>const port = 3000;<br>server.listen(port, () =&gt; {</p>
+<pre><code>console.log(`server listens on:$&#123;port&#125;`);    // 监听3000端口
+</code></pre><p>})</p>
 </li>
 </ul>
 </li>
-<li>
-<p>使用node启动，此时输入localhost:3000就可以看到hello</p>
+<li><p>使用node启动，此时输入localhost:3000就可以看到hello</p>
 </li>
 </ul>
 <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/86eaa345e5ea499ca25569b7b2cbd9d3~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
 <p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7baced8533a046adb95f1acd0a92bd87~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
 <ul>
-<li>改为JSON版</li>
-</ul>
+<li><p>改为JSON版</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> server = http.<span class="title function_">createServer</span>(<span class="function">(<span class="params">req, res</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// receive body from client</span></span><br><span class="line">    <span class="keyword">const</span> bufs = [];    <span class="comment">// 取传的数据</span></span><br><span class="line">    req.<span class="title function_">on</span>(<span class="string">&#x27;data&#x27;</span>, <span class="function"><span class="params">data</span> =&gt;</span> &#123;</span><br><span class="line">        bufs.<span class="title function_">push</span>(data);</span><br><span class="line">    &#125;);</span><br><span class="line">    req.<span class="title function_">on</span>(<span class="string">&#x27;end&#x27;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">const</span> buf = <span class="title class_">Buffer</span>.<span class="title function_">concat</span>(bufs).<span class="title function_">toString</span>(<span class="string">&#x27;utf-8&#x27;</span>);</span><br><span class="line">        <span class="keyword">let</span> msg = <span class="string">&#x27;Hello&#x27;</span>;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            reqData = <span class="title class_">JSON</span>.<span class="title function_">parse</span>(buf);</span><br><span class="line">            msg = reqData.<span class="property">msg</span>;</span><br><span class="line">        &#125; <span class="keyword">catch</span> (err) &#123;</span><br><span class="line">            res.<span class="title function_">end</span>(<span class="string">&#x27;invalid json&#x27;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// response</span></span><br><span class="line">        <span class="keyword">const</span> responseJson = &#123;</span><br><span class="line">            <span class="attr">msg</span>: <span class="string">`receive：<span class="subst">$&#123;msg&#125;</span>`</span></span><br><span class="line">        &#125;</span><br><span class="line">        res.<span class="title function_">setHeader</span>(<span class="string">&#x27;Content-Type&#x27;</span>, <span class="string">&#x27;application/json&#x27;</span>);</span><br><span class="line">        res.<span class="title function_">end</span>(<span class="title class_">JSON</span>.<span class="title function_">stringify</span>(responseJson));</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <ul>
 <li><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/25a3c3639d4947b290df7623d97a87bb~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></li>
 <li><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a752766165644b1c8bf4e1493a482c6a~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></li>
 </ul>
-<h4 id="Http-Client">Http Client</h4>
-<ul>
+</li>
+</ul>
+<h4 id="Http-Client"><a href="#Http-Client" class="headerlink" title="Http Client"></a>Http Client</h4><ul>
 <li><a target="_blank" rel="noopener" href="http://nodejs.cn/api/http/http_request_url_options_callback.html"><code>http.request(url[, options\][, callback])</code></a></li>
 </ul>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> http = <span class="built_in">require</span>(<span class="string">&#x27;http&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> body = <span class="title class_">JSON</span>.<span class="title function_">stringify</span>(&#123; <span class="attr">msg</span>: <span class="string">&#x27;hello from my own client&#x27;</span> &#125;);</span><br><span class="line"><span class="comment">// [url] [option] [callback]</span></span><br><span class="line"><span class="keyword">const</span> req = http.<span class="title function_">request</span>(<span class="string">&#x27;http://127.0.0.1:3000&#x27;</span>, &#123;</span><br><span class="line">    <span class="attr">method</span>: <span class="string">&#x27;POST&#x27;</span>,</span><br><span class="line">    <span class="attr">headers</span>: &#123;</span><br><span class="line">        <span class="string">&#x27;Content-Type&#x27;</span>: <span class="string">&#x27;application/json&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;Content-Length&#x27;</span>: body.<span class="property">length</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">&#125;, <span class="function">(<span class="params">res</span>) =&gt;</span> &#123;   <span class="comment">// 响应体   </span></span><br><span class="line">    <span class="keyword">const</span> bufs = [];</span><br><span class="line">    res.<span class="title function_">on</span>(<span class="string">&#x27;data&#x27;</span>, <span class="function"><span class="params">data</span> =&gt;</span> &#123;</span><br><span class="line">        bufs.<span class="title function_">push</span>(data);</span><br><span class="line">    &#125;);</span><br><span class="line">    res.<span class="title function_">on</span>(<span class="string">&#x27;end&#x27;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">const</span> buf = <span class="title class_">Buffer</span>.<span class="title function_">concat</span>(bufs);</span><br><span class="line">        <span class="keyword">const</span> receive = <span class="title class_">JSON</span>.<span class="title function_">parse</span>(buf);</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;receive json.msg is:&#x27;</span>, receive);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;)</span><br><span class="line">req.<span class="title function_">end</span>(body);</span><br></pre></td></tr></table></figure>
 <p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/2ccdb0821cb0403093a6192544066cbc~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
-<h4 id="Promisify">Promisify</h4>
-<p>可以用 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a> + <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript/Asynchronous/Async_await">async和await</a> 重写这两个例子（why？）</p>
+<h4 id="Promisify"><a href="#Promisify" class="headerlink" title="Promisify"></a>Promisify</h4><p>可以用 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a> + <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript/Asynchronous/Async_await">async和await</a> 重写这两个例子（why？）</p>
 <blockquote>
 <p>当 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await">await</a> 关键字与异步函数一起使用时，它的真正优势就变得明显了 —— 事实上， <strong>await 只在异步函数里面才起作用</strong>。它可以放在任何异步的，基于 promise 的函数之前。它会暂停代码在该行上，直到 promise 完成，然后返回结果值。在暂停的同时，其他正在等待执行的代码就有机会执行了</p>
 <p><code>async/await</code> 让你的代码看起来是同步的，在某种程度上，也使得它的行为更加地同步。 <code>await</code> 关键字会阻塞其后的代码，直到promise完成，就像执行同步操作一样。它确实可以允许其他任务在此期间继续运行，但您自己的代码被阻塞。</p>
 </blockquote>
 <ul>
-<li>
-<p>回调写太多容易找不到，不宜维护</p>
+<li><p>回调写太多容易找不到，不宜维护</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">wait</span>(<span class="params">t</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">            <span class="title function_">resolve</span>();</span><br><span class="line">        &#125;, t);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">wait</span>(<span class="number">1000</span>).<span class="title function_">then</span>(<span class="function">() =&gt;</span> &#123; <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;get called&#x27;</span>); &#125;);</span><br></pre></td></tr></table></figure>
 </li>
-<li>
-<p>并不是所有回调都适合改写成Promise</p>
+<li><p>并不是所有回调都适合改写成Promise</p>
 <ul>
 <li>适合只被调用一次的回调函数</li>
 </ul>
@@ -666,12 +621,10 @@ server.listen(port, () =&gt; &#123;
 </li>
 </ul>
 <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9dbdf3381e8a493983e2d317ed9c5a43~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
-<h3 id="编写静态文件服务器">编写静态文件服务器</h3>
-<p>编写一个简单的静态服务，接受用户发过来的http请求，拿到图片的url约定为静态文件服务器磁盘上对应的路径，再把具体内容返回给用户。这次除了 <a target="_blank" rel="noopener" href="http://nodejs.cn/api/http.html">http</a> 模块，还需要 <a target="_blank" rel="noopener" href="http://nodejs.cn/api/fs.html">fs</a> 模块和 <a target="_blank" rel="noopener" href="http://nodejs.cn/api/path.html">path</a> 模块</p>
+<h3 id="编写静态文件服务器"><a href="#编写静态文件服务器" class="headerlink" title="编写静态文件服务器"></a>编写静态文件服务器</h3><p>编写一个简单的静态服务，接受用户发过来的http请求，拿到图片的url约定为静态文件服务器磁盘上对应的路径，再把具体内容返回给用户。这次除了 <a target="_blank" rel="noopener" href="http://nodejs.cn/api/http.html">http</a> 模块，还需要 <a target="_blank" rel="noopener" href="http://nodejs.cn/api/fs.html">fs</a> 模块和 <a target="_blank" rel="noopener" href="http://nodejs.cn/api/path.html">path</a> 模块</p>
 <p>先编写一个简单的 index.html，放于static目录下</p>
 <p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4896177811004202ac15fc53ea8746ee~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
-<h4 id="static-server-js">static_server.js</h4>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> http = <span class="built_in">require</span>(<span class="string">&#x27;http&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">&#x27;fs&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">&#x27;path&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> url = <span class="built_in">require</span>(<span class="string">&#x27;url&#x27;</span>);</span><br><span class="line"><span class="comment">// __dirname是当前这个文件所在位置, ./为当前文件所在文件夹 folderPath即为static文件夹相对于当前文件路径</span></span><br><span class="line"><span class="keyword">const</span> folderPath = path.<span class="title function_">resolve</span>(__dirname, <span class="string">&#x27;./static&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> server = http.<span class="title function_">createServer</span>(<span class="function">(<span class="params">req, res</span>) =&gt;</span> &#123;  <span class="comment">// 注意这里的async</span></span><br><span class="line">    <span class="comment">// expected http://127.0.0.1:3000/index.html</span></span><br><span class="line">    <span class="keyword">const</span> info = url.<span class="title function_">parse</span>(req.<span class="property">url</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// static/index.html</span></span><br><span class="line">    <span class="keyword">const</span> filepath = path.<span class="title function_">resolve</span>(folderPath, <span class="string">&#x27;./&#x27;</span>+info.<span class="property">path</span>);</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;filepath&#x27;</span>, filepath);</span><br><span class="line">    <span class="comment">// stream风格的api，其内部内存使用率更好</span></span><br><span class="line">    <span class="keyword">const</span> filestream = fs.<span class="title function_">createReadStream</span>(filepath);</span><br><span class="line">    filestream.<span class="title function_">pipe</span>(res);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="keyword">const</span> port = <span class="number">3000</span>;</span><br><span class="line">server.<span class="title function_">listen</span>(port, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`server listens on:<span class="subst">$&#123;port&#125;</span>`</span>);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h4 id="static-server-js"><a href="#static-server-js" class="headerlink" title="static_server.js"></a>static_server.js</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> http = <span class="built_in">require</span>(<span class="string">&#x27;http&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">&#x27;fs&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">&#x27;path&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> url = <span class="built_in">require</span>(<span class="string">&#x27;url&#x27;</span>);</span><br><span class="line"><span class="comment">// __dirname是当前这个文件所在位置, ./为当前文件所在文件夹 folderPath即为static文件夹相对于当前文件路径</span></span><br><span class="line"><span class="keyword">const</span> folderPath = path.<span class="title function_">resolve</span>(__dirname, <span class="string">&#x27;./static&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> server = http.<span class="title function_">createServer</span>(<span class="function">(<span class="params">req, res</span>) =&gt;</span> &#123;  <span class="comment">// 注意这里的async</span></span><br><span class="line">    <span class="comment">// expected http://127.0.0.1:3000/index.html</span></span><br><span class="line">    <span class="keyword">const</span> info = url.<span class="title function_">parse</span>(req.<span class="property">url</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// static/index.html</span></span><br><span class="line">    <span class="keyword">const</span> filepath = path.<span class="title function_">resolve</span>(folderPath, <span class="string">&#x27;./&#x27;</span>+info.<span class="property">path</span>);</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;filepath&#x27;</span>, filepath);</span><br><span class="line">    <span class="comment">// stream风格的api，其内部内存使用率更好</span></span><br><span class="line">    <span class="keyword">const</span> filestream = fs.<span class="title function_">createReadStream</span>(filepath);</span><br><span class="line">    filestream.<span class="title function_">pipe</span>(res);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="keyword">const</span> port = <span class="number">3000</span>;</span><br><span class="line">server.<span class="title function_">listen</span>(port, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`server listens on:<span class="subst">$&#123;port&#125;</span>`</span>);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/002356c010394791918d5d7deb0005ea~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
 <p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6eb03ea97a7a4263835a1261bb207849~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
 <ul>
@@ -681,22 +634,18 @@ server.listen(port, () =&gt; &#123;
 <li><strong>CDN</strong>：<strong>缓存+加速</strong></li>
 <li><strong>分布式</strong>储存，<strong>容灾</strong>（服务器挂了也能正常服务）</li>
 </ol>
-<h3 id="编写React-SSR服务">编写React SSR服务</h3>
-<ul>
+<h3 id="编写React-SSR服务"><a href="#编写React-SSR服务" class="headerlink" title="编写React SSR服务"></a>编写React SSR服务</h3><ul>
 <li>SSR (server side rendering)有什么特点？</li>
 <li>相比传统HTML模版引擎:避免重复编写代码</li>
 <li>相比SPA (single page application)：首屏渲染更快，SEO（搜索引擎优化）友好</li>
-<li>缺点：
-<ul>
+<li>缺点：<ul>
 <li>通常qps（每秒查询率）较低，前端代码编写时需要考虑服务端渲染情况</li>
 <li>编写比较难，编写js还要考虑前端中的表现</li>
 </ul>
 </li>
 </ul>
-<h4 id="安装React">安装React</h4>
-<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">npm</span> init</span><br><span class="line"><span class="built_in">npm</span> i react react-dom</span><br></pre></td></tr></table></figure>
-<h4 id="编写示例">编写示例</h4>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">const React = require(&#x27;react&#x27;);</span><br><span class="line">const ReactDOMServer = require(&#x27;react-dom/server&#x27;);</span><br><span class="line">const http = require(&#x27;http&#x27;);</span><br><span class="line">function App(props) &#123;</span><br><span class="line">    return React.createElement(&#x27;div&#x27;, &#123;&#125;, props.children || &#x27;Hello&#x27;);</span><br><span class="line">&#125;</span><br><span class="line">const server = http.createServer((req, res) =&gt; &#123;</span><br><span class="line">    res.end(`</span><br><span class="line">        &lt;!DOCTYPE html&gt;</span><br><span class="line">        &lt;html&gt;</span><br><span class="line">            &lt;head&gt;</span><br><span class="line">                &lt;title&gt;My Application&lt;/title&gt;</span><br><span class="line">            &lt;/head&gt;</span><br><span class="line">            &lt;body&gt;</span><br><span class="line">                $&#123;ReactDOMServer.renderToString(</span><br><span class="line">                    React.createElement(App, &#123;&#125;, &#x27;my_content&#x27;))&#125;</span><br><span class="line">                &lt;script&gt;</span><br><span class="line">                    alert(&#x27;yes&#x27;);</span><br><span class="line">                &lt;/script&gt;</span><br><span class="line">            &lt;/body&gt;</span><br><span class="line">        &lt;/html&gt;</span><br><span class="line">    `);</span><br><span class="line">&#125;)</span><br><span class="line">const port = 3000;</span><br><span class="line">server.listen(port, () =&gt; &#123;</span><br><span class="line">    console.log(&#x27;listening on: &#x27;, port);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h4 id="安装React"><a href="#安装React" class="headerlink" title="安装React"></a>安装React</h4><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">npm</span> init</span><br><span class="line"><span class="built_in">npm</span> i react react-dom</span><br></pre></td></tr></table></figure>
+<h4 id="编写示例"><a href="#编写示例" class="headerlink" title="编写示例"></a>编写示例</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">const React = require(&#x27;react&#x27;);</span><br><span class="line">const ReactDOMServer = require(&#x27;react-dom/server&#x27;);</span><br><span class="line">const http = require(&#x27;http&#x27;);</span><br><span class="line">function App(props) &#123;</span><br><span class="line">    return React.createElement(&#x27;div&#x27;, &#123;&#125;, props.children || &#x27;Hello&#x27;);</span><br><span class="line">&#125;</span><br><span class="line">const server = http.createServer((req, res) =&gt; &#123;</span><br><span class="line">    res.end(`</span><br><span class="line">        &lt;!DOCTYPE html&gt;</span><br><span class="line">        &lt;html&gt;</span><br><span class="line">            &lt;head&gt;</span><br><span class="line">                &lt;title&gt;My Application&lt;/title&gt;</span><br><span class="line">            &lt;/head&gt;</span><br><span class="line">            &lt;body&gt;</span><br><span class="line">                $&#123;ReactDOMServer.renderToString(</span><br><span class="line">                    React.createElement(App, &#123;&#125;, &#x27;my_content&#x27;))&#125;</span><br><span class="line">                &lt;script&gt;</span><br><span class="line">                    alert(&#x27;yes&#x27;);</span><br><span class="line">                &lt;/script&gt;</span><br><span class="line">            &lt;/body&gt;</span><br><span class="line">        &lt;/html&gt;</span><br><span class="line">    `);</span><br><span class="line">&#125;)</span><br><span class="line">const port = 3000;</span><br><span class="line">server.listen(port, () =&gt; &#123;</span><br><span class="line">    console.log(&#x27;listening on: &#x27;, port);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/258be264f1104f669d64d5ee1883dafe~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
 <ul>
 <li>SSR难点</li>
@@ -706,19 +655,15 @@ server.listen(port, () =&gt; &#123;
 <li>需要思考前端代码在服务端运行时的逻辑</li>
 <li>移除对服务端无意义的副作用，或重置环境</li>
 </ol>
-<h3 id="适用inspector进行调试、诊断">适用inspector进行调试、诊断</h3>
-<ul>
-<li>
-<p>V8 Inspector:开箱即用、特性丰富强大、与前端开发一致、跨平<br>
-台</p>
+<h3 id="适用inspector进行调试、诊断"><a href="#适用inspector进行调试、诊断" class="headerlink" title="适用inspector进行调试、诊断"></a>适用inspector进行调试、诊断</h3><ul>
+<li><p>V8 Inspector:开箱即用、特性丰富强大、与前端开发一致、跨平<br>台</p>
 <ul>
 <li><code>node -- inspect</code></li>
 <li><code>open http://localhost:9229/json</code></li>
 </ul>
 <p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/73f242fda3c741b6abdb6a9b8cceab2e~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
 </li>
-<li>
-<p>场景:</p>
+<li><p>场景:</p>
 <ul>
 <li>查看console.log内容</li>
 <li>breakpoint</li>
@@ -728,81 +673,63 @@ server.listen(port, () =&gt; &#123;
 </ul>
 </li>
 </ul>
-<h3 id="部署简介">部署简介</h3>
-<p>写完了，如何部署到生产环境捏？</p>
+<h3 id="部署简介"><a href="#部署简介" class="headerlink" title="部署简介"></a>部署简介</h3><p>写完了，如何部署到生产环境捏？</p>
 <ul>
-<li>
-<p>部署要解决的问题</p>
+<li><p>部署要解决的问题</p>
 <ul>
-<li>
-<p>守护进程：当进程退出时，重新拉起</p>
+<li><p>守护进程：当进程退出时，重新拉起</p>
 </li>
-<li>
-<p>多进程：cluster便捷地利用多进程</p>
+<li><p>多进程：cluster便捷地利用多进程</p>
 </li>
-<li>
-<p>记录进程状态，用于诊断</p>
-</li>
+<li>记录进程状态，用于诊断</li>
 </ul>
 </li>
-<li>
-<p>容器环境</p>
+<li><p>容器环境</p>
 <ul>
 <li>通常有健康检查的手段，只需考虑多核cpu利用率即可</li>
 </ul>
 </li>
 </ul>
-<h2 id="延伸话题">延伸话题</h2>
-<h3 id="快速了解Node-js代码">快速了解Node.js代码</h3>
-<p><a target="_blank" rel="noopener" href="https://github.com/joyeecheung/talks/blob/master/code_and_learn_2019_beijing/contributing-to-node-core.pdf">Node. js Core贡献入门</a></p>
+<h2 id="延伸话题"><a href="#延伸话题" class="headerlink" title="延伸话题"></a>延伸话题</h2><h3 id="快速了解Node-js代码"><a href="#快速了解Node-js代码" class="headerlink" title="快速了解Node.js代码"></a>快速了解Node.js代码</h3><p><a target="_blank" rel="noopener" href="https://github.com/joyeecheung/talks/blob/master/code_and_learn_2019_beijing/contributing-to-node-core.pdf">Node. js Core贡献入门</a></p>
 <ul>
-<li>好处
-<ul>
+<li>好处<ul>
 <li>从使用者的角色逐步理解底层细节，可以解决更复杂的问题，</li>
 <li>自我证明，有助于职业发展;</li>
 <li>解决社区问题，促进社区发展;</li>
 </ul>
 </li>
-<li>难点:
-<ul>
+<li>难点:<ul>
 <li>花时间（真实）</li>
 </ul>
 </li>
 </ul>
-<h3 id="编译Node-js">编译Node.js</h3>
-<ul>
-<li>为什么要学习编译Node.js
-<ul>
+<h3 id="编译Node-js"><a href="#编译Node-js" class="headerlink" title="编译Node.js"></a>编译Node.js</h3><ul>
+<li>为什么要学习编译Node.js<ul>
 <li>认知:黑盒到白盒，发生问题时能有迹可循</li>
 <li>贡献代码的第一步</li>
 </ul>
 </li>
-<li>如何编译
-<ul>
+<li>如何编译<ul>
 <li>./configure &amp;&amp;make install</li>
 <li>演示：给net模块添加自定义属性</li>
 </ul>
 </li>
 </ul>
-<h3 id="诊断-追踪">诊断/追踪</h3>
-<ul>
+<h3 id="诊断-追踪"><a href="#诊断-追踪" class="headerlink" title="诊断/追踪"></a>诊断/追踪</h3><ul>
 <li>诊断是一个低频、重要同时也相当有挑战的方向。是企业衡量自己能否依赖一个门语言的重要参考。</li>
 <li>技术咨询行业中的热门角色。</li>
-<li>难点:
-<ul>
+<li>难点:<ul>
 <li>需要了解Node.js底层，需要了解操作系统以及各种工具</li>
 <li>需要经验</li>
 </ul>
 </li>
 </ul>
-<h3 id="WASM-NAPI">WASM, NAPI</h3>
-<ul>
+<h3 id="WASM-NAPI"><a href="#WASM-NAPI" class="headerlink" title="WASM, NAPI"></a>WASM, NAPI</h3><ul>
 <li>Node.js(因为V8)是执行WASM代码的天然容器，和浏览器WASM是同一运行时，同时Node.js支持WASI。</li>
 <li>NAPI执行C接口的代码(C/C++/Rust…)，同时能保留原生代码的性能。</li>
 <li>不同编程语言间通信的一种方案。</li>
 </ul>
-<h2 id="总结感想">总结感想</h2>
-<p>本节课从Node.js介绍起，实现了其编写Http Server的一个实战（并用Promise优化回调，还对SSR有了一定的了解），并在延伸话题里老师也给出了一些建议与拓展阅读，好欸~</p>
+<h2 id="总结感想"><a href="#总结感想" class="headerlink" title="总结感想"></a>总结感想</h2><p>本节课从Node.js介绍起，实现了其编写Http Server的一个实战（并用Promise优化回调，还对SSR有了一定的了解），并在延伸话题里老师也给出了一些建议与拓展阅读，好欸~</p>
 <blockquote>
 <p>本文引用的内容大部分来自欧阳亚东老师的课以及MDN。</p>
 </blockquote>
@@ -818,7 +745,7 @@ server.listen(port, () =&gt; &#123;
           
           
           <li class="next">
-            <a href="/cn/note/front-end/bytedance-note/http-practical-guide/" data-toggle="tooltip" data-placement="top" title="【第二届青训营-寒假前端场】- 「HTTP实用指南」">Next Post &rarr;</a>
+            <a href="/cn/note/front-end/bytedance-note/http-utilization-guide/" data-toggle="tooltip" data-placement="top" title="【第二届青训营-寒假前端场】- 「HTTP实用指南」">Next Post &rarr;</a>
           </li>
           
         </ul>
@@ -867,7 +794,7 @@ server.listen(port, () =&gt; &#123;
       </a>
     </li>
     <li class="social-share-li">
-      <a target="_blank" class="social-share-icon" href="mailto:?subject=【第二届青训营-寒假前端场】- 「Node.js 与前端开发实战」&body=Hi,I found this website and thought you might like it http://yoursite-url/cn/note/front-end/bytedance-note/nodejs-develop/">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=【第二届青训营-寒假前端场】- 「Node.js 与前端开发实战」&body=Hi,I found this website and thought you might like it https://ysx.cosine.ren/cn/note/front-end/bytedance-note/nodejs-develop/">
         <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
       </a>
     </li>
@@ -955,7 +882,7 @@ server.listen(port, () =&gt; &#123;
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">本节课重点内容</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Node-js-%E7%9A%84%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF%EF%BC%88why%EF%BC%89"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">Node.js 的应用场景（why）</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Node-js%E8%BF%90%E8%A1%8C%E6%97%B6%E7%BB%93%E6%9E%84%EF%BC%88what%EF%BC%89"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">Node.js运行时结构（what）</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%BC%96%E5%86%99Http-Server-%EF%BC%88how%EF%BC%89"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">编写Http Server （how）</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%89%E8%A3%85Node-js"><span class="toc-nav-number">1.3.1.</span> <span class="toc-nav-text">安装Node.js</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%BC%96%E5%86%99Http-Server-Client-%E6%94%B6%E5%8F%91GET-POST%E8%AF%B7%E6%B1%82"><span class="toc-nav-number">1.3.2.</span> <span class="toc-nav-text">编写Http Server + Client, 收发GET, POST请求</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Http-Server"><span class="toc-nav-number">1.3.2.1.</span> <span class="toc-nav-text">Http Server</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Http-Client"><span class="toc-nav-number">1.3.2.2.</span> <span class="toc-nav-text">Http Client</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Promisify"><span class="toc-nav-number">1.3.2.3.</span> <span class="toc-nav-text">Promisify</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%BC%96%E5%86%99%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-nav-number">1.3.3.</span> <span class="toc-nav-text">编写静态文件服务器</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#static-server-js"><span class="toc-nav-number">1.3.3.1.</span> <span class="toc-nav-text">static_server.js</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%BC%96%E5%86%99React-SSR%E6%9C%8D%E5%8A%A1"><span class="toc-nav-number">1.3.4.</span> <span class="toc-nav-text">编写React SSR服务</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%AE%89%E8%A3%85React"><span class="toc-nav-number">1.3.4.1.</span> <span class="toc-nav-text">安装React</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E7%BC%96%E5%86%99%E7%A4%BA%E4%BE%8B"><span class="toc-nav-number">1.3.4.2.</span> <span class="toc-nav-text">编写示例</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%80%82%E7%94%A8inspector%E8%BF%9B%E8%A1%8C%E8%B0%83%E8%AF%95%E3%80%81%E8%AF%8A%E6%96%AD"><span class="toc-nav-number">1.3.5.</span> <span class="toc-nav-text">适用inspector进行调试、诊断</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%83%A8%E7%BD%B2%E7%AE%80%E4%BB%8B"><span class="toc-nav-number">1.3.6.</span> <span class="toc-nav-text">部署简介</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%BB%B6%E4%BC%B8%E8%AF%9D%E9%A2%98"><span class="toc-nav-number">1.4.</span> <span class="toc-nav-text">延伸话题</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%BF%AB%E9%80%9F%E4%BA%86%E8%A7%A3Node-js%E4%BB%A3%E7%A0%81"><span class="toc-nav-number">1.4.1.</span> <span class="toc-nav-text">快速了解Node.js代码</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%BC%96%E8%AF%91Node-js"><span class="toc-nav-number">1.4.2.</span> <span class="toc-nav-text">编译Node.js</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%AF%8A%E6%96%AD-%E8%BF%BD%E8%B8%AA"><span class="toc-nav-number">1.4.3.</span> <span class="toc-nav-text">诊断&#x2F;追踪</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#WASM-NAPI"><span class="toc-nav-number">1.4.4.</span> <span class="toc-nav-text">WASM, NAPI</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%BB%E7%BB%93%E6%84%9F%E6%83%B3"><span class="toc-nav-number">1.5.</span> <span class="toc-nav-text">总结感想</span></a></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E6%9C%AC%E8%8A%82%E8%AF%BE%E9%87%8D%E7%82%B9%E5%86%85%E5%AE%B9"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">本节课重点内容</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Node-js-%E7%9A%84%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF%EF%BC%88why%EF%BC%89"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">Node.js 的应用场景（why）</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Node-js%E8%BF%90%E8%A1%8C%E6%97%B6%E7%BB%93%E6%9E%84%EF%BC%88what%EF%BC%89"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">Node.js运行时结构（what）</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%BC%96%E5%86%99Http-Server-%EF%BC%88how%EF%BC%89"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">编写Http Server （how）</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%89%E8%A3%85Node-js"><span class="toc-nav-number">1.3.1.</span> <span class="toc-nav-text">安装Node.js</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%BC%96%E5%86%99Http-Server-Client-%E6%94%B6%E5%8F%91GET-POST%E8%AF%B7%E6%B1%82"><span class="toc-nav-number">1.3.2.</span> <span class="toc-nav-text">编写Http Server + Client, 收发GET, POST请求</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Http-Server"><span class="toc-nav-number">1.3.2.1.</span> <span class="toc-nav-text">Http Server</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Http-Client"><span class="toc-nav-number">1.3.2.2.</span> <span class="toc-nav-text">Http Client</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Promisify"><span class="toc-nav-number">1.3.2.3.</span> <span class="toc-nav-text">Promisify</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%BC%96%E5%86%99%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-nav-number">1.3.3.</span> <span class="toc-nav-text">编写静态文件服务器</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#static-server-js"><span class="toc-nav-number">1.3.3.1.</span> <span class="toc-nav-text">static_server.js</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%BC%96%E5%86%99React-SSR%E6%9C%8D%E5%8A%A1"><span class="toc-nav-number">1.3.4.</span> <span class="toc-nav-text">编写React SSR服务</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%AE%89%E8%A3%85React"><span class="toc-nav-number">1.3.4.1.</span> <span class="toc-nav-text">安装React</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E7%BC%96%E5%86%99%E7%A4%BA%E4%BE%8B"><span class="toc-nav-number">1.3.4.2.</span> <span class="toc-nav-text">编写示例</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%80%82%E7%94%A8inspector%E8%BF%9B%E8%A1%8C%E8%B0%83%E8%AF%95%E3%80%81%E8%AF%8A%E6%96%AD"><span class="toc-nav-number">1.3.5.</span> <span class="toc-nav-text">适用inspector进行调试、诊断</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%83%A8%E7%BD%B2%E7%AE%80%E4%BB%8B"><span class="toc-nav-number">1.3.6.</span> <span class="toc-nav-text">部署简介</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%BB%B6%E4%BC%B8%E8%AF%9D%E9%A2%98"><span class="toc-nav-number">1.4.</span> <span class="toc-nav-text">延伸话题</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%BF%AB%E9%80%9F%E4%BA%86%E8%A7%A3Node-js%E4%BB%A3%E7%A0%81"><span class="toc-nav-number">1.4.1.</span> <span class="toc-nav-text">快速了解Node.js代码</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%BC%96%E8%AF%91Node-js"><span class="toc-nav-number">1.4.2.</span> <span class="toc-nav-text">编译Node.js</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%AF%8A%E6%96%AD-%E8%BF%BD%E8%B8%AA"><span class="toc-nav-number">1.4.3.</span> <span class="toc-nav-text">诊断&#x2F;追踪</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#WASM-NAPI"><span class="toc-nav-number">1.4.4.</span> <span class="toc-nav-text">WASM, NAPI</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%BB%E7%BB%93%E6%84%9F%E6%83%B3"><span class="toc-nav-number">1.5.</span> <span class="toc-nav-text">总结感想</span></a></li></ol></li></ol>
         
         </div>
       </aside>
@@ -1151,10 +1078,6 @@ server.listen(port, () =&gt; &#123;
   
 
   
-    <!-- LangSelect start -->
-    <script type="text/javascript" src="/js/langselect.js"></script>
-    <!-- LangSelect end -->
-  
 
   
     <!-- Mouseclick -->
@@ -1213,7 +1136,7 @@ https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0
 <!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
 
 <!-- jquery.tagcloud.js -->
-<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("http://yoursite-url/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("https://ysx.cosine.ren/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
 start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
 
 
@@ -1547,5 +1470,20 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
 </html>

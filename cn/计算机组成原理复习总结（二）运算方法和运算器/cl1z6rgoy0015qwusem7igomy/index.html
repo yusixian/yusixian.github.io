@@ -1,0 +1,1364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
+<head>
+  <!-- Google Analytics -->
+  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-xxxxxx-xx"></script>
+    <script type="text/javascript">
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-xxxxxx-xx');
+    </script>
+  
+
+  <!-- Baidu Tongji -->
+  
+    <script type="text/javascript">
+      // Originial
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  <!-- Baidu Push -->
+  
+    <script>
+      (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+      })();
+    </script>
+  
+
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <meta name="google-site-verification" content="lxDfCplOZbIzjhG34NuQBgu2gdyRlAtMB4utP5AgEBc"/>
+  <meta name="baidu-site-verification" content="PpzM9WxOJU"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="一个正在努力学习前端的程序媛qwq"/>
+  <meta name="keyword" content="前端, cos, blog, css, html, c++"/>
+  <link rel="shortcut icon" href="/img/avatar/cos.jpg"/>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
+
+  
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/beantech.min.css"/>
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="/css/highlight.css"/>
+    <link rel="stylesheet" href="/css/widget.css"/>
+    <link rel="stylesheet" href="/css/rocket.css"/>
+    <link rel="stylesheet" href="/css/signature.css"/>
+    <link rel="stylesheet" href="/css/catalog.css"/>
+    <link rel="stylesheet" href="/css/livemylife.css"/>
+
+    
+      <!-- wave start -->
+      <link rel="stylesheet" href="/css/wave.css"/>
+      <!-- wave end -->
+    
+
+    
+      <!-- top start (article top hot config) -->
+      <link rel="stylesheet" href="/css/top.css"/>
+      <!-- top end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="/css/scroll.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+      <!-- viewer start (Picture preview) -->
+      <link rel="stylesheet" href="/css/viewer.min.css"/>
+      <!-- viewer end -->
+    
+
+    
+      <!-- Search start -->
+      <link rel="stylesheet" href="/css/search.css"/>
+      <!-- Search end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="/css/themecolor.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+
+    
+      <!-- gitalk start -->
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"> -->
+      <link rel="stylesheet" href="/css/gitalk.css"/>
+      <!-- gitalk end -->
+    
+  
+
+  <!-- Custom Fonts -->
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+  <!-- Hux change font-awesome CDN to qiniu -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Hux Delete, sad but pending in China <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> <link
+  href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/ css'> -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+
+  <!-- ga & ba script hoook -->
+  <link rel="canonical" href="https://ysx.cosine.ren/cn/计算机组成原理复习总结（二）运算方法和运算器/cl1z6rgoy0015qwusem7igomy/">
+  <title>
+    
+      计算机组成原理复习总结（二）运算方法和运算器 - cos的博客 - WA的一声就哭了
+    
+  </title>
+<meta name="generator" content="Hexo 5.4.1"></head>
+
+
+<!-- hack iOS CSS :active style -->
+
+	<body ontouchstart="" class="body--light body--light">
+
+
+		<!-- ThemeColor -->
+		
+		<!-- ThemeColor -->
+<style type="text/css">
+  .body--light {
+    --light-mode: none;
+    --dark-mode: block;
+  }
+  .body--dark {
+    --light-mode: block;
+    --dark-mode: none;
+  }
+  i.mdui-icon.material-icons.light-mode {
+    display: var(--light-mode);
+  }
+  i.mdui-icon.material-icons.dark-mode {
+    display: var(--dark-mode);
+  }
+</style>
+<div class="toggle" onclick="document.body.classList.toggle('body--dark')">
+  <i class="mdui-icon material-icons light-mode"></i>
+  <i class="mdui-icon material-icons dark-mode"></i>
+</div>
+<script>
+  //getCookieValue
+  function getCookieValue(a) {
+    var b = document.cookie.match('(^|[^;]+)\\s*' + a + '\\s*=\\s*([^;]+)');
+    return b
+      ? b.pop()
+      : '';
+  }
+  let themeMode = 'light';
+  if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
+    let dbody = document.body.classList;
+    themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
+  }
+
+  //setCookieValue
+  var toggleBtn = document.querySelector(".toggle");
+  toggleBtn.addEventListener("click", function () {
+    var e = document.body.classList.contains("body--dark");
+    var cookieString = e
+      ? "dark"
+      : "light";
+    var exp = new Date();
+    exp.setTime(exp.getTime() + 3 * 24 * 60 * 60 * 1000); //3天过期
+    document.cookie = "sb-color-mode=" + cookieString + ";expires=" + exp.toGMTString() + ";path=/";
+  });
+</script>
+
+		
+
+		<!-- Gitter -->
+		
+		<!-- Gitter -->
+<!-- Docs:https://gitter.im/?utm_source=left-menu-logo -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'cosine_yu_blog/community'
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+		
+
+		<!-- Navigation (contains search)-->
+		<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">cos的博客</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- Known Issue, found by Hux: <nav>'s height woule be hold on by its content. so, when navbar scale out, the <nav> will cover tags. also mask any touch event of tags, unfortunately. -->
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/">首页</a>
+          </li>
+
+          
+          
+          
+          
+          <li>
+            <a href="/archive/">
+              
+              归档
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              标签
+              
+              
+            </a>
+          </li>
+          
+          
+
+          
+          <li>
+            <a class="popup-trigger">
+              <span class="search-icon"></span>搜索</a>
+          </li>
+          
+
+          <!-- LangSelect -->
+          
+        </ul>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+<!-- progress -->
+<div id="progress">
+  <div class="line" style="width: 0%;"></div>
+</div>
+
+<script>
+  // Drop Bootstarp low-performance Navbar Use customize navbar with high-quality material design animation in high-perf jank-free CSS3 implementation
+  var $body = document.body;
+  var $toggle = document.querySelector('.navbar-toggle');
+  var $navbar = document.querySelector('#huxblog_navbar');
+  var $collapse = document.querySelector('.navbar-collapse');
+
+  $toggle.addEventListener('click', handleMagic)
+
+  function handleMagic(e) {
+    if ($navbar.className.indexOf('in') > 0) {
+      // CLOSE
+      $navbar.className = " ";
+      // wait until animation end.
+      setTimeout(function() {
+        // prevent frequently toggle
+        if ($navbar.className.indexOf('in') < 0) {
+          $collapse.style.height = "0px"
+        }
+      }, 400)
+    } else {
+      // OPEN
+      $collapse.style.height = "auto"
+      $navbar.className += " in";
+    }
+  }
+</script>
+
+
+		<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
+		<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+
+  <style type="text/css">
+    .body--light {
+      /* intro-header */
+      --intro-header-background-image-url-home: url('/img/header_img/93604793_p0.jpg');
+      --intro-header-background-image-url-post: url('/img/header_img/lml_bg.jpg');
+      --intro-header-background-image-url-page: url('//img/header_img/lml_bg.jpg');
+    }
+    .body--dark {
+      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/93604793_p0.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/lml_bg.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('//img/header_img/lml_bg.jpg');
+    }
+
+    header.intro-header {
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('/img/header_img/lml_bg.jpg'); */
+      
+    }
+
+    
+  </style>
+
+
+
+
+
+<header class="intro-header">
+  <!-- Signature -->
+  <div id="signature">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#计算机组成原理" title="计算机组成原理">计算机组成原理</a>
+              
+            </div>
+            <h1>计算机组成原理复习总结（二）运算方法和运算器</h1>
+            <h2 class="subheading">包括数制与编码、定点数的表示和运算、浮点数的表示和运算、算术逻辑单元ALU</h2>
+            <span class="meta">
+              Posted by cos on
+              2021-06-15
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              Estimated Reading Time <span class="post-count">4</span> Minutes
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              Words <span class="post-count">1.1k</span> In Total
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- waveoverlay start -->
+  <div class="preview-overlay">
+    <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+      </defs>
+      <g class="preview-parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill=var(--gentle-wave1)></use>
+        <use xlink:href="#gentle-wave" x="48" y="3" fill=var(--gentle-wave2)></use>
+        <use xlink:href="#gentle-wave" x="48" y="5" fill=var(--gentle-wave3)></use>
+        <use xlink:href="#gentle-wave" x="48" y="7" fill=var(--gentle-wave)></use>
+      </g>
+    </svg>
+  </div>
+  <!-- waveoverlay end -->
+  
+
+</header>
+
+
+
+		<!-- Main Content (Post contains
+	Pager、
+	tip、
+	socialshare、
+	gitalk、gitment、disqus-comment、
+	Catalog、
+	Sidebar、
+	Featured-Tags、
+	Friends Blog、
+	anchorjs、
+	) -->
+		<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <h1 id="第二章-运算方法和运算器"><a href="#第二章-运算方法和运算器" class="headerlink" title="第二章 运算方法和运算器"></a>第二章 运算方法和运算器</h1><h2 id="2-1-数制与编码"><a href="#2-1-数制与编码" class="headerlink" title="2.1 数制与编码"></a>2.1 数制与编码</h2><h3 id="一、进位计数制及其相互转换"><a href="#一、进位计数制及其相互转换" class="headerlink" title="一、进位计数制及其相互转换"></a>一、进位计数制及其相互转换</h3><p>10进制和R进制之间的转换<br><strong>R进制到10进制</strong>： </p>
+<script type="math/tex; mode=display">\sum_{i = n}^{-m} k_i × r^i</script><p>eg:二进制数转换十进制数<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//二转十</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">bToD</span><span class="params">(<span class="type">char</span> str[])</span> &#123;</span><br><span class="line">    <span class="type">int</span> sum = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; str[i] != <span class="string">&#x27;\0&#x27;</span>; i++) &#123;</span><br><span class="line">        sum = sum*<span class="number">2</span> + (str[i] - <span class="string">&#x27;0&#x27;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> sum;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><strong>10进制到R进制</strong>： </p>
+<ul>
+<li>整数部分：除r取余，r为进制基数</li>
+<li>小数部分：乘r取整代码如下<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//将十进制数n转化为k进制整数</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">dToK</span><span class="params">(<span class="type">int</span> n, <span class="type">int</span> k, <span class="type">char</span> str[])</span> &#123;</span><br><span class="line">    <span class="type">int</span> i = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span> (n == <span class="number">0</span>) &#123;</span><br><span class="line">        str[<span class="number">0</span>] = <span class="string">&#x27;0&#x27;</span>;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span>(n) &#123;</span><br><span class="line">        str[i++] =n % k + <span class="string">&#x27;0&#x27;</span>;</span><br><span class="line">        n = (n-n % k) / k;</span><br><span class="line">    &#125;</span><br><span class="line">    i--;</span><br><span class="line">    <span class="comment">//reverse</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; i; j++,i--) &#123;</span><br><span class="line">        <span class="type">char</span> t = str[j];</span><br><span class="line">        str[j] = str[i];</span><br><span class="line">        str[i] = t;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="二、真值和机器数"><a href="#二、真值和机器数" class="headerlink" title="二、真值和机器数"></a>二、真值和机器数</h3></li>
+<li><strong>真值</strong>：一般书写的数 </li>
+<li><strong>机器码</strong>：机器中表示的数，要解决在计算机内部数的正、负符号和小数点运算问题。<h3 id="三、BCD码"><a href="#三、BCD码" class="headerlink" title="三、BCD码"></a>三、BCD码</h3>表示一位十进制数的二进制码的每一位有确定的权。一般用8421码，其4个二进制码的权从高到低分别为8、4、2和1。用0000，0001，…，1001分别表示0，1，…，9，每个数位内部满足二进制规则，而数位之间满足十进制规则，故称这种编码为“以二进制编码的十进制(binary coded decimal，简称BCD)码”。</li>
+</ul>
+<blockquote>
+<p>注意！<br>  <strong>BCD码的取值是从0000到1001（也就是十进制的0到9）</strong><br>  有时对BCD码进行加法或减法会有这个范围以外的值出现，需要人为调整方能得出正确的结果。</p>
+</blockquote>
+<p>在计算机内部实现BCD码算术运算，要对运算结果进行<strong>修正</strong>，对加法运算的修正规则是:</p>
+<ul>
+<li>如果两个一位BCD码相加之和小于或等于(1001)~2~，即(9)~10~，不需要修正;<figure class="highlight tap"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">例1 ① 1+8 = 9</span><br><span class="line"> <span class="number"> 0 </span>0<span class="number"> 0 </span>1</span><br><span class="line">+<span class="number"> 1 </span>0<span class="number"> 0 </span>0 </span><br><span class="line">——————————</span><br><span class="line"> <span class="number"> 1 </span>0<span class="number"> 0 </span>1 </span><br><span class="line">不需要修正</span><br></pre></td></tr></table></figure>
+<ul>
+<li>如相加之和<strong>大于或等于(10)~10~</strong>，要进行<strong>加6修正</strong>，并向<strong>高位进位</strong>，进位可以在首次相加(例1 ③)或修正时(例1 ②)产生。<figure class="highlight tap"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">例1 ② 4+9 = 13</span><br><span class="line"> <span class="number"> 0 </span>1<span class="number"> 0 </span>0</span><br><span class="line">+<span class="number"> 1 </span>0<span class="number"> 0 </span>1 </span><br><span class="line">——————————</span><br><span class="line"> <span class="number"> 1 </span>1<span class="number"> 0 </span>1 </span><br><span class="line">+<span class="number"> 0 </span>1<span class="number"> 1 </span>0  修正</span><br><span class="line">——————————</span><br><span class="line">1<span class="number"> 0 </span>0<span class="number"> 1 </span>1</span><br><span class="line">0001 0011即为13~</span><br><span class="line">③ 9+7 = 16</span><br><span class="line"> <span class="number"> 1 </span>0<span class="number"> 0 </span>1</span><br><span class="line">+<span class="number"> 0 </span>1<span class="number"> 1 </span>1</span><br><span class="line">——————————</span><br><span class="line">1<span class="number"> 0 </span>0<span class="number"> 0 </span>0</span><br><span class="line">+<span class="number"> 0 </span>1<span class="number"> 1 </span>0 修正</span><br><span class="line">——————————</span><br><span class="line">1<span class="number"> 0 </span>1<span class="number"> 1 </span>0 </span><br><span class="line">0001 0110即为16~</span><br></pre></td></tr></table></figure>
+<h3 id="四、字符与字符串"><a href="#四、字符与字符串" class="headerlink" title="四、字符与字符串"></a>四、字符与字符串</h3><h4 id="1、字符与字符串的表示方法"><a href="#1、字符与字符串的表示方法" class="headerlink" title="1、字符与字符串的表示方法"></a>1、字符与字符串的表示方法</h4>符号数据:字符信息用数据表示，如<strong>ASCII</strong>等<br>字符表示方法<strong>ASCII</strong>:用一个字节来表示,低7位用来编码(128),最高位为校验位，如图<img src="https://img-blog.csdnimg.cn/20210614201629969.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></li>
+</ul>
+</li>
+</ul>
+<p>字符串的存放方法:占用主存中连续的多个字节，<strong>每个字节存一个字符</strong>。</p>
+<h4 id="2、汉字的表示方法"><a href="#2、汉字的表示方法" class="headerlink" title="2、汉字的表示方法"></a>2、汉字的表示方法</h4><p>一级汉字3755个，二级汉字3008个<br>汉字内码:汉字信息的存储,交换和检索的机内代码，<strong>两个字节组成，每个字节高位都为1(区别于英文字符)</strong><br>汉字字模码:汉字字形点阵<br><img src="https://img-blog.csdnimg.cn/20210614201837788.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h3 id="五、校验码（重点）"><a href="#五、校验码（重点）" class="headerlink" title="五、校验码（重点）"></a>五、校验码（重点）</h3><p>推荐视频<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1WK411N7kz">3Blue1Brown的汉明码part1</a>、<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1pV411y7E8/">3Blue1Brown的汉明码part2</a>，讲的非常有趣！虽然主要讲汉明码，但对奇偶校验码也有详细描述。<br><strong>校验码（只介绍奇偶校验码)</strong></p>
+<h4 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h4><p>信息传输和处理过程中受到干扰和故障，容易出错。</p>
+<h4 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h4><p>在有效信息中加入一些冗余信息（校验位)</p>
+<h4 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h4><p>设x=(x~0~ x~1~.x~n-1~)是一个n位字，则偶校验位C定义为:C=x~0~  ^ x~1~ ^ x~2~ ^ … ^x~n-1~,式中^代表按位加，表明只有<strong>当x中包含有偶数个1</strong>时,才使C=0，否则C=1。只能检查出错，而不能纠正错误。同理可以定义奇校验。<br>奇校验：包含奇数个1时才使得C=0,否则C=1<br><img src="https://img-blog.csdnimg.cn/20210614202746877.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="2-2-定点数的表示和运算（重点）"><a href="#2-2-定点数的表示和运算（重点）" class="headerlink" title="2.2 定点数的表示和运算（重点）"></a>2.2 定点数的表示和运算（重点）</h2><h3 id="一、定点数的表示"><a href="#一、定点数的表示" class="headerlink" title="一、定点数的表示"></a>一、定点数的表示</h3><h4 id="1、原码表示法"><a href="#1、原码表示法" class="headerlink" title="1、原码表示法"></a>1、原码表示法</h4><p><strong>定点小数 x~n~.x~n-1~x~n-2~…..x~0~</strong>，x为真值</p>
+<script type="math/tex; mode=display">[x]_原 = 
+\begin{cases} 
+x,  & \text{0 ≤  x < 1 即 x为正数} \\
+1-x, & \text{-1 < x ≤ 0 即 x为负数}
+\end{cases}</script><p>范围为2^-n^-1~1-2^-n^<br>eg：<br>x = +0.1001，[x]原 = 0.1001<br>x = -0.1001，[x]原 = 1-(-0.1001)=1.1001</p>
+<p><strong>定点整数 x~n~x~n-1~x~n-2~…..x~0~</strong>，x为真值</p>
+<script type="math/tex; mode=display">[x]_原 = 
+\begin{cases} 
+x,   & \text{0 ≤ x < }2^n  即 x为正数\\
+2^n-x, & \text{-2}^n<x≤ 0 {即x为负数}
+\end{cases}</script><p>范围为1-2^n^~2^n^-1<br>eg：<br>x = +1001，[x]原 = 01001<br>x = -1001，[x]原 = 2^4^+1001=11001<br><strong>有正0和负0之分！！</strong></p>
+<h4 id="2、反码表示法"><a href="#2、反码表示法" class="headerlink" title="2、反码表示法"></a>2、反码表示法</h4><p><strong>定义</strong></p>
+<ul>
+<li><strong>正数</strong>的表示与原码、补码相同。</li>
+<li><strong>负数</strong>的反码<strong>符号位为1</strong>，<strong>数值位</strong>是将<strong>原码的数值按位取反</strong>，就得到该数的反码表示。</li>
+<li>电路容易实现，触发器的输出有正负之分。<br>对尾数求反，反码跟补码的区别在于末位少加一个1，所以可以推出反码的定义</li>
+</ul>
+<p><strong>定点小数 x~n~.x~n-1~x~n-2~…..x~0~</strong>，x为真值</p>
+<script type="math/tex; mode=display">[x]_反 = 
+\begin{cases} 
+x, & \text{0 ≤  x < 1 即 x为正数} \\
+(2-2^{-n})+x, & \text{-1 < x ≤ 0 即 x为负数}
+\end{cases}</script><p>eg:<br>X1=+0.1011011 , [X1]~反~ =0.1011011<br>X2= -0.1011011 , [X2]~反~ =1.0100100<br><strong>定点整数 x~n~x~n-1~x~n-2~…..x~0~</strong>，x为真值</p>
+<script type="math/tex; mode=display">[x]_反 = 
+\begin{cases} 
+x,  & \text{0 ≤ x < }2^n  即 x为正数 \\
+(2^{n+1}-1)+x, & \text{-2}^n<x≤ 0 {即x为负数}
+\end{cases}</script><p><strong>反码表示有正0和负0之分！！</strong></p>
+<h4 id="3、补码表示法"><a href="#3、补码表示法" class="headerlink" title="3、补码表示法"></a>3、补码表示法</h4><p> <strong>定义</strong><br>正数的补码就是正数的本身，负数的补码是原负数加上模（原负数除符号位外取反，再加1）。 计算机运算受字长限制,属于有模运算。补码最大的优点就是将减法运算转换成加法运算。<br><strong>定点小数x~n~x~n-1~x~n-2~…..x~0~，以2为模</strong> </p>
+<script type="math/tex; mode=display">[x]_补 = 
+\begin{cases} 
+x,  & \text{0 ≤  x < 1 即 x为正数} \\
+2+x, & \text{-1 < x ≤ 0 即 x为负数}
+\end{cases}</script><p>eg:  x= -0.1011，[x]~补~=10+x=10.0000-0.1011=1.0101 </p>
+<p>y=-0.01111 [y]~补~=10+y=10.00000-0.01111=1.10001<br><strong>定点整数xnxn-1xn-2…..x0 ，以2^n+1^为模</strong></p>
+<script type="math/tex; mode=display">[x]_补 = 
+\begin{cases} 
+x,  & \text{2}^n {＞x ≥ 0 即 x为正数} \\
+2^{n+1}+x, & \text{0 ≥ x > -2}^n {即x为负数}
+\end{cases}</script><p><strong>补码性质:</strong></p>
+<ul>
+<li>高位表明正负</li>
+<li>正数补码，尾数与原码相同</li>
+<li>范围-2^n^~2^n^-1(定点整数）</li>
+<li><strong>无正零和负零之分！！</strong></li>
+</ul>
+<h4 id="4、移码表示法"><a href="#4、移码表示法" class="headerlink" title="4、移码表示法"></a>4、移码表示法</h4><p>用在阶码中，特点是<strong>移码和补码尾数相同，符号位相反</strong><br>范围:-2^n^~2^n^-1<br>eg：真值-1011111<br> 原码为11011111<br> 补码为10100001<br> 反码为10100000<br> 移码为00100001</p>
+<h4 id="5、总结"><a href="#5、总结" class="headerlink" title="5、总结"></a>5、总结</h4><ul>
+<li><strong>若x为正数，[x]~原~ = [x]~补~ = [x]~反~</strong></li>
+<li><strong>若x为负数</strong>，<strong>原码符号位为1不变</strong>，整数的每一位二进制数位求反得到反码，反码符号位不变，反码数值位最低位加1，得到补码。</li>
+<li><strong>移码和补码尾数相同，符号位相反</strong></li>
+</ul>
+<h3 id="二、定点数的运算（重点）"><a href="#二、定点数的运算（重点）" class="headerlink" title="二、定点数的运算（重点）"></a>二、定点数的运算（重点）</h3><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/gl620321/article/details/106534016?utm_medium=distribute.pc_relevant.none-task-blog-baidujs_title-0&amp;spm=1001.2101.3001.4242">计算机组成原理 定点运算-移位、加、减、乘、除</a></p>
+<h4 id="1、定点数的移位运算"><a href="#1、定点数的移位运算" class="headerlink" title="1、定点数的移位运算"></a>1、定点数的移位运算</h4><p>计算机中的移位是数据相对于小数点移位（左移或右移），数据移动，<strong>小数点位置不发生变化</strong></p>
+<h5 id="有符号数的移位"><a href="#有符号数的移位" class="headerlink" title="有符号数的移位"></a>有符号数的移位</h5><p>左移1位：机器数对应真值的绝对值变为原来2倍<br>右移1位：机器数对应真值的绝对值变为原来1/2倍<br>移位过程中，填补空位:</p>
+<ul>
+<li>负数数值部分和真值相同<img src="https://img-blog.csdnimg.cn/2021061510432870.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></li>
+</ul>
+<h5 id="无符号数的移位"><a href="#无符号数的移位" class="headerlink" title="无符号数的移位"></a>无符号数的移位</h5><ul>
+<li>逻辑左移 低位添0，高位移丢</li>
+<li>逻辑右移 高位添0，低位移丢</li>
+</ul>
+<p>eg：<br>01010011<br>逻辑左移 所有位都参加移位操作 高位0移丢，最低位添0 ：10100110<br>算术左移 第一个0表示符号位，这个数为正数，符号位不参与移位，移位的是后面的数据00100110</p>
+<p>eg：<br>10110010<br>逻辑右移 所有位都参加移位操作 空出的最高位补0，最低位丢弃01011001<br>算术右移 最高位不参与移位，符号位，表示负数，右移左侧空出最高位添1，右侧0丢弃11011001</p>
+<h4 id="2、补码加减法"><a href="#2、补码加减法" class="headerlink" title="2、补码加减法"></a>2、补码加减法</h4><h5 id="补码加法"><a href="#补码加法" class="headerlink" title="补码加法"></a>补码加法</h5><p>公式：<script type="math/tex">[x+y]_补=[x]_补+[y]_补   (mod 2^{n+1}) \\
+ |x|<(2n-1) ,   |y|<(2n-1) ,  |x+y|<(2n-1)</script>  公式表明：在2^n+1^模意义下，<strong>任意两数的补码之和等于该两数之和的补码</strong>。<br> 证明：<br> （1）x &gt; 0，y &gt; 0，则x+y &gt; 0，因正数的原码补码都一样，所以[x]~补~+[y]~补~  = x+y = [x+y]~补~</p>
+<p> （2）x &gt; 0，y &lt; 0，则x+y &gt; 0或x+y &lt; 0<br> <strong>[x]~补~= x，[y]~补~ = 2^n+1^+y</strong><br> [x]~补~+[y]~补~  = (x+y)+2^n+1^ = [x+y]~补~ (mod 2^n+1^)</p>
+<p> （3）x &lt; 0，y &gt; 0，则x+y &gt; 0或x+y &lt; 0<br> <strong>[x]~补~=  2^n+1^+x，[y]~补~ = y</strong><br> [x]~补~+[y]~补~  = (x+y)+2^n+1^ = [x+y]~补~ (mod 2^n+1^)</p>
+<p> （4）x &lt; 0，y &lt; 0，则x+y &lt; 0<br> <strong>[x]~补~=  2^n+1^+x，[y]~补~ = 2^n+1^+y</strong><br> [x]~补~+[y]~补~  = 2^n+1^+x + 2^n+1^+y<br> =  2^n+1^+( 2^n+1^+x+y)<br> =  [x+y]~补~ (mod 2^n+1^)</p>
+<p>eg: x=+1011 , y=-0101 , 求 x+y=？<br> 解：[x]~补~ = <strong>0</strong>1011, [y]~补~ = <strong>1</strong>1011<br> 　　　　　[x]补　　　<strong>0</strong> 1 0 1 1<br> 　　＋　　[y]补　　　<strong>1</strong> 1 0 1 1　　　<br> 　　————————————————<br> 　　　　[x+y]补　　<strong><del>1</del>  0</strong> 0 1 1 0<br>∴ x+y = +0110<br> 1、符号位作为数的一部分参加运算。<br> 2、在2n+1模意义下相加，即超过2n+1的进位要丢掉</p>
+<h5 id="补码减法"><a href="#补码减法" class="headerlink" title="补码减法"></a>补码减法</h5><p>为了将减法转变为加法，需证明公式：</p>
+<script type="math/tex; mode=display">[x-y]_补=[x]_补-[y]_补 = [x]_补+[-y]_补   (mod 2^{n+1})</script><p> [x-y]补= [x ]补- [ y]补=[x]补+[-y]补<br> （证明） 为了求得同时[-y]补， 需要证明[-y]~补~=乛[y]~补~+2^-n^（意义是[-y]~补~等于[y]~补~包括符号位取反，末位加1）<br> ∵  [x]~补~+[y]~补~ = [x+y]~补~<br> ∴  [y]~补~ = [x+y]~补~ -  [x]~补~<br> 又∵  [x-y]~补~  =  [x+(-y)]~补~ =  [x]~补~+[-y]~补~<br> ∴ [-y]~补~ = [x-y]~补~ - [x]~补~<br>故[y]~补~ + [-y]~补~<br>= [x+y]~补~ -  [x]~补~ + [x-y]~补~ - [x]~补~<br>= [x+y+x-y]~补~-[x+x]~补~<br>= [x+x]~补~ - [x+x]~补~<br>= 0<br>故[-y]~补~ = -[y]~补~(mod 2^n+1^)</p>
+<p><strong>由[X]~补~求[-X]~补~:连符号位一起各位求反，末位加1</strong></p>
+<h4 id="3、定点数的乘除运算"><a href="#3、定点数的乘除运算" class="headerlink" title="3、定点数的乘除运算"></a>3、定点数的乘除运算</h4><h5 id="乘法运算"><a href="#乘法运算" class="headerlink" title="乘法运算"></a>乘法运算</h5><p><img src="https://img-blog.csdnimg.cn/20210615165911334.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20210615173341744.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><img src="https://img-blog.csdnimg.cn/20210615173417764.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h5 id="除法运算"><a href="#除法运算" class="headerlink" title="除法运算"></a>除法运算</h5><p><strong>恢复余数法</strong>：将被除数－除数，<br>结果大于0，商1，余数左移一位。<br>结果小于0，商0，恢复余数，余数左移一位。<br>重复上述操作，直至商的精度满足要求为止。</p>
+<p>不恢复余数法（ <strong>加减交替法</strong>）</p>
+<ul>
+<li><strong>第一次</strong>： 若<strong>被除数与除数同号</strong>，做<strong>被除数减除</strong>；若<strong>被除数与除数异号</strong>，做<strong>被除数加除数</strong></li>
+<li>若<strong>余数与除数同号</strong>，<strong>商1，余数左移</strong>一位，<strong>减除数</strong>；若<strong>余数与除数异号</strong>，<strong>商0，余数左移</strong>一位，<strong>加除数</strong></li>
+<li>商的末位恒置1（误差 2-n），余数可以是负的，不需要恢复余数。<br><img src="https://img-blog.csdnimg.cn/20210615172953483.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>eg:p44<br><img src="https://img-blog.csdnimg.cn/2021061517345746.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></li>
+</ul>
+<h4 id="4、溢出概念和判别方法"><a href="#4、溢出概念和判别方法" class="headerlink" title="4、溢出概念和判别方法"></a>4、溢出概念和判别方法</h4><h5 id="溢出的概念"><a href="#溢出的概念" class="headerlink" title="溢出的概念"></a>溢出的概念</h5><p>在定点整数机器中，数的表示范围 <strong>|x| &lt; (2^n^-1)</strong> ，在运算过程中如果出现大于字长绝对值的现象，称为“溢出”。<br>[例15] x=+1011 , y=+1001 , 求 x+y 。<br>解：[x]~补~=01011 , [y]补=01001<br>　　　[x]补　　　<strong>0</strong> 1 0 1 1<br>＋　　[x]补　　　<strong>0</strong> 1 0 0 1　　<br>——————————————<br>　　[x+y]补　　　<strong>1</strong> 0 1 0 0</p>
+<p>两个正数相加的结果成为负数，称为<strong>上溢</strong>（结果大于机器所能表示的最大正数</p>
+<p>[例16] x=-1101 , y=-1011 , 求 x+y 。<br>解：[x]补=10011 , [y]补=10101<br>　　　[x]补　　　<strong>1</strong> 0 0 1 1<br>＋　　[x]补　　　<strong>1</strong> 0 1 0 1　　<br>——————————————<br>　　[x+y]补　　　<strong>0</strong> 1 0 0 0<br>两个负数相加的结果成为正数，称为<strong>下溢</strong>（结果小于机器所能表示的最小负数）</p>
+<h5 id="溢出的检测"><a href="#溢出的检测" class="headerlink" title="溢出的检测"></a>溢出的检测</h5><h6 id="双符号位法（变形补码）"><a href="#双符号位法（变形补码）" class="headerlink" title="双符号位法（变形补码）"></a>双符号位法（变形补码）</h6><p>参与加减运算的数采用<strong>变形补码</strong>表示<br>[x]~补~=2^n+2^+x    (mod 2^n+2^)<br>[x+y]~补~=[x]~补~+[y]~补~   (mod 2^n+2^) </p>
+<ul>
+<li>两个符号位都参与运算 </li>
+<li>在2^n+2^模意义下相加，即最高符号位产生的进位要丢掉<br>　　　Sf1　SF2<br>　　　 0　　 0　　　正确（正数）<br>　　　 0    　1　　　上溢<br>　　　 1 　　0　　　下溢<br>　　　 1　　 1　　　正确（负数）<br><strong>两符号位相异</strong>时，表示<strong>溢出</strong>；<strong>相同</strong>时，<strong>没有溢出</strong>。 无论是否溢出，<strong>Sf1(即最高位) 表示结果正确的符号</strong><h4 id="练习题"><a href="#练习题" class="headerlink" title="练习题"></a>练习题</h4><img src="https://img-blog.csdnimg.cn/20210622103102351.JPG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></li>
+</ul>
+<h2 id="2-3-浮点数的表示和运算"><a href="#2-3-浮点数的表示和运算" class="headerlink" title="2.3 浮点数的表示和运算"></a>2.3 浮点数的表示和运算</h2><h3 id="一、浮点数的表示"><a href="#一、浮点数的表示" class="headerlink" title="一、浮点数的表示"></a>一、浮点数的表示</h3><p>浮点数的表示范围</p>
+<h3 id="二、IEEE754标准。"><a href="#二、IEEE754标准。" class="headerlink" title="二、IEEE754标准。"></a>二、IEEE754标准。</h3><h3 id="三、浮点数的加减运算"><a href="#三、浮点数的加减运算" class="headerlink" title="三、浮点数的加减运算"></a>三、浮点数的加减运算</h3><ol>
+<li>0操作数的<strong>检查</strong>,看有无简化操作的可能；</li>
+<li><strong>比较阶码</strong>大小并完成<strong>对阶</strong>（小阶向大阶对齐）； </li>
+<li><strong>尾数</strong>进行<strong>加或减</strong>运算；</li>
+<li>结果<strong>规格化</strong>并进行<strong>舍入</strong>处理。</li>
+</ol>
+<h4 id="对阶"><a href="#对阶" class="headerlink" title="对阶"></a>对阶</h4><p>实现使两数阶码相同的过程<br><strong>对阶原则</strong>：阶码小的数向阶码大的数对齐<br><strong>对阶过程</strong>：首先应求出两数阶码E~x~和E~y~之差，看是否相等。若不等，要通过尾数的移动以改变E~x~和E~y~，即对阶，使之相等。即小阶的尾数向右移动（相当于小数点左移），每右移一位，其阶码加1，直到两数的阶码相等为止，右移的位数等于阶差。</p>
+<h4 id="尾数求和"><a href="#尾数求和" class="headerlink" title="尾数求和"></a>尾数求和</h4><p>方法和定点加减运算完全一样</p>
+<h4 id="规格化"><a href="#规格化" class="headerlink" title="规格化"></a>规格化</h4><p>浮点数的规格化要求<strong>尾数域的最高有效位应为1</strong>，将运算结果<strong>右移</strong>以实现规格化称为<strong>右规</strong>，将运算结果<strong>左移</strong>以实现规格化称为<strong>左规</strong></p>
+<p><strong>规格化数的判断方法</strong>（单符号法）</p>
+<ul>
+<li>原码：不论正数还是负数，第一数位为1</li>
+<li>反码、补码：符号位和第一数位不同<img src="https://img-blog.csdnimg.cn/20210615174740285.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><h4 id="舍入处理"><a href="#舍入处理" class="headerlink" title="舍入处理"></a>舍入处理</h4>舍入处理的目的：在对阶或向右规格化时，尾数要向右移位，被右移的低位部分会被丢掉，造成一定误差。为了减小误差。<br>IEEE754标准的舍入处理 </li>
+<li>就近舍入(0舍1入):类似”四舍五入”,丢弃的最高位为1，进1</li>
+<li>朝0舍入:简单的截尾 </li>
+<li>朝＋∞舍入:正数多余位不全为”0”,进1;负数,截尾 </li>
+<li>朝－∞ 舍入:负数多余位不全为”0”,进1;正数,截尾<br><img src="https://img-blog.csdnimg.cn/20210615175154740.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><img src="https://img-blog.csdnimg.cn/20210615175250182.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20210615175326164.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20210615175355975.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></li>
+</ul>
+<h2 id="2-4-算术逻辑单元ALU"><a href="#2-4-算术逻辑单元ALU" class="headerlink" title="2.4 算术逻辑单元ALU"></a>2.4 算术逻辑单元ALU</h2><h3 id="一、串行加法器和并行加法器"><a href="#一、串行加法器和并行加法器" class="headerlink" title="一、串行加法器和并行加法器"></a>一、串行加法器和并行加法器</h3><p>一位全加器的逻辑表达式如下：<br>F~i~ = A~i~ ⊕ B~i~ ⊕ C~n+i~<br>C~n+i+1~ = A~i~B~i~ +  A~i~C~n+i~ +  B~i~C~n+i~<br><strong>C为进位</strong><br><strong>串行加法器</strong></p>
+<ul>
+<li>只有一个全加器，数据逐位串行送入加法器中进行运算。进位触发器用来寄存进位信号，以便参与下一次运算。</li>
+<li>如果操作数长n位，加法就要分n次进行，每次产生一位和，并且串行逐位地送回寄存器。</li>
+</ul>
+<p><strong>并行加法器</strong></p>
+<ul>
+<li>并行加法器由多个全加器组成，其位数与机器的字长相同，各位数据同时运算。</li>
+<li>并行加法器的最长运算时间主要是由进位信号的传递时间决定的</li>
+<li>并行加法器的每个全加器都有一个从低位送来的进位输入和一个传送给高位的进位输出</li>
+<li>并行加法器的进位通常分为串行进位与并行进位。<h3 id="二、算术逻辑单元ALU的功能和结构"><a href="#二、算术逻辑单元ALU的功能和结构" class="headerlink" title="二、算术逻辑单元ALU的功能和结构"></a>二、算术逻辑单元ALU的功能和结构</h3><img src="https://img-blog.csdnimg.cn/20210615180544688.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>ALU的逻辑图如上<br>F~i~ = X~i~ ⊕ Y~i~ ⊕ C~n+1~<br>C~n+i+1~ = X~i~Y~i~ +  Y~i~C~n+1~ +  X~i~C~n+1~<br>不同的控制参数可以得到不同的组合函数，从而能够实现多种算术运算和逻辑运算。</li>
+</ul>
+<p>Xi和Yi 与控制参数和输入量的关系构造如下真值表<br><img src="https://img-blog.csdnimg.cn/20210615181609181.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+
+
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
+          
+          <li class="previous">
+            <a href="/cn/计算机组成原理复习总结（三）多层次的存储器/cl1z6rgp1001bqwus1n7d6isc/" data-toggle="tooltip" data-placement="top" title="计算机组成原理复习总结（三）多层次的存储器">&larr; Previous Post</a>
+          </li>
+          
+          
+          <li class="next">
+            <a href="/cn/计算机组成原理复习总结（一）计算机系统概论/cl1z6rgp00017qwusfdl7839t/" data-toggle="tooltip" data-placement="top" title="计算机组成原理复习总结（一）计算机系统概论">Next Post &rarr;</a>
+          </li>
+          
+        </ul>
+
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    
+      如果您喜欢此博客或发现它对您有用，则欢迎对此发表评论。 也欢迎您共享此博客，以便更多人可以参与。 如果博客中使用的图像侵犯了您的版权，请与作者联系以将其删除。 谢谢 ！
+    
+  </p>
+</div>
+<!-- tip end -->
+
+        <!-- tip end -->
+        
+
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=计算机组成原理复习总结（二）运算方法和运算器&body=Hi,I found this website and thought you might like it https://ysx.cosine.ren/cn/计算机组成原理复习总结（二）运算方法和运算器/cl1z6rgoy0015qwusem7igomy/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+        <!-- Sharing End -->
+        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+  <!-- gitalk start -->
+  <!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
+
+  <div id="gitalk-container"></div>
+
+  
+    <!-- <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.js"></script> -->
+    <script src="/js/comment/gitalk.js"></script>
+  
+
+  <script>
+    var gitalk = new Gitalk({
+      clientID: '2f50b376c49e65b70db0',
+      clientSecret: '5bf5a8b7b0a9a22194ee1f0ee1e58dac2e19a359',
+      repo: 'yusixian.github.io',
+      owner: 'yusixian',
+      admin: 'yusixian',
+      id: 'Tue Jun 15 2021 18:23:39 GMT+0800', // Ensure uniqueness and length less than 50
+      distractionFreeMode: false, // Facebook-like distraction free mode
+      perPage: 10,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      language: 'zh-CN',
+      proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'
+    });
+    gitalk.render('gitalk-container');
+
+    var gtFolded = () => {
+      setTimeout(function () {
+        let markdownBody = document.getElementsByClassName("markdown-body");
+        let list = Array.from(markdownBody);
+        list.forEach(item => {
+          if (item.clientHeight > 250) {
+            item.classList.add('gt-comment-body-folded');
+            item.style.maxHeight = '250px';
+            item.title = 'Click to Expand';
+            item.onclick = function () {
+              item.classList.remove('gt-comment-body-folded');
+              item.style.maxHeight = '';
+              item.title = '';
+              item.onclick = null;
+            };
+          }
+        })
+      }, 800);
+    }
+  </script>
+
+  <!-- gitalk end -->
+
+
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">目录</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E8%BF%90%E7%AE%97%E6%96%B9%E6%B3%95%E5%92%8C%E8%BF%90%E7%AE%97%E5%99%A8"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">第二章 运算方法和运算器</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#2-1-%E6%95%B0%E5%88%B6%E4%B8%8E%E7%BC%96%E7%A0%81"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">2.1 数制与编码</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%B8%80%E3%80%81%E8%BF%9B%E4%BD%8D%E8%AE%A1%E6%95%B0%E5%88%B6%E5%8F%8A%E5%85%B6%E7%9B%B8%E4%BA%92%E8%BD%AC%E6%8D%A2"><span class="toc-nav-number">1.1.1.</span> <span class="toc-nav-text">一、进位计数制及其相互转换</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BA%8C%E3%80%81%E7%9C%9F%E5%80%BC%E5%92%8C%E6%9C%BA%E5%99%A8%E6%95%B0"><span class="toc-nav-number">1.1.2.</span> <span class="toc-nav-text">二、真值和机器数</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%B8%89%E3%80%81BCD%E7%A0%81"><span class="toc-nav-number">1.1.3.</span> <span class="toc-nav-text">三、BCD码</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%9B%9B%E3%80%81%E5%AD%97%E7%AC%A6%E4%B8%8E%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-nav-number">1.1.4.</span> <span class="toc-nav-text">四、字符与字符串</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#1%E3%80%81%E5%AD%97%E7%AC%A6%E4%B8%8E%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E8%A1%A8%E7%A4%BA%E6%96%B9%E6%B3%95"><span class="toc-nav-number">1.1.4.1.</span> <span class="toc-nav-text">1、字符与字符串的表示方法</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#2%E3%80%81%E6%B1%89%E5%AD%97%E7%9A%84%E8%A1%A8%E7%A4%BA%E6%96%B9%E6%B3%95"><span class="toc-nav-number">1.1.4.2.</span> <span class="toc-nav-text">2、汉字的表示方法</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BA%94%E3%80%81%E6%A0%A1%E9%AA%8C%E7%A0%81%EF%BC%88%E9%87%8D%E7%82%B9%EF%BC%89"><span class="toc-nav-number">1.1.5.</span> <span class="toc-nav-text">五、校验码（重点）</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%BC%95%E5%85%A5"><span class="toc-nav-number">1.1.5.1.</span> <span class="toc-nav-text">引入</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95"><span class="toc-nav-number">1.1.5.2.</span> <span class="toc-nav-text">解决方法</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%AE%9A%E4%B9%89"><span class="toc-nav-number">1.1.5.3.</span> <span class="toc-nav-text">定义</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#2-2-%E5%AE%9A%E7%82%B9%E6%95%B0%E7%9A%84%E8%A1%A8%E7%A4%BA%E5%92%8C%E8%BF%90%E7%AE%97%EF%BC%88%E9%87%8D%E7%82%B9%EF%BC%89"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">2.2 定点数的表示和运算（重点）</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%B8%80%E3%80%81%E5%AE%9A%E7%82%B9%E6%95%B0%E7%9A%84%E8%A1%A8%E7%A4%BA"><span class="toc-nav-number">1.2.1.</span> <span class="toc-nav-text">一、定点数的表示</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#1%E3%80%81%E5%8E%9F%E7%A0%81%E8%A1%A8%E7%A4%BA%E6%B3%95"><span class="toc-nav-number">1.2.1.1.</span> <span class="toc-nav-text">1、原码表示法</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#2%E3%80%81%E5%8F%8D%E7%A0%81%E8%A1%A8%E7%A4%BA%E6%B3%95"><span class="toc-nav-number">1.2.1.2.</span> <span class="toc-nav-text">2、反码表示法</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#3%E3%80%81%E8%A1%A5%E7%A0%81%E8%A1%A8%E7%A4%BA%E6%B3%95"><span class="toc-nav-number">1.2.1.3.</span> <span class="toc-nav-text">3、补码表示法</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#4%E3%80%81%E7%A7%BB%E7%A0%81%E8%A1%A8%E7%A4%BA%E6%B3%95"><span class="toc-nav-number">1.2.1.4.</span> <span class="toc-nav-text">4、移码表示法</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#5%E3%80%81%E6%80%BB%E7%BB%93"><span class="toc-nav-number">1.2.1.5.</span> <span class="toc-nav-text">5、总结</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BA%8C%E3%80%81%E5%AE%9A%E7%82%B9%E6%95%B0%E7%9A%84%E8%BF%90%E7%AE%97%EF%BC%88%E9%87%8D%E7%82%B9%EF%BC%89"><span class="toc-nav-number">1.2.2.</span> <span class="toc-nav-text">二、定点数的运算（重点）</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#1%E3%80%81%E5%AE%9A%E7%82%B9%E6%95%B0%E7%9A%84%E7%A7%BB%E4%BD%8D%E8%BF%90%E7%AE%97"><span class="toc-nav-number">1.2.2.1.</span> <span class="toc-nav-text">1、定点数的移位运算</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E6%9C%89%E7%AC%A6%E5%8F%B7%E6%95%B0%E7%9A%84%E7%A7%BB%E4%BD%8D"><span class="toc-nav-number">1.2.2.1.1.</span> <span class="toc-nav-text">有符号数的移位</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E6%97%A0%E7%AC%A6%E5%8F%B7%E6%95%B0%E7%9A%84%E7%A7%BB%E4%BD%8D"><span class="toc-nav-number">1.2.2.1.2.</span> <span class="toc-nav-text">无符号数的移位</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#2%E3%80%81%E8%A1%A5%E7%A0%81%E5%8A%A0%E5%87%8F%E6%B3%95"><span class="toc-nav-number">1.2.2.2.</span> <span class="toc-nav-text">2、补码加减法</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E8%A1%A5%E7%A0%81%E5%8A%A0%E6%B3%95"><span class="toc-nav-number">1.2.2.2.1.</span> <span class="toc-nav-text">补码加法</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E8%A1%A5%E7%A0%81%E5%87%8F%E6%B3%95"><span class="toc-nav-number">1.2.2.2.2.</span> <span class="toc-nav-text">补码减法</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#3%E3%80%81%E5%AE%9A%E7%82%B9%E6%95%B0%E7%9A%84%E4%B9%98%E9%99%A4%E8%BF%90%E7%AE%97"><span class="toc-nav-number">1.2.2.3.</span> <span class="toc-nav-text">3、定点数的乘除运算</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E4%B9%98%E6%B3%95%E8%BF%90%E7%AE%97"><span class="toc-nav-number">1.2.2.3.1.</span> <span class="toc-nav-text">乘法运算</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E9%99%A4%E6%B3%95%E8%BF%90%E7%AE%97"><span class="toc-nav-number">1.2.2.3.2.</span> <span class="toc-nav-text">除法运算</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#4%E3%80%81%E6%BA%A2%E5%87%BA%E6%A6%82%E5%BF%B5%E5%92%8C%E5%88%A4%E5%88%AB%E6%96%B9%E6%B3%95"><span class="toc-nav-number">1.2.2.4.</span> <span class="toc-nav-text">4、溢出概念和判别方法</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E6%BA%A2%E5%87%BA%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="toc-nav-number">1.2.2.4.1.</span> <span class="toc-nav-text">溢出的概念</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E6%BA%A2%E5%87%BA%E7%9A%84%E6%A3%80%E6%B5%8B"><span class="toc-nav-number">1.2.2.4.2.</span> <span class="toc-nav-text">溢出的检测</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#%E5%8F%8C%E7%AC%A6%E5%8F%B7%E4%BD%8D%E6%B3%95%EF%BC%88%E5%8F%98%E5%BD%A2%E8%A1%A5%E7%A0%81%EF%BC%89"><span class="toc-nav-number">1.2.2.4.2.1.</span> <span class="toc-nav-text">双符号位法（变形补码）</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E7%BB%83%E4%B9%A0%E9%A2%98"><span class="toc-nav-number">1.2.2.5.</span> <span class="toc-nav-text">练习题</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#2-3-%E6%B5%AE%E7%82%B9%E6%95%B0%E7%9A%84%E8%A1%A8%E7%A4%BA%E5%92%8C%E8%BF%90%E7%AE%97"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">2.3 浮点数的表示和运算</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%B8%80%E3%80%81%E6%B5%AE%E7%82%B9%E6%95%B0%E7%9A%84%E8%A1%A8%E7%A4%BA"><span class="toc-nav-number">1.3.1.</span> <span class="toc-nav-text">一、浮点数的表示</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BA%8C%E3%80%81IEEE754%E6%A0%87%E5%87%86%E3%80%82"><span class="toc-nav-number">1.3.2.</span> <span class="toc-nav-text">二、IEEE754标准。</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%B8%89%E3%80%81%E6%B5%AE%E7%82%B9%E6%95%B0%E7%9A%84%E5%8A%A0%E5%87%8F%E8%BF%90%E7%AE%97"><span class="toc-nav-number">1.3.3.</span> <span class="toc-nav-text">三、浮点数的加减运算</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%AF%B9%E9%98%B6"><span class="toc-nav-number">1.3.3.1.</span> <span class="toc-nav-text">对阶</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%B0%BE%E6%95%B0%E6%B1%82%E5%92%8C"><span class="toc-nav-number">1.3.3.2.</span> <span class="toc-nav-text">尾数求和</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E8%A7%84%E6%A0%BC%E5%8C%96"><span class="toc-nav-number">1.3.3.3.</span> <span class="toc-nav-text">规格化</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E8%88%8D%E5%85%A5%E5%A4%84%E7%90%86"><span class="toc-nav-number">1.3.3.4.</span> <span class="toc-nav-text">舍入处理</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#2-4-%E7%AE%97%E6%9C%AF%E9%80%BB%E8%BE%91%E5%8D%95%E5%85%83ALU"><span class="toc-nav-number">1.4.</span> <span class="toc-nav-text">2.4 算术逻辑单元ALU</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%B8%80%E3%80%81%E4%B8%B2%E8%A1%8C%E5%8A%A0%E6%B3%95%E5%99%A8%E5%92%8C%E5%B9%B6%E8%A1%8C%E5%8A%A0%E6%B3%95%E5%99%A8"><span class="toc-nav-number">1.4.1.</span> <span class="toc-nav-text">一、串行加法器和并行加法器</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BA%8C%E3%80%81%E7%AE%97%E6%9C%AF%E9%80%BB%E8%BE%91%E5%8D%95%E5%85%83ALU%E7%9A%84%E5%8A%9F%E8%83%BD%E5%92%8C%E7%BB%93%E6%9E%84"><span class="toc-nav-number">1.4.2.</span> <span class="toc-nav-text">二、算术逻辑单元ALU的功能和结构</span></a></li></ol></li></ol></li></ol>
+        
+        </div>
+      </aside>
+    
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">特色标签</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#计算机组成原理" title="计算机组成原理">计算机组成原理</a>
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr>
+        <h5>友链</h5>
+        <ul class="list-inline">
+
+          
+          <li>
+            <a href="https://sadose.github.io/" target="_blank">大森的博客</a>
+          </li>
+          
+          <li>
+            <a href="https://www.xiaocao.cloud/" target="_blank">小曹同学的百草园</a>
+          </li>
+          
+          <li>
+            <a href="https://gelxgx.github.io/blog/" target="_blank">瘦虎的博客</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
+
+
+		<!-- Footer (contains ThemeColor、viewer) -->
+		<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center">
+          
+
+          
+            <li>
+              <a target="_blank" href="https://github.com/yusixian">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+            <li>
+              <a target="_blank" href="https://www.zhihu.com/people/qi-jiu-en">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa  fa-stack-1x fa-inverse">知</i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+
+        </ul>
+        <p class="copyright text-muted">
+          Copyright &copy;
+          cos
+          2022
+          <br>
+          Theme by
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
+          <span style="display: inline-block; margin: 0 5px;">
+            <i class="fa fa-heart"></i>
+          </span>
+          re-Ported by
+          <a target="_blank" rel="noopener" href="https://v-vincen.life/">Live My Life</a>
+          |
+          <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=V-Vincen&repo=V-Vincen.github.io&type=star&count=true"></iframe>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a id="rocket" href="#top" class=""></a>
+
+
+  <!-- jQuery -->
+  <script type="text/javascript" src="/js/jquery.min.js"></script>
+  <!-- Bootstrap Core JavaScript -->
+  <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+  <!-- Custom Theme JavaScript -->
+  <script type="text/javascript" src="/js/hux-blog.min.js"></script>
+  <!-- catalog -->
+  <script async="true" type="text/javascript" src="/js/catalog.js"></script>
+  <!-- totop(rocket) -->
+  <script async="true" type="text/javascript" src="/js/totop.js"></script>
+
+  
+    <!-- Busuanzi JavaScript -->
+    <script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <!-- Scroll start -->
+    <script async="async" type="text/javascript" src="/js/scroll.js"></script>
+    <!-- Scroll end -->
+  
+
+  
+
+  
+    <!-- Mouseclick -->
+    <script type="text/javascript" src="/js/mouseclick.js" content='❤,❤,❤,❤,❤,❤,❤,❤,❤' color='#ffa940,#f5222d,#fa541c,#FF99CC,#a8071a,#faad14,#1890ff,#eb2f96,#13c2c2'></script>
+  
+
+  
+    <!-- ribbon -->
+    <script type="text/javascript" src="/js/ribbonDynamic.js"></script>
+  
+
+  
+
+
+
+
+
+
+  <!-- viewer start -->
+  <!-- viewer start (Picture preview) -->
+  
+    <script async="async" type="text/javascript" src="/js/viewer/viewer.min.js"></script>
+    <script async="async" type="text/javascript" src="/js/viewer/pic-viewer.js"></script>
+  
+
+  <!-- viewer end -->
+
+
+<script>
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function (e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  // fastClick.js
+  async ("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+    var $nav = document.querySelector("nav");
+    if ($nav)
+      FastClick.attach($nav);
+    }
+  )
+</script>
+
+<!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
+https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+<!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
+
+<!-- jquery.tagcloud.js -->
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("https://ysx.cosine.ren/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
+
+
+		<!-- Search -->
+		
+		<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-9 col-md-offset-1"> -->
+      <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1 local-search-content">
+
+        <div class="local-search-header clearfix">
+
+          <div class="local-search-input-wrapper">
+            <span class="search-icon">
+              <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
+            </span>
+            <input autocomplete="off" placeholder="搜索..." type="text" id="local-search-input">
+          </div>
+        </div>
+        <div id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+    <script src="/js/ziploader.js"></script>
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+    // get search zip version
+    $.get('/searchVersion.json?t=' + (+new Date()), function (res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson() {
+      initLoad(['/search.flv'], {
+        loadOptions: {
+          success: function (obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function (e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions: {
+          'json': 'application/json'
+        }
+      })
+    }
+    // search function;
+    var searchFunc = function (search_id, content_id) {
+      'use strict';
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      // console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function () {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function (data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title
+              ? data.title.trim()
+              : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content
+              ? data.content.trim().replace(/<[^>]+>/g, "")
+              : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+
+            var date = data.date;
+            var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
+            var imgUrl = data.header_img;
+            
+
+
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function (keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0,
+                  position = [],
+                  index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+            // show search results
+            if (isMatch) {
+              // sort index by position of keyword
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+              // merge hits into slices
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+                  // move to next position of hit
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {hits: hits, start: start, end: end, searchTextCount: searchTextCountInSlice};
+              }
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if (start < 0) {
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if (end > content.length) {
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+              // sort slices in content by search text's count and hits' count
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+              // select top N slices in content
+              var upperBound = parseInt('1');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+              // highlight title and content
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+              var resultItem = '';
+
+              // if (slicesOfTitle.length != 0) {   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>"; } else {   resultItem += "<li><a target='_blank' href='" +
+              // articleUrl + "' class='search-result-title'>" + title + "</a>"; } slicesOfContent.forEach(function (slice) {   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) +
+              // "...</p></a>"; }); resultItem += "</li>";
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              } else {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              }
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
+              });
+              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
+
+              resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
+            }
+          })
+        };
+
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<div class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</div>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+      // remove loading animation
+      $('body').css('overflow', '');
+      proceedsearch();
+    }
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function (e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function (e) {
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 && $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      var _con = document.querySelector(".local-search-content");
+      if (_con) {
+        if (!_con.contains(e.target)) {
+          onPopupClose();
+        }
+      }
+    });
+  </script>
+
+
+		
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>

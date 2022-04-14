@@ -139,7 +139,7 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="http://yoursite-url/archives/12/">
+  <link rel="canonical" href="https://ysx.cosine.ren/archives/12/">
   <title>
     
       cos的博客 - WA的一声就哭了
@@ -299,28 +299,6 @@
 
           <!-- LangSelect -->
           
-          
-          <!-- LangSelect start -->
-          <!-- LangSelect -->
-<li>
-  <a id="lang-select-label"><i class="fa fa-globe"></i>
-    <span>
-      简体中文
-    </span>
-    <select id="lang-select" data-canonical="archives/12/index.html">
-      
-      
-      <option value="cn"  selected >
-        简体中文
-      </option>
-      
-    </select>
-  </a>
-</li>
-
-          <!-- LangSelect end -->
-          
-          
         </ul>
       </div>
     </div>
@@ -470,7 +448,46 @@
   <!-- top end -->
   
 
-  <a href="/cn/note/cs-basics/data-structure/数据结构学习笔记＜7＞ 图/">
+  <a href="/cn/动态规划学习笔记（1）/">
+    <h2 class="post-title">
+      动态规划学习笔记（1）
+    </h2>
+    <h3 class="post-subtitle">
+      转自慕课程序设计与算法（二）动态规划 ppt
+    </h3>
+    <div class="post-content-preview">
+      记录一下慕课学习的笔记，以及例题代码
+一.递归到动规的一般转化方法递归函数有n个参数就定义一个n维的数组， 数组的下标是递归函数参数的取值范围。这样就可以从边界值开始逐步填充数组，相当于计算递归函数值的逆过程。eg：例题1数字三角形
+二.动规解题的一般思路1.将原问题分解为子问题将原问题分解为若干个子问题，与原问题的形式相同或类似，只不过规模小了。子问题都解决，原问题即解决。子问题的解一旦求......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by cos on
+    2020-04-13
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#c++" title="c++">c++</a>
+    
+    <a href="/tags/#算法" title="算法">算法</a>
+    
+    <a href="/tags/#动态规划" title="动态规划">动态规划</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/cn/数据结构学习笔记＜7＞ 图/">
     <h2 class="post-title">
       数据结构学习笔记＜7＞ 图
     </h2>
@@ -478,19 +495,13 @@
       MOOC浙江大学的数据结构慕课学习记录——图
     </h3>
     <div class="post-content-preview">
-      一、图
-1.什么是图
-表示“多对多”的关系，包含了：
+      一、图1.什么是图表示“多对多”的关系，包含了：
 
 一组顶点：通常用V(Vertex)表示顶点集合
 一组边：通常用E(Edge)表示边的集合
 无向边是顶点对：(v，w) ∈ E，其中v，w∈V
-有向边&lt;v,w&gt;表示从v指向w的边(单行线)
-不考虑重边和自回路
-
-抽象数据类型定义
-类型名称：图(Graph)
-数据对象集：G(V,E)由一个非空的有限顶点集合V和一个有限边集合E组......
+有向边表示从v指向w的边(单行线)
+不考虑重边和自回路抽象数据类型定义类型名称：图(Graph)数据对象集：G(V,E)由一个非空的有限顶点集合V和一个有限边集合E组成。操作集：对于任意图G ∈ Gr......
     </div>
   </a>
   
@@ -519,7 +530,7 @@
   <!-- top end -->
   
 
-  <a href="/cn/note/cs-basics/data-structure/数据结构学习笔记＜6＞ 堆与哈夫曼树与并查集/">
+  <a href="/cn/数据结构学习笔记＜6＞ 堆与哈夫曼树与并查集/">
     <h2 class="post-title">
       数据结构学习笔记＜6＞ 堆与哈夫曼树与并查集
     </h2>
@@ -527,17 +538,10 @@
       MOOC浙江大学的数据结构慕课学习记录——堆与哈夫曼树
     </h3>
     <div class="post-content-preview">
-      一、堆
-1.堆是什么
-堆（Heap),是一个可以被看做一棵完全二叉树的数组对象，有以下性质：
+      一、堆1.堆是什么堆（Heap),是一个可以被看做一棵完全二叉树的数组对象，有以下性质：
 
 任意节点的值是其子树所有结点中的最大值/最小值（有序性）
-堆总是一棵用数组表示的完全二叉树。
-
-
-2.最大堆的操作函数
-定义
-123456typedef struct HeapStruct *MaxHeap;struct HeapStruct &#123;	ElementType *Element......
+堆总是一棵用数组表示的完全二叉树。2.最大堆的操作函数定义123456typedef struct HeapStruct *MaxHeap;struct HeapStruct &#123;	ElementType *Elements;//存储堆......
     </div>
   </a>
   
@@ -568,7 +572,7 @@
   <!-- top end -->
   
 
-  <a href="/cn/note/algorithm/RMQ问题——线段树/">
+  <a href="/cn/RMQ问题——线段树/">
     <h2 class="post-title">
       RMQ问题——线段树
     </h2>
@@ -576,13 +580,10 @@
       ~RMQ问题之线段树板子~
     </h3>
     <div class="post-content-preview">
-      上篇说到RMQ问题可以用ST表算法处理，但需要在线修改的时候，线段树是更好的选择。
-如图，很明显线段树是个二叉搜索树
-
-要注意的点如下：
+      上篇说到RMQ问题可以用ST表算法处理，但需要在线修改的时候，线段树是更好的选择。如图，很明显线段树是个二叉搜索树要注意的点如下：
 
 线段树用数组存储，数组空间简单的就一般开到原数组的4*n倍（准确的说是将n向上扩充到2的幂次方然后乘2，如5-&gt;8-&gt;16）
-线段树数组存储中，某个结点的编号为n，则其左子结点编号为2 * n（表示成 n &lt;&lt; 1）,右子节点编号......
+线段树数组存储中，某个结点的编号为n，则其左子结点编号为2  n（表示成 n &lt;&lt; 1）,右子节点编号为2n+......
     </div>
   </a>
   
@@ -611,7 +612,7 @@
   <!-- top end -->
   
 
-  <a href="/cn/note/cs-basics/data-structure/数据结构学习笔记＜5＞ 二叉搜索树与平衡二叉树/">
+  <a href="/cn/数据结构学习笔记＜5＞ 二叉搜索树与平衡二叉树/">
     <h2 class="post-title">
       数据结构学习笔记＜5＞ 二叉搜索树与平衡二叉树
     </h2>
@@ -619,20 +620,12 @@
       MOOC浙江大学的数据结构慕课学习记录——二叉搜索树与平衡二叉树
     </h3>
     <div class="post-content-preview">
-      一、二叉搜索树
-1.二叉搜索树是什么
-二叉搜索树（BST，Binary Search Tree),又称二叉排序树或二叉查找树，是一棵二叉树，可以为空，当不为空时满足以下性质：
+      一、二叉搜索树1.二叉搜索树是什么二叉搜索树（BST，Binary Search Tree),又称二叉排序树或二叉查找树，是一棵二叉树，可以为空，当不为空时满足以下性质：
 
 非空左子树的所有键值小于其根结点的键值
 非空右子树的所有键值大于其根结点的键值
-左、右子树都为二叉搜索树
-
-
-2.二叉搜索树的操作函数
-(1)二叉搜索树的查找操作Find
-要查找的值为X
-
-从根结点开始查找，若树为空......
+左、右子树都为二叉搜索树2.二叉搜索树的操作函数(1)二叉搜索树的查找操作Find要查找的值为X
+从根结点开始查找，若树为空，则返回NULL......
     </div>
   </a>
   
@@ -661,7 +654,7 @@
   <!-- top end -->
   
 
-  <a href="/cn/note/algorithm/RMQ问题——ST表算法/">
+  <a href="/cn/RMQ问题——ST表算法/">
     <h2 class="post-title">
       RMQ问题——ST表算法
     </h2>
@@ -669,18 +662,10 @@
       O(nlogn)复杂度预处理，可以实现O(1)复杂度的查询。
     </h3>
     <div class="post-content-preview">
-      ST表是什么
-ST表是一个用来解决区间最值问题查询的算法
-它用O(nlogn)复杂度预处理，可以实现O(1)复杂度的查询。
-缺点：无法支持在线修改
-模板题：ST表-洛谷
-1.预处理
-用一个二维数组dp[i][j]表示下标为 i ~ i + 2^j^ - 1 的最值（最大or最小值）
-则
-①易知边界条件dp[i][0]为a[i]，既i~i的最大值为其本身
-②接下来是状态转移方程，如图
+      ST表是什么ST表是一个用来解决区间最值问题查询的算法它用O(nlogn)复杂度预处理，可以实现O(1)复杂度的查询。缺点：无法支持在线修改模板题：ST表-洛谷
+1.预处理用一个二维数组dp[i][j]表示下标为 i ~ i + 2^j^ - 1 的最值（最大or最小值）则①易知边界条件dp[i][0]为a[i]，既i~i的最大值为其本身②接下来是状态转移方程，如图
 
-1 &......
+1 &lt;&lt; ......
     </div>
   </a>
   
@@ -709,7 +694,7 @@ ST表是一个用来解决区间最值问题查询的算法
   <!-- top end -->
   
 
-  <a href="/cn/note/cs-basics/data-structure/数据结构学习笔记＜4＞ 二叉树/">
+  <a href="/cn/数据结构学习笔记＜4＞ 二叉树/">
     <h2 class="post-title">
       数据结构学习笔记＜4＞ 二叉树
     </h2>
@@ -717,16 +702,12 @@ ST表是一个用来解决区间最值问题查询的算法
       MOOC浙江大学的数据结构慕课学习记录——二叉树
     </h3>
     <div class="post-content-preview">
-      一、什么是树
-1.树的定义
-树（Tree）：n（n≥0）个结点构成的有限集合。
-当n=0时，称为空树；
-对于任一棵非空树（n&gt;0）,它具备以下性质：
+      一、什么是树1.树的定义树（Tree）：n（n≥0）个结点构成的有限集合。当n=0时，称为空树；对于任一棵非空树（n&gt;0）,它具备以下性质：
 
 树中有一个称为“根（Root）”的特殊结点，用r表示。
 其余结点可分为m（m&gt;0）个互不相交的有限集T1，T2，……，Tm,其中每个集合本身又是一棵树，称为原来树的“子树（SubTree）”。
 子树是不相交的
-除了根结点外，每个结......
+除了根结点外，每个结点有且仅......
     </div>
   </a>
   
@@ -755,7 +736,7 @@ ST表是一个用来解决区间最值问题查询的算法
   <!-- top end -->
   
 
-  <a href="/cn/note/cs-basics/data-structure/数据结构学习笔记＜3＞ 队列/">
+  <a href="/cn/数据结构学习笔记＜3＞ 队列/">
     <h2 class="post-title">
       数据结构学习笔记＜3＞ 队列
     </h2>
@@ -763,16 +744,9 @@ ST表是一个用来解决区间最值问题查询的算法
       MOOC浙江大学的数据结构慕课学习记录——队列
     </h3>
     <div class="post-content-preview">
-      一、队列的抽象数据类型描述
-类型名：队列（Queue）
-数据对象集：一个有0个或多个元素的有穷线性表
-操作集：长度为MaxSize的堆栈Q∈Queue, 队列元素item∈ElementType
+      一、队列的抽象数据类型描述类型名：队列（Queue）数据对象集：一个有0个或多个元素的有穷线性表操作集：长度为MaxSize的堆栈Q∈Queue, 队列元素item∈ElementType
 
-1.生成长度为MaxSize的空队列
-Queue CreatQueue(int MaxSize);
-2.判断队列Q是否已满
-bool IsFullQ(Queue Q, int MaxSize);
-......
+1.生成长度为MaxSize的空队列    Queue CreatQueue(int MaxSize);2.判断队列Q是否已满bool IsFullQ(Queue Q, int MaxSize);3.将......
     </div>
   </a>
   
@@ -801,7 +775,7 @@ bool IsFullQ(Queue Q, int MaxSize);
   <!-- top end -->
   
 
-  <a href="/cn/note/cs-basics/data-structure/数据结构学习笔记＜2＞ 堆栈/">
+  <a href="/cn/数据结构学习笔记＜2＞ 堆栈/">
     <h2 class="post-title">
       数据结构学习笔记＜2＞ 堆栈
     </h2>
@@ -809,15 +783,9 @@ bool IsFullQ(Queue Q, int MaxSize);
       MOOC浙江大学的数据结构慕课学习记录——堆栈
     </h3>
     <div class="post-content-preview">
-      一、堆栈的抽象数据类型描述
-类型名：堆栈（Stack）
-数据对象集：一个有0个或多个元素的有穷线性表
-操作集：长度为MaxSize的堆栈S∈Stack, 堆栈元素item∈ElementType
+      一、堆栈的抽象数据类型描述类型名：堆栈（Stack）数据对象集：一个有0个或多个元素的有穷线性表操作集：长度为MaxSize的堆栈S∈Stack, 堆栈元素item∈ElementType
 
-1.生成空堆栈，其最大长度为MaxSize;
-Stack CreateStack(int MaxSize);
-2.判断堆栈S是否已满
-int IsFull(Stack S, int MaxSize......
+1.生成空堆栈，其最大长度为MaxSize;    Stack CreateStack(int MaxSize);2.判断堆栈S是否已满int IsFull(Stack S, int MaxSize);......
     </div>
   </a>
   
@@ -846,7 +814,7 @@ int IsFull(Stack S, int MaxSize......
   <!-- top end -->
   
 
-  <a href="/cn/note/cs-basics/data-structure/广义表、多重链表初接触/">
+  <a href="/cn/广义表、多重链表初接触/">
     <h2 class="post-title">
       广义表、多重链表初接触
     </h2>
@@ -855,53 +823,11 @@ int IsFull(Stack S, int MaxSize......
     </h3>
     <div class="post-content-preview">
       一、广义表
-
 是线性表的推广
 对于线性表而言，n个元素都是基本的单元素
 广义表中，这些元素不仅可以使单元素也可以是另一个广义表
 
-1234567&gt; typedef struct GNode *GList; struct GNode &#123;&gt;     int Tag;    //标志域:0表示结点是单元素，1表示结点是广义表&gt;     union &#123;     ......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by cos on
-    2020-02-27
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#c++" title="c++">c++</a>
-    
-    <a href="/tags/#数据结构" title="数据结构">数据结构</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/note/cs-basics/data-structure/数据结构学习笔记＜1＞ 线性表/">
-    <h2 class="post-title">
-      数据结构学习笔记＜1＞ 线性表
-    </h2>
-    <h3 class="post-subtitle">
-      MOOC浙江大学的数据结构慕课学习记录——线性表
-    </h3>
-    <div class="post-content-preview">
-      一、线性表的抽象数据类型描述
-类型名：线性表（List）
-数据对象集：线性表示n(&gt;=0)个元素构成的有序序列(a1,a2,……,an)
-操作集：线性表L∈List, 整数i表示位置,元素X∈ElementType
-二、顺序表
-1.定义
-12345struct LNode &#123;    ElementType Data[MAXSIZE];//存了一个数组，其最多能存MAXSIZE......
+1234567&gt; typedef struct GNode *GList; struct GNode &#123;&gt;     int Tag;    //标志域:0表示结点是单元素，1表示结点是广义表&gt;     union &#123;     /......
     </div>
   </a>
   
@@ -930,6 +856,10 @@ int IsFull(Stack S, int MaxSize......
     </li>
     
     
+    <li class="next">
+      <a href="/archives/13/">下一页 &rarr;</a>
+    </li>
+    
   </ul>
 
 
@@ -952,6 +882,10 @@ int IsFull(Stack S, int MaxSize......
 <div class="widget">
   <ul>
     
+    <a href="../../cn/hexo-url-optimization/">
+      <li>Hexo博客url优化</li>
+    </a>
+    
     <a href="../../cn/coding-train/leetcode/offer/day16/">
       <li>剑指offer day16 排序（简单）</li>
     </a>
@@ -964,12 +898,8 @@ int IsFull(Stack S, int MaxSize......
       <li>剑指offer day14 搜索与回溯算法（中等）</li>
     </a>
     
-    <a href="../../cn/review-interview/%E9%9D%A2%E7%BB%8F/2022%E6%98%A5%E6%9A%91%E6%9C%9F%E5%AE%9E%E4%B9%A0%E7%BD%91%E6%98%93%E4%B8%A5%E9%80%89%E5%89%8D%E7%AB%AF%E4%B8%80%E4%BA%8C%E9%9D%A2%E9%9D%A2%E7%BB%8F/">
+    <a href="../../cn/163-yanxuan-review-2022-spring-frontend/">
       <li>2022春暑期实习网易严选前端一二面面经</li>
-    </a>
-    
-    <a href="../../cn/coding-train/leetcode/offer/day13/">
-      <li>剑指offer day13 双指针（简单）</li>
     </a>
     
   </ul>
@@ -1039,7 +969,7 @@ int IsFull(Stack S, int MaxSize......
 
 <h5><a href="/archives/">archives</a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../2022/04/">April 2022</a><span class="archive-list-count">18</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/03/">March 2022</a><span class="archive-list-count">34</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/02/">February 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/01/">January 2022</a><span class="archive-list-count">15</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/12/">December 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/11/">November 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/10/">October 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/09/">September 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/06/">June 2021</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/05/">May 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/02/">February 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/10/">October 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/09/">September 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/08/">August 2020</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/07/">July 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/04/">April 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/03/">March 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/02/">February 2020</a><span class="archive-list-count">3</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../2022/04/">April 2022</a><span class="archive-list-count">19</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/03/">March 2022</a><span class="archive-list-count">34</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/02/">February 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/01/">January 2022</a><span class="archive-list-count">15</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/12/">December 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/11/">November 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/10/">October 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/09/">September 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/06/">June 2021</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/05/">May 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/02/">February 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/10/">October 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/09/">September 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/08/">August 2020</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/07/">July 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/04/">April 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/03/">March 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/02/">February 2020</a><span class="archive-list-count">3</span></li></ul>
 </div>
 
 
@@ -1051,24 +981,20 @@ int IsFull(Stack S, int MaxSize......
 <div class="widget">
   <ul>
     
-    <a href="/categories/#笔记">
-      <li>笔记</li>
-    </a>
-    
     <a href="/categories/#随笔">
       <li>随笔</li>
+    </a>
+    
+    <a href="/categories/#笔记">
+      <li>笔记</li>
     </a>
     
     <a href="/categories/#题目记录">
       <li>题目记录</li>
     </a>
     
-    <a href="/categories/#算法笔记">
-      <li>算法笔记</li>
-    </a>
-    
-    <a href="/categories/#笔记 - 算法">
-      <li>笔记 - 算法</li>
+    <a href="/categories/#算法">
+      <li>算法</li>
     </a>
     
     <a href="/categories/#数据结构">
@@ -1079,16 +1005,20 @@ int IsFull(Stack S, int MaxSize......
       <li>CS基础</li>
     </a>
     
+    <a href="/categories/#工具">
+      <li>工具</li>
+    </a>
+    
     <a href="/categories/#面经">
       <li>面经</li>
     </a>
     
-    <a href="/categories/#学习笔记">
-      <li>学习笔记</li>
-    </a>
-    
     <a href="/categories/#剑指offer">
       <li>剑指offer</li>
+    </a>
+    
+    <a href="/categories/#学习笔记">
+      <li>学习笔记</li>
     </a>
     
   </ul>
@@ -1120,7 +1050,11 @@ int IsFull(Stack S, int MaxSize......
   <div class="tags">
     
     
-    <a href="/tags/#前端" title="前端" rel="31">前端</a>
+    <a href="/tags/#总结" title="总结" rel="1">总结</a>
+    
+    
+    
+    <a href="/tags/#前端" title="前端" rel="32">前端</a>
     
     
     
@@ -1128,11 +1062,15 @@ int IsFull(Stack S, int MaxSize......
     
     
     
-    <a href="/tags/#总结" title="总结" rel="1">总结</a>
+    <a href="/tags/#后端" title="后端" rel="5">后端</a>
     
     
     
     <a href="/tags/#c++" title="c++" rel="35">c++</a>
+    
+    
+    
+    <a href="/tags/#PAT乙级" title="PAT乙级" rel="2">PAT乙级</a>
     
     
     
@@ -1141,14 +1079,6 @@ int IsFull(Stack S, int MaxSize......
     
     
     <a href="/tags/#数据结构" title="数据结构" rel="29">数据结构</a>
-    
-    
-    
-    <a href="/tags/#后端" title="后端" rel="5">后端</a>
-    
-    
-    
-    <a href="/tags/#PAT乙级" title="PAT乙级" rel="2">PAT乙级</a>
     
     
     
@@ -1180,6 +1110,10 @@ int IsFull(Stack S, int MaxSize......
     
     
     
+    <a href="/tags/#编译原理" title="编译原理" rel="1">编译原理</a>
+    
+    
+    
     <a href="/tags/#计算机组成原理" title="计算机组成原理" rel="7">计算机组成原理</a>
     
     
@@ -1188,15 +1122,19 @@ int IsFull(Stack S, int MaxSize......
     
     
     
+    <a href="/tags/#hexo" title="hexo" rel="1">hexo</a>
+    
+    
+    
     <a href="/tags/#笔试题" title="笔试题" rel="5">笔试题</a>
     
     
     
-    <a href="/tags/#面经" title="面经" rel="4">面经</a>
-    
-    
-    
     <a href="/tags/#中台" title="中台" rel="1">中台</a>
+    
+    
+    
+    <a href="/tags/#面经" title="面经" rel="4">面经</a>
     
     
     
@@ -1256,11 +1194,11 @@ int IsFull(Stack S, int MaxSize......
     
     
     
-    <a href="/tags/#二叉树" title="二叉树" rel="6">二叉树</a>
-    
-    
-    
     <a href="/tags/#单调栈" title="单调栈" rel="1">单调栈</a>
+    
+    
+    
+    <a href="/tags/#二叉树" title="二叉树" rel="6">二叉树</a>
     
     
     
@@ -1292,6 +1230,18 @@ int IsFull(Stack S, int MaxSize......
     
     
     
+    <a href="/tags/#数组" title="数组" rel="7">数组</a>
+    
+    
+    
+    <a href="/tags/#记忆化搜索" title="记忆化搜索" rel="1">记忆化搜索</a>
+    
+    
+    
+    <a href="/tags/#分治" title="分治" rel="1">分治</a>
+    
+    
+    
     <a href="/tags/#Java" title="Java" rel="3">Java</a>
     
     
@@ -1313,50 +1263,6 @@ int IsFull(Stack S, int MaxSize......
     
     
     <a href="/tags/#爬虫" title="爬虫" rel="1">爬虫</a>
-    
-    
-    
-    <a href="/tags/#PTA" title="PTA" rel="12">PTA</a>
-    
-    
-    
-    <a href="/tags/#最短路" title="最短路" rel="1">最短路</a>
-    
-    
-    
-    <a href="/tags/#排序算法" title="排序算法" rel="4">排序算法</a>
-    
-    
-    
-    <a href="/tags/#KMP" title="KMP" rel="1">KMP</a>
-    
-    
-    
-    <a href="/tags/#散列查找" title="散列查找" rel="2">散列查找</a>
-    
-    
-    
-    <a href="/tags/#堆栈" title="堆栈" rel="1">堆栈</a>
-    
-    
-    
-    <a href="/tags/#哈夫曼树" title="哈夫曼树" rel="1">哈夫曼树</a>
-    
-    
-    
-    <a href="/tags/#并查集" title="并查集" rel="1">并查集</a>
-    
-    
-    
-    <a href="/tags/#图" title="图" rel="1">图</a>
-    
-    
-    
-    <a href="/tags/#二分图匹配" title="二分图匹配" rel="1">二分图匹配</a>
-    
-    
-    
-    <a href="/tags/#链式前向星" title="链式前向星" rel="1">链式前向星</a>
     
     
     
@@ -1404,10 +1310,6 @@ int IsFull(Stack S, int MaxSize......
     
     
     
-    <a href="/tags/#Node.js" title="Node.js" rel="1">Node.js</a>
-    
-    
-    
     <a href="/tags/#响应式" title="响应式" rel="1">响应式</a>
     
     
@@ -1417,6 +1319,10 @@ int IsFull(Stack S, int MaxSize......
     
     
     <a href="/tags/#Hook" title="Hook" rel="1">Hook</a>
+    
+    
+    
+    <a href="/tags/#Node.js" title="Node.js" rel="1">Node.js</a>
     
     
     
@@ -1464,23 +1370,51 @@ int IsFull(Stack S, int MaxSize......
     
     
     
-    <a href="/tags/#数组" title="数组" rel="7">数组</a>
-    
-    
-    
     <a href="/tags/#面试题" title="面试题" rel="1">面试题</a>
     
     
     
-    <a href="/tags/#记忆化搜索" title="记忆化搜索" rel="1">记忆化搜索</a>
+    <a href="/tags/#PTA" title="PTA" rel="12">PTA</a>
     
     
     
-    <a href="/tags/#分治" title="分治" rel="1">分治</a>
+    <a href="/tags/#最短路" title="最短路" rel="1">最短路</a>
     
     
     
-    <a href="/tags/#编译原理" title="编译原理" rel="1">编译原理</a>
+    <a href="/tags/#排序算法" title="排序算法" rel="4">排序算法</a>
+    
+    
+    
+    <a href="/tags/#KMP" title="KMP" rel="1">KMP</a>
+    
+    
+    
+    <a href="/tags/#散列查找" title="散列查找" rel="2">散列查找</a>
+    
+    
+    
+    <a href="/tags/#堆栈" title="堆栈" rel="1">堆栈</a>
+    
+    
+    
+    <a href="/tags/#哈夫曼树" title="哈夫曼树" rel="1">哈夫曼树</a>
+    
+    
+    
+    <a href="/tags/#并查集" title="并查集" rel="1">并查集</a>
+    
+    
+    
+    <a href="/tags/#图" title="图" rel="1">图</a>
+    
+    
+    
+    <a href="/tags/#二分图匹配" title="二分图匹配" rel="1">二分图匹配</a>
+    
+    
+    
+    <a href="/tags/#链式前向星" title="链式前向星" rel="1">链式前向星</a>
     
     
   </div>
@@ -1585,10 +1519,6 @@ int IsFull(Stack S, int MaxSize......
   
 
   
-    <!-- LangSelect start -->
-    <script type="text/javascript" src="/js/langselect.js"></script>
-    <!-- LangSelect end -->
-  
 
   
     <!-- Mouseclick -->
@@ -1647,7 +1577,7 @@ https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0
 <!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
 
 <!-- jquery.tagcloud.js -->
-<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("http://yoursite-url/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("https://ysx.cosine.ren/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
 start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
 
 
@@ -1981,5 +1911,20 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
 </html>

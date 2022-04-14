@@ -1,0 +1,1400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
+<head>
+  <!-- Google Analytics -->
+  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-xxxxxx-xx"></script>
+    <script type="text/javascript">
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-xxxxxx-xx');
+    </script>
+  
+
+  <!-- Baidu Tongji -->
+  
+    <script type="text/javascript">
+      // Originial
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  <!-- Baidu Push -->
+  
+    <script>
+      (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+      })();
+    </script>
+  
+
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <meta name="google-site-verification" content="lxDfCplOZbIzjhG34NuQBgu2gdyRlAtMB4utP5AgEBc"/>
+  <meta name="baidu-site-verification" content="PpzM9WxOJU"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="一个正在努力学习前端的程序媛qwq"/>
+  <meta name="keyword" content="前端, cos, blog, css, html, c++"/>
+  <link rel="shortcut icon" href="/img/avatar/cos.jpg"/>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
+
+  
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/beantech.min.css"/>
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="/css/highlight.css"/>
+    <link rel="stylesheet" href="/css/widget.css"/>
+    <link rel="stylesheet" href="/css/rocket.css"/>
+    <link rel="stylesheet" href="/css/signature.css"/>
+    <link rel="stylesheet" href="/css/catalog.css"/>
+    <link rel="stylesheet" href="/css/livemylife.css"/>
+
+    
+      <!-- wave start -->
+      <link rel="stylesheet" href="/css/wave.css"/>
+      <!-- wave end -->
+    
+
+    
+      <!-- top start (article top hot config) -->
+      <link rel="stylesheet" href="/css/top.css"/>
+      <!-- top end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="/css/scroll.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+      <!-- viewer start (Picture preview) -->
+      <link rel="stylesheet" href="/css/viewer.min.css"/>
+      <!-- viewer end -->
+    
+
+    
+      <!-- Search start -->
+      <link rel="stylesheet" href="/css/search.css"/>
+      <!-- Search end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="/css/themecolor.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+
+    
+      <!-- gitalk start -->
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"> -->
+      <link rel="stylesheet" href="/css/gitalk.css"/>
+      <!-- gitalk end -->
+    
+  
+
+  <!-- Custom Fonts -->
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+  <!-- Hux change font-awesome CDN to qiniu -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Hux Delete, sad but pending in China <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> <link
+  href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/ css'> -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+
+  <!-- ga & ba script hoook -->
+  <link rel="canonical" href="https://ysx.cosine.ren/cn/note/front-end/bytedance-note/javascript-learing/cl1z6l50w008xc0usg8jkh96w">
+  <title>
+    
+      【第二届青训营-寒假前端场】- 「跟着月影学 JavaScript」笔记 - cos的博客 - WA的一声就哭了
+    
+  </title>
+<meta name="generator" content="Hexo 5.4.1"></head>
+
+
+<!-- hack iOS CSS :active style -->
+
+	<body ontouchstart="" class="body--light body--light">
+
+
+		<!-- ThemeColor -->
+		
+		<!-- ThemeColor -->
+<style type="text/css">
+  .body--light {
+    --light-mode: none;
+    --dark-mode: block;
+  }
+  .body--dark {
+    --light-mode: block;
+    --dark-mode: none;
+  }
+  i.mdui-icon.material-icons.light-mode {
+    display: var(--light-mode);
+  }
+  i.mdui-icon.material-icons.dark-mode {
+    display: var(--dark-mode);
+  }
+</style>
+<div class="toggle" onclick="document.body.classList.toggle('body--dark')">
+  <i class="mdui-icon material-icons light-mode"></i>
+  <i class="mdui-icon material-icons dark-mode"></i>
+</div>
+<script>
+  //getCookieValue
+  function getCookieValue(a) {
+    var b = document.cookie.match('(^|[^;]+)\\s*' + a + '\\s*=\\s*([^;]+)');
+    return b
+      ? b.pop()
+      : '';
+  }
+  let themeMode = 'light';
+  if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
+    let dbody = document.body.classList;
+    themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
+  }
+
+  //setCookieValue
+  var toggleBtn = document.querySelector(".toggle");
+  toggleBtn.addEventListener("click", function () {
+    var e = document.body.classList.contains("body--dark");
+    var cookieString = e
+      ? "dark"
+      : "light";
+    var exp = new Date();
+    exp.setTime(exp.getTime() + 3 * 24 * 60 * 60 * 1000); //3天过期
+    document.cookie = "sb-color-mode=" + cookieString + ";expires=" + exp.toGMTString() + ";path=/";
+  });
+</script>
+
+		
+
+		<!-- Gitter -->
+		
+		<!-- Gitter -->
+<!-- Docs:https://gitter.im/?utm_source=left-menu-logo -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'cosine_yu_blog/community'
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+		
+
+		<!-- Navigation (contains search)-->
+		<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">cos的博客</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- Known Issue, found by Hux: <nav>'s height woule be hold on by its content. so, when navbar scale out, the <nav> will cover tags. also mask any touch event of tags, unfortunately. -->
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/">首页</a>
+          </li>
+
+          
+          
+          
+          
+          <li>
+            <a href="/archive/">
+              
+              归档
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              标签
+              
+              
+            </a>
+          </li>
+          
+          
+
+          
+          <li>
+            <a class="popup-trigger">
+              <span class="search-icon"></span>搜索</a>
+          </li>
+          
+
+          <!-- LangSelect -->
+          
+        </ul>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+<!-- progress -->
+<div id="progress">
+  <div class="line" style="width: 0%;"></div>
+</div>
+
+<script>
+  // Drop Bootstarp low-performance Navbar Use customize navbar with high-quality material design animation in high-perf jank-free CSS3 implementation
+  var $body = document.body;
+  var $toggle = document.querySelector('.navbar-toggle');
+  var $navbar = document.querySelector('#huxblog_navbar');
+  var $collapse = document.querySelector('.navbar-collapse');
+
+  $toggle.addEventListener('click', handleMagic)
+
+  function handleMagic(e) {
+    if ($navbar.className.indexOf('in') > 0) {
+      // CLOSE
+      $navbar.className = " ";
+      // wait until animation end.
+      setTimeout(function() {
+        // prevent frequently toggle
+        if ($navbar.className.indexOf('in') < 0) {
+          $collapse.style.height = "0px"
+        }
+      }, 400)
+    } else {
+      // OPEN
+      $collapse.style.height = "auto"
+      $navbar.className += " in";
+    }
+  }
+</script>
+
+
+		<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
+		<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+
+  <style type="text/css">
+    .body--light {
+      /* intro-header */
+      --intro-header-background-image-url-home: url('/img/header_img/93604793_p0.jpg');
+      --intro-header-background-image-url-post: url('/img/header_img/87256886_p0.jpg');
+      --intro-header-background-image-url-page: url('//img/header_img/87256886_p0.jpg');
+    }
+    .body--dark {
+      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/93604793_p0.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/87256886_p0.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('//img/header_img/87256886_p0.jpg');
+    }
+
+    header.intro-header {
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('/img/header_img/87256886_p0.jpg'); */
+      
+    }
+
+    
+  </style>
+
+
+
+
+
+<header class="intro-header">
+  <!-- Signature -->
+  <div id="signature">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#前端" title="前端">前端</a>
+              
+              <a class="tag" href="/tags/#JavaScript" title="JavaScript">JavaScript</a>
+              
+              <a class="tag" href="/tags/#纯函数" title="纯函数">纯函数</a>
+              
+            </div>
+            <h1>【第二届青训营-寒假前端场】- 「跟着月影学 JavaScript」笔记</h1>
+            <h2 class="subheading">面向对象的设计、高阶函数（节流、防抖、批处理、可迭代化）</h2>
+            <span class="meta">
+              Posted by cos on
+              2022-01-17
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              Estimated Reading Time <span class="post-count">12</span> Minutes
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              Words <span class="post-count">3k</span> In Total
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- waveoverlay start -->
+  <div class="preview-overlay">
+    <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+      </defs>
+      <g class="preview-parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill=var(--gentle-wave1)></use>
+        <use xlink:href="#gentle-wave" x="48" y="3" fill=var(--gentle-wave2)></use>
+        <use xlink:href="#gentle-wave" x="48" y="5" fill=var(--gentle-wave3)></use>
+        <use xlink:href="#gentle-wave" x="48" y="7" fill=var(--gentle-wave)></use>
+      </g>
+    </svg>
+  </div>
+  <!-- waveoverlay end -->
+  
+
+</header>
+
+
+
+		<!-- Main Content (Post contains
+	Pager、
+	tip、
+	socialshare、
+	gitalk、gitment、disqus-comment、
+	Catalog、
+	Sidebar、
+	Featured-Tags、
+	Friends Blog、
+	anchorjs、
+	) -->
+		<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <h1>本堂课重点内容</h1>
+<h2 id="写好js的原则">写好js的原则</h2>
+<h3 id="各司其责">各司其责</h3>
+<p>举个栗子：写一段JS，控制一个网页，让他支持浅色/深色两种模式。你会怎么做呢？</p>
+<p>我的第一反应：写一个深色类，在切换按钮事件进行切换。这也是课件里讲的第二版。</p>
+<ul>
+<li>第一版 直接切换样式，不妥，但能用</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> btn = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;modeBtn&#x27;</span>);</span><br><span class="line">btn.<span class="title function_">addEventListener</span>(<span class="string">&#x27;click&#x27;</span>, <span class="function">(<span class="params">e</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> body = <span class="variable language_">document</span>.<span class="property">body</span>;</span><br><span class="line">  <span class="keyword">if</span>(e.<span class="property">target</span>.<span class="property">innerHTML</span> === <span class="string">&#x27;☀️&#x27;</span>) &#123;</span><br><span class="line">    body.<span class="property">style</span>.<span class="property">backgroundColor</span> = <span class="string">&#x27;black&#x27;</span>;</span><br><span class="line">    body.<span class="property">style</span>.<span class="property">color</span> = <span class="string">&#x27;white&#x27;</span>;</span><br><span class="line">    e.<span class="property">target</span>.<span class="property">innerHTML</span> = <span class="string">&#x27;🌙&#x27;</span>;</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    body.<span class="property">style</span>.<span class="property">backgroundColor</span> = <span class="string">&#x27;white&#x27;</span>;</span><br><span class="line">    body.<span class="property">style</span>.<span class="property">color</span> = <span class="string">&#x27;black&#x27;</span>;</span><br><span class="line">    e.<span class="property">target</span>.<span class="property">innerHTML</span> = <span class="string">&#x27;☀️&#x27;</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<ul>
+<li>第二版 封装了深色类</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> btn = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;modeBtn&#x27;</span>);</span><br><span class="line">btn.<span class="title function_">addEventListener</span>(<span class="string">&#x27;click&#x27;</span>, <span class="function">(<span class="params">e</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> body = <span class="variable language_">document</span>.<span class="property">body</span>;</span><br><span class="line">  <span class="keyword">if</span>(body.<span class="property">className</span> !== <span class="string">&#x27;night&#x27;</span>) &#123;</span><br><span class="line">    body.<span class="property">className</span> = <span class="string">&#x27;nignt&#x27;</span>;</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    body.<span class="property">className</span> = <span class="string">&#x27;&#x27;</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<ul>
+<li>
+<p>第三版 既然是<strong>完全的展示行为</strong>，那么可以完全由html和css实现</p>
+<p>将切换作为一个type为 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/Input/checkbox"><code>checkbox</code></a> 控件，id为 <code>modeCheckBox</code>，使用 <code>label</code> 标签的 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/label#attr-for"><code>for</code></a> 控件，id为 <code>modeCheckBox</code>，使用 <code>label</code> 标签的 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/label#attr-for"><code>for</code></a> 属性将其关联到这个控件，再把checkbox隐藏掉即可实现点击切换模式。<img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4575ccd15ded4293bc8e7dbf2c6e6bb0~tplv-k3u1fbpfcp-watermark.image?" alt="image-20220117144502775.png"></p>
+<p>“<s>只要不写代码就不会有bug</s>” ，这也是各司其责的一种体现。</p>
+</li>
+</ul>
+<p>总结：需要避免不必要的由js直接操作样式，可以用class来表示状态，而纯展示类的交互寻求零JS方案。版本2也是有其好处的，如适应性是不一定有版本3的好的。</p>
+<h3 id="组件封装">组件封装</h3>
+<p>组件是指web页面上抽出来的一个个包含模板(HTML)、功能（JS）和样式（CSS）的单元，好的组件具备封装性、正确性、扩展性和复用性。虽然现在由于有很多优秀的组件存在，往往我们不需要去自己设计一个组件，但我们也要去试着了解他们的实现。</p>
+<p>举个栗子：用原生JS写一个电商网站的轮播图，应该怎么实现？</p>
+<ul>
+<li>
+<p>结构：HTML中的无序列表（ <code>&lt;ul&gt;</code> ）</p>
+<ul>
+<li>轮播图是典型的列表结构，可以用无序列表 <code>&lt;ul&gt;</code> 元素来实现，每个图放在一个li标签中。</li>
+</ul>
+</li>
+<li>
+<p>表现：CSS 绝对定位</p>
+<ul>
+<li>使用CSS的绝对定位，将图片重叠在一个位置</li>
+<li>切换状态使用修饰符（modifier）
+<ul>
+<li>selected</li>
+</ul>
+</li>
+<li>轮播图切换动画使用CSS  <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/transition"><code>transition</code></a> 实现</li>
+</ul>
+</li>
+<li>
+<p>行为：JS</p>
+<ul>
+<li>API设计应保证原子操作，职责单一，满足灵活性
+<ul>
+<li>ps：原子操作就是指 不可中断的一个或一系列操作，比如操作系统中的原语wait、read等。</li>
+</ul>
+</li>
+<li>封装一些事件：getSelectedItem()、getSelectedItemIndex()、slidTo()、slideNext()、slidePrevious()……</li>
+<li>更进一步：控制流，使用自定义事件来进行解耦。</li>
+</ul>
+</li>
+</ul>
+<p>总结：组件封装需要注意其结构设计、展现效果、行为设计（API、Event等）是否达标</p>
+<p>思考：如何来改进这个轮播图？</p>
+<h4 id="重构1：插件化，解耦"><strong>重构1：插件化，解耦</strong></h4>
+<ul>
+<li>
+<p>将控制元素抽取成一个个插件（左右小箭头、底下的四个小圆点）等等<img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/71de521e581e4c4e82d9f6a312d2c638~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
+</li>
+<li>
+<p>插件与组件之间通过依赖注入方式建立联系、</p>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d148965ec0654ec3914515d835445368~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
+</li>
+</ul>
+<p>这样的好处？组件的构造器做的工作就只是将组件们一一注册了，日后复用的时候不需要的组件直接将构造器注释掉即，无需关注其他的。</p>
+<p>再进一步扩展？</p>
+<h4 id="重构2：模板化">重构2：模板化</h4>
+<p>将html也模板化，做到只需一个 <code>&lt;div class='slider‘&gt;&lt;/div&gt;</code> 就能实现图片轮播，修改控制器的构造，传入图片列表。</p>
+<h4 id="重构3：抽象化">重构3：抽象化</h4>
+<p>将通用的组件模型，抽象出来一个组件类（Component），其他组件类通过继承该类并实现其render方法。</p>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d7805999b1dc4c5581483ac56a72e383~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Component</span>&#123;</span><br><span class="line">    <span class="title function_">constructor</span>(<span class="params">id, opts = &#123;name, data: []&#125;</span>) &#123;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">container</span> = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(id);</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">options</span> = opts;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">container</span>.<span class="property">innerHTML</span> = <span class="variable language_">this</span>.<span class="title function_">render</span>(opts.<span class="property">data</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="title function_">registerPlugins</span>(<span class="params">...plugins</span>) &#123; </span><br><span class="line">        plugins.<span class="title function_">forEach</span>( <span class="function"><span class="params">plugin</span> =&gt;</span> &#123;</span><br><span class="line">            <span class="keyword">const</span> pluginContainer = <span class="variable language_">document</span>.<span class="title function_">createElement</span>( <span class="string">&#x27;div&#x27;</span>);</span><br><span class="line">            pluginContainer.<span class="property">className</span> = <span class="string">`<span class="subst">$&#123;name&#125;</span>__plugin`</span>;</span><br><span class="line">            pluginContainer.<span class="property">innerHTML</span> = plugin.<span class="title function_">render</span>(<span class="variable language_">this</span>.<span class="property">options</span>.<span class="property">data</span>);</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">container</span>.<span class="title function_">appendchild</span>(pluginContainer);</span><br><span class="line"></span><br><span class="line">            plugin.<span class="title function_">action</span>(<span class="variable language_">this</span>);</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="title function_">render</span>(<span class="params">data</span>) &#123;</span><br><span class="line">        <span class="comment">/* abstract */</span></span><br><span class="line">        <span class="keyword">return</span> <span class="string">&#x27;&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>总结：</p>
+<ul>
+<li>组件设计的原则——封装性、正确性、拓展性和复用性</li>
+<li>实现步骤：结构设计、展现效果、行为设计</li>
+<li>三次重构
+<ul>
+<li>插件化</li>
+<li>模板化</li>
+<li>抽象化</li>
+</ul>
+</li>
+<li>改进：CSS模板化、父子组件的状态同步和消息通信等等</li>
+</ul>
+<h3 id="过程抽象">过程抽象</h3>
+<ul>
+<li>
+<p>处理局部细节控制的一些方法</p>
+</li>
+<li>
+<p>函数式编程思想的基础应用</p>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/948dc7f6553a40c5b6fa717ce9fafaf4~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
+</li>
+</ul>
+<h4 id="应用：操作次数限制">应用：操作次数限制</h4>
+<ul>
+<li>一些异步交互</li>
+<li>一次性的HTTP请求</li>
+</ul>
+<p>有这样一段代码，在每次点击时延时2s后移除该节点，但如果用户在该节点还没完全移除的时候又点了几次则会报错。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> list = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;ul&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> buttons = list.<span class="title function_">querySelectorAll</span>(<span class="string">&#x27;button&#x27;</span>);</span><br><span class="line">buttons.<span class="title function_">forEach</span>(<span class="function">(<span class="params">button</span>)=&gt;</span>&#123;</span><br><span class="line">    button.<span class="title function_">addEventListener</span>(<span class="string">&#x27;click&#x27;</span>, <span class="function">(<span class="params">evt</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">const</span> target = evt.<span class="property">target</span>;</span><br><span class="line">        target.<span class="property">parentNode</span>.<span class="property">className</span> = <span class="string">&#x27;completed&#x27;</span>;</span><br><span class="line">        <span class="built_in">setTimeout</span>(<span class="function">()=&gt;</span>&#123;</span><br><span class="line">            list.<span class="title function_">removeChild</span>(target.<span class="property">parentNode</span>);</span><br><span class="line">        &#125;,<span class="number">2000</span>);</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>而这个操作次数的限制，则可以抽象出来一个高级函数</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">once</span>(<span class="params">fn</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">function</span>(<span class="params">...args</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span>(fn) &#123;</span><br><span class="line">            <span class="keyword">const</span> ret = fn.<span class="title function_">apply</span>(<span class="variable language_">this</span>, args);</span><br><span class="line">            fn = <span class="literal">null</span>;</span><br><span class="line">            <span class="keyword">return</span> ret;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> list = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;ul&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> buttons = list.<span class="title function_">querySelectorAll</span>(<span class="string">&#x27;button&#x27;</span>);</span><br><span class="line">buttons.<span class="title function_">forEach</span>(<span class="function">(<span class="params">button</span>)=&gt;</span>&#123;</span><br><span class="line">    button.<span class="title function_">addEventListener</span>(<span class="string">&#x27;click&#x27;</span>, <span class="title function_">once</span>(<span class="function">(<span class="params">evt</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">const</span> target = evt.<span class="property">target</span>;</span><br><span class="line">        target.<span class="property">parentNode</span>.<span class="property">className</span> = <span class="string">&#x27;completed&#x27;</span>;</span><br><span class="line">        <span class="built_in">setTimeout</span>(<span class="function">()=&gt;</span>&#123;</span><br><span class="line">            list.<span class="title function_">removeChild</span>(target.<span class="property">parentNode</span>);</span><br><span class="line">        &#125;,<span class="number">2000</span>);</span><br><span class="line">    &#125;))</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>如代码中显示的那样，这个函数once接受一个函数，返回的也是一个函数，判断接受的函数是否为null，若不为null则执行这个函数并返回其结果，若接受的函数为null则返回一个不进行任何操作的函数。click事件注册的实际上是once返回的函数，这样再怎么点击也不会报错了。</p>
+<blockquote>
+<p>ps：好精彩的应用例子！</p>
+</blockquote>
+<p>为了让 ”只执行一次“ 这个需求覆盖不同的事件处理，将这个需求剥离出来，这个过程就称之为 <strong>过程抽象</strong></p>
+<h2 id="高阶函数">高阶函数</h2>
+<ul>
+<li>以函数作为参数</li>
+<li>以函数作为返回值</li>
+<li>常用于作为 <strong>函数装饰器</strong></li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">funtion <span class="title function_">HOF</span>(<span class="params">fn</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">function</span>(<span class="params">...args</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> fn.<span class="title function_">apply</span>(<span class="variable language_">this</span>, args);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="常用高阶函数">常用高阶函数</h3>
+<h4 id="Once-只执行一次">Once 只执行一次</h4>
+<p>前文讲过，这里不再阐述</p>
+<h4 id="Throttle-节流">Throttle 节流</h4>
+<p>为函数添加一个间隔time，每隔time事件调用一次函数，节省其需求，比如某个事件很容易持续的发生（如鼠标移上去就触发），那么他会一直速度特别快的调用这个事件函数，这个时候为其加一个节流函数则可以防止崩溃节约流量。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">throttle</span>(<span class="params">fn, time = <span class="number">500</span></span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> timer;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">function</span>(<span class="params">...args</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span>(!timer) &#123;</span><br><span class="line">            fn.<span class="title function_">apply</span>(<span class="variable language_">this</span>, args);</span><br><span class="line">            timer = <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">                timer = <span class="literal">null</span>;</span><br><span class="line">            &#125;, time);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">btn.<span class="property">onclick</span> = <span class="title function_">throttle</span>(<span class="keyword">function</span>(<span class="params">e</span>)&#123;</span><br><span class="line">    <span class="comment">/* 事件处理 */</span></span><br><span class="line">    circle.<span class="property">innerHTML</span> = <span class="built_in">parseInt</span>(circle.<span class="property">innerHTML</span>)+<span class="number">1</span>;</span><br><span class="line">    circle.<span class="property">className</span> = <span class="string">&#x27;fade&#x27;</span>;</span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> circle.<span class="property">className</span> = <span class="string">&#x27;&#x27;</span>, <span class="number">250</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>对原始的函数进行包装，没有timer的话就注册一个timer，500ms后取消，因为在这500ms中这个timer都还存在，所以不会去执行函数（或者说执行空函数），500ms后timer取消了，函数就可以被调用执行了。</p>
+<h4 id="Debounce-防抖">Debounce 防抖</h4>
+<p>在上面的节流中，timer存在期间是不会去执行函数，而防抖是在每次事件一开始的时候清空timer，然后设置timer为dur，当事件调用dur时间并且没有新的事件再次调用时（比如鼠标移动后悬停一段时间），函数就可以被调用执行了。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">debounce</span>(<span class="params">fn, dur</span>) &#123;</span><br><span class="line">    dur = dur || <span class="number">100</span>;   <span class="comment">// dur若不存在则设置dur为100ms</span></span><br><span class="line">    <span class="keyword">var</span> timer;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="built_in">clearTimeout</span>(timer);</span><br><span class="line">        timer = <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">            fn.<span class="title function_">apply</span>(<span class="variable language_">this</span>, <span class="variable language_">arguments</span>);</span><br><span class="line">        &#125;, dur);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Consumer">Consumer</h4>
+<p>这是将一个函数变成类似setTimeout这样的异步操作的函数，如调用了很多次某事件，将这些事件丢到一个列表中，按设定好的时间隔一段时间并执行返回其结果。先来看代码：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">consumer</span>(<span class="params">fn, time</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> tasks = [],</span><br><span class="line">        timer;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">function</span> (<span class="params">...args</span>) &#123;</span><br><span class="line">        tasks.<span class="title function_">push</span>(fn.<span class="title function_">bind</span>(<span class="variable language_">this</span>, ...args));</span><br><span class="line">        <span class="keyword">if</span>(timer == <span class="literal">null</span>) &#123;</span><br><span class="line">            timer = <span class="built_in">setInterval</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">                tasks.<span class="title function_">shift</span>().<span class="title function_">call</span>(<span class="variable language_">this</span>);</span><br><span class="line">                <span class="keyword">if</span>(tasks.<span class="property">length</span> &lt;= <span class="number">0</span>) &#123;</span><br><span class="line">                    <span class="built_in">clearInterval</span>(timer);</span><br><span class="line">                    timer = <span class="literal">null</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;, time);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">btn.<span class="property">onclick</span> = <span class="title function_">consumer</span>(<span class="function">(<span class="params">evt</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">     * 事件处理 如每次调用了很多次某事件，将这些事件丢到</span></span><br><span class="line"><span class="comment">     * 一个列表中，按设定好的时间隔一段时间并执行返回其结果。 </span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">let</span> t = <span class="built_in">parseInt</span>(count.<span class="property">innerHTML</span>.<span class="title function_">slice</span>(<span class="number">1</span>)) + <span class="number">1</span>;</span><br><span class="line">    count.<span class="property">className</span> = <span class="string">&#x27;hit&#x27;</span>;</span><br><span class="line">    <span class="keyword">let</span> r = t * <span class="number">7</span> % <span class="number">256</span>,</span><br><span class="line">        g = t * <span class="number">17</span>  % <span class="number">128</span>,</span><br><span class="line">        b = t * <span class="number">31</span>  % <span class="number">128</span>;</span><br><span class="line">    count.<span class="property">style</span>.<span class="property">color</span> = <span class="string">`rgb(<span class="subst">$&#123;r&#125;</span>, <span class="subst">$&#123;g&#125;</span>, <span class="subst">$&#123;b&#125;</span>)`</span>.<span class="title function_">trim</span>();</span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">        count.<span class="property">className</span> = <span class="string">&#x27;hide&#x27;</span>;</span><br><span class="line">    &#125;, <span class="number">500</span>);</span><br><span class="line">&#125;, <span class="number">800</span>);</span><br></pre></td></tr></table></figure>
+<p>这里的事件处理实现了点击按钮时执行这个不断显示+count并在500ms后渐隐，而快速点击时，则将这个点击事件存储到是事件列表中每隔800ms执行（不然上一个+count还未消失）。</p>
+<p>要弄明白函数原理，得从其中的bind函数和shift函数和call说起：</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/bind"><code>bind()</code></a> 方法创建一个新的函数，在 <code>bind()</code> 被调用时，这个新函数的 <code>this</code> 被指定为 <code>bind()</code> 的第一个参数，而其余参数将作为新函数的参数，供调用时使用。</p>
+</blockquote>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/shift"><code>shift()</code></a> 方法从数组中删除<strong>第一个</strong>元素，并返回该元素的值。此方法更改数组的长度。与之相反的则是 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift"><code>unshift()</code></a> 插入第一个元素。</p>
+<p>与之相似的一对方法还有，<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/pop"><code>pop()</code></a> 和 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/push"><code>push()</code></a> ，他们作用于数组最后一个元素</p>
+</blockquote>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/call"><code>call()</code></a> 方法使用一个指定的 <code>this</code> 值和单独给出的一个或多个参数来调用一个函数。</p>
+</blockquote>
+<p>那么不难看出上面这个函数的用途，将每次准备调用的函数放入tasks列表中，若定时器为空则设置一个定时器执行内容 <code>定时执行tasks出队，若全部tasks已经清空（当前没有任务了）则将定时器清除</code> ，若定时器不为空则不做操作（但放到tasks列表中了）。</p>
+<h4 id="Iterative">Iterative</h4>
+<p>将一个函数，变成可迭代使用的的，这通常用于一个函数要给一组对象执行批量操作的时候。如批量设置颜色，代码如下：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">isIterable</span> = obj =&gt; obj != <span class="literal">null</span> &amp;&amp; <span class="keyword">typeof</span> obj[<span class="title class_">Symbol</span>.<span class="property">iterator</span>] === <span class="string">&#x27;function&#x27;</span>;</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">iterative</span>(<span class="params">fn</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">function</span>(<span class="params">subject, ...rest</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span>(<span class="title function_">isIterable</span>(subject)) &#123;</span><br><span class="line">            <span class="keyword">const</span> ret = [];</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">let</span> obj <span class="keyword">of</span> subject) &#123;</span><br><span class="line">                ret.<span class="title function_">push</span>(fn.<span class="title function_">apply</span>(<span class="variable language_">this</span>, [obj, ...rest]));</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> ret;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> fn.<span class="title function_">apply</span>(<span class="variable language_">this</span>, [subject, ...rest]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> setColor = <span class="title function_">iterative</span>(<span class="function">(<span class="params">el, color</span>) =&gt;</span> &#123;</span><br><span class="line">    el.<span class="property">style</span>.<span class="property">color</span> = color;</span><br><span class="line">&#125;)</span><br><span class="line"><span class="keyword">const</span> els = <span class="variable language_">document</span>.<span class="title function_">querySelectorAll</span>(<span class="string">&#x27;li:nth-child(2n+1)&#x27;</span>);</span><br><span class="line"><span class="title function_">setColor</span>(els, <span class="string">&#x27;red&#x27;</span>);</span><br></pre></td></tr></table></figure>
+<h4 id="Toggle">Toggle</h4>
+<p>切换状态，也可以封装成一个高级函数，这样有多少种状态只要添加到里面就可以了。</p>
+<p>例子：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">toggle</span>(<span class="params">...actions</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">function</span> (<span class="params">...args</span>) &#123;</span><br><span class="line">        <span class="keyword">let</span> action = actions.<span class="title function_">shift</span>();</span><br><span class="line">        action.<span class="title function_">push</span>(action);</span><br><span class="line">        <span class="keyword">return</span> action.<span class="title function_">apply</span>(<span class="variable language_">this</span>, args);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 多少态都可以!</span></span><br><span class="line">switcher.<span class="property">onclick</span> = <span class="title function_">toggle</span>(</span><br><span class="line">    <span class="function"><span class="params">evt</span> =&gt;</span> evt.<span class="property">target</span>.<span class="property">className</span> = <span class="string">&#x27;off&#x27;</span>,</span><br><span class="line">    <span class="function"><span class="params">evt</span> =&gt;</span> evt.<span class="property">target</span>.<span class="property">className</span> = <span class="string">&#x27;on&#x27;</span></span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<h4 id="思考">思考</h4>
+<p>为什么要使用高阶函数？</p>
+<p>了解一个概念：<strong>纯函数，是指一个函数的返回结果只依赖于它的参数，并且在执行过程里面没有副作用</strong></p>
+<p>这也就意味着，纯函数是非常靠谱的，不会对外界产生影响。</p>
+<ul>
+<li>方便进行单元测试！</li>
+<li>减少系统中非纯函数的数量，从而使得系统可靠性增加</li>
+</ul>
+<h4 id="其他一些思考">其他一些思考</h4>
+<ul>
+<li>命令式与声明式，没有优劣之分</li>
+<li>过程抽象 / HOF / 装饰器</li>
+<li>命令式 / 声明式</li>
+<li>代码风格、效率、质量的权衡。
+<ul>
+<li>根据场景来权衡</li>
+</ul>
+</li>
+</ul>
+<h2 id="总结感想">总结感想</h2>
+<p>太牛了！！</p>
+<p>看完这节课，收获非常多，实现一个真正意义上的组件原来需要这么多步骤，原来js也能实现如此面向对象的设计，结合之前学过的c++/java的设计模式，发现都是有共通之处的，一个组件可以向下细分为许许多多的子组件。后面的高阶函数更是知识盲区，原来js还能实现这些方法</p>
+<blockquote>
+<p>本文引用的内容大部分来自月影老师的课以及MDN。</p>
+</blockquote>
+
+
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
+          
+          <li class="previous">
+            <a href="/cn/note/front-end/bytedance-note/web-standards-and-front-end-development/cl1z6l514009kc0us0b94d1dc" data-toggle="tooltip" data-placement="top" title="【第二届青训营-寒假前端场】- 「Web 标准与前端开发」">&larr; Previous Post</a>
+          </li>
+          
+          
+          <li class="next">
+            <a href="/cn/note/front-end/bytedance-note/css-learning-layout/cl1z6l50r008jc0us6hw091fa" data-toggle="tooltip" data-placement="top" title="【第二届青训营-寒假前端场】- 「CSS布局」">Next Post &rarr;</a>
+          </li>
+          
+        </ul>
+
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    
+      如果您喜欢此博客或发现它对您有用，则欢迎对此发表评论。 也欢迎您共享此博客，以便更多人可以参与。 如果博客中使用的图像侵犯了您的版权，请与作者联系以将其删除。 谢谢 ！
+    
+  </p>
+</div>
+<!-- tip end -->
+
+        <!-- tip end -->
+        
+
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=【第二届青训营-寒假前端场】- 「跟着月影学 JavaScript」笔记&body=Hi,I found this website and thought you might like it https://ysx.cosine.ren/cn/note/front-end/bytedance-note/javascript-learing/cl1z6l50w008xc0usg8jkh96w">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+        <!-- Sharing End -->
+        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+  <!-- gitalk start -->
+  <!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
+
+  <div id="gitalk-container"></div>
+
+  
+    <!-- <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.js"></script> -->
+    <script src="/js/comment/gitalk.js"></script>
+  
+
+  <script>
+    var gitalk = new Gitalk({
+      clientID: '2f50b376c49e65b70db0',
+      clientSecret: '5bf5a8b7b0a9a22194ee1f0ee1e58dac2e19a359',
+      repo: 'yusixian.github.io',
+      owner: 'yusixian',
+      admin: 'yusixian',
+      id: 'Mon Jan 17 2022 14:30:17 GMT+0800', // Ensure uniqueness and length less than 50
+      distractionFreeMode: false, // Facebook-like distraction free mode
+      perPage: 10,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      language: 'zh-CN',
+      proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'
+    });
+    gitalk.render('gitalk-container');
+
+    var gtFolded = () => {
+      setTimeout(function () {
+        let markdownBody = document.getElementsByClassName("markdown-body");
+        let list = Array.from(markdownBody);
+        list.forEach(item => {
+          if (item.clientHeight > 250) {
+            item.classList.add('gt-comment-body-folded');
+            item.style.maxHeight = '250px';
+            item.title = 'Click to Expand';
+            item.onclick = function () {
+              item.classList.remove('gt-comment-body-folded');
+              item.style.maxHeight = '';
+              item.title = '';
+              item.onclick = null;
+            };
+          }
+        })
+      }, 800);
+    }
+  </script>
+
+  <!-- gitalk end -->
+
+
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">目录</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">本堂课重点内容</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%86%99%E5%A5%BDjs%E7%9A%84%E5%8E%9F%E5%88%99"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">写好js的原则</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%90%84%E5%8F%B8%E5%85%B6%E8%B4%A3"><span class="toc-nav-number">1.1.1.</span> <span class="toc-nav-text">各司其责</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%BB%84%E4%BB%B6%E5%B0%81%E8%A3%85"><span class="toc-nav-number">1.1.2.</span> <span class="toc-nav-text">组件封装</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E9%87%8D%E6%9E%841%EF%BC%9A%E6%8F%92%E4%BB%B6%E5%8C%96%EF%BC%8C%E8%A7%A3%E8%80%A6"><span class="toc-nav-number">1.1.2.1.</span> <span class="toc-nav-text">重构1：插件化，解耦</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E9%87%8D%E6%9E%842%EF%BC%9A%E6%A8%A1%E6%9D%BF%E5%8C%96"><span class="toc-nav-number">1.1.2.2.</span> <span class="toc-nav-text">重构2：模板化</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E9%87%8D%E6%9E%843%EF%BC%9A%E6%8A%BD%E8%B1%A1%E5%8C%96"><span class="toc-nav-number">1.1.2.3.</span> <span class="toc-nav-text">重构3：抽象化</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%BF%87%E7%A8%8B%E6%8A%BD%E8%B1%A1"><span class="toc-nav-number">1.1.3.</span> <span class="toc-nav-text">过程抽象</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%BA%94%E7%94%A8%EF%BC%9A%E6%93%8D%E4%BD%9C%E6%AC%A1%E6%95%B0%E9%99%90%E5%88%B6"><span class="toc-nav-number">1.1.3.1.</span> <span class="toc-nav-text">应用：操作次数限制</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E9%AB%98%E9%98%B6%E5%87%BD%E6%95%B0"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">高阶函数</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%B8%B8%E7%94%A8%E9%AB%98%E9%98%B6%E5%87%BD%E6%95%B0"><span class="toc-nav-number">1.2.1.</span> <span class="toc-nav-text">常用高阶函数</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Once-%E5%8F%AA%E6%89%A7%E8%A1%8C%E4%B8%80%E6%AC%A1"><span class="toc-nav-number">1.2.1.1.</span> <span class="toc-nav-text">Once 只执行一次</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Throttle-%E8%8A%82%E6%B5%81"><span class="toc-nav-number">1.2.1.2.</span> <span class="toc-nav-text">Throttle 节流</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Debounce-%E9%98%B2%E6%8A%96"><span class="toc-nav-number">1.2.1.3.</span> <span class="toc-nav-text">Debounce 防抖</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Consumer"><span class="toc-nav-number">1.2.1.4.</span> <span class="toc-nav-text">Consumer</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Iterative"><span class="toc-nav-number">1.2.1.5.</span> <span class="toc-nav-text">Iterative</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Toggle"><span class="toc-nav-number">1.2.1.6.</span> <span class="toc-nav-text">Toggle</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E6%80%9D%E8%80%83"><span class="toc-nav-number">1.2.1.7.</span> <span class="toc-nav-text">思考</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%85%B6%E4%BB%96%E4%B8%80%E4%BA%9B%E6%80%9D%E8%80%83"><span class="toc-nav-number">1.2.1.8.</span> <span class="toc-nav-text">其他一些思考</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%BB%E7%BB%93%E6%84%9F%E6%83%B3"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">总结感想</span></a></li></ol></li></ol>
+        
+        </div>
+      </aside>
+    
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">特色标签</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#前端" title="前端">前端</a>
+            
+            <a class="tag" href="/tags/#JavaScript" title="JavaScript">JavaScript</a>
+            
+            <a class="tag" href="/tags/#纯函数" title="纯函数">纯函数</a>
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr>
+        <h5>友链</h5>
+        <ul class="list-inline">
+
+          
+          <li>
+            <a href="https://sadose.github.io/" target="_blank">大森的博客</a>
+          </li>
+          
+          <li>
+            <a href="https://www.xiaocao.cloud/" target="_blank">小曹同学的百草园</a>
+          </li>
+          
+          <li>
+            <a href="https://gelxgx.github.io/blog/" target="_blank">瘦虎的博客</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
+
+
+		<!-- Footer (contains ThemeColor、viewer) -->
+		<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center">
+          
+
+          
+            <li>
+              <a target="_blank" href="https://github.com/yusixian">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+            <li>
+              <a target="_blank" href="https://www.zhihu.com/people/qi-jiu-en">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa  fa-stack-1x fa-inverse">知</i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+
+        </ul>
+        <p class="copyright text-muted">
+          Copyright &copy;
+          cos
+          2022
+          <br>
+          Theme by
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
+          <span style="display: inline-block; margin: 0 5px;">
+            <i class="fa fa-heart"></i>
+          </span>
+          re-Ported by
+          <a target="_blank" rel="noopener" href="https://v-vincen.life/">Live My Life</a>
+          |
+          <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=V-Vincen&repo=V-Vincen.github.io&type=star&count=true"></iframe>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a id="rocket" href="#top" class=""></a>
+
+
+  <!-- jQuery -->
+  <script type="text/javascript" src="/js/jquery.min.js"></script>
+  <!-- Bootstrap Core JavaScript -->
+  <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+  <!-- Custom Theme JavaScript -->
+  <script type="text/javascript" src="/js/hux-blog.min.js"></script>
+  <!-- catalog -->
+  <script async="true" type="text/javascript" src="/js/catalog.js"></script>
+  <!-- totop(rocket) -->
+  <script async="true" type="text/javascript" src="/js/totop.js"></script>
+
+  
+    <!-- Busuanzi JavaScript -->
+    <script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <!-- Scroll start -->
+    <script async="async" type="text/javascript" src="/js/scroll.js"></script>
+    <!-- Scroll end -->
+  
+
+  
+
+  
+    <!-- Mouseclick -->
+    <script type="text/javascript" src="/js/mouseclick.js" content='❤,❤,❤,❤,❤,❤,❤,❤,❤' color='#ffa940,#f5222d,#fa541c,#FF99CC,#a8071a,#faad14,#1890ff,#eb2f96,#13c2c2'></script>
+  
+
+  
+    <!-- ribbon -->
+    <script type="text/javascript" src="/js/ribbonDynamic.js"></script>
+  
+
+  
+
+
+
+
+
+
+  <!-- viewer start -->
+  <!-- viewer start (Picture preview) -->
+  
+    <script async="async" type="text/javascript" src="/js/viewer/viewer.min.js"></script>
+    <script async="async" type="text/javascript" src="/js/viewer/pic-viewer.js"></script>
+  
+
+  <!-- viewer end -->
+
+
+<script>
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function (e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  // fastClick.js
+  async ("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+    var $nav = document.querySelector("nav");
+    if ($nav)
+      FastClick.attach($nav);
+    }
+  )
+</script>
+
+<!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
+https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+<!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
+
+<!-- jquery.tagcloud.js -->
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("https://ysx.cosine.ren/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
+
+
+		<!-- Search -->
+		
+		<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-9 col-md-offset-1"> -->
+      <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1 local-search-content">
+
+        <div class="local-search-header clearfix">
+
+          <div class="local-search-input-wrapper">
+            <span class="search-icon">
+              <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
+            </span>
+            <input autocomplete="off" placeholder="搜索..." type="text" id="local-search-input">
+          </div>
+        </div>
+        <div id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+    <script src="/js/ziploader.js"></script>
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+    // get search zip version
+    $.get('/searchVersion.json?t=' + (+new Date()), function (res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson() {
+      initLoad(['/search.flv'], {
+        loadOptions: {
+          success: function (obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function (e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions: {
+          'json': 'application/json'
+        }
+      })
+    }
+    // search function;
+    var searchFunc = function (search_id, content_id) {
+      'use strict';
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      // console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function () {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function (data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title
+              ? data.title.trim()
+              : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content
+              ? data.content.trim().replace(/<[^>]+>/g, "")
+              : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+
+            var date = data.date;
+            var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
+            var imgUrl = data.header_img;
+            
+
+
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function (keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0,
+                  position = [],
+                  index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+            // show search results
+            if (isMatch) {
+              // sort index by position of keyword
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+              // merge hits into slices
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+                  // move to next position of hit
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {hits: hits, start: start, end: end, searchTextCount: searchTextCountInSlice};
+              }
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if (start < 0) {
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if (end > content.length) {
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+              // sort slices in content by search text's count and hits' count
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+              // select top N slices in content
+              var upperBound = parseInt('1');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+              // highlight title and content
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+              var resultItem = '';
+
+              // if (slicesOfTitle.length != 0) {   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>"; } else {   resultItem += "<li><a target='_blank' href='" +
+              // articleUrl + "' class='search-result-title'>" + title + "</a>"; } slicesOfContent.forEach(function (slice) {   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) +
+              // "...</p></a>"; }); resultItem += "</li>";
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              } else {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              }
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
+              });
+              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
+
+              resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
+            }
+          })
+        };
+
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<div class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</div>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+      // remove loading animation
+      $('body').css('overflow', '');
+      proceedsearch();
+    }
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function (e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function (e) {
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 && $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      var _con = document.querySelector(".local-search-content");
+      if (_con) {
+        if (!_con.contains(e.target)) {
+          onPopupClose();
+        }
+      }
+    });
+  </script>
+
+
+		
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>

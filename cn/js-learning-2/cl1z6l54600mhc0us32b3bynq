@@ -1,0 +1,1380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
+<head>
+  <!-- Google Analytics -->
+  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-xxxxxx-xx"></script>
+    <script type="text/javascript">
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-xxxxxx-xx');
+    </script>
+  
+
+  <!-- Baidu Tongji -->
+  
+    <script type="text/javascript">
+      // Originial
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  <!-- Baidu Push -->
+  
+    <script>
+      (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+      })();
+    </script>
+  
+
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <meta name="google-site-verification" content="lxDfCplOZbIzjhG34NuQBgu2gdyRlAtMB4utP5AgEBc"/>
+  <meta name="baidu-site-verification" content="PpzM9WxOJU"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="一个正在努力学习前端的程序媛qwq"/>
+  <meta name="keyword" content="前端, cos, blog, css, html, c++"/>
+  <link rel="shortcut icon" href="/img/avatar/cos.jpg"/>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
+
+  
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/beantech.min.css"/>
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="/css/highlight.css"/>
+    <link rel="stylesheet" href="/css/widget.css"/>
+    <link rel="stylesheet" href="/css/rocket.css"/>
+    <link rel="stylesheet" href="/css/signature.css"/>
+    <link rel="stylesheet" href="/css/catalog.css"/>
+    <link rel="stylesheet" href="/css/livemylife.css"/>
+
+    
+      <!-- wave start -->
+      <link rel="stylesheet" href="/css/wave.css"/>
+      <!-- wave end -->
+    
+
+    
+      <!-- top start (article top hot config) -->
+      <link rel="stylesheet" href="/css/top.css"/>
+      <!-- top end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="/css/scroll.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+      <!-- viewer start (Picture preview) -->
+      <link rel="stylesheet" href="/css/viewer.min.css"/>
+      <!-- viewer end -->
+    
+
+    
+      <!-- Search start -->
+      <link rel="stylesheet" href="/css/search.css"/>
+      <!-- Search end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="/css/themecolor.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+
+    
+      <!-- gitalk start -->
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"> -->
+      <link rel="stylesheet" href="/css/gitalk.css"/>
+      <!-- gitalk end -->
+    
+  
+
+  <!-- Custom Fonts -->
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+  <!-- Hux change font-awesome CDN to qiniu -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Hux Delete, sad but pending in China <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> <link
+  href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/ css'> -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+
+  <!-- ga & ba script hoook -->
+  <link rel="canonical" href="https://ysx.cosine.ren/cn/js-learning-2/cl1z6l54600mhc0us32b3bynq">
+  <title>
+    
+      深入JavaScript学习之路（二）JavaScript中的类 - cos的博客 - WA的一声就哭了
+    
+  </title>
+<meta name="generator" content="Hexo 5.4.1"></head>
+
+
+<!-- hack iOS CSS :active style -->
+
+	<body ontouchstart="" class="body--light body--light">
+
+
+		<!-- ThemeColor -->
+		
+		<!-- ThemeColor -->
+<style type="text/css">
+  .body--light {
+    --light-mode: none;
+    --dark-mode: block;
+  }
+  .body--dark {
+    --light-mode: block;
+    --dark-mode: none;
+  }
+  i.mdui-icon.material-icons.light-mode {
+    display: var(--light-mode);
+  }
+  i.mdui-icon.material-icons.dark-mode {
+    display: var(--dark-mode);
+  }
+</style>
+<div class="toggle" onclick="document.body.classList.toggle('body--dark')">
+  <i class="mdui-icon material-icons light-mode"></i>
+  <i class="mdui-icon material-icons dark-mode"></i>
+</div>
+<script>
+  //getCookieValue
+  function getCookieValue(a) {
+    var b = document.cookie.match('(^|[^;]+)\\s*' + a + '\\s*=\\s*([^;]+)');
+    return b
+      ? b.pop()
+      : '';
+  }
+  let themeMode = 'light';
+  if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
+    let dbody = document.body.classList;
+    themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
+  }
+
+  //setCookieValue
+  var toggleBtn = document.querySelector(".toggle");
+  toggleBtn.addEventListener("click", function () {
+    var e = document.body.classList.contains("body--dark");
+    var cookieString = e
+      ? "dark"
+      : "light";
+    var exp = new Date();
+    exp.setTime(exp.getTime() + 3 * 24 * 60 * 60 * 1000); //3天过期
+    document.cookie = "sb-color-mode=" + cookieString + ";expires=" + exp.toGMTString() + ";path=/";
+  });
+</script>
+
+		
+
+		<!-- Gitter -->
+		
+		<!-- Gitter -->
+<!-- Docs:https://gitter.im/?utm_source=left-menu-logo -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'cosine_yu_blog/community'
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+		
+
+		<!-- Navigation (contains search)-->
+		<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">cos的博客</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- Known Issue, found by Hux: <nav>'s height woule be hold on by its content. so, when navbar scale out, the <nav> will cover tags. also mask any touch event of tags, unfortunately. -->
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/">首页</a>
+          </li>
+
+          
+          
+          
+          
+          <li>
+            <a href="/archive/">
+              
+              归档
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              标签
+              
+              
+            </a>
+          </li>
+          
+          
+
+          
+          <li>
+            <a class="popup-trigger">
+              <span class="search-icon"></span>搜索</a>
+          </li>
+          
+
+          <!-- LangSelect -->
+          
+        </ul>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+<!-- progress -->
+<div id="progress">
+  <div class="line" style="width: 0%;"></div>
+</div>
+
+<script>
+  // Drop Bootstarp low-performance Navbar Use customize navbar with high-quality material design animation in high-perf jank-free CSS3 implementation
+  var $body = document.body;
+  var $toggle = document.querySelector('.navbar-toggle');
+  var $navbar = document.querySelector('#huxblog_navbar');
+  var $collapse = document.querySelector('.navbar-collapse');
+
+  $toggle.addEventListener('click', handleMagic)
+
+  function handleMagic(e) {
+    if ($navbar.className.indexOf('in') > 0) {
+      // CLOSE
+      $navbar.className = " ";
+      // wait until animation end.
+      setTimeout(function() {
+        // prevent frequently toggle
+        if ($navbar.className.indexOf('in') < 0) {
+          $collapse.style.height = "0px"
+        }
+      }, 400)
+    } else {
+      // OPEN
+      $collapse.style.height = "auto"
+      $navbar.className += " in";
+    }
+  }
+</script>
+
+
+		<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
+		<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+
+  <style type="text/css">
+    .body--light {
+      /* intro-header */
+      --intro-header-background-image-url-home: url('/img/header_img/93604793_p0.jpg');
+      --intro-header-background-image-url-post: url('/img/header_img/galaxy-ngc-3190-wallpaper-for-2880x1800-60-653.jpg');
+      --intro-header-background-image-url-page: url('//img/header_img/galaxy-ngc-3190-wallpaper-for-2880x1800-60-653.jpg');
+    }
+    .body--dark {
+      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/93604793_p0.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/galaxy-ngc-3190-wallpaper-for-2880x1800-60-653.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('//img/header_img/galaxy-ngc-3190-wallpaper-for-2880x1800-60-653.jpg');
+    }
+
+    header.intro-header {
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('/img/header_img/galaxy-ngc-3190-wallpaper-for-2880x1800-60-653.jpg'); */
+      
+    }
+
+    
+  </style>
+
+
+
+
+
+<header class="intro-header">
+  <!-- Signature -->
+  <div id="signature">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#前端" title="前端">前端</a>
+              
+              <a class="tag" href="/tags/#JavaScript" title="JavaScript">JavaScript</a>
+              
+            </div>
+            <h1>深入JavaScript学习之路（二）JavaScript中的类</h1>
+            <h2 class="subheading">红宝书读书笔记 第八章 p205</h2>
+            <span class="meta">
+              Posted by cos on
+              2022-03-17
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              Estimated Reading Time <span class="post-count">14</span> Minutes
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              Words <span class="post-count">3.6k</span> In Total
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- waveoverlay start -->
+  <div class="preview-overlay">
+    <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+      </defs>
+      <g class="preview-parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill=var(--gentle-wave1)></use>
+        <use xlink:href="#gentle-wave" x="48" y="3" fill=var(--gentle-wave2)></use>
+        <use xlink:href="#gentle-wave" x="48" y="5" fill=var(--gentle-wave3)></use>
+        <use xlink:href="#gentle-wave" x="48" y="7" fill=var(--gentle-wave)></use>
+      </g>
+    </svg>
+  </div>
+  <!-- waveoverlay end -->
+  
+
+</header>
+
+
+
+		<!-- Main Content (Post contains
+	Pager、
+	tip、
+	socialshare、
+	gitalk、gitment、disqus-comment、
+	Catalog、
+	Sidebar、
+	Featured-Tags、
+	Friends Blog、
+	anchorjs、
+	) -->
+		<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <p>上一节都是基于ES5的特性来模拟实现类似于类class的行为，不难看出这些方法各有各自的问题，实现继承的代码也显得非常冗长和混乱。因此，<code>ES6</code> 中新引入的 <code>class</code> 关键字具备了正式定义类的能力，它实际上是一个<strong>语法糖</strong>，背后使用的仍然是原型和构造函数的概念。</p>
+<h1>类定义</h1>
+<p>类声明与类表达式两种定义方法，都使用 <code>class</code> 关键字</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 类声明</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Person</span> &#123;&#125; 	</span><br><span class="line"></span><br><span class="line"><span class="comment">// 类表达式</span></span><br><span class="line"><span class="keyword">const</span> <span class="title class_">Animal</span> = <span class="keyword">class</span> &#123;&#125;</span><br></pre></td></tr></table></figure>
+<p>与函数表达式类似，<strong>类表达式在它们被求值前也不能引用</strong>。<br>
+但不同之处在于</p>
+<ul>
+<li><strong>函数声明可以提升，而类定义不能提升</strong></li>
+<li>函数受 <strong>函数作用域</strong> 限制，类受 <strong>块作用域</strong> 限制</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 函数声明可以提升，而类定义不能提升*</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">FunctionExpression</span>); <span class="comment">// undefined </span></span><br><span class="line"><span class="keyword">var</span> <span class="title class_">FunctionExpression</span> = <span class="keyword">function</span>(<span class="params"></span>) &#123;&#125;; </span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">FunctionExpression</span>); <span class="comment">// function() &#123;&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">ClassExpression</span>); <span class="comment">// undefined </span></span><br><span class="line"><span class="keyword">var</span> <span class="title class_">ClassExpression</span> = <span class="keyword">class</span> &#123;&#125;; </span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">ClassExpression</span>); <span class="comment">// class &#123;&#125; </span></span><br><span class="line"><span class="comment">// 函数受函数作用域限制，类受块作用域限制</span></span><br><span class="line">&#123; </span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">FunctionDeclaration</span>(<span class="params"></span>) &#123;&#125; </span><br><span class="line">    <span class="keyword">class</span> <span class="title class_">ClassDeclaration</span> &#123;&#125; </span><br><span class="line">&#125; </span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">FunctionDeclaration</span>); <span class="comment">// FunctionDeclaration() &#123;&#125; </span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">ClassDeclaration</span>); <span class="comment">// ReferenceError: ClassDeclaration is not defined</span></span><br></pre></td></tr></table></figure>
+<h2 id="类构成">类构成</h2>
+<p>类可以包括以下方法，但都不是必须的，空的类定义仍然有效。</p>
+<ul>
+<li>构造函数（constructor）</li>
+<li>获取函数及设置函数（get和set）</li>
+<li>静态类方法（static）</li>
+<li>其他实例方法</li>
+</ul>
+<p>默认情况下，类定义中的代码都在 <strong>严格模式</strong> 下执行。<br>
+首字母大写这个就不必多说了，可以用于区分通过他创建的实例</p>
+<p><strong>类表达式</strong>的<strong>名称</strong>是<strong>可选</strong>的。在把类表达式赋值给变量后，可以通过 <code>name</code> 属性取得类表达式的名称字符串。但不能在类表达式作用域外部访问这个标识符。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="title class_">Person</span> = <span class="keyword">class</span> <span class="title class_">PersonName</span> &#123; </span><br><span class="line">    <span class="title function_">identify</span>(<span class="params"></span>) &#123; </span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Person</span>.<span class="property">name</span>, <span class="title class_">PersonName</span>.<span class="property">name</span>); </span><br><span class="line">    &#125; </span><br><span class="line">&#125; </span><br><span class="line"><span class="keyword">let</span> p = <span class="keyword">new</span> <span class="title class_">Person</span>(); </span><br><span class="line">p.<span class="title function_">identify</span>(); <span class="comment">// PersonName PersonName </span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Person</span>.<span class="property">name</span>); <span class="comment">// PersonName </span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">PersonName</span>); <span class="comment">// ReferenceError: PersonName is not defined </span></span><br></pre></td></tr></table></figure>
+<h1>类构造函数</h1>
+<p><code>constructor</code> 关键字用于在类定义块内部<strong>创建类的构造函数</strong>。</p>
+<ul>
+<li><code>constructor</code> 会告诉解释器：使用 <code>new</code> 操作符创建类的新实例时，应该<strong>调用这个函数。</strong></li>
+<li>构造函数的定义<strong>不是必需</strong>的，<strong>不定义构造函数</strong>相当于将构造函数<strong>定义为空函数</strong>。</li>
+</ul>
+<h2 id="1、实例化">1、实例化</h2>
+<p>constructor函数实际上也是个语法糖，他让 JS 解释器知道使用 <code>new</code> 来定义类的一个实例时应使用 <code>constructor</code> 函数进行实例化。</p>
+<p>让我们复习一下使用 <code>new</code> 调用构造函数所执行的操作：</p>
+<ul>
+<li>在内存中创建一个新对象 <code> let obj = new Object()</code></li>
+<li>将新对象内部的 <code>[[Prototype]]</code> 赋值为构造函数的 <code>prototype</code>  <code> obj.__proto__ = constructor.prototype;</code></li>
+<li>构造函数内部的 <code>this</code> 指向这个新对象</li>
+<li>执行这个构造函数内部代码
+<ul>
+<li>上述两步 相当于 <code>let res = contructor.apply(obj,  args)</code></li>
+</ul>
+</li>
+<li>若构造函数返回 <strong>非空对象</strong>， 则<strong>返回该对象</strong> <code>res</code>；否则，返回刚创建的新对象 <code>obj</code>
+<ul>
+<li><code>return typeof  res === 'object' ? res: obj;</code></li>
+</ul>
+</li>
+</ul>
+<p>类实例化时传入的参数会作为<strong>构造函数的参数</strong>，若不需要参数，则类名后面的括号也是可选的 可以直接 <code>new Person</code></p>
+<p>类构造函数会在执行之后返回一个对象，这个对象会被用作实例化的对象。<br>
+注意：若构造函数返回的这个对象 <code>res</code> 是一个非空对象，且这个对象与new中第一步新建的对象<code>obj</code>无关系，则新建的对象会被回收哦，而且通过 <code>instanceof</code> 检测是无法检测出跟该类有关联，因为并没有修改原型指针。</p>
+<h2 id="2、类的本质？">2、类的本质？</h2>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Person</span> &#123;&#125; </span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Person</span>); <span class="comment">// class Person &#123;&#125; </span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="keyword">typeof</span> <span class="title class_">Person</span>); <span class="comment">// function</span></span><br></pre></td></tr></table></figure>
+<p>是函数！前面也说到了，它本质上就是一个语法糖，所以它具有跟函数一样的行为。<br>
+可以向其他对象或函数引用一样将其当作参数传递，也可以立即实例化（类似函数表达式的立即执行）</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 类可以像函数一样在任何地方定义，比如在数组中</span></span><br><span class="line"><span class="keyword">let</span> classList = [ </span><br><span class="line">	<span class="keyword">class</span> &#123; </span><br><span class="line">		<span class="title function_">constructor</span>(<span class="params">id</span>) &#123; </span><br><span class="line">			<span class="variable language_">this</span>.<span class="property">id_</span> = id; </span><br><span class="line">			<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`instance <span class="subst">$&#123;<span class="variable language_">this</span>.id_&#125;</span>`</span>); </span><br><span class="line">		&#125; </span><br><span class="line">	&#125; </span><br><span class="line">]; </span><br><span class="line"><span class="keyword">function</span> <span class="title function_">createInstance</span>(<span class="params">classDefinition, id</span>) &#123; </span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">new</span> <span class="title function_">classDefinition</span>(id); </span><br><span class="line">&#125; </span><br><span class="line"><span class="keyword">let</span> foo = <span class="title function_">createInstance</span>(classList[<span class="number">0</span>], <span class="number">3141</span>); <span class="comment">// instance 3141 </span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 立即执行</span></span><br><span class="line"><span class="keyword">let</span> p = <span class="keyword">new</span> <span class="keyword">class</span> <span class="title class_">Foo</span> &#123; </span><br><span class="line">	<span class="title function_">constructor</span>(<span class="params">x</span>) &#123; </span><br><span class="line">		<span class="variable language_">console</span>.<span class="title function_">log</span>(x); </span><br><span class="line">	&#125; </span><br><span class="line">&#125;(<span class="string">&#x27;bar&#x27;</span>); <span class="comment">// bar </span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(p); <span class="comment">// Foo &#123;&#125; </span></span><br></pre></td></tr></table></figure>
+<h1>实例、原型和类成员</h1>
+<p>类可以非常方便的定义以下三种成员，跟其它语言相似。</p>
+<ul>
+<li>实例上的成员</li>
+<li>原型上的成员</li>
+<li>类本身的成员（静态类成员）</li>
+</ul>
+<h2 id="实例成员">实例成员</h2>
+<p>在<code>constructor</code> 中可以通过this为新创建的实例添加自有属性，每个实例是不会共享这里的属性的。</p>
+<ul>
+<li>ps：在类块中直接写的成员也会成为实例属性</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Person</span> &#123; </span><br><span class="line">	sex = <span class="string">&#x27;女&#x27;</span></span><br><span class="line">	age = <span class="number">21</span></span><br><span class="line">	<span class="title function_">constructor</span>(<span class="params"></span>) &#123; </span><br><span class="line">		<span class="comment">// 这个例子先使用对象包装类型定义一个字符串</span></span><br><span class="line">		<span class="comment">// 为的是在下面测试两个对象的相等性</span></span><br><span class="line">		<span class="variable language_">this</span>.<span class="property">name</span> = <span class="keyword">new</span> <span class="title class_">String</span>(<span class="string">&#x27;Jack&#x27;</span>); </span><br><span class="line">		<span class="variable language_">this</span>.<span class="property">sayName</span> = <span class="function">() =&gt;</span> <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>.<span class="property">name</span>); </span><br><span class="line">		<span class="variable language_">this</span>.<span class="property">nicknames</span> = [<span class="string">&#x27;Jake&#x27;</span>, <span class="string">&#x27;J-Dog&#x27;</span>] </span><br><span class="line">	&#125; </span><br><span class="line">&#125; </span><br><span class="line"><span class="keyword">let</span> p1 = <span class="keyword">new</span> <span class="title class_">Person</span>(), </span><br><span class="line"> p2 = <span class="keyword">new</span> <span class="title class_">Person</span>(); </span><br><span class="line">p1.<span class="title function_">sayName</span>(); <span class="comment">// Jack </span></span><br><span class="line">p2.<span class="title function_">sayName</span>(); <span class="comment">// Jack </span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(p1.<span class="property">name</span> === p2.<span class="property">name</span>); <span class="comment">// false </span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(p1.<span class="property">sayName</span> === p2.<span class="property">sayName</span>); <span class="comment">// false </span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(p1.<span class="property">nicknames</span> === p2.<span class="property">nicknames</span>); <span class="comment">// false </span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(p1.<span class="property">sex</span>, p1.<span class="property">age</span>) <span class="comment">// 女 21</span></span><br></pre></td></tr></table></figure>
+<h2 id="原型成员">原型成员</h2>
+<p>将在类块中定义的方法作为原型方法（在所有实例中共享）</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Person</span> &#123; </span><br><span class="line">    <span class="title function_">constructor</span>(<span class="params"></span>) &#123; </span><br><span class="line">        <span class="comment">// 添加到 this 的所有内容都会存在于不同的实例上</span></span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">locate</span> = <span class="function">() =&gt;</span> <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;instance&#x27;</span>); </span><br><span class="line">    &#125; </span><br><span class="line">    <span class="comment">// 在类块中定义的所有内容都会定义在类的原型上</span></span><br><span class="line">    <span class="title function_">locate</span>(<span class="params"></span>) &#123; </span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;prototype&#x27;</span>); </span><br><span class="line">    &#125; </span><br><span class="line">&#125; </span><br><span class="line"><span class="keyword">let</span> p = <span class="keyword">new</span> <span class="title class_">Person</span>(); </span><br><span class="line">p.<span class="title function_">locate</span>(); <span class="comment">// instance </span></span><br><span class="line"><span class="title class_">Person</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="title function_">locate</span>(); <span class="comment">// prototype </span></span><br></pre></td></tr></table></figure>
+<p>类定义也支持获取和设置访问器。语法与行为跟普通对象一样：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Person</span> &#123; </span><br><span class="line">	sex = <span class="string">&#x27;女&#x27;</span></span><br><span class="line">	age = <span class="number">21</span></span><br><span class="line">	<span class="title function_">constructor</span>(<span class="params"></span>) &#123; </span><br><span class="line">		<span class="variable language_">this</span>.<span class="property">sayName</span> = <span class="function">() =&gt;</span> <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>.<span class="property">name</span>); </span><br><span class="line">		<span class="variable language_">this</span>.<span class="property">nicknames</span> = [<span class="string">&#x27;Jake&#x27;</span>, <span class="string">&#x27;J-Dog&#x27;</span>] </span><br><span class="line">	&#125;</span><br><span class="line">    <span class="keyword">set</span> <span class="title function_">name</span>(<span class="params">newName</span>) &#123; </span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">name_</span> = newName; </span><br><span class="line">    &#125; </span><br><span class="line">    <span class="keyword">get</span> <span class="title function_">name</span>() &#123; </span><br><span class="line">        <span class="keyword">return</span> <span class="variable language_">this</span>.<span class="property">name_</span>; </span><br><span class="line">    &#125; </span><br><span class="line">&#125; </span><br><span class="line"><span class="keyword">let</span> p = <span class="keyword">new</span> <span class="title class_">Person</span>(); </span><br><span class="line">p.<span class="property">name</span> = <span class="string">&#x27;cosine&#x27;</span>; </span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(p.<span class="property">name</span>); <span class="comment">// cosine </span></span><br></pre></td></tr></table></figure>
+<h2 id="静态类方法">静态类方法</h2>
+<p>静态类成员在类定义中使用 <code>static</code> 关键字作为前缀。在静态成员中，<code>this</code> 引用类自身。可以通过类名.方法名直接访问</p>
+<h2 id="非函数原型和类成员">非函数原型和类成员</h2>
+<p>虽然类定义并不显式支持在原型或类上添加成员数据，但在类定义外部，可以手动添加：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 在类上定义数据成员</span></span><br><span class="line"><span class="title class_">Person</span>.<span class="property">greeting</span> = <span class="string">&#x27;My name is&#x27;</span>; </span><br><span class="line"><span class="comment">// 在原型上定义数据成员</span></span><br><span class="line"><span class="title class_">Person</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">name</span> = <span class="string">&#x27;Jake&#x27;</span>;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>但是不建议这么做，在原型和类上添加可变数据成员是一种反模式。一般来说，对象实例应该独自拥有通过 <code>this</code> 引用的数据</li>
+</ul>
+<h2 id="迭代器与生成器方法">迭代器与生成器方法</h2>
+<p>类定义语法支持在原型和类本身上定义生成器方法：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Person</span> &#123; </span><br><span class="line">	<span class="comment">// 在原型上定义生成器方法</span></span><br><span class="line">	*<span class="title function_">createNicknameIterator</span>(<span class="params"></span>) &#123; </span><br><span class="line">		<span class="keyword">yield</span> <span class="string">&#x27;cosine1&#x27;</span>; </span><br><span class="line">		<span class="keyword">yield</span> <span class="string">&#x27;cosine2&#x27;</span>; </span><br><span class="line">		<span class="keyword">yield</span> <span class="string">&#x27;cosine3&#x27;</span>; </span><br><span class="line">	&#125; </span><br><span class="line">	<span class="comment">// 在类上定义生成器方法</span></span><br><span class="line">	<span class="keyword">static</span> *<span class="title function_">createJobIterator</span>(<span class="params"></span>) &#123; </span><br><span class="line">		<span class="keyword">yield</span> <span class="string">&#x27;bytedance&#x27;</span>; </span><br><span class="line">		<span class="keyword">yield</span> <span class="string">&#x27;mydream&#x27;</span>; </span><br><span class="line">		<span class="keyword">yield</span> <span class="string">&#x27;bytedance mydream!&#x27;</span>; </span><br><span class="line">	&#125; </span><br><span class="line">&#125; </span><br><span class="line"><span class="keyword">let</span> jobIter = <span class="title class_">Person</span>.<span class="title function_">createJobIterator</span>(); </span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(jobIter.<span class="title function_">next</span>().<span class="property">value</span>); <span class="comment">// bytedance </span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(jobIter.<span class="title function_">next</span>().<span class="property">value</span>); <span class="comment">// mydream </span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(jobIter.<span class="title function_">next</span>().<span class="property">value</span>); <span class="comment">// bytedance mydream!</span></span><br><span class="line"><span class="keyword">let</span> p = <span class="keyword">new</span> <span class="title class_">Person</span>(); </span><br><span class="line"><span class="keyword">let</span> nicknameIter = p.<span class="title function_">createNicknameIterator</span>(); </span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(nicknameIter.<span class="title function_">next</span>().<span class="property">value</span>); <span class="comment">// cosine1 </span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(nicknameIter.<span class="title function_">next</span>().<span class="property">value</span>); <span class="comment">// cosine2 </span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(nicknameIter.<span class="title function_">next</span>().<span class="property">value</span>); <span class="comment">// cosine3</span></span><br></pre></td></tr></table></figure>
+<p>因为支持生成器方法，所以可以通过添加一个默认的迭代器，把类实例变成可迭代对象</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">People</span> &#123; </span><br><span class="line">    <span class="title function_">constructor</span>(<span class="params"></span>) &#123; </span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">nicknames</span> = [<span class="string">&#x27;cosine1&#x27;</span>, <span class="string">&#x27;cosine2&#x27;</span>, <span class="string">&#x27;cosine3&#x27;</span>]; </span><br><span class="line">    &#125; </span><br><span class="line">    *[<span class="title class_">Symbol</span>.<span class="property">iterator</span>]() &#123; </span><br><span class="line">        <span class="keyword">yield</span> *<span class="variable language_">this</span>.<span class="property">nicknames</span>.<span class="title function_">entries</span>(); </span><br><span class="line">    &#125; </span><br><span class="line">&#125; </span><br><span class="line"><span class="keyword">let</span> workers = <span class="keyword">new</span> <span class="title class_">People</span>(); </span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> [idx, nickname] <span class="keyword">of</span> workers) &#123; </span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(idx, nickname); </span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 0 cosine1</span></span><br><span class="line"><span class="comment">// 1 cosine2</span></span><br><span class="line"><span class="comment">// 2 cosine3</span></span><br></pre></td></tr></table></figure>
+<h1>继承</h1>
+<p>ES 6最出色的一点就是原生支持了类继承机制，是之前原型链的一个语法糖</p>
+<h2 id="继承基础">继承基础</h2>
+<p>ES6 类支持<strong>单继承</strong>，使用 <code>extends</code> 关键字，可以继承一个类，也可以继承普通的构造函数（保持向后兼容）</p>
+<ul>
+<li>派生类可以通过原型链访问到类和原型上定义的方法</li>
+<li><code>this</code> 的值会反映调用相应方法的实例或者类。</li>
+<li><code>extends</code> 关键字也可以在类表达式中使用</li>
+</ul>
+<h2 id="构造函数、HomeObject-和-super">构造函数、HomeObject 和 super()</h2>
+<ul>
+<li>派生类的方法可以通过 <code>super</code> 关键字引用它们的原型
+<ul>
+<li>只能在派生类中使用</li>
+<li>仅限于<strong>类构造函数</strong>、<strong>实例方法</strong>和<strong>静态方法</strong>内部</li>
+<li>在类构造函数中使用 <code>super</code> 可以调用父类构造函数。</li>
+</ul>
+</li>
+<li><code>[[HomeObject]]</code>
+<ul>
+<li>ES6 给<strong>类构造函数</strong>和<strong>静态方法</strong>添加了内部特性 <code>[[HomeObject]]</code></li>
+<li>指向<strong>定义该方法的对象</strong>的指针，这个指针是自动赋值的，而且只能在 JavaScript 引擎内部访问。</li>
+</ul>
+</li>
+<li><code>super</code> 始终会定义为 <code>[[HomeObject]]</code> 的原型。</li>
+</ul>
+<p>在使用 super 时要注意几个问题</p>
+<ul>
+<li><code>super</code> 只能在 <strong>派生类的构造函数和静态方法</strong>中使用</li>
+<li>不能单独引用 <code>super</code> 关键字，要么用它调用构造函数，要么用它引用静态方法</li>
+<li>调用 <code>super()</code> 会调用父类构造函数，并将<strong>返回的实例</strong>赋值给 <code>this</code>，所以不能在调用 <code>super()</code> 之前引用 <code>this</code></li>
+<li>需要给父类构造函数传参，则需要手动将其传入<code>super</code></li>
+<li>如果<strong>没有定义类构造函数</strong>，在实例化派生类时会调用 <code>super()</code>，而且会<strong>传入所有传给派生类的参数</strong></li>
+<li>如果在派生类中显式定义了构造函数，则要么必须在其中调用 <code>super()</code>，要么必须显式的返回一个对象。</li>
+</ul>
+<h2 id="抽象基类">抽象基类</h2>
+<p>抽象基类也就是一种<strong>可供其他类继承</strong>，但<strong>本身不会被实例化</strong>的类。在其他语言中也有这种概念。虽然 ECMAScript 没有专门支持这种类的语法 ，但通过 <code>new.target</code> 也很容易实现</p>
+<ul>
+<li><code>new.target</code> 保存通过 <code>new</code> 关键字调用的类或函数</li>
+<li>通过在实例化时检测 <code>new.target</code> 是不是抽象基类，可以<strong>阻止对抽象基类的实例化</strong></li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 抽象基类 </span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Vehicle</span> &#123; </span><br><span class="line">    <span class="title function_">constructor</span>(<span class="params"></span>) &#123; </span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="keyword">new</span>.<span class="property">target</span>); </span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">new</span>.<span class="property">target</span> === <span class="title class_">Vehicle</span>) &#123; </span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">Error</span>(<span class="string">&#x27;Vehicle cannot be directly instantiated&#x27;</span>); </span><br><span class="line">        &#125; </span><br><span class="line">    &#125; </span><br><span class="line">&#125; </span><br><span class="line"><span class="comment">// 派生类</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Bus</span> <span class="keyword">extends</span> <span class="title class_ inherited__">Vehicle</span> &#123;&#125; </span><br><span class="line"><span class="keyword">new</span> <span class="title class_">Bus</span>(); <span class="comment">// class Bus &#123;&#125; </span></span><br><span class="line"><span class="keyword">new</span> <span class="title class_">Vehicle</span>(); <span class="comment">// class Vehicle &#123;&#125; </span></span><br><span class="line"><span class="comment">// Error: Vehicle cannot be directly instantiated</span></span><br></pre></td></tr></table></figure>
+<p>通过在抽象基类的构造函数中进行检查，可以要求派生类必须定义某个方法。因为原型方法在调用原型类的构造函数之前就已经存在了，所以可以通过 this 关键字来检查相应的方法是否定义</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 抽象基类</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Vehicle</span> &#123; </span><br><span class="line">    <span class="title function_">constructor</span>(<span class="params"></span>) &#123; </span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">new</span>.<span class="property">target</span> === <span class="title class_">Vehicle</span>) </span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">Error</span>(<span class="string">&#x27;Vehicle cannot be directly instantiated&#x27;</span>); </span><br><span class="line">        <span class="keyword">if</span> (!<span class="variable language_">this</span>.<span class="property">foo</span>)</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">Error</span>(<span class="string">&#x27;Inheriting class must define foo()&#x27;</span>); </span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;success!&#x27;</span>); </span><br><span class="line">    &#125; </span><br><span class="line">&#125; </span><br><span class="line"><span class="comment">// 派生类</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Bus</span> <span class="keyword">extends</span> <span class="title class_ inherited__">Vehicle</span> &#123; <span class="title function_">foo</span>(<span class="params"></span>) &#123;&#125; &#125; </span><br><span class="line"><span class="comment">// 派生类</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Van</span> <span class="keyword">extends</span> <span class="title class_ inherited__">Vehicle</span> &#123;&#125; </span><br><span class="line"><span class="keyword">new</span> <span class="title class_">Bus</span>(); <span class="comment">// success! </span></span><br><span class="line"><span class="keyword">new</span> <span class="title class_">Van</span>(); <span class="comment">// Error: Inheriting class must define foo() </span></span><br></pre></td></tr></table></figure>
+<h2 id="继承内置类型">继承内置类型</h2>
+<p>ES6 类为继承内置引用类型提供了顺畅的机制，开发者可以方便地扩展内置类型，如下，向Array添加了一个洗牌算法的方法</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">SuperArray</span> <span class="keyword">extends</span> <span class="title class_ inherited__">Array</span> &#123; </span><br><span class="line">    <span class="title function_">shuffle</span>(<span class="params"></span>) &#123; </span><br><span class="line">        <span class="comment">// 加一个洗牌算法</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="variable language_">this</span>.<span class="property">length</span> - <span class="number">1</span>; i &gt; <span class="number">0</span>; i--) &#123; </span><br><span class="line">            <span class="keyword">const</span> j = <span class="title class_">Math</span>.<span class="title function_">floor</span>(<span class="title class_">Math</span>.<span class="title function_">random</span>() * (i + <span class="number">1</span>)); <span class="comment">//生成[0, i+1)的随机数</span></span><br><span class="line">            [<span class="variable language_">this</span>[i], <span class="variable language_">this</span>[j]] = [<span class="variable language_">this</span>[j], <span class="variable language_">this</span>[i]];    <span class="comment">// 交换两张牌</span></span><br><span class="line">        &#125; </span><br><span class="line">    &#125; </span><br><span class="line">&#125; </span><br><span class="line"><span class="keyword">let</span> a = <span class="keyword">new</span> <span class="title class_">SuperArray</span>(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>); </span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a <span class="keyword">instanceof</span> <span class="title class_">Array</span>); <span class="comment">// true </span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a <span class="keyword">instanceof</span> <span class="title class_">SuperArray</span>); <span class="comment">// true</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a); <span class="comment">// [1, 2, 3, 4, 5] </span></span><br><span class="line">a.<span class="title function_">shuffle</span>(); </span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a); <span class="comment">// 随机的新数组</span></span><br><span class="line">a.<span class="title function_">shuffle</span>(); </span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a); <span class="comment">// 随机的新数组</span></span><br></pre></td></tr></table></figure>
+<p>有些内置类型的方法会返回新实例。默认情况下，返回实例的类型与原始实例的类型是一致的，但如果想覆盖这个默认行为，则<strong>可以覆盖</strong> <code>Symbol.species</code> 访问器，这个访问器<strong>决定在创建返回的实例时使用的类</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">SuperArray</span> <span class="keyword">extends</span> <span class="title class_ inherited__">Array</span> &#123; </span><br><span class="line">    <span class="keyword">static</span> get [<span class="title class_">Symbol</span>.<span class="property">species</span>]() &#123; </span><br><span class="line">        <span class="keyword">return</span> <span class="title class_">Array</span>; </span><br><span class="line">    &#125; </span><br><span class="line">&#125; </span><br><span class="line"><span class="keyword">let</span> a1 = <span class="keyword">new</span> <span class="title class_">SuperArray</span>(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>); </span><br><span class="line"><span class="keyword">let</span> a2 = a1.<span class="title function_">filter</span>(<span class="function"><span class="params">x</span> =&gt;</span> !!(x%<span class="number">2</span>)) </span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a1); <span class="comment">// [1, 2, 3, 4, 5] </span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a2); <span class="comment">// [1, 3, 5] </span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a1 <span class="keyword">instanceof</span> <span class="title class_">SuperArray</span>, a1 <span class="keyword">instanceof</span> <span class="title class_">Array</span>); <span class="comment">// true true</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a2 <span class="keyword">instanceof</span> <span class="title class_">SuperArray</span>, a2 <span class="keyword">instanceof</span> <span class="title class_">Array</span>); <span class="comment">// false true</span></span><br></pre></td></tr></table></figure>
+<h2 id="类混入（多继承的模拟实现）">类混入（多继承的模拟实现）</h2>
+<p>将不同类的行为集中到一个类是一种常见的 JavaScript 模式。虽然 ES6 <strong>没有显式支持多类继承</strong>，但通过现有特性可以轻松地模拟这种行为。</p>
+<p>首先要注意以下两点：</p>
+<ul>
+<li>如果只是需要<strong>混入多个对象的属性</strong>，那么使用 <code>Object.assign()</code> 就可以了。
+<ul>
+<li><code>Object.assign()</code> 方法是为了专门为了混入对象行为而设计的。只有在需要<strong>混入类的行为</strong>时才有必要<strong>自己实现混入表达式</strong>。</li>
+</ul>
+</li>
+<li>很多 JavaScript 框架（特别是 React）已经<strong>抛弃混入模式</strong>，转向了组合模式
+<ul>
+<li>组合即是把方法提取到独立的类和辅助对象中，然后把它们组合起来，不使用继承。</li>
+<li>众所周知的软件设计原则：<strong>“组合胜过继承（composition over inheritance）。”</strong></li>
+</ul>
+</li>
+</ul>
+<p><code>extends</code> 关键字后面可以是一个 <strong>JavaScript 表达式</strong>。任何可以解析为一个类或一个构造函数的表达式都是<strong>有效</strong>的。这个表达式会在<strong>求值类定义时被求值</strong>，这就是类混入的原理</p>
+<p>如 Person 类需要组合类A、B、C，则需要某种机制实现 B 继承 A，C 继承 B，而 Person再继承C从而实现将A、B、C组合至这个超类中：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Vehicle</span> &#123;&#125; </span><br><span class="line"><span class="keyword">let</span> <span class="title function_">AMixin</span> = (<span class="params">Superclass</span>) =&gt; <span class="keyword">class</span> <span class="title class_">extends</span> <span class="title class_">Superclass</span> &#123; </span><br><span class="line">    <span class="title function_">afunc</span>(<span class="params"></span>) &#123; <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;A Mixin&#x27;</span>); &#125; </span><br><span class="line">&#125;; </span><br><span class="line"><span class="keyword">let</span> <span class="title function_">BMixin</span> = (<span class="params">Superclass</span>) =&gt; <span class="keyword">class</span> <span class="title class_">extends</span> <span class="title class_">Superclass</span> &#123; </span><br><span class="line">    <span class="title function_">bfunc</span>(<span class="params"></span>) &#123; <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;B Mixin&#x27;</span>); &#125; </span><br><span class="line">&#125;; </span><br><span class="line"><span class="keyword">let</span> <span class="title function_">CMixin</span> = (<span class="params">Superclass</span>) =&gt; <span class="keyword">class</span> <span class="title class_">extends</span> <span class="title class_">Superclass</span> &#123; </span><br><span class="line">    <span class="title function_">cfunc</span>(<span class="params"></span>) &#123; <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;C Mixin&#x27;</span>); &#125; </span><br><span class="line">&#125;; </span><br><span class="line"><span class="keyword">function</span> <span class="title function_">mixin</span>(<span class="params">BaseClass, ...Mixins</span>) &#123; </span><br><span class="line">    <span class="keyword">return</span> <span class="title class_">Mixins</span>.<span class="title function_">reduce</span>(<span class="function">(<span class="params">accumulator, current</span>) =&gt;</span> <span class="title function_">current</span>(accumulator), <span class="title class_">BaseClass</span>); </span><br><span class="line">&#125; </span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Bus</span> <span class="keyword">extends</span> <span class="title class_ inherited__">mixin</span>(<span class="title class_">Vehicle</span>, <span class="title class_">AMixin</span>, <span class="title class_">BMixin</span>, <span class="title class_">CMixin</span>) &#123;&#125; </span><br><span class="line"><span class="keyword">let</span> b = <span class="keyword">new</span> <span class="title class_">Bus</span>(); </span><br><span class="line">b.<span class="title function_">afunc</span>(); <span class="comment">// A Mixin </span></span><br><span class="line">b.<span class="title function_">bfunc</span>(); <span class="comment">// B Mixin </span></span><br><span class="line">b.<span class="title function_">cfunc</span>(); <span class="comment">// C Mixin </span></span><br></pre></td></tr></table></figure>
+<h1>小结</h1>
+<ul>
+<li>ECMAScript 6 新增的类很大程度上是基于既有原型机制的语法糖</li>
+<li>类的语法让开发者可以优雅地定义向后兼容的类</li>
+<li>类既可以继承内置类型，也可以继承自定义类型</li>
+<li>类有效地跨越了<strong>对象实例</strong>、<strong>对象原型</strong>和<strong>对象类</strong>之间的鸿沟</li>
+<li>通过 <strong>类混入</strong> 可以巧妙地实现类似多继承的效果，但不建议这么做，因为“组合胜过继承”</li>
+</ul>
+
+
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
+          
+          <li class="previous">
+            <a href="/cn/coding-train/leetcode/bytedance/bytedance-day11/cl1z6l4z30043c0usaeeog3ez" data-toggle="tooltip" data-placement="top" title="冲刺春招-精选笔面试66题大通关day11">&larr; Previous Post</a>
+          </li>
+          
+          
+          <li class="next">
+            <a href="/cn/coding-train/leetcode/bytedance/bytedance-day10/cl1z6l4z0003uc0us9u135i49" data-toggle="tooltip" data-placement="top" title="冲刺春招-精选笔面试66题大通关day10">Next Post &rarr;</a>
+          </li>
+          
+        </ul>
+
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    
+      如果您喜欢此博客或发现它对您有用，则欢迎对此发表评论。 也欢迎您共享此博客，以便更多人可以参与。 如果博客中使用的图像侵犯了您的版权，请与作者联系以将其删除。 谢谢 ！
+    
+  </p>
+</div>
+<!-- tip end -->
+
+        <!-- tip end -->
+        
+
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=深入JavaScript学习之路（二）JavaScript中的类&body=Hi,I found this website and thought you might like it https://ysx.cosine.ren/cn/js-learning-2/cl1z6l54600mhc0us32b3bynq">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+        <!-- Sharing End -->
+        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+  <!-- gitalk start -->
+  <!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
+
+  <div id="gitalk-container"></div>
+
+  
+    <!-- <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.js"></script> -->
+    <script src="/js/comment/gitalk.js"></script>
+  
+
+  <script>
+    var gitalk = new Gitalk({
+      clientID: '2f50b376c49e65b70db0',
+      clientSecret: '5bf5a8b7b0a9a22194ee1f0ee1e58dac2e19a359',
+      repo: 'yusixian.github.io',
+      owner: 'yusixian',
+      admin: 'yusixian',
+      id: 'Thu Mar 17 2022 23:50:52 GMT+0800', // Ensure uniqueness and length less than 50
+      distractionFreeMode: false, // Facebook-like distraction free mode
+      perPage: 10,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      language: 'zh-CN',
+      proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'
+    });
+    gitalk.render('gitalk-container');
+
+    var gtFolded = () => {
+      setTimeout(function () {
+        let markdownBody = document.getElementsByClassName("markdown-body");
+        let list = Array.from(markdownBody);
+        list.forEach(item => {
+          if (item.clientHeight > 250) {
+            item.classList.add('gt-comment-body-folded');
+            item.style.maxHeight = '250px';
+            item.title = 'Click to Expand';
+            item.onclick = function () {
+              item.classList.remove('gt-comment-body-folded');
+              item.style.maxHeight = '';
+              item.title = '';
+              item.onclick = null;
+            };
+          }
+        })
+      }, 800);
+    }
+  </script>
+
+  <!-- gitalk end -->
+
+
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">目录</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">类定义</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%B1%BB%E6%9E%84%E6%88%90"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">类构成</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">类构造函数</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#1%E3%80%81%E5%AE%9E%E4%BE%8B%E5%8C%96"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">1、实例化</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#2%E3%80%81%E7%B1%BB%E7%9A%84%E6%9C%AC%E8%B4%A8%EF%BC%9F"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">2、类的本质？</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">实例、原型和类成员</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%AE%9E%E4%BE%8B%E6%88%90%E5%91%98"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">实例成员</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%8E%9F%E5%9E%8B%E6%88%90%E5%91%98"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">原型成员</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E9%9D%99%E6%80%81%E7%B1%BB%E6%96%B9%E6%B3%95"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text">静态类方法</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E9%9D%9E%E5%87%BD%E6%95%B0%E5%8E%9F%E5%9E%8B%E5%92%8C%E7%B1%BB%E6%88%90%E5%91%98"><span class="toc-nav-number">3.4.</span> <span class="toc-nav-text">非函数原型和类成员</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%94%9F%E6%88%90%E5%99%A8%E6%96%B9%E6%B3%95"><span class="toc-nav-number">3.5.</span> <span class="toc-nav-text">迭代器与生成器方法</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">继承</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%BB%A7%E6%89%BF%E5%9F%BA%E7%A1%80"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">继承基础</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E3%80%81HomeObject-%E5%92%8C-super"><span class="toc-nav-number">4.2.</span> <span class="toc-nav-text">构造函数、HomeObject 和 super()</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%8A%BD%E8%B1%A1%E5%9F%BA%E7%B1%BB"><span class="toc-nav-number">4.3.</span> <span class="toc-nav-text">抽象基类</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%BB%A7%E6%89%BF%E5%86%85%E7%BD%AE%E7%B1%BB%E5%9E%8B"><span class="toc-nav-number">4.4.</span> <span class="toc-nav-text">继承内置类型</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%B1%BB%E6%B7%B7%E5%85%A5%EF%BC%88%E5%A4%9A%E7%BB%A7%E6%89%BF%E7%9A%84%E6%A8%A1%E6%8B%9F%E5%AE%9E%E7%8E%B0%EF%BC%89"><span class="toc-nav-number">4.5.</span> <span class="toc-nav-text">类混入（多继承的模拟实现）</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">小结</span></a></li></ol>
+        
+        </div>
+      </aside>
+    
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">特色标签</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#前端" title="前端">前端</a>
+            
+            <a class="tag" href="/tags/#JavaScript" title="JavaScript">JavaScript</a>
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr>
+        <h5>友链</h5>
+        <ul class="list-inline">
+
+          
+          <li>
+            <a href="https://sadose.github.io/" target="_blank">大森的博客</a>
+          </li>
+          
+          <li>
+            <a href="https://www.xiaocao.cloud/" target="_blank">小曹同学的百草园</a>
+          </li>
+          
+          <li>
+            <a href="https://gelxgx.github.io/blog/" target="_blank">瘦虎的博客</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
+
+
+		<!-- Footer (contains ThemeColor、viewer) -->
+		<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center">
+          
+
+          
+            <li>
+              <a target="_blank" href="https://github.com/yusixian">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+            <li>
+              <a target="_blank" href="https://www.zhihu.com/people/qi-jiu-en">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa  fa-stack-1x fa-inverse">知</i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+
+        </ul>
+        <p class="copyright text-muted">
+          Copyright &copy;
+          cos
+          2022
+          <br>
+          Theme by
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
+          <span style="display: inline-block; margin: 0 5px;">
+            <i class="fa fa-heart"></i>
+          </span>
+          re-Ported by
+          <a target="_blank" rel="noopener" href="https://v-vincen.life/">Live My Life</a>
+          |
+          <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=V-Vincen&repo=V-Vincen.github.io&type=star&count=true"></iframe>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a id="rocket" href="#top" class=""></a>
+
+
+  <!-- jQuery -->
+  <script type="text/javascript" src="/js/jquery.min.js"></script>
+  <!-- Bootstrap Core JavaScript -->
+  <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+  <!-- Custom Theme JavaScript -->
+  <script type="text/javascript" src="/js/hux-blog.min.js"></script>
+  <!-- catalog -->
+  <script async="true" type="text/javascript" src="/js/catalog.js"></script>
+  <!-- totop(rocket) -->
+  <script async="true" type="text/javascript" src="/js/totop.js"></script>
+
+  
+    <!-- Busuanzi JavaScript -->
+    <script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <!-- Scroll start -->
+    <script async="async" type="text/javascript" src="/js/scroll.js"></script>
+    <!-- Scroll end -->
+  
+
+  
+
+  
+    <!-- Mouseclick -->
+    <script type="text/javascript" src="/js/mouseclick.js" content='❤,❤,❤,❤,❤,❤,❤,❤,❤' color='#ffa940,#f5222d,#fa541c,#FF99CC,#a8071a,#faad14,#1890ff,#eb2f96,#13c2c2'></script>
+  
+
+  
+    <!-- ribbon -->
+    <script type="text/javascript" src="/js/ribbonDynamic.js"></script>
+  
+
+  
+
+
+
+
+
+
+  <!-- viewer start -->
+  <!-- viewer start (Picture preview) -->
+  
+    <script async="async" type="text/javascript" src="/js/viewer/viewer.min.js"></script>
+    <script async="async" type="text/javascript" src="/js/viewer/pic-viewer.js"></script>
+  
+
+  <!-- viewer end -->
+
+
+<script>
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function (e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  // fastClick.js
+  async ("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+    var $nav = document.querySelector("nav");
+    if ($nav)
+      FastClick.attach($nav);
+    }
+  )
+</script>
+
+<!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
+https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+<!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
+
+<!-- jquery.tagcloud.js -->
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("https://ysx.cosine.ren/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
+
+
+		<!-- Search -->
+		
+		<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-9 col-md-offset-1"> -->
+      <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1 local-search-content">
+
+        <div class="local-search-header clearfix">
+
+          <div class="local-search-input-wrapper">
+            <span class="search-icon">
+              <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
+            </span>
+            <input autocomplete="off" placeholder="搜索..." type="text" id="local-search-input">
+          </div>
+        </div>
+        <div id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+    <script src="/js/ziploader.js"></script>
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+    // get search zip version
+    $.get('/searchVersion.json?t=' + (+new Date()), function (res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson() {
+      initLoad(['/search.flv'], {
+        loadOptions: {
+          success: function (obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function (e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions: {
+          'json': 'application/json'
+        }
+      })
+    }
+    // search function;
+    var searchFunc = function (search_id, content_id) {
+      'use strict';
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      // console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function () {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function (data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title
+              ? data.title.trim()
+              : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content
+              ? data.content.trim().replace(/<[^>]+>/g, "")
+              : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+
+            var date = data.date;
+            var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
+            var imgUrl = data.header_img;
+            
+
+
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function (keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0,
+                  position = [],
+                  index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+            // show search results
+            if (isMatch) {
+              // sort index by position of keyword
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+              // merge hits into slices
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+                  // move to next position of hit
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {hits: hits, start: start, end: end, searchTextCount: searchTextCountInSlice};
+              }
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if (start < 0) {
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if (end > content.length) {
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+              // sort slices in content by search text's count and hits' count
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+              // select top N slices in content
+              var upperBound = parseInt('1');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+              // highlight title and content
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+              var resultItem = '';
+
+              // if (slicesOfTitle.length != 0) {   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>"; } else {   resultItem += "<li><a target='_blank' href='" +
+              // articleUrl + "' class='search-result-title'>" + title + "</a>"; } slicesOfContent.forEach(function (slice) {   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) +
+              // "...</p></a>"; }); resultItem += "</li>";
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              } else {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              }
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
+              });
+              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
+
+              resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
+            }
+          })
+        };
+
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<div class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</div>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+      // remove loading animation
+      $('body').css('overflow', '');
+      proceedsearch();
+    }
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function (e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function (e) {
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 && $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      var _con = document.querySelector(".local-search-content");
+      if (_con) {
+        if (!_con.contains(e.target)) {
+          onPopupClose();
+        }
+      }
+    });
+  </script>
+
+
+		
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>

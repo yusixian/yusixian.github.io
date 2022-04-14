@@ -139,7 +139,7 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="http://yoursite-url/cn/coding-train/leetcode/offer/day10/">
+  <link rel="canonical" href="https://ysx.cosine.ren/cn/coding-train/leetcode/offer/day10/">
   <title>
     
       剑指offer day10  动态规划（中等） - cos的博客 - WA的一声就哭了
@@ -298,10 +298,6 @@
           
 
           <!-- LangSelect -->
-          
-          
-          
-          
           
         </ul>
       </div>
@@ -475,6 +471,7 @@
         <p>day10题目：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/ba-shu-zi-fan-yi-cheng-zi-fu-chuan-lcof/">剑指 Offer 46. 把数字翻译成字符串</a>、<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/zui-chang-bu-han-zhong-fu-zi-fu-de-zi-zi-fu-chuan-lcof/">剑指 Offer 48. 最长不含重复字符的子字符串</a></p>
 <p>知识点：字符串、动态规划、滑动窗口，难度为中等、中等</p>
 <p>学习计划链接：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/study-plan/lcof/?progress=7jn70jr">「剑指 Offer」 - 学习计划</a></p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -496,20 +493,18 @@
 </tr>
 </tbody>
 </table>
-<h1><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/ba-shu-zi-fan-yi-cheng-zi-fu-chuan-lcof/">剑指 Offer 46. 把数字翻译成字符串</a></h1>
-<p>给定一个数字，我们按照如下规则把它翻译为字符串：0 翻译成 “a” ，1 翻译成 “b”，……，11 翻译成 “l”，……，25 翻译成 “z”。一个数字可能有多个翻译。请编程实现一个函数，用来计算一个数字有多少种不同的翻译方法。</p>
+</div>
+<h1 id="剑指-Offer-46-把数字翻译成字符串"><a href="#剑指-Offer-46-把数字翻译成字符串" class="headerlink" title="剑指 Offer 46. 把数字翻译成字符串"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/ba-shu-zi-fan-yi-cheng-zi-fu-chuan-lcof/">剑指 Offer 46. 把数字翻译成字符串</a></h1><p>给定一个数字，我们按照如下规则把它翻译为字符串：0 翻译成 “a” ，1 翻译成 “b”，……，11 翻译成 “l”，……，25 翻译成 “z”。一个数字可能有多个翻译。请编程实现一个函数，用来计算一个数字有多少种不同的翻译方法。</p>
 <p><strong>示例 1:</strong></p>
 <figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入: <span class="number">12258</span></span><br><span class="line">输出: <span class="number">5</span></span><br><span class="line">解释: <span class="number">12258</span>有<span class="number">5</span>种不同的翻译，分别是<span class="string">&quot;bccfi&quot;</span>, <span class="string">&quot;bwfi&quot;</span>, <span class="string">&quot;bczi&quot;</span>, <span class="string">&quot;mcfi&quot;</span>和<span class="string">&quot;mzi&quot;</span></span><br></pre></td></tr></table></figure>
 <p><strong>提示：</strong></p>
 <ul>
 <li><code>0 &lt;= num &lt; 2^31</code></li>
 </ul>
-<h2 id="思路及代码">思路及代码</h2>
-<p>类似前些天刷的打家劫舍，状态若能跟前面的组合翻译，则 <code>dp[i] = dp[i-1]+dp[i-2]</code>（单独翻译+组合翻译），否则 <code>dp[i] = dp[i-1]</code>（单独翻译），同样可以用滚动数组优化。</p>
+<h2 id="思路及代码"><a href="#思路及代码" class="headerlink" title="思路及代码"></a>思路及代码</h2><p>类似前些天刷的打家劫舍，状态若能跟前面的组合翻译，则 <code>dp[i] = dp[i-1]+dp[i-2]</code>（单独翻译+组合翻译），否则 <code>dp[i] = dp[i-1]</code>（单独翻译），同样可以用滚动数组优化。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">number</span>&#125; <span class="variable">num</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">number</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> translateNum = <span class="keyword">function</span>(<span class="params">num</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span>(num &lt; <span class="number">10</span>) <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">    <span class="keyword">let</span> [p, q, res] = [<span class="number">0</span>, <span class="number">1</span>, <span class="number">1</span>]</span><br><span class="line">    num = num.<span class="title function_">toString</span>()</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">1</span>; i &lt; num.<span class="property">length</span>; ++i) &#123;</span><br><span class="line">        p = q</span><br><span class="line">        q = res</span><br><span class="line">        <span class="keyword">if</span>(i &gt; <span class="number">0</span> &amp;&amp; num[i-<span class="number">1</span>]+num[i] &gt;= <span class="string">&quot;10&quot;</span> &amp;&amp; num[i-<span class="number">1</span>]+num[i] &lt;= <span class="string">&quot;25&quot;</span>)</span><br><span class="line">            res += p</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/zui-chang-bu-han-zhong-fu-zi-fu-de-zi-zi-fu-chuan-lcof/">剑指 Offer 48. 最长不含重复字符的子字符串</a></h1>
-<p>请从字符串中找出一个最长的不包含重复字符的子字符串，计算该最长子字符串的长度。</p>
-<p><strong>示例 1:</strong></p>
+<h1 id="剑指-Offer-48-最长不含重复字符的子字符串"><a href="#剑指-Offer-48-最长不含重复字符的子字符串" class="headerlink" title="剑指 Offer 48. 最长不含重复字符的子字符串"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/zui-chang-bu-han-zhong-fu-zi-fu-de-zi-zi-fu-chuan-lcof/">剑指 Offer 48. 最长不含重复字符的子字符串</a></h1><p>请从字符串中找出一个最长的不包含重复字符的子字符串，计算该最长子字符串的长度。</p>
+<p><strong>示例 1:</strong></p>
 <figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">输入: &quot;abcabcbb&quot;</span></span><br><span class="line"><span class="section">输出: 3 </span></span><br><span class="line"><span class="section">解释: 因为无重复字符的最长子串是 &quot;abc&quot;，所以其长度为 3。</span></span><br></pre></td></tr></table></figure>
 <p><strong>示例 2:</strong></p>
 <figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">输入: &quot;bbbbb&quot;</span></span><br><span class="line"><span class="section">输出: 1</span></span><br><span class="line"><span class="section">解释: 因为无重复字符的最长子串是 &quot;b&quot;，所以其长度为 1。</span></span><br></pre></td></tr></table></figure>
@@ -520,8 +515,7 @@
 <li><code>s.length &lt;= 40000</code></li>
 </ul>
 <p>注意：本题与主站 3 题相同：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/">https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/</a></p>
-<h2 id="思路及代码-2">思路及代码</h2>
-<p>当时的思路是滑动窗口，进入窗口的字符若为重复（用hash存判断）的则将左侧窗口滑至该字符（并将hash中相应的key删除）同时记录长度，再继续滑动。</p>
+<h2 id="思路及代码-1"><a href="#思路及代码-1" class="headerlink" title="思路及代码"></a>思路及代码</h2><p>当时的思路是滑动窗口，进入窗口的字符若为重复（用hash存判断）的则将左侧窗口滑至该字符（并将hash中相应的key删除）同时记录长度，再继续滑动。</p>
 <ul>
 <li>现在改了改，可以不用删除，hash存下标，get的时候判断下是否位于l~r的区间中就好了</li>
 </ul>
@@ -538,7 +532,7 @@
           
           
           <li class="next">
-            <a href="/cn/note/cs-basics/编译原理实验一/" data-toggle="tooltip" data-placement="top" title="编译原理 实验一 词法分析器设计">Next Post &rarr;</a>
+            <a href="/cn/编译原理 实验一 词法分析器设计/" data-toggle="tooltip" data-placement="top" title="编译原理 实验一 词法分析器设计">Next Post &rarr;</a>
           </li>
           
         </ul>
@@ -587,7 +581,7 @@
       </a>
     </li>
     <li class="social-share-li">
-      <a target="_blank" class="social-share-icon" href="mailto:?subject=剑指offer day10  动态规划（中等）&body=Hi,I found this website and thought you might like it http://yoursite-url/cn/coding-train/leetcode/offer/day10/">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=剑指offer day10  动态规划（中等）&body=Hi,I found this website and thought you might like it https://ysx.cosine.ren/cn/coding-train/leetcode/offer/day10/">
         <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
       </a>
     </li>
@@ -675,7 +669,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">剑指 Offer 46. 把数字翻译成字符串</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%9D%E8%B7%AF%E5%8F%8A%E4%BB%A3%E7%A0%81"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">思路及代码</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">剑指 Offer 48. 最长不含重复字符的子字符串</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%9D%E8%B7%AF%E5%8F%8A%E4%BB%A3%E7%A0%81-2"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">思路及代码</span></a></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E5%89%91%E6%8C%87-Offer-46-%E6%8A%8A%E6%95%B0%E5%AD%97%E7%BF%BB%E8%AF%91%E6%88%90%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">剑指 Offer 46. 把数字翻译成字符串</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%9D%E8%B7%AF%E5%8F%8A%E4%BB%A3%E7%A0%81"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">思路及代码</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E5%89%91%E6%8C%87-Offer-48-%E6%9C%80%E9%95%BF%E4%B8%8D%E5%90%AB%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E7%9A%84%E5%AD%90%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">剑指 Offer 48. 最长不含重复字符的子字符串</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%9D%E8%B7%AF%E5%8F%8A%E4%BB%A3%E7%A0%81-1"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">思路及代码</span></a></li></ol></li></ol>
         
         </div>
       </aside>
@@ -873,10 +867,6 @@
   
 
   
-    <!-- LangSelect start -->
-    <script type="text/javascript" src="/js/langselect.js"></script>
-    <!-- LangSelect end -->
-  
 
   
     <!-- Mouseclick -->
@@ -935,7 +925,7 @@ https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0
 <!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
 
 <!-- jquery.tagcloud.js -->
-<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("http://yoursite-url/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("https://ysx.cosine.ren/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
 start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
 
 
@@ -1269,5 +1259,20 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
 </html>

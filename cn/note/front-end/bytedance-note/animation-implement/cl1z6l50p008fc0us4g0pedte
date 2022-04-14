@@ -1,0 +1,1821 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
+<head>
+  <!-- Google Analytics -->
+  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-xxxxxx-xx"></script>
+    <script type="text/javascript">
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-xxxxxx-xx');
+    </script>
+  
+
+  <!-- Baidu Tongji -->
+  
+    <script type="text/javascript">
+      // Originial
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  <!-- Baidu Push -->
+  
+    <script>
+      (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+      })();
+    </script>
+  
+
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <meta name="google-site-verification" content="lxDfCplOZbIzjhG34NuQBgu2gdyRlAtMB4utP5AgEBc"/>
+  <meta name="baidu-site-verification" content="PpzM9WxOJU"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="一个正在努力学习前端的程序媛qwq"/>
+  <meta name="keyword" content="前端, cos, blog, css, html, c++"/>
+  <link rel="shortcut icon" href="/img/avatar/cos.jpg"/>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
+
+  
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/beantech.min.css"/>
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="/css/highlight.css"/>
+    <link rel="stylesheet" href="/css/widget.css"/>
+    <link rel="stylesheet" href="/css/rocket.css"/>
+    <link rel="stylesheet" href="/css/signature.css"/>
+    <link rel="stylesheet" href="/css/catalog.css"/>
+    <link rel="stylesheet" href="/css/livemylife.css"/>
+
+    
+      <!-- wave start -->
+      <link rel="stylesheet" href="/css/wave.css"/>
+      <!-- wave end -->
+    
+
+    
+      <!-- top start (article top hot config) -->
+      <link rel="stylesheet" href="/css/top.css"/>
+      <!-- top end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="/css/scroll.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+      <!-- viewer start (Picture preview) -->
+      <link rel="stylesheet" href="/css/viewer.min.css"/>
+      <!-- viewer end -->
+    
+
+    
+      <!-- Search start -->
+      <link rel="stylesheet" href="/css/search.css"/>
+      <!-- Search end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="/css/themecolor.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+
+    
+      <!-- gitalk start -->
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"> -->
+      <link rel="stylesheet" href="/css/gitalk.css"/>
+      <!-- gitalk end -->
+    
+  
+
+  <!-- Custom Fonts -->
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+  <!-- Hux change font-awesome CDN to qiniu -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Hux Delete, sad but pending in China <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> <link
+  href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/ css'> -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+
+  <!-- ga & ba script hoook -->
+  <link rel="canonical" href="https://ysx.cosine.ren/cn/note/front-end/bytedance-note/animation-implement/cl1z6l50p008fc0us4g0pedte">
+  <title>
+    
+      【第二届青训营-寒假前端场】- 「前端动画实现」 - cos的博客 - WA的一声就哭了
+    
+  </title>
+<meta name="generator" content="Hexo 5.4.1"></head>
+
+
+<!-- hack iOS CSS :active style -->
+
+	<body ontouchstart="" class="body--light body--light">
+
+
+		<!-- ThemeColor -->
+		
+		<!-- ThemeColor -->
+<style type="text/css">
+  .body--light {
+    --light-mode: none;
+    --dark-mode: block;
+  }
+  .body--dark {
+    --light-mode: block;
+    --dark-mode: none;
+  }
+  i.mdui-icon.material-icons.light-mode {
+    display: var(--light-mode);
+  }
+  i.mdui-icon.material-icons.dark-mode {
+    display: var(--dark-mode);
+  }
+</style>
+<div class="toggle" onclick="document.body.classList.toggle('body--dark')">
+  <i class="mdui-icon material-icons light-mode"></i>
+  <i class="mdui-icon material-icons dark-mode"></i>
+</div>
+<script>
+  //getCookieValue
+  function getCookieValue(a) {
+    var b = document.cookie.match('(^|[^;]+)\\s*' + a + '\\s*=\\s*([^;]+)');
+    return b
+      ? b.pop()
+      : '';
+  }
+  let themeMode = 'light';
+  if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
+    let dbody = document.body.classList;
+    themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
+  }
+
+  //setCookieValue
+  var toggleBtn = document.querySelector(".toggle");
+  toggleBtn.addEventListener("click", function () {
+    var e = document.body.classList.contains("body--dark");
+    var cookieString = e
+      ? "dark"
+      : "light";
+    var exp = new Date();
+    exp.setTime(exp.getTime() + 3 * 24 * 60 * 60 * 1000); //3天过期
+    document.cookie = "sb-color-mode=" + cookieString + ";expires=" + exp.toGMTString() + ";path=/";
+  });
+</script>
+
+		
+
+		<!-- Gitter -->
+		
+		<!-- Gitter -->
+<!-- Docs:https://gitter.im/?utm_source=left-menu-logo -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'cosine_yu_blog/community'
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+		
+
+		<!-- Navigation (contains search)-->
+		<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">cos的博客</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- Known Issue, found by Hux: <nav>'s height woule be hold on by its content. so, when navbar scale out, the <nav> will cover tags. also mask any touch event of tags, unfortunately. -->
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/">首页</a>
+          </li>
+
+          
+          
+          
+          
+          <li>
+            <a href="/archive/">
+              
+              归档
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              标签
+              
+              
+            </a>
+          </li>
+          
+          
+
+          
+          <li>
+            <a class="popup-trigger">
+              <span class="search-icon"></span>搜索</a>
+          </li>
+          
+
+          <!-- LangSelect -->
+          
+        </ul>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+<!-- progress -->
+<div id="progress">
+  <div class="line" style="width: 0%;"></div>
+</div>
+
+<script>
+  // Drop Bootstarp low-performance Navbar Use customize navbar with high-quality material design animation in high-perf jank-free CSS3 implementation
+  var $body = document.body;
+  var $toggle = document.querySelector('.navbar-toggle');
+  var $navbar = document.querySelector('#huxblog_navbar');
+  var $collapse = document.querySelector('.navbar-collapse');
+
+  $toggle.addEventListener('click', handleMagic)
+
+  function handleMagic(e) {
+    if ($navbar.className.indexOf('in') > 0) {
+      // CLOSE
+      $navbar.className = " ";
+      // wait until animation end.
+      setTimeout(function() {
+        // prevent frequently toggle
+        if ($navbar.className.indexOf('in') < 0) {
+          $collapse.style.height = "0px"
+        }
+      }, 400)
+    } else {
+      // OPEN
+      $collapse.style.height = "auto"
+      $navbar.className += " in";
+    }
+  }
+</script>
+
+
+		<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
+		<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+
+  <style type="text/css">
+    .body--light {
+      /* intro-header */
+      --intro-header-background-image-url-home: url('/img/header_img/93604793_p0.jpg');
+      --intro-header-background-image-url-post: url('/img/header_img/lml_bg.jpg');
+      --intro-header-background-image-url-page: url('//img/header_img/lml_bg.jpg');
+    }
+    .body--dark {
+      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/93604793_p0.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/lml_bg.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('//img/header_img/lml_bg.jpg');
+    }
+
+    header.intro-header {
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('/img/header_img/lml_bg.jpg'); */
+      
+    }
+
+    
+  </style>
+
+
+
+
+
+<header class="intro-header">
+  <!-- Signature -->
+  <div id="signature">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#前端" title="前端">前端</a>
+              
+              <a class="tag" href="/tags/#动画" title="动画">动画</a>
+              
+              <a class="tag" href="/tags/#CSS" title="CSS">CSS</a>
+              
+            </div>
+            <h1>【第二届青训营-寒假前端场】- 「前端动画实现」</h1>
+            <h2 class="subheading">前端动画的基本原理、分类和如何实现前端动画JS函数封装</h2>
+            <span class="meta">
+              Posted by cos on
+              2022-01-21
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              Estimated Reading Time <span class="post-count">29</span> Minutes
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              Words <span class="post-count">7.2k</span> In Total
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- waveoverlay start -->
+  <div class="preview-overlay">
+    <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+      </defs>
+      <g class="preview-parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill=var(--gentle-wave1)></use>
+        <use xlink:href="#gentle-wave" x="48" y="3" fill=var(--gentle-wave2)></use>
+        <use xlink:href="#gentle-wave" x="48" y="5" fill=var(--gentle-wave3)></use>
+        <use xlink:href="#gentle-wave" x="48" y="7" fill=var(--gentle-wave)></use>
+      </g>
+    </svg>
+  </div>
+  <!-- waveoverlay end -->
+  
+
+</header>
+
+
+
+		<!-- Main Content (Post contains
+	Pager、
+	tip、
+	socialshare、
+	gitalk、gitment、disqus-comment、
+	Catalog、
+	Sidebar、
+	Featured-Tags、
+	Friends Blog、
+	anchorjs、
+	) -->
+		<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <h2 id="动画的基本原理">动画的基本原理</h2>
+<h3 id="动画是什么">动画是什么</h3>
+<blockquote>
+<p>动画是通过快速连续排列彼此差异极小的连续图像来制造运动错觉和变化错觉的过程。</p>
+<p>——维基百科</p>
+</blockquote>
+<ul>
+<li>快速</li>
+<li>连续排列</li>
+<li>彼此差异极小</li>
+<li>制造 <strong>“错觉”</strong> 的过程</li>
+</ul>
+<h3 id="动画发展史">动画发展史</h3>
+<p>如今的前端动画技术已经普及</p>
+<ol>
+<li>
+<p>常见的前端动画技术</p>
+<ul>
+<li>Sprite动画、CSS动画、JS动画、SVG动画和WebGL动画</li>
+</ul>
+</li>
+<li>
+<p>按应用分类</p>
+<ul>
+<li>UI动画、基于Web的游戏动画和动画数据可视化</li>
+</ul>
+</li>
+</ol>
+<p>GIF、Flash的出现，一度成为主流，也是在00年的前后，苹果公司认为Flash会导致CPU的负载，耗电加快，宣布全面放弃Flash，所有的苹果设备电池寿命都显著提高。而如今的web动画主要由CSS、JS动画为主。</p>
+<h3 id="计算机动画">计算机动画</h3>
+<p><strong>计算机图形学</strong></p>
+<p>计算机视觉的基础，涵盖点、线、面、体、场的数学构造方法。</p>
+<ul>
+<li>几何和图形数据的输入、存储和压缩。</li>
+<li>描述纹理、曲线、光影等算法。</li>
+<li>物体图形的数据输出（图形接口、动画技术），硬件和图形的交互技术。</li>
+<li>图形开发软件的相关技术标准。</li>
+</ul>
+<p><strong>计算机动画</strong> 是计算机图形学的分支，主要包含2D、3D动画。无论动画多么简单，始终需要定义两个基本状态，即<strong>开始状态</strong>和<strong>结束状态</strong>。没有它们，我们将无法定义<strong>插值状态</strong>，从而填补两者之间的空白。</p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/45af169412774ce685832db37df048dd~tplv-k3u1fbpfcp-watermark.image?" alt="1.gif"></p>
+<p>快速√ 连续排列 × 彼此差异极小× 制造 “错觉”×</p>
+<p>可以看到，上面这张动画只有快速，并没有制造错觉，这就不得不提到帧率这个概念了~~（打游戏的这个概念应该都熟）~~</p>
+<ul>
+<li>
+<p>帧：连续变换的多张画面，其中的每一幅画面都是一帧。</p>
+</li>
+<li>
+<p>帧率：用于度量一定时间段内的帧数，通常的测量单位是<strong>FPS（frame per second）</strong>。</p>
+</li>
+<li>
+<p>帧率与人眼：一般<strong>每秒10-12帧</strong>人会认为画面是<strong>连贯</strong>的，这个现象称为<strong>视觉暂留</strong>。对于一些电脑动画和游戏来说，低于 30 FPS 会感受到明显卡顿，目前主流的屏幕、显卡输出为60FPS，效果会明显更流畅。</p>
+</li>
+</ul>
+<p>那么接下来，填补起始点和结束点之间的空白，尝试让动画连贯。</p>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6918c4fc6f814e83947dd81d18fb16e4~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
+<p>空白的补全方式有以下两种</p>
+<ul>
+<li>补间动画
+<ul>
+<li>传统动画中，主画师绘制关键帧，交给清稿部门  ，清稿部门的补间动画师补充关键帧进行交付</li>
+<li>(类比到这里，前端动画的补间动画师由浏览器来担任，如<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/@keyframes"><code>@keyframes</code></a>，<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/transition"><code>transition</code></a>)</li>
+</ul>
+</li>
+<li>逐帧动画（Frame By Frame）
+<ul>
+<li>从词语来说意味着全片每一帧逐帧都是<strong>纯手绘</strong>。(如css 的steps实现精灵动画)</li>
+</ul>
+</li>
+</ul>
+<h2 id="前端动画分类">前端动画分类</h2>
+<h3 id="css动画">css动画</h3>
+<p>CSS层叠样式表(Cascading Style Sheets），本身是一种样式表语言，用来描述HTML或XML（包括如SVG、MathML、XHTML之类的XML分支语言），而CSS中的 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation"><code>animation</code></a> 属性是  <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation-name"><code>animation-name</code></a>，<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation-duration"><code>animation-duration</code></a>, <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation-timing-function"><code>animation-timing-function</code></a>，<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation-delay"><code>animation-delay</code></a>，<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation-iteration-count"><code>animation-iteration-count</code></a>，<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation-direction"><code>animation-direction</code></a>，<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation-fill-mode"><code>animation-fill-mode</code></a> 和 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation-play-state"><code>animation-play-state</code></a> 属性的一个简写属性形式。</p>
+<h4 id="animation-name">animation-name</h4>
+<p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation-name"><code>animation-name</code></a> 属性指定应用的一系列动画，每个名称代表一个由<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/@keyframes"><code>@keyframes</code></a>定义的动画序列，其值如下</p>
+<ul>
+<li><code>none</code> （初始值）特殊关键字，表示无关键帧。可以不改变其他标识符的顺序而使动画失效，或者使层叠的动画样式失效。</li>
+<li><code>IDENT</code> 标识动画的字符串，由大小写敏感的字母a-z、数字0-9、下划线(_)和/或横线(-)组成。第一个非横线字符必须是字母，数字不能在字母前面，不允许两个横线出现在开始位置。</li>
+</ul>
+<p>多个动画定义使用逗号分隔开即可</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* Single animation */</span></span><br><span class="line"><span class="attribute">animation-name</span>: none;</span><br><span class="line"><span class="attribute">animation-name</span>: test_05;</span><br><span class="line"><span class="attribute">animation-name</span>: -specific;</span><br><span class="line"><span class="attribute">animation-name</span>: sliding-vertically;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* Multiple animations */</span></span><br><span class="line"><span class="attribute">animation-name</span>: test1, animation4;</span><br><span class="line"><span class="attribute">animation-name</span>: none, -moz-specific, sliding;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* Global values */</span></span><br><span class="line"><span class="attribute">animation-name</span>: initial</span><br><span class="line">animation-name: inherit</span><br><span class="line">animation-name: unset</span><br></pre></td></tr></table></figure>
+<h4 id="animation-duration">animation-duration</h4>
+<p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation-duration"><code>animation-duration</code></a> 属性指定一个动画周期的时长。默认值为0s，表示无动画。</p>
+<p>它的值为一个动画周期的时长，单位为秒(s)或者毫秒(ms)，无单位值无效。也可以指定多个值，他的多个值与animation-name一一对应</p>
+<blockquote>
+<p>**注意：**负值无效，浏览器会忽略该声明，但是一些早期的带前缀的声明会将负值当作0s。</p>
+</blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* Single animation */</span></span><br><span class="line"><span class="attribute">animation-duration</span>: <span class="number">6s</span></span><br><span class="line">animation-duration: <span class="number">120ms</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/* Multiple animations */</span></span><br><span class="line">animation-duration: <span class="number">1s</span>, <span class="number">15s</span></span><br><span class="line">animation-duration: <span class="number">10s</span>, <span class="number">30s</span>, <span class="number">230ms</span></span><br></pre></td></tr></table></figure>
+<h4 id="animation-timing-function">animation-timing-function</h4>
+<p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation-timing-function"><code>animation-timing-function</code></a> 属性定义CSS动画在每一动画周期中执行的节奏。可能值为一或多个，它的多个值也是与animation-name一一对应。本身CSS定义了一些缓动函数，我们可以调用这些缓动函数来达到缓入缓出的效果。</p>
+<blockquote>
+<p>对于关键帧动画来说，timing function作用于一个关键帧周期而非整个动画周期，即从关键帧开始开始，到关键帧结束结束。</p>
+<p>定义于一个关键帧区块的缓动函数(animation timing function)应用到该关键帧；另外，若该关键帧没有定义缓动函数，则使用定义于整个动画的缓动函数。</p>
+</blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* Keyword values */</span></span><br><span class="line"><span class="attribute">animation-timing-function</span>: ease;</span><br><span class="line"><span class="attribute">animation-timing-function</span>: ease-in;</span><br><span class="line"><span class="attribute">animation-timing-function</span>: ease-out;</span><br><span class="line"><span class="attribute">animation-timing-function</span>: ease-in-out;</span><br><span class="line"><span class="attribute">animation-timing-function</span>: linear;</span><br><span class="line"><span class="attribute">animation-timing-function</span>: step-start;</span><br><span class="line"><span class="attribute">animation-timing-function</span>: step-end;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* Function values */</span></span><br><span class="line"><span class="attribute">animation-timing-function</span>: <span class="built_in">cubic-bezier</span>(<span class="number">0.1</span>, <span class="number">0.7</span>, <span class="number">1.0</span>, <span class="number">0.1</span>);</span><br><span class="line"><span class="attribute">animation-timing-function</span>: <span class="built_in">steps</span>(<span class="number">4</span>, end);</span><br><span class="line"><span class="attribute">animation-timing-function</span>: <span class="built_in">frames</span>(<span class="number">10</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">/* Multiple animations */</span></span><br><span class="line"><span class="attribute">animation-timing-function</span>: ease, step-start, <span class="built_in">cubic-bezier</span>(<span class="number">0.1</span>, <span class="number">0.7</span>, <span class="number">1.0</span>, <span class="number">0.1</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">/* Global values */</span></span><br><span class="line"><span class="attribute">animation-timing-function</span>: inherit;</span><br><span class="line"><span class="attribute">animation-timing-function</span>: initial;</span><br><span class="line"><span class="attribute">animation-timing-function</span>: unset;</span><br></pre></td></tr></table></figure>
+<h4 id="animation-delay">animation-delay</h4>
+<p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation-delay"><code>animation-delay</code></a> 定义动画于何时开始，即从动画应用在元素上到动画开始的这段时间的长度。（就是延迟多久开始）</p>
+<p><code>0s</code>是该属性的默认值，代表动画在应用到元素上后立即开始执行。否则，该属性的值代表动画样式应用到元素上后到开始执行前的时间长度；</p>
+<p>**定义一个负值会让动画立即开始。但是动画会从它的动画序列中某位置开始。**例如，如果设定值为-1s，动画会从它的动画序列的第1秒位置处立即开始。</p>
+<p>如果为动画延迟指定了一个负值，但起始值是隐藏的，则从动画应用于元素的那一刻起就获取起始值。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">animation-delay</span>: <span class="number">3s</span>;</span><br><span class="line"><span class="attribute">animation-delay</span>: <span class="number">2s</span>, <span class="number">4ms</span>;</span><br></pre></td></tr></table></figure>
+<h4 id="animation-iteration-count">animation-iteration-count</h4>
+<p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation-iteration-count"><code>animation-iteration-count</code></a> 定义动画在结束前<strong>运行的次数</strong> 可以是1次也可以是无限循环.</p>
+<ul>
+<li>
+<p><code>infinite</code></p>
+<p>无限循环播放动画</p>
+</li>
+<li>
+<p><code>&lt;number&gt;</code></p>
+<p>动画播放的次数；默认值为<code>1</code>。可以用<strong>小数定义循环</strong>，来<strong>播放动画周期的一部分</strong>：例如，<code>0.5</code> 将播放到动画周期的一半。不可为负值。</p>
+</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 值为关键字 */</span></span><br><span class="line"><span class="attribute">animation-iteration-count</span>: infinite;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 值为数字 */</span></span><br><span class="line"><span class="attribute">animation-iteration-count</span>: <span class="number">3</span>;</span><br><span class="line"><span class="attribute">animation-iteration-count</span>: <span class="number">2.4</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 指定多个值 */</span></span><br><span class="line"><span class="attribute">animation-iteration-count</span>: <span class="number">2</span>, <span class="number">0</span>, infinite;</span><br></pre></td></tr></table></figure>
+<p>它的多值跟duration不同，它是在每个动画开始和结束的时候切换自己的执行次数</p>
+<h4 id="animation-direction">animation-direction</h4>
+<p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation-direction"><code>animation-direction</code></a> 属性指示动画是否反向播放</p>
+<ul>
+<li>
+<p><code>normal</code> (默认值)</p>
+<p>每个循环内动画<strong>向前循环</strong>，换言之，每个动画循环结束，动画重置到起点重新开始，这是默认属性。</p>
+</li>
+<li>
+<p><code>alternate</code></p>
+<p>动画<strong>交替反向运行</strong>，反向运行时，动画<strong>按步后退</strong>，同时，<strong>带时间功能的函数也反向</strong>，比如，<code>ease-in</code> 在反向时成为 <code>ease-out</code>。计数取决于开始时是奇数迭代还是偶数迭代</p>
+</li>
+<li>
+<p><code>reverse</code></p>
+<p><strong>反向运行动画</strong>，每周期结束动画由尾到头运行。</p>
+</li>
+<li>
+<p><code>alternate-reverse</code></p>
+<p><strong>反向交替</strong>， 反向开始交替</p>
+<p>动画<strong>第一次运行时是反向的，然后下一次是正向，后面依次循环</strong>。决定奇数次或偶数次的计数从1开始。</p>
+</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">animation-direction</span>: normal</span><br><span class="line">animation-direction: reverse</span><br><span class="line">animation-direction: alternate</span><br><span class="line">animation-direction: alternate-reverse</span><br><span class="line">animation-direction: normal, reverse</span><br><span class="line">animation-direction: alternate, reverse, normal</span><br></pre></td></tr></table></figure>
+<h4 id="animation-fill-mode">animation-fill-mode</h4>
+<p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation-fill-mode"><code>animation-fill-mode</code></a> 属性设置CSS动画在执行之前和之后如何将样式应用于其目标。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* Single animation */</span></span><br><span class="line"><span class="attribute">animation-fill-mode</span>: none;</span><br><span class="line"><span class="attribute">animation-fill-mode</span>: forwards;</span><br><span class="line"><span class="attribute">animation-fill-mode</span>: backwards;</span><br><span class="line"><span class="attribute">animation-fill-mode</span>: both;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* Multiple animations */</span></span><br><span class="line"><span class="attribute">animation-fill-mode</span>: none, backwards;</span><br><span class="line"><span class="attribute">animation-fill-mode</span>: both, forwards, none;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>
+<p><code>none</code> (默认)</p>
+<p>当动画未执行时，<strong>动画将不会将任何样式应用于目标</strong>，而是已经赋予给该元素的 CSS 规则来显示该元素。这是默认值。</p>
+</li>
+<li>
+<p><code>forwards</code></p>
+<p>目标将保留由执行期间<strong>遇到的最后一个<a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes">关键帧</a>计算值</strong>。 最后一个关键帧取决于<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation-direction"><code>animation-direction</code></a>和<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation-iteration-count"><code>animation-iteration-count</code></a>的值（就是<strong>最后一个关键帧是什么样子后面就一直会是这个样子</strong>）</p>
+</li>
+<li>
+<p><code>backwards</code></p>
+<p>动画将在应用于目标时<strong>立即应用第一个关键帧中定义的值</strong>，<strong>并在<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation-delay"><code>animation-delay</code></a>期间保留此值</strong>。（这个很重要，delay几s进行的） 第一个关键帧取决于<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation-direction"><code>animation-direction</code></a>的值：<code>animation-direction</code>first relevant keyframe<code>normal</code> or <code>alternate``0%</code> or <code>from``reverse</code> or <code>alternate-reverse``100%</code> or <code>to</code></p>
+</li>
+<li>
+<p><code>both</code></p>
+<p>动画将遵循<code>forwards</code>和<code>backwards</code>的规则，从而在两个方向上扩展动画属性。（就是上述二者兼有）</p>
+</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong>：当您在<code>animation-*</code>属性上指定多个以逗号分隔的值时，它们将根据值的数量以不同的方式分配给 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation-name"><code>animation-name</code></a> 属性中指定的动画。 有关更多信息，请参阅<a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations#setting_multiple_animation_property_values">设置多个动画属性值</a>。</p>
+</blockquote>
+<h4 id="animation-play-state">animation-play-state</h4>
+<p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation-play-state"><code>animation-play-state</code></a> 属性定义一个动画<strong>是否运行或者暂停</strong>。可以通过<strong>查询它来确定动画是否正在运行</strong>。另外，它的值可以被设置为<strong>暂停和恢复的动画的重放</strong>。恢复一个已暂停的动画，将<strong>从它开始暂停的时候</strong>开始恢复，而不是从动画序列的起点开始。</p>
+<ul>
+<li>
+<p><code>running</code></p>
+<p>当前动画正在运行。</p>
+</li>
+<li>
+<p><code>paused</code></p>
+<p>当前动画已被停止。</p>
+</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* Single animation */</span></span><br><span class="line"><span class="attribute">animation-play-state</span>: running;</span><br><span class="line"><span class="attribute">animation-play-state</span>: paused;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* Multiple animations */</span></span><br><span class="line"><span class="attribute">animation-play-state</span>: paused, running, running;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* Global values */</span></span><br><span class="line"><span class="attribute">animation-play-state</span>: inherit;</span><br><span class="line"><span class="attribute">animation-play-state</span>: initial;</span><br><span class="line"><span class="attribute">animation-play-state</span>: unset;</span><br></pre></td></tr></table></figure>
+<p>一个栗子：<a target="_blank" rel="noopener" href="https://codepen.io/mikegolus/pen/jJzRwJ">CSS BEER! (codepen.io)</a></p>
+<p>去看了看这个大佬的其他项目，都很有意思！<a target="_blank" rel="noopener" href="https://codepen.io/mikegolus/pen/aQVdLV">#codevember - 19 - CSS Eggs (codepen.io)</a>、<a target="_blank" rel="noopener" href="https://codepen.io/mikegolus/pen/OwrPgB">Periodic Table of Elements - HTML/CSS (codepen.io)</a></p>
+<h4 id="transform-API"><strong>transform</strong> API</h4>
+<p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform"><code>transform</code></a> 属性允许你旋转，缩放，倾斜或平移给定元素。这是通过修改CSS视觉格式化模型的坐标空间来实现的。</p>
+<p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform-origin"><code>transform-origin</code></a> 指定原点的位置，默认的转换原点是 <code>center</code> 。</p>
+<p><code>transform</code>属性可以指定为关键字值<code>none</code> 或一个或多个<code>&lt;transform-function&gt;</code>值。</p>
+<ul>
+<li>
+<p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform-function"><code>transform-function</code></a></p>
+<p>要应用的一个或多个CSS变换函数。 变换函数按从左到右的顺序相乘，这意味着复合变换按从右到左的顺序有效地应用。</p>
+<ul>
+<li>
+<p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform-function#scale"><code>scale</code></a>（缩放）注意其中心为 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform-origin"><code>transform-origin</code></a>（缩放）注意其中心为 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform-origin"><code>transform-origin</code></a></p>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/93f99f7d68214535ac4eaf6ab1f33ff3~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// 沿x轴缩小为<span class="number">50%</span></span><br><span class="line"><span class="attribute">transform</span>: <span class="built_in">scale</span>(<span class="number">0.5</span>);</span><br><span class="line">// 沿x轴缩小为<span class="number">50%</span>，沿y轴放大为之前的<span class="number">2</span>倍</span><br><span class="line"><span class="attribute">transform</span>: <span class="built_in">scale</span>(<span class="number">0.5</span>, <span class="number">2</span>);</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform-function#rotate"><code>rotate</code></a>（旋转） 将元素在不变形的情况下旋转到原点周围(如 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform-origin"><code>transform-origin</code></a> 属性所指定) 。 移动量由指定角度定义;如果为<strong>正值</strong>，则运动将为<strong>顺时针</strong>，如果为负值，则为逆时针 。 180°的旋转称为点反射 (<em>point reflection</em>)。</p>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/592ec860492c4406b2178959b0cf4320~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">transform</span>: <span class="built_in">rotate</span>(<span class="number">30deg</span>);</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform-function#skew"><code>skew</code></a> （倾斜） 参数表示倾斜角度，单位deg</p>
+<p>一个参数时表示水平方向的倾斜角度（ax）；</p>
+<p>两个参数时表示水平、垂直（ax, ay）。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">transform</span>: <span class="built_in">skew</span>(ax)       </span><br><span class="line">transform: <span class="built_in">skew</span>(ax, ay)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li>
+<p><code>none</code></p>
+<p>不应用任何变换。</p>
+</li>
+</ul>
+<blockquote>
+<p>**注意：**他只能转换由盒模型定位的元素，根据经验如果元素具有display: block，则由盒模型定位元素。</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/transition"><code>transition</code></a> 过渡动画，在dom加载完成或class发生变化时触发，这个属性是 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/transition-property"><code>transition-property</code></a>，<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/transition-duration"><code>transition-duration</code></a>，<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/transition-timing-function"><code>transition-timing-function</code></a> 和 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/transition-delay"><code>transition-delay</code></a> 的一个简写属性。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* Apply to 1 property */</span></span><br><span class="line"><span class="comment">/* property name | duration */</span></span><br><span class="line"><span class="attribute">transition</span>: margin-right <span class="number">4s</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* property name | duration | delay */</span></span><br><span class="line"><span class="attribute">transition</span>: margin-right <span class="number">4s</span> <span class="number">1s</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* property name | duration | timing function */</span></span><br><span class="line"><span class="attribute">transition</span>: margin-right <span class="number">4s</span> ease-in-out;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* property name | duration | timing function | delay */</span></span><br><span class="line"><span class="attribute">transition</span>: margin-right <span class="number">4s</span> ease-in-out <span class="number">1s</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* Apply to 2 properties */</span></span><br><span class="line"><span class="attribute">transition</span>: margin-right <span class="number">4s</span>, color <span class="number">1s</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* Apply to all changed properties */</span></span><br><span class="line"><span class="attribute">transition</span>: all <span class="number">0.5s</span> ease-out;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* Global values */</span></span><br><span class="line"><span class="attribute">transition</span>: inherit;</span><br><span class="line"><span class="attribute">transition</span>: initial;</span><br><span class="line"><span class="attribute">transition</span>: unset;</span><br></pre></td></tr></table></figure>
+<h4 id="keyframe实现动画">keyframe实现动画</h4>
+<p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/@keyframes"><code>@keyframes</code></a> 关键帧@keyframes at-rule规则通过在动画序列中定义关键帧（或waypoints）的样式来控制CSS动画序列中的中间步骤。和 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Transitions">转换 transition</a> 相比，关键帧 keyframes 可以控制动画序列的中间步骤。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">// 从左侧滑入</span><br><span class="line"><span class="keyword">@keyframes</span> slidein &#123;</span><br><span class="line">  <span class="selector-tag">from</span> &#123;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">translateX</span>(<span class="number">0%</span>); </span><br><span class="line">  &#125;</span><br><span class="line">  <span class="selector-tag">to</span> &#123;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">translateX</span>(<span class="number">100%</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">// </span><br><span class="line"><span class="keyword">@keyframes</span> identifier &#123;</span><br><span class="line">  <span class="number">0%</span> &#123; <span class="attribute">top</span>: <span class="number">0</span>; &#125;</span><br><span class="line">  <span class="number">50%</span> &#123; <span class="attribute">top</span>: <span class="number">30px</span>; <span class="attribute">left</span>: <span class="number">20px</span>; &#125;</span><br><span class="line">  <span class="number">50%</span> &#123; <span class="attribute">top</span>: <span class="number">10px</span>; &#125;</span><br><span class="line">  <span class="number">100%</span> &#123; <span class="attribute">top</span>: <span class="number">0</span>; &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>举个栗子：<a target="_blank" rel="noopener" href="https://codepen.io/yusixian/pen/rNGEpoj?editors=1100">my CSS Animation pratice (codepen.io)</a></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@keyframes</span> identifier &#123;</span><br><span class="line">  <span class="number">0%</span> &#123; <span class="attribute">top</span>: <span class="number">0</span>; <span class="attribute">left</span>: <span class="number">0</span>; &#125;</span><br><span class="line">  <span class="number">50%</span> &#123; <span class="attribute">top</span>: <span class="number">60%</span>; <span class="attribute">left</span>: <span class="number">60%</span>;&#125;</span><br><span class="line">  <span class="number">100%</span> &#123;  <span class="attribute">top</span>: <span class="number">0</span>; <span class="attribute">left</span>: <span class="number">0</span>; &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">@keyframes</span> slidein &#123;</span><br><span class="line">  <span class="selector-tag">from</span> &#123;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">translateX</span>(<span class="number">0%</span>); </span><br><span class="line">  &#125;</span><br><span class="line">  <span class="selector-tag">to</span> &#123;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">translateX</span>(<span class="number">100%</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">body</span>  &gt;<span class="selector-tag">div</span> &#123;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">display</span>:flex;</span><br><span class="line">  <span class="attribute">align-items</span>:center;</span><br><span class="line">  <span class="attribute">justify-content</span>: center;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#fafafa</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#141414</span>;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">10px</span>;</span><br><span class="line">  <span class="attribute">width</span>:<span class="number">20%</span>; <span class="attribute">height</span>:<span class="number">20%</span>;</span><br><span class="line"><span class="comment">/*   从左上到右下，持续5s，延迟1s，无限循环 */</span></span><br><span class="line"><span class="comment">/*   animation: identifier 5s linear 1s infinite; */</span></span><br><span class="line"><span class="comment">/*   向右滑，持续1s，两次 */</span></span><br><span class="line">  <span class="attribute">animation</span>: slidein <span class="number">1s</span> <span class="number">2</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>总结一下：</p>
+<p>css动画的优点：简单、高效、声明式的。不依赖于主线程，采用硬件加速（GPU），通过简单的控制keyframe animation播放和暂停。</p>
+<p>缺点：不能<strong>动态修改或定义动画</strong>，内容不同的动画<strong>无法实现同步</strong>，<strong>多个动画彼此无法堆叠</strong>。<br>
+适用场景：简单的h5活动/宣传页。<br>
+推荐库:<a target="_blank" rel="noopener" href="https://animate.style/">Animate.css</a>、<a target="_blank" rel="noopener" href="https://elrumordelaluz.github.io/csshake/">CSShake</a>等。</p>
+<h3 id="svg实现动画">svg实现动画</h3>
+<p>svg是基于XML的矢量图形描述语言，它可以与CSS和]S较好的配合，实现svg动画通常有三种方式:<strong>SMIL、JS、CSS</strong></p>
+<ul>
+<li>SMIL：同步多媒体集成语言
+<ul>
+<li>结论∶兼容性不理想,这里不过多讨论,当然有polyfill的方案:<a target="_blank" rel="noopener" href="https://github.com/ericwilligers/svg-animation">https://github.com/ericwilligers/svg-animation</a></li>
+</ul>
+</li>
+<li>使用JS来操作SVG动画自不必多说，目前也有很多现成的类库。例如老牌的Snap.svg以及anime.js，都能让我们快速制作SVG动画。当然,除了这些类库，HTML本身也有原生的 Web Animation 实现。使用Web 8622Animation也能让我们方便快捷地制作动画。这是老师的两个栗子：
+<ul>
+<li>文字形变: <a target="_blank" rel="noopener" href="https://codepen.io/jiangxiang/pen/MWmdjeY">https://codepen.io/jiangxiang/pen/MWmdjeY</a></li>
+<li>Path实现写字动画: <a target="_blank" rel="noopener" href="https://codepen.io/jiangxiang/pen/rNmgjqX">SVG 写字动画 (codepen.io)</a></li>
+</ul>
+</li>
+</ul>
+<p>第一个动画的实现原理</p>
+<h4 id="文字溶解原理-filter">文字溶解原理-filter</h4>
+<p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/CSS/filter"><code>filter</code></a> 属性将模糊或颜色偏移等图形效果应用于元素。滤镜通常用于调整图像，背景和边框的渲染。基础案例：<a target="_blank" rel="noopener" href="https://codepen.io/jiangxiang/pen/XWeQGQK">https://codepen.io/jiangxiang/pen/XWeQGQK</a></p>
+<ul>
+<li>blur逐渐变小，在blur快没有的时候将其opacity设为0隐藏掉，就可以实现一个溶解效果</li>
+</ul>
+<h4 id="JS笔画原理-stroke">JS笔画原理-stroke</h4>
+<p>stroke-dashoffset、stroke-dasharray配合使用实现笔画效果。<br>
+<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/SVG/Attribute/stroke-dasharray"><code>stroke-dasharray</code></a> 属性可控制用来描边的点划线的图案范式。它是一个数列，数与数之间用逗号或者空白隔开，指定短划线和缺口的长度。<strong>如果提供了奇数个值，则这个值的数列重复一次，从而变成偶数个值</strong>。因此，<strong>5,3,2等同于5,3,2,5,3,2。</strong><br>
+<a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-dashoffset"><code>stroke-dashoffset</code></a> 属性指定了dash模式到路径开始的距离。<br>
+老师的示例：<a target="_blank" rel="noopener" href="https://codepen.io/jiangxiang/pen/LYzvvxd">stroke-dasharray&amp;stroke-dashoffset (codepen.io)</a></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">// 5px实线 5px空白 x1y1 -&gt; x2y2</span><br><span class="line"><span class="tag">&lt;<span class="name">line</span> <span class="attr">stroke-dasharray</span>=<span class="string">&quot;5, 5&quot;</span> <span class="attr">x1</span>=<span class="string">&quot;10&quot;</span> <span class="attr">y1</span>=<span class="string">&quot;10&quot;</span> <span class="attr">x2</span>=<span class="string">&quot;190&quot;</span> <span class="attr">y2</span>=<span class="string">&quot;10&quot;</span> /&gt;</span></span><br><span class="line">// 5px实线 10px空白</span><br><span class="line"><span class="tag">&lt;<span class="name">line</span> <span class="attr">stroke-dasharray</span>=<span class="string">&quot;5, 10&quot;</span> <span class="attr">x1</span>=<span class="string">&quot;10&quot;</span> <span class="attr">y1</span>=<span class="string">&quot;30&quot;</span> <span class="attr">x2</span>=<span class="string">&quot;190&quot;</span> <span class="attr">y2</span>=<span class="string">&quot;30&quot;</span> /&gt;</span></span><br><span class="line">// 10px实线 5px空白</span><br><span class="line"><span class="tag">&lt;<span class="name">line</span> <span class="attr">stroke-dasharray</span>=<span class="string">&quot;10, 5&quot;</span> <span class="attr">x1</span>=<span class="string">&quot;10&quot;</span> <span class="attr">y1</span>=<span class="string">&quot;50&quot;</span> <span class="attr">x2</span>=<span class="string">&quot;190&quot;</span> <span class="attr">y2</span>=<span class="string">&quot;50&quot;</span> /&gt;</span></span><br><span class="line">// 5px实线 1px空白...</span><br><span class="line"><span class="tag">&lt;<span class="name">line</span> <span class="attr">stroke-dasharray</span>=<span class="string">&quot;5, 1&quot;</span> <span class="attr">x1</span>=<span class="string">&quot;10&quot;</span> <span class="attr">y1</span>=<span class="string">&quot;70&quot;</span> <span class="attr">x2</span>=<span class="string">&quot;190&quot;</span> <span class="attr">y2</span>=<span class="string">&quot;70&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">line</span> <span class="attr">stroke-dasharray</span>=<span class="string">&quot;1, 5&quot;</span> <span class="attr">x1</span>=<span class="string">&quot;10&quot;</span> <span class="attr">y1</span>=<span class="string">&quot;90&quot;</span> <span class="attr">x2</span>=<span class="string">&quot;190&quot;</span> <span class="attr">y2</span>=<span class="string">&quot;90&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">line</span> <span class="attr">stroke-dasharray</span>=<span class="string">&quot;0.9&quot;</span> <span class="attr">x1</span>=<span class="string">&quot;10&quot;</span> <span class="attr">y1</span>=<span class="string">&quot;110&quot;</span> <span class="attr">x2</span>=<span class="string">&quot;190&quot;</span> <span class="attr">y2</span>=<span class="string">&quot;110&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">line</span> <span class="attr">stroke-dasharray</span>=<span class="string">&quot;15, 10, 5&quot;</span> <span class="attr">x1</span>=<span class="string">&quot;10&quot;</span> <span class="attr">y1</span>=<span class="string">&quot;130&quot;</span> <span class="attr">x2</span>=<span class="string">&quot;190&quot;</span> <span class="attr">y2</span>=<span class="string">&quot;130&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">line</span> <span class="attr">stroke-dasharray</span>=<span class="string">&quot;15, 10, 5, 10&quot;</span> <span class="attr">x1</span>=<span class="string">&quot;10&quot;</span> <span class="attr">y1</span>=<span class="string">&quot;150&quot;</span> <span class="attr">x2</span>=<span class="string">&quot;190&quot;</span> <span class="attr">y2</span>=<span class="string">&quot;150&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">line</span> <span class="attr">stroke-dasharray</span>=<span class="string">&quot;15, 10, 5, 10, 15&quot;</span> <span class="attr">x1</span>=<span class="string">&quot;10&quot;</span> <span class="attr">y1</span>=<span class="string">&quot;170&quot;</span> <span class="attr">x2</span>=<span class="string">&quot;190&quot;</span> <span class="attr">y2</span>=<span class="string">&quot;170&quot;</span> /&gt;</span></span><br><span class="line">// 总长度180 180实线 180空白（全是实线） 这个时候改变dashoffset的值就可以实现笔画效果</span><br><span class="line"><span class="tag">&lt;<span class="name">line</span> <span class="attr">stroke-dasharray</span>=<span class="string">&quot;180&quot;</span> <span class="attr">stroke-dashoffset</span>的值就可以实现笔画效果=<span class="string">&quot;0&quot;</span> <span class="attr">x1</span>=<span class="string">&quot;10&quot;</span> <span class="attr">y1</span>=<span class="string">&quot;190&quot;</span> <span class="attr">x2</span>=<span class="string">&quot;190&quot;</span> <span class="attr">y2</span>=<span class="string">&quot;190&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d08067ea0b1c4fd78ac56b117d8043a4~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
+<p>直线这种比较简单的可以直接知道其总长度进而通过初始化dashoffset实现笔画效果，那么不规则图形？</p>
+<blockquote>
+<p>通过path.getTotalLength();</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/SVG/Tutorial/Paths">path路径 </a>- <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/SVG/Attribute/d">d</a>属性定义<br>
+大写字母跟随的是绝对坐标x,y，小写为相对坐标dx,dyM/m绘制起始点。</p>
+<ul>
+<li>
+<p>L/l绘制一条线段。<br>
+C/c为绘制贝塞尔曲线。<br>
+Z/z将当前点与起始点用直线连接。</p>
+</li>
+<li>
+<p>计算path的长度- path.getTotalLength();</p>
+</li>
+<li>
+<p>计算path上某个点的坐标- path.getPointAtLength(lengthNumber);</p>
+</li>
+</ul>
+<p>老师的例子：<a target="_blank" rel="noopener" href="https://codepen.io/jiangxiang/pen/eYWagxq">SVG 使用stroke-dashoffset和stroke-dashoffset实现笔画效果 (codepen.io)</a></p>
+<ul>
+<li>
+<p>svg动画的优点∶通过矢量元素实现动画,不同的屏幕下均可获得较好的清晰度。可以实现一些特殊的效果：<strong>描字，形变，墨水扩散</strong>等。</p>
+</li>
+<li>
+<p>缺点∶使用方式较为<strong>复杂</strong>，<strong>过多使用可能会带来性能</strong>问题。</p>
+</li>
+</ul>
+<h3 id="js实现动画">js实现动画</h3>
+<p>JS可以实现复杂的动画，可以操作css、svg也可以操作canvas动画API上进行绘制。</p>
+<h3 id="如何做选择？">如何做选择？</h3>
+<p>CSS实现</p>
+<ul>
+<li>
+<p>优点</p>
+<ul>
+<li>浏览器会对CSS3动画做一些优化，导致CSS3动画性能上稍有优势（新建一个图层来跑动画）</li>
+<li>CSS3动画的代码相对简单</li>
+</ul>
+</li>
+<li>
+<p>缺点</p>
+<ul>
+<li>
+<p>动画控制上不够灵活</p>
+</li>
+<li>
+<p>兼容性不佳</p>
+</li>
+<li>
+<p>部分动画无法实现（视差效果、滚动动画）</p>
+</li>
+</ul>
+</li>
+<li>
+<p>对于简单动画都可以用css实现</p>
+</li>
+</ul>
+<p>JS 实现</p>
+<ul>
+<li>
+<p>优点</p>
+<ul>
+<li>
+<p><strong>使用灵活</strong>，同样在定义一个动画的keyframe序列时，可以根据不同的条件调节若干参数（JS动画函数）改变动画方式。（CSS会有非常多的代码冗余）</p>
+</li>
+<li>
+<p>对比与<strong>CSS的keyframe粒度更粗</strong>，Css<strong>本身的时间函数是有限</strong>的，这块 <strong>JS 都可做弥补。</strong></p>
+</li>
+<li>
+<p>CSS很难做到<strong>两个以上的状态转化</strong>（要么使用关键帧，要么需要多个动画延时触发，再想到要对动画循环播放或暂停倒序等，<strong>复杂度极高</strong>）</p>
+</li>
+</ul>
+</li>
+<li>
+<p>缺点</p>
+<ul>
+<li>使用到 JS 运行时，<strong>调优方面不如 CSS 简单</strong>，CSS调优方式固定。</li>
+<li>对于性能和兼容性较差的浏览器，CSS可以做到优雅降级，而 **JS 需要额外代码兼容。**会影响打包后产物的体积。</li>
+</ul>
+</li>
+</ul>
+<p>总结：</p>
+<ul>
+<li>当为UI元素采用较小的独立状态时,使用CSS.</li>
+<li>在需要对动画进行大量控制时，使用JavaScript。</li>
+<li>在特定的场景下可以使用SVG，可以使用CSS或JS去操作SVG变化。（比如上述的溶解、笔画效果等）</li>
+</ul>
+<h2 id="实现前端动画">实现前端动画</h2>
+<h3 id="js动画函数封装">js动画函数封装</h3>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">animate</span>(<span class="params">&#123;easing, draw, duration&#125;</span>)    &#123;</span><br><span class="line">  <span class="keyword">let</span> start = performance.<span class="title function_">now</span>(); <span class="comment">// 取当前时间</span></span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function"><span class="params">resolve</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="title function_">requestAnimationFrame</span>(<span class="keyword">function</span> <span class="title function_">animate</span>(<span class="params">time</span>) &#123;</span><br><span class="line">      <span class="keyword">let</span> timeFraction = (time - start) / duration;</span><br><span class="line">      <span class="keyword">if</span>(timeFraction &gt; <span class="number">1</span>) timeFraction = <span class="number">1</span>;</span><br><span class="line">      </span><br><span class="line">      <span class="keyword">let</span> progress = <span class="title function_">easing</span>(timeFraction);</span><br><span class="line"></span><br><span class="line">      <span class="title function_">draw</span>(progress);</span><br><span class="line">      </span><br><span class="line">      <span class="keyword">if</span>(timeFraction &lt; <span class="number">1</span>) &#123;</span><br><span class="line">          <span class="title function_">requestAnimationFrame</span>(animate);</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">          <span class="title function_">resolve</span>();</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这个函数中首先通过<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Performance/now">performance.now()</a>取到当前系统时间，它以一个恒定的速率慢慢增加，不会受到系统时间的影响以浮点数的形式表示时间，<strong>精度最高可达微秒级</strong>，不易被篡改。入参说明：</p>
+<ul>
+<li>
+<p>draw 绘制函数</p>
+<ul>
+<li>
+<p>可以将其想象为一只画笔，随着函数执行，这个画笔的函数会被反复的调用，并传入当前执行的进度progress，progress取决于easing的值，如若为线性增加的则为0~1。如：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> ball = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;.ball&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> <span class="title function_">draw</span> = (<span class="params">progress</span>) =&gt; &#123;</span><br><span class="line">    ball.<span class="property">style</span>.<span class="property">transform</span> = <span class="string">`translate(<span class="subst">$&#123;progress&#125;</span>px, 0)`</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li>
+<p>easing 缓动函数</p>
+<ul>
+<li>
+<p>缓动函数改变（或者说扭曲）动画的时间，将其改为线性/非线性，或者多维度的。如：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">easing</span>(<span class="params">timeFraction</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> timeFraction ** <span class="number">2</span>;   <span class="comment">//timeFraction的平方</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li>
+<p>duration 持续时间 顾名思义，单位是毫秒</p>
+</li>
+<li>
+<p>最后返回Promise的原因：</p>
+<ul>
+<li>
+<p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Using_promises"> Promise</a> 是一个对象，它代表了一个异步操作的最终完成或者失败。</p>
+</li>
+<li>
+<p>动画可以是连续的，Promise支持通过then函数或await进行顺序调用，可以很容易地拿到这个动画的终态</p>
+</li>
+</ul>
+</li>
+<li>
+<p>这个动画函数实现一个有限时间的动画封装</p>
+</li>
+<li>
+<p>**RequestAnimationFrame (rAF) ** vs <strong>SetTimeout</strong> vs <strong>Setlnterval</strong></p>
+<ul>
+<li>
+<p>使用<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Window/requestAnimationFrame">requestAnimationFrame</a>！为什么？</p>
+<p>该内置方法允许设置回调函数以<strong>在浏览器准备重绘时运行</strong>。通常这很快，但确切的时间取决于浏览器。<br>
+setTimeout和setInterval当页面在后台时,根本<strong>没有重绘</strong>，所以回调不会运行：**动画将被暂停并且不会消耗资源。**参考：<a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/43379640/requestanimationframe-loop-not-correct-fps/43381828#43381828">javascript - requestAnimationFrame loop not correct FPS - Stack Overflow</a></p>
+<blockquote>
+<p>重排：若渲染树的一部分更新，且<strong>尺寸变化</strong>，就会发生重排。</p>
+<p>重绘：部分节点需要更新，但<strong>不改变其他集合形状</strong>。如改变某个元素的visibility、outline、背景颜色等，就会发生重绘。</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="简单动画">简单动画</h3>
+<p>JS执行动画的核心思想</p>
+<blockquote>
+<p>∆r = ∆v∆t</p>
+</blockquote>
+<p>简单理解：r为距离，v速度，t是时间。通过比例系数缩放来保证动画的真实感。</p>
+<p>举个例子：匀速运动，老师的例子非常全面<a target="_blank" rel="noopener" href="https://codepen.io/jiangxiang/pen/rNmgVKK">JS封装动画函数 (codepen.io)</a>（一定要去看看！）</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> ball = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;.ball&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> <span class="title function_">draw</span> = (<span class="params">progress</span>) =&gt; &#123;</span><br><span class="line">    ball.<span class="property">style</span>.<span class="property">transform</span> = <span class="string">`translate(<span class="subst">$&#123;progress&#125;</span>px, 0)`</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 沿x轴匀速运动</span></span><br><span class="line"><span class="title function_">animate</span>(&#123;</span><br><span class="line">    <span class="attr">duration</span>: <span class="number">1000</span>,</span><br><span class="line">    <span class="title function_">easing</span>(<span class="params">timeFraction</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> timeFraction * <span class="number">100</span>;</span><br><span class="line">    &#125;,</span><br><span class="line">    draw</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/cb13be23f4e34790a350e079ed3cca1e~tplv-k3u1fbpfcp-watermark.image?" alt="1.gif"></p>
+<ul>
+<li>重力：h = g * t ^2^</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">t^<span class="number">2</span>^<span class="comment">// 重力</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">gravity</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">const</span> <span class="title function_">draw</span> = (<span class="params">progress</span>) =&gt; &#123;	<span class="comment">// 高度500</span></span><br><span class="line">    ball.<span class="property">style</span>.<span class="property">transform</span> = <span class="string">`translate(0, <span class="subst">$&#123;<span class="number">500</span> * (progress - <span class="number">1</span>)&#125;</span>px)`</span>;</span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="title function_">animate</span>(&#123;</span><br><span class="line">    <span class="attr">duration</span>: <span class="number">1000</span>,</span><br><span class="line">    <span class="title function_">easing</span>(<span class="params">timeFraction</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> timeFraction ** <span class="number">2</span>;	<span class="comment">// t平方</span></span><br><span class="line">    &#125;,</span><br><span class="line">    draw,</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/36c45c23baed4ed98e29e0e7f45a3140~tplv-k3u1fbpfcp-watermark.image?" alt="2.gif"></p>
+<ul>
+<li>摩擦力：时间变为2t - t^2^</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 摩擦力</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">friction</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">  <span class="comment">// 初始高度500px</span></span><br><span class="line">  <span class="keyword">const</span> <span class="title function_">draw</span> = (<span class="params">progress</span>) =&gt; &#123;</span><br><span class="line">    ball.<span class="property">style</span>.<span class="property">transform</span> = <span class="string">`translate(0, <span class="subst">$&#123;<span class="number">500</span> * (progress - <span class="number">1</span>)&#125;</span>px)`</span>;</span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="title function_">animate</span>(&#123;</span><br><span class="line">    <span class="attr">duration</span>: <span class="number">1000</span>,</span><br><span class="line">    <span class="title function_">easing</span>(<span class="params">timeFraction</span>) &#123;</span><br><span class="line">      <span class="comment">// 初始速度系数为2</span></span><br><span class="line">      <span class="keyword">return</span> timeFraction * (<span class="number">2</span> - timeFraction);</span><br><span class="line">    &#125;,</span><br><span class="line">    draw,</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/066ff6078d39479da3229092e10b5925~tplv-k3u1fbpfcp-watermark.image?" alt="3.gif"></p>
+<ul>
+<li>平抛 （x轴匀速，y轴加速） 也就是说，y轴类似重力中的t^2^而x轴速度不变</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 平抛 x</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">horizontalMotion</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">const</span> <span class="title function_">draw</span> = (<span class="params">progress</span>) =&gt; &#123;</span><br><span class="line">    ball.<span class="property">style</span>.<span class="property">transform</span> = <span class="string">`translate(<span class="subst">$&#123;<span class="number">500</span> * progress.x&#125;</span>px, <span class="subst">$&#123;<span class="number">500</span> * (progress.y - <span class="number">1</span>)&#125;</span>px)`</span>;</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 有两个方向，沿着x轴匀速运动，沿着y轴加速运动</span></span><br><span class="line">  <span class="title function_">animate</span>(&#123;</span><br><span class="line">    <span class="attr">duration</span>: <span class="number">1000</span>,</span><br><span class="line">    <span class="title function_">easing</span>(<span class="params">timeFraction</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> &#123;</span><br><span class="line">        <span class="attr">x</span>: timeFraction,</span><br><span class="line">        <span class="attr">y</span>: timeFraction ** <span class="number">2</span>,</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    draw,</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0f956087eb91462b9072a126934ff568~tplv-k3u1fbpfcp-watermark.image?" alt="4.gif"></p>
+<p>其余的还有很多，再多的话就在easing返回的对象中加入新的属性，如旋转：</p>
+<ul>
+<li>
+<p>旋转+平抛</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 旋转 + 平抛</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">horizontalMotionWidthRotate</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">const</span> <span class="title function_">draw</span> = (<span class="params">progress</span>) =&gt; &#123;</span><br><span class="line">    ball.<span class="property">style</span>.<span class="property">transform</span> = <span class="string">`translate(<span class="subst">$&#123;<span class="number">500</span> * progress.x&#125;</span>px, <span class="subst">$&#123;<span class="number">500</span> * (progress.y - <span class="number">1</span>)&#125;</span>px) rotate(<span class="subst">$&#123;<span class="number">2000</span> * progress.rotate&#125;</span>deg)`</span>;<span class="comment">// 这里的2000也是比例系数</span></span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 有两个方向，沿着x轴匀速运动，沿着y轴加速运动</span></span><br><span class="line">  <span class="title function_">animate</span>(&#123;</span><br><span class="line">    <span class="attr">duration</span>: <span class="number">2000</span>,</span><br><span class="line">    <span class="title function_">easing</span>(<span class="params">timeFraction</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> &#123;</span><br><span class="line">        <span class="attr">x</span>: timeFraction,</span><br><span class="line">        <span class="attr">y</span>: timeFraction ** <span class="number">2</span>,</span><br><span class="line">        <span class="attr">rotate</span>: timeFraction,</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    draw,</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8596a1014d81410e8fbf91ec0a03a3fc~tplv-k3u1fbpfcp-watermark.image?" alt="5.gif"></p>
+</li>
+<li>
+<p>拉弓（x轴匀速，y轴初始速度为负的匀加速）</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 拉弓</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">arrowMove</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">  <span class="comment">// 抽象出来，初始值为2，到某个临界点变为正的1并且匀速增加</span></span><br><span class="line">  <span class="keyword">const</span> <span class="title function_">back</span> = (<span class="params">x, timeFraction</span>) =&gt; &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="title class_">Math</span>.<span class="title function_">pow</span>(timeFraction, <span class="number">2</span>) * ((x + <span class="number">1</span>) * timeFraction - x);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">const</span> <span class="title function_">draw</span> = (<span class="params">progress</span>) =&gt; &#123;</span><br><span class="line">    ball.<span class="property">style</span>.<span class="property">transform</span> = <span class="string">`translate(<span class="subst">$&#123;<span class="number">200</span>*progress.x&#125;</span>px, <span class="subst">$&#123; - <span class="number">500</span> * progress.y&#125;</span>px)`</span>;</span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="title function_">animate</span>(&#123;</span><br><span class="line">    <span class="attr">duration</span>: <span class="number">1000</span>,</span><br><span class="line">    <span class="title function_">easing</span>(<span class="params">timeFraction</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> &#123;</span><br><span class="line">        <span class="attr">x</span>: timeFraction,</span><br><span class="line">        <span class="attr">y</span>: <span class="title function_">back</span>(<span class="number">2</span>, timeFraction),</span><br><span class="line">      &#125;;</span><br><span class="line">    &#125;,</span><br><span class="line">    draw,</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c78ab72096e1434d9f811e606e7c4c11~tplv-k3u1fbpfcp-watermark.image?" alt="6.gif"></p>
+<ul>
+<li>
+<p>贝塞尔曲线 <a target="_blank" rel="noopener" href="https://cubic-bezier.com/#0,2.11,1,.19">cubic-bezier(0,2.11,1,.19) ✿ cubic-bezier.com</a>、<a target="_blank" rel="noopener" href="https://www.jasondavies.com/animated-bezier/">Animated Bézier Curves - Jason Davies</a></p>
+<ul>
+<li>ps：讲到这里开始逐渐硬核起来了，tql</li>
+</ul>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/abef976de60e4f549becd34b269408de~tplv-k3u1fbpfcp-watermark.image?" alt="10.gif"></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 贝塞尔</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">bezier</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">const</span> <span class="title function_">bezierPath</span> = (<span class="params">x1, y1, x2, y2, timeFraction</span>) =&gt; &#123;</span><br><span class="line">    <span class="keyword">const</span> x = <span class="number">3</span> * x1 * timeFraction * (<span class="number">1</span> - timeFraction) ** <span class="number">2</span> + <span class="number">3</span> * x2 * timeFraction ** <span class="number">2</span> * (<span class="number">1</span> - timeFraction) + timeFraction ** <span class="number">3</span>;</span><br><span class="line">    <span class="keyword">const</span> y = <span class="number">3</span> * y1 * timeFraction * (<span class="number">1</span> - timeFraction) ** <span class="number">2</span> + <span class="number">3</span> * y2 * timeFraction ** <span class="number">2</span> * (<span class="number">1</span> - timeFraction) + timeFraction ** <span class="number">3</span>;</span><br><span class="line">    <span class="keyword">return</span> [x, y];</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> <span class="title function_">draw</span> = (<span class="params">progress</span>) =&gt; &#123;</span><br><span class="line">    <span class="keyword">const</span> [px, py] = <span class="title function_">bezierPath</span>(<span class="number">0.2</span>, <span class="number">0.6</span>, <span class="number">0.8</span>, <span class="number">0.2</span>, progress);</span><br><span class="line">    <span class="comment">// 实际绘制在两个维度上</span></span><br><span class="line">    ball.<span class="property">style</span>.<span class="property">transform</span> = <span class="string">`translate(<span class="subst">$&#123;<span class="number">300</span> * px&#125;</span>px, <span class="subst">$&#123;-<span class="number">300</span> * py&#125;</span>px)`</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="title function_">animate</span>(&#123;</span><br><span class="line">    <span class="attr">duration</span>: <span class="number">2000</span>,</span><br><span class="line">    <span class="title function_">easing</span>(<span class="params">timeFraction</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> timeFraction * (<span class="number">2</span> - timeFraction);</span><br><span class="line">    &#125;,</span><br><span class="line">    draw,</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/65f2c703e2dd427ea0013d78d30f1f41~tplv-k3u1fbpfcp-watermark.image?" alt="11.gif"></p>
+</li>
+</ul>
+<h3 id="复杂动画">复杂动画</h3>
+<ul>
+<li>
+<p>弹跳小球（缓动函数实现/自动衰减实现）</p>
+<ul>
+<li>直接去看老师的例子：<a target="_blank" rel="noopener" href="https://codepen.io/jiangxiang/pen/rNmgVKK?editors=0010">JS封装动画函数 (codepen.io)</a>，自动衰减这里填了之前的一个坑：为什么要使用Promise，在每次执行完毕是，会将句柄再交给上面的函数判断是否有速度的衰减，直到速度为0的时候会自动结束。</li>
+</ul>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3fe64ea4171e49f1bf4dd1c4b6b06dc4~tplv-k3u1fbpfcp-watermark.image?" alt="7.gif"></p>
+</li>
+</ul>
+<p>自动衰减：更加复杂</p>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7a7244b30a714bd481b3de84bede051c~tplv-k3u1fbpfcp-watermark.image?" alt="8.gif"></p>
+<ul>
+<li>
+<p>椭圆运动</p>
+<ul>
+<li>
+<p>套公式即可，x = a*cos(a)，y = b * sin(a)</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 椭圆</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">ellipsis</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">const</span> <span class="title function_">draw</span> = (<span class="params">progress</span>) =&gt; &#123;</span><br><span class="line">    <span class="keyword">const</span> x = <span class="number">150</span> * <span class="title class_">Math</span>.<span class="title function_">cos</span>(<span class="title class_">Math</span>.<span class="property">PI</span> * <span class="number">2</span> * progress);</span><br><span class="line">    <span class="keyword">const</span> y = <span class="number">100</span> * <span class="title class_">Math</span>.<span class="title function_">sin</span>(<span class="title class_">Math</span>.<span class="property">PI</span> * <span class="number">2</span> * progress);</span><br><span class="line">    ball.<span class="property">style</span>.<span class="property">transform</span> = <span class="string">`translate(<span class="subst">$&#123;x&#125;</span>px, <span class="subst">$&#123;y&#125;</span>px)`</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="title function_">animate</span>(&#123;</span><br><span class="line">    <span class="attr">duration</span>: <span class="number">2000</span>,</span><br><span class="line">    <span class="title function_">easing</span>(<span class="params">timeFraction</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> timeFraction * (<span class="number">2</span> - timeFraction);</span><br><span class="line">    &#125;,</span><br><span class="line">    draw,</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4808e48403684d70b74a9ff5defa419d~tplv-k3u1fbpfcp-watermark.image?" alt="9.gif"></p>
+<h2 id="相关实践资源">相关实践资源</h2>
+<p>动画代码示例：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a> 可以提供很多设计灵感</li>
+<li><a target="_blank" rel="noopener" href="https://codesandbox.io/dashboard/home?workspace=79846caf-22a5-419f-bd79-64954e7ad9dd">CodeSandbox</a> 方便引入SDK</li>
+</ul>
+<p>设计网站：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://dribbble.com/">Dribbble - Discover the World’s Top Designers &amp; Creative Professionals</a></li>
+<li>我自己推荐一手figma：<a target="_blank" rel="noopener" href="https://www.figma.com/files/recent?fuid=1037355984934938497">Figma</a></li>
+</ul>
+<p>动画制作工具(一般都是UE、UI同学使用):</p>
+<ul>
+<li>2D : Animate CC、After Effects</li>
+<li>3D :Cinema 4D、Blender、Autodesk Maya</li>
+</ul>
+<p>SVG:</p>
+<ul>
+<li>
+<p>Snap.SVG - 现代SVG图形的JavaScript库</p>
+</li>
+<li>
+<p>Svg.js - 用于操作和动画SVG的轻量级库。</p>
+</li>
+</ul>
+<p>JS:</p>
+<ul>
+<li>
+<p>GSAP - JavaScript动画库。</p>
+</li>
+<li>
+<p>TweenJS - 一个简单但功能强大的JavaScript补间/动画库。CreateJS库套件的一部分。</p>
+</li>
+<li>
+<p>Velocity - 加速的JavaScript动画。</p>
+</li>
+</ul>
+<p>CSS:</p>
+<ul>
+<li>Animate.css - CSS动画的跨浏览器库。像一件简单的事情一样容易使用。</li>
+</ul>
+<p>canvas:</p>
+<ul>
+<li>
+<p>EaselJS - EaselJS 是一个用于在HTML5中构建高性能交互式2D内容的库</p>
+</li>
+<li>
+<p>Fabric.js -支持动画的JavaScript画布库。</p>
+</li>
+<li>
+<p>Paper.js -矢量图形脚本的瑞士军刀</p>
+</li>
+<li>
+<p>Scriptographer - 使用HTML5</p>
+<p>Canvas移植到JavaScript和浏览器。</p>
+</li>
+<li>
+<p>Pixijs –使用最快、最灵活的2D WebGL渲染器创建精美的数字内容。</p>
+</li>
+</ul>
+<p>在实际工作中往往是将UI给的动画帧/设计文件转化为代码</p>
+<ul>
+<li>
+<p>需要完全前端自己设计自己开发时：</p>
+<ul>
+<li>使用已封装好的动画库，从开发成本和体验角度出发进行取舍</li>
+</ul>
+</li>
+<li>
+<p>设计不是很有空时：</p>
+<ul>
+<li>清晰度、图片格式可以指定，动画<strong>尽量给出示意或者相似案例参考</strong>。索要精灵图资源等需要帮忙压缩。（移动端的资源适配等）</li>
+</ul>
+</li>
+<li>
+<p>设计资源充足时：</p>
+<ul>
+<li>
+<p>要求设计导出lottie格式文件</p>
+<blockquote>
+<p>Lottie是可应用于Android, ios, Web和Windows的库,<br>
+通过Bodymovin解析AE动画，并导出可在移动端和web端渲染动画的json文件。</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> lottie <span class="keyword">from</span> <span class="string">&#x27;lottie-web&#x27;</span> ;</span><br><span class="line"><span class="variable language_">this</span>.<span class="property">animation</span> = lottie.<span class="title function_">loadAnimation</span>(&#123;</span><br><span class="line">    <span class="attr">container</span>: <span class="variable language_">this</span>.<span class="property">animationRef</span>.<span class="property">current</span>,</span><br><span class="line">    <span class="attr">renderer</span>: <span class="string">&#x27;svg&#x27;</span>,</span><br><span class="line">    <span class="attr">loop</span>: <span class="literal">false</span>,</span><br><span class="line">    <span class="attr">autoplay</span>: <span class="literal">false</span>,</span><br><span class="line">    <span class="attr">aninationData</span>: dataJson,</span><br><span class="line">    <span class="attr">path</span>: <span class="variable constant_">URL</span>,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="优化">优化</h3>
+<ul>
+<li>
+<p><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E5%8B%95%E7%95%AB%E7%9A%8412%E9%A0%85%E5%9F%BA%E6%9C%AC%E6%B3%95%E5%89%87">动画的12项基本法则 - 维基百科，自由的百科全书 (wikipedia.org)</a></p>
+</li>
+<li>
+<p>性能角度</p>
+<ul>
+<li>重点：减少重绘、重排，这是整个环节中最为耗时的两环。</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>页面渲染的一般过程为JS -&gt; CSS -&gt; 计算样式 --&gt; 布局 -&gt; 绘制 -&gt; 渲染层合并。</p>
+<p>其中，<strong>Layout(重排)和Paint(重绘)是整个环节中最为耗时的两环</strong>，所以我们尽量避免这两个环节。从性能方面考虑，<strong>最理想的渲染流水线是没有布局和绘制环节</strong>的，<strong>只需要做渲染层的合并</strong>即可。</p>
+</blockquote>
+<ul>
+<li>通过<a target="_blank" rel="noopener" href="https://csstriggers.com/">CSS Triggers</a>可以查询CSS属性及其影响的环节</li>
+</ul>
+<h3 id="建议">建议</h3>
+<ul>
+<li>在实际的应用里，最为简单的一个注意点就是，<strong>触发动画的开始不要用display:none属性值</strong>，因为<strong>它会引起Layout、Paint环节</strong>，通过<strong>切换类名</strong>就已经是一种很好的办法。</li>
+</ul>
+<blockquote>
+<p>ps：学到了！这就去改改</p>
+</blockquote>
+<ul>
+<li>CSS3硬件加速又叫做GPU 加速，是利用GPU进行渲染，减少CPU操作的一种优化方案。由于GPU中的transform等CSS属性不会触发repaint，所以能大大提高网页的性能。CSS中的以下几个属性能触发硬件加速：
+<ul>
+<li>transform</li>
+<li>opacity</li>
+<li>filter</li>
+<li>Will-change</li>
+<li>如果有一些元素不需要用到上述属性，但是需要触发硬件加速效果,可以使用一些小技巧来诱导浏览器开启硬件加速。</li>
+<li>-算法优化<br>
+-线性函数代替真实计算-几何模型优化<br>
+-碰撞检测优化622<br>
+-内存/缓存优化-离屏绘制</li>
+</ul>
+</li>
+</ul>
+<h2 id="总结感想">总结感想</h2>
+<p>今天的课也非常的硬核，介绍了前端动画的基本原理、前端动画的分类和如何实现前端的动画，并介绍了相关资源与实践方法。让我对前端动画有了一个更深刻的了解，最后给出的资源推荐也很有帮助~</p>
+<blockquote>
+<p>本文引用的内容大部分来自蒋翔老师的课、MDN（CSS动画属性的介绍翻了半天MDN，上面写的非常全面并且有很生动的例子，推荐一看）</p>
+</blockquote>
+
+
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
+          
+          <li class="previous">
+            <a href="/cn/note/front-end/bytedance-note/http-utilization-guide/cl1z6l50v008tc0us117f9971" data-toggle="tooltip" data-placement="top" title="【第二届青训营-寒假前端场】- 「HTTP实用指南」">&larr; Previous Post</a>
+          </li>
+          
+          
+          <li class="next">
+            <a href="/cn/note/front-end/bytedance-note/responsive-system-and-react/cl1z6l510009bc0ush7xehxve" data-toggle="tooltip" data-placement="top" title="【第二届青训营-寒假前端场】- 「响应式系统与 React」">Next Post &rarr;</a>
+          </li>
+          
+        </ul>
+
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    
+      如果您喜欢此博客或发现它对您有用，则欢迎对此发表评论。 也欢迎您共享此博客，以便更多人可以参与。 如果博客中使用的图像侵犯了您的版权，请与作者联系以将其删除。 谢谢 ！
+    
+  </p>
+</div>
+<!-- tip end -->
+
+        <!-- tip end -->
+        
+
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=【第二届青训营-寒假前端场】- 「前端动画实现」&body=Hi,I found this website and thought you might like it https://ysx.cosine.ren/cn/note/front-end/bytedance-note/animation-implement/cl1z6l50p008fc0us4g0pedte">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+        <!-- Sharing End -->
+        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+  <!-- gitalk start -->
+  <!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
+
+  <div id="gitalk-container"></div>
+
+  
+    <!-- <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.js"></script> -->
+    <script src="/js/comment/gitalk.js"></script>
+  
+
+  <script>
+    var gitalk = new Gitalk({
+      clientID: '2f50b376c49e65b70db0',
+      clientSecret: '5bf5a8b7b0a9a22194ee1f0ee1e58dac2e19a359',
+      repo: 'yusixian.github.io',
+      owner: 'yusixian',
+      admin: 'yusixian',
+      id: 'Fri Jan 21 2022 14:30:17 GMT+0800', // Ensure uniqueness and length less than 50
+      distractionFreeMode: false, // Facebook-like distraction free mode
+      perPage: 10,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      language: 'zh-CN',
+      proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'
+    });
+    gitalk.render('gitalk-container');
+
+    var gtFolded = () => {
+      setTimeout(function () {
+        let markdownBody = document.getElementsByClassName("markdown-body");
+        let list = Array.from(markdownBody);
+        list.forEach(item => {
+          if (item.clientHeight > 250) {
+            item.classList.add('gt-comment-body-folded');
+            item.style.maxHeight = '250px';
+            item.title = 'Click to Expand';
+            item.onclick = function () {
+              item.classList.remove('gt-comment-body-folded');
+              item.style.maxHeight = '';
+              item.title = '';
+              item.onclick = null;
+            };
+          }
+        })
+      }, 800);
+    }
+  </script>
+
+  <!-- gitalk end -->
+
+
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">目录</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%8A%A8%E7%94%BB%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">动画的基本原理</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%8A%A8%E7%94%BB%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">动画是什么</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%8A%A8%E7%94%BB%E5%8F%91%E5%B1%95%E5%8F%B2"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">动画发展史</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8A%A8%E7%94%BB"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">计算机动画</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%89%8D%E7%AB%AF%E5%8A%A8%E7%94%BB%E5%88%86%E7%B1%BB"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">前端动画分类</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#css%E5%8A%A8%E7%94%BB"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">css动画</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#animation-name"><span class="toc-nav-number">2.1.1.</span> <span class="toc-nav-text">animation-name</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#animation-duration"><span class="toc-nav-number">2.1.2.</span> <span class="toc-nav-text">animation-duration</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#animation-timing-function"><span class="toc-nav-number">2.1.3.</span> <span class="toc-nav-text">animation-timing-function</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#animation-delay"><span class="toc-nav-number">2.1.4.</span> <span class="toc-nav-text">animation-delay</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#animation-iteration-count"><span class="toc-nav-number">2.1.5.</span> <span class="toc-nav-text">animation-iteration-count</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#animation-direction"><span class="toc-nav-number">2.1.6.</span> <span class="toc-nav-text">animation-direction</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#animation-fill-mode"><span class="toc-nav-number">2.1.7.</span> <span class="toc-nav-text">animation-fill-mode</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#animation-play-state"><span class="toc-nav-number">2.1.8.</span> <span class="toc-nav-text">animation-play-state</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#transform-API"><span class="toc-nav-number">2.1.9.</span> <span class="toc-nav-text">transform API</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#keyframe%E5%AE%9E%E7%8E%B0%E5%8A%A8%E7%94%BB"><span class="toc-nav-number">2.1.10.</span> <span class="toc-nav-text">keyframe实现动画</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#svg%E5%AE%9E%E7%8E%B0%E5%8A%A8%E7%94%BB"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">svg实现动画</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E6%96%87%E5%AD%97%E6%BA%B6%E8%A7%A3%E5%8E%9F%E7%90%86-filter"><span class="toc-nav-number">2.2.1.</span> <span class="toc-nav-text">文字溶解原理-filter</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#JS%E7%AC%94%E7%94%BB%E5%8E%9F%E7%90%86-stroke"><span class="toc-nav-number">2.2.2.</span> <span class="toc-nav-text">JS笔画原理-stroke</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#js%E5%AE%9E%E7%8E%B0%E5%8A%A8%E7%94%BB"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">js实现动画</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%A6%82%E4%BD%95%E5%81%9A%E9%80%89%E6%8B%A9%EF%BC%9F"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">如何做选择？</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%AE%9E%E7%8E%B0%E5%89%8D%E7%AB%AF%E5%8A%A8%E7%94%BB"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">实现前端动画</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#js%E5%8A%A8%E7%94%BB%E5%87%BD%E6%95%B0%E5%B0%81%E8%A3%85"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">js动画函数封装</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%AE%80%E5%8D%95%E5%8A%A8%E7%94%BB"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">简单动画</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%A4%8D%E6%9D%82%E5%8A%A8%E7%94%BB"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text">复杂动画</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%9B%B8%E5%85%B3%E5%AE%9E%E8%B7%B5%E8%B5%84%E6%BA%90"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">相关实践资源</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BC%98%E5%8C%96"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">优化</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%BB%BA%E8%AE%AE"><span class="toc-nav-number">4.2.</span> <span class="toc-nav-text">建议</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%BB%E7%BB%93%E6%84%9F%E6%83%B3"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">总结感想</span></a></li></ol>
+        
+        </div>
+      </aside>
+    
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">特色标签</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#前端" title="前端">前端</a>
+            
+            <a class="tag" href="/tags/#动画" title="动画">动画</a>
+            
+            <a class="tag" href="/tags/#CSS" title="CSS">CSS</a>
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr>
+        <h5>友链</h5>
+        <ul class="list-inline">
+
+          
+          <li>
+            <a href="https://sadose.github.io/" target="_blank">大森的博客</a>
+          </li>
+          
+          <li>
+            <a href="https://www.xiaocao.cloud/" target="_blank">小曹同学的百草园</a>
+          </li>
+          
+          <li>
+            <a href="https://gelxgx.github.io/blog/" target="_blank">瘦虎的博客</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
+
+
+		<!-- Footer (contains ThemeColor、viewer) -->
+		<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center">
+          
+
+          
+            <li>
+              <a target="_blank" href="https://github.com/yusixian">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+            <li>
+              <a target="_blank" href="https://www.zhihu.com/people/qi-jiu-en">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa  fa-stack-1x fa-inverse">知</i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+
+        </ul>
+        <p class="copyright text-muted">
+          Copyright &copy;
+          cos
+          2022
+          <br>
+          Theme by
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
+          <span style="display: inline-block; margin: 0 5px;">
+            <i class="fa fa-heart"></i>
+          </span>
+          re-Ported by
+          <a target="_blank" rel="noopener" href="https://v-vincen.life/">Live My Life</a>
+          |
+          <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=V-Vincen&repo=V-Vincen.github.io&type=star&count=true"></iframe>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a id="rocket" href="#top" class=""></a>
+
+
+  <!-- jQuery -->
+  <script type="text/javascript" src="/js/jquery.min.js"></script>
+  <!-- Bootstrap Core JavaScript -->
+  <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+  <!-- Custom Theme JavaScript -->
+  <script type="text/javascript" src="/js/hux-blog.min.js"></script>
+  <!-- catalog -->
+  <script async="true" type="text/javascript" src="/js/catalog.js"></script>
+  <!-- totop(rocket) -->
+  <script async="true" type="text/javascript" src="/js/totop.js"></script>
+
+  
+    <!-- Busuanzi JavaScript -->
+    <script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <!-- Scroll start -->
+    <script async="async" type="text/javascript" src="/js/scroll.js"></script>
+    <!-- Scroll end -->
+  
+
+  
+
+  
+    <!-- Mouseclick -->
+    <script type="text/javascript" src="/js/mouseclick.js" content='❤,❤,❤,❤,❤,❤,❤,❤,❤' color='#ffa940,#f5222d,#fa541c,#FF99CC,#a8071a,#faad14,#1890ff,#eb2f96,#13c2c2'></script>
+  
+
+  
+    <!-- ribbon -->
+    <script type="text/javascript" src="/js/ribbonDynamic.js"></script>
+  
+
+  
+
+
+
+
+
+
+  <!-- viewer start -->
+  <!-- viewer start (Picture preview) -->
+  
+    <script async="async" type="text/javascript" src="/js/viewer/viewer.min.js"></script>
+    <script async="async" type="text/javascript" src="/js/viewer/pic-viewer.js"></script>
+  
+
+  <!-- viewer end -->
+
+
+<script>
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function (e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  // fastClick.js
+  async ("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+    var $nav = document.querySelector("nav");
+    if ($nav)
+      FastClick.attach($nav);
+    }
+  )
+</script>
+
+<!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
+https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+<!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
+
+<!-- jquery.tagcloud.js -->
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("https://ysx.cosine.ren/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
+
+
+		<!-- Search -->
+		
+		<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-9 col-md-offset-1"> -->
+      <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1 local-search-content">
+
+        <div class="local-search-header clearfix">
+
+          <div class="local-search-input-wrapper">
+            <span class="search-icon">
+              <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
+            </span>
+            <input autocomplete="off" placeholder="搜索..." type="text" id="local-search-input">
+          </div>
+        </div>
+        <div id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+    <script src="/js/ziploader.js"></script>
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+    // get search zip version
+    $.get('/searchVersion.json?t=' + (+new Date()), function (res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson() {
+      initLoad(['/search.flv'], {
+        loadOptions: {
+          success: function (obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function (e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions: {
+          'json': 'application/json'
+        }
+      })
+    }
+    // search function;
+    var searchFunc = function (search_id, content_id) {
+      'use strict';
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      // console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function () {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function (data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title
+              ? data.title.trim()
+              : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content
+              ? data.content.trim().replace(/<[^>]+>/g, "")
+              : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+
+            var date = data.date;
+            var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
+            var imgUrl = data.header_img;
+            
+
+
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function (keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0,
+                  position = [],
+                  index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+            // show search results
+            if (isMatch) {
+              // sort index by position of keyword
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+              // merge hits into slices
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+                  // move to next position of hit
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {hits: hits, start: start, end: end, searchTextCount: searchTextCountInSlice};
+              }
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if (start < 0) {
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if (end > content.length) {
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+              // sort slices in content by search text's count and hits' count
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+              // select top N slices in content
+              var upperBound = parseInt('1');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+              // highlight title and content
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+              var resultItem = '';
+
+              // if (slicesOfTitle.length != 0) {   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>"; } else {   resultItem += "<li><a target='_blank' href='" +
+              // articleUrl + "' class='search-result-title'>" + title + "</a>"; } slicesOfContent.forEach(function (slice) {   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) +
+              // "...</p></a>"; }); resultItem += "</li>";
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              } else {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              }
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
+              });
+              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
+
+              resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
+            }
+          })
+        };
+
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<div class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</div>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+      // remove loading animation
+      $('body').css('overflow', '');
+      proceedsearch();
+    }
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function (e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function (e) {
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 && $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      var _con = document.querySelector(".local-search-content");
+      if (_con) {
+        if (!_con.contains(e.target)) {
+          onPopupClose();
+        }
+      }
+    });
+  </script>
+
+
+		
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>

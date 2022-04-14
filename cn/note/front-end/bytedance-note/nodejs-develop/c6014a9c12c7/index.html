@@ -1,0 +1,1558 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
+<head>
+  <!-- Google Analytics -->
+  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-xxxxxx-xx"></script>
+    <script type="text/javascript">
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-xxxxxx-xx');
+    </script>
+  
+
+  <!-- Baidu Tongji -->
+  
+    <script type="text/javascript">
+      // Originial
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  <!-- Baidu Push -->
+  
+    <script>
+      (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+      })();
+    </script>
+  
+
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <meta name="google-site-verification" content="lxDfCplOZbIzjhG34NuQBgu2gdyRlAtMB4utP5AgEBc"/>
+  <meta name="baidu-site-verification" content="PpzM9WxOJU"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="一个正在努力学习前端的程序媛qwq"/>
+  <meta name="keyword" content="前端, cos, blog, css, html, c++"/>
+  <link rel="shortcut icon" href="/img/avatar/cos.jpg"/>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
+
+  
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/beantech.min.css"/>
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="/css/highlight.css"/>
+    <link rel="stylesheet" href="/css/widget.css"/>
+    <link rel="stylesheet" href="/css/rocket.css"/>
+    <link rel="stylesheet" href="/css/signature.css"/>
+    <link rel="stylesheet" href="/css/catalog.css"/>
+    <link rel="stylesheet" href="/css/livemylife.css"/>
+
+    
+      <!-- wave start -->
+      <link rel="stylesheet" href="/css/wave.css"/>
+      <!-- wave end -->
+    
+
+    
+      <!-- top start (article top hot config) -->
+      <link rel="stylesheet" href="/css/top.css"/>
+      <!-- top end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="/css/scroll.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+      <!-- viewer start (Picture preview) -->
+      <link rel="stylesheet" href="/css/viewer.min.css"/>
+      <!-- viewer end -->
+    
+
+    
+      <!-- Search start -->
+      <link rel="stylesheet" href="/css/search.css"/>
+      <!-- Search end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="/css/themecolor.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+
+    
+      <!-- gitalk start -->
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"> -->
+      <link rel="stylesheet" href="/css/gitalk.css"/>
+      <!-- gitalk end -->
+    
+  
+
+  <!-- Custom Fonts -->
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+  <!-- Hux change font-awesome CDN to qiniu -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Hux Delete, sad but pending in China <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> <link
+  href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/ css'> -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+
+  <!-- ga & ba script hoook -->
+  <link rel="canonical" href="https://ysx.cosine.ren/cn/note/front-end/bytedance-note/nodejs-develop/c6014a9c12c7/">
+  <title>
+    
+      【第二届青训营-寒假前端场】- 「Node.js 与前端开发实战」 - cos的博客 - WA的一声就哭了
+    
+  </title>
+<meta name="generator" content="Hexo 5.4.1"></head>
+
+
+<!-- hack iOS CSS :active style -->
+
+	<body ontouchstart="" class="body--light body--light">
+
+
+		<!-- ThemeColor -->
+		
+		<!-- ThemeColor -->
+<style type="text/css">
+  .body--light {
+    --light-mode: none;
+    --dark-mode: block;
+  }
+  .body--dark {
+    --light-mode: block;
+    --dark-mode: none;
+  }
+  i.mdui-icon.material-icons.light-mode {
+    display: var(--light-mode);
+  }
+  i.mdui-icon.material-icons.dark-mode {
+    display: var(--dark-mode);
+  }
+</style>
+<div class="toggle" onclick="document.body.classList.toggle('body--dark')">
+  <i class="mdui-icon material-icons light-mode"></i>
+  <i class="mdui-icon material-icons dark-mode"></i>
+</div>
+<script>
+  //getCookieValue
+  function getCookieValue(a) {
+    var b = document.cookie.match('(^|[^;]+)\\s*' + a + '\\s*=\\s*([^;]+)');
+    return b
+      ? b.pop()
+      : '';
+  }
+  let themeMode = 'light';
+  if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
+    let dbody = document.body.classList;
+    themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
+  }
+
+  //setCookieValue
+  var toggleBtn = document.querySelector(".toggle");
+  toggleBtn.addEventListener("click", function () {
+    var e = document.body.classList.contains("body--dark");
+    var cookieString = e
+      ? "dark"
+      : "light";
+    var exp = new Date();
+    exp.setTime(exp.getTime() + 3 * 24 * 60 * 60 * 1000); //3天过期
+    document.cookie = "sb-color-mode=" + cookieString + ";expires=" + exp.toGMTString() + ";path=/";
+  });
+</script>
+
+		
+
+		<!-- Gitter -->
+		
+		<!-- Gitter -->
+<!-- Docs:https://gitter.im/?utm_source=left-menu-logo -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'cosine_yu_blog/community'
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+		
+
+		<!-- Navigation (contains search)-->
+		<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">cos的博客</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- Known Issue, found by Hux: <nav>'s height woule be hold on by its content. so, when navbar scale out, the <nav> will cover tags. also mask any touch event of tags, unfortunately. -->
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/">首页</a>
+          </li>
+
+          
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/archive/">
+              
+              归档
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              标签
+              
+              
+            </a>
+          </li>
+          
+          
+
+          
+          <li>
+            <a class="popup-trigger">
+              <span class="search-icon"></span>搜索</a>
+          </li>
+          
+
+          <!-- LangSelect -->
+          
+        </ul>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+<!-- progress -->
+<div id="progress">
+  <div class="line" style="width: 0%;"></div>
+</div>
+
+<script>
+  // Drop Bootstarp low-performance Navbar Use customize navbar with high-quality material design animation in high-perf jank-free CSS3 implementation
+  var $body = document.body;
+  var $toggle = document.querySelector('.navbar-toggle');
+  var $navbar = document.querySelector('#huxblog_navbar');
+  var $collapse = document.querySelector('.navbar-collapse');
+
+  $toggle.addEventListener('click', handleMagic)
+
+  function handleMagic(e) {
+    if ($navbar.className.indexOf('in') > 0) {
+      // CLOSE
+      $navbar.className = " ";
+      // wait until animation end.
+      setTimeout(function() {
+        // prevent frequently toggle
+        if ($navbar.className.indexOf('in') < 0) {
+          $collapse.style.height = "0px"
+        }
+      }, 400)
+    } else {
+      // OPEN
+      $collapse.style.height = "auto"
+      $navbar.className += " in";
+    }
+  }
+</script>
+
+
+		<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
+		<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+
+  <style type="text/css">
+    .body--light {
+      /* intro-header */
+      --intro-header-background-image-url-home: url('/img/header_img/93604793_p0.jpg');
+      --intro-header-background-image-url-post: url('/img/header_img/lml_bg.jpg');
+      --intro-header-background-image-url-page: url('//img/header_img/lml_bg.jpg');
+    }
+    .body--dark {
+      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/93604793_p0.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/lml_bg.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('//img/header_img/lml_bg.jpg');
+    }
+
+    header.intro-header {
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('/img/header_img/lml_bg.jpg'); */
+      
+    }
+
+    
+  </style>
+
+
+
+
+
+<header class="intro-header">
+  <!-- Signature -->
+  <div id="signature">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#前端" title="前端">前端</a>
+              
+              <a class="tag" href="/tags/#JavaScript" title="JavaScript">JavaScript</a>
+              
+              <a class="tag" href="/tags/#Node.js" title="Node.js">Node.js</a>
+              
+            </div>
+            <h1>【第二届青训营-寒假前端场】- 「Node.js 与前端开发实战」</h1>
+            <h2 class="subheading">这节课从Node.js介绍起，实现了其编写Http Server的一个实战（并用Promise优化回调，还对SSR有了一定的了解），并在延伸话题里老师也给出了一些建议与拓展阅读，好欸~</h2>
+            <span class="meta">
+              Posted by cos on
+              2022-01-24
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              Estimated Reading Time <span class="post-count">11</span> Minutes
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              Words <span class="post-count">2.6k</span> In Total
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- waveoverlay start -->
+  <div class="preview-overlay">
+    <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+      </defs>
+      <g class="preview-parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill=var(--gentle-wave1)></use>
+        <use xlink:href="#gentle-wave" x="48" y="3" fill=var(--gentle-wave2)></use>
+        <use xlink:href="#gentle-wave" x="48" y="5" fill=var(--gentle-wave3)></use>
+        <use xlink:href="#gentle-wave" x="48" y="7" fill=var(--gentle-wave)></use>
+      </g>
+    </svg>
+  </div>
+  <!-- waveoverlay end -->
+  
+
+</header>
+
+
+
+		<!-- Main Content (Post contains
+	Pager、
+	tip、
+	socialshare、
+	gitalk、gitment、disqus-comment、
+	Catalog、
+	Sidebar、
+	Featured-Tags、
+	Friends Blog、
+	anchorjs、
+	) -->
+		<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <h1>本节课重点内容</h1>
+<h2 id="Node-js-的应用场景（why）">Node.js 的应用场景（why）</h2>
+<ul>
+<li>
+<p>前端工程化</p>
+<ul>
+<li>
+<p>早期的jQuery等库都是直接在页面中引入，后来模块化逐渐成熟，Node.js赋予了开发者在浏览器外运行代码的能力，前端逐渐模块化、</p>
+</li>
+<li>
+<p>Bundle：<a target="_blank" rel="noopener" href="https://www.webpackjs.com/">webpack</a>、<a target="_blank" rel="noopener" href="https://cn.vitejs.dev/">Vite</a>、<a target="_blank" rel="noopener" href="https://esbuild.docschina.org/">esbuild</a>、<a target="_blank" rel="noopener" href="https://www.parceljs.cn/">Parcel</a>等</p>
+</li>
+<li>
+<p>Uglify：<a target="_blank" rel="noopener" href="https://lisperator.net/uglifyjs/">UglifyJS</a></p>
+</li>
+<li>
+<p>Transplie：<a target="_blank" rel="noopener" href="https://babeljs.io/">babeljs</a>、<a target="_blank" rel="noopener" href="https://www.tslang.cn/">TypeScript</a></p>
+<blockquote>
+<p>个人理解：Transplie就是将ES6这样最新的语法转译成低版本的写法，实现浏览器兼容</p>
+</blockquote>
+</li>
+<li>
+<p>其他语言加入前段工程化的竞争：<a target="_blank" rel="noopener" href="https://esbuild.docschina.org/">esbuild</a>、<a target="_blank" rel="noopener" href="https://www.parceljs.cn/">Parcel</a> 、prisma等</p>
+</li>
+<li>
+<p>现状：Node.js难以替代</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Web服务端应用</p>
+<ul>
+<li>学习曲线平缓，<strong>开发效率较高</strong></li>
+<li><strong>运行效率接近常见的编译语言</strong></li>
+<li>社区生态丰富及<strong>工具链成熟</strong>（npm，V8 inspector）</li>
+<li>与前端结合的场景会有优势（SSR，<strong>同构前端应用</strong>。 编写页面 和 后端数据的获取和填充都由 JavaScript 来完成）</li>
+<li>现状：竞争激烈，Node.js 有自己独特的优势</li>
+</ul>
+</li>
+<li>
+<p>Electron<strong>跨端</strong>桌面应用</p>
+<ul>
+<li>商业应用: vscode、slack、discord、zoom</li>
+<li>大型公司内的效率工具</li>
+<li>现状:大部分场景在选型时，都值得考虑</li>
+</ul>
+</li>
+</ul>
+<h2 id="Node-js运行时结构（what）">Node.js运行时结构（what）</h2>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b4e16f59c5ba42b39cc07156fb27ef84~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
+<ul>
+<li>N-API：用户代码中利用npm安装的一些包</li>
+<li><a target="_blank" rel="noopener" href="http://nodejs.cn/learn/the-v8-javascript-engine">V8</a>：JavaScript Runtime，诊断调试工具(inspector)</li>
+<li><a target="_blank" rel="noopener" href="https://luohaha.github.io/Chinese-uvbook/source/introduction.html">libuv</a>：eventloop (事件循环)，syscall (系统调用)
+<ul>
+<li>举例：用node-fetch发起请求时</li>
+<li>整个过程中底层会调用非常多的c++代码</li>
+</ul>
+</li>
+</ul>
+<p><strong>特点</strong></p>
+<ul>
+<li>
+<p>异步I/O：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;B&#x27;</span>);</span><br><span class="line">&#125;)</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;A&#x27;</span>);</span><br></pre></td></tr></table></figure>
+<ul>
+<li>
+<p>一个常见场景：<strong>读取文件</strong>时。当Node.js执行I/O操作时，会在响应返回后恢复操作，而<strong>不是阻塞线程并占用额外内存等待</strong>。（内存占用更少）</p>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/68794c8de61049ed90ecc828b3436dc5~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
+</li>
+</ul>
+</li>
+<li>
+<p>单线程</p>
+<ul>
+<li>
+<p>worker_thread可以起一个独立线程，但每个线程的模型没有太大变化</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">fibonacci</span>(<span class="params">num:number</span>):number &#123;</span><br><span class="line">	<span class="keyword">if</span>(num === <span class="number">1</span> || num === <span class="number">2</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="title function_">fibonacci</span>(num-<span class="number">1</span>) + <span class="title function_">fibonacci</span>(num-<span class="number">2</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">fibonacci</span>(<span class="number">42</span>)</span><br><span class="line"><span class="title function_">fibonacci</span>(<span class="number">43</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>JS单线程</p>
+<ul>
+<li>实际:JS线程 + uv线程池（4个线程） + V8任务线程池 + V8 Inspector线程</li>
+</ul>
+</li>
+<li>
+<p>优点：不用考虑多线程状态同步问题，<strong>也就不需要锁</strong>。同时还能比较高效地利用系统资源;</p>
+</li>
+<li>
+<p>缺点：<strong>阻塞会产生更多负面影响</strong>、异步问题、延时有要求的场景需要考虑。</p>
+<ul>
+<li>解决办法：多进程或多线程</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>跨平台（大部分功能、api）</p>
+<ul>
+<li>
+<p>想用linux上的Socket，而不同平台上调用的又不一样，只需：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> net = <span class="built_in">require</span>(<span class="string">&#x27;net&#x27;</span>)</span><br><span class="line"><span class="keyword">const</span> socket = <span class="keyword">new</span> net.<span class="title class_">Socket</span>(<span class="string">&#x27;/tmp/socket.sock&#x27;</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>Node.js跨平台 + <strong>JS无需编译环境</strong>（+ <strong>Web跨平台</strong> + 诊断工具跨平台）</p>
+<ul>
+<li>= <strong>开发成本低</strong>（大部分场景无需担心跨平台问题），整体学习成本低</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="编写Http-Server-（how）">编写Http Server （how）</h2>
+<h3 id="安装Node-js">安装Node.js</h3>
+<ul>
+<li>Mac, Linux推荐使用nvm。<strong>多版本管理。</strong></li>
+<li>Windows推荐nvm4w或是<a target="_blank" rel="noopener" href="https://nodejs.org/en/download/">官方安装包</a>。</li>
+<li>安装慢，安装失败的情况，设置安装源
+<ul>
+<li>NVM_ NODEJS_ORG_MIRROR=https://npmmirror.com/mirrors/node nvm install 16</li>
+</ul>
+</li>
+</ul>
+<h3 id="编写Http-Server-Client-收发GET-POST请求">编写Http Server + Client, 收发GET, POST请求</h3>
+<ul>
+<li>前提：安装好Node.js，以管理员权限打开cmd下转至当前文件目录下</li>
+</ul>
+<h4 id="Http-Server">Http Server</h4>
+<ul>
+<li>
+<p>首先编写一个server.js，如下</p>
+<ul>
+<li>
+<p><a target="_blank" rel="noopener" href="https://nodejs.org/api/http.html#httpcreateserveroptions-requestlistener"><code>createServer</code></a> 说明</p>
+<blockquote>
+<p>req 请求，res响应</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://nodejs.org/api/http.html#serverlisten"><code>server.listen</code></a> 说明</p>
+<blockquote>
+<p>port 要监听的端口号，成功后的回调函数</p>
+</blockquote>
+</li>
+<li>
+<pre><code class="language-js">const http = require('http');
+const server = http.createServer((req, res) =&gt; &#123;
+    res.end('hello'); // 响应直接就是hello
+&#125;);
+const port = 3000;
+server.listen(port, () =&gt; &#123;
+    console.log(`server listens on:$&#123;port&#125;`);	// 监听3000端口
+&#125;)
+
+</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p>使用node启动，此时输入localhost:3000就可以看到hello</p>
+</li>
+</ul>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/86eaa345e5ea499ca25569b7b2cbd9d3~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7baced8533a046adb95f1acd0a92bd87~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
+<ul>
+<li>改为JSON版</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> server = http.<span class="title function_">createServer</span>(<span class="function">(<span class="params">req, res</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// receive body from client</span></span><br><span class="line">    <span class="keyword">const</span> bufs = [];    <span class="comment">// 取传的数据</span></span><br><span class="line">    req.<span class="title function_">on</span>(<span class="string">&#x27;data&#x27;</span>, <span class="function"><span class="params">data</span> =&gt;</span> &#123;</span><br><span class="line">        bufs.<span class="title function_">push</span>(data);</span><br><span class="line">    &#125;);</span><br><span class="line">    req.<span class="title function_">on</span>(<span class="string">&#x27;end&#x27;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">const</span> buf = <span class="title class_">Buffer</span>.<span class="title function_">concat</span>(bufs).<span class="title function_">toString</span>(<span class="string">&#x27;utf-8&#x27;</span>);</span><br><span class="line">        <span class="keyword">let</span> msg = <span class="string">&#x27;Hello&#x27;</span>;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            reqData = <span class="title class_">JSON</span>.<span class="title function_">parse</span>(buf);</span><br><span class="line">            msg = reqData.<span class="property">msg</span>;</span><br><span class="line">        &#125; <span class="keyword">catch</span> (err) &#123;</span><br><span class="line">            res.<span class="title function_">end</span>(<span class="string">&#x27;invalid json&#x27;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// response</span></span><br><span class="line">        <span class="keyword">const</span> responseJson = &#123;</span><br><span class="line">            <span class="attr">msg</span>: <span class="string">`receive：<span class="subst">$&#123;msg&#125;</span>`</span></span><br><span class="line">        &#125;</span><br><span class="line">        res.<span class="title function_">setHeader</span>(<span class="string">&#x27;Content-Type&#x27;</span>, <span class="string">&#x27;application/json&#x27;</span>);</span><br><span class="line">        res.<span class="title function_">end</span>(<span class="title class_">JSON</span>.<span class="title function_">stringify</span>(responseJson));</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<ul>
+<li><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/25a3c3639d4947b290df7623d97a87bb~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></li>
+<li><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a752766165644b1c8bf4e1493a482c6a~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></li>
+</ul>
+<h4 id="Http-Client">Http Client</h4>
+<ul>
+<li><a target="_blank" rel="noopener" href="http://nodejs.cn/api/http/http_request_url_options_callback.html"><code>http.request(url[, options\][, callback])</code></a></li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> http = <span class="built_in">require</span>(<span class="string">&#x27;http&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> body = <span class="title class_">JSON</span>.<span class="title function_">stringify</span>(&#123; <span class="attr">msg</span>: <span class="string">&#x27;hello from my own client&#x27;</span> &#125;);</span><br><span class="line"><span class="comment">// [url] [option] [callback]</span></span><br><span class="line"><span class="keyword">const</span> req = http.<span class="title function_">request</span>(<span class="string">&#x27;http://127.0.0.1:3000&#x27;</span>, &#123;</span><br><span class="line">    <span class="attr">method</span>: <span class="string">&#x27;POST&#x27;</span>,</span><br><span class="line">    <span class="attr">headers</span>: &#123;</span><br><span class="line">        <span class="string">&#x27;Content-Type&#x27;</span>: <span class="string">&#x27;application/json&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;Content-Length&#x27;</span>: body.<span class="property">length</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">&#125;, <span class="function">(<span class="params">res</span>) =&gt;</span> &#123;   <span class="comment">// 响应体   </span></span><br><span class="line">    <span class="keyword">const</span> bufs = [];</span><br><span class="line">    res.<span class="title function_">on</span>(<span class="string">&#x27;data&#x27;</span>, <span class="function"><span class="params">data</span> =&gt;</span> &#123;</span><br><span class="line">        bufs.<span class="title function_">push</span>(data);</span><br><span class="line">    &#125;);</span><br><span class="line">    res.<span class="title function_">on</span>(<span class="string">&#x27;end&#x27;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">const</span> buf = <span class="title class_">Buffer</span>.<span class="title function_">concat</span>(bufs);</span><br><span class="line">        <span class="keyword">const</span> receive = <span class="title class_">JSON</span>.<span class="title function_">parse</span>(buf);</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;receive json.msg is:&#x27;</span>, receive);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;)</span><br><span class="line">req.<span class="title function_">end</span>(body);</span><br></pre></td></tr></table></figure>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/2ccdb0821cb0403093a6192544066cbc~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
+<h4 id="Promisify">Promisify</h4>
+<p>可以用 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a> + <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript/Asynchronous/Async_await">async和await</a> 重写这两个例子（why？）</p>
+<blockquote>
+<p>当 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await">await</a> 关键字与异步函数一起使用时，它的真正优势就变得明显了 —— 事实上， <strong>await 只在异步函数里面才起作用</strong>。它可以放在任何异步的，基于 promise 的函数之前。它会暂停代码在该行上，直到 promise 完成，然后返回结果值。在暂停的同时，其他正在等待执行的代码就有机会执行了</p>
+<p><code>async/await</code> 让你的代码看起来是同步的，在某种程度上，也使得它的行为更加地同步。 <code>await</code> 关键字会阻塞其后的代码，直到promise完成，就像执行同步操作一样。它确实可以允许其他任务在此期间继续运行，但您自己的代码被阻塞。</p>
+</blockquote>
+<ul>
+<li>
+<p>回调写太多容易找不到，不宜维护</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">wait</span>(<span class="params">t</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">            <span class="title function_">resolve</span>();</span><br><span class="line">        &#125;, t);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">wait</span>(<span class="number">1000</span>).<span class="title function_">then</span>(<span class="function">() =&gt;</span> &#123; <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;get called&#x27;</span>); &#125;);</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>并不是所有回调都适合改写成Promise</p>
+<ul>
+<li>适合只被调用一次的回调函数</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> server = http.<span class="title function_">createServer</span>(<span class="keyword">async</span> (req, res) =&gt; &#123;  <span class="comment">// 注意这里的async</span></span><br><span class="line">    <span class="comment">// receive body from client 改成了Promise形式</span></span><br><span class="line">    <span class="keyword">const</span> msg = <span class="keyword">await</span> <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;    <span class="comment">//执行完再交给msg</span></span><br><span class="line">        <span class="keyword">const</span> bufs = [];    </span><br><span class="line">        req.<span class="title function_">on</span>(<span class="string">&#x27;data&#x27;</span>, <span class="function"><span class="params">data</span> =&gt;</span> &#123;</span><br><span class="line">            bufs.<span class="title function_">push</span>(data);</span><br><span class="line">        &#125;);</span><br><span class="line">        req.<span class="title function_">on</span>(<span class="string">&#x27;error&#x27;</span>, <span class="function">(<span class="params">err</span>) =&gt;</span> &#123;</span><br><span class="line">            <span class="title function_">reject</span>(err);</span><br><span class="line">        &#125;)</span><br><span class="line">        req.<span class="title function_">on</span>(<span class="string">&#x27;end&#x27;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">            <span class="keyword">const</span> buf = <span class="title class_">Buffer</span>.<span class="title function_">concat</span>(bufs).<span class="title function_">toString</span>(<span class="string">&#x27;utf-8&#x27;</span>);</span><br><span class="line">            <span class="keyword">let</span> msg = <span class="string">&#x27;Hello&#x27;</span>;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                reqData = <span class="title class_">JSON</span>.<span class="title function_">parse</span>(buf);</span><br><span class="line">                msg = reqData.<span class="property">msg</span>;</span><br><span class="line">            &#125; <span class="keyword">catch</span> (err) &#123;</span><br><span class="line">                <span class="comment">// </span></span><br><span class="line">            &#125;</span><br><span class="line">            <span class="title function_">resolve</span>(msg);</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="comment">// response</span></span><br><span class="line">    <span class="keyword">const</span> responseJson = &#123;</span><br><span class="line">        <span class="attr">msg</span>: <span class="string">`receive：<span class="subst">$&#123;msg&#125;</span>`</span></span><br><span class="line">    &#125;</span><br><span class="line">    res.<span class="title function_">setHeader</span>(<span class="string">&#x27;Content-Type&#x27;</span>, <span class="string">&#x27;application/json&#x27;</span>);</span><br><span class="line">    res.<span class="title function_">end</span>(<span class="title class_">JSON</span>.<span class="title function_">stringify</span>(responseJson));</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9dbdf3381e8a493983e2d317ed9c5a43~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
+<h3 id="编写静态文件服务器">编写静态文件服务器</h3>
+<p>编写一个简单的静态服务，接受用户发过来的http请求，拿到图片的url约定为静态文件服务器磁盘上对应的路径，再把具体内容返回给用户。这次除了 <a target="_blank" rel="noopener" href="http://nodejs.cn/api/http.html">http</a> 模块，还需要 <a target="_blank" rel="noopener" href="http://nodejs.cn/api/fs.html">fs</a> 模块和 <a target="_blank" rel="noopener" href="http://nodejs.cn/api/path.html">path</a> 模块</p>
+<p>先编写一个简单的 index.html，放于static目录下</p>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4896177811004202ac15fc53ea8746ee~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
+<h4 id="static-server-js">static_server.js</h4>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> http = <span class="built_in">require</span>(<span class="string">&#x27;http&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">&#x27;fs&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">&#x27;path&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> url = <span class="built_in">require</span>(<span class="string">&#x27;url&#x27;</span>);</span><br><span class="line"><span class="comment">// __dirname是当前这个文件所在位置, ./为当前文件所在文件夹 folderPath即为static文件夹相对于当前文件路径</span></span><br><span class="line"><span class="keyword">const</span> folderPath = path.<span class="title function_">resolve</span>(__dirname, <span class="string">&#x27;./static&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> server = http.<span class="title function_">createServer</span>(<span class="function">(<span class="params">req, res</span>) =&gt;</span> &#123;  <span class="comment">// 注意这里的async</span></span><br><span class="line">    <span class="comment">// expected http://127.0.0.1:3000/index.html</span></span><br><span class="line">    <span class="keyword">const</span> info = url.<span class="title function_">parse</span>(req.<span class="property">url</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// static/index.html</span></span><br><span class="line">    <span class="keyword">const</span> filepath = path.<span class="title function_">resolve</span>(folderPath, <span class="string">&#x27;./&#x27;</span>+info.<span class="property">path</span>);</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;filepath&#x27;</span>, filepath);</span><br><span class="line">    <span class="comment">// stream风格的api，其内部内存使用率更好</span></span><br><span class="line">    <span class="keyword">const</span> filestream = fs.<span class="title function_">createReadStream</span>(filepath);</span><br><span class="line">    filestream.<span class="title function_">pipe</span>(res);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="keyword">const</span> port = <span class="number">3000</span>;</span><br><span class="line">server.<span class="title function_">listen</span>(port, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`server listens on:<span class="subst">$&#123;port&#125;</span>`</span>);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/002356c010394791918d5d7deb0005ea~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6eb03ea97a7a4263835a1261bb207849~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
+<ul>
+<li>与高性能、可靠的服务相比，还差什么?</li>
+</ul>
+<ol>
+<li><strong>CDN</strong>：<strong>缓存+加速</strong></li>
+<li><strong>分布式</strong>储存，<strong>容灾</strong>（服务器挂了也能正常服务）</li>
+</ol>
+<h3 id="编写React-SSR服务">编写React SSR服务</h3>
+<ul>
+<li>SSR (server side rendering)有什么特点？</li>
+<li>相比传统HTML模版引擎:避免重复编写代码</li>
+<li>相比SPA (single page application)：首屏渲染更快，SEO（搜索引擎优化）友好</li>
+<li>缺点：
+<ul>
+<li>通常qps（每秒查询率）较低，前端代码编写时需要考虑服务端渲染情况</li>
+<li>编写比较难，编写js还要考虑前端中的表现</li>
+</ul>
+</li>
+</ul>
+<h4 id="安装React">安装React</h4>
+<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">npm</span> init</span><br><span class="line"><span class="built_in">npm</span> i react react-dom</span><br></pre></td></tr></table></figure>
+<h4 id="编写示例">编写示例</h4>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">const React = require(&#x27;react&#x27;);</span><br><span class="line">const ReactDOMServer = require(&#x27;react-dom/server&#x27;);</span><br><span class="line">const http = require(&#x27;http&#x27;);</span><br><span class="line">function App(props) &#123;</span><br><span class="line">    return React.createElement(&#x27;div&#x27;, &#123;&#125;, props.children || &#x27;Hello&#x27;);</span><br><span class="line">&#125;</span><br><span class="line">const server = http.createServer((req, res) =&gt; &#123;</span><br><span class="line">    res.end(`</span><br><span class="line">        &lt;!DOCTYPE html&gt;</span><br><span class="line">        &lt;html&gt;</span><br><span class="line">            &lt;head&gt;</span><br><span class="line">                &lt;title&gt;My Application&lt;/title&gt;</span><br><span class="line">            &lt;/head&gt;</span><br><span class="line">            &lt;body&gt;</span><br><span class="line">                $&#123;ReactDOMServer.renderToString(</span><br><span class="line">                    React.createElement(App, &#123;&#125;, &#x27;my_content&#x27;))&#125;</span><br><span class="line">                &lt;script&gt;</span><br><span class="line">                    alert(&#x27;yes&#x27;);</span><br><span class="line">                &lt;/script&gt;</span><br><span class="line">            &lt;/body&gt;</span><br><span class="line">        &lt;/html&gt;</span><br><span class="line">    `);</span><br><span class="line">&#125;)</span><br><span class="line">const port = 3000;</span><br><span class="line">server.listen(port, () =&gt; &#123;</span><br><span class="line">    console.log(&#x27;listening on: &#x27;, port);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/258be264f1104f669d64d5ee1883dafe~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
+<ul>
+<li>SSR难点</li>
+</ul>
+<ol>
+<li>需要处理打包代码</li>
+<li>需要思考前端代码在服务端运行时的逻辑</li>
+<li>移除对服务端无意义的副作用，或重置环境</li>
+</ol>
+<h3 id="适用inspector进行调试、诊断">适用inspector进行调试、诊断</h3>
+<ul>
+<li>
+<p>V8 Inspector:开箱即用、特性丰富强大、与前端开发一致、跨平<br>
+台</p>
+<ul>
+<li><code>node -- inspect</code></li>
+<li><code>open http://localhost:9229/json</code></li>
+</ul>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/73f242fda3c741b6abdb6a9b8cceab2e~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
+</li>
+<li>
+<p>场景:</p>
+<ul>
+<li>查看console.log内容</li>
+<li>breakpoint</li>
+<li>高CPU、死循环: cpuprofile</li>
+<li>高内存占用：heapsnapshot（堆快照）</li>
+<li>性能分析</li>
+</ul>
+</li>
+</ul>
+<h3 id="部署简介">部署简介</h3>
+<p>写完了，如何部署到生产环境捏？</p>
+<ul>
+<li>
+<p>部署要解决的问题</p>
+<ul>
+<li>
+<p>守护进程：当进程退出时，重新拉起</p>
+</li>
+<li>
+<p>多进程：cluster便捷地利用多进程</p>
+</li>
+<li>
+<p>记录进程状态，用于诊断</p>
+</li>
+</ul>
+</li>
+<li>
+<p>容器环境</p>
+<ul>
+<li>通常有健康检查的手段，只需考虑多核cpu利用率即可</li>
+</ul>
+</li>
+</ul>
+<h2 id="延伸话题">延伸话题</h2>
+<h3 id="快速了解Node-js代码">快速了解Node.js代码</h3>
+<p><a target="_blank" rel="noopener" href="https://github.com/joyeecheung/talks/blob/master/code_and_learn_2019_beijing/contributing-to-node-core.pdf">Node. js Core贡献入门</a></p>
+<ul>
+<li>好处
+<ul>
+<li>从使用者的角色逐步理解底层细节，可以解决更复杂的问题，</li>
+<li>自我证明，有助于职业发展;</li>
+<li>解决社区问题，促进社区发展;</li>
+</ul>
+</li>
+<li>难点:
+<ul>
+<li>花时间（真实）</li>
+</ul>
+</li>
+</ul>
+<h3 id="编译Node-js">编译Node.js</h3>
+<ul>
+<li>为什么要学习编译Node.js
+<ul>
+<li>认知:黑盒到白盒，发生问题时能有迹可循</li>
+<li>贡献代码的第一步</li>
+</ul>
+</li>
+<li>如何编译
+<ul>
+<li>./configure &amp;&amp;make install</li>
+<li>演示：给net模块添加自定义属性</li>
+</ul>
+</li>
+</ul>
+<h3 id="诊断-追踪">诊断/追踪</h3>
+<ul>
+<li>诊断是一个低频、重要同时也相当有挑战的方向。是企业衡量自己能否依赖一个门语言的重要参考。</li>
+<li>技术咨询行业中的热门角色。</li>
+<li>难点:
+<ul>
+<li>需要了解Node.js底层，需要了解操作系统以及各种工具</li>
+<li>需要经验</li>
+</ul>
+</li>
+</ul>
+<h3 id="WASM-NAPI">WASM, NAPI</h3>
+<ul>
+<li>Node.js(因为V8)是执行WASM代码的天然容器，和浏览器WASM是同一运行时，同时Node.js支持WASI。</li>
+<li>NAPI执行C接口的代码(C/C++/Rust…)，同时能保留原生代码的性能。</li>
+<li>不同编程语言间通信的一种方案。</li>
+</ul>
+<h2 id="总结感想">总结感想</h2>
+<p>本节课从Node.js介绍起，实现了其编写Http Server的一个实战（并用Promise优化回调，还对SSR有了一定的了解），并在延伸话题里老师也给出了一些建议与拓展阅读，好欸~</p>
+<blockquote>
+<p>本文引用的内容大部分来自欧阳亚东老师的课以及MDN。</p>
+</blockquote>
+
+
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
+          
+          <li class="previous">
+            <a href="/cn/note/front-end/bytedance-note/web-safe-getting-started/744e85d791b0/" data-toggle="tooltip" data-placement="top" title="【第二届青训营-寒假前端场】- 「Web开发的安全之旅」">&larr; Previous Post</a>
+          </li>
+          
+          
+          <li class="next">
+            <a href="/cn/note/front-end/bytedance-note/http-utilization-guide/8ad61a62b17f/" data-toggle="tooltip" data-placement="top" title="【第二届青训营-寒假前端场】- 「HTTP实用指南」">Next Post &rarr;</a>
+          </li>
+          
+        </ul>
+
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    
+      如果您喜欢此博客或发现它对您有用，则欢迎对此发表评论。 也欢迎您共享此博客，以便更多人可以参与。 如果博客中使用的图像侵犯了您的版权，请与作者联系以将其删除。 谢谢 ！
+    
+  </p>
+</div>
+<!-- tip end -->
+
+        <!-- tip end -->
+        
+
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=【第二届青训营-寒假前端场】- 「Node.js 与前端开发实战」&body=Hi,I found this website and thought you might like it https://ysx.cosine.ren/cn/note/front-end/bytedance-note/nodejs-develop/c6014a9c12c7/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+        <!-- Sharing End -->
+        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+  <!-- gitalk start -->
+  <!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
+
+  <div id="gitalk-container"></div>
+
+  
+    <!-- <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.js"></script> -->
+    <script src="/js/comment/gitalk.js"></script>
+  
+
+  <script>
+    var gitalk = new Gitalk({
+      clientID: '2f50b376c49e65b70db0',
+      clientSecret: '5bf5a8b7b0a9a22194ee1f0ee1e58dac2e19a359',
+      repo: 'yusixian.github.io',
+      owner: 'yusixian',
+      admin: 'yusixian',
+      id: 'Mon Jan 24 2022 14:30:17 GMT+0800', // Ensure uniqueness and length less than 50
+      distractionFreeMode: false, // Facebook-like distraction free mode
+      perPage: 10,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      language: 'zh-CN',
+      proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'
+    });
+    gitalk.render('gitalk-container');
+
+    var gtFolded = () => {
+      setTimeout(function () {
+        let markdownBody = document.getElementsByClassName("markdown-body");
+        let list = Array.from(markdownBody);
+        list.forEach(item => {
+          if (item.clientHeight > 250) {
+            item.classList.add('gt-comment-body-folded');
+            item.style.maxHeight = '250px';
+            item.title = 'Click to Expand';
+            item.onclick = function () {
+              item.classList.remove('gt-comment-body-folded');
+              item.style.maxHeight = '';
+              item.title = '';
+              item.onclick = null;
+            };
+          }
+        })
+      }, 800);
+    }
+  </script>
+
+  <!-- gitalk end -->
+
+
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">目录</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">本节课重点内容</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Node-js-%E7%9A%84%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF%EF%BC%88why%EF%BC%89"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">Node.js 的应用场景（why）</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Node-js%E8%BF%90%E8%A1%8C%E6%97%B6%E7%BB%93%E6%9E%84%EF%BC%88what%EF%BC%89"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">Node.js运行时结构（what）</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%BC%96%E5%86%99Http-Server-%EF%BC%88how%EF%BC%89"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">编写Http Server （how）</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%89%E8%A3%85Node-js"><span class="toc-nav-number">1.3.1.</span> <span class="toc-nav-text">安装Node.js</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%BC%96%E5%86%99Http-Server-Client-%E6%94%B6%E5%8F%91GET-POST%E8%AF%B7%E6%B1%82"><span class="toc-nav-number">1.3.2.</span> <span class="toc-nav-text">编写Http Server + Client, 收发GET, POST请求</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Http-Server"><span class="toc-nav-number">1.3.2.1.</span> <span class="toc-nav-text">Http Server</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Http-Client"><span class="toc-nav-number">1.3.2.2.</span> <span class="toc-nav-text">Http Client</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Promisify"><span class="toc-nav-number">1.3.2.3.</span> <span class="toc-nav-text">Promisify</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%BC%96%E5%86%99%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-nav-number">1.3.3.</span> <span class="toc-nav-text">编写静态文件服务器</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#static-server-js"><span class="toc-nav-number">1.3.3.1.</span> <span class="toc-nav-text">static_server.js</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%BC%96%E5%86%99React-SSR%E6%9C%8D%E5%8A%A1"><span class="toc-nav-number">1.3.4.</span> <span class="toc-nav-text">编写React SSR服务</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%AE%89%E8%A3%85React"><span class="toc-nav-number">1.3.4.1.</span> <span class="toc-nav-text">安装React</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E7%BC%96%E5%86%99%E7%A4%BA%E4%BE%8B"><span class="toc-nav-number">1.3.4.2.</span> <span class="toc-nav-text">编写示例</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%80%82%E7%94%A8inspector%E8%BF%9B%E8%A1%8C%E8%B0%83%E8%AF%95%E3%80%81%E8%AF%8A%E6%96%AD"><span class="toc-nav-number">1.3.5.</span> <span class="toc-nav-text">适用inspector进行调试、诊断</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%83%A8%E7%BD%B2%E7%AE%80%E4%BB%8B"><span class="toc-nav-number">1.3.6.</span> <span class="toc-nav-text">部署简介</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%BB%B6%E4%BC%B8%E8%AF%9D%E9%A2%98"><span class="toc-nav-number">1.4.</span> <span class="toc-nav-text">延伸话题</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%BF%AB%E9%80%9F%E4%BA%86%E8%A7%A3Node-js%E4%BB%A3%E7%A0%81"><span class="toc-nav-number">1.4.1.</span> <span class="toc-nav-text">快速了解Node.js代码</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%BC%96%E8%AF%91Node-js"><span class="toc-nav-number">1.4.2.</span> <span class="toc-nav-text">编译Node.js</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%AF%8A%E6%96%AD-%E8%BF%BD%E8%B8%AA"><span class="toc-nav-number">1.4.3.</span> <span class="toc-nav-text">诊断&#x2F;追踪</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#WASM-NAPI"><span class="toc-nav-number">1.4.4.</span> <span class="toc-nav-text">WASM, NAPI</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%BB%E7%BB%93%E6%84%9F%E6%83%B3"><span class="toc-nav-number">1.5.</span> <span class="toc-nav-text">总结感想</span></a></li></ol></li></ol>
+        
+        </div>
+      </aside>
+    
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">特色标签</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#前端" title="前端">前端</a>
+            
+            <a class="tag" href="/tags/#JavaScript" title="JavaScript">JavaScript</a>
+            
+            <a class="tag" href="/tags/#Node.js" title="Node.js">Node.js</a>
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr>
+        <h5>友链</h5>
+        <ul class="list-inline">
+
+          
+          <li>
+            <a href="https://sadose.github.io/" target="_blank">大森的博客</a>
+          </li>
+          
+          <li>
+            <a href="https://www.xiaocao.cloud/" target="_blank">小曹同学的百草园</a>
+          </li>
+          
+          <li>
+            <a href="https://gelxgx.github.io/blog/" target="_blank">瘦虎的博客</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
+
+
+		<!-- Footer (contains ThemeColor、viewer) -->
+		<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center">
+          
+
+          
+            <li>
+              <a target="_blank" href="https://github.com/yusixian">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+            <li>
+              <a target="_blank" href="https://www.zhihu.com/people/qi-jiu-en">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa  fa-stack-1x fa-inverse">知</i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+
+        </ul>
+        <p class="copyright text-muted">
+          Copyright &copy;
+          cos
+          2022
+          <br>
+          Theme by
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
+          <span style="display: inline-block; margin: 0 5px;">
+            <i class="fa fa-heart"></i>
+          </span>
+          re-Ported by
+          <a target="_blank" rel="noopener" href="https://v-vincen.life/">Live My Life</a>
+          |
+          <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=V-Vincen&repo=V-Vincen.github.io&type=star&count=true"></iframe>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a id="rocket" href="#top" class=""></a>
+
+
+  <!-- jQuery -->
+  <script type="text/javascript" src="/js/jquery.min.js"></script>
+  <!-- Bootstrap Core JavaScript -->
+  <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+  <!-- Custom Theme JavaScript -->
+  <script type="text/javascript" src="/js/hux-blog.min.js"></script>
+  <!-- catalog -->
+  <script async="true" type="text/javascript" src="/js/catalog.js"></script>
+  <!-- totop(rocket) -->
+  <script async="true" type="text/javascript" src="/js/totop.js"></script>
+
+  
+    <!-- Busuanzi JavaScript -->
+    <script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <!-- Scroll start -->
+    <script async="async" type="text/javascript" src="/js/scroll.js"></script>
+    <!-- Scroll end -->
+  
+
+  
+
+  
+    <!-- Mouseclick -->
+    <script type="text/javascript" src="/js/mouseclick.js" content='❤,❤,❤,❤,❤,❤,❤,❤,❤' color='#ffa940,#f5222d,#fa541c,#FF99CC,#a8071a,#faad14,#1890ff,#eb2f96,#13c2c2'></script>
+  
+
+  
+    <!-- ribbon -->
+    <script type="text/javascript" src="/js/ribbonDynamic.js"></script>
+  
+
+  
+
+
+
+
+
+
+  <!-- viewer start -->
+  <!-- viewer start (Picture preview) -->
+  
+    <script async="async" type="text/javascript" src="/js/viewer/viewer.min.js"></script>
+    <script async="async" type="text/javascript" src="/js/viewer/pic-viewer.js"></script>
+  
+
+  <!-- viewer end -->
+
+
+<script>
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function (e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  // fastClick.js
+  async ("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+    var $nav = document.querySelector("nav");
+    if ($nav)
+      FastClick.attach($nav);
+    }
+  )
+</script>
+
+<!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
+https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+<!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
+
+<!-- jquery.tagcloud.js -->
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("https://ysx.cosine.ren/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
+
+
+		<!-- Search -->
+		
+		<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-9 col-md-offset-1"> -->
+      <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1 local-search-content">
+
+        <div class="local-search-header clearfix">
+
+          <div class="local-search-input-wrapper">
+            <span class="search-icon">
+              <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
+            </span>
+            <input autocomplete="off" placeholder="搜索..." type="text" id="local-search-input">
+          </div>
+        </div>
+        <div id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+    <script src="/js/ziploader.js"></script>
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+    // get search zip version
+    $.get('/searchVersion.json?t=' + (+new Date()), function (res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson() {
+      initLoad(['/search.flv'], {
+        loadOptions: {
+          success: function (obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function (e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions: {
+          'json': 'application/json'
+        }
+      })
+    }
+    // search function;
+    var searchFunc = function (search_id, content_id) {
+      'use strict';
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      // console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function () {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function (data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title
+              ? data.title.trim()
+              : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content
+              ? data.content.trim().replace(/<[^>]+>/g, "")
+              : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+
+            var date = data.date;
+            var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
+            var imgUrl = data.header_img;
+            
+
+
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function (keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0,
+                  position = [],
+                  index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+            // show search results
+            if (isMatch) {
+              // sort index by position of keyword
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+              // merge hits into slices
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+                  // move to next position of hit
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {hits: hits, start: start, end: end, searchTextCount: searchTextCountInSlice};
+              }
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if (start < 0) {
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if (end > content.length) {
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+              // sort slices in content by search text's count and hits' count
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+              // select top N slices in content
+              var upperBound = parseInt('1');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+              // highlight title and content
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+              var resultItem = '';
+
+              // if (slicesOfTitle.length != 0) {   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>"; } else {   resultItem += "<li><a target='_blank' href='" +
+              // articleUrl + "' class='search-result-title'>" + title + "</a>"; } slicesOfContent.forEach(function (slice) {   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) +
+              // "...</p></a>"; }); resultItem += "</li>";
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              } else {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              }
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
+              });
+              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
+
+              resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
+            }
+          })
+        };
+
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<div class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</div>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+      // remove loading animation
+      $('body').css('overflow', '');
+      proceedsearch();
+    }
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function (e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function (e) {
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 && $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      var _con = document.querySelector(".local-search-content");
+      if (_con) {
+        if (!_con.contains(e.target)) {
+          onPopupClose();
+        }
+      }
+    });
+  </script>
+
+
+		
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>
