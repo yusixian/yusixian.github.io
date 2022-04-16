@@ -465,12 +465,11 @@
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
         <p>关于url美化这篇博客讲的非常之好~推荐看一看：<a target="_blank" rel="noopener" href="https://donnadie.top/hexo-optimization-permalink/">Hexo博客优化：自定义文章URL</a>，下面就仅为个人的解决方案</p>
-<h1>起因</h1>
-<p>事情是这样的，今天分享面经的时候，将链接在群里一发，发现这个url转义后实在是太过于丑陋了QAQ，于是在网上搜索hexo的url优化，发现这个方法。</p>
+<h1 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h1><p>事情是这样的，今天分享面经的时候，将链接在群里一发，发现这个url转义后实在是太过于丑陋了QAQ，于是在网上搜索hexo的url优化，发现这个方法。</p>
 <p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0cdbd6766ccc41c8854bbec9366af392~tplv-k3u1fbpfcp-watermark.image?" alt="QQ图片20220414212434.png"></p>
 <p>Hexo生成文章时，是根据文件名生成的url，而文件名又是中文，故而url会进行转义，转义后的url如上图，显得非常冗长。</p>
-<h1>解决方案探寻</h1>
-<p>首先，参考官方配置<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/permalinks.html">永久链接（Permalinks）| Hexo</a>中的配置项，可知可使用的变量如下：</p>
+<h1 id="解决方案探寻"><a href="#解决方案探寻" class="headerlink" title="解决方案探寻"></a>解决方案探寻</h1><p>首先，参考官方配置<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/permalinks.html">永久链接（Permalinks）| Hexo</a>中的配置项，可知可使用的变量如下：</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -525,42 +524,40 @@
 </tr>
 <tr>
 <td><code>:id</code></td>
-<td>文章 ID (<em>not persistent across <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/commands#clean">cache reset</a></em>)</td>
+<td>文章 ID (<em>not persistent across <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/commands#clean">cache reset</a></em>)</td>
 </tr>
 <tr>
 <td><code>:category</code></td>
-<td>分类。如果文章没有分类，则是 <code>default_category</code> 配置信息。</td>
+<td>分类。如果文章没有分类，则是 <code>default_category</code> 配置信息。</td>
 </tr>
 <tr>
 <td><code>:hash</code></td>
-<td>SHA1 hash of filename (same as <code>:title</code>) and date (12-hexadecimal)</td>
+<td>SHA1 hash of filename (same as <code>:title</code>) and date (12-hexadecimal)</td>
 </tr>
 </tbody>
 </table>
-<p>可在 <code>permalink_defaults</code> 参数下调整永久链接中各变量的默认值：</p>
+</div>
+<p>可在 <code>permalink_defaults</code> 参数下调整永久链接中各变量的默认值：</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">url:</span> <span class="string">https://ysx.cosine.ren/</span>      <span class="comment"># 我绑定的域名url</span></span><br><span class="line"><span class="attr">root:</span> <span class="string">/</span></span><br><span class="line"><span class="comment"># permalink: :lang/:title/</span></span><br><span class="line"><span class="attr">permalink:</span> <span class="string">:lang/:link/</span></span><br><span class="line"><span class="attr">permalink_defaults:</span></span><br><span class="line">  <span class="attr">lang:</span> <span class="string">cn</span></span><br></pre></td></tr></table></figure>
 <p>当然，愿意的话可以直接用日期、分类、id或者hash为url，但是这样就会出现几个问题</p>
 <ul>
-<li>
-<p>日期、分类等进行设置，SEO不友好</p>
+<li><p>日期、分类等进行设置，SEO不友好</p>
 <ul>
 <li>用日期等做url的话，由于百度的搜索引擎抓取网页的时:搜索引擎认为对于一般的中小型站点，3层足够承受所有的内容了，所以经常抓取的内容是前三层，而超过三层的内容认为那些内容并不重要，所以不经常爬取。出于这个原因所以permalink后面跟着的最好不要超过2个斜杠。</li>
 </ul>
 </li>
-<li>
-<p>使用算法为每个文章生成独一无二的hash或id</p>
+<li><p>使用算法为每个文章生成独一无二的hash或id</p>
 <ul>
 <li>这个方法常用于一些较大的内容发布平台，例如CSDN文章的发布id，B站的视频BV号等，可简单地管理大量的内容而不重复，但是生成的URL并不直观，好的url最好还是能见名知意</li>
 </ul>
 </li>
 </ul>
 <p>对于个人博客的文章，文章的URL最好能大致反映文章的内容，因此为每篇文章手动设置一个见名知义的URL后缀是我认为比较合适的方法。</p>
-<h2 id="解决步骤">解决步骤</h2>
-<p>在hexo的配置文件_config.yml中，添加以下配置：</p>
+<h2 id="解决步骤"><a href="#解决步骤" class="headerlink" title="解决步骤"></a>解决步骤</h2><p>在hexo的配置文件_config.yml中，添加以下配置：</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">url:</span> <span class="string">https://ysx.cosine.ren/</span>      <span class="comment"># 我绑定的域名url</span></span><br><span class="line"><span class="attr">root:</span> <span class="string">/</span></span><br><span class="line"><span class="comment"># permalink: :lang/:title/</span></span><br><span class="line"><span class="attr">permalink:</span> <span class="string">:lang/:link/</span></span><br><span class="line"><span class="attr">permalink_defaults:</span></span><br><span class="line">  <span class="attr">lang:</span> <span class="string">cn</span></span><br></pre></td></tr></table></figure>
 <p>在以后写博客的时候，可以直接在文章中添加见名知义的link即可，如下：</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">Hexo博客url优化</span></span><br><span class="line"><span class="attr">link:</span> <span class="string">hexo-url-optimization</span> <span class="comment"># 文章实际链接为：https://ysx.cosine.ren/cn/hexo-url-optimization/</span></span><br><span class="line"><span class="attr">catalog:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">lang:</span> <span class="string">cn</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2022-04-14 21:18:56</span> </span><br><span class="line"><span class="attr">subtitle:</span> <span class="string">关于博客url转义后过于冗长这件事。</span></span><br><span class="line"><span class="attr">header-img:</span> <span class="string">/img/header_img/galaxy-ngc-3190-wallpaper-for-2880x1800-60-653.jpg</span></span><br><span class="line"><span class="attr">tags:</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">前端</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">hexo</span></span><br><span class="line"><span class="attr">categories:</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">工具</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
-<p>再加一步，<a target="_blank" rel="noopener" href="http://xn--scaffoldspost-x40uf47hcm1a0m6fptb.md">在scaffolds目录下的post.md</a>、<a target="_blank" rel="noopener" href="http://draft.md">draft.md</a>，将link默认设置为文章标题避免遗忘，如下：</p>
+<p>再加一步，在scaffolds目录下的post.md、draft.md，将link默认设置为文章标题避免遗忘，如下：</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> &#123;&#123; <span class="string">title</span> &#125;&#125;</span><br><span class="line"><span class="attr">link:</span> &#123;&#123; <span class="string">title</span> &#125;&#125;</span><br><span class="line"><span class="attr">subtitle:</span></span><br><span class="line"><span class="attr">date:</span> &#123;&#123; <span class="string">date</span> &#125;&#125;</span><br><span class="line"><span class="attr">catalog:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">header-img:</span> <span class="string">/img/header_img/galaxy-ngc-3190-wallpaper-for-2880x1800-60-653.jpg</span></span><br><span class="line"><span class="attr">tags:</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">前端</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">JavaScript</span></span><br><span class="line"><span class="attr">categories:</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">笔记</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
 <p>好，现在每次发文时只需要加上link属性中的值改完美化后的名称即可~</p>
 
@@ -712,7 +709,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">起因</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">解决方案探寻</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E8%A7%A3%E5%86%B3%E6%AD%A5%E9%AA%A4"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">解决步骤</span></a></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E8%B5%B7%E5%9B%A0"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">起因</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%E6%8E%A2%E5%AF%BB"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">解决方案探寻</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E8%A7%A3%E5%86%B3%E6%AD%A5%E9%AA%A4"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">解决步骤</span></a></li></ol></li></ol>
         
         </div>
       </aside>
