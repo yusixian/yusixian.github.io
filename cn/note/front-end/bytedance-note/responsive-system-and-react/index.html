@@ -5,6 +5,9 @@
 <head>
   <!-- Google Analytics -->
   
+    <!-- 看板娘  https://github.com/stevenjoezhang/live2d-widget -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+    <script defer src="https://cdn.jsdelivr.net/gh/yusixian/live2d-widget@latest/autoload.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-xxxxxx-xx"></script>
     <script type="text/javascript">
@@ -468,7 +471,8 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h2 id="React的历史与应用"><a href="#React的历史与应用" class="headerlink" title="React的历史与应用"></a>React的历史与应用</h2><p><strong>应用</strong></p>
+        <h2 id="React的历史与应用">React的历史与应用</h2>
+<p><strong>应用</strong></p>
 <ul>
 <li>前端应用开发，如 Facebook，Instagram，Netflix网页版。</li>
 <li>移动原生应用开发，如Instagram，Discord，Oculus。</li>
@@ -477,7 +481,8 @@
 <p><strong>历史</strong></p>
 <ul>
 <li>2010年 Facebook 在其php生态中，引入了xhp框架，首次引入了组合式组件的思想，启发了后来的React的设计。</li>
-<li>2011年Jordan Walke创造了FaxJS，也就是后来的React原型:<ul>
+<li>2011年Jordan Walke创造了FaxJS，也就是后来的React原型:
+<ul>
 <li>既可以在客户端渲染也可以在服务端渲染</li>
 <li>响应式，当状态变更时，UI会自动更新。</li>
 <li>性能好，快速渲染</li>
@@ -487,15 +492,19 @@
 <li>2013年React 正式开源，在2013 JSConf 上 Jordan Walke介绍了这款全新的框架：React</li>
 <li>2014年 - 今天 生态大爆发，各种围绕React的新工具/新框架开始涌现</li>
 </ul>
-<h2 id="React设计思路"><a href="#React设计思路" class="headerlink" title="React设计思路"></a>React设计思路</h2><h3 id="UI编程痛点"><a href="#UI编程痛点" class="headerlink" title="UI编程痛点"></a>UI编程痛点</h3><ol>
+<h2 id="React设计思路">React设计思路</h2>
+<h3 id="UI编程痛点">UI编程痛点</h3>
+<ol>
 <li>当状态更新时，UI不会自动更新，需要<strong>手动地调用DOM</strong>进行更新。</li>
 <li>欠缺基本的代码层面的<strong>封装</strong>和<strong>隔离</strong>，代码层面没有<strong>组件化</strong>。</li>
 <li>UI之间的数据依赖关系，需要手动维护，如果依赖链路长．则会遇到“Callback Hell”（回调地狱）。</li>
 </ol>
-<h3 id="响应式与转换式"><a href="#响应式与转换式" class="headerlink" title="响应式与转换式"></a>响应式与转换式</h3><p>转换式系统：给定<strong>输入</strong>求解<strong>输出</strong>，如编译器、数值计算</p>
+<h3 id="响应式与转换式">响应式与转换式</h3>
+<p>转换式系统：给定<strong>输入</strong>求解<strong>输出</strong>，如编译器、数值计算</p>
 <p>响应式系统：监听事件，消息驱动，如监控系统、UI界面</p>
 <p>事件 -&gt; 执行既定的回调 -&gt;  状态变更 -&gt; UI更新</p>
-<h3 id="响应式编程和组件化"><a href="#响应式编程和组件化" class="headerlink" title="响应式编程和组件化"></a>响应式编程和组件化</h3><p>那么我们就希望解决以上痛点：</p>
+<h3 id="响应式编程和组件化">响应式编程和组件化</h3>
+<p>那么我们就希望解决以上痛点：</p>
 <ul>
 <li>状态更新，UI自动更新。</li>
 <li>前端代码组件化,可复用，可封装。</li>
@@ -508,25 +517,27 @@
 <li>组件内部拥有状态，外部不可见</li>
 <li>父组件可将状态传入组件内部，来控制子组件的运转。</li>
 </ol>
-<h3 id="状态归属问题"><a href="#状态归属问题" class="headerlink" title="状态归属问题"></a>状态归属问题</h3><p><strong>当前价格</strong> 属于Root结点！因为要向下传递，这其实不合理，在下面的状态管理库里会讲到这个的解决方法。</p>
+<h3 id="状态归属问题">状态归属问题</h3>
+<p><strong>当前价格</strong> 属于Root结点！因为要向下传递，这其实不合理，在下面的状态管理库里会讲到这个的解决方法。</p>
 <p>状态应该归属于两个节点（或多个）向上寻找到的<strong>最近共同祖先</strong>。</p>
 <p>思考：</p>
 <ol>
 <li>React是单向数据流,还是双向数据流?</li>
 </ol>
 <p>答：单向的，永远是只有父组件给子组件传东西，但这并不代表子组件不能改变父组件的状态。</p>
-<ol>
+<ol start="2">
 <li>如何解决状态不合理上升的问题?</li>
 </ol>
 <p>答：通过状态管理库，接下来也会讲到。</p>
-<ol>
+<ol start="3">
 <li>组件的状态改变后，如何更新DOM?</li>
 </ol>
 <p>答：讲解React实现中会提到。</p>
 <p>组件设计：</p>
 <ul>
 <li>组件声明了状态和UI的映射</li>
-<li>组件有Props（外部）/State（内部）两种属性<ul>
+<li>组件有Props（外部）/State（内部）两种属性
+<ul>
 <li>Props接受父组件传入的状态</li>
 <li>State是内部的属性。</li>
 </ul>
@@ -536,21 +547,29 @@
 <blockquote>
 <p>ps：学过小程序的同学应该知道，小程序中的属性的双向绑定实际上应该也有用到了这个思想。</p>
 </blockquote>
-<h3 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h3><p>挂载 -&gt; 状态更新 -&gt; 卸载</p>
-<h2 id="React（hooks）的写法"><a href="#React（hooks）的写法" class="headerlink" title="React（hooks）的写法"></a>React（hooks）的写法</h2><p>关于React Hook可以参看官方文档，以下内容大部分摘自：<a target="_blank" rel="noopener" href="https://zh-hans.reactjs.org/docs/hooks-intro.html">Hook 简介 – React (reactjs.org)</a></p>
+<h3 id="生命周期">生命周期</h3>
+<p>挂载 -&gt; 状态更新 -&gt; 卸载</p>
+<h2 id="React（hooks）的写法">React（hooks）的写法</h2>
+<p>关于React Hook可以参看官方文档，以下内容大部分摘自：<a target="_blank" rel="noopener" href="https://zh-hans.reactjs.org/docs/hooks-intro.html">Hook 简介 – React (reactjs.org)</a></p>
 <blockquote>
 <p><em>Hook</em> 是 React 16.8 的新增特性。它可以让你在不编写 class 的情况下使用 state 以及其他的 React 特性。</p>
 </blockquote>
-<h3 id="State-Hook"><a href="#State-Hook" class="headerlink" title="State Hook"></a>State Hook</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">import React, &#123;useState&#125; from &#x27;react&#x27;;</span><br><span class="line">function Example() &#123;</span><br><span class="line">	// 声明一个叫 “count” 的 state 变量。</span><br><span class="line">	const [count, setCount] = useState(0);</span><br><span class="line">    return (</span><br><span class="line">        &lt;div&gt;</span><br><span class="line">       		&lt;p&gt;You clicked &#123;count&#125; times&lt;/p&gt;</span><br><span class="line">			&lt;button onClick=&#123;() =&gt; setCount(count + 1)&#125;&gt;</span><br><span class="line">        		Click me</span><br><span class="line">            &lt;/button&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">    );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="State-Hook">State Hook</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">import React, &#123;useState&#125; from &#x27;react&#x27;;</span><br><span class="line">function Example() &#123;</span><br><span class="line">	// 声明一个叫 “count” 的 state 变量。</span><br><span class="line">	const [count, setCount] = useState(0);</span><br><span class="line">    return (</span><br><span class="line">        &lt;div&gt;</span><br><span class="line">       		&lt;p&gt;You clicked &#123;count&#125; times&lt;/p&gt;</span><br><span class="line">			&lt;button onClick=&#123;() =&gt; setCount(count + 1)&#125;&gt;</span><br><span class="line">        		Click me</span><br><span class="line">            &lt;/button&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">    );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>上面这段函数用来显示一个计数器，当点击按钮时，计数器的值就会自动增加</p>
 <blockquote>
 <p>在这里，<code>useState</code> 就是一个 <em>Hook</em> 。通过在函数组件里调用它来给组件添加一些内部 state。React 会在重复渲染时保留这个 state。<code>useState</code> 会返回一对值：<strong>当前状态</strong>和<strong>其更新函数</strong>，你可以在事件处理函数中或其他一些地方调用这个函数。</p>
+</blockquote>
+<blockquote>
 <p><code>useState</code> 唯一的参数就是初始 state。在上面的例子中，我们的计数器是从零开始的，所以初始 state 就是 <code>0</code>。值得注意的是，不同于 <code>this.state</code>，这里的 state 不一定要是一个对象 —— 如果你有需要，它也可以是。这个初始 state 参数只有在第一次渲染时会被用到。</p>
+</blockquote>
+<blockquote>
 <p>Hook 是一些可以让你在函数组件里 <strong>“钩入”</strong> React state 及生命周期等特性的函数。</p>
 </blockquote>
 <p>可以在一个组件中多次使用 State Hook:</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">function ExampleWithManyStates() &#123;</span><br><span class="line">  // 声明多个 state 变量！</span><br><span class="line">  const [age, setAge] = useState(42);</span><br><span class="line">  const [fruit, setFruit] = useState(&#x27;banana&#x27;);</span><br><span class="line">  const [todos, setTodos] = useState([&#123; text: &#x27;Learn Hooks&#x27; &#125;]);</span><br><span class="line">  // ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="Effect-Hook"><a href="#Effect-Hook" class="headerlink" title="Effect Hook"></a>Effect Hook</h3><p><strong>函数副作用</strong>是指当调用函数时，除了<strong>返回值</strong>之外，还会<strong>对主调用函数产生其他附加的影响</strong>。例如修改全局变量（函数外的变量）或修改参数。纯函数就是指没有函数副作用的函数，这在js那一节里都有讲过。</p>
+<h3 id="Effect-Hook">Effect Hook</h3>
+<p><strong>函数副作用</strong>是指当调用函数时，除了<strong>返回值</strong>之外，还会<strong>对主调用函数产生其他附加的影响</strong>。例如修改全局变量（函数外的变量）或修改参数。纯函数就是指没有函数副作用的函数，这在js那一节里都有讲过。</p>
 <blockquote>
 <p>例如，下面这个组件在 React 更新 DOM 后会设置一个页面标题：</p>
 </blockquote>
@@ -558,7 +577,8 @@
 <blockquote>
 <p>当你调用 <code>useEffect</code> 时，就是在告诉 React 在 <strong>完成对 DOM 的更改后运行你的“副作用”函数</strong> 。由于副作用函数是在组件内声明的，所以它们可以访问到组件的 props 和 state。</p>
 </blockquote>
-<h3 id="Hook的使用法则"><a href="#Hook的使用法则" class="headerlink" title="Hook的使用法则"></a>Hook的使用法则</h3><p>Hook 就是 JavaScript 函数，但是使用它们会有两个额外的规则：</p>
+<h3 id="Hook的使用法则">Hook的使用法则</h3>
+<p>Hook 就是 JavaScript 函数，但是使用它们会有两个额外的规则：</p>
 <ul>
 <li>只能在<strong>函数最外层</strong>调用 Hook。<strong>不要</strong>在<strong>循环、条件判断或者子函数</strong>中调用。</li>
 <li>只能在 <strong>React 的函数组件</strong>中调用 Hook。<strong>不要</strong>在<strong>其他 JavaScript 函数</strong>中调用。（还有一个地方可以调用 Hook —— 就是自定义的 Hook 中）</li>
@@ -567,58 +587,72 @@
 <p>同时，我们提供了 <a target="_blank" rel="noopener" href="https://www.npmjs.com/package/eslint-plugin-react-hooks">linter 插件</a>来自动执行这些规则。这些规则乍看起来会有一些限制和令人困惑，但是要让 Hook 正常工作，它们至关重要。</p>
 </blockquote>
 <p>以上是React官方文档的说法</p>
-<h2 id="React的实现"><a href="#React的实现" class="headerlink" title="React的实现"></a>React的实现</h2><p>三个问题：</p>
+<h2 id="React的实现">React的实现</h2>
+<p>三个问题：</p>
 <ol>
 <li><a target="_blank" rel="noopener" href="https://zh-hans.reactjs.org/docs/introducing-jsx.html#gatsby-focus-wrapper">JSX</a> 是不符合JS标准的语法</li>
 <li>返回的JSX改变时，如何更新DOM?</li>
 <li>State/Props更新时， 要重新触发render函数</li>
 </ol>
-<h3 id="Problem1"><a href="#Problem1" class="headerlink" title="Problem1"></a>Problem1</h3><p>解决办法也很简单，就是将JSX转换为符合JS语法的</p>
+<h3 id="Problem1">Problem1</h3>
+<p>解决办法也很简单，就是将JSX转换为符合JS语法的</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">const element = (</span><br><span class="line">  &lt;h1 className=&quot;greeting&quot;&gt;</span><br><span class="line">    Hello, world!</span><br><span class="line">  &lt;/h1&gt;</span><br><span class="line">);</span><br><span class="line">// 等价于 </span><br><span class="line">const element = React.createElement(</span><br><span class="line">  &#x27;h1&#x27;,</span><br><span class="line">  &#123;className: &#x27;greeting&#x27;&#125;,</span><br><span class="line">  &#x27;Hello, world!&#x27;</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
-<h3 id="Problem2"><a href="#Problem2" class="headerlink" title="Problem2"></a>Problem2</h3><p>返回的JSX本身是类似DOM的一种东西，但不是DOM，DOM操作本身是十分耗费性能的。所以需要将返回的JSX与原来的DOM结构计算一个diff（差别）？但是这个diff算法本身不能太耗时，尽可能小，尽可能短。</p>
-<h4 id="Virtual-DOM-（虚拟DOM）"><a href="#Virtual-DOM-（虚拟DOM）" class="headerlink" title="Virtual DOM （虚拟DOM）"></a>Virtual DOM （虚拟DOM）</h4><p><a target="_blank" rel="noopener" href="https://zh-hans.reactjs.org/docs/faq-internals.html#gatsby-focus-wrapper">Virtual DOM</a> 是一种用于与真实DOM同步，而在JS内存中维护的一个<strong>对象</strong>，它具有和DOM类似的树状结构并可以和DOM建立一一对应的关系。</p>
+<h3 id="Problem2">Problem2</h3>
+<p>返回的JSX本身是类似DOM的一种东西，但不是DOM，DOM操作本身是十分耗费性能的。所以需要将返回的JSX与原来的DOM结构计算一个diff（差别）？但是这个diff算法本身不能太耗时，尽可能小，尽可能短。</p>
+<h4 id="Virtual-DOM-（虚拟DOM）">Virtual DOM （虚拟DOM）</h4>
+<p><a target="_blank" rel="noopener" href="https://zh-hans.reactjs.org/docs/faq-internals.html#gatsby-focus-wrapper">Virtual DOM</a> 是一种用于与真实DOM同步，而在JS内存中维护的一个<strong>对象</strong>，它具有和DOM类似的树状结构并可以和DOM建立一一对应的关系。</p>
 <blockquote>
 <p>这种方式赋予了 React 声明式的 API：您告诉 React 希望让 UI 是什么状态，React 就确保 DOM 匹配该状态。这使您可以从属性操作、事件处理和手动 DOM 更新这些在构建应用程序时必要的操作中解放出来。</p>
 </blockquote>
 <p>状态更新 -&gt; diff 比对Virtual DOM和真实DOM - &gt; Re-render Virtual DOM 改变我们的真实DOM</p>
-<h4 id="How-to-Diff"><a href="#How-to-Diff" class="headerlink" title="How to Diff??"></a>How to Diff??</h4><p>更新次数少 &lt;- 权衡 -&gt; 计算速度快</p>
+<h4 id="How-to-Diff">How to Diff??</h4>
+<p>更新次数少 &lt;- 权衡 -&gt; 计算速度快</p>
 <p>完美的最小Diff算法，需要 O(n^3) 的复杂度</p>
 <p>而牺牲理论最小Diff，换取时间，得到了 O(n)  复杂度的算法，他是局部最优的。Heuristic O(n) Algorithm （启发式算法）</p>
 <ul>
-<li><p>不同类型的元素 -&gt; 替换</p>
+<li>
+<p>不同类型的元素 -&gt; 替换</p>
 </li>
-<li><p>同类型的DOM元素 -&gt; 更新</p>
+<li>
+<p>同类型的DOM元素 -&gt; 更新</p>
 </li>
-<li><p>同类型的组件元素 -&gt; 递归</p>
+<li>
+<p>同类型的组件元素 -&gt; 递归</p>
 </li>
 </ul>
 <p>这个算法只遍历了一遍，就可以算出diff。</p>
 <p>而这也是React一个弊病，一个组件发生改变时，其子组件全部会重新渲染。要解决这个问题，就要看接下来的React的状态管理库。</p>
-<h2 id="React的状态管理库"><a href="#React的状态管理库" class="headerlink" title="React的状态管理库"></a>React的状态管理库</h2><h3 id="核心思想"><a href="#核心思想" class="headerlink" title="核心思想"></a>核心思想</h3><p><strong>将状态抽离到UI外部进行统一管理</strong>，但是这是会降低组件的复用性，所以这一般出现在业务代码中。以下几种框架，用哪个都行</p>
+<h2 id="React的状态管理库">React的状态管理库</h2>
+<h3 id="核心思想">核心思想</h3>
+<p><strong>将状态抽离到UI外部进行统一管理</strong>，但是这是会降低组件的复用性，所以这一般出现在业务代码中。以下几种框架，用哪个都行</p>
 <ul>
 <li><a target="_blank" rel="noopener" href="https://www.redux.org.cn/">Redux中文文档</a></li>
 <li><a target="_blank" rel="noopener" href="https://xstate.js.org/">XState - JavaScript State Machines and Statecharts</a></li>
 <li><a target="_blank" rel="noopener" href="https://cn.mobx.js.org/">MobX 介绍 · MobX 中文文档</a></li>
 <li><a target="_blank" rel="noopener" href="https://www.recoiljs.cn/">Recoil 中文文档 | Recoil 中文网 (recoiljs.cn)</a></li>
 </ul>
-<h3 id="状态机"><a href="#状态机" class="headerlink" title="状态机"></a>状态机</h3><p>收到外部事件后根据当前状态，迁移到下一个状态。</p>
+<h3 id="状态机">状态机</h3>
+<p>收到外部事件后根据当前状态，迁移到下一个状态。</p>
 <p>哪些状态适合放到状态管理库？</p>
 <ul>
 <li>可能会被很多层级的组件用到的状态</li>
 </ul>
-<h2 id="应用级框架科普"><a href="#应用级框架科普" class="headerlink" title="应用级框架科普"></a>应用级框架科普</h2><p>React本身是没有提供足够多的工程能力，如路由、页面配置等等。</p>
+<h2 id="应用级框架科普">应用级框架科普</h2>
+<p>React本身是没有提供足够多的工程能力，如路由、页面配置等等。</p>
 <ul>
-<li><a target="_blank" rel="noopener" href="https://www.nextjs.cn/">Next.js - React 应用开发框架</a> 硅谷明星创业公司Vercel的 React开发框架,稳定,开发体验好，支持Unbundled Dev,sWC等,其同样有Serverless一键部署平台帮助开发者快速完成部署。口号是”Let’s Make Web Faster”</li>
+<li><a target="_blank" rel="noopener" href="https://www.nextjs.cn/">Next.js - React 应用开发框架</a> 硅谷明星创业公司Vercel的 React开发框架,稳定,开发体验好，支持Unbundled Dev,sWC等,其同样有Serverless一键部署平台帮助开发者快速完成部署。口号是&quot;Let’s Make Web Faster&quot;</li>
 <li><a target="_blank" rel="noopener" href="https://modernjs.dev/">Modern.js - 现代 Web 工程体系 (modernjs.dev)</a> 字节跳动Web Infra团队研发的全栈开发框架,内瓷了很多开箱即用的能力与最佳实践，可以减少很多调研选择工具的时间。</li>
 <li><a target="_blank" rel="noopener" href="https://blitzjs.com/docs/get-started">Get Started with Blitz (blitzjs.com)</a>无API思想的全栈开发框架,开发过程中无需写API 调用与CRUD逻辑,适合前后端紧密小团队项目。</li>
 </ul>
-<h2 id="课后作业"><a href="#课后作业" class="headerlink" title="课后作业"></a>课后作业</h2><ol>
+<h2 id="课后作业">课后作业</h2>
+<ol>
 <li>React组件的render函数，在哪些时机下，会被重新执行?</li>
 <li>React这种函数式编程,和vue这种基于模版语法的前端框架，各有什么优点和缺点?</li>
 <li>React推荐使用组合来进行组件的复用,而不是继承，背后有什么样的考虑?</li>
 </ol>
 <p>个人理解</p>
-<h2 id="总结感想"><a href="#总结感想" class="headerlink" title="总结感想"></a>总结感想</h2><p>本节课大致介绍了React及其原理，介绍了组件化、一些应用级框架</p>
+<h2 id="总结感想">总结感想</h2>
+<p>本节课大致介绍了React及其原理，介绍了组件化、一些应用级框架</p>
 <blockquote>
 <p>本文引用的内容大部分来自牛岱老师的课，以及React官方文档</p>
 </blockquote>

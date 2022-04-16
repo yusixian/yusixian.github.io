@@ -5,6 +5,9 @@
 <head>
   <!-- Google Analytics -->
   
+    <!-- 看板娘  https://github.com/stevenjoezhang/live2d-widget -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+    <script defer src="https://cdn.jsdelivr.net/gh/yusixian/live2d-widget@latest/autoload.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-xxxxxx-xx"></script>
     <script type="text/javascript">
@@ -404,7 +407,7 @@
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">559</span> In Total
+              Words <span class="post-count">560</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -470,7 +473,6 @@
 <p>day16题目：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/ba-shu-zu-pai-cheng-zui-xiao-de-shu-lcof/">剑指 Offer 45. 把数组排成最小的数</a>、<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/bu-ke-pai-zhong-de-shun-zi-lcof/">剑指 Offer 61. 扑克牌中的顺子</a></p>
 <p>知识点：数组、排序，难度为中等、简单</p>
 <p>学习计划链接：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/study-plan/lcof/?progress=7jn70jr">「剑指 Offer」 - 学习计划</a></p>
-<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -492,11 +494,11 @@
 </tr>
 </tbody>
 </table>
-</div>
-<h1 id="剑指-Offer-45-把数组排成最小的数"><a href="#剑指-Offer-45-把数组排成最小的数" class="headerlink" title="剑指 Offer 45. 把数组排成最小的数"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/ba-shu-zu-pai-cheng-zui-xiao-de-shu-lcof/">剑指 Offer 45. 把数组排成最小的数</a></h1><p>输入一个非负整数数组，把数组里所有数字拼接起来排成一个数，打印能拼接出的所有数字中最小的一个。</p>
+<h1><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/ba-shu-zu-pai-cheng-zui-xiao-de-shu-lcof/">剑指 Offer 45. 把数组排成最小的数</a></h1>
+<p>输入一个非负整数数组，把数组里所有数字拼接起来排成一个数，打印能拼接出的所有数字中最小的一个。</p>
 <p><strong>示例 1:</strong></p>
 <figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">输入: [10,2]</span></span><br><span class="line"><span class="section">输出: &quot;102&quot;</span></span><br></pre></td></tr></table></figure>
-<p><strong>示例 2:</strong></p>
+<p><strong>示例 2:</strong></p>
 <figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: [<span class="number">3,30,34,5</span>,<span class="number">9</span>]</span><br><span class="line">输出: &quot;<span class="number">3033459</span>&quot;</span><br></pre></td></tr></table></figure>
 <p><strong>提示:</strong></p>
 <ul>
@@ -507,17 +509,21 @@
 <li>输出结果可能非常大，所以你需要返回一个字符串而不是整数</li>
 <li>拼接起来的数字可能会有前导 0，最后结果不需要去掉前导 0</li>
 </ul>
-<h2 id="思路及代码"><a href="#思路及代码" class="headerlink" title="思路及代码"></a>思路及代码</h2><p>排序规则应该重载成a+b &gt; b+a（字符串形式）<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">number[]</span>&#125; <span class="variable">nums</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">string</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> minNumber = <span class="keyword">function</span>(<span class="params">nums</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> nums.<span class="title function_">sort</span>(<span class="function">(<span class="params">a, b</span>) =&gt;</span> (<span class="string">&#x27;&#x27;</span>+a+b) - (<span class="string">&#x27;&#x27;</span>+b+a)).<span class="title function_">join</span>(<span class="string">&#x27;&#x27;</span>);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
-<h1 id="剑指-Offer-61-扑克牌中的顺子"><a href="#剑指-Offer-61-扑克牌中的顺子" class="headerlink" title="剑指 Offer 61. 扑克牌中的顺子"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/bu-ke-pai-zhong-de-shun-zi-lcof/">剑指 Offer 61. 扑克牌中的顺子</a></h1><p>从<strong>若干副扑克牌</strong>中随机抽 <code>5</code> 张牌，判断是不是一个顺子，即这5张牌是不是连续的。2～10为数字本身，A为1，J为11，Q为12，K为13，而大、小王为 0 ，可以看成任意数字。A 不能视为 14。</p>
-<p><strong>示例 1:</strong></p>
+<h2 id="思路及代码">思路及代码</h2>
+<p>排序规则应该重载成a+b &gt; b+a（字符串形式）</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">number[]</span>&#125; <span class="variable">nums</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">string</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> minNumber = <span class="keyword">function</span>(<span class="params">nums</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> nums.<span class="title function_">sort</span>(<span class="function">(<span class="params">a, b</span>) =&gt;</span> (<span class="string">&#x27;&#x27;</span>+a+b) - (<span class="string">&#x27;&#x27;</span>+b+a)).<span class="title function_">join</span>(<span class="string">&#x27;&#x27;</span>);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h1><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/bu-ke-pai-zhong-de-shun-zi-lcof/">剑指 Offer 61. 扑克牌中的顺子</a></h1>
+<p>从<strong>若干副扑克牌</strong>中随机抽 <code>5</code> 张牌，判断是不是一个顺子，即这5张牌是不是连续的。2～10为数字本身，A为1，J为11，Q为12，K为13，而大、小王为 0 ，可以看成任意数字。A 不能视为 14。</p>
+<p><strong>示例 1:</strong></p>
 <figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">输入: [1,2,3,4,5]</span></span><br><span class="line"><span class="section">输出: True</span></span><br></pre></td></tr></table></figure>
-<p><strong>示例 2:</strong></p>
+<p><strong>示例 2:</strong></p>
 <figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">输入: [0,0,1,2,5]</span></span><br><span class="line"><span class="section">输出: True</span></span><br></pre></td></tr></table></figure>
 <p><strong>限制：</strong></p>
-<p>数组长度为 5 </p>
+<p>数组长度为 5</p>
 <p>数组的数取值为 [0, 13] .</p>
-<h2 id="思路及代码-1"><a href="#思路及代码-1" class="headerlink" title="思路及代码"></a>思路及代码</h2><p><code>最大牌-最小牌&lt;5</code> 则可构成顺子，所以先给数组排个序， 然后忽略掉大王小王（0），若有重复则直接返回false<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">number[]</span>&#125; <span class="variable">nums</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">boolean</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> isStraight = <span class="keyword">function</span>(<span class="params">nums</span>) &#123;</span><br><span class="line">    nums.<span class="title function_">sort</span>(<span class="function">(<span class="params">a, b</span>) =&gt;</span> a - b)</span><br><span class="line">    <span class="keyword">let</span> idx = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; nums.<span class="property">length</span>; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span>(nums[i] == <span class="number">0</span>) ++idx</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(nums[i] == nums[i-<span class="number">1</span>]) <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> nums[<span class="number">4</span>] - nums[idx] &lt; <span class="number">5</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
-
+<h2 id="思路及代码-2">思路及代码</h2>
+<p><code>最大牌-最小牌&lt;5</code> 则可构成顺子，所以先给数组排个序， 然后忽略掉大王小王（0），若有重复则直接返回false</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">number[]</span>&#125; <span class="variable">nums</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">boolean</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> isStraight = <span class="keyword">function</span>(<span class="params">nums</span>) &#123;</span><br><span class="line">    nums.<span class="title function_">sort</span>(<span class="function">(<span class="params">a, b</span>) =&gt;</span> a - b)</span><br><span class="line">    <span class="keyword">let</span> idx = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; nums.<span class="property">length</span>; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span>(nums[i] == <span class="number">0</span>) ++idx</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(nums[i] == nums[i-<span class="number">1</span>]) <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> nums[<span class="number">4</span>] - nums[idx] &lt; <span class="number">5</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
         <hr>
         <!-- Pager -->
@@ -666,7 +672,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E5%89%91%E6%8C%87-Offer-45-%E6%8A%8A%E6%95%B0%E7%BB%84%E6%8E%92%E6%88%90%E6%9C%80%E5%B0%8F%E7%9A%84%E6%95%B0"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">剑指 Offer 45. 把数组排成最小的数</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%9D%E8%B7%AF%E5%8F%8A%E4%BB%A3%E7%A0%81"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">思路及代码</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E5%89%91%E6%8C%87-Offer-61-%E6%89%91%E5%85%8B%E7%89%8C%E4%B8%AD%E7%9A%84%E9%A1%BA%E5%AD%90"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">剑指 Offer 61. 扑克牌中的顺子</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%9D%E8%B7%AF%E5%8F%8A%E4%BB%A3%E7%A0%81-1"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">思路及代码</span></a></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">剑指 Offer 45. 把数组排成最小的数</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%9D%E8%B7%AF%E5%8F%8A%E4%BB%A3%E7%A0%81"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">思路及代码</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">剑指 Offer 61. 扑克牌中的顺子</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%9D%E8%B7%AF%E5%8F%8A%E4%BB%A3%E7%A0%81-2"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">思路及代码</span></a></li></ol></li></ol>
         
         </div>
       </aside>

@@ -5,6 +5,9 @@
 <head>
   <!-- Google Analytics -->
   
+    <!-- 看板娘  https://github.com/stevenjoezhang/live2d-widget -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+    <script defer src="https://cdn.jsdelivr.net/gh/yusixian/live2d-widget@latest/autoload.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-xxxxxx-xx"></script>
     <script type="text/javascript">
@@ -464,46 +467,84 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h1 id="一、Fibonacci博弈"><a href="#一、Fibonacci博弈" class="headerlink" title="一、Fibonacci博弈"></a>一、Fibonacci博弈</h1><h2 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h2><p>基本的斐波那契博弈（Fibonacci Game）描述如下：</p>
+        <h1>一、Fibonacci博弈</h1>
+<h2 id="描述">描述</h2>
+<p>基本的斐波那契博弈（Fibonacci Game）描述如下：</p>
 <blockquote>
 <p>有一堆石子，两个顶尖聪明的人玩游戏，先取者可以取走任意多个，但不能全取完，之后<strong>每次可以取的石子数至少为1，至多为对手刚取的石子数的2倍</strong>。约定取走最后一个石子的人为赢家，求必败态。</p>
-<h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><p><strong>当且仅当总石子数为斐波那契数时，先手必败</strong>。</p>
-<h2 id="证明"><a href="#证明" class="headerlink" title="证明"></a>证明</h2><p>证明如下，转自<a target="_blank" rel="noopener" href="https://blog.csdn.net/dgq8211/article/details/7602807">大佬证明</a><br><strong>用到了Zeckendorf定理（齐肯多夫定理）：任何正整数可以表示为若干个不连续的Fibonacci数之和。</strong></p>
-<h1 id="二、Bash博弈"><a href="#二、Bash博弈" class="headerlink" title="二、Bash博弈"></a>二、Bash博弈</h1><h2 id="描述-1"><a href="#描述-1" class="headerlink" title="描述"></a>描述</h2><p>基本的巴什博弈（Bash Game）描述如下：</p>
+</blockquote>
+<h2 id="结论">结论</h2>
+<p><strong>当且仅当总石子数为斐波那契数时，先手必败</strong>。</p>
+<h2 id="证明">证明</h2>
+<p>证明如下，转自<a target="_blank" rel="noopener" href="https://blog.csdn.net/dgq8211/article/details/7602807">大佬证明</a><br>
+<strong>用到了Zeckendorf定理（齐肯多夫定理）：任何正整数可以表示为若干个不连续的Fibonacci数之和。</strong></p>
+<h1>二、Bash博弈</h1>
+<h2 id="描述-2">描述</h2>
+<p>基本的巴什博弈（Bash Game）描述如下：</p>
+<blockquote>
 <p>有一堆n个物品，两人轮流取走物品，<strong>每次至少取一个，最多取m个</strong>，最后取光者获胜。</p>
-<h2 id="结论-1"><a href="#结论-1" class="headerlink" title="结论"></a>结论</h2><p>若n % (m+1) == 0，则先手必败<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">bool</span> <span class="title">FirstWin</span><span class="params">(<span class="type">int</span> n, <span class="type">int</span> m)</span> </span>&#123; <span class="comment">//先手必胜返回true</span></span><br><span class="line">	<span class="keyword">return</span> n % (m+<span class="number">1</span>) != <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h2 id="证明-1"><a href="#证明-1" class="headerlink" title="证明"></a>证明</h2><p>博弈过程如下：<a target="_blank" rel="noopener" href="https://blog.lordash.cf/posts/f0fbaf1d.html">证明</a><br>这里简单说说<br><strong>同余定理：若n%(m+1) = r, 若先取者拿走r个，后者无论拿走1~m任意个，先手都可以再拿走若干个凑够（m+1）个，则先手必赢。反之先手必败。当n&lt;m时，先手可以一次取完，也是必胜</strong></p>
-<h2 id="巴什博弈变形"><a href="#巴什博弈变形" class="headerlink" title="巴什博弈变形"></a>巴什博弈变形</h2><p>有一堆n个物品，两人轮流取走物品，每次至少取p个，最多取q个，剩余不足p个时一次取完，最后取光者胜利。</p>
+</blockquote>
+<h2 id="结论-2">结论</h2>
+<p>若n % (m+1) == 0，则先手必败</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">bool</span> <span class="title">FirstWin</span><span class="params">(<span class="type">int</span> n, <span class="type">int</span> m)</span> </span>&#123; <span class="comment">//先手必胜返回true</span></span><br><span class="line">	<span class="keyword">return</span> n % (m+<span class="number">1</span>) != <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="证明-2">证明</h2>
+<p>博弈过程如下：<a target="_blank" rel="noopener" href="https://blog.lordash.cf/posts/f0fbaf1d.html">证明</a><br>
+这里简单说说<br>
+<strong>同余定理：若n%(m+1) = r, 若先取者拿走r个，后者无论拿走1~m任意个，先手都可以再拿走若干个凑够（m+1）个，则先手必赢。反之先手必败。当n&lt;m时，先手可以一次取完，也是必胜</strong></p>
+<h2 id="巴什博弈变形">巴什博弈变形</h2>
+<blockquote>
+<p>有一堆n个物品，两人轮流取走物品，每次至少取p个，最多取q个，剩余不足p个时一次取完，最后取光者胜利。</p>
 </blockquote>
 <p><strong>若n%(p+q) = r,则当r != 0 &amp;&amp; r &lt; p 时先手必胜，反之先手必败</strong></p>
-<h1 id="三、Wythoff博弈"><a href="#三、Wythoff博弈" class="headerlink" title="三、Wythoff博弈"></a>三、Wythoff博弈</h1><h2 id="描述-2"><a href="#描述-2" class="headerlink" title="描述"></a>描述</h2><p>基本的威佐夫博弈（Wythoff Game）描述如下：</p>
+<h1>三、Wythoff博弈</h1>
+<h2 id="描述-3">描述</h2>
+<p>基本的威佐夫博弈（Wythoff Game）描述如下：</p>
 <blockquote>
 <p>有两堆各若干个物品，两个人轮流从某一堆或同时从两堆中取同样多的物品，每次至少取一个，多者不限，最后取光者得胜。</p>
-<h2 id="结论-2"><a href="#结论-2" class="headerlink" title="结论"></a>结论</h2><p>设两堆物品各有a、b个，求出ab的差值后乘以黄金分割比，看结果是否等于ab中的最小值，若等于则先手必败<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">bool</span> <span class="title">FirstWin</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b)</span> </span>&#123; <span class="comment">//先手必胜返回true</span></span><br><span class="line">	<span class="type">double</span> G = (<span class="built_in">sqrt</span>(<span class="number">5.0</span>)+<span class="number">1</span>) / <span class="number">2</span>;	<span class="comment">//黄金分割比</span></span><br><span class="line">	<span class="type">int</span> t = <span class="built_in">abs</span>(a-b) * G;</span><br><span class="line">	<span class="keyword">return</span> d != <span class="built_in">min</span>(a,b);	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 </blockquote>
-<h2 id="证明-2"><a href="#证明-2" class="headerlink" title="证明"></a>证明</h2><p>证明较复杂…暂存一下板子，这里看<a target="_blank" rel="noopener" href="https://blog.lordash.cf/posts/8e3cecbf.html">证明</a></p>
-<h1 id="四、Nim博弈"><a href="#四、Nim博弈" class="headerlink" title="四、Nim博弈"></a>四、Nim博弈</h1><h2 id="描述-3"><a href="#描述-3" class="headerlink" title="描述"></a>描述</h2><p>基本的尼姆博弈（Nim Game）描述如下：</p>
+<h2 id="结论-3">结论</h2>
+<p>设两堆物品各有a、b个，求出ab的差值后乘以黄金分割比，看结果是否等于ab中的最小值，若等于则先手必败</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">bool</span> <span class="title">FirstWin</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b)</span> </span>&#123; <span class="comment">//先手必胜返回true</span></span><br><span class="line">	<span class="type">double</span> G = (<span class="built_in">sqrt</span>(<span class="number">5.0</span>)+<span class="number">1</span>) / <span class="number">2</span>;	<span class="comment">//黄金分割比</span></span><br><span class="line">	<span class="type">int</span> t = <span class="built_in">abs</span>(a-b) * G;</span><br><span class="line">	<span class="keyword">return</span> d != <span class="built_in">min</span>(a,b);	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="证明-3">证明</h2>
+<p>证明较复杂…暂存一下板子，这里看<a target="_blank" rel="noopener" href="https://blog.lordash.cf/posts/8e3cecbf.html">证明</a></p>
+<h1>四、Nim博弈</h1>
+<h2 id="描述-4">描述</h2>
+<p>基本的尼姆博弈（Nim Game）描述如下：</p>
 <blockquote>
 <p>有若干堆各若干个物品，两个人轮流从某一堆取任意多的物品，<strong>每次至少取一个，多者不限</strong>，最后取光者得胜。</p>
-<h2 id="结论-3"><a href="#结论-3" class="headerlink" title="结论"></a>结论</h2><p>将N堆物品数量全部异或后，若结果为0则先手必败，否则先手必胜<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">bool</span> <span class="title">FirstWin</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b)</span> </span>&#123; <span class="comment">//先手必胜返回true</span></span><br><span class="line">	<span class="type">int</span> ans = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; N; ++i) ans ^= a[i];<span class="comment">//a[i]为物品数量</span></span><br><span class="line">	<span class="keyword">return</span> ans != <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 </blockquote>
-<h2 id="证明-3"><a href="#证明-3" class="headerlink" title="证明"></a>证明</h2><p>证明也很复杂…这里看<a target="_blank" rel="noopener" href="https://blog.lordash.cf/posts/2aa44f65.html">证明</a><br>后面会介绍SG函数，一般将最终局面的SG值设为0<br>SG  定理：游戏的和的 SG 值是各个子游戏的 SG 值的异或。<br>知道了以上结论，想到 Nim 游戏实际上可以分为 n 个 Bash 游戏，而 Bash 游戏若可以无限取子，则以当前局面剩余石子数为状态，SG(x)=x。所以这个题目的答案即为各个堆石子数的异或值，若值为 0，先手必败，否则先手总有方案使得下一局面异或值为 0，后手必败。</p>
-<h2 id="变形"><a href="#变形" class="headerlink" title="变形"></a>变形</h2><p>参考博客<a target="_blank" rel="noopener" href="https://blog.csdn.net/clover_hxy/article/details/53818624?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-1.channel_param&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-1.channel_param">Nim博弈及其变形</a></p>
-<h3 id="反Nim博弈"><a href="#反Nim博弈" class="headerlink" title="反Nim博弈"></a>反Nim博弈</h3><p>反尼姆博弈顾名思义，</p>
+<h2 id="结论-4">结论</h2>
+<p>将N堆物品数量全部异或后，若结果为0则先手必败，否则先手必胜</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">bool</span> <span class="title">FirstWin</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b)</span> </span>&#123; <span class="comment">//先手必胜返回true</span></span><br><span class="line">	<span class="type">int</span> ans = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; N; ++i) ans ^= a[i];<span class="comment">//a[i]为物品数量</span></span><br><span class="line">	<span class="keyword">return</span> ans != <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="证明-4">证明</h2>
+<p>证明也很复杂…这里看<a target="_blank" rel="noopener" href="https://blog.lordash.cf/posts/2aa44f65.html">证明</a><br>
+后面会介绍SG函数，一般将最终局面的SG值设为0<br>
+SG  定理：游戏的和的 SG 值是各个子游戏的 SG 值的异或。<br>
+知道了以上结论，想到 Nim 游戏实际上可以分为 n 个 Bash 游戏，而 Bash 游戏若可以无限取子，则以当前局面剩余石子数为状态，SG(x)=x。所以这个题目的答案即为各个堆石子数的异或值，若值为 0，先手必败，否则先手总有方案使得下一局面异或值为 0，后手必败。</p>
+<h2 id="变形">变形</h2>
+<p>参考博客<a target="_blank" rel="noopener" href="https://blog.csdn.net/clover_hxy/article/details/53818624?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-1.channel_param&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-1.channel_param">Nim博弈及其变形</a></p>
+<h3 id="反Nim博弈">反Nim博弈</h3>
+<p>反尼姆博弈顾名思义，</p>
 <blockquote>
 <p>有若干堆各若干个物品，两个人轮流从某一堆取任意多的物品，<strong>每次至少取一个，多者不限</strong>，最后取光者失败。</p>
-<p><a target="_blank" rel="noopener" href="https://vjudge.net/contest/387724#problem/E">例题 E - Misere Nim</a><br>先手只有两种情况必胜，1是所有堆石子数全为1，且异或和为0，2是有石子数不为1的堆，且异或和不为0</p>
-<h1 id="五、SG函数"><a href="#五、SG函数" class="headerlink" title="五、SG函数"></a>五、SG函数</h1><p>参考博客：<a target="_blank" rel="noopener" href="https://blog.lordash.cf/posts/266a09be.html">SG函数</a>、<a target="_blank" rel="noopener" href="https://blog.csdn.net/luomingjun12315/article/details/45555495">组合游戏 - SG函数和SG定理</a></p>
-<h2 id="1-概念介绍"><a href="#1-概念介绍" class="headerlink" title="1.概念介绍"></a>1.概念介绍</h2><h3 id="ICG博弈游戏（公平组合游戏）"><a href="#ICG博弈游戏（公平组合游戏）" class="headerlink" title="ICG博弈游戏（公平组合游戏）"></a>ICG博弈游戏（公平组合游戏）</h3><p>条件如下： 题目描述一般为A,B 两人做游戏</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://vjudge.net/contest/387724#problem/E">例题 E - Misere Nim</a><br>
+先手只有两种情况必胜，1是所有堆石子数全为1，且异或和为0，2是有石子数不为1的堆，且异或和不为0</p>
+<h1>五、SG函数</h1>
+<p>参考博客：<a target="_blank" rel="noopener" href="https://blog.lordash.cf/posts/266a09be.html">SG函数</a>、<a target="_blank" rel="noopener" href="https://blog.csdn.net/luomingjun12315/article/details/45555495">组合游戏 - SG函数和SG定理</a></p>
+<h2 id="1-概念介绍">1.概念介绍</h2>
+<h3 id="ICG博弈游戏（公平组合游戏）">ICG博弈游戏（公平组合游戏）</h3>
+<p>条件如下： 题目描述一般为A,B 两人做游戏</p>
 <ol>
 <li>A、B交替进行操作</li>
 <li>每操作一次，选手可以在合法操作集合中任选一种操作。</li>
 <li>对于游戏的任何一种可能的局面，合法的操作集合只取决于这个局面本身，不取决于其它因素（跟选手，以前的所有操作无关）</li>
 <li>如果当前选手无法进行合法的操作，判负</li>
 </ol>
-</blockquote>
-<p>以上面所提的巴什博弈做背景，有一堆n个物品，两人轮流取走物品，<strong>每次至少取一个，最多取m个</strong>，最后取光者获胜。<br>一个公平游戏可以抽象地用一个有向无环图来表示，这个图中每个点都对应一个状态，每条有向边代表从一个状态到另一个状态的合法操作。</p>
-<h3 id="必胜态与必败态"><a href="#必胜态与必败态" class="headerlink" title="必胜态与必败态"></a>必胜态与必败态</h3><ul>
+<p>以上面所提的巴什博弈做背景，有一堆n个物品，两人轮流取走物品，<strong>每次至少取一个，最多取m个</strong>，最后取光者获胜。<br>
+一个公平游戏可以抽象地用一个有向无环图来表示，这个图中每个点都对应一个状态，每条有向边代表从一个状态到另一个状态的合法操作。</p>
+<h3 id="必胜态与必败态">必胜态与必败态</h3>
+<ul>
 <li>必败态（P-position）：上一个选手（即刚操作完的选手）处于必胜局面，此时谁面临此状态谁必败。</li>
 <li>必胜态（N-position）：下一个选手（即将操作的选手）处于必胜局面，此时谁面临此状态谁必胜。</li>
 </ul>
@@ -511,43 +552,59 @@
 <ul>
 <li>所有的终结点都是必败态</li>
 <li>从任何必胜态操作，至少能有一种方式进入必败态</li>
-<li><p>无论如何操作， 从必败态都只能进入必胜态</p>
+<li>无论如何操作， 从必败态都只能进入必胜态</li>
+</ul>
 <p><img src="https://img-blog.csdnimg.cn/20200805213144752.png" alt="图源https://blog.lordash.cf/posts/266a09be.html"></p>
-<h2 id="2-SG函数"><a href="#2-SG函数" class="headerlink" title="2.SG函数"></a>2.SG函数</h2><h3 id="定义mex运算"><a href="#定义mex运算" class="headerlink" title="定义mex运算"></a>定义mex运算</h3><p>先定义mex(minimal excludant)运算，这是施加于一个集合的运算，<strong>表示最小的不属于这个集合的非负整数</strong>。</p>
-</li>
+<h2 id="2-SG函数">2.SG函数</h2>
+<h3 id="定义mex运算">定义mex运算</h3>
+<p>先定义mex(minimal excludant)运算，这是施加于一个集合的运算，<strong>表示最小的不属于这个集合的非负整数</strong>。</p>
+<ul>
 <li>如mex{2,3,5}=0、mex{0,1,2,4}=3、mex{}=0。</li>
 </ul>
-<p>对于任意状态x，定义SG(x)=mex(S)，其中<strong>S是x后继状态的SG函数值的集合</strong>。如x有三个后继状态分别为a、b、c，那么SG(x)=mex{SG(a), SG(b), SG(c)}。 这样，集合S的终态必然是空集，所以<strong>当且仅当x为必败点P时，SG函数的终态为SG(x)=0</strong>。</p>
+<p>对于任意状态x，定义SG(x)=mex(S)，其中<strong>S是x后继状态的SG函数值的集合</strong>。如x有三个后继状态分别为a、b、c，那么SG(x)=mex{SG(a), SG(b), SG©}。 这样，集合S的终态必然是空集，所以<strong>当且仅当x为必败点P时，SG函数的终态为SG(x)=0</strong>。</p>
 <p>通过SG函数，<strong>每个ICG都可以转换成Nim博弈</strong>。SG函数的定义域为ICG的决策树上的所有节点，此时具体定义为：SG(x)=mex{SG(y)|y是x的节点}。对于ICG的决策树上的节点u，我们可以把它想象成一个只有一堆石子，个数为SG(u)的Nim博弈。SG函数的求解方式我是通过这个博客理解的:<a target="_blank" rel="noopener" href="https://blog.csdn.net/luomingjun12315/article/details/45555495">组合游戏 - SG函数和SG定理</a>。</p>
 <blockquote>
-<p><strong>取石子问题</strong><br>有1堆n个的石子，每次只能取{ 1, 3, 4 }个石子，先取完石子者胜利，那么各个数的SG值为多少？ </p>
+<p><strong>取石子问题</strong><br>
+有1堆n个的石子，每次只能取{ 1, 3, 4 }个石子，先取完石子者胜利，那么各个数的SG值为多少？</p>
 </blockquote>
 <p>SG[0]=0，f[]={1,3,4},</p>
 <ul>
-<li>x=1 时，可以取走1 - f{1}个石子，剩余{0}个，所以 SG[1] = mex{ SG[0] }= mex{0} = 1; </li>
+<li>x=1 时，可以取走1 - f{1}个石子，剩余{0}个，所以 SG[1] = mex{ SG[0] }= mex{0} = 1;</li>
 <li>x=2 时，可以取走2 - f{1}个石子，剩余{1}个，所以 SG[2] = mex{ SG[1] }= mex{1} = 0;</li>
 <li>x=3 时，可以取走3 - f{1,3}个石子，剩余{2,0}个，所以 SG[3] = mex{SG[2],SG[0]} = mex{0,0} =1;</li>
 <li>x=4 时，可以取走4- f{1,3,4}个石子，剩余{3,1,0}个，所以 SG[4] = mex{SG[3],SG[1],SG[0]} = mex{1,1,0} = 2;</li>
-<li><p>x=5 时，可以取走5 - f{1,3,4}个石子，剩余{4,2,1}个，所以SG[5] = mex{SG[4],SG[2],SG[1]} =mex{2,0,1} = 3;</p>
-<p>以此类推…<br>x = 0 1 2 3 4 5 6 7 8…<br>SG[x] = 0 1 0 1 2 3 2 0 1…</p>
-</li>
+<li>x=5 时，可以取走5 - f{1,3,4}个石子，剩余{4,2,1}个，所以SG[5] = mex{SG[4],SG[2],SG[1]} =mex{2,0,1} = 3;</li>
 </ul>
+<p>以此类推…<br>
+x = 0 1 2 3 4 5 6 7 8…<br>
+SG[x] = 0 1 0 1 2 3 2 0 1…</p>
 <p>由上述实例我们就可以得到SG函数值求解步骤，那么计算1~n的SG函数值步骤如下：</p>
 <ol>
 <li>使用数组f将<strong>可改变当前状态</strong>的方式记录下来。</li>
 <li>用另一个数组将当前状态x 的后继状态标记。</li>
 <li>最后模拟mex运算，也就是我们在标记值中 搜索 未被标记值 的最小值，将其赋值给SG(x)。</li>
-<li>不断的重复 2 - 3 的步骤，就完成了 计算1~n 的函数值。<br>模板如下：</li>
+<li>不断的重复 2 - 3 的步骤，就完成了 计算1~n 的函数值。<br>
+模板如下：</li>
 </ol>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//f[N]:可改变当前状态的方式，N为方式的种类，f[N]要在getSG之前先预处理</span></span><br><span class="line"><span class="comment">//SG[]:0~n的SG函数值</span></span><br><span class="line"><span class="comment">//S[]:为x后继状态的集合</span></span><br><span class="line"><span class="type">int</span> f[N],SG[MAXN],S[MAXN];</span><br><span class="line"><span class="function"><span class="type">void</span>  <span class="title">getSG</span><span class="params">(<span class="type">int</span> n)</span></span>&#123;</span><br><span class="line">    <span class="type">int</span> i,j;</span><br><span class="line">    <span class="built_in">memset</span>(SG,<span class="number">0</span>,<span class="built_in">sizeof</span>(SG));</span><br><span class="line">    <span class="comment">//因为SG[0]始终等于0，所以i从1开始</span></span><br><span class="line">    <span class="keyword">for</span>(i = <span class="number">1</span>; i &lt;= n; i++)&#123;</span><br><span class="line">        <span class="comment">//每一次都要将上一状态 的 后继集合 重置</span></span><br><span class="line">        <span class="built_in">memset</span>(S,<span class="number">0</span>,<span class="built_in">sizeof</span>(S));</span><br><span class="line">        <span class="keyword">for</span>(j = <span class="number">0</span>; f[j] &lt;= i &amp;&amp; j &lt;= N; j++)</span><br><span class="line">            S[SG[i-f[j]]] = <span class="number">1</span>;  <span class="comment">//将后继状态的SG函数值进行标记</span></span><br><span class="line">        <span class="keyword">for</span>(j = <span class="number">0</span>;; j++) <span class="keyword">if</span>(!S[j])&#123;   <span class="comment">//查询当前后继状态SG值中最小的非零值</span></span><br><span class="line">            SG[i] = j;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;  </span><br></pre></td></tr></table></figure>
-<h2 id="3-SG定理"><a href="#3-SG定理" class="headerlink" title="3.SG定理"></a>3.SG定理</h2><ol>
-<li><strong>游戏和的 SG 函数是所有子游戏的 SG 函数的异或和</strong>，其中所有子游戏互相独立。 </li>
-<li>所以当且仅当每堆石子的 SG 函数的异或和不为0时，先手必胜。<h1 id="六、Green-Hackenbush（树上删边游戏）"><a href="#六、Green-Hackenbush（树上删边游戏）" class="headerlink" title="六、Green Hackenbush（树上删边游戏）"></a>六、Green Hackenbush（树上删边游戏）</h1>做题第一题就被卡住了，搜了下题解发现是没学过的Green博弈<br>参考博客：<a target="_blank" rel="noopener" href="http://blog.sina.com.cn/s/blog_8f06da990101252l.html">博弈-Green Hackenbush</a>，以下内容都是这里面的<h2 id="1-Hackenbush游戏概述"><a href="#1-Hackenbush游戏概述" class="headerlink" title="1.Hackenbush游戏概述"></a>1.Hackenbush游戏概述</h2>Hackenbush游戏是通过移除一个有根图的某些边，直到没有与地板的相连的边。地板用虚线来表示，其中移除某一条边的时候，那条边以上所连着的所有边都会移除，就像砍树枝那样，树枝以上的部分也会被移除。<strong>在这里，我们讨论这个游戏的公平版本，每个玩家在他的回合可以删除任意的边。这个版本叫做Green Hackenbush，每条边都是绿色的，下面我们简称GH游戏</strong>。这里还有一个不公平版本，叫做Blue-Red Hackenbush，有些边是蓝色，有些边是红色，而玩家一只能删除蓝色边，玩家二只能删除红色边。总的来说，Hackenbush游戏，可能会有只供玩家一删除的蓝色边，只供玩家二删除的红色边，还有两个玩家都可以进行操作的绿色边。</li>
+<h2 id="3-SG定理">3.SG定理</h2>
+<ol>
+<li><strong>游戏和的 SG 函数是所有子游戏的 SG 函数的异或和</strong>，其中所有子游戏互相独立。</li>
+<li>所以当且仅当每堆石子的 SG 函数的异或和不为0时，先手必胜。</li>
 </ol>
-<h2 id="2-克朗原理（Colon-Principle）"><a href="#2-克朗原理（Colon-Principle）" class="headerlink" title="2.克朗原理（Colon Principle）"></a>2.克朗原理（Colon Principle）</h2><blockquote>
+<h1>六、Green Hackenbush（树上删边游戏）</h1>
+<p>做题第一题就被卡住了，搜了下题解发现是没学过的Green博弈<br>
+参考博客：<a target="_blank" rel="noopener" href="http://blog.sina.com.cn/s/blog_8f06da990101252l.html">博弈-Green Hackenbush</a>，以下内容都是这里面的</p>
+<h2 id="1-Hackenbush游戏概述">1.Hackenbush游戏概述</h2>
+<p>Hackenbush游戏是通过移除一个有根图的某些边，直到没有与地板的相连的边。地板用虚线来表示，其中移除某一条边的时候，那条边以上所连着的所有边都会移除，就像砍树枝那样，树枝以上的部分也会被移除。<strong>在这里，我们讨论这个游戏的公平版本，每个玩家在他的回合可以删除任意的边。这个版本叫做Green Hackenbush，每条边都是绿色的，下面我们简称GH游戏</strong>。这里还有一个不公平版本，叫做Blue-Red Hackenbush，有些边是蓝色，有些边是红色，而玩家一只能删除蓝色边，玩家二只能删除红色边。总的来说，Hackenbush游戏，可能会有只供玩家一删除的蓝色边，只供玩家二删除的红色边，还有两个玩家都可以进行操作的绿色边。</p>
+<h2 id="2-克朗原理（Colon-Principle）">2.克朗原理（Colon Principle）</h2>
+<blockquote>
 <p>对于树上的某一个点，它的分支可以转化成以这个点为根的一根竹子，这个竹子的长度就是它各个分支的边的数量的异或和</p>
 </blockquote>
-<p>所有边权值为1，则是裸的green博弈，每个点的sg函数=子节点的sg函数+1的异或和。<br>权值不同时，当AB权值=1时，sg[A]=sg[B]+1。<br>当AB权值为偶数时，sg[A]=sg[B]。<br>当AB权值为奇数时，sg[A]=sg[B]^1</p>
+<p>所有边权值为1，则是裸的green博弈，每个点的sg函数=子节点的sg函数+1的异或和。<br>
+权值不同时，当AB权值=1时，sg[A]=sg[B]+1。<br>
+当AB权值为偶数时，sg[A]=sg[B]。<br>
+当AB权值为奇数时，sg[A]=sg[B]^1</p>
 
 
         <hr>
@@ -697,7 +754,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E4%B8%80%E3%80%81Fibonacci%E5%8D%9A%E5%BC%88"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">一、Fibonacci博弈</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%8F%8F%E8%BF%B0"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">描述</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%BB%93%E8%AE%BA"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">结论</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E8%AF%81%E6%98%8E"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">证明</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E4%BA%8C%E3%80%81Bash%E5%8D%9A%E5%BC%88"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">二、Bash博弈</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%8F%8F%E8%BF%B0-1"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">描述</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%BB%93%E8%AE%BA-1"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">结论</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E8%AF%81%E6%98%8E-1"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">证明</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%B7%B4%E4%BB%80%E5%8D%9A%E5%BC%88%E5%8F%98%E5%BD%A2"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">巴什博弈变形</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E4%B8%89%E3%80%81Wythoff%E5%8D%9A%E5%BC%88"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">三、Wythoff博弈</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%8F%8F%E8%BF%B0-2"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">描述</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%BB%93%E8%AE%BA-2"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">结论</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E8%AF%81%E6%98%8E-2"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text">证明</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E5%9B%9B%E3%80%81Nim%E5%8D%9A%E5%BC%88"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">四、Nim博弈</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%8F%8F%E8%BF%B0-3"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">描述</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%BB%93%E8%AE%BA-3"><span class="toc-nav-number">4.2.</span> <span class="toc-nav-text">结论</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E8%AF%81%E6%98%8E-3"><span class="toc-nav-number">4.3.</span> <span class="toc-nav-text">证明</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%8F%98%E5%BD%A2"><span class="toc-nav-number">4.4.</span> <span class="toc-nav-text">变形</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%8F%8DNim%E5%8D%9A%E5%BC%88"><span class="toc-nav-number">4.4.1.</span> <span class="toc-nav-text">反Nim博弈</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E4%BA%94%E3%80%81SG%E5%87%BD%E6%95%B0"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">五、SG函数</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#1-%E6%A6%82%E5%BF%B5%E4%BB%8B%E7%BB%8D"><span class="toc-nav-number">5.1.</span> <span class="toc-nav-text">1.概念介绍</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#ICG%E5%8D%9A%E5%BC%88%E6%B8%B8%E6%88%8F%EF%BC%88%E5%85%AC%E5%B9%B3%E7%BB%84%E5%90%88%E6%B8%B8%E6%88%8F%EF%BC%89"><span class="toc-nav-number">5.1.1.</span> <span class="toc-nav-text">ICG博弈游戏（公平组合游戏）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%BF%85%E8%83%9C%E6%80%81%E4%B8%8E%E5%BF%85%E8%B4%A5%E6%80%81"><span class="toc-nav-number">5.1.2.</span> <span class="toc-nav-text">必胜态与必败态</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#2-SG%E5%87%BD%E6%95%B0"><span class="toc-nav-number">5.2.</span> <span class="toc-nav-text">2.SG函数</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%9A%E4%B9%89mex%E8%BF%90%E7%AE%97"><span class="toc-nav-number">5.2.1.</span> <span class="toc-nav-text">定义mex运算</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#3-SG%E5%AE%9A%E7%90%86"><span class="toc-nav-number">5.3.</span> <span class="toc-nav-text">3.SG定理</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E5%85%AD%E3%80%81Green-Hackenbush%EF%BC%88%E6%A0%91%E4%B8%8A%E5%88%A0%E8%BE%B9%E6%B8%B8%E6%88%8F%EF%BC%89"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">六、Green Hackenbush（树上删边游戏）</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#1-Hackenbush%E6%B8%B8%E6%88%8F%E6%A6%82%E8%BF%B0"><span class="toc-nav-number">6.1.</span> <span class="toc-nav-text">1.Hackenbush游戏概述</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#2-%E5%85%8B%E6%9C%97%E5%8E%9F%E7%90%86%EF%BC%88Colon-Principle%EF%BC%89"><span class="toc-nav-number">6.2.</span> <span class="toc-nav-text">2.克朗原理（Colon Principle）</span></a></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">一、Fibonacci博弈</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%8F%8F%E8%BF%B0"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">描述</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%BB%93%E8%AE%BA"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">结论</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E8%AF%81%E6%98%8E"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">证明</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">二、Bash博弈</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%8F%8F%E8%BF%B0-2"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">描述</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%BB%93%E8%AE%BA-2"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">结论</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E8%AF%81%E6%98%8E-2"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">证明</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%B7%B4%E4%BB%80%E5%8D%9A%E5%BC%88%E5%8F%98%E5%BD%A2"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">巴什博弈变形</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">三、Wythoff博弈</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%8F%8F%E8%BF%B0-3"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">描述</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%BB%93%E8%AE%BA-3"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">结论</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E8%AF%81%E6%98%8E-3"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text">证明</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">四、Nim博弈</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%8F%8F%E8%BF%B0-4"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">描述</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%BB%93%E8%AE%BA-4"><span class="toc-nav-number">4.2.</span> <span class="toc-nav-text">结论</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E8%AF%81%E6%98%8E-4"><span class="toc-nav-number">4.3.</span> <span class="toc-nav-text">证明</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%8F%98%E5%BD%A2"><span class="toc-nav-number">4.4.</span> <span class="toc-nav-text">变形</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%8F%8DNim%E5%8D%9A%E5%BC%88"><span class="toc-nav-number">4.4.1.</span> <span class="toc-nav-text">反Nim博弈</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">五、SG函数</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#1-%E6%A6%82%E5%BF%B5%E4%BB%8B%E7%BB%8D"><span class="toc-nav-number">5.1.</span> <span class="toc-nav-text">1.概念介绍</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#ICG%E5%8D%9A%E5%BC%88%E6%B8%B8%E6%88%8F%EF%BC%88%E5%85%AC%E5%B9%B3%E7%BB%84%E5%90%88%E6%B8%B8%E6%88%8F%EF%BC%89"><span class="toc-nav-number">5.1.1.</span> <span class="toc-nav-text">ICG博弈游戏（公平组合游戏）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%BF%85%E8%83%9C%E6%80%81%E4%B8%8E%E5%BF%85%E8%B4%A5%E6%80%81"><span class="toc-nav-number">5.1.2.</span> <span class="toc-nav-text">必胜态与必败态</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#2-SG%E5%87%BD%E6%95%B0"><span class="toc-nav-number">5.2.</span> <span class="toc-nav-text">2.SG函数</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%9A%E4%B9%89mex%E8%BF%90%E7%AE%97"><span class="toc-nav-number">5.2.1.</span> <span class="toc-nav-text">定义mex运算</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#3-SG%E5%AE%9A%E7%90%86"><span class="toc-nav-number">5.3.</span> <span class="toc-nav-text">3.SG定理</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">六、Green Hackenbush（树上删边游戏）</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#1-Hackenbush%E6%B8%B8%E6%88%8F%E6%A6%82%E8%BF%B0"><span class="toc-nav-number">6.1.</span> <span class="toc-nav-text">1.Hackenbush游戏概述</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#2-%E5%85%8B%E6%9C%97%E5%8E%9F%E7%90%86%EF%BC%88Colon-Principle%EF%BC%89"><span class="toc-nav-number">6.2.</span> <span class="toc-nav-text">2.克朗原理（Colon Principle）</span></a></li></ol></li></ol>
         
         </div>
       </aside>

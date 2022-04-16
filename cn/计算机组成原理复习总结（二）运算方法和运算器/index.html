@@ -5,6 +5,9 @@
 <head>
   <!-- Google Analytics -->
   
+    <!-- 看板娘  https://github.com/stevenjoezhang/live2d-widget -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+    <script defer src="https://cdn.jsdelivr.net/gh/yusixian/live2d-widget@latest/autoload.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-xxxxxx-xx"></script>
     <script type="text/javascript">
@@ -396,11 +399,11 @@
             <!-- WordCount start -->
             <div class="blank_box"></div>
             <span class="meta">
-              Estimated Reading Time <span class="post-count">4</span> Minutes
+              Estimated Reading Time <span class="post-count">16</span> Minutes
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">1.1k</span> In Total
+              Words <span class="post-count">4k</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -462,144 +465,309 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h1 id="第二章-运算方法和运算器"><a href="#第二章-运算方法和运算器" class="headerlink" title="第二章 运算方法和运算器"></a>第二章 运算方法和运算器</h1><h2 id="2-1-数制与编码"><a href="#2-1-数制与编码" class="headerlink" title="2.1 数制与编码"></a>2.1 数制与编码</h2><h3 id="一、进位计数制及其相互转换"><a href="#一、进位计数制及其相互转换" class="headerlink" title="一、进位计数制及其相互转换"></a>一、进位计数制及其相互转换</h3><p>10进制和R进制之间的转换<br><strong>R进制到10进制</strong>： </p>
-<script type="math/tex; mode=display">\sum_{i = n}^{-m} k_i × r^i</script><p>eg:二进制数转换十进制数<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//二转十</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">bToD</span><span class="params">(<span class="type">char</span> str[])</span> &#123;</span><br><span class="line">    <span class="type">int</span> sum = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; str[i] != <span class="string">&#x27;\0&#x27;</span>; i++) &#123;</span><br><span class="line">        sum = sum*<span class="number">2</span> + (str[i] - <span class="string">&#x27;0&#x27;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> sum;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p><strong>10进制到R进制</strong>： </p>
+        <h1>第二章 运算方法和运算器</h1>
+<h2 id="2-1-数制与编码">2.1 数制与编码</h2>
+<h3 id="一、进位计数制及其相互转换">一、进位计数制及其相互转换</h3>
+<p>10进制和R进制之间的转换<br>
+<strong>R进制到10进制</strong>：</p>
+<p>$$ \sum_{i = n}^{-m} k_i × r^i$$<br>
+eg:二进制数转换十进制数</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//二转十</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">bToD</span><span class="params">(<span class="type">char</span> str[])</span> &#123;</span><br><span class="line">    <span class="type">int</span> sum = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; str[i] != <span class="string">&#x27;\0&#x27;</span>; i++) &#123;</span><br><span class="line">        sum = sum*<span class="number">2</span> + (str[i] - <span class="string">&#x27;0&#x27;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> sum;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>10进制到R进制</strong>：</p>
 <ul>
 <li>整数部分：除r取余，r为进制基数</li>
-<li>小数部分：乘r取整代码如下<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//将十进制数n转化为k进制整数</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">dToK</span><span class="params">(<span class="type">int</span> n, <span class="type">int</span> k, <span class="type">char</span> str[])</span> &#123;</span><br><span class="line">    <span class="type">int</span> i = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span> (n == <span class="number">0</span>) &#123;</span><br><span class="line">        str[<span class="number">0</span>] = <span class="string">&#x27;0&#x27;</span>;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span>(n) &#123;</span><br><span class="line">        str[i++] =n % k + <span class="string">&#x27;0&#x27;</span>;</span><br><span class="line">        n = (n-n % k) / k;</span><br><span class="line">    &#125;</span><br><span class="line">    i--;</span><br><span class="line">    <span class="comment">//reverse</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; i; j++,i--) &#123;</span><br><span class="line">        <span class="type">char</span> t = str[j];</span><br><span class="line">        str[j] = str[i];</span><br><span class="line">        str[i] = t;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="二、真值和机器数"><a href="#二、真值和机器数" class="headerlink" title="二、真值和机器数"></a>二、真值和机器数</h3></li>
-<li><strong>真值</strong>：一般书写的数 </li>
-<li><strong>机器码</strong>：机器中表示的数，要解决在计算机内部数的正、负符号和小数点运算问题。<h3 id="三、BCD码"><a href="#三、BCD码" class="headerlink" title="三、BCD码"></a>三、BCD码</h3>表示一位十进制数的二进制码的每一位有确定的权。一般用8421码，其4个二进制码的权从高到低分别为8、4、2和1。用0000，0001，…，1001分别表示0，1，…，9，每个数位内部满足二进制规则，而数位之间满足十进制规则，故称这种编码为“以二进制编码的十进制(binary coded decimal，简称BCD)码”。</li>
+<li>小数部分：乘r取整代码如下</li>
 </ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//将十进制数n转化为k进制整数</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">dToK</span><span class="params">(<span class="type">int</span> n, <span class="type">int</span> k, <span class="type">char</span> str[])</span> &#123;</span><br><span class="line">    <span class="type">int</span> i = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span> (n == <span class="number">0</span>) &#123;</span><br><span class="line">        str[<span class="number">0</span>] = <span class="string">&#x27;0&#x27;</span>;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span>(n) &#123;</span><br><span class="line">        str[i++] =n % k + <span class="string">&#x27;0&#x27;</span>;</span><br><span class="line">        n = (n-n % k) / k;</span><br><span class="line">    &#125;</span><br><span class="line">    i--;</span><br><span class="line">    <span class="comment">//reverse</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; i; j++,i--) &#123;</span><br><span class="line">        <span class="type">char</span> t = str[j];</span><br><span class="line">        str[j] = str[i];</span><br><span class="line">        str[i] = t;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="二、真值和机器数">二、真值和机器数</h3>
+<ul>
+<li><strong>真值</strong>：一般书写的数</li>
+<li><strong>机器码</strong>：机器中表示的数，要解决在计算机内部数的正、负符号和小数点运算问题。</li>
+</ul>
+<h3 id="三、BCD码">三、BCD码</h3>
+<p>表示一位十进制数的二进制码的每一位有确定的权。一般用8421码，其4个二进制码的权从高到低分别为8、4、2和1。用0000，0001，…，1001分别表示0，1，…，9，每个数位内部满足二进制规则，而数位之间满足十进制规则，故称这种编码为“以二进制编码的十进制(binary coded decimal，简称BCD)码”。</p>
 <blockquote>
-<p>注意！<br>  <strong>BCD码的取值是从0000到1001（也就是十进制的0到9）</strong><br>  有时对BCD码进行加法或减法会有这个范围以外的值出现，需要人为调整方能得出正确的结果。</p>
+<p>注意！<br>
+<strong>BCD码的取值是从0000到1001（也就是十进制的0到9）</strong><br>
+有时对BCD码进行加法或减法会有这个范围以外的值出现，需要人为调整方能得出正确的结果。</p>
 </blockquote>
 <p>在计算机内部实现BCD码算术运算，要对运算结果进行<strong>修正</strong>，对加法运算的修正规则是:</p>
 <ul>
-<li>如果两个一位BCD码相加之和小于或等于(1001)~2~，即(9)~10~，不需要修正;<figure class="highlight tap"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">例1 ① 1+8 = 9</span><br><span class="line"> <span class="number"> 0 </span>0<span class="number"> 0 </span>1</span><br><span class="line">+<span class="number"> 1 </span>0<span class="number"> 0 </span>0 </span><br><span class="line">——————————</span><br><span class="line"> <span class="number"> 1 </span>0<span class="number"> 0 </span>1 </span><br><span class="line">不需要修正</span><br></pre></td></tr></table></figure>
+<li>如果两个一位BCD码相加之和小于或等于(1001)~2~，即(9)~10~，不需要修正;</li>
+</ul>
+<figure class="highlight tap"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">例1 ① 1+8 = 9</span><br><span class="line"> <span class="number"> 0 </span>0<span class="number"> 0 </span>1</span><br><span class="line">+<span class="number"> 1 </span>0<span class="number"> 0 </span>0 </span><br><span class="line">——————————</span><br><span class="line"> <span class="number"> 1 </span>0<span class="number"> 0 </span>1 </span><br><span class="line">不需要修正</span><br></pre></td></tr></table></figure>
 <ul>
-<li>如相加之和<strong>大于或等于(10)~10~</strong>，要进行<strong>加6修正</strong>，并向<strong>高位进位</strong>，进位可以在首次相加(例1 ③)或修正时(例1 ②)产生。<figure class="highlight tap"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">例1 ② 4+9 = 13</span><br><span class="line"> <span class="number"> 0 </span>1<span class="number"> 0 </span>0</span><br><span class="line">+<span class="number"> 1 </span>0<span class="number"> 0 </span>1 </span><br><span class="line">——————————</span><br><span class="line"> <span class="number"> 1 </span>1<span class="number"> 0 </span>1 </span><br><span class="line">+<span class="number"> 0 </span>1<span class="number"> 1 </span>0  修正</span><br><span class="line">——————————</span><br><span class="line">1<span class="number"> 0 </span>0<span class="number"> 1 </span>1</span><br><span class="line">0001 0011即为13~</span><br><span class="line">③ 9+7 = 16</span><br><span class="line"> <span class="number"> 1 </span>0<span class="number"> 0 </span>1</span><br><span class="line">+<span class="number"> 0 </span>1<span class="number"> 1 </span>1</span><br><span class="line">——————————</span><br><span class="line">1<span class="number"> 0 </span>0<span class="number"> 0 </span>0</span><br><span class="line">+<span class="number"> 0 </span>1<span class="number"> 1 </span>0 修正</span><br><span class="line">——————————</span><br><span class="line">1<span class="number"> 0 </span>1<span class="number"> 1 </span>0 </span><br><span class="line">0001 0110即为16~</span><br></pre></td></tr></table></figure>
-<h3 id="四、字符与字符串"><a href="#四、字符与字符串" class="headerlink" title="四、字符与字符串"></a>四、字符与字符串</h3><h4 id="1、字符与字符串的表示方法"><a href="#1、字符与字符串的表示方法" class="headerlink" title="1、字符与字符串的表示方法"></a>1、字符与字符串的表示方法</h4>符号数据:字符信息用数据表示，如<strong>ASCII</strong>等<br>字符表示方法<strong>ASCII</strong>:用一个字节来表示,低7位用来编码(128),最高位为校验位，如图<img src="https://img-blog.csdnimg.cn/20210614201629969.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></li>
+<li>如相加之和<strong>大于或等于(10)~10~</strong>，要进行<strong>加6修正</strong>，并向<strong>高位进位</strong>，进位可以在首次相加(例1 ③)或修正时(例1 ②)产生。</li>
 </ul>
-</li>
-</ul>
+<figure class="highlight tap"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">例1 ② 4+9 = 13</span><br><span class="line"> <span class="number"> 0 </span>1<span class="number"> 0 </span>0</span><br><span class="line">+<span class="number"> 1 </span>0<span class="number"> 0 </span>1 </span><br><span class="line">——————————</span><br><span class="line"> <span class="number"> 1 </span>1<span class="number"> 0 </span>1 </span><br><span class="line">+<span class="number"> 0 </span>1<span class="number"> 1 </span>0  修正</span><br><span class="line">——————————</span><br><span class="line">1<span class="number"> 0 </span>0<span class="number"> 1 </span>1</span><br><span class="line">0001 0011即为13~</span><br><span class="line">③ 9+7 = 16</span><br><span class="line"> <span class="number"> 1 </span>0<span class="number"> 0 </span>1</span><br><span class="line">+<span class="number"> 0 </span>1<span class="number"> 1 </span>1</span><br><span class="line">——————————</span><br><span class="line">1<span class="number"> 0 </span>0<span class="number"> 0 </span>0</span><br><span class="line">+<span class="number"> 0 </span>1<span class="number"> 1 </span>0 修正</span><br><span class="line">——————————</span><br><span class="line">1<span class="number"> 0 </span>1<span class="number"> 1 </span>0 </span><br><span class="line">0001 0110即为16~</span><br></pre></td></tr></table></figure>
+<h3 id="四、字符与字符串">四、字符与字符串</h3>
+<h4 id="1、字符与字符串的表示方法">1、字符与字符串的表示方法</h4>
+<p>符号数据:字符信息用数据表示，如<strong>ASCII</strong>等<br>
+字符表示方法<strong>ASCII</strong>:用一个字节来表示,低7位用来编码(128),最高位为校验位，如图<img src="https://img-blog.csdnimg.cn/20210614201629969.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 <p>字符串的存放方法:占用主存中连续的多个字节，<strong>每个字节存一个字符</strong>。</p>
-<h4 id="2、汉字的表示方法"><a href="#2、汉字的表示方法" class="headerlink" title="2、汉字的表示方法"></a>2、汉字的表示方法</h4><p>一级汉字3755个，二级汉字3008个<br>汉字内码:汉字信息的存储,交换和检索的机内代码，<strong>两个字节组成，每个字节高位都为1(区别于英文字符)</strong><br>汉字字模码:汉字字形点阵<br><img src="https://img-blog.csdnimg.cn/20210614201837788.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<h3 id="五、校验码（重点）"><a href="#五、校验码（重点）" class="headerlink" title="五、校验码（重点）"></a>五、校验码（重点）</h3><p>推荐视频<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1WK411N7kz">3Blue1Brown的汉明码part1</a>、<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1pV411y7E8/">3Blue1Brown的汉明码part2</a>，讲的非常有趣！虽然主要讲汉明码，但对奇偶校验码也有详细描述。<br><strong>校验码（只介绍奇偶校验码)</strong></p>
-<h4 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h4><p>信息传输和处理过程中受到干扰和故障，容易出错。</p>
-<h4 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h4><p>在有效信息中加入一些冗余信息（校验位)</p>
-<h4 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h4><p>设x=(x~0~ x~1~.x~n-1~)是一个n位字，则偶校验位C定义为:C=x~0~  ^ x~1~ ^ x~2~ ^ … ^x~n-1~,式中^代表按位加，表明只有<strong>当x中包含有偶数个1</strong>时,才使C=0，否则C=1。只能检查出错，而不能纠正错误。同理可以定义奇校验。<br>奇校验：包含奇数个1时才使得C=0,否则C=1<br><img src="https://img-blog.csdnimg.cn/20210614202746877.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<h2 id="2-2-定点数的表示和运算（重点）"><a href="#2-2-定点数的表示和运算（重点）" class="headerlink" title="2.2 定点数的表示和运算（重点）"></a>2.2 定点数的表示和运算（重点）</h2><h3 id="一、定点数的表示"><a href="#一、定点数的表示" class="headerlink" title="一、定点数的表示"></a>一、定点数的表示</h3><h4 id="1、原码表示法"><a href="#1、原码表示法" class="headerlink" title="1、原码表示法"></a>1、原码表示法</h4><p><strong>定点小数 x~n~.x~n-1~x~n-2~…..x~0~</strong>，x为真值</p>
-<script type="math/tex; mode=display">[x]_原 = 
-\begin{cases} 
-x,  & \text{0 ≤  x < 1 即 x为正数} \\
-1-x, & \text{-1 < x ≤ 0 即 x为负数}
-\end{cases}</script><p>范围为2^-n^-1~1-2^-n^<br>eg：<br>x = +0.1001，[x]原 = 0.1001<br>x = -0.1001，[x]原 = 1-(-0.1001)=1.1001</p>
-<p><strong>定点整数 x~n~x~n-1~x~n-2~…..x~0~</strong>，x为真值</p>
-<script type="math/tex; mode=display">[x]_原 = 
-\begin{cases} 
-x,   & \text{0 ≤ x < }2^n  即 x为正数\\
-2^n-x, & \text{-2}^n<x≤ 0 {即x为负数}
-\end{cases}</script><p>范围为1-2^n^~2^n^-1<br>eg：<br>x = +1001，[x]原 = 01001<br>x = -1001，[x]原 = 2^4^+1001=11001<br><strong>有正0和负0之分！！</strong></p>
-<h4 id="2、反码表示法"><a href="#2、反码表示法" class="headerlink" title="2、反码表示法"></a>2、反码表示法</h4><p><strong>定义</strong></p>
+<h4 id="2、汉字的表示方法">2、汉字的表示方法</h4>
+<p>一级汉字3755个，二级汉字3008个<br>
+汉字内码:汉字信息的存储,交换和检索的机内代码，<strong>两个字节组成，每个字节高位都为1(区别于英文字符)</strong><br>
+汉字字模码:汉字字形点阵<br>
+<img src="https://img-blog.csdnimg.cn/20210614201837788.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h3 id="五、校验码（重点）">五、校验码（重点）</h3>
+<p>推荐视频<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1WK411N7kz">3Blue1Brown的汉明码part1</a>、<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1pV411y7E8/">3Blue1Brown的汉明码part2</a>，讲的非常有趣！虽然主要讲汉明码，但对奇偶校验码也有详细描述。<br>
+<strong>校验码（只介绍奇偶校验码)</strong></p>
+<h4 id="引入">引入</h4>
+<p>信息传输和处理过程中受到干扰和故障，容易出错。</p>
+<h4 id="解决方法">解决方法</h4>
+<p>在有效信息中加入一些冗余信息（校验位)</p>
+<h4 id="定义">定义</h4>
+<p>设x=(x~0~ x~1~.x~n-1~)是一个n位字，则偶校验位C定义为:C=x~0~  ^ x~1~ ^ x~2~ ^ … ^x~n-1~,式中^代表按位加，表明只有<strong>当x中包含有偶数个1</strong>时,才使C=0，否则C=1。只能检查出错，而不能纠正错误。同理可以定义奇校验。<br>
+奇校验：包含奇数个1时才使得C=0,否则C=1<br>
+<img src="https://img-blog.csdnimg.cn/20210614202746877.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="2-2-定点数的表示和运算（重点）">2.2 定点数的表示和运算（重点）</h2>
+<h3 id="一、定点数的表示">一、定点数的表示</h3>
+<h4 id="1、原码表示法">1、原码表示法</h4>
+<p><strong>定点小数 x~n~.x~n-1~x~n-2~……x~0~</strong>，x为真值<br>
+$$[x]_原 =<br>
+\begin{cases}<br>
+x,  &amp; \text{0 ≤  x &lt; 1 即 x为正数} \<br>
+1-x, &amp; \text{-1 &lt; x ≤ 0 即 x为负数}<br>
+\end{cases}$$<br>
+范围为2^-n^-1~1-2^-n^<br>
+eg：<br>
+x = +0.1001，[x]原 = 0.1001<br>
+x = -0.1001，[x]原 = 1-(-0.1001)=1.1001</p>
+<p><strong>定点整数 x~n~x~n-1~x~n-2~……x~0~</strong>，x为真值<br>
+$$[x]_原 =<br>
+\begin{cases}<br>
+x,   &amp; \text{0 ≤ x &lt; }2^n  即 x为正数\<br>
+2^n-x, &amp; \text{-2}^n&lt;x≤ 0 {即x为负数}<br>
+\end{cases}$$<br>
+范围为1-2^n^~2^n^-1<br>
+eg：<br>
+x = +1001，[x]原 = 01001<br>
+x = -1001，[x]原 = 2^4^+1001=11001<br>
+<strong>有正0和负0之分！！</strong></p>
+<h4 id="2、反码表示法">2、反码表示法</h4>
+<p><strong>定义</strong></p>
 <ul>
 <li><strong>正数</strong>的表示与原码、补码相同。</li>
 <li><strong>负数</strong>的反码<strong>符号位为1</strong>，<strong>数值位</strong>是将<strong>原码的数值按位取反</strong>，就得到该数的反码表示。</li>
-<li>电路容易实现，触发器的输出有正负之分。<br>对尾数求反，反码跟补码的区别在于末位少加一个1，所以可以推出反码的定义</li>
+<li>电路容易实现，触发器的输出有正负之分。<br>
+对尾数求反，反码跟补码的区别在于末位少加一个1，所以可以推出反码的定义</li>
 </ul>
-<p><strong>定点小数 x~n~.x~n-1~x~n-2~…..x~0~</strong>，x为真值</p>
-<script type="math/tex; mode=display">[x]_反 = 
-\begin{cases} 
-x, & \text{0 ≤  x < 1 即 x为正数} \\
-(2-2^{-n})+x, & \text{-1 < x ≤ 0 即 x为负数}
-\end{cases}</script><p>eg:<br>X1=+0.1011011 , [X1]~反~ =0.1011011<br>X2= -0.1011011 , [X2]~反~ =1.0100100<br><strong>定点整数 x~n~x~n-1~x~n-2~…..x~0~</strong>，x为真值</p>
-<script type="math/tex; mode=display">[x]_反 = 
-\begin{cases} 
-x,  & \text{0 ≤ x < }2^n  即 x为正数 \\
-(2^{n+1}-1)+x, & \text{-2}^n<x≤ 0 {即x为负数}
-\end{cases}</script><p><strong>反码表示有正0和负0之分！！</strong></p>
-<h4 id="3、补码表示法"><a href="#3、补码表示法" class="headerlink" title="3、补码表示法"></a>3、补码表示法</h4><p> <strong>定义</strong><br>正数的补码就是正数的本身，负数的补码是原负数加上模（原负数除符号位外取反，再加1）。 计算机运算受字长限制,属于有模运算。补码最大的优点就是将减法运算转换成加法运算。<br><strong>定点小数x~n~x~n-1~x~n-2~…..x~0~，以2为模</strong> </p>
-<script type="math/tex; mode=display">[x]_补 = 
-\begin{cases} 
-x,  & \text{0 ≤  x < 1 即 x为正数} \\
-2+x, & \text{-1 < x ≤ 0 即 x为负数}
-\end{cases}</script><p>eg:  x= -0.1011，[x]~补~=10+x=10.0000-0.1011=1.0101 </p>
-<p>y=-0.01111 [y]~补~=10+y=10.00000-0.01111=1.10001<br><strong>定点整数xnxn-1xn-2…..x0 ，以2^n+1^为模</strong></p>
-<script type="math/tex; mode=display">[x]_补 = 
-\begin{cases} 
-x,  & \text{2}^n {＞x ≥ 0 即 x为正数} \\
-2^{n+1}+x, & \text{0 ≥ x > -2}^n {即x为负数}
-\end{cases}</script><p><strong>补码性质:</strong></p>
+<p><strong>定点小数 x~n~.x~n-1~x~n-2~……x~0~</strong>，x为真值<br>
+$$[x]_反 =<br>
+\begin{cases}<br>
+x, &amp; \text{0 ≤  x &lt; 1 即 x为正数} \<br>
+(2-2^{-n})+x, &amp; \text{-1 &lt; x ≤ 0 即 x为负数}<br>
+\end{cases}$$<br>
+eg:<br>
+X1=+0.1011011 , [X1]~反~ =0.1011011<br>
+X2= -0.1011011 , [X2]~反~ =1.0100100<br>
+<strong>定点整数 x~n~x~n-1~x~n-2~……x~0~</strong>，x为真值<br>
+$$[x]_反 =<br>
+\begin{cases}<br>
+x,  &amp; \text{0 ≤ x &lt; }2^n  即 x为正数 \<br>
+(2^{n+1}-1)+x, &amp; \text{-2}^n&lt;x≤ 0 {即x为负数}<br>
+\end{cases}$$<br>
+<strong>反码表示有正0和负0之分！！</strong></p>
+<h4 id="3、补码表示法">3、补码表示法</h4>
+<p><strong>定义</strong><br>
+正数的补码就是正数的本身，负数的补码是原负数加上模（原负数除符号位外取反，再加1）。 计算机运算受字长限制,属于有模运算。补码最大的优点就是将减法运算转换成加法运算。<br>
+<strong>定点小数x~n~x~n-1~x~n-2~……x~0~，以2为模</strong><br>
+$$[x]_补 =<br>
+\begin{cases}<br>
+x,  &amp; \text{0 ≤  x &lt; 1 即 x为正数} \<br>
+2+x, &amp; \text{-1 &lt; x ≤ 0 即 x为负数}<br>
+\end{cases}$$<br>
+eg:  x= -0.1011，[x]~补~=10+x=10.0000-0.1011=1.0101</p>
+<p>y=-0.01111 [y]~补~=10+y=10.00000-0.01111=1.10001<br>
+<strong>定点整数xnxn-1xn-2……x0 ，以2^n+1^为模</strong><br>
+$$[x]_补 =<br>
+\begin{cases}<br>
+x,  &amp; \text{2}^n {＞x ≥ 0 即 x为正数} \<br>
+2^{n+1}+x, &amp; \text{0 ≥ x &gt; -2}^n {即x为负数}<br>
+\end{cases}$$<br>
+<strong>补码性质:</strong></p>
 <ul>
 <li>高位表明正负</li>
 <li>正数补码，尾数与原码相同</li>
 <li>范围-2^n^~2^n^-1(定点整数）</li>
 <li><strong>无正零和负零之分！！</strong></li>
 </ul>
-<h4 id="4、移码表示法"><a href="#4、移码表示法" class="headerlink" title="4、移码表示法"></a>4、移码表示法</h4><p>用在阶码中，特点是<strong>移码和补码尾数相同，符号位相反</strong><br>范围:-2^n^~2^n^-1<br>eg：真值-1011111<br> 原码为11011111<br> 补码为10100001<br> 反码为10100000<br> 移码为00100001</p>
-<h4 id="5、总结"><a href="#5、总结" class="headerlink" title="5、总结"></a>5、总结</h4><ul>
+<h4 id="4、移码表示法">4、移码表示法</h4>
+<p>用在阶码中，特点是<strong>移码和补码尾数相同，符号位相反</strong><br>
+范围:-2^n^~2^n^-1<br>
+eg：真值-1011111<br>
+原码为11011111<br>
+补码为10100001<br>
+反码为10100000<br>
+移码为00100001</p>
+<h4 id="5、总结">5、总结</h4>
+<ul>
 <li><strong>若x为正数，[x]~原~ = [x]~补~ = [x]~反~</strong></li>
 <li><strong>若x为负数</strong>，<strong>原码符号位为1不变</strong>，整数的每一位二进制数位求反得到反码，反码符号位不变，反码数值位最低位加1，得到补码。</li>
 <li><strong>移码和补码尾数相同，符号位相反</strong></li>
 </ul>
-<h3 id="二、定点数的运算（重点）"><a href="#二、定点数的运算（重点）" class="headerlink" title="二、定点数的运算（重点）"></a>二、定点数的运算（重点）</h3><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/gl620321/article/details/106534016?utm_medium=distribute.pc_relevant.none-task-blog-baidujs_title-0&amp;spm=1001.2101.3001.4242">计算机组成原理 定点运算-移位、加、减、乘、除</a></p>
-<h4 id="1、定点数的移位运算"><a href="#1、定点数的移位运算" class="headerlink" title="1、定点数的移位运算"></a>1、定点数的移位运算</h4><p>计算机中的移位是数据相对于小数点移位（左移或右移），数据移动，<strong>小数点位置不发生变化</strong></p>
-<h5 id="有符号数的移位"><a href="#有符号数的移位" class="headerlink" title="有符号数的移位"></a>有符号数的移位</h5><p>左移1位：机器数对应真值的绝对值变为原来2倍<br>右移1位：机器数对应真值的绝对值变为原来1/2倍<br>移位过程中，填补空位:</p>
+<h3 id="二、定点数的运算（重点）">二、定点数的运算（重点）</h3>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/gl620321/article/details/106534016?utm_medium=distribute.pc_relevant.none-task-blog-baidujs_title-0&amp;spm=1001.2101.3001.4242">计算机组成原理 定点运算-移位、加、减、乘、除</a></p>
+<h4 id="1、定点数的移位运算">1、定点数的移位运算</h4>
+<p>计算机中的移位是数据相对于小数点移位（左移或右移），数据移动，<strong>小数点位置不发生变化</strong></p>
+<h5 id="有符号数的移位">有符号数的移位</h5>
+<p>左移1位：机器数对应真值的绝对值变为原来2倍<br>
+右移1位：机器数对应真值的绝对值变为原来1/2倍<br>
+移位过程中，填补空位:</p>
 <ul>
 <li>负数数值部分和真值相同<img src="https://img-blog.csdnimg.cn/2021061510432870.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></li>
 </ul>
-<h5 id="无符号数的移位"><a href="#无符号数的移位" class="headerlink" title="无符号数的移位"></a>无符号数的移位</h5><ul>
+<h5 id="无符号数的移位">无符号数的移位</h5>
+<ul>
 <li>逻辑左移 低位添0，高位移丢</li>
 <li>逻辑右移 高位添0，低位移丢</li>
 </ul>
-<p>eg：<br>01010011<br>逻辑左移 所有位都参加移位操作 高位0移丢，最低位添0 ：10100110<br>算术左移 第一个0表示符号位，这个数为正数，符号位不参与移位，移位的是后面的数据00100110</p>
-<p>eg：<br>10110010<br>逻辑右移 所有位都参加移位操作 空出的最高位补0，最低位丢弃01011001<br>算术右移 最高位不参与移位，符号位，表示负数，右移左侧空出最高位添1，右侧0丢弃11011001</p>
-<h4 id="2、补码加减法"><a href="#2、补码加减法" class="headerlink" title="2、补码加减法"></a>2、补码加减法</h4><h5 id="补码加法"><a href="#补码加法" class="headerlink" title="补码加法"></a>补码加法</h5><p>公式：<script type="math/tex">[x+y]_补=[x]_补+[y]_补   (mod 2^{n+1}) \\
- |x|<(2n-1) ,   |y|<(2n-1) ,  |x+y|<(2n-1)</script>  公式表明：在2^n+1^模意义下，<strong>任意两数的补码之和等于该两数之和的补码</strong>。<br> 证明：<br> （1）x &gt; 0，y &gt; 0，则x+y &gt; 0，因正数的原码补码都一样，所以[x]~补~+[y]~补~  = x+y = [x+y]~补~</p>
-<p> （2）x &gt; 0，y &lt; 0，则x+y &gt; 0或x+y &lt; 0<br> <strong>[x]~补~= x，[y]~补~ = 2^n+1^+y</strong><br> [x]~补~+[y]~补~  = (x+y)+2^n+1^ = [x+y]~补~ (mod 2^n+1^)</p>
-<p> （3）x &lt; 0，y &gt; 0，则x+y &gt; 0或x+y &lt; 0<br> <strong>[x]~补~=  2^n+1^+x，[y]~补~ = y</strong><br> [x]~补~+[y]~补~  = (x+y)+2^n+1^ = [x+y]~补~ (mod 2^n+1^)</p>
-<p> （4）x &lt; 0，y &lt; 0，则x+y &lt; 0<br> <strong>[x]~补~=  2^n+1^+x，[y]~补~ = 2^n+1^+y</strong><br> [x]~补~+[y]~补~  = 2^n+1^+x + 2^n+1^+y<br> =  2^n+1^+( 2^n+1^+x+y)<br> =  [x+y]~补~ (mod 2^n+1^)</p>
-<p>eg: x=+1011 , y=-0101 , 求 x+y=？<br> 解：[x]~补~ = <strong>0</strong>1011, [y]~补~ = <strong>1</strong>1011<br> 　　　　　[x]补　　　<strong>0</strong> 1 0 1 1<br> 　　＋　　[y]补　　　<strong>1</strong> 1 0 1 1　　　<br> 　　————————————————<br> 　　　　[x+y]补　　<strong><del>1</del>  0</strong> 0 1 1 0<br>∴ x+y = +0110<br> 1、符号位作为数的一部分参加运算。<br> 2、在2n+1模意义下相加，即超过2n+1的进位要丢掉</p>
-<h5 id="补码减法"><a href="#补码减法" class="headerlink" title="补码减法"></a>补码减法</h5><p>为了将减法转变为加法，需证明公式：</p>
-<script type="math/tex; mode=display">[x-y]_补=[x]_补-[y]_补 = [x]_补+[-y]_补   (mod 2^{n+1})</script><p> [x-y]补= [x ]补- [ y]补=[x]补+[-y]补<br> （证明） 为了求得同时[-y]补， 需要证明[-y]~补~=乛[y]~补~+2^-n^（意义是[-y]~补~等于[y]~补~包括符号位取反，末位加1）<br> ∵  [x]~补~+[y]~补~ = [x+y]~补~<br> ∴  [y]~补~ = [x+y]~补~ -  [x]~补~<br> 又∵  [x-y]~补~  =  [x+(-y)]~补~ =  [x]~补~+[-y]~补~<br> ∴ [-y]~补~ = [x-y]~补~ - [x]~补~<br>故[y]~补~ + [-y]~补~<br>= [x+y]~补~ -  [x]~补~ + [x-y]~补~ - [x]~补~<br>= [x+y+x-y]~补~-[x+x]~补~<br>= [x+x]~补~ - [x+x]~补~<br>= 0<br>故[-y]~补~ = -[y]~补~(mod 2^n+1^)</p>
+<p>eg：<br>
+01010011<br>
+逻辑左移 所有位都参加移位操作 高位0移丢，最低位添0 ：10100110<br>
+算术左移 第一个0表示符号位，这个数为正数，符号位不参与移位，移位的是后面的数据00100110</p>
+<p>eg：<br>
+10110010<br>
+逻辑右移 所有位都参加移位操作 空出的最高位补0，最低位丢弃01011001<br>
+算术右移 最高位不参与移位，符号位，表示负数，右移左侧空出最高位添1，右侧0丢弃11011001</p>
+<h4 id="2、补码加减法">2、补码加减法</h4>
+<h5 id="补码加法">补码加法</h5>
+<p>公式：$$ [x+y]_补=[x]_补+[y]_补   (mod 2^{n+1}) \<br>
+|x|&lt;(2n-1) ,   |y|&lt;(2n-1) ,  |x+y|&lt;(2n-1) $$  公式表明：在2^n+1^模意义下，<strong>任意两数的补码之和等于该两数之和的补码</strong>。<br>
+证明：<br>
+（1）x &gt; 0，y &gt; 0，则x+y &gt; 0，因正数的原码补码都一样，所以[x]~补~+[y]~补~  = x+y = [x+y]~补~</p>
+<p>（2）x &gt; 0，y &lt; 0，则x+y &gt; 0或x+y &lt; 0<br>
+<strong>[x]~补~= x，[y]~补~ = 2^n+1^+y</strong><br>
+[x]~补~+[y]~补~  = (x+y)+2^n+1^ = [x+y]~补~ (mod 2^n+1^)</p>
+<p>（3）x &lt; 0，y &gt; 0，则x+y &gt; 0或x+y &lt; 0<br>
+<strong>[x]~补~=  2^n+1^+x，[y]~补~ = y</strong><br>
+[x]~补~+[y]~补~  = (x+y)+2^n+1^ = [x+y]~补~ (mod 2^n+1^)</p>
+<p>（4）x &lt; 0，y &lt; 0，则x+y &lt; 0<br>
+<strong>[x]~补~=  2^n+1^+x，[y]~补~ = 2^n+1^+y</strong><br>
+[x]~补~+[y]~补~  = 2^n+1^+x + 2^n+1^+y<br>
+=  2^n+1^+( 2^n+1^+x+y)<br>
+=  [x+y]~补~ (mod 2^n+1^)</p>
+<p>eg: x=+1011 , y=-0101 , 求 x+y=？<br>
+解：[x]~补~ = <strong>0</strong>1011, [y]~补~ = <strong>1</strong>1011<br>
+　　　　　[x]补　　　<strong>0</strong> 1 0 1 1<br>
+　　＋　　[y]补　　　<strong>1</strong> 1 0 1 1　　　<br>
+　　————————————————<br>
+　　　　[x+y]补　　<strong><s>1</s>  0</strong> 0 1 1 0<br>
+∴ x+y = +0110<br>
+1、符号位作为数的一部分参加运算。<br>
+2、在2n+1模意义下相加，即超过2n+1的进位要丢掉</p>
+<h5 id="补码减法">补码减法</h5>
+<p>为了将减法转变为加法，需证明公式：<br>
+$$ [x-y]_补=[x]_补-[y]_补 = [x]_补+[-y]_补   (mod 2^{n+1}) $$<br>
+[x-y]补= [x ]补- [ y]补=[x]补+[-y]补<br>
+（证明） 为了求得同时[-y]补， 需要证明[-y]~补~=乛[y]~补~+2^-n^（意义是[-y]~补~等于[y]~补~包括符号位取反，末位加1）<br>
+∵  [x]~补~+[y]~补~ = [x+y]~补~<br>
+∴  [y]~补~ = [x+y]~补~ -  [x]~补~<br>
+又∵  [x-y]~补~  =  [x+(-y)]~补~ =  [x]~补~+[-y]~补~<br>
+∴ [-y]~补~ = [x-y]~补~ - [x]~补~<br>
+故[y]~补~ + [-y]~补~<br>
+= [x+y]~补~ -  [x]~补~ + [x-y]~补~ - [x]~补~<br>
+= [x+y+x-y]~补~-[x+x]~补~<br>
+= [x+x]~补~ - [x+x]~补~<br>
+= 0<br>
+故[-y]~补~ = -[y]~补~(mod 2^n+1^)</p>
 <p><strong>由[X]~补~求[-X]~补~:连符号位一起各位求反，末位加1</strong></p>
-<h4 id="3、定点数的乘除运算"><a href="#3、定点数的乘除运算" class="headerlink" title="3、定点数的乘除运算"></a>3、定点数的乘除运算</h4><h5 id="乘法运算"><a href="#乘法运算" class="headerlink" title="乘法运算"></a>乘法运算</h5><p><img src="https://img-blog.csdnimg.cn/20210615165911334.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20210615173341744.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><img src="https://img-blog.csdnimg.cn/20210615173417764.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<h5 id="除法运算"><a href="#除法运算" class="headerlink" title="除法运算"></a>除法运算</h5><p><strong>恢复余数法</strong>：将被除数－除数，<br>结果大于0，商1，余数左移一位。<br>结果小于0，商0，恢复余数，余数左移一位。<br>重复上述操作，直至商的精度满足要求为止。</p>
+<h4 id="3、定点数的乘除运算">3、定点数的乘除运算</h4>
+<h5 id="乘法运算">乘法运算</h5>
+<p><img src="https://img-blog.csdnimg.cn/20210615165911334.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>
+<img src="https://img-blog.csdnimg.cn/20210615173341744.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><img src="https://img-blog.csdnimg.cn/20210615173417764.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h5 id="除法运算">除法运算</h5>
+<p><strong>恢复余数法</strong>：将被除数－除数，<br>
+结果大于0，商1，余数左移一位。<br>
+结果小于0，商0，恢复余数，余数左移一位。<br>
+重复上述操作，直至商的精度满足要求为止。</p>
 <p>不恢复余数法（ <strong>加减交替法</strong>）</p>
 <ul>
 <li><strong>第一次</strong>： 若<strong>被除数与除数同号</strong>，做<strong>被除数减除</strong>；若<strong>被除数与除数异号</strong>，做<strong>被除数加除数</strong></li>
 <li>若<strong>余数与除数同号</strong>，<strong>商1，余数左移</strong>一位，<strong>减除数</strong>；若<strong>余数与除数异号</strong>，<strong>商0，余数左移</strong>一位，<strong>加除数</strong></li>
-<li>商的末位恒置1（误差 2-n），余数可以是负的，不需要恢复余数。<br><img src="https://img-blog.csdnimg.cn/20210615172953483.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>eg:p44<br><img src="https://img-blog.csdnimg.cn/2021061517345746.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></li>
+<li>商的末位恒置1（误差 2-n），余数可以是负的，不需要恢复余数。<br>
+<img src="https://img-blog.csdnimg.cn/20210615172953483.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>
+eg:p44<br>
+<img src="https://img-blog.csdnimg.cn/2021061517345746.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></li>
 </ul>
-<h4 id="4、溢出概念和判别方法"><a href="#4、溢出概念和判别方法" class="headerlink" title="4、溢出概念和判别方法"></a>4、溢出概念和判别方法</h4><h5 id="溢出的概念"><a href="#溢出的概念" class="headerlink" title="溢出的概念"></a>溢出的概念</h5><p>在定点整数机器中，数的表示范围 <strong>|x| &lt; (2^n^-1)</strong> ，在运算过程中如果出现大于字长绝对值的现象，称为“溢出”。<br>[例15] x=+1011 , y=+1001 , 求 x+y 。<br>解：[x]~补~=01011 , [y]补=01001<br>　　　[x]补　　　<strong>0</strong> 1 0 1 1<br>＋　　[x]补　　　<strong>0</strong> 1 0 0 1　　<br>——————————————<br>　　[x+y]补　　　<strong>1</strong> 0 1 0 0</p>
+<h4 id="4、溢出概念和判别方法">4、溢出概念和判别方法</h4>
+<h5 id="溢出的概念">溢出的概念</h5>
+<p>在定点整数机器中，数的表示范围 <strong>|x| &lt; (2^n^-1)</strong> ，在运算过程中如果出现大于字长绝对值的现象，称为“溢出”。<br>
+[例15] x=+1011 , y=+1001 , 求 x+y 。<br>
+解：[x]~补~=01011 , [y]补=01001<br>
+　　　[x]补　　　<strong>0</strong> 1 0 1 1<br>
+＋　　[x]补　　　<strong>0</strong> 1 0 0 1　　<br>
+——————————————<br>
+　　[x+y]补　　　<strong>1</strong> 0 1 0 0</p>
 <p>两个正数相加的结果成为负数，称为<strong>上溢</strong>（结果大于机器所能表示的最大正数</p>
-<p>[例16] x=-1101 , y=-1011 , 求 x+y 。<br>解：[x]补=10011 , [y]补=10101<br>　　　[x]补　　　<strong>1</strong> 0 0 1 1<br>＋　　[x]补　　　<strong>1</strong> 0 1 0 1　　<br>——————————————<br>　　[x+y]补　　　<strong>0</strong> 1 0 0 0<br>两个负数相加的结果成为正数，称为<strong>下溢</strong>（结果小于机器所能表示的最小负数）</p>
-<h5 id="溢出的检测"><a href="#溢出的检测" class="headerlink" title="溢出的检测"></a>溢出的检测</h5><h6 id="双符号位法（变形补码）"><a href="#双符号位法（变形补码）" class="headerlink" title="双符号位法（变形补码）"></a>双符号位法（变形补码）</h6><p>参与加减运算的数采用<strong>变形补码</strong>表示<br>[x]~补~=2^n+2^+x    (mod 2^n+2^)<br>[x+y]~补~=[x]~补~+[y]~补~   (mod 2^n+2^) </p>
+<p>[例16] x=-1101 , y=-1011 , 求 x+y 。<br>
+解：[x]补=10011 , [y]补=10101<br>
+　　　[x]补　　　<strong>1</strong> 0 0 1 1<br>
+＋　　[x]补　　　<strong>1</strong> 0 1 0 1　　<br>
+——————————————<br>
+　　[x+y]补　　　<strong>0</strong> 1 0 0 0<br>
+两个负数相加的结果成为正数，称为<strong>下溢</strong>（结果小于机器所能表示的最小负数）</p>
+<h5 id="溢出的检测">溢出的检测</h5>
+<h6 id="双符号位法（变形补码）">双符号位法（变形补码）</h6>
+<p>参与加减运算的数采用<strong>变形补码</strong>表示<br>
+[x]~补~=2^n+2^+x    (mod 2^n+2^)<br>
+[x+y]~补~=[x]~补~+[y]~补~   (mod 2^n+2^)</p>
 <ul>
-<li>两个符号位都参与运算 </li>
-<li>在2^n+2^模意义下相加，即最高符号位产生的进位要丢掉<br>　　　Sf1　SF2<br>　　　 0　　 0　　　正确（正数）<br>　　　 0    　1　　　上溢<br>　　　 1 　　0　　　下溢<br>　　　 1　　 1　　　正确（负数）<br><strong>两符号位相异</strong>时，表示<strong>溢出</strong>；<strong>相同</strong>时，<strong>没有溢出</strong>。 无论是否溢出，<strong>Sf1(即最高位) 表示结果正确的符号</strong><h4 id="练习题"><a href="#练习题" class="headerlink" title="练习题"></a>练习题</h4><img src="https://img-blog.csdnimg.cn/20210622103102351.JPG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></li>
+<li>两个符号位都参与运算</li>
+<li>在2^n+2^模意义下相加，即最高符号位产生的进位要丢掉<br>
+　　　Sf1　SF2<br>
+　　　 0　　 0　　　正确（正数）<br>
+　　　 0	　1　　　上溢<br>
+　　　 1 　　0　　　下溢<br>
+　　　 1　　 1　　　正确（负数）<br>
+<strong>两符号位相异</strong>时，表示<strong>溢出</strong>；<strong>相同</strong>时，<strong>没有溢出</strong>。 无论是否溢出，<strong>Sf1(即最高位) 表示结果正确的符号</strong></li>
 </ul>
-<h2 id="2-3-浮点数的表示和运算"><a href="#2-3-浮点数的表示和运算" class="headerlink" title="2.3 浮点数的表示和运算"></a>2.3 浮点数的表示和运算</h2><h3 id="一、浮点数的表示"><a href="#一、浮点数的表示" class="headerlink" title="一、浮点数的表示"></a>一、浮点数的表示</h3><p>浮点数的表示范围</p>
-<h3 id="二、IEEE754标准。"><a href="#二、IEEE754标准。" class="headerlink" title="二、IEEE754标准。"></a>二、IEEE754标准。</h3><h3 id="三、浮点数的加减运算"><a href="#三、浮点数的加减运算" class="headerlink" title="三、浮点数的加减运算"></a>三、浮点数的加减运算</h3><ol>
+<h4 id="练习题">练习题</h4>
+<p><img src="https://img-blog.csdnimg.cn/20210622103102351.JPG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="2-3-浮点数的表示和运算">2.3 浮点数的表示和运算</h2>
+<h3 id="一、浮点数的表示">一、浮点数的表示</h3>
+<p>浮点数的表示范围</p>
+<h3 id="二、IEEE754标准。">二、IEEE754标准。</h3>
+<h3 id="三、浮点数的加减运算">三、浮点数的加减运算</h3>
+<ol>
 <li>0操作数的<strong>检查</strong>,看有无简化操作的可能；</li>
-<li><strong>比较阶码</strong>大小并完成<strong>对阶</strong>（小阶向大阶对齐）； </li>
+<li><strong>比较阶码</strong>大小并完成<strong>对阶</strong>（小阶向大阶对齐）；</li>
 <li><strong>尾数</strong>进行<strong>加或减</strong>运算；</li>
 <li>结果<strong>规格化</strong>并进行<strong>舍入</strong>处理。</li>
 </ol>
-<h4 id="对阶"><a href="#对阶" class="headerlink" title="对阶"></a>对阶</h4><p>实现使两数阶码相同的过程<br><strong>对阶原则</strong>：阶码小的数向阶码大的数对齐<br><strong>对阶过程</strong>：首先应求出两数阶码E~x~和E~y~之差，看是否相等。若不等，要通过尾数的移动以改变E~x~和E~y~，即对阶，使之相等。即小阶的尾数向右移动（相当于小数点左移），每右移一位，其阶码加1，直到两数的阶码相等为止，右移的位数等于阶差。</p>
-<h4 id="尾数求和"><a href="#尾数求和" class="headerlink" title="尾数求和"></a>尾数求和</h4><p>方法和定点加减运算完全一样</p>
-<h4 id="规格化"><a href="#规格化" class="headerlink" title="规格化"></a>规格化</h4><p>浮点数的规格化要求<strong>尾数域的最高有效位应为1</strong>，将运算结果<strong>右移</strong>以实现规格化称为<strong>右规</strong>，将运算结果<strong>左移</strong>以实现规格化称为<strong>左规</strong></p>
+<h4 id="对阶">对阶</h4>
+<p>实现使两数阶码相同的过程<br>
+<strong>对阶原则</strong>：阶码小的数向阶码大的数对齐<br>
+<strong>对阶过程</strong>：首先应求出两数阶码E~x~和E~y~之差，看是否相等。若不等，要通过尾数的移动以改变E~x~和E~y~，即对阶，使之相等。即小阶的尾数向右移动（相当于小数点左移），每右移一位，其阶码加1，直到两数的阶码相等为止，右移的位数等于阶差。</p>
+<h4 id="尾数求和">尾数求和</h4>
+<p>方法和定点加减运算完全一样</p>
+<h4 id="规格化">规格化</h4>
+<p>浮点数的规格化要求<strong>尾数域的最高有效位应为1</strong>，将运算结果<strong>右移</strong>以实现规格化称为<strong>右规</strong>，将运算结果<strong>左移</strong>以实现规格化称为<strong>左规</strong></p>
 <p><strong>规格化数的判断方法</strong>（单符号法）</p>
 <ul>
 <li>原码：不论正数还是负数，第一数位为1</li>
-<li>反码、补码：符号位和第一数位不同<img src="https://img-blog.csdnimg.cn/20210615174740285.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><h4 id="舍入处理"><a href="#舍入处理" class="headerlink" title="舍入处理"></a>舍入处理</h4>舍入处理的目的：在对阶或向右规格化时，尾数要向右移位，被右移的低位部分会被丢掉，造成一定误差。为了减小误差。<br>IEEE754标准的舍入处理 </li>
-<li>就近舍入(0舍1入):类似”四舍五入”,丢弃的最高位为1，进1</li>
-<li>朝0舍入:简单的截尾 </li>
-<li>朝＋∞舍入:正数多余位不全为”0”,进1;负数,截尾 </li>
-<li>朝－∞ 舍入:负数多余位不全为”0”,进1;正数,截尾<br><img src="https://img-blog.csdnimg.cn/20210615175154740.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><img src="https://img-blog.csdnimg.cn/20210615175250182.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20210615175326164.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20210615175355975.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></li>
+<li>反码、补码：符号位和第一数位不同<img src="https://img-blog.csdnimg.cn/20210615174740285.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></li>
 </ul>
-<h2 id="2-4-算术逻辑单元ALU"><a href="#2-4-算术逻辑单元ALU" class="headerlink" title="2.4 算术逻辑单元ALU"></a>2.4 算术逻辑单元ALU</h2><h3 id="一、串行加法器和并行加法器"><a href="#一、串行加法器和并行加法器" class="headerlink" title="一、串行加法器和并行加法器"></a>一、串行加法器和并行加法器</h3><p>一位全加器的逻辑表达式如下：<br>F~i~ = A~i~ ⊕ B~i~ ⊕ C~n+i~<br>C~n+i+1~ = A~i~B~i~ +  A~i~C~n+i~ +  B~i~C~n+i~<br><strong>C为进位</strong><br><strong>串行加法器</strong></p>
+<h4 id="舍入处理">舍入处理</h4>
+<p>舍入处理的目的：在对阶或向右规格化时，尾数要向右移位，被右移的低位部分会被丢掉，造成一定误差。为了减小误差。<br>
+IEEE754标准的舍入处理</p>
+<ul>
+<li>就近舍入(0舍1入):类似”四舍五入”,丢弃的最高位为1，进1</li>
+<li>朝0舍入:简单的截尾</li>
+<li>朝＋∞舍入:正数多余位不全为”0”,进1;负数,截尾</li>
+<li>朝－∞ 舍入:负数多余位不全为”0”,进1;正数,截尾<br>
+<img src="https://img-blog.csdnimg.cn/20210615175154740.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><img src="https://img-blog.csdnimg.cn/20210615175250182.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>
+<img src="https://img-blog.csdnimg.cn/20210615175326164.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>
+<img src="https://img-blog.csdnimg.cn/20210615175355975.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></li>
+</ul>
+<h2 id="2-4-算术逻辑单元ALU">2.4 算术逻辑单元ALU</h2>
+<h3 id="一、串行加法器和并行加法器">一、串行加法器和并行加法器</h3>
+<p>一位全加器的逻辑表达式如下：<br>
+F~i~ = A~i~ ⊕ B~i~ ⊕ C~n+i~<br>
+C~n+i+1~ = A~i~B~i~ +  A~i~C~n+i~ +  B~i~C~n+i~<br>
+<strong>C为进位</strong><br>
+<strong>串行加法器</strong></p>
 <ul>
 <li>只有一个全加器，数据逐位串行送入加法器中进行运算。进位触发器用来寄存进位信号，以便参与下一次运算。</li>
 <li>如果操作数长n位，加法就要分n次进行，每次产生一位和，并且串行逐位地送回寄存器。</li>
@@ -609,9 +777,16 @@ x,  & \text{2}^n {＞x ≥ 0 即 x为正数} \\
 <li>并行加法器由多个全加器组成，其位数与机器的字长相同，各位数据同时运算。</li>
 <li>并行加法器的最长运算时间主要是由进位信号的传递时间决定的</li>
 <li>并行加法器的每个全加器都有一个从低位送来的进位输入和一个传送给高位的进位输出</li>
-<li>并行加法器的进位通常分为串行进位与并行进位。<h3 id="二、算术逻辑单元ALU的功能和结构"><a href="#二、算术逻辑单元ALU的功能和结构" class="headerlink" title="二、算术逻辑单元ALU的功能和结构"></a>二、算术逻辑单元ALU的功能和结构</h3><img src="https://img-blog.csdnimg.cn/20210615180544688.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>ALU的逻辑图如上<br>F~i~ = X~i~ ⊕ Y~i~ ⊕ C~n+1~<br>C~n+i+1~ = X~i~Y~i~ +  Y~i~C~n+1~ +  X~i~C~n+1~<br>不同的控制参数可以得到不同的组合函数，从而能够实现多种算术运算和逻辑运算。</li>
+<li>并行加法器的进位通常分为串行进位与并行进位。</li>
 </ul>
-<p>Xi和Yi 与控制参数和输入量的关系构造如下真值表<br><img src="https://img-blog.csdnimg.cn/20210615181609181.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h3 id="二、算术逻辑单元ALU的功能和结构">二、算术逻辑单元ALU的功能和结构</h3>
+<p><img src="https://img-blog.csdnimg.cn/20210615180544688.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>
+ALU的逻辑图如上<br>
+F~i~ = X~i~ ⊕ Y~i~ ⊕ C~n+1~<br>
+C~n+i+1~ = X~i~Y~i~ +  Y~i~C~n+1~ +  X~i~C~n+1~<br>
+不同的控制参数可以得到不同的组合函数，从而能够实现多种算术运算和逻辑运算。</p>
+<p>Xi和Yi 与控制参数和输入量的关系构造如下真值表<br>
+<img src="https://img-blog.csdnimg.cn/20210615181609181.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 
 
         <hr>
@@ -761,7 +936,7 @@ x,  & \text{2}^n {＞x ≥ 0 即 x为正数} \\
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E8%BF%90%E7%AE%97%E6%96%B9%E6%B3%95%E5%92%8C%E8%BF%90%E7%AE%97%E5%99%A8"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">第二章 运算方法和运算器</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#2-1-%E6%95%B0%E5%88%B6%E4%B8%8E%E7%BC%96%E7%A0%81"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">2.1 数制与编码</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%B8%80%E3%80%81%E8%BF%9B%E4%BD%8D%E8%AE%A1%E6%95%B0%E5%88%B6%E5%8F%8A%E5%85%B6%E7%9B%B8%E4%BA%92%E8%BD%AC%E6%8D%A2"><span class="toc-nav-number">1.1.1.</span> <span class="toc-nav-text">一、进位计数制及其相互转换</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BA%8C%E3%80%81%E7%9C%9F%E5%80%BC%E5%92%8C%E6%9C%BA%E5%99%A8%E6%95%B0"><span class="toc-nav-number">1.1.2.</span> <span class="toc-nav-text">二、真值和机器数</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%B8%89%E3%80%81BCD%E7%A0%81"><span class="toc-nav-number">1.1.3.</span> <span class="toc-nav-text">三、BCD码</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%9B%9B%E3%80%81%E5%AD%97%E7%AC%A6%E4%B8%8E%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-nav-number">1.1.4.</span> <span class="toc-nav-text">四、字符与字符串</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#1%E3%80%81%E5%AD%97%E7%AC%A6%E4%B8%8E%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E8%A1%A8%E7%A4%BA%E6%96%B9%E6%B3%95"><span class="toc-nav-number">1.1.4.1.</span> <span class="toc-nav-text">1、字符与字符串的表示方法</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#2%E3%80%81%E6%B1%89%E5%AD%97%E7%9A%84%E8%A1%A8%E7%A4%BA%E6%96%B9%E6%B3%95"><span class="toc-nav-number">1.1.4.2.</span> <span class="toc-nav-text">2、汉字的表示方法</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BA%94%E3%80%81%E6%A0%A1%E9%AA%8C%E7%A0%81%EF%BC%88%E9%87%8D%E7%82%B9%EF%BC%89"><span class="toc-nav-number">1.1.5.</span> <span class="toc-nav-text">五、校验码（重点）</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%BC%95%E5%85%A5"><span class="toc-nav-number">1.1.5.1.</span> <span class="toc-nav-text">引入</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95"><span class="toc-nav-number">1.1.5.2.</span> <span class="toc-nav-text">解决方法</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%AE%9A%E4%B9%89"><span class="toc-nav-number">1.1.5.3.</span> <span class="toc-nav-text">定义</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#2-2-%E5%AE%9A%E7%82%B9%E6%95%B0%E7%9A%84%E8%A1%A8%E7%A4%BA%E5%92%8C%E8%BF%90%E7%AE%97%EF%BC%88%E9%87%8D%E7%82%B9%EF%BC%89"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">2.2 定点数的表示和运算（重点）</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%B8%80%E3%80%81%E5%AE%9A%E7%82%B9%E6%95%B0%E7%9A%84%E8%A1%A8%E7%A4%BA"><span class="toc-nav-number">1.2.1.</span> <span class="toc-nav-text">一、定点数的表示</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#1%E3%80%81%E5%8E%9F%E7%A0%81%E8%A1%A8%E7%A4%BA%E6%B3%95"><span class="toc-nav-number">1.2.1.1.</span> <span class="toc-nav-text">1、原码表示法</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#2%E3%80%81%E5%8F%8D%E7%A0%81%E8%A1%A8%E7%A4%BA%E6%B3%95"><span class="toc-nav-number">1.2.1.2.</span> <span class="toc-nav-text">2、反码表示法</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#3%E3%80%81%E8%A1%A5%E7%A0%81%E8%A1%A8%E7%A4%BA%E6%B3%95"><span class="toc-nav-number">1.2.1.3.</span> <span class="toc-nav-text">3、补码表示法</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#4%E3%80%81%E7%A7%BB%E7%A0%81%E8%A1%A8%E7%A4%BA%E6%B3%95"><span class="toc-nav-number">1.2.1.4.</span> <span class="toc-nav-text">4、移码表示法</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#5%E3%80%81%E6%80%BB%E7%BB%93"><span class="toc-nav-number">1.2.1.5.</span> <span class="toc-nav-text">5、总结</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BA%8C%E3%80%81%E5%AE%9A%E7%82%B9%E6%95%B0%E7%9A%84%E8%BF%90%E7%AE%97%EF%BC%88%E9%87%8D%E7%82%B9%EF%BC%89"><span class="toc-nav-number">1.2.2.</span> <span class="toc-nav-text">二、定点数的运算（重点）</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#1%E3%80%81%E5%AE%9A%E7%82%B9%E6%95%B0%E7%9A%84%E7%A7%BB%E4%BD%8D%E8%BF%90%E7%AE%97"><span class="toc-nav-number">1.2.2.1.</span> <span class="toc-nav-text">1、定点数的移位运算</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E6%9C%89%E7%AC%A6%E5%8F%B7%E6%95%B0%E7%9A%84%E7%A7%BB%E4%BD%8D"><span class="toc-nav-number">1.2.2.1.1.</span> <span class="toc-nav-text">有符号数的移位</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E6%97%A0%E7%AC%A6%E5%8F%B7%E6%95%B0%E7%9A%84%E7%A7%BB%E4%BD%8D"><span class="toc-nav-number">1.2.2.1.2.</span> <span class="toc-nav-text">无符号数的移位</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#2%E3%80%81%E8%A1%A5%E7%A0%81%E5%8A%A0%E5%87%8F%E6%B3%95"><span class="toc-nav-number">1.2.2.2.</span> <span class="toc-nav-text">2、补码加减法</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E8%A1%A5%E7%A0%81%E5%8A%A0%E6%B3%95"><span class="toc-nav-number">1.2.2.2.1.</span> <span class="toc-nav-text">补码加法</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E8%A1%A5%E7%A0%81%E5%87%8F%E6%B3%95"><span class="toc-nav-number">1.2.2.2.2.</span> <span class="toc-nav-text">补码减法</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#3%E3%80%81%E5%AE%9A%E7%82%B9%E6%95%B0%E7%9A%84%E4%B9%98%E9%99%A4%E8%BF%90%E7%AE%97"><span class="toc-nav-number">1.2.2.3.</span> <span class="toc-nav-text">3、定点数的乘除运算</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E4%B9%98%E6%B3%95%E8%BF%90%E7%AE%97"><span class="toc-nav-number">1.2.2.3.1.</span> <span class="toc-nav-text">乘法运算</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E9%99%A4%E6%B3%95%E8%BF%90%E7%AE%97"><span class="toc-nav-number">1.2.2.3.2.</span> <span class="toc-nav-text">除法运算</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#4%E3%80%81%E6%BA%A2%E5%87%BA%E6%A6%82%E5%BF%B5%E5%92%8C%E5%88%A4%E5%88%AB%E6%96%B9%E6%B3%95"><span class="toc-nav-number">1.2.2.4.</span> <span class="toc-nav-text">4、溢出概念和判别方法</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E6%BA%A2%E5%87%BA%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="toc-nav-number">1.2.2.4.1.</span> <span class="toc-nav-text">溢出的概念</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E6%BA%A2%E5%87%BA%E7%9A%84%E6%A3%80%E6%B5%8B"><span class="toc-nav-number">1.2.2.4.2.</span> <span class="toc-nav-text">溢出的检测</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#%E5%8F%8C%E7%AC%A6%E5%8F%B7%E4%BD%8D%E6%B3%95%EF%BC%88%E5%8F%98%E5%BD%A2%E8%A1%A5%E7%A0%81%EF%BC%89"><span class="toc-nav-number">1.2.2.4.2.1.</span> <span class="toc-nav-text">双符号位法（变形补码）</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E7%BB%83%E4%B9%A0%E9%A2%98"><span class="toc-nav-number">1.2.2.5.</span> <span class="toc-nav-text">练习题</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#2-3-%E6%B5%AE%E7%82%B9%E6%95%B0%E7%9A%84%E8%A1%A8%E7%A4%BA%E5%92%8C%E8%BF%90%E7%AE%97"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">2.3 浮点数的表示和运算</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%B8%80%E3%80%81%E6%B5%AE%E7%82%B9%E6%95%B0%E7%9A%84%E8%A1%A8%E7%A4%BA"><span class="toc-nav-number">1.3.1.</span> <span class="toc-nav-text">一、浮点数的表示</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BA%8C%E3%80%81IEEE754%E6%A0%87%E5%87%86%E3%80%82"><span class="toc-nav-number">1.3.2.</span> <span class="toc-nav-text">二、IEEE754标准。</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%B8%89%E3%80%81%E6%B5%AE%E7%82%B9%E6%95%B0%E7%9A%84%E5%8A%A0%E5%87%8F%E8%BF%90%E7%AE%97"><span class="toc-nav-number">1.3.3.</span> <span class="toc-nav-text">三、浮点数的加减运算</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%AF%B9%E9%98%B6"><span class="toc-nav-number">1.3.3.1.</span> <span class="toc-nav-text">对阶</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%B0%BE%E6%95%B0%E6%B1%82%E5%92%8C"><span class="toc-nav-number">1.3.3.2.</span> <span class="toc-nav-text">尾数求和</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E8%A7%84%E6%A0%BC%E5%8C%96"><span class="toc-nav-number">1.3.3.3.</span> <span class="toc-nav-text">规格化</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E8%88%8D%E5%85%A5%E5%A4%84%E7%90%86"><span class="toc-nav-number">1.3.3.4.</span> <span class="toc-nav-text">舍入处理</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#2-4-%E7%AE%97%E6%9C%AF%E9%80%BB%E8%BE%91%E5%8D%95%E5%85%83ALU"><span class="toc-nav-number">1.4.</span> <span class="toc-nav-text">2.4 算术逻辑单元ALU</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%B8%80%E3%80%81%E4%B8%B2%E8%A1%8C%E5%8A%A0%E6%B3%95%E5%99%A8%E5%92%8C%E5%B9%B6%E8%A1%8C%E5%8A%A0%E6%B3%95%E5%99%A8"><span class="toc-nav-number">1.4.1.</span> <span class="toc-nav-text">一、串行加法器和并行加法器</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BA%8C%E3%80%81%E7%AE%97%E6%9C%AF%E9%80%BB%E8%BE%91%E5%8D%95%E5%85%83ALU%E7%9A%84%E5%8A%9F%E8%83%BD%E5%92%8C%E7%BB%93%E6%9E%84"><span class="toc-nav-number">1.4.2.</span> <span class="toc-nav-text">二、算术逻辑单元ALU的功能和结构</span></a></li></ol></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">第二章 运算方法和运算器</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#2-1-%E6%95%B0%E5%88%B6%E4%B8%8E%E7%BC%96%E7%A0%81"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">2.1 数制与编码</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%B8%80%E3%80%81%E8%BF%9B%E4%BD%8D%E8%AE%A1%E6%95%B0%E5%88%B6%E5%8F%8A%E5%85%B6%E7%9B%B8%E4%BA%92%E8%BD%AC%E6%8D%A2"><span class="toc-nav-number">1.1.1.</span> <span class="toc-nav-text">一、进位计数制及其相互转换</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BA%8C%E3%80%81%E7%9C%9F%E5%80%BC%E5%92%8C%E6%9C%BA%E5%99%A8%E6%95%B0"><span class="toc-nav-number">1.1.2.</span> <span class="toc-nav-text">二、真值和机器数</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%B8%89%E3%80%81BCD%E7%A0%81"><span class="toc-nav-number">1.1.3.</span> <span class="toc-nav-text">三、BCD码</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%9B%9B%E3%80%81%E5%AD%97%E7%AC%A6%E4%B8%8E%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-nav-number">1.1.4.</span> <span class="toc-nav-text">四、字符与字符串</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#1%E3%80%81%E5%AD%97%E7%AC%A6%E4%B8%8E%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E8%A1%A8%E7%A4%BA%E6%96%B9%E6%B3%95"><span class="toc-nav-number">1.1.4.1.</span> <span class="toc-nav-text">1、字符与字符串的表示方法</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#2%E3%80%81%E6%B1%89%E5%AD%97%E7%9A%84%E8%A1%A8%E7%A4%BA%E6%96%B9%E6%B3%95"><span class="toc-nav-number">1.1.4.2.</span> <span class="toc-nav-text">2、汉字的表示方法</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BA%94%E3%80%81%E6%A0%A1%E9%AA%8C%E7%A0%81%EF%BC%88%E9%87%8D%E7%82%B9%EF%BC%89"><span class="toc-nav-number">1.1.5.</span> <span class="toc-nav-text">五、校验码（重点）</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%BC%95%E5%85%A5"><span class="toc-nav-number">1.1.5.1.</span> <span class="toc-nav-text">引入</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95"><span class="toc-nav-number">1.1.5.2.</span> <span class="toc-nav-text">解决方法</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%AE%9A%E4%B9%89"><span class="toc-nav-number">1.1.5.3.</span> <span class="toc-nav-text">定义</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#2-2-%E5%AE%9A%E7%82%B9%E6%95%B0%E7%9A%84%E8%A1%A8%E7%A4%BA%E5%92%8C%E8%BF%90%E7%AE%97%EF%BC%88%E9%87%8D%E7%82%B9%EF%BC%89"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">2.2 定点数的表示和运算（重点）</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%B8%80%E3%80%81%E5%AE%9A%E7%82%B9%E6%95%B0%E7%9A%84%E8%A1%A8%E7%A4%BA"><span class="toc-nav-number">1.2.1.</span> <span class="toc-nav-text">一、定点数的表示</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#1%E3%80%81%E5%8E%9F%E7%A0%81%E8%A1%A8%E7%A4%BA%E6%B3%95"><span class="toc-nav-number">1.2.1.1.</span> <span class="toc-nav-text">1、原码表示法</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#2%E3%80%81%E5%8F%8D%E7%A0%81%E8%A1%A8%E7%A4%BA%E6%B3%95"><span class="toc-nav-number">1.2.1.2.</span> <span class="toc-nav-text">2、反码表示法</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#3%E3%80%81%E8%A1%A5%E7%A0%81%E8%A1%A8%E7%A4%BA%E6%B3%95"><span class="toc-nav-number">1.2.1.3.</span> <span class="toc-nav-text">3、补码表示法</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#4%E3%80%81%E7%A7%BB%E7%A0%81%E8%A1%A8%E7%A4%BA%E6%B3%95"><span class="toc-nav-number">1.2.1.4.</span> <span class="toc-nav-text">4、移码表示法</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#5%E3%80%81%E6%80%BB%E7%BB%93"><span class="toc-nav-number">1.2.1.5.</span> <span class="toc-nav-text">5、总结</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BA%8C%E3%80%81%E5%AE%9A%E7%82%B9%E6%95%B0%E7%9A%84%E8%BF%90%E7%AE%97%EF%BC%88%E9%87%8D%E7%82%B9%EF%BC%89"><span class="toc-nav-number">1.2.2.</span> <span class="toc-nav-text">二、定点数的运算（重点）</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#1%E3%80%81%E5%AE%9A%E7%82%B9%E6%95%B0%E7%9A%84%E7%A7%BB%E4%BD%8D%E8%BF%90%E7%AE%97"><span class="toc-nav-number">1.2.2.1.</span> <span class="toc-nav-text">1、定点数的移位运算</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E6%9C%89%E7%AC%A6%E5%8F%B7%E6%95%B0%E7%9A%84%E7%A7%BB%E4%BD%8D"><span class="toc-nav-number">1.2.2.1.1.</span> <span class="toc-nav-text">有符号数的移位</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E6%97%A0%E7%AC%A6%E5%8F%B7%E6%95%B0%E7%9A%84%E7%A7%BB%E4%BD%8D"><span class="toc-nav-number">1.2.2.1.2.</span> <span class="toc-nav-text">无符号数的移位</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#2%E3%80%81%E8%A1%A5%E7%A0%81%E5%8A%A0%E5%87%8F%E6%B3%95"><span class="toc-nav-number">1.2.2.2.</span> <span class="toc-nav-text">2、补码加减法</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E8%A1%A5%E7%A0%81%E5%8A%A0%E6%B3%95"><span class="toc-nav-number">1.2.2.2.1.</span> <span class="toc-nav-text">补码加法</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E8%A1%A5%E7%A0%81%E5%87%8F%E6%B3%95"><span class="toc-nav-number">1.2.2.2.2.</span> <span class="toc-nav-text">补码减法</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#3%E3%80%81%E5%AE%9A%E7%82%B9%E6%95%B0%E7%9A%84%E4%B9%98%E9%99%A4%E8%BF%90%E7%AE%97"><span class="toc-nav-number">1.2.2.3.</span> <span class="toc-nav-text">3、定点数的乘除运算</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E4%B9%98%E6%B3%95%E8%BF%90%E7%AE%97"><span class="toc-nav-number">1.2.2.3.1.</span> <span class="toc-nav-text">乘法运算</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E9%99%A4%E6%B3%95%E8%BF%90%E7%AE%97"><span class="toc-nav-number">1.2.2.3.2.</span> <span class="toc-nav-text">除法运算</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#4%E3%80%81%E6%BA%A2%E5%87%BA%E6%A6%82%E5%BF%B5%E5%92%8C%E5%88%A4%E5%88%AB%E6%96%B9%E6%B3%95"><span class="toc-nav-number">1.2.2.4.</span> <span class="toc-nav-text">4、溢出概念和判别方法</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E6%BA%A2%E5%87%BA%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="toc-nav-number">1.2.2.4.1.</span> <span class="toc-nav-text">溢出的概念</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E6%BA%A2%E5%87%BA%E7%9A%84%E6%A3%80%E6%B5%8B"><span class="toc-nav-number">1.2.2.4.2.</span> <span class="toc-nav-text">溢出的检测</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#%E5%8F%8C%E7%AC%A6%E5%8F%B7%E4%BD%8D%E6%B3%95%EF%BC%88%E5%8F%98%E5%BD%A2%E8%A1%A5%E7%A0%81%EF%BC%89"><span class="toc-nav-number">1.2.2.4.2.1.</span> <span class="toc-nav-text">双符号位法（变形补码）</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E7%BB%83%E4%B9%A0%E9%A2%98"><span class="toc-nav-number">1.2.2.5.</span> <span class="toc-nav-text">练习题</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#2-3-%E6%B5%AE%E7%82%B9%E6%95%B0%E7%9A%84%E8%A1%A8%E7%A4%BA%E5%92%8C%E8%BF%90%E7%AE%97"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">2.3 浮点数的表示和运算</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%B8%80%E3%80%81%E6%B5%AE%E7%82%B9%E6%95%B0%E7%9A%84%E8%A1%A8%E7%A4%BA"><span class="toc-nav-number">1.3.1.</span> <span class="toc-nav-text">一、浮点数的表示</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BA%8C%E3%80%81IEEE754%E6%A0%87%E5%87%86%E3%80%82"><span class="toc-nav-number">1.3.2.</span> <span class="toc-nav-text">二、IEEE754标准。</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%B8%89%E3%80%81%E6%B5%AE%E7%82%B9%E6%95%B0%E7%9A%84%E5%8A%A0%E5%87%8F%E8%BF%90%E7%AE%97"><span class="toc-nav-number">1.3.3.</span> <span class="toc-nav-text">三、浮点数的加减运算</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%AF%B9%E9%98%B6"><span class="toc-nav-number">1.3.3.1.</span> <span class="toc-nav-text">对阶</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%B0%BE%E6%95%B0%E6%B1%82%E5%92%8C"><span class="toc-nav-number">1.3.3.2.</span> <span class="toc-nav-text">尾数求和</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E8%A7%84%E6%A0%BC%E5%8C%96"><span class="toc-nav-number">1.3.3.3.</span> <span class="toc-nav-text">规格化</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E8%88%8D%E5%85%A5%E5%A4%84%E7%90%86"><span class="toc-nav-number">1.3.3.4.</span> <span class="toc-nav-text">舍入处理</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#2-4-%E7%AE%97%E6%9C%AF%E9%80%BB%E8%BE%91%E5%8D%95%E5%85%83ALU"><span class="toc-nav-number">1.4.</span> <span class="toc-nav-text">2.4 算术逻辑单元ALU</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%B8%80%E3%80%81%E4%B8%B2%E8%A1%8C%E5%8A%A0%E6%B3%95%E5%99%A8%E5%92%8C%E5%B9%B6%E8%A1%8C%E5%8A%A0%E6%B3%95%E5%99%A8"><span class="toc-nav-number">1.4.1.</span> <span class="toc-nav-text">一、串行加法器和并行加法器</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BA%8C%E3%80%81%E7%AE%97%E6%9C%AF%E9%80%BB%E8%BE%91%E5%8D%95%E5%85%83ALU%E7%9A%84%E5%8A%9F%E8%83%BD%E5%92%8C%E7%BB%93%E6%9E%84"><span class="toc-nav-number">1.4.2.</span> <span class="toc-nav-text">二、算术逻辑单元ALU的功能和结构</span></a></li></ol></li></ol></li></ol>
         
         </div>
       </aside>

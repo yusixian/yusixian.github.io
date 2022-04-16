@@ -5,6 +5,9 @@
 <head>
   <!-- Google Analytics -->
   
+    <!-- 看板娘  https://github.com/stevenjoezhang/live2d-widget -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+    <script defer src="https://cdn.jsdelivr.net/gh/yusixian/live2d-widget@latest/autoload.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-xxxxxx-xx"></script>
     <script type="text/javascript">
@@ -456,9 +459,16 @@
       MOOC浙江大学的数据结构慕课学习记录——队列
     </h3>
     <div class="post-content-preview">
-      一、队列的抽象数据类型描述类型名：队列（Queue）数据对象集：一个有0个或多个元素的有穷线性表操作集：长度为MaxSize的堆栈Q∈Queue, 队列元素item∈ElementType
+      一、队列的抽象数据类型描述
+类型名：队列（Queue）
+数据对象集：一个有0个或多个元素的有穷线性表
+操作集：长度为MaxSize的堆栈Q∈Queue, 队列元素item∈ElementType
 
-1.生成长度为MaxSize的空队列    Queue CreatQueue(int MaxSize);2.判断队列Q是否已满bool IsFullQ(Queue Q, int MaxSize);3.将......
+1.生成长度为MaxSize的空队列
+Queue CreatQueue(int MaxSize);
+2.判断队列Q是否已满
+bool IsFullQ(Queue Q, int MaxSize);
+......
     </div>
   </a>
   
@@ -495,9 +505,15 @@
       MOOC浙江大学的数据结构慕课学习记录——堆栈
     </h3>
     <div class="post-content-preview">
-      一、堆栈的抽象数据类型描述类型名：堆栈（Stack）数据对象集：一个有0个或多个元素的有穷线性表操作集：长度为MaxSize的堆栈S∈Stack, 堆栈元素item∈ElementType
+      一、堆栈的抽象数据类型描述
+类型名：堆栈（Stack）
+数据对象集：一个有0个或多个元素的有穷线性表
+操作集：长度为MaxSize的堆栈S∈Stack, 堆栈元素item∈ElementType
 
-1.生成空堆栈，其最大长度为MaxSize;    Stack CreateStack(int MaxSize);2.判断堆栈S是否已满int IsFull(Stack S, int MaxSize);......
+1.生成空堆栈，其最大长度为MaxSize;
+Stack CreateStack(int MaxSize);
+2.判断堆栈S是否已满
+int IsFull(Stack S, int MaxSize......
     </div>
   </a>
   
@@ -535,11 +551,12 @@
     </h3>
     <div class="post-content-preview">
       一、广义表
+
 是线性表的推广
 对于线性表而言，n个元素都是基本的单元素
 广义表中，这些元素不仅可以使单元素也可以是另一个广义表
 
-1234567&gt; typedef struct GNode *GList; struct GNode &#123;&gt;     int Tag;    //标志域:0表示结点是单元素，1表示结点是广义表&gt;     union &#123;     /......
+1234567&gt; typedef struct GNode *GList; struct GNode &#123;&gt;     int Tag;    //标志域:0表示结点是单元素，1表示结点是广义表&gt;     union &#123;     ......
     </div>
   </a>
   
@@ -574,8 +591,13 @@
       MOOC浙江大学的数据结构慕课学习记录——线性表
     </h3>
     <div class="post-content-preview">
-      一、线性表的抽象数据类型描述类型名：线性表（List）数据对象集：线性表示n(&gt;=0)个元素构成的有序序列(a1,a2,……,an)操作集：线性表L∈List, 整数i表示位置,元素X∈ElementType
-二、顺序表1.定义12345struct LNode &#123;    ElementType Data[MAXSIZE];//存了一个数组，其最多能存MAXSIZE个元素  ......
+      一、线性表的抽象数据类型描述
+类型名：线性表（List）
+数据对象集：线性表示n(&gt;=0)个元素构成的有序序列(a1,a2,……,an)
+操作集：线性表L∈List, 整数i表示位置,元素X∈ElementType
+二、顺序表
+1.定义
+12345struct LNode &#123;    ElementType Data[MAXSIZE];//存了一个数组，其最多能存MAXSIZE......
     </div>
   </a>
   
@@ -737,10 +759,6 @@
       <li>题目记录</li>
     </a>
     
-    <a href="/categories/#面经">
-      <li>面经</li>
-    </a>
-    
     <a href="/categories/#算法">
       <li>算法</li>
     </a>
@@ -755,6 +773,10 @@
     
     <a href="/categories/#工具">
       <li>工具</li>
+    </a>
+    
+    <a href="/categories/#面经">
+      <li>面经</li>
     </a>
     
     <a href="/categories/#剑指offer">
@@ -826,18 +848,6 @@
     
     
     
-    <a href="/tags/#笔试题" title="笔试题" rel="5">笔试题</a>
-    
-    
-    
-    <a href="/tags/#中台" title="中台" rel="1">中台</a>
-    
-    
-    
-    <a href="/tags/#面经" title="面经" rel="4">面经</a>
-    
-    
-    
     <a href="/tags/#ST表" title="ST表" rel="1">ST表</a>
     
     
@@ -879,6 +889,18 @@
     
     
     <a href="/tags/#hexo" title="hexo" rel="1">hexo</a>
+    
+    
+    
+    <a href="/tags/#笔试题" title="笔试题" rel="5">笔试题</a>
+    
+    
+    
+    <a href="/tags/#中台" title="中台" rel="1">中台</a>
+    
+    
+    
+    <a href="/tags/#面经" title="面经" rel="4">面经</a>
     
     
     
@@ -942,15 +964,15 @@
     
     
     
+    <a href="/tags/#单调栈" title="单调栈" rel="1">单调栈</a>
+    
+    
+    
     <a href="/tags/#快速排序" title="快速排序" rel="1">快速排序</a>
     
     
     
     <a href="/tags/#背包" title="背包" rel="1">背包</a>
-    
-    
-    
-    <a href="/tags/#单调栈" title="单调栈" rel="1">单调栈</a>
     
     
     

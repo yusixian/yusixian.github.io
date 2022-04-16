@@ -5,6 +5,9 @@
 <head>
   <!-- Google Analytics -->
   
+    <!-- 看板娘  https://github.com/stevenjoezhang/live2d-widget -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+    <script defer src="https://cdn.jsdelivr.net/gh/yusixian/live2d-widget@latest/autoload.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-xxxxxx-xx"></script>
     <script type="text/javascript">
@@ -466,107 +469,139 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <p>人生第一次面试，紧张死我啦（）<br>上午面完下午就二面，很快的啪的一下就面完了</p>
-<h1 id="MetaApp-前端一面面经"><a href="#MetaApp-前端一面面经" class="headerlink" title="MetaApp 前端一面面经"></a>MetaApp 前端一面面经</h1><p>体验很好，面试官小姐姐超温柔让我不要紧张x</p>
+        <p>人生第一次面试，紧张死我啦（）<br>
+上午面完下午就二面，很快的啪的一下就面完了</p>
+<h1>MetaApp 前端一面面经</h1>
+<p>体验很好，面试官小姐姐超温柔让我不要紧张x</p>
 <ol>
 <li>说了下项目</li>
-<li>一个超极长的列表 往下滚动的时候想让它不卡顿，但又能很及时的显示出来，怎么办？<ul>
+<li>一个超极长的列表 往下滚动的时候想让它不卡顿，但又能很及时的显示出来，怎么办？
+<ul>
 <li>没答出来qwq就说了监听滚动事件，计算然后渲染，小姐姐说可以用div占位，更新数据</li>
 <li>标答：<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_39233022/article/details/113949343">虚拟列表及其原理</a></li>
 </ul>
 </li>
-<li>一个大div包裹着三个小div，如何实现居中，里面的文字如何实现<ul>
+<li>一个大div包裹着三个小div，如何实现居中，里面的文字如何实现
+<ul>
 <li>答了flex、text-align和vertical-align（没听太清）</li>
 </ul>
 </li>
-<li>你说你在学react，讲一下react吧<ul>
+<li>你说你在学react，讲一下react吧
+<ul>
 <li>组件化开发、父子组件通信、ref</li>
 <li>失算，居然忘记说virtual dom和diff了qwq（不过diff提了一嘴）</li>
 </ul>
 </li>
-<li>你简历上提到了es6，说一下var、const、let<ul>
+<li>你简历上提到了es6，说一下var、const、let
+<ul>
 <li>答完，追问 变量提升了解过吗</li>
 <li>答了var会变量提升，const、let不会，const定义的变量必须被初始化且不能修改（但如果是对象的话只要不改对象地址就行）</li>
 </ul>
 </li>
-<li>JS的基本数据类型（老生常谈）<ul>
+<li>JS的基本数据类型（老生常谈）
+<ul>
 <li>null、undefined、Number、String、Boolean、Symbol、Object</li>
-<li>提了一嘴typeof null为Object的诡异事件<ul>
+<li>提了一嘴typeof null为Object的诡异事件
+<ul>
 <li>讲一下？历史遗留问题，null机器码全为零所以被误判成Object了，null其实有点类似c++里的零值指针等巴拉巴拉</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>说一下async和await，有在什么地方遇到过<ul>
+<li>说一下async和await，有在什么地方遇到过
+<ul>
 <li>文件上传等异步操作，解决回调地狱（小姐姐深有同感）</li>
 </ul>
 </li>
-<li>经典：说一下原型链，类、继承<ul>
+<li>经典：说一下原型链，类、继承
+<ul>
 <li>正好这几天在看红宝书，有总结：<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_45890533/article/details/123332872">深入JavaScript学习之路（一）原型链与继承_cos的博客</a></li>
 <li>类其实就是语法糖ovo</li>
 </ul>
 </li>
-<li>CSS的position属性都说一下<ul>
+<li>CSS的position属性都说一下
+<ul>
 <li>absolute、fixed、relative、static</li>
 <li>absolute、fixed脱离文档流，此外说了一下z-index</li>
 </ul>
 </li>
-<li>写UI的时候有遇到过什么难点或踩过什么坑吗嘛<ul>
+<li>写UI的时候有遇到过什么难点或踩过什么坑吗嘛</li>
+</ol>
+<ul>
 <li>外边距塌陷、背景图片设置（挖坑了）、盒模型</li>
 <li>现在想想应该说弹出层的实现，ref</li>
 </ul>
-</li>
-<li>前端都是怎么学的<ul>
+<ol start="11">
+<li>前端都是怎么学的
+<ul>
 <li>学习了两个月，之前有别的语言，入门就很快（MDN、各大前端训练营、红宝书、b站等）</li>
 </ul>
 </li>
 <li>ts有了解过吗，说一下基本类型</li>
-<li>想走全栈路线？<ul>
+<li>想走全栈路线？
+<ul>
 <li>yes，折腾过云服务器挂过脚本写过爬虫（小姐姐说你涉及的还蛮广泛哈</li>
 </ul>
 </li>
-<li>中台感兴趣不<ul>
+<li>中台感兴趣不
+<ul>
 <li>感兴趣</li>
 </ul>
 </li>
-<li>反问<ul>
+<li>反问
+<ul>
 <li>公司业务方向（toB、toC）</li>
 <li>入职时间（小姐姐说她不清楚她是技术面）</li>
 </ul>
 </li>
 </ol>
 <p>总之体验非常好，小姐姐说我答得很好两个月这样不错了（这是称赞吗怀疑）</p>
-<p>刚结束二面电话就来了，好家伙，转到中台全栈Web实习咯（说是hr把我当22届的给前端了，但是前端没实习岗）<br>项目倒是没咋问。</p>
-<h1 id="MetaApp二面-中台全栈Web实习"><a href="#MetaApp二面-中台全栈Web实习" class="headerlink" title="MetaApp二面 中台全栈Web实习"></a>MetaApp二面 中台全栈Web实习</h1><p>当天下午就面了，1小时</p>
+<p>刚结束二面电话就来了，好家伙，转到中台全栈Web实习咯（说是hr把我当22届的给前端了，但是前端没实习岗）<br>
+项目倒是没咋问。</p>
+<h1>MetaApp二面 中台全栈Web实习</h1>
+<p>当天下午就面了，1小时</p>
 <ul>
-<li>自我介绍</li>
-<li>http和https的区别<ul>
+<li>
+<p>自我介绍</p>
+</li>
+<li>
+<p>http和https的区别</p>
+<ul>
 <li>讲了非对称加密</li>
 </ul>
 </li>
-<li>TCP和UDP有了解吗？<ul>
+<li>
+<p>TCP和UDP有了解吗？</p>
+<ul>
 <li>讲了可靠与不可靠</li>
 <li>追问哪个发送数据的效率更高呢？</li>
 <li>UDP有什么应用场景呢？</li>
 </ul>
 </li>
-<li>http响应码大致说一下<ul>
+<li>
+<p>http响应码大致说一下</p>
+<ul>
 <li>讲了200、301、302、304、400、401、402、403、404、409、500、502、503</li>
 </ul>
 </li>
-<li><p>两道算法（中等、简单）</p>
+<li>
+<p>两道算法（中等、简单）</p>
 <ul>
-<li>数组中有很多数，拼接起来能得到的最大数是什么：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/largest-number/">179. 最大数 - 力扣</a><ul>
+<li>数组中有很多数，拼接起来能得到的最大数是什么：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/largest-number/">179. 最大数 - 力扣</a>
+<ul>
 <li>提到了重载排序规则（挖坑×1）但是没抓住重点，排序规则应该重载成a+b &gt; b+a（字符串形式）</li>
-<li>刚刚这个数组提到了排序，归并排序讲一讲<ul>
+<li>刚刚这个数组提到了排序，归并排序讲一讲
+<ul>
 <li>有点忘了，讲完说了一嘴最近写过的是快排于是又让我讲讲快排</li>
 <li>快排嘛，就选主元把主元挪到恰当位置使其左边的数都比其小右边的数都比其大</li>
 <li>排10个数，会选归并还是快排？</li>
-<li>快排什么情况下会达到最坏？<ul>
+<li>快排什么情况下会达到最坏？
+<ul>
 <li>数组已经有序或者所有的元素都相同等极端例子，可以通过随机主元来优化</li>
 </ul>
 </li>
-<li>快排和归并排序稳定吗？ <ul>
+<li>快排和归并排序稳定吗？
+<ul>
 <li>快排是不稳定的，归并是稳定的。（然后追问为啥稳定？）</li>
 </ul>
 </li>
@@ -574,13 +609,15 @@
 </li>
 </ul>
 </li>
-<li>扑克牌顺子判断 （其实说的是同花顺，我理解成顺子了不过顺其自然了）<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/bu-ke-pai-zhong-de-shun-zi-lcof/">剑指 Offer 61. 扑克牌中的顺子 - 力扣</a><ul>
+<li>扑克牌顺子判断 （其实说的是同花顺，我理解成顺子了不过顺其自然了）<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/bu-ke-pai-zhong-de-shun-zi-lcof/">剑指 Offer 61. 扑克牌中的顺子 - 力扣</a>
+<ul>
 <li>这个倒是过得很顺利（</li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p>问项目：有遇到过什么问题呢</p>
+<li>
+<p>问项目：有遇到过什么问题呢</p>
 <ul>
 <li>服务端 跨域问题</li>
 <li>文件上传OSS、ws实现在线用户数检测</li>
@@ -588,42 +625,55 @@
 <li>解决之后就感觉没什么难的了</li>
 </ul>
 </li>
-<li><p>跨域问题怎么解决的？</p>
+<li>
+<p>跨域问题怎么解决的？</p>
 <ul>
 <li>服务器上我配置了个 Nginx 反向代理，然后use了一个koa-cors中间件解决</li>
 </ul>
 </li>
-<li><p>跨域到底是怎么产生的呢</p>
+<li>
+<p>跨域到底是怎么产生的呢</p>
 <ul>
 <li>浏览器同源策略，顺便说了下常见解决策略（cors、jsonp、proxy代理等）</li>
 <li>还想讲下为什么用同源策略呢面试官说不用讲那么详细了下一个（</li>
 </ul>
 </li>
-<li><p>面试官：假如我来写服务端你来写Web端，出现了跨域问题，最好的策略是由我来解决还是你来解决</p>
+<li>
+<p>面试官：假如我来写服务端你来写Web端，出现了跨域问题，最好的策略是由我来解决还是你来解决</p>
 <ul>
 <li>一般让后端解决，配置一下cors就好了，前端的话还得用jsonp等（面试官的回答）</li>
 </ul>
 </li>
-<li><p>文件上传遇到了什么问题呢？</p>
+<li>
+<p>文件上传遇到了什么问题呢？</p>
 <ul>
 <li>巴拉巴拉巴拉巴拉，完</li>
 <li>选OSS是为了节省服务器空间是吗</li>
 </ul>
 </li>
-<li>你提到了ORM，（然后面试官讲了一下，没问问题）</li>
-<li>后续规划等<ul>
+<li>
+<p>你提到了ORM，（然后面试官讲了一下，没问问题）</p>
+</li>
+<li>
+<p>后续规划等</p>
+<ul>
 <li>项目完善完善，提升提升技术，以后走全栈路线等巴拉巴拉</li>
 </ul>
 </li>
-<li>反问<ul>
-<li>部门主要做什么业务<ul>
+<li>
+<p>反问</p>
+<ul>
+<li>部门主要做什么业务
+<ul>
 <li>toB，比如你面试的时候做的那个笔试系统，对内的业务</li>
 <li>Java、Node.js、Python等，Java用的比较多</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>我这边呢这边是认可你的，我这边是没有问题的，后续流程hr会联系你（完）</li>
+<li>
+<p>我这边呢这边是认可你的，我这边是没有问题的，后续流程hr会联系你（完）</p>
+</li>
 </ul>
 <p>我贼能扯，叉腰。</p>
 
@@ -775,7 +825,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#MetaApp-%E5%89%8D%E7%AB%AF%E4%B8%80%E9%9D%A2%E9%9D%A2%E7%BB%8F"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">MetaApp 前端一面面经</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#MetaApp%E4%BA%8C%E9%9D%A2-%E4%B8%AD%E5%8F%B0%E5%85%A8%E6%A0%88Web%E5%AE%9E%E4%B9%A0"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">MetaApp二面 中台全栈Web实习</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">MetaApp 前端一面面经</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">MetaApp二面 中台全栈Web实习</span></a></li></ol>
         
         </div>
       </aside>

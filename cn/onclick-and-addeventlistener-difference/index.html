@@ -5,6 +5,9 @@
 <head>
   <!-- Google Analytics -->
   
+    <!-- 看板娘  https://github.com/stevenjoezhang/live2d-widget -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+    <script defer src="https://cdn.jsdelivr.net/gh/yusixian/live2d-widget@latest/autoload.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-xxxxxx-xx"></script>
     <script type="text/javascript">
@@ -469,65 +472,85 @@
         <p>今天面试官问了这么一个问题：<code>onclick</code> 与 <code>addEventListener</code> 有哪些区别呢</p>
 <p>很好问住了，自己答得不太满意，下来自己查了查红宝书第17章事件和MDN，大概了解了是怎么一回事</p>
 <p>上来先把答案摆上：</p>
-<h1 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h1><p><code>addEventListener()</code> 是 W3C DOM 规范中提供的注册事件监听器的方法。它的优点包括：</p>
+<h1>区别</h1>
+<p><code>addEventListener()</code> 是 W3C DOM 规范中提供的注册事件监听器的方法。它的优点包括：</p>
 <ul>
-<li><strong>允许给一个事件注册多个监听器</strong><ul>
+<li><strong>允许给一个事件注册多个监听器</strong>
+<ul>
 <li>特别是在使用AJAX 库，JavaScript模块，或其他需要第三方库/插件的代码</li>
 </ul>
 </li>
-<li>提供了一种更精细的手段控制 <code>listener</code> 的触发阶段（可以选择捕获或者冒泡）</li>
+<li>提供了一种更精细的手段控制 <code>listener</code> 的触发阶段（可以选择捕获或者冒泡）</li>
 <li>它对 <strong>任何 DOM 元素</strong> 都是有效的，而不仅仅只对 HTML 元素有效。</li>
-<li>它注册的事件可以通过 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/EventTarget/removeEventListener"><code>removeEventListener</code></a>来移除<ul>
+<li>它注册的事件可以通过 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/EventTarget/removeEventListener"><code>removeEventListener</code></a>来移除
+<ul>
 <li>也就是说若添加的是匿名事件函数就无法移除了</li>
 </ul>
 </li>
-<li><code>this</code> 的值是触发事件的元素的引用<ul>
-<li><code>console.log(e.currentTarget === this) // true</code> </li>
+<li><code>this</code> 的值是触发事件的元素的引用
+<ul>
+<li><code>console.log(e.currentTarget === this) // true </code></li>
 </ul>
 </li>
 </ul>
-<p>而 <code>onclick</code> 是 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/EventTarget/addEventListener#older_way_to_register_event_listeners" title="Permalink to 注册 listener 的旧方法">注册 <code>listener</code>的旧方法</a></p>
+<p>而 <code>onclick</code> 是 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/EventTarget/addEventListener#older_way_to_register_event_listeners" title="Permalink to 注册 listener 的旧方法">注册 <code>listener </code>的旧方法</a></p>
 <ul>
 <li>该方法会替换掉这个元素上所有已存在的onclick事件，其他on事件也是类似的。</li>
 <li>无法精细控制冒泡与否等</li>
 <li>移除可通过直接将onclick事件替换为null</li>
 </ul>
-<h2 id="兼容性"><a href="#兼容性" class="headerlink" title="兼容性"></a>兼容性</h2><p><code>addEventListener</code> 在DOM 2 <a target="_blank" rel="noopener" href="https://www.w3.org/TR/DOM-Level-2-Events">Events</a> 规范中引入</p>
+<h2 id="兼容性">兼容性</h2>
+<p><code>addEventListener</code> 在DOM 2 <a target="_blank" rel="noopener" href="https://www.w3.org/TR/DOM-Level-2-Events">Events</a> 规范中引入</p>
 <ul>
-<li>在IE 9之前，必须使用 <code>attachEvent</code> 而不是使用<code>addEventListener</code></li>
-<li><code>attachEvent</code>方法有个缺点，<code>this</code> 的值会变成 <code>window</code> 对象的引用而不是触发事件的元素</li>
+<li>在IE 9之前，必须使用 <code>attachEvent</code> 而不是使用<code>addEventListener</code></li>
+<li><code>attachEvent </code>方法有个缺点，<code>this</code> 的值会变成 <code>window</code> 对象的引用而不是触发事件的元素</li>
 </ul>
 <p>而 <code>onclick</code> 是 DOM 0 规范的基本内容</p>
 <ul>
 <li><strong>几乎所有浏览器都支持</strong>，而且不需要特殊的跨浏览器兼容代码</li>
-<li>因此通常这个方法被用于动态地注册事件处理器，除非必须使用 <code>addEventListener()</code> 才能提供的特殊特性</li>
+<li>因此通常这个方法被用于动态地注册事件处理器，除非必须使用 <code>addEventListener()</code> 才能提供的特殊特性</li>
 </ul>
-<h1 id="addEventListener"><a href="#addEventListener" class="headerlink" title="addEventListener"></a><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/EventTarget/addEventListener">addEventListener</a></h1><blockquote>
-<p><strong>EventTarget.addEventListener()</strong> 方法将指定的监听器注册到 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/EventTarget"><code>EventTarget</code></a> 上，当该对象触发指定的事件时，指定的回调函数就会被执行。 事件目标可以是一个文档上的元素 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Element"><code>Element</code></a>,<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Document"><code>Document</code></a>和<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Window"><code>Window</code></a>或者任何其他支持事件的对象 (比如 <code>XMLHttpRequest</code>)<code>。</code></p>
+<h1><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/EventTarget/addEventListener">addEventListener</a></h1>
+<blockquote>
+<p><strong>EventTarget.addEventListener()</strong> 方法将指定的监听器注册到 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/EventTarget"><code>EventTarget</code></a> 上，当该对象触发指定的事件时，指定的回调函数就会被执行。 事件目标可以是一个文档上的元素 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Element"><code>Element</code></a>,<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Document"><code>Document</code></a>和<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Window"><code>Window</code></a>或者任何其他支持事件的对象 (比如 <code>XMLHttpRequest</code>)<code>。</code></p>
+</blockquote>
+<blockquote>
 <p><code>addEventListener()</code>的工作原理是将实现<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/EventListener"><code>EventListener</code></a>的函数或对象添加到调用它的<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/EventTarget"><code>EventTarget</code></a>上的指定事件类型的事件侦听器列表中。</p>
 </blockquote>
-<p><code>addEventListener</code> 中有三个参数，<code>type</code>、<code>listener</code> 和 <code>useCapture</code>，其中第一个参数为 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/Events">事件类型</a>（<code>click</code>、<code>mousemove</code> 等，第二个参数为事件的回调函数，第三个参数为一个指定有关 <code>listener</code> 属性的可选参数<strong>对象</strong>，需注意的是：</p>
+<p><code>addEventListener</code> 中有三个参数，<code>type</code>、<code>listener</code> 和 <code>useCapture</code>，其中第一个参数为 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/Events">事件类型</a>（<code>click</code>、<code>mousemove</code> 等，第二个参数为事件的回调函数，第三个参数为一个指定有关 <code>listener</code> 属性的可选参数<strong>对象</strong>，需注意的是：</p>
 <blockquote>
-<p>在旧版本的DOM的规定中， <code>addEventListener()</code>的第三个参数是一个布尔值表示是否在捕获阶段调用事件处理程序。随着时间的推移，很明显需要更多的选项。与其在方法之中添加更多参数（传递可选值将会变得异常复杂），倒不如把第三个参数改为一个包含了各种属性的对象，这些属性的值用来被配置删除事件侦听器的过程。\<br>因为旧版本的浏览器（以及一些相对不算古老的）仍然假定第三个参数是布尔值，你需要编写一些代码来有效地处理这种情况。你可以对每一个你感兴趣的options值进行特性检测。</p>
+<p>在旧版本的DOM的规定中， <code>addEventListener()</code>的第三个参数是一个布尔值表示是否在捕获阶段调用事件处理程序。随着时间的推移，很明显需要更多的选项。与其在方法之中添加更多参数（传递可选值将会变得异常复杂），倒不如把第三个参数改为一个包含了各种属性的对象，这些属性的值用来被配置删除事件侦听器的过程。<br>
+因为旧版本的浏览器（以及一些相对不算古老的）仍然假定第三个参数是布尔值，你需要编写一些代码来有效地处理这种情况。你可以对每一个你感兴趣的options值进行特性检测。</p>
 </blockquote>
 <p>也就是说，<code>addEventListener</code> 需要额外的代码来兼容旧浏览器，而onclick不需要，在要考虑兼容性的场景下就需要好好考虑。</p>
-<h2 id="事件中的this"><a href="#事件中的this" class="headerlink" title="事件中的this"></a>事件中的this</h2><p><code>addEventListener</code> 中 <code>this</code> 的值通常情况下都是触发事件的元素的引用</p>
-<pre><code>- `console.log(e.currentTarget === this) // true ` 
-</code></pre><p>但是箭头函数不然，<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions">箭头函数没有自己的this</a>，箭头函数只会从自己的作用域链的上一层继承 <code>this</code></p>
-<h1 id="onclick"><a href="#onclick" class="headerlink" title="onclick"></a><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/GlobalEventHandlers/onclick">onclick</a></h1><blockquote>
-<p>全局事件处理器（<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/GlobalEventHandlers"><code>GlobalEventHandlers</code></a>）的 <strong><code>onclick</code></strong> 属性，是处理当前元素的 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Element/click_event" title="click"><code>click</code></a> 事件的事件处理器（<a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/Events/Event_handlers">event handler</a>）。</p>
-<p>当用户点击一个元素时，会触发 <code>click</code> 事件。在每次点击的整个过程中，<code>click</code> 事件的运行顺序在 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Element/mousedown_event" title="mousedown"><code>mousedown</code></a> 和 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Element/mouseup_event" title="mouseup"><code>mouseup</code></a> 事件之后。</p>
-<p><strong>备注：</strong>  当你使用 <code>click</code> 事件去触发一个动作时，也要考虑向 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Element/keydown_event" title="keydown"><code>keydown</code></a> 事件添加此动作，以便允许不使用鼠标或触摸屏的用户进行同样的操作。<br>MDN上讲的没那么详细，红宝书中对onclick的描述有很重要的几点</p>
-<h2 id="拓展作用域链"><a href="#拓展作用域链" class="headerlink" title="拓展作用域链"></a>拓展作用域链</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt; </span><br><span class="line"><span class="keyword">function</span> <span class="title function_">showMessage</span>(<span class="params"></span>) &#123; </span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Hello world!&quot;</span>); </span><br><span class="line">&#125; </span><br><span class="line">&lt;/script&gt; </span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span> <span class="attr">value</span>=<span class="string">&quot;Click Me&quot;</span> <span class="attr">onclick</span>=<span class="string">&quot;showMessage()&quot;</span>/&gt;</span></span> </span><br></pre></td></tr></table></figure>
-<p>上面以<code>onclick</code>方式指定的事件处理程序会创建一个函数来封装属性的值。（<strong>但是不建议这么做</strong>，原因结尾有）</p>
+<h2 id="事件中的this">事件中的this</h2>
+<p><code>addEventListener</code> 中 <code>this</code> 的值通常情况下都是触发事件的元素的引用<br>
+- <code>console.log(e.currentTarget === this) // true </code></p>
+<p>但是箭头函数不然，<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions">箭头函数没有自己的this</a>，箭头函数只会从自己的作用域链的上一层继承 <code>this</code></p>
+<h1><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/GlobalEventHandlers/onclick">onclick</a></h1>
+<blockquote>
+<p>全局事件处理器（<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/GlobalEventHandlers"><code>GlobalEventHandlers</code></a>）的 <strong><code>onclick</code></strong> 属性，是处理当前元素的 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Element/click_event" title="click"><code>click</code></a> 事件的事件处理器（<a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/Events/Event_handlers">event handler</a>）。</p>
 </blockquote>
-<p>这个函数有一个特殊的局部变量 <code>event</code>，其中保存的就是 <code>event</code> 对象<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 输出&quot;click&quot; --&gt;</span> </span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span> <span class="attr">value</span>=<span class="string">&quot;Click Me&quot;</span> <span class="attr">onclick</span>=<span class="string">&quot;console.log(event.type)&quot;</span>&gt;</span> </span><br></pre></td></tr></table></figure></p>
-<p>有了这个对象，就不用开发者另外定义其他变量，也不用从包装函数的参数列表中去取了。 在这个函数中，<code>this</code> 值相当于事件的目标元素，如下面的例子所示：  </p>
+<blockquote>
+<p>当用户点击一个元素时，会触发 <code>click</code> 事件。在每次点击的整个过程中，<code>click</code> 事件的运行顺序在 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Element/mousedown_event" title="mousedown"><code>mousedown</code></a> 和 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Element/mouseup_event" title="mouseup"><code>mouseup</code></a> 事件之后。</p>
+</blockquote>
+<blockquote>
+<p><strong>备注：</strong>  当你使用 <code>click</code> 事件去触发一个动作时，也要考虑向 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Element/keydown_event" title="keydown"><code>keydown</code></a> 事件添加此动作，以便允许不使用鼠标或触摸屏的用户进行同样的操作。<br>
+MDN上讲的没那么详细，红宝书中对onclick的描述有很重要的几点</p>
+</blockquote>
+<h2 id="拓展作用域链">拓展作用域链</h2>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt; </span><br><span class="line"><span class="keyword">function</span> <span class="title function_">showMessage</span>(<span class="params"></span>) &#123; </span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Hello world!&quot;</span>); </span><br><span class="line">&#125; </span><br><span class="line">&lt;/script&gt; </span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span> <span class="attr">value</span>=<span class="string">&quot;Click Me&quot;</span> <span class="attr">onclick</span>=<span class="string">&quot;showMessage()&quot;</span>/&gt;</span></span> </span><br></pre></td></tr></table></figure>
+<p>上面以<code>onclick</code>方式指定的事件处理程序会创建一个函数来封装属性的值。（<strong>但是不建议这么做</strong>，原因结尾有）</p>
+<p>这个函数有一个特殊的局部变量 <code>event</code>，其中保存的就是 <code>event</code> 对象</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 输出&quot;click&quot; --&gt;</span> </span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span> <span class="attr">value</span>=<span class="string">&quot;Click Me&quot;</span> <span class="attr">onclick</span>=<span class="string">&quot;console.log(event.type)&quot;</span>&gt;</span> </span><br></pre></td></tr></table></figure>
+<p>有了这个对象，就不用开发者另外定义其他变量，也不用从包装函数的参数列表中去取了。 在这个函数中，<code>this</code> 值相当于事件的目标元素，如下面的例子所示：</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 输出&quot;Click Me&quot; --&gt;</span> </span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span> <span class="attr">value</span>=<span class="string">&quot;Click Me&quot;</span> <span class="attr">onclick</span>=<span class="string">&quot;console.log(this.value)&quot;</span>&gt;</span> </span><br></pre></td></tr></table></figure>
-<p>这个动态创建的包装函数还有一个特别有意思的地方，就是<strong>其作用域链被扩展</strong>了。在这个函数中， <code>document</code> 和元素自身的成员都可以被当成局部变量来访问。而这是通过使用 <code>with</code> 实现的：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span>(<span class="params"></span>) &#123; </span><br><span class="line">    <span class="title function_">with</span>(<span class="params"><span class="variable language_">document</span></span>) &#123; </span><br><span class="line">        <span class="title function_">with</span>(<span class="params"><span class="variable language_">this</span></span>) &#123; </span><br><span class="line">        <span class="comment">// 属性值 </span></span><br><span class="line">        &#125; </span><br><span class="line">    &#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>这也是为什么在onclick定义的事件，调用document上的事件时可以免去document前缀，实际上是它在前面还做了一层包装。</p>
+<p>这个动态创建的包装函数还有一个特别有意思的地方，就是<strong>其作用域链被扩展</strong>了。在这个函数中， <code>document</code> 和元素自身的成员都可以被当成局部变量来访问。而这是通过使用 <code>with</code> 实现的：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span>(<span class="params"></span>) &#123; </span><br><span class="line">    <span class="title function_">with</span>(<span class="params"><span class="variable language_">document</span></span>) &#123; </span><br><span class="line">        <span class="title function_">with</span>(<span class="params"><span class="variable language_">this</span></span>) &#123; </span><br><span class="line">        <span class="comment">// 属性值 </span></span><br><span class="line">        &#125; </span><br><span class="line">    &#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这也是为什么在onclick定义的事件，调用document上的事件时可以免去document前缀，实际上是它在前面还做了一层包装。</p>
 <p>使用 HTML 指定onclick事件处理的一个问题是使 HTML 与 JavaScript 变得强耦合，如果需要修改事件处理程序，则必须在 HTML 和 JavaScript 中都进行修改，<strong>不建议使用 HTML事件处理程序，而建议使用 JavaScript 指定事件处理程序的主要原因。</strong></p>
-<p>也就是在js中，当真正需要使用onclick时，使用如下方式：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> btn = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;myBtn&quot;</span>); </span><br><span class="line">btn.<span class="property">onclick</span> = <span class="keyword">function</span>(<span class="params">e</span>) &#123; </span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(e.<span class="property">type</span>); <span class="comment">// &quot;click&quot; </span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
-
+<p>也就是在js中，当真正需要使用onclick时，使用如下方式：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> btn = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;myBtn&quot;</span>); </span><br><span class="line">btn.<span class="property">onclick</span> = <span class="keyword">function</span>(<span class="params">e</span>) &#123; </span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(e.<span class="property">type</span>); <span class="comment">// &quot;click&quot; </span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
         <hr>
         <!-- Pager -->
@@ -676,7 +699,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E5%8C%BA%E5%88%AB"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">区别</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%85%BC%E5%AE%B9%E6%80%A7"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">兼容性</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#addEventListener"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">addEventListener</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BA%8B%E4%BB%B6%E4%B8%AD%E7%9A%84this"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">事件中的this</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#onclick"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">onclick</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%8B%93%E5%B1%95%E4%BD%9C%E7%94%A8%E5%9F%9F%E9%93%BE"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">拓展作用域链</span></a></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">区别</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%85%BC%E5%AE%B9%E6%80%A7"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">兼容性</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">addEventListener</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BA%8B%E4%BB%B6%E4%B8%AD%E7%9A%84this"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">事件中的this</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">onclick</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%8B%93%E5%B1%95%E4%BD%9C%E7%94%A8%E5%9F%9F%E9%93%BE"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">拓展作用域链</span></a></li></ol></li></ol>
         
         </div>
       </aside>

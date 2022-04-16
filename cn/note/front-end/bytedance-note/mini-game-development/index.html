@@ -5,6 +5,9 @@
 <head>
   <!-- Google Analytics -->
   
+    <!-- 看板娘  https://github.com/stevenjoezhang/live2d-widget -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+    <script defer src="https://cdn.jsdelivr.net/gh/yusixian/live2d-widget@latest/autoload.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-xxxxxx-xx"></script>
     <script type="text/javascript">
@@ -466,14 +469,17 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h1 id="前端场景下的游戏开发"><a href="#前端场景下的游戏开发" class="headerlink" title="前端场景下的游戏开发"></a>前端场景下的游戏开发</h1><h2 id="开发角色和链路"><a href="#开发角色和链路" class="headerlink" title="开发角色和链路"></a>开发角色和链路</h2><p>游戏开发的团队分工</p>
+        <h1>前端场景下的游戏开发</h1>
+<h2 id="开发角色和链路">开发角色和链路</h2>
+<p>游戏开发的团队分工</p>
 <p>组建一个最小但最完整的游戏开发团队只需要3个人:策划、程序、美术。</p>
 <p>当然，能力足够强的话可以作为独立开发者。</p>
 <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d2b19ef48261481ab4cbb48c14295e0f~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
 <p><strong>基本链路</strong></p>
 <p>立项阶段 -&gt; 原型阶段 -&gt; Alpha版本 -&gt; Beta阶段 -&gt; 运营阶段</p>
 <p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/93319b604a4d46df9d49cbf8f80f7969~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
-<h2 id="为什么要用游戏引擎"><a href="#为什么要用游戏引擎" class="headerlink" title="为什么要用游戏引擎"></a>为什么要用游戏引擎</h2><p>游戏引擎最大的优势：渲染</p>
+<h2 id="为什么要用游戏引擎">为什么要用游戏引擎</h2>
+<p>游戏引擎最大的优势：渲染</p>
 <blockquote>
 <p>引擎的诞生就是因为一家公司做了一款游戏，做下一款游戏时复用了上一款游戏的代码，后来发现这些代码几乎每个游戏都会用到，抽离出来就成了一个引擎。</p>
 <p>如果不使用引擎，你可以做复杂的动效渲染和交互吗？当然可以。方便吗?不一定。</p>
@@ -486,14 +492,17 @@
 <ul>
 <li>提供一套完整的实现方案，不需要你再自己去拼凑、封装</li>
 <li><strong>花更少的时间做出更好的效果</strong>，特别是关于渲染效率和性能优化。</li>
-<li>提供游戏开发时需要的常见功能<ul>
+<li>提供游戏开发时需要的常见功能
+<ul>
 <li>引擎会提供许多组件，使用这些组件能缩短开发时间，让游戏开发变得更简单</li>
 <li>专业引擎通常会能比自制引擎表现出更好的性能。</li>
 </ul>
 </li>
 </ul>
-<p>游戏引擎通常会包含渲染器，2D/3D图形元素，碰撞检测，物理引擎，声音，控制器支持，动画等<br>部分。</p>
-<h2 id="前端过渡到游戏开发"><a href="#前端过渡到游戏开发" class="headerlink" title="前端过渡到游戏开发"></a>前端过渡到游戏开发</h2><p>首先要有一个明确的认知：<strong>前端开发和游戏开发不是相斥的。</strong></p>
+<p>游戏引擎通常会包含渲染器，2D/3D图形元素，碰撞检测，物理引擎，声音，控制器支持，动画等<br>
+部分。</p>
+<h2 id="前端过渡到游戏开发">前端过渡到游戏开发</h2>
+<p>首先要有一个明确的认知：<strong>前端开发和游戏开发不是相斥的。</strong></p>
 <p>现在市场上很多<strong>H5游戏、小游戏</strong>都是Web前端开发制作的，而不是专门的游戏开发团队、专业的游戏研发同学开发。其原因可能在于:</p>
 <ol>
 <li>接触前端开发的研发数量远大于接触游戏开发的数量（<strong>招聘成本高</strong>）</li>
@@ -503,7 +512,9 @@
 </ol>
 <p>因此，以web前端开发的视角看2d游戏引擎，无非是一套框架、一套解决方案而已。</p>
 <p>但是开发理念上还是有差别的：<strong>传统游戏开发更关注内容。</strong></p>
-<h1 id="游戏引擎"><a href="#游戏引擎" class="headerlink" title="游戏引擎"></a>游戏引擎</h1><h2 id="市面上常见游戏引擎"><a href="#市面上常见游戏引擎" class="headerlink" title="市面上常见游戏引擎"></a>市面上常见游戏引擎</h2><p>我们暂且不讨论一些端游的引擎， 比如</p>
+<h1>游戏引擎</h1>
+<h2 id="市面上常见游戏引擎">市面上常见游戏引擎</h2>
+<p>我们暂且不讨论一些端游的引擎， 比如</p>
 <ul>
 <li>Unreal （虚幻引擎，代表作《PUBG》、《GTA5》）、</li>
 <li>Source （起源引擎，代表作(《Cs》 、《Dota2》 ）</li>
@@ -511,40 +522,49 @@
 <li>Unity3D （代表作《炉石传说》、《王者荣耀》）。</li>
 </ul>
 <p>路要一步步走，我们先看看我们<strong>作为前端开发最容易上手的引擎。</strong></p>
-<h3 id="特定类型的客户端游戏引擎"><a href="#特定类型的客户端游戏引擎" class="headerlink" title="特定类型的客户端游戏引擎"></a>特定类型的客户端游戏引擎</h3><h4 id="The-NVL-Maker"><a href="#The-NVL-Maker" class="headerlink" title="The NVL Maker"></a>The NVL Maker</h4><p><a target="_blank" rel="noopener" href="https://www.nvlmaker.net/">THE NVL Maker</a>文字冒险游戏制作器</p>
+<h3 id="特定类型的客户端游戏引擎">特定类型的客户端游戏引擎</h3>
+<h4 id="The-NVL-Maker">The NVL Maker</h4>
+<p><a target="_blank" rel="noopener" href="https://www.nvlmaker.net/">THE NVL Maker</a>文字冒险游戏制作器</p>
 <p><strong>NoCode</strong>形式的开发，只需要写文字脚本加上一定的配置就可以生成一个文字冒险游戏。</p>
 <p>代表作：《Fate/stay night》和steam上一众GAL Game。</p>
 <p>当然，由于缺乏迭代和运营，该游戏引擎算是比较小众的。也有一个适用于前端的库AVG.js Project。（内核是PixiJS作为渲染引擎）</p>
 <p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/37668e7d322248d9b0f17683d94e7e3e~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
-<h4 id="RPG-Maker"><a href="#RPG-Maker" class="headerlink" title="RPG Maker"></a><strong>RPG Maker</strong></h4><p>RPG Maker可以<strong>Low Code</strong>搭建一个关卡类型的游戏，适合代码能力不强但是想发挥自己的创意的开发者。</p>
+<h4 id="RPG-Maker"><strong>RPG Maker</strong></h4>
+<p>RPG Maker可以<strong>Low Code</strong>搭建一个关卡类型的游戏，适合代码能力不强但是想发挥自己的创意的开发者。</p>
 <ul>
 <li>由RPGMaker系列游戏引擎创造的Steam畅销游戏《To The Moon》</li>
 </ul>
-<h3 id="Web游戏引擎"><a href="#Web游戏引擎" class="headerlink" title="Web游戏引擎"></a>Web游戏引擎</h3><p>利用Canvas和WebGL为底层技术抽象的图像绘制库（往往还附带一些其他的功能）</p>
+<h3 id="Web游戏引擎">Web游戏引擎</h3>
+<p>利用Canvas和WebGL为底层技术抽象的图像绘制库（往往还附带一些其他的功能）</p>
 <p>Web游戏引擎的通用能力:</p>
 <ul>
-<li><strong>预加载</strong><ul>
+<li><strong>预加载</strong>
+<ul>
 <li>游戏中大量<strong>的静态素材，包括场景、元素、声音、动画、模型、贴图等，如果以原生JS进行请求，并统筹请求时间和加载的时机，将会非常麻烦。</strong></li>
 <li>预加载引擎将加载时机、加载过程加以<strong>抽象</strong>，<strong>解决加载编码中的效率问题</strong>。</li>
 </ul>
 </li>
-<li><strong>展示与图层、组合系统</strong><ul>
+<li><strong>展示与图层、组合系统</strong>
+<ul>
 <li>对于Web游戏编程而言，往往选择Canvas或WebGL作为渲染方式（大家可以想想为什么不用DOM作为渲染方式? ）。</li>
 <li>Canvas和WebGL作为底层的APl，接口非常基础，需要<strong>大量的编码来编写简单的展示</strong>。而且图形之间没有组合和图层，<strong>很难处理元素组合和图层问题。</strong></li>
 <li><strong>渲染引擎和图层、组合系统应运而生</strong>。</li>
 </ul>
 </li>
-<li><strong>动画系统</strong>：动画往往被分为<strong>缓动动画</strong>和<strong>逐帧动画</strong>，这里讨论缓动动画系统。<ul>
+<li><strong>动画系统</strong>：动画往往被分为<strong>缓动动画</strong>和<strong>逐帧动画</strong>，这里讨论缓动动画系统。
+<ul>
 <li>缓动动画系统在原生JS中需要<strong>搭配帧渲染</strong>进行考量而进行书写，代码量和思考量巨大，抽象程度低，所以需要游戏引擎动画系统。</li>
 </ul>
 </li>
-<li><strong>音效和声音系统</strong>：<ul>
+<li><strong>音效和声音系统</strong>：
+<ul>
 <li>游戏相较于普通的Web前端而言需要更加<strong>立体、及时的反馈</strong>，声音和音效是反馈的重要组成部分。</li>
 <li><strong>声音和音效系统往往包含了声音的播放、音量、截止、暂停等功能的集成。</strong></li>
 </ul>
 </li>
 </ul>
-<h4 id="Cocos"><a href="#Cocos" class="headerlink" title="Cocos"></a>Cocos</h4><p><strong>优势</strong></p>
+<h4 id="Cocos">Cocos</h4>
+<p><strong>优势</strong></p>
 <ul>
 <li>平台支持能力好</li>
 <li>完善的游戏功能支持</li>
@@ -556,7 +576,8 @@
 <li>版本迭代过快</li>
 </ul>
 <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/50f2a6ea4fb24aa1b1e586c2f90c44db~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
-<h4 id="Laya"><a href="#Laya" class="headerlink" title="Laya"></a>Laya</h4><p><strong>优势</strong></p>
+<h4 id="Laya">Laya</h4>
+<p><strong>优势</strong></p>
 <ul>
 <li>3D能力比较成熟，号称市场占有率90%</li>
 <li>支持]S、TS、AS</li>
@@ -568,7 +589,8 @@
 <li>生态很差</li>
 </ul>
 <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9512c8eb4d534053ac9cd6e7499b3c38~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
-<h4 id="Egret"><a href="#Egret" class="headerlink" title="Egret"></a>Egret</h4><p><strong>优势</strong></p>
+<h4 id="Egret">Egret</h4>
+<p><strong>优势</strong></p>
 <ul>
 <li>工具链比较完善</li>
 <li>第三方库支持好</li>
@@ -581,66 +603,87 @@
 </ul>
 <p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7bf568c8ee034a14a27f0d91d339c833~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
 <p>可以看到上述游戏引擎的界面都是很相似的</p>
-<h4 id="CreateJS-amp-Phaser"><a href="#CreateJS-amp-Phaser" class="headerlink" title="CreateJS &amp; Phaser"></a>CreateJS &amp; Phaser</h4><p>这两个游戏引擎没有可视化界面。</p>
+<h4 id="CreateJS-Phaser">CreateJS &amp; Phaser</h4>
+<p>这两个游戏引擎没有可视化界面。</p>
 <p>以CreateJS为例:<img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c42808563fa241948b06a224a94303c1~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
 <p>它是多个库的集合</p>
 <ul>
-<li><p>EASELS (控制素材展示与组合) 、TWEENJS (控制素材缓动动画)、 SOUNDIS（控制声音）、PRELOADIS （控制加载），通过预加载后的素材展示、动画、声音构成游戏。Phaser游戏引擎，除了CreateJS 为基础的展示、声音、动画、加载系统</p>
+<li>
+<p>EASELS (控制素材展示与组合) 、TWEENJS (控制素材缓动动画)、 SOUNDIS（控制声音）、PRELOADIS （控制加载），通过预加载后的素材展示、动画、声音构成游戏。Phaser游戏引擎，除了CreateJS 为基础的展示、声音、动画、加载系统</p>
 </li>
-<li><p>还设计了摄像机、物理引擎、内置浏览器、插件系统等高级功能。</p>
+<li>
+<p>还设计了摄像机、物理引擎、内置浏览器、插件系统等高级功能。</p>
 </li>
 </ul>
-<h3 id="功能引擎"><a href="#功能引擎" class="headerlink" title="功能引擎"></a>功能引擎</h3><p>大型游戏引擎往往是由小的功能引擎组装成的，一个大型游戏引擎往往包含渲染引擎、物理引擎、UI系统、声音系统、动画系统、粒子系统、骨骼系统、网络系统等组合而成。其中最重要的便是渲染引擎和物理引擎。功能引擎是专注某个方向能力的引擎，其特点是体积小、功能完善。特别是Pixi.js和Three.js这两个渲染引擎，通常被误以为是一个完整的游戏引擎，但它们是专注渲染能力的渲染引擎。</p>
+<h3 id="功能引擎">功能引擎</h3>
+<p>大型游戏引擎往往是由小的功能引擎组装成的，一个大型游戏引擎往往包含渲染引擎、物理引擎、UI系统、声音系统、动画系统、粒子系统、骨骼系统、网络系统等组合而成。其中最重要的便是渲染引擎和物理引擎。功能引擎是专注某个方向能力的引擎，其特点是体积小、功能完善。特别是Pixi.js和Three.js这两个渲染引擎，通常被误以为是一个完整的游戏引擎，但它们是专注渲染能力的渲染引擎。</p>
 <p>下面介绍几种可能会经常接触的功能引擎:</p>
 <p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/600c9e3952394924b790c74d06c3b247~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
 <ul>
-<li>Pixi.js<ul>
+<li>Pixi.js
+<ul>
 <li>2D渲染能力强（尤其是WebGL）</li>
 <li>复杂动画系统、复杂图片渲染形式、制作自己的2d游戏引擎等</li>
 </ul>
 </li>
-<li>Three.js<ul>
+<li>Three.js
+<ul>
 <li>3D渲染能力强</li>
 <li>适合3D效果演示或3D类的H5游戏或小游戏</li>
 </ul>
 </li>
-<li>Box2D.js<ul>
+<li>Box2D.js
+<ul>
 <li>2d物理引擎</li>
 <li>物体仿真能力</li>
 </ul>
 </li>
 </ul>
-<h2 id="2D游戏引擎的技术架构"><a href="#2D游戏引擎的技术架构" class="headerlink" title="2D游戏引擎的技术架构"></a>2D游戏引擎的技术架构</h2><p>以Cocos引擎的架构为例子：</p>
+<h2 id="2D游戏引擎的技术架构">2D游戏引擎的技术架构</h2>
+<p>以Cocos引擎的架构为例子：</p>
 <p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a7ea1a5dd8ff42a396872d8472b06f7f~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
 <ul>
-<li><p>render（渲染器）、collision（）、Physical（）</p>
+<li>
+<p>render（渲染器）、collision（）、Physical（）</p>
 </li>
-<li><p>适配器 for PC、IOS、Andriod、H5…… 以及各平台的构建工具</p>
+<li>
+<p>适配器 for PC、IOS、Andriod、H5…… 以及各平台的构建工具</p>
 </li>
-<li>运行时</li>
+<li>
+<p>运行时</p>
+</li>
 </ul>
-<h2 id="Web游戏引擎的渲染原理"><a href="#Web游戏引擎的渲染原理" class="headerlink" title="Web游戏引擎的渲染原理"></a>Web游戏引擎的渲染原理</h2><p>以Pixi的渲染流程为例子</p>
+<h2 id="Web游戏引擎的渲染原理">Web游戏引擎的渲染原理</h2>
+<p>以Pixi的渲染流程为例子</p>
 <p>大致流程如下</p>
 <ol>
-<li><p>创建一个Renderer渲染器，获取它的view (一个canvas对象) ，添加到Dom Tree中。（或者指定Dom Tree中已经存在的canvas对象作为view）</p>
+<li>
+<p>创建一个Renderer渲染器，获取它的view (一个canvas对象) ，添加到Dom Tree中。（或者指定Dom Tree中已经存在的canvas对象作为view）</p>
 </li>
-<li><p>在MainLoop (主循环）中调用Renderer.render()并传入一个<strong>DisplayObject作为根节点开发渲染</strong>。</p>
+<li>
+<p>在MainLoop (主循环）中调用Renderer.render()并传入一个<strong>DisplayObject作为根节点开发渲染</strong>。</p>
 </li>
-<li><p>从场景树的根节点开始，<strong>以zIndex为序从小到大进行深度优先遍历</strong>，对每个节点进行渲染操作，由后往前把整个场景绘制一次。(CanvasRenderer)</p>
+<li>
+<p>从场景树的根节点开始，<strong>以zIndex为序从小到大进行深度优先遍历</strong>，对每个节点进行渲染操作，由后往前把整个场景绘制一次。(CanvasRenderer)</p>
 </li>
-<li><p>WebGL的render方法执行过程（科普）</p>
+<li>
+<p>WebGL的render方法执行过程（科普）</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">render</span>(<span class="params">displayObject, renderTexture, clear, transform, skipUpdateTransform</span>) &#123;</span><br><span class="line">    <span class="comment">// 1.应用变换(GPU级别) </span></span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">projection</span>.<span class="property">transform</span> = transform;</span><br><span class="line">    <span class="comment">// 2.渲染纹理绑定与BatchRendering处理</span></span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">renderTexture</span>.<span class="title function_">bind</span>(renderTexture);</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">batch</span>.<span class="property">currentRenderer</span>.<span class="title function_">start</span>();</span><br><span class="line">    <span class="comment">// 3.执行元素渲染，将顶点、索引和纹理等数据添加到BatchRendering中</span></span><br><span class="line">    display0bject.<span class="title function_">render</span>();</span><br><span class="line">    <span class="comment">// 4.执行renderer的绘制方法</span></span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">batch</span>.<span class="property">currentRenderer</span>.<span class="title function_">flush</span>();</span><br><span class="line">    <span class="comment">//根据传入的C Lear与renderTexture参数对纹理的处理.。.</span></span><br><span class="line">    <span class="comment">// 5.清空变换</span></span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">projection</span>.<span class="property">transform</span> = <span class="literal">null</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>Canvas的render方法执行过程</p>
+<li>
+<p>Canvas的render方法执行过程</p>
 <p>以Pixi的渲染流程为例子：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">render</span>(<span class="params">displayobject, renderTexture, clear, transform, skipUpdateTransform</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> context = <span class="variable language_">this</span>.<span class="property">context</span>;</span><br><span class="line">    <span class="comment">// 1.当前状态压入状态栈</span></span><br><span class="line">    context.<span class="title function_">save</span>();</span><br><span class="line">    <span class="comment">// 2.初始化变换及样式属性</span></span><br><span class="line">    context.<span class="title function_">setTransform</span>(<span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line">    context.<span class="property">globaLAlpha</span> = <span class="number">1</span>;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">_activeBlendMode</span> = <span class="variable constant_">BLEND_MODES</span>.<span class="property">NORMAL</span>;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">_outerBlend</span> = <span class="literal">false</span>;</span><br><span class="line">    context.<span class="property">globalCompositeOperation</span> = <span class="variable language_">this</span>.<span class="property">blendModes</span>[<span class="variable constant_">BLEND_MODES</span>.<span class="property">NORMAL</span>];</span><br><span class="line">    <span class="comment">// 3.执行元素渲染</span></span><br><span class="line">    <span class="keyword">const</span> tempContext = <span class="variable language_">this</span>.<span class="property">context</span>;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">context</span> = context;</span><br><span class="line">    display0bject.<span class="title function_">renderCanvas</span>(<span class="variable language_">this</span>); </span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">context</span> = tempContext;</span><br><span class="line">    <span class="comment">// 4.从状态栈恢复之前状态</span></span><br><span class="line">    context.<span class="title function_">restore</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<h1 id="游戏开发的技能树"><a href="#游戏开发的技能树" class="headerlink" title="游戏开发的技能树"></a>游戏开发的技能树</h1><p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0eefa193458c4de386328b087ebe7bf6~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
-<h1 id="PixiJS-Web开发"><a href="#PixiJS-Web开发" class="headerlink" title="PixiJS+Web开发"></a>PixiJS+Web开发</h1><h2 id="Pixi简介"><a href="#Pixi简介" class="headerlink" title="Pixi简介"></a>Pixi简介</h2><p><a target="_blank" rel="noopener" href="https://pixijs.com/">PixiJS</a>官网乍一看很像一个游戏引擎，但是上面也明确说了：“用最快、最灵活的2DWebGL渲染器创建精美的数字内容”(谷歌机翻)。</p>
+<h1>游戏开发的技能树</h1>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0eefa193458c4de386328b087ebe7bf6~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
+<h1>PixiJS+Web开发</h1>
+<h2 id="Pixi简介">Pixi简介</h2>
+<p><a target="_blank" rel="noopener" href="https://pixijs.com/">PixiJS</a>官网乍一看很像一个游戏引擎，但是上面也明确说了：“用最快、最灵活的2DWebGL渲染器创建精美的数字内容”(谷歌机翻)。</p>
 <ul>
 <li>它本质上还是一个<strong>渲染引擎</strong>，而且自称做得最好。</li>
-<li>它<strong>不仅仅能做游戏</strong>，还能使用这个技术去<strong>创建任何交互式内容</strong>，比如<strong>APP</strong>， 还能够在它的基础上做自己的游戏引擎。(AVG.js 和Phaserjs 的渲染引擎就是Pixi) </li>
+<li>它<strong>不仅仅能做游戏</strong>，还能使用这个技术去<strong>创建任何交互式内容</strong>，比如<strong>APP</strong>， 还能够在它的基础上做自己的游戏引擎。(AVG.js 和Phaserjs 的渲染引擎就是Pixi)</li>
 </ul>
 <p>前置技术栈</p>
 <ul>
@@ -648,81 +691,114 @@
 <li>用过JSON文件，知道是用来干什么的</li>
 <li>了解过Canvas的绘图API</li>
 </ul>
-<h2 id="在web项目中加载一个游戏玩法"><a href="#在web项目中加载一个游戏玩法" class="headerlink" title="在web项目中加载一个游戏玩法"></a>在web项目中加载一个游戏玩法</h2><ol>
-<li><p>安装和引入</p>
+<h2 id="在web项目中加载一个游戏玩法">在web项目中加载一个游戏玩法</h2>
+<ol>
+<li>
+<p>安装和引入</p>
 <ul>
 <li><strong>npm安装</strong> 或者 通过script标签引入<code>&lt;script src=”pixi.min.js&quot; &gt;&lt;/script&gt;</code></li>
 </ul>
 </li>
-<li><p>创建Pixi应用和舞台（Stage）</p>
+<li>
+<p>创建Pixi应用和舞台（Stage）</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 第一步，创建一个显示的矩形区域，创建一个Pixi应用实例的时候会自动创建一个canvas并计算出怎么让你的图片在canvas中显示。</span></span><br><span class="line"><span class="keyword">let</span> app = <span class="keyword">new</span> <span class="variable constant_">PIXI</span>.<span class="title class_">Application</span>(&#123;<span class="attr">width</span>: <span class="number">250</span>, <span class="attr">height</span>: <span class="number">250</span> &#125;);</span><br><span class="line"><span class="comment">// app.stage就是一个[舞台] 它包含了所有你想用Pixi显示的东西。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 第二步，把canvas添加到DOM Tree中。这个时候就显示了一个250*250的纯黑色的界面</span></span><br><span class="line"><span class="variable language_">document</span>.<span class="property">body</span>.<span class="title function_">appendChild</span>(app.<span class="property">view</span>);</span><br><span class="line"><span class="comment">// PIXI.Application计算了应该使用Canvas还是WebGL去渲染图像，取决于当前浏览器支持哪一个， 一般优先使用WebGL。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 如果你希望Canvas是透明的，或者强制使用Canvas模式，可以设置</span></span><br><span class="line"><span class="keyword">let</span> app = <span class="keyword">new</span> <span class="variable constant_">PIXI</span>.<span class="title class_">Application</span>(&#123;</span><br><span class="line">    <span class="attr">width</span>: <span class="number">250</span>,</span><br><span class="line">    <span class="attr">height</span>: <span class="number">250</span>,</span><br><span class="line">    <span class="attr">transparent</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">forceCanvas</span>: <span class="literal">true</span>,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>显示一张图片</p>
+<li>
+<p>显示一张图片</p>
 <p>概念理解：Sprite（精灵）</p>
 <ul>
-<li><p>学习CSS的时候可能有听过精灵图/雪碧图的概念，但是不一样。Pixi或者更多游戏引擎中Sprite的概念是一个用于<strong>承载图像的对象</strong>，你能够<strong>控制</strong>它的大小、位置等属性来产生交互、动画。<strong>创建和控制 Sprite</strong> 是学习Pixi很重要的部分</p>
+<li>
+<p>学习CSS的时候可能有听过精灵图/雪碧图的概念，但是不一样。Pixi或者更多游戏引擎中Sprite的概念是一个用于<strong>承载图像的对象</strong>，你能够<strong>控制</strong>它的大小、位置等属性来产生交互、动画。<strong>创建和控制 Sprite</strong> 是学习Pixi很重要的部分</p>
 </li>
-<li><p>而创建一个Sprite需要了解图片怎么加载到Pixi中。这里就有一个概念：<strong>纹理缓存（指可以被GPU处理的图像）</strong></p>
+<li>
+<p>而创建一个Sprite需要了解图片怎么加载到Pixi中。这里就有一个概念：<strong>纹理缓存（指可以被GPU处理的图像）</strong></p>
 <ul>
-<li><p>Pixi使用纹理缓存来存储和引用Sprite所需要的纹理。纹理的名称字符串就是图像的地址。比如现在有一个”images/cat.png”,我们就可以使用<code>PIXl.utils.TextureCache[&quot;images/cat.png&quot;]</code>来在纹理缓存找到他</p>
+<li>
+<p>Pixi使用纹理缓存来存储和引用Sprite所需要的纹理。纹理的名称字符串就是图像的地址。比如现在有一个&quot;images/cat.png&quot;,我们就可以使用<code>PIXl.utils.TextureCache[&quot;images/cat.png&quot;]</code>来在纹理缓存找到他</p>
 </li>
-<li><p>找到它当然要先把它<strong>转化成纹理存储</strong>在纹理缓存中，可以使用<code>PIXI.loader</code>加载进来。</p>
+<li>
+<p>找到它当然要先把它<strong>转化成纹理存储</strong>在纹理缓存中，可以使用<code>PIXI.loader</code>加载进来。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable constant_">PIXI</span>.<span class="property">loader</span>.<span class="title function_">add</span>(<span class="string">&quot;images/cat.png&quot;</span>).<span class="title function_">load</span>(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">let</span> sprite = <span class="keyword">new</span> <span class="variable constant_">PIXI</span>.<span class="title class_">Sprite</span>(</span><br><span class="line">        <span class="variable constant_">PIXI</span>.<span class="property">loader</span>.<span class="property">resources</span>[<span class="string">&quot;images/cat.png&quot;</span>].<span class="property">texture</span></span><br><span class="line">    );</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
-<li><p>现在已经创建了一个Sprite了，下一步就是显示它，将他添加到舞台中</p>
+<li>
+<p>现在已经创建了一个Sprite了，下一步就是显示它，将他添加到舞台中</p>
 <p><code>app.stage.addChild(sprite);</code></p>
 <p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3576ca213d864276b857da604d86fe74~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
 </li>
 </ul>
 </li>
-<li><p>让图片动起来</p>
+<li>
+<p>让图片动起来</p>
 <p>前面我们说到了可以设置Sprite的位置和大小，那如果我希望每帧移动一个像素呢？这时候就需要用到游戏循环。（<strong>任何游戏循环的代码都会每帧调用一次</strong>）</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">app.<span class="property">tiker</span>.<span class="title function_">add</span>(<span class="function"><span class="params">delta</span> =&gt;</span> &#123;</span><br><span class="line">	sprite.<span class="property">x</span> += <span class="number">11</span>;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>然后加亿点点细节<a target="_blank" rel="noopener" href="https://pixijs.io/examples/#/demos-basic/cacheAsBitmap.js">CacheAsBitmap - PixiJS Examples</a></p>
+<li>
+<p>然后加亿点点细节<a target="_blank" rel="noopener" href="https://pixijs.io/examples/#/demos-basic/cacheAsBitmap.js">CacheAsBitmap - PixiJS Examples</a></p>
 </li>
 </ol>
-<h1 id="Cocos-Creator编辑器开发"><a href="#Cocos-Creator编辑器开发" class="headerlink" title="Cocos Creator编辑器开发"></a>Cocos Creator编辑器开发</h1><h2 id="Cocos-Creater介绍"><a href="#Cocos-Creater介绍" class="headerlink" title="Cocos Creater介绍"></a>Cocos Creater介绍</h2><p>Q：Cocos Creator是游戏引擎吗?</p>
-<p>A：Cocos+界面编辑 它是一个<strong>完整的游戏开发解决方案</strong>，包含了轻量高效的<strong>跨平台游戏引擎</strong>，以及能让你更快速开发<br>游戏所需要的各种<strong>图形界面工具</strong>。</p>
+<h1>Cocos Creator编辑器开发</h1>
+<h2 id="Cocos-Creater介绍">Cocos Creater介绍</h2>
+<p>Q：Cocos Creator是游戏引擎吗?</p>
+<p>A：Cocos+界面编辑 它是一个<strong>完整的游戏开发解决方案</strong>，包含了轻量高效的<strong>跨平台游戏引擎</strong>，以及能让你更快速开发<br>
+游戏所需要的各种<strong>图形界面工具</strong>。</p>
 <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7f167c9df12c4eeaab85ad179a4c7686~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
-<h2 id="编辑器集成的能力"><a href="#编辑器集成的能力" class="headerlink" title="编辑器集成的能力"></a>编辑器集成的能力</h2><h3 id="Cocos的工作流"><a href="#Cocos的工作流" class="headerlink" title="Cocos的工作流"></a>Cocos的工作流</h3><p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/980f6078f6d54e45b6954cf615eccbfc~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
+<h2 id="编辑器集成的能力">编辑器集成的能力</h2>
+<h3 id="Cocos的工作流">Cocos的工作流</h3>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/980f6078f6d54e45b6954cf615eccbfc~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
 <p>下载并创建 -&gt; 设计场景&amp;开发 -&gt; 预览和调试 -&gt;  ANYSDK接入 -&gt; 打包发布 -&gt; Cocos Runtime</p>
 <p>上图展示了Cocos的工作流</p>
-<h3 id="创建项目"><a href="#创建项目" class="headerlink" title="创建项目"></a>创建项目</h3><p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/67121fdac5f043a1b213bdf59228178f~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
-<h3 id="搭建场景"><a href="#搭建场景" class="headerlink" title="搭建场景"></a>搭建场景</h3><p>Cocos的工作流——<strong>数据驱动</strong>和场景为核心、组件式开发为核心</p>
+<h3 id="创建项目">创建项目</h3>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/67121fdac5f043a1b213bdf59228178f~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
+<h3 id="搭建场景">搭建场景</h3>
+<p>Cocos的工作流——<strong>数据驱动</strong>和场景为核心、组件式开发为核心</p>
 <p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/02f481104d614872bea1d70292760d3b~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
 <p>可以看到，不需要了解css等直接通过右侧的属性检查器就可以调整图片大小等，低代码</p>
 <p>结点（cc.Node）是承载组建的实体，我们将具有各种功能的组件（如Sprite、SPine、Label）挂载到节点上来让节点具有各式各样的表现和功能。</p>
 <p>由节点来构成节点树，节点树影响真实的渲染层级</p>
 <p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/27368cab4d7e412d8419396ebf210a28~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
-<h3 id="导入资源-显示资源"><a href="#导入资源-显示资源" class="headerlink" title="导入资源 + 显示资源"></a>导入资源 + 显示资源</h3><p>从操作系统中的其他窗口拖拽文件到Cocos Creator窗口中的资源管理器面板上，就能够从外部导入资源。该操作会自动复制资源文件到项目资源文件夹下，并完成导入操作。然后把图片拖到层级管理器即可以生成一个cc.Sprite。</p>
+<h3 id="导入资源-显示资源">导入资源 + 显示资源</h3>
+<p>从操作系统中的其他窗口拖拽文件到Cocos Creator窗口中的资源管理器面板上，就能够从外部导入资源。该操作会自动复制资源文件到项目资源文件夹下，并完成导入操作。然后把图片拖到层级管理器即可以生成一个cc.Sprite。</p>
 <p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4dd195a77f8f436084e7f9a2e88c564f~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
-<h3 id="脚本挂载"><a href="#脚本挂载" class="headerlink" title="脚本挂载"></a>脚本挂载</h3><p>test.js</p>
+<h3 id="脚本挂载">脚本挂载</h3>
+<p>test.js</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123; property, ccclass &#125; = cc.<span class="property">_decorator</span>;</span><br><span class="line">@cc<span class="keyword">class</span></span><br><span class="line"><span class="title class_">export</span> <span class="keyword">default</span> <span class="keyword">class</span> <span class="title class_">TestComp</span> <span class="keyword">extends</span> <span class="title class_ inherited__">cc.Component</span> &#123;</span><br><span class="line">    <span class="title function_">onLoad</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;TestComp onload&#x27;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="title function_">start</span>(<span class="params"></span>) &#123;&#125;</span><br><span class="line">    </span><br><span class="line">    <span class="title function_">update</span>(<span class="params">dt</span>) &#123;&#125;</span><br><span class="line"></span><br><span class="line">    <span class="title function_">onDestroy</span>(<span class="params"></span>) &#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>然后在Cocos Creator中对应的节点把脚本挂载上去。</p>
 <p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/fc5a271f557344329dba8a40efc35d9d~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
-<h3 id="运行调试"><a href="#运行调试" class="headerlink" title="运行调试"></a>运行调试</h3><p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ca330d4fbcc74bc288c6e07e9ee576b5~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
-<h2 id="游戏的上线"><a href="#游戏的上线" class="headerlink" title="游戏的上线"></a>游戏的上线</h2><h3 id="构建"><a href="#构建" class="headerlink" title="构建"></a>构建</h3><p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9cd3c931bd594cd98d4ca30d421b810d~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
+<h3 id="运行调试">运行调试</h3>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ca330d4fbcc74bc288c6e07e9ee576b5~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
+<h2 id="游戏的上线">游戏的上线</h2>
+<h3 id="构建">构建</h3>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9cd3c931bd594cd98d4ca30d421b810d~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
 <p>构建游戏，可以选择多平台，产物即对应生成，比如Web Mobile</p>
 <p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6c91d97b6e864b0f94ff25c3424edff3~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
 <p>产物可以直接部署在对应的平台，比如web产物部署到服务器、小游戏产物部署到开发者平台。</p>
-<h1 id="小游戏“小”在哪里"><a href="#小游戏“小”在哪里" class="headerlink" title="小游戏“小”在哪里"></a>小游戏“小”在哪里</h1><h2 id="游戏发布平台的差异性"><a href="#游戏发布平台的差异性" class="headerlink" title="游戏发布平台的差异性"></a>游戏发布平台的差异性</h2><p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c8565eb975b4490983eb4211b1ca467b~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
+<h1>小游戏“小”在哪里</h1>
+<h2 id="游戏发布平台的差异性">游戏发布平台的差异性</h2>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c8565eb975b4490983eb4211b1ca467b~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
 <ul>
-<li><p>游戏逻辑上，没有什么差别</p>
+<li>
+<p>游戏逻辑上，没有什么差别</p>
 </li>
-<li><p>游戏引擎的不同</p>
+<li>
+<p>游戏引擎的不同</p>
 </li>
-<li>平台API的差异（最需要关注）</li>
-<li>渲染等差异不大</li>
+<li>
+<p>平台API的差异（最需要关注）</p>
+</li>
+<li>
+<p>渲染等差异不大</p>
+</li>
 </ul>
-<h2 id="游戏开发的重要理念"><a href="#游戏开发的重要理念" class="headerlink" title="游戏开发的重要理念"></a>游戏开发的重要理念</h2><p><strong>激发创造</strong></p>
+<h2 id="游戏开发的重要理念">游戏开发的重要理念</h2>
+<p><strong>激发创造</strong></p>
 <ul>
 <li>把游戏开发过程当做一个游戏，在规则（自己的技术栈、限定主题、限定资源）的约束下通过创意和技术力挑战个高质量的游戏吧！</li>
 <li>创意不要被约束了</li>
 </ul>
-<h1 id="总结感想"><a href="#总结感想" class="headerlink" title="总结感想"></a>总结感想</h1><p>本节课讲了前端游戏场景下的游戏开发与普通游戏开发的差异，并且介绍了一些游戏引擎，给出了游戏开发的技能树，在最后也简单介绍了利用Cocos Creator或PixiJS进行游戏开发的步骤。</p>
+<h1>总结感想</h1>
+<p>本节课讲了前端游戏场景下的游戏开发与普通游戏开发的差异，并且介绍了一些游戏引擎，给出了游戏开发的技能树，在最后也简单介绍了利用Cocos Creator或PixiJS进行游戏开发的步骤。</p>
 <blockquote>
 <p>本文引用的内容大部分来自ycaptain老师的课</p>
 </blockquote>
@@ -875,7 +951,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E5%89%8D%E7%AB%AF%E5%9C%BA%E6%99%AF%E4%B8%8B%E7%9A%84%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">前端场景下的游戏开发</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%BC%80%E5%8F%91%E8%A7%92%E8%89%B2%E5%92%8C%E9%93%BE%E8%B7%AF"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">开发角色和链路</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E7%94%A8%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">为什么要用游戏引擎</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%89%8D%E7%AB%AF%E8%BF%87%E6%B8%A1%E5%88%B0%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">前端过渡到游戏开发</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">游戏引擎</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%B8%82%E9%9D%A2%E4%B8%8A%E5%B8%B8%E8%A7%81%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">市面上常见游戏引擎</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%89%B9%E5%AE%9A%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E"><span class="toc-nav-number">2.1.1.</span> <span class="toc-nav-text">特定类型的客户端游戏引擎</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#The-NVL-Maker"><span class="toc-nav-number">2.1.1.1.</span> <span class="toc-nav-text">The NVL Maker</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#RPG-Maker"><span class="toc-nav-number">2.1.1.2.</span> <span class="toc-nav-text">RPG Maker</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Web%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E"><span class="toc-nav-number">2.1.2.</span> <span class="toc-nav-text">Web游戏引擎</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Cocos"><span class="toc-nav-number">2.1.2.1.</span> <span class="toc-nav-text">Cocos</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Laya"><span class="toc-nav-number">2.1.2.2.</span> <span class="toc-nav-text">Laya</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Egret"><span class="toc-nav-number">2.1.2.3.</span> <span class="toc-nav-text">Egret</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#CreateJS-amp-Phaser"><span class="toc-nav-number">2.1.2.4.</span> <span class="toc-nav-text">CreateJS &amp; Phaser</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%8A%9F%E8%83%BD%E5%BC%95%E6%93%8E"><span class="toc-nav-number">2.1.3.</span> <span class="toc-nav-text">功能引擎</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#2D%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E%E7%9A%84%E6%8A%80%E6%9C%AF%E6%9E%B6%E6%9E%84"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">2D游戏引擎的技术架构</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Web%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E%E7%9A%84%E6%B8%B2%E6%9F%93%E5%8E%9F%E7%90%86"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">Web游戏引擎的渲染原理</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91%E7%9A%84%E6%8A%80%E8%83%BD%E6%A0%91"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">游戏开发的技能树</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#PixiJS-Web%E5%BC%80%E5%8F%91"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">PixiJS+Web开发</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Pixi%E7%AE%80%E4%BB%8B"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">Pixi简介</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%9C%A8web%E9%A1%B9%E7%9B%AE%E4%B8%AD%E5%8A%A0%E8%BD%BD%E4%B8%80%E4%B8%AA%E6%B8%B8%E6%88%8F%E7%8E%A9%E6%B3%95"><span class="toc-nav-number">4.2.</span> <span class="toc-nav-text">在web项目中加载一个游戏玩法</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Cocos-Creator%E7%BC%96%E8%BE%91%E5%99%A8%E5%BC%80%E5%8F%91"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">Cocos Creator编辑器开发</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Cocos-Creater%E4%BB%8B%E7%BB%8D"><span class="toc-nav-number">5.1.</span> <span class="toc-nav-text">Cocos Creater介绍</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%BC%96%E8%BE%91%E5%99%A8%E9%9B%86%E6%88%90%E7%9A%84%E8%83%BD%E5%8A%9B"><span class="toc-nav-number">5.2.</span> <span class="toc-nav-text">编辑器集成的能力</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Cocos%E7%9A%84%E5%B7%A5%E4%BD%9C%E6%B5%81"><span class="toc-nav-number">5.2.1.</span> <span class="toc-nav-text">Cocos的工作流</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE"><span class="toc-nav-number">5.2.2.</span> <span class="toc-nav-text">创建项目</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%90%AD%E5%BB%BA%E5%9C%BA%E6%99%AF"><span class="toc-nav-number">5.2.3.</span> <span class="toc-nav-text">搭建场景</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AF%BC%E5%85%A5%E8%B5%84%E6%BA%90-%E6%98%BE%E7%A4%BA%E8%B5%84%E6%BA%90"><span class="toc-nav-number">5.2.4.</span> <span class="toc-nav-text">导入资源 + 显示资源</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%84%9A%E6%9C%AC%E6%8C%82%E8%BD%BD"><span class="toc-nav-number">5.2.5.</span> <span class="toc-nav-text">脚本挂载</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%BF%90%E8%A1%8C%E8%B0%83%E8%AF%95"><span class="toc-nav-number">5.2.6.</span> <span class="toc-nav-text">运行调试</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%B8%B8%E6%88%8F%E7%9A%84%E4%B8%8A%E7%BA%BF"><span class="toc-nav-number">5.3.</span> <span class="toc-nav-text">游戏的上线</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%9E%84%E5%BB%BA"><span class="toc-nav-number">5.3.1.</span> <span class="toc-nav-text">构建</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E5%B0%8F%E6%B8%B8%E6%88%8F%E2%80%9C%E5%B0%8F%E2%80%9D%E5%9C%A8%E5%93%AA%E9%87%8C"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">小游戏“小”在哪里</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%B8%B8%E6%88%8F%E5%8F%91%E5%B8%83%E5%B9%B3%E5%8F%B0%E7%9A%84%E5%B7%AE%E5%BC%82%E6%80%A7"><span class="toc-nav-number">6.1.</span> <span class="toc-nav-text">游戏发布平台的差异性</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91%E7%9A%84%E9%87%8D%E8%A6%81%E7%90%86%E5%BF%B5"><span class="toc-nav-number">6.2.</span> <span class="toc-nav-text">游戏开发的重要理念</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E6%80%BB%E7%BB%93%E6%84%9F%E6%83%B3"><span class="toc-nav-number">7.</span> <span class="toc-nav-text">总结感想</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">前端场景下的游戏开发</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%BC%80%E5%8F%91%E8%A7%92%E8%89%B2%E5%92%8C%E9%93%BE%E8%B7%AF"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">开发角色和链路</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E7%94%A8%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">为什么要用游戏引擎</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%89%8D%E7%AB%AF%E8%BF%87%E6%B8%A1%E5%88%B0%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">前端过渡到游戏开发</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">游戏引擎</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%B8%82%E9%9D%A2%E4%B8%8A%E5%B8%B8%E8%A7%81%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">市面上常见游戏引擎</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%89%B9%E5%AE%9A%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E"><span class="toc-nav-number">2.1.1.</span> <span class="toc-nav-text">特定类型的客户端游戏引擎</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#The-NVL-Maker"><span class="toc-nav-number">2.1.1.1.</span> <span class="toc-nav-text">The NVL Maker</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#RPG-Maker"><span class="toc-nav-number">2.1.1.2.</span> <span class="toc-nav-text">RPG Maker</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Web%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E"><span class="toc-nav-number">2.1.2.</span> <span class="toc-nav-text">Web游戏引擎</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Cocos"><span class="toc-nav-number">2.1.2.1.</span> <span class="toc-nav-text">Cocos</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Laya"><span class="toc-nav-number">2.1.2.2.</span> <span class="toc-nav-text">Laya</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Egret"><span class="toc-nav-number">2.1.2.3.</span> <span class="toc-nav-text">Egret</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#CreateJS-Phaser"><span class="toc-nav-number">2.1.2.4.</span> <span class="toc-nav-text">CreateJS &amp; Phaser</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%8A%9F%E8%83%BD%E5%BC%95%E6%93%8E"><span class="toc-nav-number">2.1.3.</span> <span class="toc-nav-text">功能引擎</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#2D%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E%E7%9A%84%E6%8A%80%E6%9C%AF%E6%9E%B6%E6%9E%84"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">2D游戏引擎的技术架构</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Web%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E%E7%9A%84%E6%B8%B2%E6%9F%93%E5%8E%9F%E7%90%86"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">Web游戏引擎的渲染原理</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">游戏开发的技能树</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">PixiJS+Web开发</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Pixi%E7%AE%80%E4%BB%8B"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">Pixi简介</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%9C%A8web%E9%A1%B9%E7%9B%AE%E4%B8%AD%E5%8A%A0%E8%BD%BD%E4%B8%80%E4%B8%AA%E6%B8%B8%E6%88%8F%E7%8E%A9%E6%B3%95"><span class="toc-nav-number">4.2.</span> <span class="toc-nav-text">在web项目中加载一个游戏玩法</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">Cocos Creator编辑器开发</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Cocos-Creater%E4%BB%8B%E7%BB%8D"><span class="toc-nav-number">5.1.</span> <span class="toc-nav-text">Cocos Creater介绍</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%BC%96%E8%BE%91%E5%99%A8%E9%9B%86%E6%88%90%E7%9A%84%E8%83%BD%E5%8A%9B"><span class="toc-nav-number">5.2.</span> <span class="toc-nav-text">编辑器集成的能力</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Cocos%E7%9A%84%E5%B7%A5%E4%BD%9C%E6%B5%81"><span class="toc-nav-number">5.2.1.</span> <span class="toc-nav-text">Cocos的工作流</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE"><span class="toc-nav-number">5.2.2.</span> <span class="toc-nav-text">创建项目</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%90%AD%E5%BB%BA%E5%9C%BA%E6%99%AF"><span class="toc-nav-number">5.2.3.</span> <span class="toc-nav-text">搭建场景</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AF%BC%E5%85%A5%E8%B5%84%E6%BA%90-%E6%98%BE%E7%A4%BA%E8%B5%84%E6%BA%90"><span class="toc-nav-number">5.2.4.</span> <span class="toc-nav-text">导入资源 + 显示资源</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%84%9A%E6%9C%AC%E6%8C%82%E8%BD%BD"><span class="toc-nav-number">5.2.5.</span> <span class="toc-nav-text">脚本挂载</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%BF%90%E8%A1%8C%E8%B0%83%E8%AF%95"><span class="toc-nav-number">5.2.6.</span> <span class="toc-nav-text">运行调试</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%B8%B8%E6%88%8F%E7%9A%84%E4%B8%8A%E7%BA%BF"><span class="toc-nav-number">5.3.</span> <span class="toc-nav-text">游戏的上线</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%9E%84%E5%BB%BA"><span class="toc-nav-number">5.3.1.</span> <span class="toc-nav-text">构建</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">小游戏“小”在哪里</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%B8%B8%E6%88%8F%E5%8F%91%E5%B8%83%E5%B9%B3%E5%8F%B0%E7%9A%84%E5%B7%AE%E5%BC%82%E6%80%A7"><span class="toc-nav-number">6.1.</span> <span class="toc-nav-text">游戏发布平台的差异性</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91%E7%9A%84%E9%87%8D%E8%A6%81%E7%90%86%E5%BF%B5"><span class="toc-nav-number">6.2.</span> <span class="toc-nav-text">游戏开发的重要理念</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">7.</span> <span class="toc-nav-text">总结感想</span></a></li></ol>
         
         </div>
       </aside>

@@ -5,6 +5,9 @@
 <head>
   <!-- Google Analytics -->
   
+    <!-- 看板娘  https://github.com/stevenjoezhang/live2d-widget -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+    <script defer src="https://cdn.jsdelivr.net/gh/yusixian/live2d-widget@latest/autoload.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-xxxxxx-xx"></script>
     <script type="text/javascript">
@@ -466,7 +469,9 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h2 id="动画的基本原理"><a href="#动画的基本原理" class="headerlink" title="动画的基本原理"></a>动画的基本原理</h2><h3 id="动画是什么"><a href="#动画是什么" class="headerlink" title="动画是什么"></a>动画是什么</h3><blockquote>
+        <h2 id="动画的基本原理">动画的基本原理</h2>
+<h3 id="动画是什么">动画是什么</h3>
+<blockquote>
 <p>动画是通过快速连续排列彼此差异极小的连续图像来制造运动错觉和变化错觉的过程。</p>
 <p>——维基百科</p>
 </blockquote>
@@ -476,21 +481,25 @@
 <li>彼此差异极小</li>
 <li>制造 <strong>“错觉”</strong> 的过程</li>
 </ul>
-<h3 id="动画发展史"><a href="#动画发展史" class="headerlink" title="动画发展史"></a>动画发展史</h3><p>如今的前端动画技术已经普及</p>
+<h3 id="动画发展史">动画发展史</h3>
+<p>如今的前端动画技术已经普及</p>
 <ol>
-<li><p>常见的前端动画技术</p>
+<li>
+<p>常见的前端动画技术</p>
 <ul>
 <li>Sprite动画、CSS动画、JS动画、SVG动画和WebGL动画</li>
 </ul>
 </li>
-<li><p>按应用分类</p>
+<li>
+<p>按应用分类</p>
 <ul>
 <li>UI动画、基于Web的游戏动画和动画数据可视化</li>
 </ul>
 </li>
 </ol>
 <p>GIF、Flash的出现，一度成为主流，也是在00年的前后，苹果公司认为Flash会导致CPU的负载，耗电加快，宣布全面放弃Flash，所有的苹果设备电池寿命都显著提高。而如今的web动画主要由CSS、JS动画为主。</p>
-<h3 id="计算机动画"><a href="#计算机动画" class="headerlink" title="计算机动画"></a>计算机动画</h3><p><strong>计算机图形学</strong></p>
+<h3 id="计算机动画">计算机动画</h3>
+<p><strong>计算机图形学</strong></p>
 <p>计算机视觉的基础，涵盖点、线、面、体、场的数学构造方法。</p>
 <ul>
 <li>几何和图形数据的输入、存储和压缩。</li>
@@ -500,227 +509,295 @@
 </ul>
 <p><strong>计算机动画</strong> 是计算机图形学的分支，主要包含2D、3D动画。无论动画多么简单，始终需要定义两个基本状态，即<strong>开始状态</strong>和<strong>结束状态</strong>。没有它们，我们将无法定义<strong>插值状态</strong>，从而填补两者之间的空白。</p>
 <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/45af169412774ce685832db37df048dd~tplv-k3u1fbpfcp-watermark.image?" alt="1.gif"></p>
-<p>快速√ 连续排列 × 彼此差异极小× 制造 “错觉”× </p>
-<p>可以看到，上面这张动画只有快速，并没有制造错觉，这就不得不提到帧率这个概念了<del>（打游戏的这个概念应该都熟）</del></p>
+<p>快速√ 连续排列 × 彼此差异极小× 制造 “错觉”×</p>
+<p>可以看到，上面这张动画只有快速，并没有制造错觉，这就不得不提到帧率这个概念了~~（打游戏的这个概念应该都熟）~~</p>
 <ul>
-<li><p>帧：连续变换的多张画面，其中的每一幅画面都是一帧。</p>
+<li>
+<p>帧：连续变换的多张画面，其中的每一幅画面都是一帧。</p>
 </li>
-<li><p>帧率：用于度量一定时间段内的帧数，通常的测量单位是<strong>FPS（frame per second）</strong>。</p>
+<li>
+<p>帧率：用于度量一定时间段内的帧数，通常的测量单位是<strong>FPS（frame per second）</strong>。</p>
 </li>
-<li><p>帧率与人眼：一般<strong>每秒10-12帧</strong>人会认为画面是<strong>连贯</strong>的，这个现象称为<strong>视觉暂留</strong>。对于一些电脑动画和游戏来说，低于 30 FPS 会感受到明显卡顿，目前主流的屏幕、显卡输出为60FPS，效果会明显更流畅。</p>
+<li>
+<p>帧率与人眼：一般<strong>每秒10-12帧</strong>人会认为画面是<strong>连贯</strong>的，这个现象称为<strong>视觉暂留</strong>。对于一些电脑动画和游戏来说，低于 30 FPS 会感受到明显卡顿，目前主流的屏幕、显卡输出为60FPS，效果会明显更流畅。</p>
 </li>
 </ul>
 <p>那么接下来，填补起始点和结束点之间的空白，尝试让动画连贯。</p>
 <p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6918c4fc6f814e83947dd81d18fb16e4~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
 <p>空白的补全方式有以下两种</p>
 <ul>
-<li>补间动画<ul>
+<li>补间动画
+<ul>
 <li>传统动画中，主画师绘制关键帧，交给清稿部门  ，清稿部门的补间动画师补充关键帧进行交付</li>
 <li>(类比到这里，前端动画的补间动画师由浏览器来担任，如<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/@keyframes"><code>@keyframes</code></a>，<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/transition"><code>transition</code></a>)</li>
 </ul>
 </li>
-<li>逐帧动画（Frame By Frame）<ul>
+<li>逐帧动画（Frame By Frame）
+<ul>
 <li>从词语来说意味着全片每一帧逐帧都是<strong>纯手绘</strong>。(如css 的steps实现精灵动画)</li>
 </ul>
 </li>
 </ul>
-<h2 id="前端动画分类"><a href="#前端动画分类" class="headerlink" title="前端动画分类"></a>前端动画分类</h2><h3 id="css动画"><a href="#css动画" class="headerlink" title="css动画"></a>css动画</h3><p>CSS层叠样式表(Cascading Style Sheets），本身是一种样式表语言，用来描述HTML或XML（包括如SVG、MathML、XHTML之类的XML分支语言），而CSS中的 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation"><code>animation</code></a> 属性是  <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation-name"><code>animation-name</code></a>，<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation-duration"><code>animation-duration</code></a>, <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation-timing-function"><code>animation-timing-function</code></a>，<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation-delay"><code>animation-delay</code></a>，<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation-iteration-count"><code>animation-iteration-count</code></a>，<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation-direction"><code>animation-direction</code></a>，<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation-fill-mode"><code>animation-fill-mode</code></a> 和 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation-play-state"><code>animation-play-state</code></a> 属性的一个简写属性形式。</p>
-<h4 id="animation-name"><a href="#animation-name" class="headerlink" title="animation-name"></a>animation-name</h4><p> <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation-name"><code>animation-name</code></a> 属性指定应用的一系列动画，每个名称代表一个由<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/@keyframes"><code>@keyframes</code></a>定义的动画序列，其值如下</p>
+<h2 id="前端动画分类">前端动画分类</h2>
+<h3 id="css动画">css动画</h3>
+<p>CSS层叠样式表(Cascading Style Sheets），本身是一种样式表语言，用来描述HTML或XML（包括如SVG、MathML、XHTML之类的XML分支语言），而CSS中的 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation"><code>animation</code></a> 属性是  <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation-name"><code>animation-name</code></a>，<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation-duration"><code>animation-duration</code></a>, <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation-timing-function"><code>animation-timing-function</code></a>，<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation-delay"><code>animation-delay</code></a>，<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation-iteration-count"><code>animation-iteration-count</code></a>，<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation-direction"><code>animation-direction</code></a>，<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation-fill-mode"><code>animation-fill-mode</code></a> 和 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation-play-state"><code>animation-play-state</code></a> 属性的一个简写属性形式。</p>
+<h4 id="animation-name">animation-name</h4>
+<p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation-name"><code>animation-name</code></a> 属性指定应用的一系列动画，每个名称代表一个由<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/@keyframes"><code>@keyframes</code></a>定义的动画序列，其值如下</p>
 <ul>
 <li><code>none</code> （初始值）特殊关键字，表示无关键帧。可以不改变其他标识符的顺序而使动画失效，或者使层叠的动画样式失效。</li>
 <li><code>IDENT</code> 标识动画的字符串，由大小写敏感的字母a-z、数字0-9、下划线(_)和/或横线(-)组成。第一个非横线字符必须是字母，数字不能在字母前面，不允许两个横线出现在开始位置。</li>
 </ul>
 <p>多个动画定义使用逗号分隔开即可</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* Single animation */</span></span><br><span class="line"><span class="attribute">animation-name</span>: none;</span><br><span class="line"><span class="attribute">animation-name</span>: test_05;</span><br><span class="line"><span class="attribute">animation-name</span>: -specific;</span><br><span class="line"><span class="attribute">animation-name</span>: sliding-vertically;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* Multiple animations */</span></span><br><span class="line"><span class="attribute">animation-name</span>: test1, animation4;</span><br><span class="line"><span class="attribute">animation-name</span>: none, -moz-specific, sliding;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* Global values */</span></span><br><span class="line"><span class="attribute">animation-name</span>: initial</span><br><span class="line">animation-name: inherit</span><br><span class="line">animation-name: unset</span><br></pre></td></tr></table></figure>
-<h4 id="animation-duration"><a href="#animation-duration" class="headerlink" title="animation-duration"></a>animation-duration</h4><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation-duration"><code>animation-duration</code></a> 属性指定一个动画周期的时长。默认值为0s，表示无动画。</p>
+<h4 id="animation-duration">animation-duration</h4>
+<p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation-duration"><code>animation-duration</code></a> 属性指定一个动画周期的时长。默认值为0s，表示无动画。</p>
 <p>它的值为一个动画周期的时长，单位为秒(s)或者毫秒(ms)，无单位值无效。也可以指定多个值，他的多个值与animation-name一一对应</p>
 <blockquote>
-<p><strong>注意：</strong>负值无效，浏览器会忽略该声明，但是一些早期的带前缀的声明会将负值当作0s。</p>
+<p>**注意：**负值无效，浏览器会忽略该声明，但是一些早期的带前缀的声明会将负值当作0s。</p>
 </blockquote>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* Single animation */</span></span><br><span class="line"><span class="attribute">animation-duration</span>: <span class="number">6s</span></span><br><span class="line">animation-duration: <span class="number">120ms</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/* Multiple animations */</span></span><br><span class="line">animation-duration: <span class="number">1s</span>, <span class="number">15s</span></span><br><span class="line">animation-duration: <span class="number">10s</span>, <span class="number">30s</span>, <span class="number">230ms</span></span><br></pre></td></tr></table></figure>
-<h4 id="animation-timing-function"><a href="#animation-timing-function" class="headerlink" title="animation-timing-function"></a>animation-timing-function</h4><p> <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation-timing-function"><code>animation-timing-function</code></a> 属性定义CSS动画在每一动画周期中执行的节奏。可能值为一或多个，它的多个值也是与animation-name一一对应。本身CSS定义了一些缓动函数，我们可以调用这些缓动函数来达到缓入缓出的效果。</p>
+<h4 id="animation-timing-function">animation-timing-function</h4>
+<p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation-timing-function"><code>animation-timing-function</code></a> 属性定义CSS动画在每一动画周期中执行的节奏。可能值为一或多个，它的多个值也是与animation-name一一对应。本身CSS定义了一些缓动函数，我们可以调用这些缓动函数来达到缓入缓出的效果。</p>
 <blockquote>
 <p>对于关键帧动画来说，timing function作用于一个关键帧周期而非整个动画周期，即从关键帧开始开始，到关键帧结束结束。</p>
 <p>定义于一个关键帧区块的缓动函数(animation timing function)应用到该关键帧；另外，若该关键帧没有定义缓动函数，则使用定义于整个动画的缓动函数。</p>
 </blockquote>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* Keyword values */</span></span><br><span class="line"><span class="attribute">animation-timing-function</span>: ease;</span><br><span class="line"><span class="attribute">animation-timing-function</span>: ease-in;</span><br><span class="line"><span class="attribute">animation-timing-function</span>: ease-out;</span><br><span class="line"><span class="attribute">animation-timing-function</span>: ease-in-out;</span><br><span class="line"><span class="attribute">animation-timing-function</span>: linear;</span><br><span class="line"><span class="attribute">animation-timing-function</span>: step-start;</span><br><span class="line"><span class="attribute">animation-timing-function</span>: step-end;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* Function values */</span></span><br><span class="line"><span class="attribute">animation-timing-function</span>: <span class="built_in">cubic-bezier</span>(<span class="number">0.1</span>, <span class="number">0.7</span>, <span class="number">1.0</span>, <span class="number">0.1</span>);</span><br><span class="line"><span class="attribute">animation-timing-function</span>: <span class="built_in">steps</span>(<span class="number">4</span>, end);</span><br><span class="line"><span class="attribute">animation-timing-function</span>: <span class="built_in">frames</span>(<span class="number">10</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">/* Multiple animations */</span></span><br><span class="line"><span class="attribute">animation-timing-function</span>: ease, step-start, <span class="built_in">cubic-bezier</span>(<span class="number">0.1</span>, <span class="number">0.7</span>, <span class="number">1.0</span>, <span class="number">0.1</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">/* Global values */</span></span><br><span class="line"><span class="attribute">animation-timing-function</span>: inherit;</span><br><span class="line"><span class="attribute">animation-timing-function</span>: initial;</span><br><span class="line"><span class="attribute">animation-timing-function</span>: unset;</span><br></pre></td></tr></table></figure>
-<h4 id="animation-delay"><a href="#animation-delay" class="headerlink" title="animation-delay"></a>animation-delay</h4><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation-delay"><code>animation-delay</code></a> 定义动画于何时开始，即从动画应用在元素上到动画开始的这段时间的长度。（就是延迟多久开始）</p>
+<h4 id="animation-delay">animation-delay</h4>
+<p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation-delay"><code>animation-delay</code></a> 定义动画于何时开始，即从动画应用在元素上到动画开始的这段时间的长度。（就是延迟多久开始）</p>
 <p><code>0s</code>是该属性的默认值，代表动画在应用到元素上后立即开始执行。否则，该属性的值代表动画样式应用到元素上后到开始执行前的时间长度；</p>
-<p><strong>定义一个负值会让动画立即开始。但是动画会从它的动画序列中某位置开始。</strong>例如，如果设定值为-1s，动画会从它的动画序列的第1秒位置处立即开始。</p>
+<p>**定义一个负值会让动画立即开始。但是动画会从它的动画序列中某位置开始。**例如，如果设定值为-1s，动画会从它的动画序列的第1秒位置处立即开始。</p>
 <p>如果为动画延迟指定了一个负值，但起始值是隐藏的，则从动画应用于元素的那一刻起就获取起始值。</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">animation-delay</span>: <span class="number">3s</span>;</span><br><span class="line"><span class="attribute">animation-delay</span>: <span class="number">2s</span>, <span class="number">4ms</span>;</span><br></pre></td></tr></table></figure>
-<h4 id="animation-iteration-count"><a href="#animation-iteration-count" class="headerlink" title="animation-iteration-count"></a>animation-iteration-count</h4><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation-iteration-count"><code>animation-iteration-count</code></a> 定义动画在结束前<strong>运行的次数</strong> 可以是1次也可以是无限循环.</p>
+<h4 id="animation-iteration-count">animation-iteration-count</h4>
+<p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation-iteration-count"><code>animation-iteration-count</code></a> 定义动画在结束前<strong>运行的次数</strong> 可以是1次也可以是无限循环.</p>
 <ul>
-<li><p><code>infinite</code></p>
+<li>
+<p><code>infinite</code></p>
 <p>无限循环播放动画</p>
 </li>
-<li><p><code>&lt;number&gt;</code></p>
+<li>
+<p><code>&lt;number&gt;</code></p>
 <p>动画播放的次数；默认值为<code>1</code>。可以用<strong>小数定义循环</strong>，来<strong>播放动画周期的一部分</strong>：例如，<code>0.5</code> 将播放到动画周期的一半。不可为负值。</p>
 </li>
 </ul>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 值为关键字 */</span></span><br><span class="line"><span class="attribute">animation-iteration-count</span>: infinite;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 值为数字 */</span></span><br><span class="line"><span class="attribute">animation-iteration-count</span>: <span class="number">3</span>;</span><br><span class="line"><span class="attribute">animation-iteration-count</span>: <span class="number">2.4</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 指定多个值 */</span></span><br><span class="line"><span class="attribute">animation-iteration-count</span>: <span class="number">2</span>, <span class="number">0</span>, infinite;</span><br></pre></td></tr></table></figure>
 <p>它的多值跟duration不同，它是在每个动画开始和结束的时候切换自己的执行次数</p>
-<h4 id="animation-direction"><a href="#animation-direction" class="headerlink" title="animation-direction"></a>animation-direction</h4><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation-direction"><code>animation-direction</code></a> 属性指示动画是否反向播放</p>
+<h4 id="animation-direction">animation-direction</h4>
+<p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation-direction"><code>animation-direction</code></a> 属性指示动画是否反向播放</p>
 <ul>
-<li><p><code>normal</code> (默认值)</p>
+<li>
+<p><code>normal</code> (默认值)</p>
 <p>每个循环内动画<strong>向前循环</strong>，换言之，每个动画循环结束，动画重置到起点重新开始，这是默认属性。</p>
 </li>
-<li><p><code>alternate</code></p>
+<li>
+<p><code>alternate</code></p>
 <p>动画<strong>交替反向运行</strong>，反向运行时，动画<strong>按步后退</strong>，同时，<strong>带时间功能的函数也反向</strong>，比如，<code>ease-in</code> 在反向时成为 <code>ease-out</code>。计数取决于开始时是奇数迭代还是偶数迭代</p>
 </li>
-<li><p><code>reverse</code></p>
+<li>
+<p><code>reverse</code></p>
 <p><strong>反向运行动画</strong>，每周期结束动画由尾到头运行。</p>
 </li>
-<li><p><code>alternate-reverse</code></p>
+<li>
+<p><code>alternate-reverse</code></p>
 <p><strong>反向交替</strong>， 反向开始交替</p>
 <p>动画<strong>第一次运行时是反向的，然后下一次是正向，后面依次循环</strong>。决定奇数次或偶数次的计数从1开始。</p>
 </li>
 </ul>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">animation-direction</span>: normal</span><br><span class="line">animation-direction: reverse</span><br><span class="line">animation-direction: alternate</span><br><span class="line">animation-direction: alternate-reverse</span><br><span class="line">animation-direction: normal, reverse</span><br><span class="line">animation-direction: alternate, reverse, normal</span><br></pre></td></tr></table></figure>
-<h4 id="animation-fill-mode"><a href="#animation-fill-mode" class="headerlink" title="animation-fill-mode"></a>animation-fill-mode</h4><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation-fill-mode"><code>animation-fill-mode</code></a> 属性设置CSS动画在执行之前和之后如何将样式应用于其目标。</p>
+<h4 id="animation-fill-mode">animation-fill-mode</h4>
+<p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation-fill-mode"><code>animation-fill-mode</code></a> 属性设置CSS动画在执行之前和之后如何将样式应用于其目标。</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* Single animation */</span></span><br><span class="line"><span class="attribute">animation-fill-mode</span>: none;</span><br><span class="line"><span class="attribute">animation-fill-mode</span>: forwards;</span><br><span class="line"><span class="attribute">animation-fill-mode</span>: backwards;</span><br><span class="line"><span class="attribute">animation-fill-mode</span>: both;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* Multiple animations */</span></span><br><span class="line"><span class="attribute">animation-fill-mode</span>: none, backwards;</span><br><span class="line"><span class="attribute">animation-fill-mode</span>: both, forwards, none;</span><br></pre></td></tr></table></figure>
 <ul>
-<li><p><code>none</code> (默认)</p>
+<li>
+<p><code>none</code> (默认)</p>
 <p>当动画未执行时，<strong>动画将不会将任何样式应用于目标</strong>，而是已经赋予给该元素的 CSS 规则来显示该元素。这是默认值。</p>
 </li>
-<li><p><code>forwards</code></p>
+<li>
+<p><code>forwards</code></p>
 <p>目标将保留由执行期间<strong>遇到的最后一个<a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes">关键帧</a>计算值</strong>。 最后一个关键帧取决于<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation-direction"><code>animation-direction</code></a>和<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation-iteration-count"><code>animation-iteration-count</code></a>的值（就是<strong>最后一个关键帧是什么样子后面就一直会是这个样子</strong>）</p>
 </li>
-<li><p><code>backwards</code></p>
+<li>
+<p><code>backwards</code></p>
 <p>动画将在应用于目标时<strong>立即应用第一个关键帧中定义的值</strong>，<strong>并在<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation-delay"><code>animation-delay</code></a>期间保留此值</strong>。（这个很重要，delay几s进行的） 第一个关键帧取决于<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation-direction"><code>animation-direction</code></a>的值：<code>animation-direction</code>first relevant keyframe<code>normal</code> or <code>alternate``0%</code> or <code>from``reverse</code> or <code>alternate-reverse``100%</code> or <code>to</code></p>
 </li>
-<li><p><code>both</code></p>
+<li>
+<p><code>both</code></p>
 <p>动画将遵循<code>forwards</code>和<code>backwards</code>的规则，从而在两个方向上扩展动画属性。（就是上述二者兼有）</p>
 </li>
 </ul>
 <blockquote>
 <p><strong>注意</strong>：当您在<code>animation-*</code>属性上指定多个以逗号分隔的值时，它们将根据值的数量以不同的方式分配给 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation-name"><code>animation-name</code></a> 属性中指定的动画。 有关更多信息，请参阅<a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations#setting_multiple_animation_property_values">设置多个动画属性值</a>。</p>
 </blockquote>
-<h4 id="animation-play-state"><a href="#animation-play-state" class="headerlink" title="animation-play-state"></a>animation-play-state</h4><p> <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation-play-state"><code>animation-play-state</code></a> 属性定义一个动画<strong>是否运行或者暂停</strong>。可以通过<strong>查询它来确定动画是否正在运行</strong>。另外，它的值可以被设置为<strong>暂停和恢复的动画的重放</strong>。恢复一个已暂停的动画，将<strong>从它开始暂停的时候</strong>开始恢复，而不是从动画序列的起点开始。</p>
+<h4 id="animation-play-state">animation-play-state</h4>
+<p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation-play-state"><code>animation-play-state</code></a> 属性定义一个动画<strong>是否运行或者暂停</strong>。可以通过<strong>查询它来确定动画是否正在运行</strong>。另外，它的值可以被设置为<strong>暂停和恢复的动画的重放</strong>。恢复一个已暂停的动画，将<strong>从它开始暂停的时候</strong>开始恢复，而不是从动画序列的起点开始。</p>
 <ul>
-<li><p><code>running</code></p>
+<li>
+<p><code>running</code></p>
 <p>当前动画正在运行。</p>
 </li>
-<li><p><code>paused</code></p>
+<li>
+<p><code>paused</code></p>
 <p>当前动画已被停止。</p>
 </li>
 </ul>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* Single animation */</span></span><br><span class="line"><span class="attribute">animation-play-state</span>: running;</span><br><span class="line"><span class="attribute">animation-play-state</span>: paused;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* Multiple animations */</span></span><br><span class="line"><span class="attribute">animation-play-state</span>: paused, running, running;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* Global values */</span></span><br><span class="line"><span class="attribute">animation-play-state</span>: inherit;</span><br><span class="line"><span class="attribute">animation-play-state</span>: initial;</span><br><span class="line"><span class="attribute">animation-play-state</span>: unset;</span><br></pre></td></tr></table></figure>
 <p>一个栗子：<a target="_blank" rel="noopener" href="https://codepen.io/mikegolus/pen/jJzRwJ">CSS BEER! (codepen.io)</a></p>
 <p>去看了看这个大佬的其他项目，都很有意思！<a target="_blank" rel="noopener" href="https://codepen.io/mikegolus/pen/aQVdLV">#codevember - 19 - CSS Eggs (codepen.io)</a>、<a target="_blank" rel="noopener" href="https://codepen.io/mikegolus/pen/OwrPgB">Periodic Table of Elements - HTML/CSS (codepen.io)</a></p>
-<h4 id="transform-API"><a href="#transform-API" class="headerlink" title="transform API"></a><strong>transform</strong> API</h4><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform"><code>transform</code></a> 属性允许你旋转，缩放，倾斜或平移给定元素。这是通过修改CSS视觉格式化模型的坐标空间来实现的。</p>
+<h4 id="transform-API"><strong>transform</strong> API</h4>
+<p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform"><code>transform</code></a> 属性允许你旋转，缩放，倾斜或平移给定元素。这是通过修改CSS视觉格式化模型的坐标空间来实现的。</p>
 <p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform-origin"><code>transform-origin</code></a> 指定原点的位置，默认的转换原点是 <code>center</code> 。</p>
 <p><code>transform</code>属性可以指定为关键字值<code>none</code> 或一个或多个<code>&lt;transform-function&gt;</code>值。</p>
 <ul>
-<li><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform-function"><code>transform-function</code></a></p>
+<li>
+<p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform-function"><code>transform-function</code></a></p>
 <p>要应用的一个或多个CSS变换函数。 变换函数按从左到右的顺序相乘，这意味着复合变换按从右到左的顺序有效地应用。</p>
 <ul>
-<li><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform-function#scale"><code>scale</code></a>（缩放）注意其中心为 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform-origin"><code>transform-origin</code></a>（缩放）注意其中心为 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform-origin"><code>transform-origin</code></a> </p>
+<li>
+<p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform-function#scale"><code>scale</code></a>（缩放）注意其中心为 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform-origin"><code>transform-origin</code></a>（缩放）注意其中心为 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform-origin"><code>transform-origin</code></a></p>
 <p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/93f99f7d68214535ac4eaf6ab1f33ff3~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// 沿x轴缩小为<span class="number">50%</span></span><br><span class="line"><span class="attribute">transform</span>: <span class="built_in">scale</span>(<span class="number">0.5</span>);</span><br><span class="line">// 沿x轴缩小为<span class="number">50%</span>，沿y轴放大为之前的<span class="number">2</span>倍</span><br><span class="line"><span class="attribute">transform</span>: <span class="built_in">scale</span>(<span class="number">0.5</span>, <span class="number">2</span>);</span><br></pre></td></tr></table></figure>
 </li>
-<li><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform-function#rotate"><code>rotate</code></a>（旋转） 将元素在不变形的情况下旋转到原点周围(如 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform-origin"><code>transform-origin</code></a> 属性所指定) 。 移动量由指定角度定义;如果为<strong>正值</strong>，则运动将为<strong>顺时针</strong>，如果为负值，则为逆时针 。 180°的旋转称为点反射 (<em>point reflection</em>)。</p>
+<li>
+<p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform-function#rotate"><code>rotate</code></a>（旋转） 将元素在不变形的情况下旋转到原点周围(如 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform-origin"><code>transform-origin</code></a> 属性所指定) 。 移动量由指定角度定义;如果为<strong>正值</strong>，则运动将为<strong>顺时针</strong>，如果为负值，则为逆时针 。 180°的旋转称为点反射 (<em>point reflection</em>)。</p>
 <p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/592ec860492c4406b2178959b0cf4320~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">transform</span>: <span class="built_in">rotate</span>(<span class="number">30deg</span>);</span><br></pre></td></tr></table></figure>
 </li>
-<li><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform-function#skew"><code>skew</code></a> （倾斜） 参数表示倾斜角度，单位deg</p>
+<li>
+<p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform-function#skew"><code>skew</code></a> （倾斜） 参数表示倾斜角度，单位deg</p>
 <p>一个参数时表示水平方向的倾斜角度（ax）；</p>
 <p>两个参数时表示水平、垂直（ax, ay）。</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">transform</span>: <span class="built_in">skew</span>(ax)       </span><br><span class="line">transform: <span class="built_in">skew</span>(ax, ay)</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
-<li><p><code>none</code></p>
+<li>
+<p><code>none</code></p>
 <p>不应用任何变换。</p>
 </li>
 </ul>
 <blockquote>
-<p><strong>注意：</strong>他只能转换由盒模型定位的元素，根据经验如果元素具有display: block，则由盒模型定位元素。</p>
+<p>**注意：**他只能转换由盒模型定位的元素，根据经验如果元素具有display: block，则由盒模型定位元素。</p>
 </blockquote>
 <p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/transition"><code>transition</code></a> 过渡动画，在dom加载完成或class发生变化时触发，这个属性是 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/transition-property"><code>transition-property</code></a>，<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/transition-duration"><code>transition-duration</code></a>，<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/transition-timing-function"><code>transition-timing-function</code></a> 和 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/transition-delay"><code>transition-delay</code></a> 的一个简写属性。</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* Apply to 1 property */</span></span><br><span class="line"><span class="comment">/* property name | duration */</span></span><br><span class="line"><span class="attribute">transition</span>: margin-right <span class="number">4s</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* property name | duration | delay */</span></span><br><span class="line"><span class="attribute">transition</span>: margin-right <span class="number">4s</span> <span class="number">1s</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* property name | duration | timing function */</span></span><br><span class="line"><span class="attribute">transition</span>: margin-right <span class="number">4s</span> ease-in-out;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* property name | duration | timing function | delay */</span></span><br><span class="line"><span class="attribute">transition</span>: margin-right <span class="number">4s</span> ease-in-out <span class="number">1s</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* Apply to 2 properties */</span></span><br><span class="line"><span class="attribute">transition</span>: margin-right <span class="number">4s</span>, color <span class="number">1s</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* Apply to all changed properties */</span></span><br><span class="line"><span class="attribute">transition</span>: all <span class="number">0.5s</span> ease-out;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* Global values */</span></span><br><span class="line"><span class="attribute">transition</span>: inherit;</span><br><span class="line"><span class="attribute">transition</span>: initial;</span><br><span class="line"><span class="attribute">transition</span>: unset;</span><br></pre></td></tr></table></figure>
-<h4 id="keyframe实现动画"><a href="#keyframe实现动画" class="headerlink" title="keyframe实现动画"></a>keyframe实现动画</h4><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/@keyframes"><code>@keyframes</code></a> 关键帧@keyframes at-rule规则通过在动画序列中定义关键帧（或waypoints）的样式来控制CSS动画序列中的中间步骤。和 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Transitions">转换 transition</a> 相比，关键帧 keyframes 可以控制动画序列的中间步骤。</p>
+<h4 id="keyframe实现动画">keyframe实现动画</h4>
+<p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/@keyframes"><code>@keyframes</code></a> 关键帧@keyframes at-rule规则通过在动画序列中定义关键帧（或waypoints）的样式来控制CSS动画序列中的中间步骤。和 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Transitions">转换 transition</a> 相比，关键帧 keyframes 可以控制动画序列的中间步骤。</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">// 从左侧滑入</span><br><span class="line"><span class="keyword">@keyframes</span> slidein &#123;</span><br><span class="line">  <span class="selector-tag">from</span> &#123;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">translateX</span>(<span class="number">0%</span>); </span><br><span class="line">  &#125;</span><br><span class="line">  <span class="selector-tag">to</span> &#123;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">translateX</span>(<span class="number">100%</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">// </span><br><span class="line"><span class="keyword">@keyframes</span> identifier &#123;</span><br><span class="line">  <span class="number">0%</span> &#123; <span class="attribute">top</span>: <span class="number">0</span>; &#125;</span><br><span class="line">  <span class="number">50%</span> &#123; <span class="attribute">top</span>: <span class="number">30px</span>; <span class="attribute">left</span>: <span class="number">20px</span>; &#125;</span><br><span class="line">  <span class="number">50%</span> &#123; <span class="attribute">top</span>: <span class="number">10px</span>; &#125;</span><br><span class="line">  <span class="number">100%</span> &#123; <span class="attribute">top</span>: <span class="number">0</span>; &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>举个栗子：<a target="_blank" rel="noopener" href="https://codepen.io/yusixian/pen/rNGEpoj?editors=1100">my CSS Animation pratice (codepen.io)</a></p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@keyframes</span> identifier &#123;</span><br><span class="line">  <span class="number">0%</span> &#123; <span class="attribute">top</span>: <span class="number">0</span>; <span class="attribute">left</span>: <span class="number">0</span>; &#125;</span><br><span class="line">  <span class="number">50%</span> &#123; <span class="attribute">top</span>: <span class="number">60%</span>; <span class="attribute">left</span>: <span class="number">60%</span>;&#125;</span><br><span class="line">  <span class="number">100%</span> &#123;  <span class="attribute">top</span>: <span class="number">0</span>; <span class="attribute">left</span>: <span class="number">0</span>; &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">@keyframes</span> slidein &#123;</span><br><span class="line">  <span class="selector-tag">from</span> &#123;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">translateX</span>(<span class="number">0%</span>); </span><br><span class="line">  &#125;</span><br><span class="line">  <span class="selector-tag">to</span> &#123;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">translateX</span>(<span class="number">100%</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">body</span>  &gt;<span class="selector-tag">div</span> &#123;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">display</span>:flex;</span><br><span class="line">  <span class="attribute">align-items</span>:center;</span><br><span class="line">  <span class="attribute">justify-content</span>: center;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#fafafa</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#141414</span>;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">10px</span>;</span><br><span class="line">  <span class="attribute">width</span>:<span class="number">20%</span>; <span class="attribute">height</span>:<span class="number">20%</span>;</span><br><span class="line"><span class="comment">/*   从左上到右下，持续5s，延迟1s，无限循环 */</span></span><br><span class="line"><span class="comment">/*   animation: identifier 5s linear 1s infinite; */</span></span><br><span class="line"><span class="comment">/*   向右滑，持续1s，两次 */</span></span><br><span class="line">  <span class="attribute">animation</span>: slidein <span class="number">1s</span> <span class="number">2</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>总结一下：</p>
 <p>css动画的优点：简单、高效、声明式的。不依赖于主线程，采用硬件加速（GPU），通过简单的控制keyframe animation播放和暂停。</p>
-<p>缺点：不能<strong>动态修改或定义动画</strong>，内容不同的动画<strong>无法实现同步</strong>，<strong>多个动画彼此无法堆叠</strong>。<br>适用场景：简单的h5活动/宣传页。<br>推荐库:<a target="_blank" rel="noopener" href="https://animate.style/">Animate.css</a>、<a target="_blank" rel="noopener" href="https://elrumordelaluz.github.io/csshake/">CSShake</a>等。 </p>
-<h3 id="svg实现动画"><a href="#svg实现动画" class="headerlink" title="svg实现动画"></a>svg实现动画</h3><p>svg是基于XML的矢量图形描述语言，它可以与CSS和]S较好的配合，实现svg动画通常有三种方式:<strong>SMIL、JS、CSS</strong></p>
+<p>缺点：不能<strong>动态修改或定义动画</strong>，内容不同的动画<strong>无法实现同步</strong>，<strong>多个动画彼此无法堆叠</strong>。<br>
+适用场景：简单的h5活动/宣传页。<br>
+推荐库:<a target="_blank" rel="noopener" href="https://animate.style/">Animate.css</a>、<a target="_blank" rel="noopener" href="https://elrumordelaluz.github.io/csshake/">CSShake</a>等。</p>
+<h3 id="svg实现动画">svg实现动画</h3>
+<p>svg是基于XML的矢量图形描述语言，它可以与CSS和]S较好的配合，实现svg动画通常有三种方式:<strong>SMIL、JS、CSS</strong></p>
 <ul>
-<li>SMIL：同步多媒体集成语言<ul>
+<li>SMIL：同步多媒体集成语言
+<ul>
 <li>结论∶兼容性不理想,这里不过多讨论,当然有polyfill的方案:<a target="_blank" rel="noopener" href="https://github.com/ericwilligers/svg-animation">https://github.com/ericwilligers/svg-animation</a></li>
 </ul>
 </li>
-<li>使用JS来操作SVG动画自不必多说，目前也有很多现成的类库。例如老牌的Snap.svg以及anime.js，都能让我们快速制作SVG动画。当然,除了这些类库，HTML本身也有原生的 Web Animation 实现。使用Web 8622Animation也能让我们方便快捷地制作动画。这是老师的两个栗子：<ul>
+<li>使用JS来操作SVG动画自不必多说，目前也有很多现成的类库。例如老牌的Snap.svg以及anime.js，都能让我们快速制作SVG动画。当然,除了这些类库，HTML本身也有原生的 Web Animation 实现。使用Web 8622Animation也能让我们方便快捷地制作动画。这是老师的两个栗子：
+<ul>
 <li>文字形变: <a target="_blank" rel="noopener" href="https://codepen.io/jiangxiang/pen/MWmdjeY">https://codepen.io/jiangxiang/pen/MWmdjeY</a></li>
 <li>Path实现写字动画: <a target="_blank" rel="noopener" href="https://codepen.io/jiangxiang/pen/rNmgjqX">SVG 写字动画 (codepen.io)</a></li>
 </ul>
 </li>
 </ul>
 <p>第一个动画的实现原理</p>
-<h4 id="文字溶解原理-filter"><a href="#文字溶解原理-filter" class="headerlink" title="文字溶解原理-filter"></a>文字溶解原理-filter</h4><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/CSS/filter"><code>filter</code></a> 属性将模糊或颜色偏移等图形效果应用于元素。滤镜通常用于调整图像，背景和边框的渲染。基础案例：<a target="_blank" rel="noopener" href="https://codepen.io/jiangxiang/pen/XWeQGQK">https://codepen.io/jiangxiang/pen/XWeQGQK</a></p>
+<h4 id="文字溶解原理-filter">文字溶解原理-filter</h4>
+<p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/CSS/filter"><code>filter</code></a> 属性将模糊或颜色偏移等图形效果应用于元素。滤镜通常用于调整图像，背景和边框的渲染。基础案例：<a target="_blank" rel="noopener" href="https://codepen.io/jiangxiang/pen/XWeQGQK">https://codepen.io/jiangxiang/pen/XWeQGQK</a></p>
 <ul>
 <li>blur逐渐变小，在blur快没有的时候将其opacity设为0隐藏掉，就可以实现一个溶解效果</li>
 </ul>
-<h4 id="JS笔画原理-stroke"><a href="#JS笔画原理-stroke" class="headerlink" title="JS笔画原理-stroke"></a>JS笔画原理-stroke</h4><p>stroke-dashoffset、stroke-dasharray配合使用实现笔画效果。<br><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/SVG/Attribute/stroke-dasharray"><code>stroke-dasharray</code></a> 属性可控制用来描边的点划线的图案范式。它是一个数列，数与数之间用逗号或者空白隔开，指定短划线和缺口的长度。<strong>如果提供了奇数个值，则这个值的数列重复一次，从而变成偶数个值</strong>。因此，<strong>5,3,2等同于5,3,2,5,3,2。</strong><br><a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-dashoffset"><code>stroke-dashoffset</code></a> 属性指定了dash模式到路径开始的距离。<br>老师的示例：<a target="_blank" rel="noopener" href="https://codepen.io/jiangxiang/pen/LYzvvxd">stroke-dasharray&amp;stroke-dashoffset (codepen.io)</a></p>
+<h4 id="JS笔画原理-stroke">JS笔画原理-stroke</h4>
+<p>stroke-dashoffset、stroke-dasharray配合使用实现笔画效果。<br>
+<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/SVG/Attribute/stroke-dasharray"><code>stroke-dasharray</code></a> 属性可控制用来描边的点划线的图案范式。它是一个数列，数与数之间用逗号或者空白隔开，指定短划线和缺口的长度。<strong>如果提供了奇数个值，则这个值的数列重复一次，从而变成偶数个值</strong>。因此，<strong>5,3,2等同于5,3,2,5,3,2。</strong><br>
+<a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-dashoffset"><code>stroke-dashoffset</code></a> 属性指定了dash模式到路径开始的距离。<br>
+老师的示例：<a target="_blank" rel="noopener" href="https://codepen.io/jiangxiang/pen/LYzvvxd">stroke-dasharray&amp;stroke-dashoffset (codepen.io)</a></p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">// 5px实线 5px空白 x1y1 -&gt; x2y2</span><br><span class="line"><span class="tag">&lt;<span class="name">line</span> <span class="attr">stroke-dasharray</span>=<span class="string">&quot;5, 5&quot;</span> <span class="attr">x1</span>=<span class="string">&quot;10&quot;</span> <span class="attr">y1</span>=<span class="string">&quot;10&quot;</span> <span class="attr">x2</span>=<span class="string">&quot;190&quot;</span> <span class="attr">y2</span>=<span class="string">&quot;10&quot;</span> /&gt;</span></span><br><span class="line">// 5px实线 10px空白</span><br><span class="line"><span class="tag">&lt;<span class="name">line</span> <span class="attr">stroke-dasharray</span>=<span class="string">&quot;5, 10&quot;</span> <span class="attr">x1</span>=<span class="string">&quot;10&quot;</span> <span class="attr">y1</span>=<span class="string">&quot;30&quot;</span> <span class="attr">x2</span>=<span class="string">&quot;190&quot;</span> <span class="attr">y2</span>=<span class="string">&quot;30&quot;</span> /&gt;</span></span><br><span class="line">// 10px实线 5px空白</span><br><span class="line"><span class="tag">&lt;<span class="name">line</span> <span class="attr">stroke-dasharray</span>=<span class="string">&quot;10, 5&quot;</span> <span class="attr">x1</span>=<span class="string">&quot;10&quot;</span> <span class="attr">y1</span>=<span class="string">&quot;50&quot;</span> <span class="attr">x2</span>=<span class="string">&quot;190&quot;</span> <span class="attr">y2</span>=<span class="string">&quot;50&quot;</span> /&gt;</span></span><br><span class="line">// 5px实线 1px空白...</span><br><span class="line"><span class="tag">&lt;<span class="name">line</span> <span class="attr">stroke-dasharray</span>=<span class="string">&quot;5, 1&quot;</span> <span class="attr">x1</span>=<span class="string">&quot;10&quot;</span> <span class="attr">y1</span>=<span class="string">&quot;70&quot;</span> <span class="attr">x2</span>=<span class="string">&quot;190&quot;</span> <span class="attr">y2</span>=<span class="string">&quot;70&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">line</span> <span class="attr">stroke-dasharray</span>=<span class="string">&quot;1, 5&quot;</span> <span class="attr">x1</span>=<span class="string">&quot;10&quot;</span> <span class="attr">y1</span>=<span class="string">&quot;90&quot;</span> <span class="attr">x2</span>=<span class="string">&quot;190&quot;</span> <span class="attr">y2</span>=<span class="string">&quot;90&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">line</span> <span class="attr">stroke-dasharray</span>=<span class="string">&quot;0.9&quot;</span> <span class="attr">x1</span>=<span class="string">&quot;10&quot;</span> <span class="attr">y1</span>=<span class="string">&quot;110&quot;</span> <span class="attr">x2</span>=<span class="string">&quot;190&quot;</span> <span class="attr">y2</span>=<span class="string">&quot;110&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">line</span> <span class="attr">stroke-dasharray</span>=<span class="string">&quot;15, 10, 5&quot;</span> <span class="attr">x1</span>=<span class="string">&quot;10&quot;</span> <span class="attr">y1</span>=<span class="string">&quot;130&quot;</span> <span class="attr">x2</span>=<span class="string">&quot;190&quot;</span> <span class="attr">y2</span>=<span class="string">&quot;130&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">line</span> <span class="attr">stroke-dasharray</span>=<span class="string">&quot;15, 10, 5, 10&quot;</span> <span class="attr">x1</span>=<span class="string">&quot;10&quot;</span> <span class="attr">y1</span>=<span class="string">&quot;150&quot;</span> <span class="attr">x2</span>=<span class="string">&quot;190&quot;</span> <span class="attr">y2</span>=<span class="string">&quot;150&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">line</span> <span class="attr">stroke-dasharray</span>=<span class="string">&quot;15, 10, 5, 10, 15&quot;</span> <span class="attr">x1</span>=<span class="string">&quot;10&quot;</span> <span class="attr">y1</span>=<span class="string">&quot;170&quot;</span> <span class="attr">x2</span>=<span class="string">&quot;190&quot;</span> <span class="attr">y2</span>=<span class="string">&quot;170&quot;</span> /&gt;</span></span><br><span class="line">// 总长度180 180实线 180空白（全是实线） 这个时候改变dashoffset的值就可以实现笔画效果</span><br><span class="line"><span class="tag">&lt;<span class="name">line</span> <span class="attr">stroke-dasharray</span>=<span class="string">&quot;180&quot;</span> <span class="attr">stroke-dashoffset</span>的值就可以实现笔画效果=<span class="string">&quot;0&quot;</span> <span class="attr">x1</span>=<span class="string">&quot;10&quot;</span> <span class="attr">y1</span>=<span class="string">&quot;190&quot;</span> <span class="attr">x2</span>=<span class="string">&quot;190&quot;</span> <span class="attr">y2</span>=<span class="string">&quot;190&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
 <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d08067ea0b1c4fd78ac56b117d8043a4~tplv-k3u1fbpfcp-watermark.image?" alt="image.png"></p>
 <p>直线这种比较简单的可以直接知道其总长度进而通过初始化dashoffset实现笔画效果，那么不规则图形？</p>
 <blockquote>
 <p>通过path.getTotalLength();</p>
 </blockquote>
-<p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/SVG/Tutorial/Paths">path路径 </a>- <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/SVG/Attribute/d">d</a>属性定义<br>大写字母跟随的是绝对坐标x,y，小写为相对坐标dx,dyM/m绘制起始点。</p>
+<p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/SVG/Tutorial/Paths">path路径 </a>- <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/SVG/Attribute/d">d</a>属性定义<br>
+大写字母跟随的是绝对坐标x,y，小写为相对坐标dx,dyM/m绘制起始点。</p>
 <ul>
-<li><p>L/l绘制一条线段。<br>C/c为绘制贝塞尔曲线。<br>Z/z将当前点与起始点用直线连接。</p>
+<li>
+<p>L/l绘制一条线段。<br>
+C/c为绘制贝塞尔曲线。<br>
+Z/z将当前点与起始点用直线连接。</p>
 </li>
-<li><p>计算path的长度- path.getTotalLength();</p>
+<li>
+<p>计算path的长度- path.getTotalLength();</p>
 </li>
-<li>计算path上某个点的坐标- path.getPointAtLength(lengthNumber);</li>
+<li>
+<p>计算path上某个点的坐标- path.getPointAtLength(lengthNumber);</p>
+</li>
 </ul>
 <p>老师的例子：<a target="_blank" rel="noopener" href="https://codepen.io/jiangxiang/pen/eYWagxq">SVG 使用stroke-dashoffset和stroke-dashoffset实现笔画效果 (codepen.io)</a></p>
 <ul>
-<li><p>svg动画的优点∶通过矢量元素实现动画,不同的屏幕下均可获得较好的清晰度。可以实现一些特殊的效果：<strong>描字，形变，墨水扩散</strong>等。</p>
+<li>
+<p>svg动画的优点∶通过矢量元素实现动画,不同的屏幕下均可获得较好的清晰度。可以实现一些特殊的效果：<strong>描字，形变，墨水扩散</strong>等。</p>
 </li>
-<li><p>缺点∶使用方式较为<strong>复杂</strong>，<strong>过多使用可能会带来性能</strong>问题。</p>
+<li>
+<p>缺点∶使用方式较为<strong>复杂</strong>，<strong>过多使用可能会带来性能</strong>问题。</p>
 </li>
 </ul>
-<h3 id="js实现动画"><a href="#js实现动画" class="headerlink" title="js实现动画"></a>js实现动画</h3><p>JS可以实现复杂的动画，可以操作css、svg也可以操作canvas动画API上进行绘制。</p>
-<h3 id="如何做选择？"><a href="#如何做选择？" class="headerlink" title="如何做选择？"></a>如何做选择？</h3><p>CSS实现</p>
+<h3 id="js实现动画">js实现动画</h3>
+<p>JS可以实现复杂的动画，可以操作css、svg也可以操作canvas动画API上进行绘制。</p>
+<h3 id="如何做选择？">如何做选择？</h3>
+<p>CSS实现</p>
 <ul>
-<li><p>优点</p>
+<li>
+<p>优点</p>
 <ul>
 <li>浏览器会对CSS3动画做一些优化，导致CSS3动画性能上稍有优势（新建一个图层来跑动画）</li>
 <li>CSS3动画的代码相对简单</li>
 </ul>
 </li>
-<li><p>缺点</p>
+<li>
+<p>缺点</p>
 <ul>
-<li><p>动画控制上不够灵活</p>
+<li>
+<p>动画控制上不够灵活</p>
 </li>
-<li><p>兼容性不佳</p>
+<li>
+<p>兼容性不佳</p>
 </li>
-<li>部分动画无法实现（视差效果、滚动动画）</li>
+<li>
+<p>部分动画无法实现（视差效果、滚动动画）</p>
+</li>
 </ul>
 </li>
-<li><p>对于简单动画都可以用css实现</p>
+<li>
+<p>对于简单动画都可以用css实现</p>
 </li>
 </ul>
 <p>JS 实现</p>
 <ul>
-<li><p>优点</p>
+<li>
+<p>优点</p>
 <ul>
-<li><strong>使用灵活</strong>，同样在定义一个动画的keyframe序列时，可以根据不同的条件调节若干参数（JS动画函数）改变动画方式。（CSS会有非常多的代码冗余）</li>
-<li><p>对比与<strong>CSS的keyframe粒度更粗</strong>，Css<strong>本身的时间函数是有限</strong>的，这块 <strong>JS 都可做弥补。</strong></p>
+<li>
+<p><strong>使用灵活</strong>，同样在定义一个动画的keyframe序列时，可以根据不同的条件调节若干参数（JS动画函数）改变动画方式。（CSS会有非常多的代码冗余）</p>
 </li>
-<li><p>CSS很难做到<strong>两个以上的状态转化</strong>（要么使用关键帧，要么需要多个动画延时触发，再想到要对动画循环播放或暂停倒序等，<strong>复杂度极高</strong>）</p>
+<li>
+<p>对比与<strong>CSS的keyframe粒度更粗</strong>，Css<strong>本身的时间函数是有限</strong>的，这块 <strong>JS 都可做弥补。</strong></p>
+</li>
+<li>
+<p>CSS很难做到<strong>两个以上的状态转化</strong>（要么使用关键帧，要么需要多个动画延时触发，再想到要对动画循环播放或暂停倒序等，<strong>复杂度极高</strong>）</p>
 </li>
 </ul>
 </li>
-<li><p>缺点</p>
+<li>
+<p>缺点</p>
 <ul>
 <li>使用到 JS 运行时，<strong>调优方面不如 CSS 简单</strong>，CSS调优方式固定。</li>
-<li>对于性能和兼容性较差的浏览器，CSS可以做到优雅降级，而 <strong>JS 需要额外代码兼容。</strong>会影响打包后产物的体积。</li>
+<li>对于性能和兼容性较差的浏览器，CSS可以做到优雅降级，而 **JS 需要额外代码兼容。**会影响打包后产物的体积。</li>
 </ul>
 </li>
 </ul>
@@ -730,39 +807,53 @@
 <li>在需要对动画进行大量控制时，使用JavaScript。</li>
 <li>在特定的场景下可以使用SVG，可以使用CSS或JS去操作SVG变化。（比如上述的溶解、笔画效果等）</li>
 </ul>
-<h2 id="实现前端动画"><a href="#实现前端动画" class="headerlink" title="实现前端动画"></a>实现前端动画</h2><h3 id="js动画函数封装"><a href="#js动画函数封装" class="headerlink" title="js动画函数封装"></a>js动画函数封装</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">animate</span>(<span class="params">&#123;easing, draw, duration&#125;</span>)    &#123;</span><br><span class="line">  <span class="keyword">let</span> start = performance.<span class="title function_">now</span>(); <span class="comment">// 取当前时间</span></span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function"><span class="params">resolve</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="title function_">requestAnimationFrame</span>(<span class="keyword">function</span> <span class="title function_">animate</span>(<span class="params">time</span>) &#123;</span><br><span class="line">      <span class="keyword">let</span> timeFraction = (time - start) / duration;</span><br><span class="line">      <span class="keyword">if</span>(timeFraction &gt; <span class="number">1</span>) timeFraction = <span class="number">1</span>;</span><br><span class="line">      </span><br><span class="line">      <span class="keyword">let</span> progress = <span class="title function_">easing</span>(timeFraction);</span><br><span class="line"></span><br><span class="line">      <span class="title function_">draw</span>(progress);</span><br><span class="line">      </span><br><span class="line">      <span class="keyword">if</span>(timeFraction &lt; <span class="number">1</span>) &#123;</span><br><span class="line">          <span class="title function_">requestAnimationFrame</span>(animate);</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">          <span class="title function_">resolve</span>();</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="实现前端动画">实现前端动画</h2>
+<h3 id="js动画函数封装">js动画函数封装</h3>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">animate</span>(<span class="params">&#123;easing, draw, duration&#125;</span>)    &#123;</span><br><span class="line">  <span class="keyword">let</span> start = performance.<span class="title function_">now</span>(); <span class="comment">// 取当前时间</span></span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function"><span class="params">resolve</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="title function_">requestAnimationFrame</span>(<span class="keyword">function</span> <span class="title function_">animate</span>(<span class="params">time</span>) &#123;</span><br><span class="line">      <span class="keyword">let</span> timeFraction = (time - start) / duration;</span><br><span class="line">      <span class="keyword">if</span>(timeFraction &gt; <span class="number">1</span>) timeFraction = <span class="number">1</span>;</span><br><span class="line">      </span><br><span class="line">      <span class="keyword">let</span> progress = <span class="title function_">easing</span>(timeFraction);</span><br><span class="line"></span><br><span class="line">      <span class="title function_">draw</span>(progress);</span><br><span class="line">      </span><br><span class="line">      <span class="keyword">if</span>(timeFraction &lt; <span class="number">1</span>) &#123;</span><br><span class="line">          <span class="title function_">requestAnimationFrame</span>(animate);</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">          <span class="title function_">resolve</span>();</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>这个函数中首先通过<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Performance/now">performance.now()</a>取到当前系统时间，它以一个恒定的速率慢慢增加，不会受到系统时间的影响以浮点数的形式表示时间，<strong>精度最高可达微秒级</strong>，不易被篡改。入参说明：</p>
 <ul>
-<li><p>draw 绘制函数</p>
+<li>
+<p>draw 绘制函数</p>
 <ul>
-<li><p>可以将其想象为一只画笔，随着函数执行，这个画笔的函数会被反复的调用，并传入当前执行的进度progress，progress取决于easing的值，如若为线性增加的则为0~1。如：</p>
+<li>
+<p>可以将其想象为一只画笔，随着函数执行，这个画笔的函数会被反复的调用，并传入当前执行的进度progress，progress取决于easing的值，如若为线性增加的则为0~1。如：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> ball = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;.ball&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> <span class="title function_">draw</span> = (<span class="params">progress</span>) =&gt; &#123;</span><br><span class="line">    ball.<span class="property">style</span>.<span class="property">transform</span> = <span class="string">`translate(<span class="subst">$&#123;progress&#125;</span>px, 0)`</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
-<li><p>easing 缓动函数</p>
+<li>
+<p>easing 缓动函数</p>
 <ul>
-<li><p>缓动函数改变（或者说扭曲）动画的时间，将其改为线性/非线性，或者多维度的。如：</p>
+<li>
+<p>缓动函数改变（或者说扭曲）动画的时间，将其改为线性/非线性，或者多维度的。如：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">easing</span>(<span class="params">timeFraction</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> timeFraction ** <span class="number">2</span>;   <span class="comment">//timeFraction的平方</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
-<li><p>duration 持续时间 顾名思义，单位是毫秒</p>
+<li>
+<p>duration 持续时间 顾名思义，单位是毫秒</p>
 </li>
-<li><p>最后返回Promise的原因：</p>
+<li>
+<p>最后返回Promise的原因：</p>
 <ul>
-<li><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Using_promises"> Promise</a> 是一个对象，它代表了一个异步操作的最终完成或者失败。</p>
+<li>
+<p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Using_promises"> Promise</a> 是一个对象，它代表了一个异步操作的最终完成或者失败。</p>
 </li>
-<li><p>动画可以是连续的，Promise支持通过then函数或await进行顺序调用，可以很容易地拿到这个动画的终态</p>
+<li>
+<p>动画可以是连续的，Promise支持通过then函数或await进行顺序调用，可以很容易地拿到这个动画的终态</p>
 </li>
 </ul>
 </li>
-<li><p>这个动画函数实现一个有限时间的动画封装</p>
+<li>
+<p>这个动画函数实现一个有限时间的动画封装</p>
 </li>
-<li><p><strong>RequestAnimationFrame (rAF) </strong> vs <strong>SetTimeout</strong> vs <strong>Setlnterval</strong></p>
+<li>
+<p>**RequestAnimationFrame (rAF) ** vs <strong>SetTimeout</strong> vs <strong>Setlnterval</strong></p>
 <ul>
-<li><p>使用<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Window/requestAnimationFrame">requestAnimationFrame</a>！为什么？</p>
-<p>该内置方法允许设置回调函数以<strong>在浏览器准备重绘时运行</strong>。通常这很快，但确切的时间取决于浏览器。<br>setTimeout和setInterval当页面在后台时,根本<strong>没有重绘</strong>，所以回调不会运行：<strong>动画将被暂停并且不会消耗资源。</strong>参考：<a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/43379640/requestanimationframe-loop-not-correct-fps/43381828#43381828">javascript - requestAnimationFrame loop not correct FPS - Stack Overflow</a></p>
+<li>
+<p>使用<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Window/requestAnimationFrame">requestAnimationFrame</a>！为什么？</p>
+<p>该内置方法允许设置回调函数以<strong>在浏览器准备重绘时运行</strong>。通常这很快，但确切的时间取决于浏览器。<br>
+setTimeout和setInterval当页面在后台时,根本<strong>没有重绘</strong>，所以回调不会运行：**动画将被暂停并且不会消耗资源。**参考：<a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/43379640/requestanimationframe-loop-not-correct-fps/43381828#43381828">javascript - requestAnimationFrame loop not correct FPS - Stack Overflow</a></p>
 <blockquote>
 <p>重排：若渲染树的一部分更新，且<strong>尺寸变化</strong>，就会发生重排。</p>
 <p>重绘：部分节点需要更新，但<strong>不改变其他集合形状</strong>。如改变某个元素的visibility、outline、背景颜色等，就会发生重绘。</p>
@@ -771,7 +862,8 @@
 </ul>
 </li>
 </ul>
-<h3 id="简单动画"><a href="#简单动画" class="headerlink" title="简单动画"></a>简单动画</h3><p>JS执行动画的核心思想</p>
+<h3 id="简单动画">简单动画</h3>
+<p>JS执行动画的核心思想</p>
 <blockquote>
 <p>∆r = ∆v∆t</p>
 </blockquote>
@@ -796,17 +888,20 @@
 <p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0f956087eb91462b9072a126934ff568~tplv-k3u1fbpfcp-watermark.image?" alt="4.gif"></p>
 <p>其余的还有很多，再多的话就在easing返回的对象中加入新的属性，如旋转：</p>
 <ul>
-<li><p>旋转+平抛</p>
+<li>
+<p>旋转+平抛</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 旋转 + 平抛</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">horizontalMotionWidthRotate</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">const</span> <span class="title function_">draw</span> = (<span class="params">progress</span>) =&gt; &#123;</span><br><span class="line">    ball.<span class="property">style</span>.<span class="property">transform</span> = <span class="string">`translate(<span class="subst">$&#123;<span class="number">500</span> * progress.x&#125;</span>px, <span class="subst">$&#123;<span class="number">500</span> * (progress.y - <span class="number">1</span>)&#125;</span>px) rotate(<span class="subst">$&#123;<span class="number">2000</span> * progress.rotate&#125;</span>deg)`</span>;<span class="comment">// 这里的2000也是比例系数</span></span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 有两个方向，沿着x轴匀速运动，沿着y轴加速运动</span></span><br><span class="line">  <span class="title function_">animate</span>(&#123;</span><br><span class="line">    <span class="attr">duration</span>: <span class="number">2000</span>,</span><br><span class="line">    <span class="title function_">easing</span>(<span class="params">timeFraction</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> &#123;</span><br><span class="line">        <span class="attr">x</span>: timeFraction,</span><br><span class="line">        <span class="attr">y</span>: timeFraction ** <span class="number">2</span>,</span><br><span class="line">        <span class="attr">rotate</span>: timeFraction,</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    draw,</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8596a1014d81410e8fbf91ec0a03a3fc~tplv-k3u1fbpfcp-watermark.image?" alt="5.gif"></p>
 </li>
-<li><p>拉弓（x轴匀速，y轴初始速度为负的匀加速）</p>
+<li>
+<p>拉弓（x轴匀速，y轴初始速度为负的匀加速）</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 拉弓</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">arrowMove</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">  <span class="comment">// 抽象出来，初始值为2，到某个临界点变为正的1并且匀速增加</span></span><br><span class="line">  <span class="keyword">const</span> <span class="title function_">back</span> = (<span class="params">x, timeFraction</span>) =&gt; &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="title class_">Math</span>.<span class="title function_">pow</span>(timeFraction, <span class="number">2</span>) * ((x + <span class="number">1</span>) * timeFraction - x);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">const</span> <span class="title function_">draw</span> = (<span class="params">progress</span>) =&gt; &#123;</span><br><span class="line">    ball.<span class="property">style</span>.<span class="property">transform</span> = <span class="string">`translate(<span class="subst">$&#123;<span class="number">200</span>*progress.x&#125;</span>px, <span class="subst">$&#123; - <span class="number">500</span> * progress.y&#125;</span>px)`</span>;</span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="title function_">animate</span>(&#123;</span><br><span class="line">    <span class="attr">duration</span>: <span class="number">1000</span>,</span><br><span class="line">    <span class="title function_">easing</span>(<span class="params">timeFraction</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> &#123;</span><br><span class="line">        <span class="attr">x</span>: timeFraction,</span><br><span class="line">        <span class="attr">y</span>: <span class="title function_">back</span>(<span class="number">2</span>, timeFraction),</span><br><span class="line">      &#125;;</span><br><span class="line">    &#125;,</span><br><span class="line">    draw,</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c78ab72096e1434d9f811e606e7c4c11~tplv-k3u1fbpfcp-watermark.image?" alt="6.gif"></p>
 <ul>
-<li><p>贝塞尔曲线 <a target="_blank" rel="noopener" href="https://cubic-bezier.com/#0,2.11,1,.19">cubic-bezier(0,2.11,1,.19) ✿ cubic-bezier.com</a>、<a target="_blank" rel="noopener" href="https://www.jasondavies.com/animated-bezier/">Animated Bézier Curves - Jason Davies</a> </p>
+<li>
+<p>贝塞尔曲线 <a target="_blank" rel="noopener" href="https://cubic-bezier.com/#0,2.11,1,.19">cubic-bezier(0,2.11,1,.19) ✿ cubic-bezier.com</a>、<a target="_blank" rel="noopener" href="https://www.jasondavies.com/animated-bezier/">Animated Bézier Curves - Jason Davies</a></p>
 <ul>
 <li>ps：讲到这里开始逐渐硬核起来了，tql</li>
 </ul>
@@ -815,27 +910,32 @@
 <p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/65f2c703e2dd427ea0013d78d30f1f41~tplv-k3u1fbpfcp-watermark.image?" alt="11.gif"></p>
 </li>
 </ul>
-<h3 id="复杂动画"><a href="#复杂动画" class="headerlink" title="复杂动画"></a>复杂动画</h3><ul>
-<li><p>弹跳小球（缓动函数实现/自动衰减实现）</p>
+<h3 id="复杂动画">复杂动画</h3>
+<ul>
+<li>
+<p>弹跳小球（缓动函数实现/自动衰减实现）</p>
 <ul>
 <li>直接去看老师的例子：<a target="_blank" rel="noopener" href="https://codepen.io/jiangxiang/pen/rNmgVKK?editors=0010">JS封装动画函数 (codepen.io)</a>，自动衰减这里填了之前的一个坑：为什么要使用Promise，在每次执行完毕是，会将句柄再交给上面的函数判断是否有速度的衰减，直到速度为0的时候会自动结束。</li>
 </ul>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3fe64ea4171e49f1bf4dd1c4b6b06dc4~tplv-k3u1fbpfcp-watermark.image?" alt="7.gif"></p>
 </li>
 </ul>
-<p>  <img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3fe64ea4171e49f1bf4dd1c4b6b06dc4~tplv-k3u1fbpfcp-watermark.image?" alt="7.gif"></p>
 <p>自动衰减：更加复杂</p>
 <p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7a7244b30a714bd481b3de84bede051c~tplv-k3u1fbpfcp-watermark.image?" alt="8.gif"></p>
 <ul>
-<li><p>椭圆运动</p>
+<li>
+<p>椭圆运动</p>
 <ul>
-<li><p>套公式即可，x = a<em>cos(a)，y = b </em> sin(a)</p>
+<li>
+<p>套公式即可，x = a*cos(a)，y = b * sin(a)</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 椭圆</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">ellipsis</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">const</span> <span class="title function_">draw</span> = (<span class="params">progress</span>) =&gt; &#123;</span><br><span class="line">    <span class="keyword">const</span> x = <span class="number">150</span> * <span class="title class_">Math</span>.<span class="title function_">cos</span>(<span class="title class_">Math</span>.<span class="property">PI</span> * <span class="number">2</span> * progress);</span><br><span class="line">    <span class="keyword">const</span> y = <span class="number">100</span> * <span class="title class_">Math</span>.<span class="title function_">sin</span>(<span class="title class_">Math</span>.<span class="property">PI</span> * <span class="number">2</span> * progress);</span><br><span class="line">    ball.<span class="property">style</span>.<span class="property">transform</span> = <span class="string">`translate(<span class="subst">$&#123;x&#125;</span>px, <span class="subst">$&#123;y&#125;</span>px)`</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="title function_">animate</span>(&#123;</span><br><span class="line">    <span class="attr">duration</span>: <span class="number">2000</span>,</span><br><span class="line">    <span class="title function_">easing</span>(<span class="params">timeFraction</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> timeFraction * (<span class="number">2</span> - timeFraction);</span><br><span class="line">    &#125;,</span><br><span class="line">    draw,</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
 </ul>
 <p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4808e48403684d70b74a9ff5defa419d~tplv-k3u1fbpfcp-watermark.image?" alt="9.gif"></p>
-<h2 id="相关实践资源"><a href="#相关实践资源" class="headerlink" title="相关实践资源"></a>相关实践资源</h2><p>动画代码示例：</p>
+<h2 id="相关实践资源">相关实践资源</h2>
+<p>动画代码示例：</p>
 <ul>
 <li><a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a> 可以提供很多设计灵感</li>
 <li><a target="_blank" rel="noopener" href="https://codesandbox.io/dashboard/home?workspace=79846caf-22a5-419f-bd79-64954e7ad9dd">CodeSandbox</a> 方便引入SDK</li>
@@ -852,18 +952,24 @@
 </ul>
 <p>SVG:</p>
 <ul>
-<li><p>Snap.SVG - 现代SVG图形的JavaScript库</p>
+<li>
+<p>Snap.SVG - 现代SVG图形的JavaScript库</p>
 </li>
-<li><p>Svg.js - 用于操作和动画SVG的轻量级库。</p>
+<li>
+<p>Svg.js - 用于操作和动画SVG的轻量级库。</p>
 </li>
 </ul>
 <p>JS:</p>
 <ul>
-<li><p>GSAP - JavaScript动画库。</p>
+<li>
+<p>GSAP - JavaScript动画库。</p>
 </li>
-<li><p>TweenJS - 一个简单但功能强大的JavaScript补间/动画库。CreateJS库套件的一部分。</p>
+<li>
+<p>TweenJS - 一个简单但功能强大的JavaScript补间/动画库。CreateJS库套件的一部分。</p>
 </li>
-<li>Velocity - 加速的JavaScript动画。</li>
+<li>
+<p>Velocity - 加速的JavaScript动画。</p>
+</li>
 </ul>
 <p>CSS:</p>
 <ul>
@@ -871,74 +977,94 @@
 </ul>
 <p>canvas:</p>
 <ul>
-<li><p>EaselJS - EaselJS 是一个用于在HTML5中构建高性能交互式2D内容的库</p>
+<li>
+<p>EaselJS - EaselJS 是一个用于在HTML5中构建高性能交互式2D内容的库</p>
 </li>
-<li><p>Fabric.js -支持动画的JavaScript画布库。</p>
+<li>
+<p>Fabric.js -支持动画的JavaScript画布库。</p>
 </li>
-<li><p>Paper.js -矢量图形脚本的瑞士军刀</p>
+<li>
+<p>Paper.js -矢量图形脚本的瑞士军刀</p>
 </li>
-<li><p>Scriptographer - 使用HTML5</p>
+<li>
+<p>Scriptographer - 使用HTML5</p>
 <p>Canvas移植到JavaScript和浏览器。</p>
 </li>
-<li><p>Pixijs –使用最快、最灵活的2D WebGL渲染器创建精美的数字内容。</p>
+<li>
+<p>Pixijs –使用最快、最灵活的2D WebGL渲染器创建精美的数字内容。</p>
 </li>
 </ul>
 <p>在实际工作中往往是将UI给的动画帧/设计文件转化为代码</p>
 <ul>
-<li><p>需要完全前端自己设计自己开发时：</p>
+<li>
+<p>需要完全前端自己设计自己开发时：</p>
 <ul>
 <li>使用已封装好的动画库，从开发成本和体验角度出发进行取舍</li>
 </ul>
 </li>
-<li><p>设计不是很有空时：</p>
+<li>
+<p>设计不是很有空时：</p>
 <ul>
 <li>清晰度、图片格式可以指定，动画<strong>尽量给出示意或者相似案例参考</strong>。索要精灵图资源等需要帮忙压缩。（移动端的资源适配等）</li>
 </ul>
 </li>
-<li><p>设计资源充足时：</p>
+<li>
+<p>设计资源充足时：</p>
 <ul>
-<li><p>要求设计导出lottie格式文件</p>
+<li>
+<p>要求设计导出lottie格式文件</p>
 <blockquote>
-<p>Lottie是可应用于Android, ios, Web和Windows的库,<br>通过Bodymovin解析AE动画，并导出可在移动端和web端渲染动画的json文件。</p>
+<p>Lottie是可应用于Android, ios, Web和Windows的库,<br>
+通过Bodymovin解析AE动画，并导出可在移动端和web端渲染动画的json文件。</p>
 </blockquote>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> lottie <span class="keyword">from</span> <span class="string">&#x27;lottie-web&#x27;</span> ;</span><br><span class="line"><span class="variable language_">this</span>.<span class="property">animation</span> = lottie.<span class="title function_">loadAnimation</span>(&#123;</span><br><span class="line">    <span class="attr">container</span>: <span class="variable language_">this</span>.<span class="property">animationRef</span>.<span class="property">current</span>,</span><br><span class="line">    <span class="attr">renderer</span>: <span class="string">&#x27;svg&#x27;</span>,</span><br><span class="line">    <span class="attr">loop</span>: <span class="literal">false</span>,</span><br><span class="line">    <span class="attr">autoplay</span>: <span class="literal">false</span>,</span><br><span class="line">    <span class="attr">aninationData</span>: dataJson,</span><br><span class="line">    <span class="attr">path</span>: <span class="variable constant_">URL</span>,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
 </ul>
-<h3 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h3><ul>
-<li><p><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/動畫的12項基本法則">动画的12项基本法则 - 维基百科，自由的百科全书 (wikipedia.org)</a></p>
-</li>
-<li><p>性能角度</p>
+<h3 id="优化">优化</h3>
 <ul>
-<li>重点：减少重绘、重排，这是整个环节中最为耗时的两环。<blockquote>
-<p>页面渲染的一般过程为JS -&gt; CSS -&gt; 计算样式 —&gt; 布局 -&gt; 绘制 -&gt; 渲染层合并。</p>
+<li>
+<p><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E5%8B%95%E7%95%AB%E7%9A%8412%E9%A0%85%E5%9F%BA%E6%9C%AC%E6%B3%95%E5%89%87">动画的12项基本法则 - 维基百科，自由的百科全书 (wikipedia.org)</a></p>
+</li>
+<li>
+<p>性能角度</p>
+<ul>
+<li>重点：减少重绘、重排，这是整个环节中最为耗时的两环。</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>页面渲染的一般过程为JS -&gt; CSS -&gt; 计算样式 --&gt; 布局 -&gt; 绘制 -&gt; 渲染层合并。</p>
 <p>其中，<strong>Layout(重排)和Paint(重绘)是整个环节中最为耗时的两环</strong>，所以我们尽量避免这两个环节。从性能方面考虑，<strong>最理想的渲染流水线是没有布局和绘制环节</strong>的，<strong>只需要做渲染层的合并</strong>即可。</p>
 </blockquote>
-</li>
+<ul>
+<li>通过<a target="_blank" rel="noopener" href="https://csstriggers.com/">CSS Triggers</a>可以查询CSS属性及其影响的环节</li>
 </ul>
-</li>
-<li><p>通过<a target="_blank" rel="noopener" href="https://csstriggers.com/">CSS Triggers</a>可以查询CSS属性及其影响的环节</p>
-</li>
-</ul>
-<h3 id="建议"><a href="#建议" class="headerlink" title="建议"></a>建议</h3><ul>
+<h3 id="建议">建议</h3>
+<ul>
 <li>在实际的应用里，最为简单的一个注意点就是，<strong>触发动画的开始不要用display:none属性值</strong>，因为<strong>它会引起Layout、Paint环节</strong>，通过<strong>切换类名</strong>就已经是一种很好的办法。</li>
 </ul>
 <blockquote>
 <p>ps：学到了！这就去改改</p>
 </blockquote>
 <ul>
-<li>CSS3硬件加速又叫做GPU 加速，是利用GPU进行渲染，减少CPU操作的一种优化方案。由于GPU中的transform等CSS属性不会触发repaint，所以能大大提高网页的性能。CSS中的以下几个属性能触发硬件加速：<ul>
+<li>CSS3硬件加速又叫做GPU 加速，是利用GPU进行渲染，减少CPU操作的一种优化方案。由于GPU中的transform等CSS属性不会触发repaint，所以能大大提高网页的性能。CSS中的以下几个属性能触发硬件加速：
+<ul>
 <li>transform</li>
 <li>opacity</li>
 <li>filter</li>
 <li>Will-change</li>
 <li>如果有一些元素不需要用到上述属性，但是需要触发硬件加速效果,可以使用一些小技巧来诱导浏览器开启硬件加速。</li>
-<li>-算法优化<br>-线性函数代替真实计算-几何模型优化<br>-碰撞检测优化622<br>-内存/缓存优化-离屏绘制</li>
+<li>-算法优化<br>
+-线性函数代替真实计算-几何模型优化<br>
+-碰撞检测优化622<br>
+-内存/缓存优化-离屏绘制</li>
 </ul>
 </li>
 </ul>
-<h2 id="总结感想"><a href="#总结感想" class="headerlink" title="总结感想"></a>总结感想</h2><p>今天的课也非常的硬核，介绍了前端动画的基本原理、前端动画的分类和如何实现前端的动画，并介绍了相关资源与实践方法。让我对前端动画有了一个更深刻的了解，最后给出的资源推荐也很有帮助~</p>
+<h2 id="总结感想">总结感想</h2>
+<p>今天的课也非常的硬核，介绍了前端动画的基本原理、前端动画的分类和如何实现前端的动画，并介绍了相关资源与实践方法。让我对前端动画有了一个更深刻的了解，最后给出的资源推荐也很有帮助~</p>
 <blockquote>
 <p>本文引用的内容大部分来自蒋翔老师的课、MDN（CSS动画属性的介绍翻了半天MDN，上面写的非常全面并且有很生动的例子，推荐一看）</p>
 </blockquote>

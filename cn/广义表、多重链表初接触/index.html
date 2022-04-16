@@ -5,6 +5,9 @@
 <head>
   <!-- Google Analytics -->
   
+    <!-- 看板娘  https://github.com/stevenjoezhang/live2d-widget -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+    <script defer src="https://cdn.jsdelivr.net/gh/yusixian/live2d-widget@latest/autoload.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-xxxxxx-xx"></script>
     <script type="text/javascript">
@@ -464,35 +467,43 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h2 id="一、广义表"><a href="#一、广义表" class="headerlink" title="一、广义表"></a>一、广义表</h2><ul>
+        <h2 id="一、广义表">一、广义表</h2>
+<ul>
 <li>是线性表的推广</li>
 <li>对于线性表而言，n个元素都是基本的单元素</li>
 <li>广义表中，这些元素不仅可以使单元素也可以是另一个广义表</li>
 </ul>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="keyword">typedef</span> <span class="keyword">struct</span> <span class="title class_">GNode</span> *GList; <span class="keyword">struct</span> <span class="title class_">GNode</span> &#123;</span><br><span class="line">&gt;     <span class="type">int</span> Tag;    <span class="comment">//标志域:0表示结点是单元素，1表示结点是广义表</span></span><br><span class="line">&gt;     <span class="keyword">union</span> &#123;     <span class="comment">//子表指针域SubList域单元素数据域Data复用，共用存储空间</span></span><br><span class="line">&gt;         ElementType Data;</span><br><span class="line">&gt;         GList SubList;</span><br><span class="line">&gt;     &#125; URegion;</span><br><span class="line">&gt;     GList Next;     <span class="comment">//指向后继结点 &#125;;</span></span><br></pre></td></tr></table></figure>
-<h2 id="二、多重链表"><a href="#二、多重链表" class="headerlink" title="二、多重链表"></a>二、多重链表</h2><ul>
+<h2 id="二、多重链表">二、多重链表</h2>
+<ul>
 <li>链表中的结点可能隶属于多个链</li>
 </ul>
 <blockquote>
-<p>多重链表中结点的指针域 会有多个，如前面例子包含Next和SubList;<br>但包含两个指针域的链表并不一定是多重链表，比如在双向链表不是多重链表</p>
-<ul>
-<li>多重链表具有广泛的用途:<br>基本上如树、图这样相对复杂的数据结构都可以采用多重链表的方式实现存储</li>
-</ul>
+<p>多重链表中结点的指针域 会有多个，如前面例子包含Next和SubList;<br>
+但包含两个指针域的链表并不一定是多重链表，比如在双向链表不是多重链表</p>
 </blockquote>
-<h4 id="eg-存储矩阵"><a href="#eg-存储矩阵" class="headerlink" title="eg:存储矩阵"></a>eg:存储矩阵</h4><p> <strong>用二维数组有两个缺陷</strong> </p>
 <ul>
-<li>一是数组的大小需要事先确定   </li>
+<li>多重链表具有广泛的用途:</li>
+</ul>
+<blockquote>
+<p>基本上如树、图这样相对复杂的数据结构都可以采用多重链表的方式实现存储</p>
+</blockquote>
+<h4 id="eg-存储矩阵">eg:存储矩阵</h4>
+<p><strong>用二维数组有两个缺陷</strong></p>
+<ul>
+<li>一是数组的大小需要事先确定</li>
 <li>二是对于稀疏矩阵会造成大量的存储空间浪费</li>
 </ul>
-<p>分析：用一种典型多重链表———<strong>十字链表</strong>来存储稀疏矩阵<br><strong>只存储非0元素</strong></p>
+<p>分析：用一种典型多重链表———<strong>十字链表</strong>来存储稀疏矩阵<br>
+<strong>只存储非0元素</strong></p>
 <ul>
-<li>节点的指针域<pre><code> 行坐标Row、列坐标Col、数值Value 
-</code></pre></li>
-<li>每个结点通过两个值针域，把同行、同列串起来;<pre><code>   行指针(或称为向右指针)Right
-  列指针(或称为向下指针)Down 
-</code></pre></li>
-<li>用一个标识域Tag来区分头结点和非0元素结点 <pre><code>  头结点的标识值为&quot;Head&quot;,矩阵非0元素节点的标识值为&quot;Term&quot;
-</code></pre></li>
+<li>节点的指针域<br>
+行坐标Row、列坐标Col、数值Value</li>
+<li>每个结点通过两个值针域，把同行、同列串起来;<br>
+行指针(或称为向右指针)Right<br>
+列指针(或称为向下指针)Down</li>
+<li>用一个标识域Tag来区分头结点和非0元素结点<br>
+头结点的标识值为&quot;Head&quot;,矩阵非0元素节点的标识值为&quot;Term&quot;</li>
 </ul>
 
 

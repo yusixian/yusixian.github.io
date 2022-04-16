@@ -5,6 +5,9 @@
 <head>
   <!-- Google Analytics -->
   
+    <!-- 看板娘  https://github.com/stevenjoezhang/live2d-widget -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+    <script defer src="https://cdn.jsdelivr.net/gh/yusixian/live2d-widget@latest/autoload.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-xxxxxx-xx"></script>
     <script type="text/javascript">
@@ -400,7 +403,7 @@
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">455</span> In Total
+              Words <span class="post-count">457</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -462,15 +465,23 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h4 id="一、实验目的"><a href="#一、实验目的" class="headerlink" title="一、实验目的"></a>一、实验目的</h4><p>熟悉操作系统程序接口的使用。<br>要装好虚拟机哦，这里用的是deepin</p>
-<h4 id="二、实验内容"><a href="#二、实验内容" class="headerlink" title="二、实验内容"></a>二、实验内容</h4><p>编写一段程序，使用系统调用fork( )创建两个子进程。当此程序运行时，在系统中有一个父进程和两个子进程活动。让每一个进程在屏幕上显示一个字符：父进程显示’a’，子进程分别显示字符’b’和字符’c’。</p>
-<h4 id="三、实验代码"><a href="#三、实验代码" class="headerlink" title="三、实验代码"></a>三、实验代码</h4><p><em>unistd.h</em> 是Linux/Unix系统中内置头文件，包含了许多系统服务的函数原型，例如read函数、write函数和getpid函数等。其作用相当于windows操作系统的”windows.h”，是操作系统为用户提供的统一API接口，方便调用系统提供的一些服务。</p>
+        <h4 id="一、实验目的">一、实验目的</h4>
+<p>熟悉操作系统程序接口的使用。<br>
+要装好虚拟机哦，这里用的是deepin</p>
+<h4 id="二、实验内容">二、实验内容</h4>
+<p>编写一段程序，使用系统调用fork( )创建两个子进程。当此程序运行时，在系统中有一个父进程和两个子进程活动。让每一个进程在屏幕上显示一个字符：父进程显示’a’，子进程分别显示字符’b’和字符’c’。</p>
+<h4 id="三、实验代码">三、实验代码</h4>
+<p><em>unistd.h</em> 是Linux/Unix系统中内置头文件，包含了许多系统服务的函数原型，例如read函数、write函数和getpid函数等。其作用相当于windows操作系统的&quot;windows.h&quot;，是操作系统为用户提供的统一API接口，方便调用系统提供的一些服务。</p>
 <p><strong>fork函数在当前进程调用后，会产生一个子进程并返回子进程的pid，在子进程中，fork返回的值是0，因此，可以写得测试代码如下</strong></p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;unistd.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">pid_t</span> pid = <span class="number">5</span>;</span><br><span class="line">    <span class="type">int</span> flag = <span class="number">1</span>;</span><br><span class="line">    pid = fork();</span><br><span class="line">    <span class="keyword">if</span>(pid &lt; <span class="number">0</span>)</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;Error in fork!&quot;</span> &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (pid == <span class="number">0</span>) cout &lt;&lt; <span class="string">&quot;I am Child1!Pid is &quot;</span> &lt;&lt; pid &lt;&lt; <span class="string">&quot;. content:b&quot;</span> &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">else</span> &#123;</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;I am Parent!Pid is &quot;</span> &lt;&lt; pid &lt;&lt; <span class="string">&quot;. content:a&quot;</span> &lt;&lt; endl;</span><br><span class="line">        <span class="type">pid_t</span> pid2 = fork();</span><br><span class="line">        <span class="keyword">if</span> (pid2 == <span class="number">0</span>) cout &lt;&lt; <span class="string">&quot;I am Child2!Pid is &quot;</span> &lt;&lt; pid2 &lt;&lt; <span class="string">&quot;. content:c&quot;</span> &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;over.&quot;</span> &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="四、运行结果截图"><a href="#四、运行结果截图" class="headerlink" title="四、运行结果截图"></a>四、运行结果截图</h4><p>第一次运行<br><img src="https://img-blog.csdnimg.cn/20210531143925678.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>第二次运行<br><img src="https://img-blog.csdnimg.cn/20210531143939978.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h4 id="四、运行结果截图">四、运行结果截图</h4>
+<p>第一次运行<br>
+<img src="https://img-blog.csdnimg.cn/20210531143925678.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>第二次运行<br>
+<img src="https://img-blog.csdnimg.cn/20210531143939978.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 <p>可以看出三个进程执行互不干预，结果具有<strong>不可再现性</strong>~</p>
-<p>加了一行IO阻塞后，打开任务管理器查看进程号，发现确实有三个进程【好耶】<br><img src="https://img-blog.csdnimg.cn/2021053114395537.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>加了一行IO阻塞后，打开任务管理器查看进程号，发现确实有三个进程【好耶】<br>
+<img src="https://img-blog.csdnimg.cn/2021053114395537.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 
 
         <hr>
