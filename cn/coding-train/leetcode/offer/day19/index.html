@@ -142,10 +142,10 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="https://ysx.cosine.ren/cn/coding-train/leetcode/offer/day18/">
+  <link rel="canonical" href="https://ysx.cosine.ren/cn/coding-train/leetcode/offer/day19/">
   <title>
     
-      剑指offer day18 搜索与回溯算法（中等） - cos的博客 - WA的一声就哭了
+      剑指offer day19 搜索与回溯算法（中等） - cos的博客 - WA的一声就哭了
     
   </title>
 <meta name="generator" content="Hexo 5.4.1"></head>
@@ -390,12 +390,14 @@
               
               <a class="tag" href="/tags/#dfs/bfs" title="dfs/bfs">dfs/bfs</a>
               
+              <a class="tag" href="/tags/#递归" title="递归">递归</a>
+              
             </div>
-            <h1>剑指offer day18 搜索与回溯算法（中等）</h1>
-            <h2 class="subheading">知识点：树、dfs/bfs，难度为简单、简单</h2>
+            <h1>剑指offer day19 搜索与回溯算法（中等）</h1>
+            <h2 class="subheading">知识点：树、递归、dfs/bfs，难度为中等、简单、简单</h2>
             <span class="meta">
               Posted by cos on
-              2022-04-16
+              2022-04-17
             </span>
 
 
@@ -403,11 +405,11 @@
             <!-- WordCount start -->
             <div class="blank_box"></div>
             <span class="meta">
-              Estimated Reading Time <span class="post-count">2</span> Minutes
+              Estimated Reading Time <span class="post-count">6</span> Minutes
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">555</span> In Total
+              Words <span class="post-count">1.5k</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -469,8 +471,8 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <p>day18题目：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/er-cha-shu-de-shen-du-lcof/">剑指 Offer 55 - I. 二叉树的深度</a>、<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/ping-heng-er-cha-shu-lcof/">剑指 Offer 55 - II. 平衡二叉树</a></p>
-<p>知识点：树、dfs/bfs，难度为简单、简单</p>
+        <p>day19题目： <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/qiu-12n-lcof/">剑指 Offer 64. 求1+2+…+n</a>、<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/er-cha-sou-suo-shu-de-zui-jin-gong-gong-zu-xian-lcof/">剑指 Offer 68 - I. 二叉搜索树的最近公共祖先</a>、<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/er-cha-shu-de-zui-jin-gong-gong-zu-xian-lcof/">剑指 Offer 68 - II. 二叉树的最近公共祖先</a></p>
+<p>知识点：树、递归、dfs/bfs，难度为中等、简单、简单</p>
 <p>学习计划链接：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/study-plan/lcof/?progress=7jn70jr">「剑指 Offer」 - 学习计划</a></p>
 <table>
 <thead>
@@ -482,62 +484,88 @@
 </thead>
 <tbody>
 <tr>
-<td><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/er-cha-shu-de-shen-du-lcof/">剑指 Offer 55 - I. 二叉树的深度</a></td>
-<td><a target="_blank" rel="noopener" href="https://leetcode-cn.com/tag/tree">树</a>、<a target="_blank" rel="noopener" href="https://leetcode-cn.com/tag/depth-first-search">深度优先搜索</a>、<a target="_blank" rel="noopener" href="https://leetcode-cn.com/tag/breadth-first-search">广度优先搜索</a></td>
+<td><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/qiu-12n-lcof/">剑指 Offer 64. 求1+2+…+n</a></td>
+<td><a target="_blank" rel="noopener" href="https://leetcode-cn.com/tag/bit-manipulation">位运算</a>、<a target="_blank" rel="noopener" href="https://leetcode-cn.com/tag/recursion">递归</a>、<a target="_blank" rel="noopener" href="https://leetcode-cn.com/tag/brainteaser">脑筋急转弯</a></td>
+<td>中等</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/er-cha-sou-suo-shu-de-zui-jin-gong-gong-zu-xian-lcof/">剑指 Offer 68 - I. 二叉搜索树的最近公共祖先</a></td>
+<td><a target="_blank" rel="noopener" href="https://leetcode-cn.com/tag/tree">树</a>、<a target="_blank" rel="noopener" href="https://leetcode-cn.com/tag/depth-first-search">深度优先搜索</a>、<a target="_blank" rel="noopener" href="https://leetcode-cn.com/tag/binary-search-tree">二叉搜索树</a></td>
 <td>简单</td>
 </tr>
 <tr>
-<td><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/ping-heng-er-cha-shu-lcof/">剑指 Offer 55 - II. 平衡二叉树</a></td>
+<td><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/er-cha-shu-de-zui-jin-gong-gong-zu-xian-lcof/">剑指 Offer 68 - II. 二叉树的最近公共祖先</a></td>
 <td><a target="_blank" rel="noopener" href="https://leetcode-cn.com/tag/tree">树</a>、<a target="_blank" rel="noopener" href="https://leetcode-cn.com/tag/depth-first-search">深度优先搜索</a>、<a target="_blank" rel="noopener" href="https://leetcode-cn.com/tag/binary-tree">二叉树</a></td>
 <td>简单</td>
 </tr>
 </tbody>
 </table>
-<h1><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/er-cha-shu-de-shen-du-lcof/">剑指 Offer 55 - I. 二叉树的深度</a></h1>
-<p>输入一棵二叉树的根节点，求该树的深度。从根节点到叶节点依次经过的节点（含根、叶节点）形成树的一条路径，最长路径的长度为树的深度。</p>
-<p>例如：</p>
-<p>给定二叉树 <code>[3,9,20,null,null,15,7]</code>，</p>
-<figure class="highlight livescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  <span class="number">3</span></span><br><span class="line"> / <span class="string">\</span></span><br><span class="line"><span class="number">9</span>  <span class="number">20</span></span><br><span class="line">  /  <span class="string">\</span></span><br><span class="line"> <span class="number">15</span>   <span class="number">7</span></span><br></pre></td></tr></table></figure>
-<p>返回它的最大深度 3 。</p>
-<p><strong>提示：</strong></p>
-<ol>
-<li><code>节点总数 &lt;= 10000</code></li>
-</ol>
-<p>注意：本题与主站 104 题相同：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/maximum-depth-of-binary-tree/">https://leetcode-cn.com/problems/maximum-depth-of-binary-tree/</a></p>
-<h2 id="思路及代码">思路及代码</h2>
-<p>递归，直接返回左右两边最大的深度+1</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">TreeNode</span>&#125; <span class="variable">root</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">number</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> maxDepth = <span class="keyword">function</span>(<span class="params">root</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span>(!root) <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">    <span class="keyword">return</span> <span class="title class_">Math</span>.<span class="title function_">max</span>(<span class="title function_">maxDepth</span>(root.<span class="property">left</span>), <span class="title function_">maxDepth</span>(root.<span class="property">right</span>)) + <span class="number">1</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<h1><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/ping-heng-er-cha-shu-lcof/">剑指 Offer 55 - II. 平衡二叉树</a></h1>
-<p>输入一棵二叉树的根节点，判断该树是不是平衡二叉树。如果某二叉树中任意节点的左右子树的深度相差不超过1，那么它就是一棵平衡二叉树。</p>
-<p><strong>示例 1:</strong></p>
-<p>给定二叉树 <code>[3,9,20,null,null,15,7]</code></p>
-<figure class="highlight livescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  <span class="number">3</span></span><br><span class="line"> / <span class="string">\</span></span><br><span class="line"><span class="number">9</span>  <span class="number">20</span></span><br><span class="line">  /  <span class="string">\</span></span><br><span class="line"> <span class="number">15</span>   <span class="number">7</span></span><br></pre></td></tr></table></figure>
-<p>返回 <code>true</code> 。<br>
-<br>
-<strong>示例 2:</strong></p>
-<p>给定二叉树 <code>[1,2,2,3,3,null,null,4,4]</code></p>
-<figure class="highlight livescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">      <span class="number">1</span></span><br><span class="line">     / <span class="string">\</span></span><br><span class="line">    <span class="number">2</span>   <span class="number">2</span></span><br><span class="line">   / <span class="string">\</span></span><br><span class="line">  <span class="number">3</span>   <span class="number">3</span></span><br><span class="line"> / <span class="string">\</span></span><br><span class="line"><span class="number">4</span>   <span class="number">4</span></span><br></pre></td></tr></table></figure>
-<p>返回 <code>false</code> 。</p>
+<h1><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/qiu-12n-lcof/">剑指 Offer 64. 求1+2+…+n</a></h1>
+<p>求 <code>1+2+...+n</code> ，要求不能使用乘除法、for、while、if、else、switch、case等关键字及条件判断语句（A?B:C）。</p>
+<p><strong>示例 1：</strong></p>
+<figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">输入: n = 3</span></span><br><span class="line"><span class="section">输出: 6</span></span><br></pre></td></tr></table></figure>
+<p><strong>示例 2：</strong></p>
+<figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">输入: n = 9</span></span><br><span class="line"><span class="section">输出: 45</span></span><br></pre></td></tr></table></figure>
 <p><strong>限制：</strong></p>
 <ul>
-<li><code>0 &lt;= 树的结点个数 &lt;= 10000</code></li>
+<li><code>1 &lt;= n &lt;= 10000</code></li>
 </ul>
-<p>注意：本题与主站 110 题相同：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/balanced-binary-tree/">https://leetcode-cn.com/problems/balanced-binary-tree/</a></p>
-<h2 id="思路及代码-2">思路及代码</h2>
-<p>先判断当前结点的左右子树高度是否满足平衡二叉树要求，然后判断左右子树是否为平衡二叉树，两条件都满足才能为平衡二叉树</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">TreeNode</span>&#125; <span class="variable">root</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">boolean</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> isBalanced = <span class="keyword">function</span>(<span class="params">root</span>) &#123;</span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">countHeight</span>(<span class="params">root</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span>(!root) <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">        <span class="keyword">return</span> <span class="title class_">Math</span>.<span class="title function_">max</span>(<span class="title function_">countHeight</span>(root.<span class="property">left</span>), <span class="title function_">countHeight</span>(root.<span class="property">right</span>)) + <span class="number">1</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(!root) <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">    <span class="keyword">return</span> <span class="title class_">Math</span>.<span class="title function_">abs</span>(<span class="title function_">countHeight</span>(root.<span class="property">left</span>) - <span class="title function_">countHeight</span>(root.<span class="property">right</span>)) &lt;= <span class="number">1</span> &amp;&amp; <span class="title function_">isBalanced</span>(root.<span class="property">left</span>) &amp;&amp; <span class="title function_">isBalanced</span>(root.<span class="property">right</span>)</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="思路与代码">思路与代码</h2>
+<p>看这题的tag：脑筋急转弯就能发现不对劲……</p>
+<p>主要就是用短路运算符来代替条件判断</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">number</span>&#125; <span class="variable">n</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">number</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> sumNums = <span class="keyword">function</span>(<span class="params">n</span>) &#123;</span><br><span class="line">    n &amp;&amp; (n += <span class="title function_">sumNums</span>(n-<span class="number">1</span>))</span><br><span class="line">    <span class="keyword">return</span> n</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h1><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/er-cha-sou-suo-shu-de-zui-jin-gong-gong-zu-xian-lcof/">剑指 Offer 68 - I. 二叉搜索树的最近公共祖先</a></h1>
+<p>给定一个二叉搜索树, 找到该树中两个指定节点的最近公共祖先。<br>
+<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%9C%80%E8%BF%91%E5%85%AC%E5%85%B1%E7%A5%96%E5%85%88/8918834?fr=aladdin">百度百科</a>中最近公共祖先的定义为：“对于有根树 T 的两个结点 p、q，最近公共祖先表示为一个结点 x，满足 x 是 p、q 的祖先且 x 的深度尽可能大（<strong>一个节点也可以是它自己的祖先</strong>）。”</p>
+<p>例如，给定如下二叉搜索树:  root = [6,2,8,0,4,7,9,null,null,3,5]</p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/bc7700522f0a4880ba8b5735e0d7fc7d~tplv-k3u1fbpfcp-zoom-1.image" alt=""></p>
+<p><strong>示例 1:</strong></p>
+<figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入: <span class="attr">root</span> = [<span class="number">6</span>,<span class="number">2</span>,<span class="number">8</span>,<span class="number">0</span>,<span class="number">4</span>,<span class="number">7</span>,<span class="number">9</span>,<span class="literal">null</span>,<span class="literal">null</span>,<span class="number">3</span>,<span class="number">5</span>], <span class="attr">p</span> = <span class="number">2</span>, <span class="attr">q</span> = <span class="number">8</span></span><br><span class="line">输出: <span class="number">6</span> </span><br><span class="line">解释: 节点 <span class="number">2</span> 和节点 <span class="number">8</span> 的最近公共祖先是 <span class="number">6</span>。</span><br></pre></td></tr></table></figure>
+<p><strong>示例 2:</strong></p>
+<figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入: <span class="attr">root</span> = [<span class="number">6</span>,<span class="number">2</span>,<span class="number">8</span>,<span class="number">0</span>,<span class="number">4</span>,<span class="number">7</span>,<span class="number">9</span>,<span class="literal">null</span>,<span class="literal">null</span>,<span class="number">3</span>,<span class="number">5</span>], <span class="attr">p</span> = <span class="number">2</span>, <span class="attr">q</span> = <span class="number">4</span></span><br><span class="line">输出: <span class="number">2</span></span><br><span class="line">解释: 节点 <span class="number">2</span> 和节点 <span class="number">4</span> 的最近公共祖先是 <span class="number">2</span>, 因为根据定义最近公共祖先节点可以为节点本身。</span><br></pre></td></tr></table></figure>
+<p><strong>说明:</strong></p>
+<ul>
+<li>所有节点的值都是唯一的。</li>
+<li>p、q 为不同节点且均存在于给定的二叉搜索树中。</li>
+</ul>
+<p>注意：本题与主站 235 题相同：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-search-tree/">https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-search-tree/</a></p>
+<h2 id="思路与代码-2">思路与代码</h2>
+<p>根据之前<a href="https://ysx.cosine.ren/cn/coding-train/leetcode/bytedance/bytedance-day17/#%E6%80%9D%E8%B7%AF-2">冲刺春招-精选笔面试66题大通关17</a>的经验，思路一为先从一个节点往上走将沿途的vis置为true，再从另一个结点往上走，遇到vis为true的就是最近共同祖先，返回。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">TreeNode</span>&#125; <span class="variable">root</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">TreeNode</span>&#125; <span class="variable">p</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">TreeNode</span>&#125; <span class="variable">q</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">TreeNode</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> lowestCommonAncestor = <span class="keyword">function</span>(<span class="params">root, p, q</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span>(!root) <span class="keyword">return</span> <span class="literal">null</span></span><br><span class="line">    <span class="keyword">let</span> fa = <span class="keyword">new</span> <span class="title class_">Map</span>()</span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">dfs</span>(<span class="params">rt, pre</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (rt === <span class="literal">null</span>) <span class="keyword">return</span></span><br><span class="line">        fa.<span class="title function_">set</span>(rt, pre)</span><br><span class="line">        <span class="title function_">dfs</span>(rt.<span class="property">left</span>, rt)</span><br><span class="line">        <span class="title function_">dfs</span>(rt.<span class="property">right</span>, rt)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="title function_">dfs</span>(root, <span class="literal">null</span>)</span><br><span class="line">    <span class="keyword">let</span> vis = <span class="keyword">new</span> <span class="title class_">Map</span>()</span><br><span class="line">    <span class="keyword">let</span> nowv = q</span><br><span class="line">    <span class="keyword">while</span> (nowv) &#123;</span><br><span class="line">        vis.<span class="title function_">set</span>(nowv, <span class="literal">true</span>)</span><br><span class="line">        <span class="keyword">if</span>(fa.<span class="title function_">has</span>(nowv)) </span><br><span class="line">            nowv = fa.<span class="title function_">get</span>(nowv)</span><br><span class="line">    &#125;</span><br><span class="line">    nowv = p</span><br><span class="line">    <span class="keyword">while</span> (nowv) &#123;</span><br><span class="line">        <span class="keyword">if</span>(vis.<span class="title function_">has</span>(nowv)) </span><br><span class="line">            <span class="keyword">return</span> nowv</span><br><span class="line">        <span class="keyword">if</span>(fa.<span class="title function_">has</span>(nowv)) </span><br><span class="line">            nowv = fa.<span class="title function_">get</span>(nowv)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>思路二则是利用二叉搜索树的性质，从根节点开始遍历，官方题解如下：</p>
+<ul>
+<li>若当前节点值大于 <code>p</code> 和 <code>q</code> 的值，说明 <code>p</code> 和 <code>q</code> 应该在当前节点的左子树，将当前节点移动到它的左子节点；</li>
+<li>若当前节点的值小于 <code>p</code> 和 <code>q</code> 的值，说明 <code>p</code> 和 <code>q</code> 应该在当前节点的右子树，将当前节点移动到它的右子节点；</li>
+<li>若等于当前节点的值不满足上述两条要求，那么说明当前节点就是「分岔点」。此时，<code>p</code> 和 <code>q</code> 要么在当前节点的不同的子树中，要么其中一个就是当前节点。</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">TreeNode</span>&#125; <span class="variable">root</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">TreeNode</span>&#125; <span class="variable">p</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">TreeNode</span>&#125; <span class="variable">q</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">TreeNode</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> lowestCommonAncestor = <span class="keyword">function</span>(<span class="params">root, p, q</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span>(!root) <span class="keyword">return</span> <span class="literal">null</span></span><br><span class="line">    <span class="keyword">if</span>(root.<span class="property">val</span> &lt; p.<span class="property">val</span> &amp;&amp; root.<span class="property">val</span> &lt; q.<span class="property">val</span>) </span><br><span class="line">        <span class="keyword">return</span> <span class="title function_">lowestCommonAncestor</span>(root.<span class="property">right</span>, p, q)</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(root.<span class="property">val</span> &gt; p.<span class="property">val</span> &amp;&amp; root.<span class="property">val</span> &gt; q.<span class="property">val</span>) </span><br><span class="line">        <span class="keyword">return</span> <span class="title function_">lowestCommonAncestor</span>(root.<span class="property">left</span>, p, q)</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">return</span> root</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h1><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/er-cha-shu-de-zui-jin-gong-gong-zu-xian-lcof/">剑指 Offer 68 - II. 二叉树的最近公共祖先</a></h1>
+<p>给定一个二叉树, 找到该树中两个指定节点的最近公共祖先。</p>
+<p><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%9C%80%E8%BF%91%E5%85%AC%E5%85%B1%E7%A5%96%E5%85%88/8918834?fr=aladdin">百度百科</a>中最近公共祖先的定义为：“对于有根树 T 的两个结点 p、q，最近公共祖先表示为一个结点 x，满足 x 是 p、q 的祖先且 x 的深度尽可能大（<strong>一个节点也可以是它自己的祖先</strong>）。”</p>
+<p>例如，给定如下二叉树:  root = [3,5,1,6,2,0,8,null,null,7,4]</p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ed3ce8239e9e460aad44bd1fedadd2de~tplv-k3u1fbpfcp-zoom-1.image" alt=""></p>
+<p><strong>示例 1:</strong></p>
+<figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入: <span class="attr">root</span> = [<span class="number">3</span>,<span class="number">5</span>,<span class="number">1</span>,<span class="number">6</span>,<span class="number">2</span>,<span class="number">0</span>,<span class="number">8</span>,<span class="literal">null</span>,<span class="literal">null</span>,<span class="number">7</span>,<span class="number">4</span>], <span class="attr">p</span> = <span class="number">5</span>, <span class="attr">q</span> = <span class="number">1</span></span><br><span class="line">输出: <span class="number">3</span></span><br><span class="line">解释: 节点 <span class="number">5</span> 和节点 <span class="number">1</span> 的最近公共祖先是节点 <span class="number">3</span>。</span><br></pre></td></tr></table></figure>
+<p><strong>示例 2:</strong></p>
+<figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入: <span class="attr">root</span> = [<span class="number">3</span>,<span class="number">5</span>,<span class="number">1</span>,<span class="number">6</span>,<span class="number">2</span>,<span class="number">0</span>,<span class="number">8</span>,<span class="literal">null</span>,<span class="literal">null</span>,<span class="number">7</span>,<span class="number">4</span>], <span class="attr">p</span> = <span class="number">5</span>, <span class="attr">q</span> = <span class="number">4</span></span><br><span class="line">输出: <span class="number">5</span></span><br><span class="line">解释: 节点 <span class="number">5</span> 和节点 <span class="number">4</span> 的最近公共祖先是节点 <span class="number">5</span>。因为根据定义最近公共祖先节点可以为节点本身。</span><br></pre></td></tr></table></figure>
+<p><strong>说明:</strong></p>
+<ul>
+<li>所有节点的值都是唯一的。</li>
+<li>p、q 为不同节点且均存在于给定的二叉树中。</li>
+</ul>
+<p>注意：本题与主站 236 题相同：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree/">https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree/</a></p>
+<h2 id="思路与代码-3">思路与代码</h2>
+<p>用上题的思路1就好了。</p>
+<p><code>fa</code>存每个结点的父节点，从上向下遍历一次初始化<code>fa</code>，再从下往上初始化 <code>vis</code></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> lowestCommonAncestor = <span class="keyword">function</span>(<span class="params">root, p, q</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span>(!root) <span class="keyword">return</span> <span class="literal">null</span></span><br><span class="line">    <span class="keyword">let</span> fa = <span class="keyword">new</span> <span class="title class_">Map</span>()</span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">dfs</span>(<span class="params">rt, pre</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (rt === <span class="literal">null</span>) <span class="keyword">return</span></span><br><span class="line">        fa.<span class="title function_">set</span>(rt, pre)</span><br><span class="line">        <span class="title function_">dfs</span>(rt.<span class="property">left</span>, rt)</span><br><span class="line">        <span class="title function_">dfs</span>(rt.<span class="property">right</span>, rt)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="title function_">dfs</span>(root, <span class="literal">null</span>)</span><br><span class="line">    <span class="keyword">let</span> vis = <span class="keyword">new</span> <span class="title class_">Map</span>()</span><br><span class="line">    <span class="keyword">let</span> nowv = q</span><br><span class="line">    <span class="keyword">while</span> (nowv) &#123;</span><br><span class="line">        vis.<span class="title function_">set</span>(nowv, <span class="literal">true</span>)</span><br><span class="line">        <span class="keyword">if</span>(fa.<span class="title function_">has</span>(nowv)) </span><br><span class="line">            nowv = fa.<span class="title function_">get</span>(nowv)</span><br><span class="line">    &#125;</span><br><span class="line">    nowv = p</span><br><span class="line">    <span class="keyword">while</span> (nowv) &#123;</span><br><span class="line">        <span class="keyword">if</span>(vis.<span class="title function_">has</span>(nowv)) </span><br><span class="line">            <span class="keyword">return</span> nowv</span><br><span class="line">        <span class="keyword">if</span>(fa.<span class="title function_">has</span>(nowv)) </span><br><span class="line">            nowv = fa.<span class="title function_">get</span>(nowv)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
         <hr>
         <!-- Pager -->
         <ul class="pager">
           
-          <li class="previous">
-            <a href="/cn/coding-train/leetcode/offer/day19/" data-toggle="tooltip" data-placement="top" title="剑指offer day19 搜索与回溯算法（中等）">&larr; Previous Post</a>
-          </li>
-          
           
           <li class="next">
-            <a href="/cn/coding-train/leetcode/offer/day17/" data-toggle="tooltip" data-placement="top" title="剑指offer day17 排序（中等）">Next Post &rarr;</a>
+            <a href="/cn/coding-train/leetcode/offer/day18/" data-toggle="tooltip" data-placement="top" title="剑指offer day18 搜索与回溯算法（中等）">Next Post &rarr;</a>
           </li>
           
         </ul>
@@ -586,7 +614,7 @@
       </a>
     </li>
     <li class="social-share-li">
-      <a target="_blank" class="social-share-icon" href="mailto:?subject=剑指offer day18 搜索与回溯算法（中等）&body=Hi,I found this website and thought you might like it https://ysx.cosine.ren/cn/coding-train/leetcode/offer/day18/">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=剑指offer day19 搜索与回溯算法（中等）&body=Hi,I found this website and thought you might like it https://ysx.cosine.ren/cn/coding-train/leetcode/offer/day19/">
         <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
       </a>
     </li>
@@ -621,7 +649,7 @@
       repo: 'yusixian.github.io',
       owner: 'yusixian',
       admin: 'yusixian',
-      id: 'Sat Apr 16 2022 17:58:00 GMT+0800', // Ensure uniqueness and length less than 50
+      id: 'Sun Apr 17 2022 19:48:00 GMT+0800', // Ensure uniqueness and length less than 50
       distractionFreeMode: false, // Facebook-like distraction free mode
       perPage: 10,
       pagerDirection: 'last',
@@ -674,7 +702,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">剑指 Offer 55 - I. 二叉树的深度</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%9D%E8%B7%AF%E5%8F%8A%E4%BB%A3%E7%A0%81"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">思路及代码</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">剑指 Offer 55 - II. 平衡二叉树</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%9D%E8%B7%AF%E5%8F%8A%E4%BB%A3%E7%A0%81-2"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">思路及代码</span></a></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">剑指 Offer 64. 求1+2+…+n</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%9D%E8%B7%AF%E4%B8%8E%E4%BB%A3%E7%A0%81"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">思路与代码</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">剑指 Offer 68 - I. 二叉搜索树的最近公共祖先</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%9D%E8%B7%AF%E4%B8%8E%E4%BB%A3%E7%A0%81-2"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">思路与代码</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">剑指 Offer 68 - II. 二叉树的最近公共祖先</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%9D%E8%B7%AF%E4%B8%8E%E4%BB%A3%E7%A0%81-3"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">思路与代码</span></a></li></ol></li></ol>
         
         </div>
       </aside>
@@ -702,6 +730,8 @@
             <a class="tag" href="/tags/#树" title="树">树</a>
             
             <a class="tag" href="/tags/#dfs/bfs" title="dfs/bfs">dfs/bfs</a>
+            
+            <a class="tag" href="/tags/#递归" title="递归">递归</a>
             
           </div>
         </section>
