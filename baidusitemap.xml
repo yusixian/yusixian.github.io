@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://ysx.cosine.ren/cn/coding-train/leetcode/offer/day20/</loc>
+    <lastmod>2022-04-18</lastmod>
+  </url>
+  <url>
+    <loc>https://ysx.cosine.ren/cn/163-yanxuan-review-2022-spring-frontend/</loc>
+    <lastmod>2022-04-18</lastmod>
+  </url>
+  <url>
     <loc>https://ysx.cosine.ren/cn/coding-train/leetcode/offer/day19/</loc>
     <lastmod>2022-04-17</lastmod>
   </url>
@@ -31,10 +39,6 @@
   <url>
     <loc>https://ysx.cosine.ren/cn/coding-train/leetcode/offer/day14/</loc>
     <lastmod>2022-04-12</lastmod>
-  </url>
-  <url>
-    <loc>https://ysx.cosine.ren/cn/163-yanxuan-review-2022-spring-frontend/</loc>
-    <lastmod>2022-04-11</lastmod>
   </url>
   <url>
     <loc>https://ysx.cosine.ren/cn/coding-train/leetcode/offer/day13/</loc>
