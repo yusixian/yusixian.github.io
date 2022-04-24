@@ -142,10 +142,10 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="https://ysx.cosine.ren/cn/coding-train/leetcode/offer/day25/">
+  <link rel="canonical" href="https://ysx.cosine.ren/cn/coding-train/leetcode/offer/day26/">
   <title>
     
-      剑指offer day25 模拟（中等） - cos的博客 - WA的一声就哭了
+      剑指offer day26 字符串（中等） - cos的博客 - WA的一声就哭了
     
   </title>
 <meta name="generator" content="Hexo 5.4.1"></head>
@@ -386,18 +386,16 @@
               
               <a class="tag" href="/tags/#leetcode" title="leetcode">leetcode</a>
               
+              <a class="tag" href="/tags/#字符串" title="字符串">字符串</a>
+              
               <a class="tag" href="/tags/#模拟" title="模拟">模拟</a>
               
-              <a class="tag" href="/tags/#栈" title="栈">栈</a>
-              
-              <a class="tag" href="/tags/#数组" title="数组">数组</a>
-              
             </div>
-            <h1>剑指offer day25 模拟（中等）</h1>
+            <h1>剑指offer day26 字符串（中等）</h1>
             <h2 class="subheading">知识点：数组、栈、模拟，难度为简单、中等</h2>
             <span class="meta">
               Posted by cos on
-              2022-04-23
+              2022-04-24
             </span>
 
 
@@ -405,11 +403,11 @@
             <!-- WordCount start -->
             <div class="blank_box"></div>
             <span class="meta">
-              Estimated Reading Time <span class="post-count">3</span> Minutes
+              Estimated Reading Time <span class="post-count">6</span> Minutes
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">786</span> In Total
+              Words <span class="post-count">1.4k</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -471,8 +469,8 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <p>day25题目：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/shun-shi-zhen-da-yin-ju-zhen-lcof/">剑指 Offer 29. 顺时针打印矩阵</a>、<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/zhan-de-ya-ru-dan-chu-xu-lie-lcof/">剑指 Offer 31. 栈的压入、弹出序列</a></p>
-<p>知识点：数组、栈、模拟，难度为简单、中等</p>
+        <p>day26题目：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/biao-shi-shu-zhi-de-zi-fu-chuan-lcof/">剑指 Offer 20. 表示数值的字符串</a>、<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/ba-zi-fu-chuan-zhuan-huan-cheng-zheng-shu-lcof/">剑指 Offer 67. 把字符串转换成整数</a></p>
+<p>知识点：字符串、模拟，难度为中等、中等</p>
 <p>学习计划链接：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/study-plan/lcof/?progress=7jn70jr">「剑指 Offer」 - 学习计划</a></p>
 <table>
 <thead>
@@ -484,64 +482,111 @@
 </thead>
 <tbody>
 <tr>
-<td><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/shun-shi-zhen-da-yin-ju-zhen-lcof/">剑指 Offer 29. 顺时针打印矩阵</a></td>
-<td><a target="_blank" rel="noopener" href="https://leetcode-cn.com/tag/array">数组</a>、<a target="_blank" rel="noopener" href="https://leetcode-cn.com/tag/matrix">矩阵</a>、<a target="_blank" rel="noopener" href="https://leetcode-cn.com/tag/simulation">模拟</a></td>
-<td>简单</td>
+<td><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/biao-shi-shu-zhi-de-zi-fu-chuan-lcof/">剑指 Offer 20. 表示数值的字符串</a></td>
+<td><a target="_blank" rel="noopener" href="https://leetcode-cn.com/tag/string">字符串</a></td>
+<td>中等</td>
 </tr>
 <tr>
-<td><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/zhan-de-ya-ru-dan-chu-xu-lie-lcof/">剑指 Offer 31. 栈的压入、弹出序列</a></td>
-<td><a target="_blank" rel="noopener" href="https://leetcode-cn.com/tag/stack">栈</a>、<a target="_blank" rel="noopener" href="https://leetcode-cn.com/tag/array">数组</a>、<a target="_blank" rel="noopener" href="https://leetcode-cn.com/tag/simulation">模拟</a></td>
+<td><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/ba-zi-fu-chuan-zhuan-huan-cheng-zheng-shu-lcof/">剑指 Offer 67. 把字符串转换成整数</a></td>
+<td><a target="_blank" rel="noopener" href="https://leetcode-cn.com/tag/string">字符串</a></td>
 <td>中等</td>
 </tr>
 </tbody>
 </table>
-<h1><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/shun-shi-zhen-da-yin-ju-zhen-lcof/">剑指 Offer 29. 顺时针打印矩阵</a></h1>
-<p>输入一个矩阵，按照从外向里以顺时针的顺序依次打印出每一个数字。</p>
-<p><strong>示例 1：</strong></p>
-<figure class="highlight inform7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入： matrix = <span class="comment">[<span class="comment">[1,2,3]</span>,<span class="comment">[4,5,6]</span>,<span class="comment">[7,8,9]</span>]</span></span><br><span class="line">输出： <span class="comment">[1,2,3,6,9,8,7,4,5]</span></span><br></pre></td></tr></table></figure>
-<p><strong>示例 2：</strong></p>
-<figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入： matrix = [[<span class="number">1,2,3,4</span>],[<span class="number">5,6,7,8</span>],[<span class="number">9,10,11,12</span>]]</span><br><span class="line">输出： [<span class="number">1,2,3,4</span>,<span class="number">8,12,11,10</span>,<span class="number">9,5,6,7</span>]</span><br></pre></td></tr></table></figure>
-<p><strong>限制：</strong></p>
-<ul>
-<li><code>0 &lt;= matrix.length &lt;= 100</code></li>
-<li><code>0 &lt;= matrix[i].length &lt;= 100</code></li>
-</ul>
-<p>注意：本题与主站 54 题相同：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/spiral-matrix/">https://leetcode-cn.com/problems/spiral-matrix/</a></p>
-<h2 id="思路及代码">思路及代码</h2>
-<p>这不还是螺旋矩阵嘛！</p>
-<p>移步<a href="https://ysx.cosine.ren/cn/coding-train/leetcode/bytedance/bytedance-day6/#54">冲刺春招-精选笔面试66题大通关day6</a></p>
-<ul>
-<li>每次就一直往右下左上的顺序走就行了</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">number[][]</span>&#125; <span class="variable">matrix</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">number[]</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> spiralOrder = <span class="keyword">function</span>(<span class="params">matrix</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> [n, cnt] = [matrix.<span class="property">length</span>, <span class="number">1</span>]</span><br><span class="line">    <span class="keyword">if</span>(n == <span class="number">0</span>) <span class="keyword">return</span> []</span><br><span class="line">    <span class="keyword">let</span> [m, res] = [matrix[<span class="number">0</span>].<span class="property">length</span>, []]</span><br><span class="line">    <span class="keyword">let</span> sum = n*m</span><br><span class="line">    <span class="keyword">let</span> [r, c] = [<span class="number">0</span>, <span class="number">0</span>]</span><br><span class="line">    res.<span class="title function_">push</span>(matrix[<span class="number">0</span>][<span class="number">0</span>])</span><br><span class="line">    <span class="keyword">while</span>(cnt &lt; sum) &#123;</span><br><span class="line">        <span class="keyword">while</span>(c+<span class="number">1</span> &lt; m &amp;&amp; matrix[r][c+<span class="number">1</span>] != <span class="literal">null</span>) &#123;</span><br><span class="line">            res.<span class="title function_">push</span>(matrix[r][c+<span class="number">1</span>])</span><br><span class="line">            ++cnt</span><br><span class="line">            matrix[r][c++] = <span class="literal">null</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span>(r+<span class="number">1</span> &lt; n &amp;&amp; matrix[r+<span class="number">1</span>][c] != <span class="literal">null</span>) &#123;</span><br><span class="line">            res.<span class="title function_">push</span>(matrix[r+<span class="number">1</span>][c])</span><br><span class="line">            ++cnt</span><br><span class="line">            matrix[r++][c] = <span class="literal">null</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span>(c-<span class="number">1</span> &gt;= <span class="number">0</span> &amp;&amp; matrix[r][c-<span class="number">1</span>] != <span class="literal">null</span>) &#123;</span><br><span class="line">            res.<span class="title function_">push</span>(matrix[r][c-<span class="number">1</span>])</span><br><span class="line">            ++cnt</span><br><span class="line">            matrix[r][c--] = <span class="literal">null</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span>(r-<span class="number">1</span> &gt;= <span class="number">0</span> &amp;&amp; matrix[r-<span class="number">1</span>][c] != <span class="literal">null</span>) &#123;</span><br><span class="line">            res.<span class="title function_">push</span>(matrix[r-<span class="number">1</span>][c])</span><br><span class="line">            ++cnt</span><br><span class="line">            matrix[r--][c] = <span class="literal">null</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<h1><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/zhan-de-ya-ru-dan-chu-xu-lie-lcof/">剑指 Offer 31. 栈的压入、弹出序列</a></h1>
-<p>输入两个整数序列，第一个序列表示栈的压入顺序，请判断第二个序列是否为该栈的弹出顺序。假设压入栈的所有数字均不相等。例如，序列 {1,2,3,4,5} 是某栈的压栈序列，序列 {4,5,3,2,1} 是该压栈序列对应的一个弹出序列，但 {4,3,5,1,2} 就不可能是该压栈序列的弹出序列。</p>
-<p><strong>示例 1：</strong></p>
-<figure class="highlight livescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">输入： pushed = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>], popped = [<span class="number">4</span>,<span class="number">5</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>]</span><br><span class="line">输出： <span class="literal">true</span></span><br><span class="line">解释： 我们可以按以下顺序执行：</span><br><span class="line">push<span class="function"><span class="params">(<span class="number">1</span>)</span>, <span class="title">push</span><span class="params">(<span class="number">2</span>)</span>, <span class="title">push</span><span class="params">(<span class="number">3</span>)</span>, <span class="title">push</span><span class="params">(<span class="number">4</span>)</span>, <span class="title">pop</span><span class="params">()</span> -&gt;</span> <span class="number">4</span>,</span><br><span class="line">push<span class="function"><span class="params">(<span class="number">5</span>)</span>, <span class="title">pop</span><span class="params">()</span> -&gt;</span> <span class="number">5</span>, pop<span class="function"><span class="params">()</span> -&gt;</span> <span class="number">3</span>, pop<span class="function"><span class="params">()</span> -&gt;</span> <span class="number">2</span>, pop<span class="function"><span class="params">()</span> -&gt;</span> <span class="number">1</span></span><br></pre></td></tr></table></figure>
-<p><strong>示例 2：</strong></p>
-<figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入： <span class="attr">pushed</span> = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>], <span class="attr">popped</span> = [<span class="number">4</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">1</span>,<span class="number">2</span>]</span><br><span class="line">输出： <span class="literal">false</span></span><br><span class="line">解释： <span class="number">1</span> 不能在 <span class="number">2</span> 之前弹出。</span><br></pre></td></tr></table></figure>
-<p><strong>提示：</strong></p>
+<h1><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/biao-shi-shu-zhi-de-zi-fu-chuan-lcof/">剑指 Offer 20. 表示数值的字符串</a></h1>
+<p>请实现一个函数用来判断字符串是否表示<strong>数值</strong>（包括整数和小数）。</p>
+<p><strong>数值</strong>（按顺序）可以分成以下几个部分：</p>
 <ol>
-<li><code>0 &lt;= pushed.length == popped.length &lt;= 1000</code></li>
-<li><code>0 &lt;= pushed[i], popped[i] &lt; 1000</code></li>
-<li><code>pushed</code> 是 <code>popped</code> 的排列。</li>
+<li>若干空格</li>
+<li>一个 <strong>小数</strong> 或者 <strong>整数</strong></li>
+<li>（可选）一个 <code>'e'</code> 或 <code>'E'</code> ，后面跟着一个 <strong>整数</strong></li>
+<li>若干空格</li>
 </ol>
-<p>注意：本题与主站 946 题相同：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/validate-stack-sequences/">https://leetcode-cn.com/problems/validate-stack-sequences/</a></p>
+<p><strong>小数</strong>（按顺序）可以分成以下几个部分：</p>
+<ol>
+<li>
+<p>（可选）一个符号字符（<code>'+'</code> 或 <code>'-'</code>）</p>
+</li>
+<li>
+<p>下述格式之一：</p>
+<ol>
+<li>至少一位数字，后面跟着一个点 <code>'.'</code></li>
+<li>至少一位数字，后面跟着一个点 <code>'.'</code> ，后面再跟着至少一位数字</li>
+<li>一个点 <code>'.'</code> ，后面跟着至少一位数字</li>
+</ol>
+</li>
+</ol>
+<p><strong>整数</strong>（按顺序）可以分成以下几个部分：</p>
+<ol>
+<li>（可选）一个符号字符（<code>'+'</code> 或 <code>'-'</code>）</li>
+<li>至少一位数字</li>
+</ol>
+<p>部分<strong>数值</strong>列举如下：</p>
+<ul>
+<li><code>[&quot;+100&quot;, &quot;5e2&quot;, &quot;-123&quot;, &quot;3.1416&quot;, &quot;-1E-16&quot;, &quot;0123&quot;]</code></li>
+</ul>
+<p>部分<strong>非数值</strong>列举如下：</p>
+<ul>
+<li><code>[&quot;12e&quot;, &quot;1a3.14&quot;, &quot;1.2.3&quot;, &quot;+-5&quot;, &quot;12e+5.4&quot;]</code></li>
+</ul>
+<p><strong>示例 1：</strong></p>
+<figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入： <span class="attr">s</span> = <span class="string">&quot;0&quot;</span></span><br><span class="line">输出： <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<p><strong>示例 2：</strong></p>
+<figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入： <span class="attr">s</span> = <span class="string">&quot;e&quot;</span></span><br><span class="line">输出： <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+<p><strong>示例 3：</strong></p>
+<figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入： <span class="attr">s</span> = <span class="string">&quot;.&quot;</span></span><br><span class="line">输出： <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+<p><strong>示例 4：</strong></p>
+<figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入： <span class="attr">s</span> = <span class="string">&quot;    .1  &quot;</span></span><br><span class="line">输出： <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<p><strong>提示：</strong></p>
+<ul>
+<li><code>1 &lt;= s.length &lt;= 20</code></li>
+<li><code>s</code> 仅含英文字母（大写和小写），数字（<code>0-9</code>），加号 <code>'+'</code> ，减号 <code>'-'</code> ，空格 <code>' '</code> 或者点 <code>'.'</code> 。</li>
+</ul>
+<h2 id="思路及代码">思路及代码</h2>
+<p>简简单单一个模拟</p>
+<ul>
+<li>去除前后空格</li>
+<li>判断是否存在e/E
+<ul>
+<li>存在则判断前缀是否为整数/小数，再判断后缀是否为整数</li>
+<li>不存在则直接判断整个是否为整数/小数</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">string</span>&#125; <span class="variable">s</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">boolean</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> isNumber = <span class="keyword">function</span>(<span class="params">s</span>) &#123;</span><br><span class="line">    s = s.<span class="title function_">trim</span>()    <span class="comment">// 去除前后空格</span></span><br><span class="line">    <span class="keyword">if</span>(s.<span class="property">length</span> == <span class="number">0</span>) <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">isDigit</span>(<span class="params">ch</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> ch &gt;= <span class="string">&#x27;0&#x27;</span> &amp;&amp; ch &lt;= <span class="string">&#x27;9&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">judgeInt</span>(<span class="params">s</span>) &#123;</span><br><span class="line">        <span class="keyword">let</span> cnt = <span class="number">0</span></span><br><span class="line">        <span class="keyword">if</span>(s[cnt] == <span class="string">&#x27;-&#x27;</span> || s[cnt] == <span class="string">&#x27;+&#x27;</span>)</span><br><span class="line">            ++cnt</span><br><span class="line">        <span class="keyword">if</span>(cnt == s.<span class="property">length</span>) <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">        <span class="keyword">while</span>(cnt &lt; s.<span class="property">length</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span>(<span class="title function_">isDigit</span>(s[cnt])) ++cnt </span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">judgeDouble</span>(<span class="params">s</span>) &#123;</span><br><span class="line">        <span class="keyword">let</span> cnt = <span class="number">0</span></span><br><span class="line">        <span class="keyword">if</span>(s[cnt] == <span class="string">&#x27;-&#x27;</span> || s[cnt] == <span class="string">&#x27;+&#x27;</span>) </span><br><span class="line">            ++cnt</span><br><span class="line">        <span class="keyword">let</span> isDot = <span class="literal">false</span></span><br><span class="line">        <span class="keyword">let</span> pre = <span class="string">&#x27;&#x27;</span></span><br><span class="line">        <span class="keyword">if</span>(cnt == s.<span class="property">length</span>) <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">        <span class="keyword">while</span>(cnt &lt; s.<span class="property">length</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span>(s[cnt] == <span class="string">&#x27;.&#x27;</span>) &#123;</span><br><span class="line">                <span class="keyword">if</span>(isDot) <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">                <span class="keyword">if</span>(pre.<span class="property">length</span> == <span class="number">0</span> &amp;&amp; ( cnt+<span class="number">1</span> &gt;= s.<span class="property">length</span> || !<span class="title function_">isDigit</span>(s[cnt+<span class="number">1</span>]) ) ) </span><br><span class="line">                    <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">                isDot = <span class="literal">true</span></span><br><span class="line">                ++cnt</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span>(<span class="title function_">isDigit</span>(s[cnt])) &#123;</span><br><span class="line">                <span class="keyword">if</span>(!isDot) pre += s[cnt]</span><br><span class="line">                ++cnt</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> idx = s.<span class="title function_">indexOf</span>(<span class="string">&#x27;e&#x27;</span>)</span><br><span class="line">    <span class="keyword">if</span>(idx == -<span class="number">1</span>) idx = s.<span class="title function_">indexOf</span>(<span class="string">&#x27;E&#x27;</span>)</span><br><span class="line">    <span class="keyword">if</span>(idx != -<span class="number">1</span>) &#123;</span><br><span class="line">        <span class="keyword">let</span> pre = s.<span class="title function_">slice</span>(<span class="number">0</span>, idx)</span><br><span class="line">        <span class="keyword">let</span> post = s.<span class="title function_">slice</span>(idx + <span class="number">1</span>)</span><br><span class="line">        <span class="keyword">return</span> (<span class="title function_">judgeDouble</span>(pre) || <span class="title function_">judgeInt</span>(pre)) &amp;&amp; <span class="title function_">judgeInt</span>(post)</span><br><span class="line">    &#125; </span><br><span class="line">    <span class="keyword">return</span> <span class="title function_">judgeInt</span>(s) || <span class="title function_">judgeDouble</span>(s)</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h1><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/ba-zi-fu-chuan-zhuan-huan-cheng-zheng-shu-lcof/">剑指 Offer 67. 把字符串转换成整数</a></h1>
+<p>写一个函数 StrToInt，实现把字符串转换成整数这个功能。不能使用 atoi 或者其他类似的库函数。</p>
+<p>首先，该函数会根据需要丢弃无用的开头空格字符，直到寻找到第一个非空格的字符为止。</p>
+<p>当我们寻找到的第一个非空字符为正或者负号时，则将该符号与之后面尽可能多的连续数字组合起来，作为该整数的正负号；假如第一个非空字符是数字，则直接将其与之后连续的数字字符组合起来，形成整数。</p>
+<p>该字符串除了有效的整数部分之后也可能会存在多余的字符，这些字符可以被忽略，它们对于函数不应该造成影响。</p>
+<p>注意：假如该字符串中的第一个非空格字符不是一个有效整数字符、字符串为空或字符串仅包含空白字符时，则你的函数不需要进行转换。</p>
+<p>在任何情况下，若函数不能进行有效的转换时，请返回 0。</p>
+<p><strong>说明：</strong></p>
+<p>假设我们的环境只能存储 32 位大小的有符号整数，那么其数值范围为 [−231,  231 − 1]。如果数值超过这个范围，请返回  INT_MAX (231 − 1) 或 INT_MIN (−231) 。</p>
+<p><strong>示例 1:</strong></p>
+<figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">输入: &quot;42&quot;</span></span><br><span class="line"><span class="section">输出: 42</span></span><br></pre></td></tr></table></figure>
+<p><strong>示例 2:</strong></p>
+<figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">输入: &quot;   -42&quot;</span></span><br><span class="line"><span class="section">输出: -42</span></span><br><span class="line"><span class="section">解释: 第一个非空白字符为 &#x27;-&#x27;, 它是一个负号。</span></span><br><span class="line">     我们尽可能将负号与后面所有连续出现的数字组合起来，最后得到 -42 。</span><br></pre></td></tr></table></figure>
+<p><strong>示例 3:</strong></p>
+<figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">输入: &quot;4193 with words&quot;</span></span><br><span class="line"><span class="section">输出: 4193</span></span><br><span class="line"><span class="section">解释: 转换截止于数字 &#x27;3&#x27; ，因为它的下一个字符不为数字。</span></span><br></pre></td></tr></table></figure>
+<p><strong>示例 4:</strong></p>
+<figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">输入: &quot;words and 987&quot;</span></span><br><span class="line"><span class="section">输出: 0</span></span><br><span class="line"><span class="section">解释: 第一个非空字符是 &#x27;w&#x27;, 但它不是数字或正、负号。</span></span><br><span class="line">     因此无法执行有效的转换。</span><br></pre></td></tr></table></figure>
+<p><strong>示例 5:</strong></p>
+<figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">输入: &quot;-<span class="number">91283472332</span>&quot;</span><br><span class="line">输出: -<span class="number">2147483648</span></span><br><span class="line">解释: 数字 &quot;-<span class="number">91283472332</span>&quot; 超过 <span class="number">32</span> 位有符号整数范围。 </span><br><span class="line">     因此返回 INT_MIN (−<span class="number">231</span>) 。</span><br></pre></td></tr></table></figure>
+<p>注意：本题与主站 8 题相同：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/string-to-integer-atoi/">https://leetcode-cn.com/problems/string-to-integer-atoi/</a></p>
 <h2 id="思路及代码-2">思路及代码</h2>
-<p>每次入栈后判断是否可以弹出序列。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// @title zhan-de-ya-ru-dan-chu-xu-lie-lcof</span></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">number[]</span>&#125; <span class="variable">pushed</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">number[]</span>&#125; <span class="variable">popped</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">boolean</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> validateStackSequences = <span class="keyword">function</span>(<span class="params">pushed, popped</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> s = []</span><br><span class="line">    <span class="keyword">let</span> cnt = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; pushed.<span class="property">length</span>; ++i) &#123;</span><br><span class="line">        s.<span class="title function_">push</span>(pushed[i])</span><br><span class="line">        <span class="keyword">while</span>(s.<span class="property">length</span> &gt; <span class="number">0</span> &amp;&amp; s[s.<span class="property">length</span> - <span class="number">1</span>] === popped[cnt]) &#123;</span><br><span class="line">            s.<span class="title function_">pop</span>()</span><br><span class="line">            ++cnt</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> s.<span class="property">length</span> == <span class="number">0</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>官解是写了个自动机……</p>
+<p>纯纯的模拟就行了</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">string</span>&#125; <span class="variable">str</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">number</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> strToInt = <span class="keyword">function</span>(<span class="params">str</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> flag = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">let</span> [ans, idx] = [<span class="number">0</span>, <span class="number">0</span>]</span><br><span class="line">    <span class="keyword">while</span>(idx &lt; str.<span class="property">length</span> &amp;&amp; str[idx] == <span class="string">&#x27; &#x27;</span>) ++idx;</span><br><span class="line">    <span class="keyword">if</span>(idx &lt; str.<span class="property">length</span> &amp;&amp; (str[idx] == <span class="string">&#x27;-&#x27;</span> || str[idx] == <span class="string">&#x27;+&#x27;</span>)) &#123;</span><br><span class="line">        str[idx] == <span class="string">&#x27;-&#x27;</span> ? flag = -<span class="number">1</span> : flag = <span class="number">1</span></span><br><span class="line">        ++idx</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">isDigit</span>(<span class="params">ch</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> ch &gt;= <span class="string">&#x27;0&#x27;</span> &amp;&amp; ch &lt;= <span class="string">&#x27;9&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> <span class="title class_">Int</span>_max = <span class="title class_">Math</span>.<span class="title function_">pow</span>(<span class="number">2</span>,<span class="number">31</span>) - <span class="number">1</span></span><br><span class="line">    <span class="keyword">let</span> <span class="title class_">Int</span>_min = -<span class="title class_">Math</span>.<span class="title function_">pow</span>(<span class="number">2</span>,<span class="number">31</span>)</span><br><span class="line">    <span class="keyword">while</span>(idx &lt; str.<span class="property">length</span> &amp;&amp; <span class="title function_">isDigit</span>(str[idx])) &#123;</span><br><span class="line">        ans = ans * <span class="number">10</span> + (str[idx] - <span class="string">&#x27;0&#x27;</span>)</span><br><span class="line">        <span class="keyword">if</span>(ans*flag &gt;= <span class="title class_">Int</span>_max) <span class="keyword">return</span> <span class="title class_">Int</span>_max</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(ans*flag &lt;= <span class="title class_">Int</span>_min) <span class="keyword">return</span> <span class="title class_">Int</span>_min</span><br><span class="line">        ++idx</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ans*flag</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
 
         <hr>
         <!-- Pager -->
         <ul class="pager">
           
-          <li class="previous">
-            <a href="/cn/coding-train/leetcode/offer/day26/" data-toggle="tooltip" data-placement="top" title="剑指offer day26 字符串（中等）">&larr; Previous Post</a>
-          </li>
-          
           
           <li class="next">
-            <a href="/cn/coding-train/leetcode/offer/day24/" data-toggle="tooltip" data-placement="top" title="剑指offer day24 数学（中等）">Next Post &rarr;</a>
+            <a href="/cn/coding-train/leetcode/offer/day25/" data-toggle="tooltip" data-placement="top" title="剑指offer day25 模拟（中等）">Next Post &rarr;</a>
           </li>
           
         </ul>
@@ -590,7 +635,7 @@
       </a>
     </li>
     <li class="social-share-li">
-      <a target="_blank" class="social-share-icon" href="mailto:?subject=剑指offer day25 模拟（中等）&body=Hi,I found this website and thought you might like it https://ysx.cosine.ren/cn/coding-train/leetcode/offer/day25/">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=剑指offer day26 字符串（中等）&body=Hi,I found this website and thought you might like it https://ysx.cosine.ren/cn/coding-train/leetcode/offer/day26/">
         <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
       </a>
     </li>
@@ -625,7 +670,7 @@
       repo: 'yusixian.github.io',
       owner: 'yusixian',
       admin: 'yusixian',
-      id: 'Sat Apr 23 2022 23:00:00 GMT+0800', // Ensure uniqueness and length less than 50
+      id: 'Sun Apr 24 2022 23:00:00 GMT+0800', // Ensure uniqueness and length less than 50
       distractionFreeMode: false, // Facebook-like distraction free mode
       perPage: 10,
       pagerDirection: 'last',
@@ -678,7 +723,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">剑指 Offer 29. 顺时针打印矩阵</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%9D%E8%B7%AF%E5%8F%8A%E4%BB%A3%E7%A0%81"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">思路及代码</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">剑指 Offer 31. 栈的压入、弹出序列</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%9D%E8%B7%AF%E5%8F%8A%E4%BB%A3%E7%A0%81-2"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">思路及代码</span></a></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">剑指 Offer 20. 表示数值的字符串</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%9D%E8%B7%AF%E5%8F%8A%E4%BB%A3%E7%A0%81"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">思路及代码</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">剑指 Offer 67. 把字符串转换成整数</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%9D%E8%B7%AF%E5%8F%8A%E4%BB%A3%E7%A0%81-2"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">思路及代码</span></a></li></ol></li></ol>
         
         </div>
       </aside>
@@ -703,11 +748,9 @@
             
             <a class="tag" href="/tags/#leetcode" title="leetcode">leetcode</a>
             
+            <a class="tag" href="/tags/#字符串" title="字符串">字符串</a>
+            
             <a class="tag" href="/tags/#模拟" title="模拟">模拟</a>
-            
-            <a class="tag" href="/tags/#栈" title="栈">栈</a>
-            
-            <a class="tag" href="/tags/#数组" title="数组">数组</a>
             
           </div>
         </section>
