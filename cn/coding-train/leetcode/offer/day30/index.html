@@ -142,10 +142,10 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="https://ysx.cosine.ren/cn/数据结构学习笔记＜3＞ 队列/">
+  <link rel="canonical" href="https://ysx.cosine.ren/cn/coding-train/leetcode/offer/day30/">
   <title>
     
-      数据结构学习笔记＜3＞ 队列 - cos的博客 - WA的一声就哭了
+      剑指offer day30 分治算法（困难） - cos的博客 - WA的一声就哭了
     
   </title>
 <meta name="generator" content="Hexo 5.4.1"></head>
@@ -351,19 +351,19 @@
     .body--light {
       /* intro-header */
       --intro-header-background-image-url-home: url('/img/header_img/93604793_p0.jpg');
-      --intro-header-background-image-url-post: url('/img/header_img/lml_bg.jpg');
-      --intro-header-background-image-url-page: url('//img/header_img/lml_bg.jpg');
+      --intro-header-background-image-url-post: url('/img/header_img/polygon-pony-wallpaper-for-1920x1080-63-1175.jpg');
+      --intro-header-background-image-url-page: url('//img/header_img/polygon-pony-wallpaper-for-1920x1080-63-1175.jpg');
     }
     .body--dark {
       --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/93604793_p0.jpg');
-      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/lml_bg.jpg');
-      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('//img/header_img/lml_bg.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/polygon-pony-wallpaper-for-1920x1080-63-1175.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('//img/header_img/polygon-pony-wallpaper-for-1920x1080-63-1175.jpg');
     }
 
     header.intro-header {
        /*post*/
         background-image: var(--intro-header-background-image-url-post);
-        /* background-image: url('/img/header_img/lml_bg.jpg'); */
+        /* background-image: url('/img/header_img/polygon-pony-wallpaper-for-1920x1080-63-1175.jpg'); */
       
     }
 
@@ -384,18 +384,20 @@
           <div class="post-heading">
             <div class="tags">
               
-              <a class="tag" href="/tags/#c++" title="c++">c++</a>
+              <a class="tag" href="/tags/#leetcode" title="leetcode">leetcode</a>
               
-              <a class="tag" href="/tags/#数据结构" title="数据结构">数据结构</a>
+              <a class="tag" href="/tags/#数组" title="数组">数组</a>
               
-              <a class="tag" href="/tags/#队列" title="队列">队列</a>
+              <a class="tag" href="/tags/#分治" title="分治">分治</a>
+              
+              <a class="tag" href="/tags/#数学" title="数学">数学</a>
               
             </div>
-            <h1>数据结构学习笔记＜3＞ 队列</h1>
-            <h2 class="subheading">MOOC浙江大学的数据结构慕课学习记录——队列</h2>
+            <h1>剑指offer day30 分治算法（困难）</h1>
+            <h2 class="subheading">知识点：数组、数学、分治，难度为简单、困难</h2>
             <span class="meta">
               Posted by cos on
-              2020-03-02
+              2022-04-28
             </span>
 
 
@@ -403,11 +405,11 @@
             <!-- WordCount start -->
             <div class="blank_box"></div>
             <span class="meta">
-              Estimated Reading Time <span class="post-count">4</span> Minutes
+              Estimated Reading Time <span class="post-count">2</span> Minutes
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">937</span> In Total
+              Words <span class="post-count">652</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -469,68 +471,61 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h2 id="一、队列的抽象数据类型描述">一、队列的抽象数据类型描述</h2>
-<p>类型名：队列（Queue）<br>
-数据对象集：一个有0个或多个元素的有穷线性表<br>
-操作集：长度为MaxSize的堆栈Q∈Queue, 队列元素item∈ElementType</p>
-<blockquote>
-<p><strong>1.生成长度为MaxSize的空队列<br>
-Queue CreatQueue(int MaxSize);<br>
-2.判断队列Q是否已满<br>
-bool IsFullQ(Queue Q, int MaxSize);<br>
-3.将数据元素item插入队列Q中<br>
-bool AddQ(Queue Q, ElementType item);<br>
-4.判断队列Q是否已空<br>
-bool IsEmptyQ(Queue Q);<br>
-5.删除并返回队首元素<br>
-ElementType DeleteQ(Queue Q);</strong></p>
-</blockquote>
-<h2 id="二、队列的顺序存储实现">二、队列的顺序存储实现</h2>
-<h3 id="1-定义">1.定义</h3>
-<p>队列的顺序存储结构通常由一个<strong>一维数组</strong>和一个<strong>记录队列头元素位置的变量front</strong>以及一个<strong>记录队列尾元素位置的变量rear</strong>组成。<br>
-形成的数组搬过来，变成一个环，便为循环队列。<br>
-为了判断队列的空与满，循环队列仅使用n-1个数组空间<br>
-<img src="https://img-blog.csdnimg.cn/20200301221006633.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size_16,color_FFFFFF,t_70" alt=""><br>
-定义代码如下</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span> <span class="title class_">QNode</span> *Queue;</span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">QNode</span> &#123;</span><br><span class="line">    ElementType Data[MaxSize];<span class="comment">//一维数组</span></span><br><span class="line">    <span class="type">int</span> rear;<span class="comment">//记录队列尾元素位置</span></span><br><span class="line">    <span class="type">int</span> front;<span class="comment">//记录队列头元素位置  </span></span><br><span class="line">    <span class="type">int</span> MaxSize;</span><br><span class="line">    <span class="comment">//实际上front指向的是队列头元素下标的前一个</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<h3 id="2-操作">2.操作</h3>
-<h4 id="1-创建循环队列-CreateQueue">(1)创建循环队列(CreateQueue)</h4>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">Queue <span class="title">CreateQueue</span><span class="params">( <span class="type">int</span> MaxSize )</span> </span>&#123;</span><br><span class="line">    Queue Q = (Queue)<span class="built_in">malloc</span>(<span class="built_in">sizeof</span>(<span class="keyword">struct</span> QNode));</span><br><span class="line">    Q-&gt;Data = (ElementType *)<span class="built_in">malloc</span>(MaxSize * <span class="built_in">sizeof</span>(ElementType));</span><br><span class="line">    Q-&gt;front = Q-&gt;rear = <span class="number">0</span>;</span><br><span class="line">    Q-&gt;MaxSize = MaxSize;</span><br><span class="line">    <span class="keyword">return</span> Q;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="2-判断队列是否已满-IsFull">(2)判断队列是否已满(IsFull)</h4>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">bool</span> <span class="title">IsFull</span><span class="params">( Queue PtrQ )</span> </span>&#123;<span class="comment">//front和rear+1的取余相等时队列满</span></span><br><span class="line">    <span class="keyword">return</span> ((PtrQ-&gt;rear+<span class="number">1</span>) % PtrQ-&gt;MaxSize == PtrQ-&gt;front);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="3-入队列-AddQ">(3)入队列(AddQ)</h4>
-<p>入队时要判断队列是否已满</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">bool</span> <span class="title">AddQ</span><span class="params">(Queue PtrQ, ElementType item)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> ( <span class="built_in">IsFull</span>(PtrQ) ) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;队列满&quot;</span>);<span class="comment">//front和rear+1的取余相等时队列满</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    	PtrQ-&gt;rear = (PtrQ-&gt;rear+<span class="number">1</span>) % PtrQ-&gt;MaxSize; </span><br><span class="line">    	<span class="comment">//移动队尾rear 以取余运算来实现循环</span></span><br><span class="line">    	PtrQ-&gt;Data[PtrQ-&gt;rear] = item;</span><br><span class="line">    	<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="4-判断队列是否已空-IsEmpty">(4)判断队列是否已空(IsEmpty)</h4>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">bool</span> <span class="title">IsEmpty</span><span class="params">(Queue PtrQ)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> ( PtrQ-&gt;front == PtrQ-&gt;rear );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="5-出队列-DeleteQ">(5)出队列(DeleteQ)</h4>
-<p>出队时判断当前队列是否为空</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">ElementType <span class="title">DeleteQ</span><span class="params">(Queue PtrQ)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(<span class="built_in">IsEmpty</span>(PtrQ)) &#123;<span class="comment">//rear和front相等时队列空</span></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;队列空&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        PtrQ-&gt;front = (PtrQ-&gt;front+<span class="number">1</span>) % PtrQ-&gt;MaxSize;<span class="comment">//移动队首front</span></span><br><span class="line">        <span class="keyword">return</span> PtrQ-&gt;Data[PtrQ-&gt;front];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="三、队列的链式存储实现">三、队列的链式存储实现</h2>
-<h3 id="1-定义-2">1.定义</h3>
-<p>队列的链式存储结构也可以用一个<strong>单链表</strong>实现，插入和删除操作分别在链表的两头进行。队列指针front应该指向链表头</p>
-<p><img src="https://img-blog.csdnimg.cn/20200301223536717.png" alt="在这里插入图片描述"></p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">Node</span> &#123;</span><br><span class="line">    ElementType Data;</span><br><span class="line">    <span class="keyword">struct</span> <span class="title class_">Node</span> * Next;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">QNode</span> &#123;<span class="comment">//链队列结构</span></span><br><span class="line">    <span class="keyword">struct</span> <span class="title class_">Node</span> *rear;  <span class="comment">//指向队尾结点</span></span><br><span class="line">    <span class="keyword">struct</span> <span class="title class_">Node</span> *front;  <span class="comment">//指向队头结点</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span> <span class="title class_">QNode</span> *Queue;</span><br><span class="line">Queue PtrQ;</span><br></pre></td></tr></table></figure>
-<h3 id="2-操作-2">2.操作</h3>
-<h4 id="1-不带头结点的链式队列初始化（-CreateQueue）">(1)不带头结点的链式队列初始化（ CreateQueue）</h4>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">Queue <span class="title">CreateQueue</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    Queue Q;</span><br><span class="line">    Q = (Queue)<span class="built_in">malloc</span>(<span class="built_in">sizeof</span>(<span class="keyword">struct</span> QNode));</span><br><span class="line">    Q-&gt;front = Q-&gt;rear = <span class="literal">NULL</span>;<span class="comment">//两个指针都为空</span></span><br><span class="line">    <span class="keyword">return</span> Q;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="2-不带头结点的链式队列入队操作">(2)不带头结点的链式队列入队操作</h4>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">bool</span> <span class="title">AddQ</span><span class="params">(Queue PtrQ, ElementType item)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">struct</span> <span class="title class_">Node</span> *RearCell = PtrQ-&gt;rear;<span class="comment">//指向队尾元素的指针</span></span><br><span class="line">	<span class="keyword">struct</span> <span class="title class_">Node</span> *Temp = (<span class="keyword">struct</span> Node *) <span class="built_in">malloc</span>(<span class="built_in">sizeof</span>(<span class="keyword">struct</span> Node));</span><br><span class="line">	Tmp-&gt;Data = X;</span><br><span class="line">	Tmp-&gt;Next = <span class="literal">NULL</span>;</span><br><span class="line">    <span class="keyword">if</span> ( PtrQ-&gt;front == <span class="literal">NULL</span> ) &#123;<span class="comment">//队列为空 进第一个元素</span></span><br><span class="line">        PtrQ-&gt;rear = PtrQ-&gt;front = Tmp;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    	RearCell-&gt;Next = Tmp;</span><br><span class="line">    	PtrQ-&gt;rear = Tmp;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="3-不带头结点的链式队列出队操作">(3)不带头结点的链式队列出队操作</h4>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">ElementType <span class="title">DeleteQ</span><span class="params">(Queue PtrQ)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">struct</span> <span class="title class_">Node</span> * FrontCell;</span><br><span class="line">    ElementType FrontElem;<span class="comment">//队首元素的值</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (PtrQ-&gt;front == <span class="literal">NULL</span>) &#123;<span class="comment">//1.先判断是否为空 为空无法进行出队操作</span></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;队列空&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> ERROR;</span><br><span class="line">    &#125;</span><br><span class="line">    FrontCell = PtrQ-&gt;front;</span><br><span class="line">    <span class="keyword">if</span>(PtrQ-&gt;front == PtrQ-&gt;rear) <span class="comment">//若队列只有一个元素 则删除后队列置为空</span></span><br><span class="line">        PtrQ-&gt;front = PtrQ-&gt;rear = <span class="literal">NULL</span>;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        PtrQ-&gt;front = FrontCell-&gt;Next;</span><br><span class="line">    FrontElem = FrontCell-&gt;Data;</span><br><span class="line">    <span class="built_in">free</span>(FrontCell);    <span class="comment">//释放被删除结点的空间</span></span><br><span class="line">    <span class="keyword">return</span> FrontElem;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <p>day30题目：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/da-yin-cong-1dao-zui-da-de-nwei-shu-lcof/">剑指 Offer 17. 打印从1到最大的n位数</a>、<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/shu-zu-zhong-de-ni-xu-dui-lcof/">剑指 Offer 51. 数组中的逆序对</a></p>
+<p>知识点：数组、数学、分治，难度为简单、困难</p>
+<p>学习计划链接：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/study-plan/lcof/?progress=7jn70jr">「剑指 Offer」 - 学习计划</a></p>
+<table>
+<thead>
+<tr>
+<th>题目</th>
+<th>知识点</th>
+<th>难度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/da-yin-cong-1dao-zui-da-de-nwei-shu-lcof/">剑指 Offer 17. 打印从1到最大的n位数</a></td>
+<td><a target="_blank" rel="noopener" href="https://leetcode-cn.com/tag/array">数组</a>、<a target="_blank" rel="noopener" href="https://leetcode-cn.com/tag/math">数学</a></td>
+<td>简单</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/shu-zu-zhong-de-ni-xu-dui-lcof/">剑指 Offer 51. 数组中的逆序对</a></td>
+<td><a target="_blank" rel="noopener" href="https://leetcode-cn.com/tag/binary-indexed-tree">树状数组</a>、<a target="_blank" rel="noopener" href="https://leetcode-cn.com/tag/segment-tree">线段树</a>、<a target="_blank" rel="noopener" href="https://leetcode-cn.com/tag/array">数组</a></td>
+<td>困难</td>
+</tr>
+</tbody>
+</table>
+<h1><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/da-yin-cong-1dao-zui-da-de-nwei-shu-lcof/">剑指 Offer 17. 打印从1到最大的n位数</a></h1>
+<p>输入数字 <code>n</code>，按顺序打印出从 1 到最大的 n 位十进制数。比如输入 3，则打印出 1、2、3 一直到最大的 3 位数 999。</p>
+<p><strong>示例 1:</strong></p>
+<figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: n = <span class="number">1</span></span><br><span class="line">输出: [<span class="number">1,2,3,4</span>,<span class="number">5,6,7,8</span>,<span class="number">9</span>]</span><br></pre></td></tr></table></figure>
+<p>说明：</p>
+<ul>
+<li>用返回一个整数列表来代替打印</li>
+<li>n 为正整数</li>
+</ul>
+<h2 id="思路及代码">思路及代码</h2>
+<p>不考虑大数，那么这道题秒杀。考虑的话……不听不听我不听QAQ（以后有机会补上）</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">number</span>&#125; <span class="variable">n</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">number[]</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> printNumbers = <span class="keyword">function</span>(<span class="params">n</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> maxv = <span class="title class_">Math</span>.<span class="title function_">pow</span>(<span class="number">10</span>, n)</span><br><span class="line">    <span class="keyword">let</span> res = []</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">1</span>; i &lt; maxv; ++i) </span><br><span class="line">        res.<span class="title function_">push</span>(i)</span><br><span class="line">    <span class="keyword">return</span> res</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h1><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/shu-zu-zhong-de-ni-xu-dui-lcof/">剑指 Offer 51. 数组中的逆序对</a></h1>
+<p>在数组中的两个数字，如果前面一个数字大于后面的数字，则这两个数字组成一个逆序对。输入一个数组，求出这个数组中的逆序对的总数。</p>
+<p><strong>示例 1:</strong></p>
+<figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">输入: [7,5,6,4]</span></span><br><span class="line"><span class="section">输出: 5</span></span><br></pre></td></tr></table></figure>
+<p><strong>限制：</strong></p>
+<p><code>0 &lt;= 数组长度 &lt;= 50000</code></p>
+<h2 id="思路及代码-2">思路及代码</h2>
+<p>文字少少，难度大大</p>
+<p>直接暴力肯定是不行的，需要用到归并排序，在合并时，左右两数组（<code>s~mid</code> 、<code>mid+1~e</code>）各自都是从小到大排好序的，那么当左指针 <code>i</code> 指向的数大于右指针 <code>j</code> 指向的数即 <code>nums[i] &gt; nums[j]</code> 时，则 <code>i~mid</code>的元素均大于 <code>j</code> 位置上的元素, 此时产生的逆序对个数即为 <code>mid-i+1</code></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">number[]</span>&#125; <span class="variable">nums</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">number</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> reversePairs = <span class="keyword">function</span>(<span class="params">nums</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> res = <span class="number">0</span></span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">merge</span>(<span class="params">nums, s, mid, e</span>) &#123;   <span class="comment">// 合并s~mid mid+1~e</span></span><br><span class="line">        <span class="keyword">let</span> next = <span class="keyword">new</span> <span class="title class_">Array</span>(e-s+<span class="number">1</span>)</span><br><span class="line">        <span class="keyword">let</span> cnt = <span class="number">0</span> <span class="comment">// 新数组的下标</span></span><br><span class="line">        <span class="keyword">let</span> [i, j] = [s, mid+<span class="number">1</span>]</span><br><span class="line">        <span class="keyword">while</span>(i &lt;= mid &amp;&amp; j &lt;= e) &#123;</span><br><span class="line">            <span class="keyword">if</span>(nums[i] &lt;= nums[j]) &#123;</span><br><span class="line">                next[cnt++] = nums[i++]</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;    <span class="comment">// 大于 说明产生了逆序对~</span></span><br><span class="line">                res += mid-i+<span class="number">1</span> </span><br><span class="line">                next[cnt++] = nums[j++]</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span>(i &lt;= mid)</span><br><span class="line">            next[cnt++] = nums[i++]</span><br><span class="line">        <span class="keyword">while</span>(j &lt;= e)</span><br><span class="line">            next[cnt++] = nums[j++]</span><br><span class="line">        cnt = <span class="number">0</span></span><br><span class="line">        <span class="keyword">while</span>(s &lt;= e)</span><br><span class="line">            nums[s++] = next[cnt++]</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">mergeSort</span>(<span class="params">nums, s, e</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span>(s &gt;= e) <span class="keyword">return</span></span><br><span class="line">        <span class="keyword">let</span> mid = (s+e)&gt;&gt;<span class="number">1</span></span><br><span class="line">        <span class="title function_">mergeSort</span>(nums, s, mid)</span><br><span class="line">        <span class="title function_">mergeSort</span>(nums, mid+<span class="number">1</span>, e)</span><br><span class="line">        <span class="title function_">merge</span>(nums, s, mid, e)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="title function_">mergeSort</span>(nums, <span class="number">0</span>, nums.<span class="property">length</span>-<span class="number">1</span>)</span><br><span class="line">    <span class="keyword">return</span> res</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
 
         <hr>
         <!-- Pager -->
         <ul class="pager">
           
-          <li class="previous">
-            <a href="/cn/数据结构学习笔记＜4＞ 二叉树/" data-toggle="tooltip" data-placement="top" title="数据结构学习笔记＜4＞ 二叉树">&larr; Previous Post</a>
-          </li>
-          
           
           <li class="next">
-            <a href="/cn/数据结构学习笔记＜2＞ 堆栈/" data-toggle="tooltip" data-placement="top" title="数据结构学习笔记＜2＞ 堆栈">Next Post &rarr;</a>
+            <a href="/cn/coding-train/leetcode/offer/day29/" data-toggle="tooltip" data-placement="top" title="剑指offer day29 动态规划（困难）">Next Post &rarr;</a>
           </li>
           
         </ul>
@@ -579,7 +574,7 @@ ElementType DeleteQ(Queue Q);</strong></p>
       </a>
     </li>
     <li class="social-share-li">
-      <a target="_blank" class="social-share-icon" href="mailto:?subject=数据结构学习笔记＜3＞ 队列&body=Hi,I found this website and thought you might like it https://ysx.cosine.ren/cn/数据结构学习笔记＜3＞ 队列/">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=剑指offer day30 分治算法（困难）&body=Hi,I found this website and thought you might like it https://ysx.cosine.ren/cn/coding-train/leetcode/offer/day30/">
         <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
       </a>
     </li>
@@ -614,7 +609,7 @@ ElementType DeleteQ(Queue Q);</strong></p>
       repo: 'yusixian.github.io',
       owner: 'yusixian',
       admin: 'yusixian',
-      id: 'Mon Mar 02 2020 00:10:39 GMT+0800', // Ensure uniqueness and length less than 50
+      id: 'Thu Apr 28 2022 23:08:00 GMT+0800', // Ensure uniqueness and length less than 50
       distractionFreeMode: false, // Facebook-like distraction free mode
       perPage: 10,
       pagerDirection: 'last',
@@ -667,7 +662,7 @@ ElementType DeleteQ(Queue Q);</strong></p>
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%80%E3%80%81%E9%98%9F%E5%88%97%E7%9A%84%E6%8A%BD%E8%B1%A1%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%8F%8F%E8%BF%B0"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">一、队列的抽象数据类型描述</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BA%8C%E3%80%81%E9%98%9F%E5%88%97%E7%9A%84%E9%A1%BA%E5%BA%8F%E5%AD%98%E5%82%A8%E5%AE%9E%E7%8E%B0"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">二、队列的顺序存储实现</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1-%E5%AE%9A%E4%B9%89"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">1.定义</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2-%E6%93%8D%E4%BD%9C"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">2.操作</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#1-%E5%88%9B%E5%BB%BA%E5%BE%AA%E7%8E%AF%E9%98%9F%E5%88%97-CreateQueue"><span class="toc-nav-number">2.2.1.</span> <span class="toc-nav-text">(1)创建循环队列(CreateQueue)</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#2-%E5%88%A4%E6%96%AD%E9%98%9F%E5%88%97%E6%98%AF%E5%90%A6%E5%B7%B2%E6%BB%A1-IsFull"><span class="toc-nav-number">2.2.2.</span> <span class="toc-nav-text">(2)判断队列是否已满(IsFull)</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#3-%E5%85%A5%E9%98%9F%E5%88%97-AddQ"><span class="toc-nav-number">2.2.3.</span> <span class="toc-nav-text">(3)入队列(AddQ)</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#4-%E5%88%A4%E6%96%AD%E9%98%9F%E5%88%97%E6%98%AF%E5%90%A6%E5%B7%B2%E7%A9%BA-IsEmpty"><span class="toc-nav-number">2.2.4.</span> <span class="toc-nav-text">(4)判断队列是否已空(IsEmpty)</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#5-%E5%87%BA%E9%98%9F%E5%88%97-DeleteQ"><span class="toc-nav-number">2.2.5.</span> <span class="toc-nav-text">(5)出队列(DeleteQ)</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%89%E3%80%81%E9%98%9F%E5%88%97%E7%9A%84%E9%93%BE%E5%BC%8F%E5%AD%98%E5%82%A8%E5%AE%9E%E7%8E%B0"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">三、队列的链式存储实现</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1-%E5%AE%9A%E4%B9%89-2"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">1.定义</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2-%E6%93%8D%E4%BD%9C-2"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">2.操作</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#1-%E4%B8%8D%E5%B8%A6%E5%A4%B4%E7%BB%93%E7%82%B9%E7%9A%84%E9%93%BE%E5%BC%8F%E9%98%9F%E5%88%97%E5%88%9D%E5%A7%8B%E5%8C%96%EF%BC%88-CreateQueue%EF%BC%89"><span class="toc-nav-number">3.2.1.</span> <span class="toc-nav-text">(1)不带头结点的链式队列初始化（ CreateQueue）</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#2-%E4%B8%8D%E5%B8%A6%E5%A4%B4%E7%BB%93%E7%82%B9%E7%9A%84%E9%93%BE%E5%BC%8F%E9%98%9F%E5%88%97%E5%85%A5%E9%98%9F%E6%93%8D%E4%BD%9C"><span class="toc-nav-number">3.2.2.</span> <span class="toc-nav-text">(2)不带头结点的链式队列入队操作</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#3-%E4%B8%8D%E5%B8%A6%E5%A4%B4%E7%BB%93%E7%82%B9%E7%9A%84%E9%93%BE%E5%BC%8F%E9%98%9F%E5%88%97%E5%87%BA%E9%98%9F%E6%93%8D%E4%BD%9C"><span class="toc-nav-number">3.2.3.</span> <span class="toc-nav-text">(3)不带头结点的链式队列出队操作</span></a></li></ol></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">剑指 Offer 17. 打印从1到最大的n位数</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%9D%E8%B7%AF%E5%8F%8A%E4%BB%A3%E7%A0%81"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">思路及代码</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">剑指 Offer 51. 数组中的逆序对</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%9D%E8%B7%AF%E5%8F%8A%E4%BB%A3%E7%A0%81-2"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">思路及代码</span></a></li></ol></li></ol>
         
         </div>
       </aside>
@@ -690,11 +685,13 @@ ElementType DeleteQ(Queue Q);</strong></p>
           </h5>
           <div class="tags">
             
-            <a class="tag" href="/tags/#c++" title="c++">c++</a>
+            <a class="tag" href="/tags/#leetcode" title="leetcode">leetcode</a>
             
-            <a class="tag" href="/tags/#数据结构" title="数据结构">数据结构</a>
+            <a class="tag" href="/tags/#数组" title="数组">数组</a>
             
-            <a class="tag" href="/tags/#队列" title="队列">队列</a>
+            <a class="tag" href="/tags/#分治" title="分治">分治</a>
+            
+            <a class="tag" href="/tags/#数学" title="数学">数学</a>
             
           </div>
         </section>

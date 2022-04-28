@@ -250,9 +250,20 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/categories/">
               
-              归档
+              分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              标签
               
               
             </a>
@@ -272,20 +283,9 @@
           
           
           <li>
-            <a href="/categories/">
+            <a href="/archive/">
               
-              分类
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="/tags/">
-              
-              标签
+              归档
               
               
             </a>
@@ -474,7 +474,6 @@
         <p>day29题目：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/zheng-ze-biao-da-shi-pi-pei-lcof/">剑指 Offer 19. 正则表达式匹配</a>、<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/chou-shu-lcof/">剑指 Offer 49. 丑数</a>、<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/nge-tou-zi-de-dian-shu-lcof/">剑指 Offer 60. n个骰子的点数</a></p>
 <p>知识点：字符串、数学、动态规划，难度为困难、中等、中等</p>
 <p>学习计划链接：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/study-plan/lcof/?progress=7jn70jr">「剑指 Offer」 - 学习计划</a></p>
-<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -501,8 +500,8 @@
 </tr>
 </tbody>
 </table>
-</div>
-<h1 id="剑指-Offer-19-正则表达式匹配"><a href="#剑指-Offer-19-正则表达式匹配" class="headerlink" title="剑指 Offer 19. 正则表达式匹配"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/zheng-ze-biao-da-shi-pi-pei-lcof/">剑指 Offer 19. 正则表达式匹配</a></h1><p>请实现一个函数用来匹配包含<code>&#39;. &#39;</code>和<code>&#39;*&#39;</code>的正则表达式。模式中的字符<code>&#39;.&#39;</code>表示任意一个字符，而<code>&#39;*&#39;</code>表示它前面的字符可以出现任意次（含0次）。在本题中，匹配是指字符串的所有字符匹配整个模式。例如，字符串<code>&quot;aaa&quot;</code>与模式<code>&quot;a.a&quot;</code>和<code>&quot;ab*ac*a&quot;</code>匹配，但与<code>&quot;aa.a&quot;</code>和<code>&quot;ab*a&quot;</code>均不匹配。</p>
+<h1><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/zheng-ze-biao-da-shi-pi-pei-lcof/">剑指 Offer 19. 正则表达式匹配</a></h1>
+<p>请实现一个函数用来匹配包含<code>'. '</code>和<code>'*'</code>的正则表达式。模式中的字符<code>'.'</code>表示任意一个字符，而<code>'*'</code>表示它前面的字符可以出现任意次（含0次）。在本题中，匹配是指字符串的所有字符匹配整个模式。例如，字符串<code>&quot;aaa&quot;</code>与模式<code>&quot;a.a&quot;</code>和<code>&quot;ab*ac*a&quot;</code>匹配，但与<code>&quot;aa.a&quot;</code>和<code>&quot;ab*a&quot;</code>均不匹配。</p>
 <p><strong>示例 1:</strong></p>
 <figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">输入:</span></span><br><span class="line">s = <span class="string">&quot;aa&quot;</span></span><br><span class="line">p = <span class="string">&quot;a&quot;</span></span><br><span class="line"><span class="section">输出: false</span></span><br><span class="line"><span class="section">解释: &quot;a&quot; 无法匹配 &quot;aa&quot; 整个字符串。</span></span><br></pre></td></tr></table></figure>
 <p><strong>示例 2:</strong></p>
@@ -515,10 +514,11 @@
 <figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">输入:</span></span><br><span class="line">s = <span class="string">&quot;mississippi&quot;</span></span><br><span class="line">p = <span class="string">&quot;mis*is*p*.&quot;</span></span><br><span class="line"><span class="section">输出: false</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li><code>s</code> 可能为空，且只包含从 <code>a-z</code> 的小写字母。</li>
-<li><code>p</code> 可能为空，且只包含从 <code>a-z</code> 的小写字母以及字符 <code>.</code> 和 <code>*</code>，无连续的 <code>&#39;*&#39;</code>。</li>
+<li><code>p</code> 可能为空，且只包含从 <code>a-z</code> 的小写字母以及字符 <code>.</code> 和 <code>*</code>，无连续的 <code>'*'</code>。</li>
 </ul>
 <p>注意：本题与主站 10 题相同：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/regular-expression-matching/">https://leetcode-cn.com/problems/regular-expression-matching/</a></p>
-<h2 id="思路及代码"><a href="#思路及代码" class="headerlink" title="思路及代码"></a>思路及代码</h2><p>不愧是困难题，想不出来^_^</p>
+<h2 id="思路及代码">思路及代码</h2>
+<p>不愧是困难题，想不出来^_^</p>
 <p>看完题解，wow还有这种思路</p>
 <ul>
 <li><code>dp[i][j]</code> 表示 <code>s</code> 中前 <code>i</code> 个字符是否匹配 <code>p</code> 中前 <code>j</code> 个字符</li>
@@ -528,25 +528,29 @@
 <ul>
 <li>若 <code>p</code> 中 第 <code>j</code> 个字符不是<code>*</code> 或 <code>.</code>，则必须在s中匹配一个相同的字母，有 <code>dp[i][j] = s[i] == p[j] ? dp[i-1][j-1]: false</code></li>
 <li>若 <code>p</code> 中 第 <code>j</code> 个字符为<code>.</code> 一定成功匹配 <code>dp[i][j] = dp[i-1][j-1]</code></li>
-<li>若为 <code>*</code> 则可以<ul>
+<li>若为 <code>*</code> 则可以
+<ul>
 <li>不匹配字符，将该组合扔掉，不再进行匹配  <code>dp[i][j] |= dp[i][j-2]</code></li>
 <li>匹配 <code>s</code> 末尾的一个字符，将该字符扔掉，而该组合还可以继续进行匹配  <code>dp[i][j] = dp[i-1][j] | dp[i][j-2]</code></li>
 </ul>
 </li>
 </ul>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">string</span>&#125; <span class="variable">s</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">string</span>&#125; <span class="variable">p</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">boolean</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> isMatch = <span class="keyword">function</span>(<span class="params">s, p</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> dp = <span class="keyword">new</span> <span class="title class_">Array</span>(s.<span class="property">length</span>+<span class="number">1</span>).<span class="title function_">fill</span>(<span class="number">0</span>).<span class="title function_">map</span>(<span class="function">() =&gt;</span> <span class="keyword">new</span> <span class="title class_">Array</span>(p.<span class="property">length</span>+<span class="number">1</span>).<span class="title function_">fill</span>(<span class="literal">false</span>))</span><br><span class="line">    dp[<span class="number">0</span>][<span class="number">0</span>] = <span class="literal">true</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i &lt;= s.<span class="property">length</span>; ++i) &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">let</span> j = <span class="number">1</span>; j &lt;= p.<span class="property">length</span>; ++j) &#123;</span><br><span class="line">            <span class="keyword">let</span> c2 = p[j-<span class="number">1</span>]</span><br><span class="line">            <span class="keyword">if</span>(c2 == <span class="string">&#x27;*&#x27;</span>) &#123;</span><br><span class="line">                dp[i][j] |= dp[i][j-<span class="number">2</span>]  <span class="comment">// 不使用*</span></span><br><span class="line">                c2 = p[j-<span class="number">2</span>]</span><br><span class="line">                <span class="keyword">if</span>(i != <span class="number">0</span> &amp;&amp; (c2 == <span class="string">&#x27;.&#x27;</span> || s[i-<span class="number">1</span>] == c2))</span><br><span class="line">                    dp[i][j] |= dp[i-<span class="number">1</span>][j]</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span>(i != <span class="number">0</span> &amp;&amp; (c2 == <span class="string">&#x27;.&#x27;</span> || s[i-<span class="number">1</span>] == c2)) &#123;</span><br><span class="line">                    dp[i][j] |= dp[i-<span class="number">1</span>][j-<span class="number">1</span>]</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> dp[s.<span class="property">length</span>][p.<span class="property">length</span>]</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<h1 id="剑指-Offer-49-丑数"><a href="#剑指-Offer-49-丑数" class="headerlink" title="剑指 Offer 49. 丑数"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/chou-shu-lcof/">剑指 Offer 49. 丑数</a></h1><p>我们把只包含质因子 2、3 和 5 的数称作丑数（Ugly Number）。求按从小到大的顺序的第 n 个丑数。</p>
+<h1><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/chou-shu-lcof/">剑指 Offer 49. 丑数</a></h1>
+<p>我们把只包含质因子 2、3 和 5 的数称作丑数（Ugly Number）。求按从小到大的顺序的第 n 个丑数。</p>
 <p><strong>示例:</strong></p>
 <figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">输入: n = 10</span></span><br><span class="line"><span class="section">输出: 12</span></span><br><span class="line"><span class="section">解释: 1, 2, 3, 4, 5, 6, 8, 9, 10, 12 是前 10 个丑数。</span></span><br></pre></td></tr></table></figure>
-<p><strong>说明:</strong> </p>
+<p><strong>说明:</strong></p>
 <ol>
 <li><code>1</code> 是丑数。</li>
 <li><code>n</code> <strong>不超过</strong>1690。</li>
 </ol>
 <p>注意：本题与主站 264 题相同：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/ugly-number-ii/">https://leetcode-cn.com/problems/ugly-number-ii/</a></p>
-<h2 id="思路及代码-1"><a href="#思路及代码-1" class="headerlink" title="思路及代码"></a>思路及代码</h2><p>设m1、m2、m3表示×2、×3、×5的结果，比较其指向的值，将最小的放入最终的合并数组中，并将相应指针向后移动一个元素。</p>
+<h2 id="思路及代码-2">思路及代码</h2>
+<p>设m1、m2、m3表示×2、×3、×5的结果，比较其指向的值，将最小的放入最终的合并数组中，并将相应指针向后移动一个元素。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">number</span>&#125; <span class="variable">n</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">number</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> nthUglyNumber = <span class="keyword">function</span>(<span class="params">n</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> dp = <span class="keyword">new</span> <span class="title class_">Array</span>(n)</span><br><span class="line">    dp[<span class="number">0</span>] = <span class="number">1</span></span><br><span class="line">    <span class="keyword">let</span> i2 = <span class="number">0</span>, i3 = <span class="number">0</span>, i5 = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">1</span>; i &lt; n; i++) &#123;</span><br><span class="line">        <span class="keyword">let</span> m2 = dp[i2] * <span class="number">2</span>, m3 = dp[i3] * <span class="number">3</span>, m5 = dp[i5] * <span class="number">5</span></span><br><span class="line">        <span class="keyword">let</span> m = <span class="title class_">Math</span>.<span class="title function_">min</span>(<span class="title class_">Math</span>.<span class="title function_">min</span>(m2, m3), m5)</span><br><span class="line">        <span class="keyword">if</span> (m === m2) i2++</span><br><span class="line">        <span class="keyword">if</span> (m === m3) i3++</span><br><span class="line">        <span class="keyword">if</span> (m === m5) i5++</span><br><span class="line">        dp[i] = m</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> dp[n-<span class="number">1</span>]</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<h1 id="剑指-Offer-60-n个骰子的点数"><a href="#剑指-Offer-60-n个骰子的点数" class="headerlink" title="剑指 Offer 60. n个骰子的点数"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/nge-tou-zi-de-dian-shu-lcof/">剑指 Offer 60. n个骰子的点数</a></h1><p>把n个骰子扔在地上，所有骰子朝上一面的点数之和为s。输入n，打印出s的所有可能的值出现的概率。</p>
+<h1><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/nge-tou-zi-de-dian-shu-lcof/">剑指 Offer 60. n个骰子的点数</a></h1>
+<p>把n个骰子扔在地上，所有骰子朝上一面的点数之和为s。输入n，打印出s的所有可能的值出现的概率。</p>
 <p>你需要用一个浮点数数组返回答案，其中第 i 个元素代表这 n 个骰子所能掷出的点数集合中第 i 小的那个的概率。</p>
 <p><strong>示例 1:</strong></p>
 <figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: <span class="number">1</span></span><br><span class="line">输出: [<span class="number">0.16667,0</span>.<span class="number">16667,0</span>.<span class="number">16667,0</span>.<span class="number">16667,0</span>.<span class="number">16667,0</span>.<span class="number">16667</span>]</span><br></pre></td></tr></table></figure>
@@ -554,10 +558,11 @@
 <figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: <span class="number">2</span></span><br><span class="line">输出: [<span class="number">0.02778,0</span>.<span class="number">05556,0</span>.<span class="number">08333,0</span>.<span class="number">11111,0</span>.<span class="number">13889,0</span>.<span class="number">16667,0</span>.<span class="number">13889,0</span>.<span class="number">11111,0</span>.<span class="number">08333,0</span>.<span class="number">05556,0</span>.<span class="number">02778</span>]</span><br></pre></td></tr></table></figure>
 <p><strong>限制：</strong></p>
 <p><code>1 &lt;= n &lt;= 11</code></p>
-<h2 id="思路及代码-2"><a href="#思路及代码-2" class="headerlink" title="思路及代码"></a>思路及代码</h2><p>dp[i][j]表示i个骰子时，点数总和取值的概率</p>
+<h2 id="思路及代码-3">思路及代码</h2>
+<p>dp[i][j]表示i个骰子时，点数总和取值的概率</p>
 <ul>
 <li>如1个骰子的时候总和可能为 [1, 2, 3, 4, 5, 6]</li>
-<li>2个骰子时，为 [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] </li>
+<li>2个骰子时，为 [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]</li>
 <li>i个骰子时，总和个数为 <code>6*i-(i-1)</code> 化简为 <code>5*i+1</code></li>
 <li>由于新增骰子的点数只可能为 1 至 6 ，因此概率 <code>dp[i-1][x]</code> 仅与 <code>dp[i][x+1]</code>, <code>dp[i][x+2]</code>, … , <code>dp[i][x+6]</code> 相关。因此，遍历 <code>dp[i-1]</code> 中各点数和的概率贡献值，并将贡献值相加至 <code>dp[i]</code> 中所有相关项，即可完成的递推。。</li>
 <li>也就是说，增加骰子的个数到 <code>i</code> 个时，<code>i-1</code>个骰子的点数 <code>j</code> 会对拥有 <code>i</code> 个骰子时的点数 <code>j+k</code> 产生影响</li>
@@ -568,6 +573,10 @@
         <hr>
         <!-- Pager -->
         <ul class="pager">
+          
+          <li class="previous">
+            <a href="/cn/coding-train/leetcode/offer/day30/" data-toggle="tooltip" data-placement="top" title="剑指offer day30 分治算法（困难）">&larr; Previous Post</a>
+          </li>
           
           
           <li class="next">
@@ -708,7 +717,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E5%89%91%E6%8C%87-Offer-19-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%8C%B9%E9%85%8D"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">剑指 Offer 19. 正则表达式匹配</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%9D%E8%B7%AF%E5%8F%8A%E4%BB%A3%E7%A0%81"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">思路及代码</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E5%89%91%E6%8C%87-Offer-49-%E4%B8%91%E6%95%B0"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">剑指 Offer 49. 丑数</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%9D%E8%B7%AF%E5%8F%8A%E4%BB%A3%E7%A0%81-1"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">思路及代码</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E5%89%91%E6%8C%87-Offer-60-n%E4%B8%AA%E9%AA%B0%E5%AD%90%E7%9A%84%E7%82%B9%E6%95%B0"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">剑指 Offer 60. n个骰子的点数</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%9D%E8%B7%AF%E5%8F%8A%E4%BB%A3%E7%A0%81-2"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">思路及代码</span></a></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">剑指 Offer 19. 正则表达式匹配</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%9D%E8%B7%AF%E5%8F%8A%E4%BB%A3%E7%A0%81"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">思路及代码</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">剑指 Offer 49. 丑数</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%9D%E8%B7%AF%E5%8F%8A%E4%BB%A3%E7%A0%81-2"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">思路及代码</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">剑指 Offer 60. n个骰子的点数</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%9D%E8%B7%AF%E5%8F%8A%E4%BB%A3%E7%A0%81-3"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">思路及代码</span></a></li></ol></li></ol>
         
         </div>
       </aside>

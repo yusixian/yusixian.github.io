@@ -250,9 +250,20 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/categories/">
               
-              归档
+              分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              标签
               
               
             </a>
@@ -272,20 +283,9 @@
           
           
           <li>
-            <a href="/categories/">
+            <a href="/archive/">
               
-              分类
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="/tags/">
-              
-              标签
+              归档
               
               
             </a>
@@ -386,9 +386,9 @@
               
               <a class="tag" href="/tags/#leetcode" title="leetcode">leetcode</a>
               
-              <a class="tag" href="/tags/#树" title="树">树</a>
-              
               <a class="tag" href="/tags/#字符串" title="字符串">字符串</a>
+              
+              <a class="tag" href="/tags/#树" title="树">树</a>
               
               <a class="tag" href="/tags/#回溯" title="回溯">回溯</a>
               
@@ -474,7 +474,6 @@
         <p>day28题目：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/xu-lie-hua-er-cha-shu-lcof/">剑指 Offer 37. 序列化二叉树</a>、<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/zi-fu-chuan-de-pai-lie-lcof/">剑指 Offer 38. 字符串的排列</a></p>
 <p>知识点：树、字符串、回溯，难度为困难、中等</p>
 <p>学习计划链接：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/study-plan/lcof/?progress=7jn70jr">「剑指 Offer」 - 学习计划</a></p>
-<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -496,20 +495,22 @@
 </tr>
 </tbody>
 </table>
-</div>
-<h1 id="剑指-Offer-37-序列化二叉树"><a href="#剑指-Offer-37-序列化二叉树" class="headerlink" title="剑指 Offer 37. 序列化二叉树"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/xu-lie-hua-er-cha-shu-lcof/">剑指 Offer 37. 序列化二叉树</a></h1><p>请实现两个函数，分别用来序列化和反序列化二叉树。</p>
+<h1><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/xu-lie-hua-er-cha-shu-lcof/">剑指 Offer 37. 序列化二叉树</a></h1>
+<p>请实现两个函数，分别用来序列化和反序列化二叉树。</p>
 <p>你需要设计一个算法来实现二叉树的序列化与反序列化。这里不限定你的序列 / 反序列化算法执行逻辑，你只需要保证一个二叉树可以被序列化为一个字符串并且将这个字符串反序列化为原始的树结构。</p>
-<p><strong>提示：</strong> 输入输出格式与 LeetCode 目前使用的方式一致，详情请参阅 <a target="_blank" rel="noopener" href="https://support.leetcode-cn.com/hc/kb/article/1194353/">LeetCode 序列化二叉树的格式</a>。你并非必须采取这种方式，你也可以采用其他的方法解决这个问题。</p>
+<p><strong>提示：</strong> 输入输出格式与 LeetCode 目前使用的方式一致，详情请参阅 <a target="_blank" rel="noopener" href="https://support.leetcode-cn.com/hc/kb/article/1194353/">LeetCode 序列化二叉树的格式</a>。你并非必须采取这种方式，你也可以采用其他的方法解决这个问题。</p>
 <p><strong>示例：</strong></p>
 <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/70a2e7018db1416dab0c4907d0e73893~tplv-k3u1fbpfcp-zoom-1.image" alt=""></p>
 <figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入： <span class="attr">root</span> = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="literal">null</span>,<span class="literal">null</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line">输出： [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="literal">null</span>,<span class="literal">null</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br></pre></td></tr></table></figure>
 <p>注意：本题与主站 297 题相同：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/serialize-and-deserialize-binary-tree/">https://leetcode-cn.com/problems/serialize-and-deserialize-binary-tree/</a></p>
-<h2 id="思路及代码"><a href="#思路及代码" class="headerlink" title="思路及代码"></a>思路及代码</h2><ul>
+<h2 id="思路及代码">思路及代码</h2>
+<ul>
 <li>序列化：先序遍历二叉树，遇到空子树的时序列化成 <code>N,</code>，值序列化为值+<code>,</code>并继续递归序列化。</li>
 </ul>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">seria</span>(<span class="params">root, str</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span>(root === <span class="literal">null</span>) <span class="keyword">return</span> str+<span class="string">&#x27;N,&#x27;</span></span><br><span class="line">    str += <span class="string">`<span class="subst">$&#123;root.val&#125;</span>,`</span></span><br><span class="line">    str = <span class="title function_">seria</span>(root.<span class="property">left</span>, str)</span><br><span class="line">    str = <span class="title function_">seria</span>(root.<span class="property">right</span>, str)</span><br><span class="line">    <span class="keyword">return</span> str</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ul>
-<li>反序列化：将原先的序列分割开来，得到元素列表，然后从左向右遍历这个序列<ul>
+<li>反序列化：将原先的序列分割开来，得到元素列表，然后从左向右遍历这个序列
+<ul>
 <li>当前的元素为 <code>N</code>则当前为空树</li>
 <li>先解析这棵树的左子树，再解析它的右子树</li>
 </ul>
@@ -518,13 +519,15 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">deseria</span>(<span class="params">arr</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span>(arr[<span class="number">0</span>] == <span class="string">&#x27;N&#x27;</span>) &#123;</span><br><span class="line">        arr.<span class="title function_">shift</span>()</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">null</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> root = <span class="keyword">new</span> <span class="title class_">TreeNode</span>(<span class="built_in">parseInt</span>(arr[<span class="number">0</span>]))</span><br><span class="line">    arr.<span class="title function_">shift</span>()</span><br><span class="line">    root.<span class="property">left</span> = <span class="title function_">deseria</span>(arr)</span><br><span class="line">    root.<span class="property">right</span> = <span class="title function_">deseria</span>(arr)</span><br><span class="line">    <span class="keyword">return</span> root </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>完整代码：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"> * function TreeNode(val) &#123;</span></span><br><span class="line"><span class="comment"> *     this.val = val;</span></span><br><span class="line"><span class="comment"> *     this.left = this.right = null;</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Encodes a tree to a single string.</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">TreeNode</span>&#125; <span class="variable">root</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">string</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> serialize = <span class="keyword">function</span>(<span class="params">root</span>) &#123;</span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">seria</span>(<span class="params">root, str</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span>(root === <span class="literal">null</span>) <span class="keyword">return</span> str+<span class="string">&#x27;N,&#x27;</span></span><br><span class="line">        str += <span class="string">`<span class="subst">$&#123;root.val&#125;</span>,`</span></span><br><span class="line">        str = <span class="title function_">seria</span>(root.<span class="property">left</span>, str)</span><br><span class="line">        str = <span class="title function_">seria</span>(root.<span class="property">right</span>, str)</span><br><span class="line">        <span class="keyword">return</span> str</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="title function_">seria</span>(root, <span class="string">&#x27;&#x27;</span>)</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Decodes your encoded data to tree.</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">string</span>&#125; <span class="variable">data</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">TreeNode</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> deserialize = <span class="keyword">function</span>(<span class="params">data</span>) &#123;</span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">deseria</span>(<span class="params">arr</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span>(arr[<span class="number">0</span>] == <span class="string">&#x27;N&#x27;</span>) &#123;</span><br><span class="line">            arr.<span class="title function_">shift</span>()</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">null</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">let</span> root = <span class="keyword">new</span> <span class="title class_">TreeNode</span>(<span class="built_in">parseInt</span>(arr[<span class="number">0</span>]))</span><br><span class="line">        arr.<span class="title function_">shift</span>()</span><br><span class="line">        root.<span class="property">left</span> = <span class="title function_">deseria</span>(arr)</span><br><span class="line">        root.<span class="property">right</span> = <span class="title function_">deseria</span>(arr)</span><br><span class="line">        <span class="keyword">return</span> root </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> arr = data.<span class="title function_">split</span>(<span class="string">&#x27;,&#x27;</span>)</span><br><span class="line">    <span class="keyword">return</span> <span class="title function_">deseria</span>(arr)</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Your functions will be called as such:</span></span><br><span class="line"><span class="comment"> * deserialize(serialize(root));</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
-<h1 id="剑指-Offer-38-字符串的排列"><a href="#剑指-Offer-38-字符串的排列" class="headerlink" title="剑指 Offer 38. 字符串的排列"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/zi-fu-chuan-de-pai-lie-lcof/">剑指 Offer 38. 字符串的排列</a></h1><p>输入一个字符串，打印出该字符串中字符的所有排列。</p>
+<h1><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/zi-fu-chuan-de-pai-lie-lcof/">剑指 Offer 38. 字符串的排列</a></h1>
+<p>输入一个字符串，打印出该字符串中字符的所有排列。</p>
 <p>你可以以任意顺序返回这个字符串数组，但里面不能有重复元素。</p>
 <p><strong>示例:</strong></p>
 <figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入： <span class="attr">s</span> = <span class="string">&quot;abc&quot;</span></span><br><span class="line">输出：[ <span class="string">&quot;abc&quot;</span>,<span class="string">&quot;acb&quot;</span>,<span class="string">&quot;bac&quot;</span>,<span class="string">&quot;bca&quot;</span>,<span class="string">&quot;cab&quot;</span>,<span class="string">&quot;cba&quot;</span> ]</span><br></pre></td></tr></table></figure>
 <p><strong>限制：</strong></p>
 <p><code>1 &lt;= s 的长度 &lt;= 8</code></p>
-<h2 id="思路及代码-1"><a href="#思路及代码-1" class="headerlink" title="思路及代码"></a>思路及代码</h2><p>经典の字符串全排列</p>
+<h2 id="思路及代码-2">思路及代码</h2>
+<p>经典の字符串全排列</p>
 <p>不过注意，这里是有重复元素的全排列~所以需要用到map，之前出现过的就不必再排列</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">string</span>&#125; <span class="variable">s</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">string[]</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> permutation = <span class="keyword">function</span>(<span class="params">s</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> res = [];</span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">permu</span>(<span class="params">rest, str</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span>(rest.<span class="property">length</span> == <span class="number">0</span>) &#123;</span><br><span class="line">            res.<span class="title function_">push</span>(str)</span><br><span class="line">            <span class="keyword">return</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">let</span> m = <span class="keyword">new</span> <span class="title class_">Map</span>();</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; rest.<span class="property">length</span>; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span>(m.<span class="title function_">has</span>(rest[i]))</span><br><span class="line">                <span class="keyword">continue</span></span><br><span class="line">            m.<span class="title function_">set</span>(rest[i], <span class="number">1</span>)</span><br><span class="line">            <span class="keyword">let</span> next = rest.<span class="title function_">slice</span>(<span class="number">0</span>, i) + rest.<span class="title function_">slice</span>(i+<span class="number">1</span>)</span><br><span class="line">            <span class="title function_">permu</span>(next, str+rest[i])</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="title function_">permu</span>(s, <span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
@@ -676,7 +679,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E5%89%91%E6%8C%87-Offer-37-%E5%BA%8F%E5%88%97%E5%8C%96%E4%BA%8C%E5%8F%89%E6%A0%91"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">剑指 Offer 37. 序列化二叉树</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%9D%E8%B7%AF%E5%8F%8A%E4%BB%A3%E7%A0%81"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">思路及代码</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E5%89%91%E6%8C%87-Offer-38-%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E6%8E%92%E5%88%97"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">剑指 Offer 38. 字符串的排列</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%9D%E8%B7%AF%E5%8F%8A%E4%BB%A3%E7%A0%81-1"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">思路及代码</span></a></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">剑指 Offer 37. 序列化二叉树</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%9D%E8%B7%AF%E5%8F%8A%E4%BB%A3%E7%A0%81"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">思路及代码</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">剑指 Offer 38. 字符串的排列</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%9D%E8%B7%AF%E5%8F%8A%E4%BB%A3%E7%A0%81-2"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">思路及代码</span></a></li></ol></li></ol>
         
         </div>
       </aside>
@@ -701,9 +704,9 @@
             
             <a class="tag" href="/tags/#leetcode" title="leetcode">leetcode</a>
             
-            <a class="tag" href="/tags/#树" title="树">树</a>
-            
             <a class="tag" href="/tags/#字符串" title="字符串">字符串</a>
+            
+            <a class="tag" href="/tags/#树" title="树">树</a>
             
             <a class="tag" href="/tags/#回溯" title="回溯">回溯</a>
             
