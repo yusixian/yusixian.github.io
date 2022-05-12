@@ -895,7 +895,7 @@ main.go&lt;/p&gt;
 &lt;p&gt;哇咔咔，评论管理终于有了！&lt;/p&gt;
 &lt;h2 id=&#34;搜索配置&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#搜索配置&#34;&gt;#&lt;/a&gt; 搜索配置&lt;/h2&gt;
 &lt;p&gt;搜索采用 algolia，我是跟着这个来的 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9jbG91ZC50ZW5jZW50LmNvbS9kZXZlbG9wZXIvYXJ0aWNsZS8xOTU3NTY4&#34;&gt;Algolia 搜索引擎&lt;/span&gt;&lt;br /&gt;
-配置完后，每次搜索还需要手动一行命令&lt;/p&gt;
+配置完后，每次发布文章还需要手动一行命令&lt;/p&gt;
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;hexo clean &lt;span class=&#34;token operator&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; hexo g -d &lt;span class=&#34;token operator&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; hexo algolia&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h1 id=&#34;界面显示&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#界面显示&#34;&gt;#&lt;/a&gt; 界面显示&lt;/h1&gt;
 &lt;p&gt;在 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zaG9rYS5sb3N0eXUubWUvY29tcHV0ZXItc2NpZW5jZS9ub3RlL3RoZW1lLXNob2thLWRvYy9kaXNwbGF5Lw==&#34;&gt;🌈界面显示&lt;/span&gt; 中提到&lt;/p&gt;
 &lt;h2 id=&#34;首页置顶及精选分类&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#首页置顶及精选分类&#34;&gt;#&lt;/a&gt; 首页置顶及精选分类&lt;/h2&gt;
