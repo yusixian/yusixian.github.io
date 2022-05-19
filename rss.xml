@@ -1075,7 +1075,7 @@ main.go&lt;/p&gt;
 &lt;p&gt;这里是卡片 1 的内容&lt;br /&gt;
  ** 加粗 **&lt;br /&gt;
 &lt;span class=&#34;label success&#34;&gt;success&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;div class=&#34;links&#34;&gt;&lt;div class=&#34;item&#34; title=&#34;cos&#34; style=&#34;--block-color:#1e80ff;&#34;&gt;&lt;a href=&#34;https://ysx.cosine.ren/&#34; class=&#34;image&#34; data-background-image=&#34;https://cdn.jsdelivr.net/gh/yusixian/imgBed@latest/img/tx.jpg&#34;&gt;&lt;/a&gt;
+&lt;p&gt;&lt;div class=&#34;links&#34;&gt;&lt;div class=&#34;item&#34; title=&#34;cos&#34; style=&#34;--block-color:#1e80ff;&#34;&gt;&lt;a href=&#34;https://ysx.cosine.ren/&#34; class=&#34;image&#34; data-background-image=&#34;https://fastly.jsdelivr.net/gh/yusixian/imgBed@latest/img/tx.jpg&#34;&gt;&lt;/a&gt;
           &lt;div class=&#34;info&#34;&gt;
           &lt;a href=&#34;https://ysx.cosine.ren/&#34; class=&#34;title&#34;&gt;cos的博客&lt;/a&gt;
           &lt;p class=&#34;desc&#34;&gt;余弦的编程笔记 &amp; 生活记录&lt;/p&gt;
