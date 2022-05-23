@@ -10,11 +10,424 @@
         </author>
         <description>愿岁并谢，与友长兮</description>
         <language>zh-CN</language>
-        <pubDate>Thu, 12 May 2022 20:44:01 +0800</pubDate>
-        <lastBuildDate>Thu, 12 May 2022 20:44:01 +0800</lastBuildDate>
+        <pubDate>Mon, 23 May 2022 01:47:30 +0800</pubDate>
+        <lastBuildDate>Mon, 23 May 2022 01:47:30 +0800</lastBuildDate>
         <category term="前端" />
         <category term=" React" />
         <category term=" 全栈" />
+        <item>
+            <guid isPermalink="true">https://ysx.cosine.ren/secure-basics-1/</guid>
+            <title>信息安全概论复习一（Chapter1、2、3）</title>
+            <link>https://ysx.cosine.ren/secure-basics-1/</link>
+            <category term="笔记" scheme="https://ysx.cosine.ren/categories/note/" />
+            <category term="CS基础" scheme="https://ysx.cosine.ren/categories/note/cs-basics/" />
+            <category term="信息安全概论" scheme="https://ysx.cosine.ren/tags/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E6%A6%82%E8%AE%BA/" />
+            <pubDate>Mon, 23 May 2022 01:47:30 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;Chapter-1: 信息安全概论&lt;br /&gt;
+ Chapter-2: 信息安全保障体系&lt;br /&gt;
+ Chapter-3: 密码技术概述&lt;/p&gt;
+&lt;p&gt;本次复习主要包含上述三章内容&lt;/p&gt;
+&lt;p&gt;Chapter-1: 信息安全概论&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;信息安全基本概念&lt;/li&gt;
+&lt;li&gt;常见的网络攻击事件及其分类&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Chapter-2: 信息安全保障体系&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;信息安全保障基本概念&lt;/li&gt;
+&lt;li&gt;常用的安全属性及其实现&lt;/li&gt;
+&lt;li&gt;信息安全保障体系结构及信息安全防御模型&lt;/li&gt;
+&lt;li&gt;风险评估与等级保护&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Chapter-3: 密码技术概述&lt;br /&gt;
+本章介绍密码技术的基本概念、分类、实现和应用原理。内容包括:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;密码技术基本概念及基本术语&lt;/li&gt;
+&lt;li&gt;对称密码体制与公钥密码体制&lt;/li&gt;
+&lt;li&gt;数字签名技术及其特性&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;br /&gt;
+ 由于不知道重点是啥，就只能靠自己猜了 QAQ&lt;/p&gt;
+&lt;h1 id=&#34;信息安全基本概念&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#信息安全基本概念&#34;&gt;#&lt;/a&gt; 信息安全基本概念&lt;/h1&gt;
+&lt;h2 id=&#34;信息-information&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#信息-information&#34;&gt;#&lt;/a&gt; 信息 (Information)&lt;/h2&gt;
+&lt;p&gt;一种资源和交流的对象，具有 &lt;strong&gt;普遍性&lt;/strong&gt;、&lt;strong&gt;共享性&lt;/strong&gt;、&lt;strong&gt;增值性&lt;/strong&gt;、&lt;strong&gt;可处理性&lt;/strong&gt; 和 &lt;strong&gt;多效用性&lt;/strong&gt;，对人类社会发展具有特别重要的意义。&lt;/p&gt;
+&lt;h2 id=&#34;信息系统-information-system&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#信息系统-information-system&#34;&gt;#&lt;/a&gt; 信息系统 (Information System)&lt;/h2&gt;
+&lt;p&gt;由&lt;strong&gt;计算机&lt;/strong&gt;及其相关和&lt;strong&gt;配套的设备、设施&lt;/strong&gt;（含网络）构成的，按照一定的应用目标和规则对信息进行采集、加工、存储、传输、检索等处理的人机系统。(GB/Z20986-2007)&lt;/p&gt;
+&lt;h2 id=&#34;信息安全事件-information-security-incident&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#信息安全事件-information-security-incident&#34;&gt;#&lt;/a&gt; 信息安全事件 (Information Security Incident)&lt;/h2&gt;
+&lt;p&gt;由于 &lt;strong&gt;自然&lt;/strong&gt; 或者 &lt;strong&gt;人为&lt;/strong&gt; 以及 &lt;strong&gt;软硬件本身缺陷或故障&lt;/strong&gt; 的原因，对信息系统 &lt;strong&gt;造成危害&lt;/strong&gt;，或对社会造成&lt;strong&gt;负面影响&lt;/strong&gt;的事件。&lt;/p&gt;
+&lt;h2 id=&#34;信息安全保障-ensuring-information-security&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#信息安全保障-ensuring-information-security&#34;&gt;#&lt;/a&gt; 信息安全保障 (Ensuring Information Security)&lt;/h2&gt;
+&lt;p&gt;保护信息系统和信息网络中的信息资源免受各种类型的威胁、干扰和破坏。&lt;/p&gt;
+&lt;p&gt;措施：查找、防范、阻断引起危害和影响的潜在威胁。&lt;/p&gt;
+&lt;h1 id=&#34;信息安全事件分类&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#信息安全事件分类&#34;&gt;#&lt;/a&gt; 信息安全事件分类&lt;/h1&gt;
+&lt;p&gt;7 个基本类型&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;有害程序事件（Malware）&lt;/li&gt;
+&lt;li&gt;网络攻击事件&lt;/li&gt;
+&lt;li&gt;信息破坏事件&lt;/li&gt;
+&lt;li&gt;信息内容安全事件&lt;/li&gt;
+&lt;li&gt;设备设施故障&lt;/li&gt;
+&lt;li&gt;灾害性事件&lt;/li&gt;
+&lt;li&gt;其他事件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;有害程序事件malware&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#有害程序事件malware&#34;&gt;#&lt;/a&gt; 有害程序事件（Malware）&lt;/h2&gt;
+&lt;div class=&#34;note primary no-icon&#34;&gt;
+&lt;p&gt;是指 &lt;strong&gt;蓄意制造&lt;/strong&gt;、&lt;strong&gt;传播有害程序&lt;/strong&gt;，或因受到有害程序影响而导致的信息安全事件&lt;/p&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;计算机病毒事件&lt;/li&gt;
+&lt;li&gt;蠕虫事件&lt;/li&gt;
+&lt;li&gt;特洛伊木马事件&lt;/li&gt;
+&lt;li&gt;僵尸网络事件&lt;/li&gt;
+&lt;li&gt;混合攻击程序事件&lt;/li&gt;
+&lt;li&gt;网页内嵌恶意代码事件&lt;/li&gt;
+&lt;li&gt;其他有害程序事件……&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;网络攻击事件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#网络攻击事件&#34;&gt;#&lt;/a&gt; 网络攻击事件&lt;/h2&gt;
+&lt;div class=&#34;note primary no-icon&#34;&gt;
+&lt;p&gt;通过网络或其他技术手段，利用信息系统的种种缺陷，或使用暴力手段对信息系统 &lt;strong&gt;实施攻击&lt;/strong&gt;，造成信息系统异常或对信息系统当前运行造成潜在危害的信息安全事件。&lt;/p&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;拒绝服务攻击事件&lt;/li&gt;
+&lt;li&gt;后门攻击事件&lt;/li&gt;
+&lt;li&gt;漏洞攻击事件&lt;/li&gt;
+&lt;li&gt;网络扫描窃听事件&lt;/li&gt;
+&lt;li&gt;网络钓鱼事件&lt;/li&gt;
+&lt;li&gt;干扰事件&lt;/li&gt;
+&lt;li&gt;其他网络攻击事件……&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;信息破坏事件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#信息破坏事件&#34;&gt;#&lt;/a&gt; 信息破坏事件&lt;/h2&gt;
+&lt;div class=&#34;note primary no-icon&#34;&gt;
+&lt;p&gt;通过网络或其他技术手段，造成信息系统中的信息被&lt;strong&gt;篡改、假冒、泄露、窃取&lt;/strong&gt;等而导致的信息安全事件&lt;/p&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;信息篡改事件&lt;/li&gt;
+&lt;li&gt;信息假冒事件&lt;/li&gt;
+&lt;li&gt;信息泄露事件&lt;/li&gt;
+&lt;li&gt;信息窃取事件&lt;/li&gt;
+&lt;li&gt;信息丢失事件&lt;/li&gt;
+&lt;li&gt;其他信息破坏事件……&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;信息内容安全事件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#信息内容安全事件&#34;&gt;#&lt;/a&gt; 信息内容安全事件&lt;/h2&gt;
+&lt;div class=&#34;note primary no-icon&#34;&gt;
+&lt;p&gt;&lt;strong&gt;利用信息网络发布、传播&lt;/strong&gt;，危害国家安全、社会稳定和公共利益的内容的安全事件&lt;/p&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;违反宪法和法律&lt;/strong&gt;、行政法规的信息安全事件&lt;/li&gt;
+&lt;li&gt;针对社会事项进行讨论、评论形成网上敏感的&lt;strong&gt;舆论热点&lt;/strong&gt;，出现一定规模炒作的信息安全事件&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;组织串连、煽动集会游行&lt;/strong&gt;的信息安全事件&lt;/li&gt;
+&lt;li&gt;其他信息内容安全事件……&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;网络舆情及其监测&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#网络舆情及其监测&#34;&gt;#&lt;/a&gt; 网络舆情及其监测&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;舆情&lt;/strong&gt; 是指在一定的社会空间中，围绕 &lt;strong&gt;中介性&lt;/strong&gt; 社会事件发生、发展和变化，民众对社会管理着产生和持有的社会政治态度，网络舆情形成迅速，对社会影响巨大。&lt;/p&gt;
+&lt;p&gt;特定：&lt;strong&gt;直接&lt;/strong&gt;性、&lt;strong&gt;突发&lt;/strong&gt;性、&lt;strong&gt;偏差&lt;/strong&gt;性&lt;/p&gt;
+&lt;h2 id=&#34;设备设施故障&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#设备设施故障&#34;&gt;#&lt;/a&gt; 设备设施故障&lt;/h2&gt;
+&lt;div class=&#34;note primary no-icon&#34;&gt;
+&lt;p&gt;由于&lt;strong&gt;信息系统自身故障或外围保障设施故障&lt;/strong&gt;而导致的信息安全事件，以及 &lt;strong&gt;人为&lt;/strong&gt; 的使用 &lt;strong&gt;非技术手段&lt;/strong&gt;&lt;br /&gt;
+，&lt;strong&gt;有意或无意的造成信息系统破坏&lt;/strong&gt; 而导致的信息安全事件。&lt;/p&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;软硬件自身故障&lt;/li&gt;
+&lt;li&gt;外围保障设施故障&lt;/li&gt;
+&lt;li&gt;人为破坏事故&lt;/li&gt;
+&lt;li&gt;其它设备设施故障&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;灾害性事件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#灾害性事件&#34;&gt;#&lt;/a&gt; 灾害性事件&lt;/h2&gt;
+&lt;div class=&#34;note primary no-icon&#34;&gt;
+&lt;p&gt;由于 &lt;strong&gt;不可抗力&lt;/strong&gt; 对信息系统造成 &lt;strong&gt;物理破坏&lt;/strong&gt; 而导致的信息安全事件。&lt;br /&gt;
+灾害性事件包括水灾、台风、地震、雷击、坍塌、火灾、恐怖袭击、战争等导致的信息安全事件。&lt;/p&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;911 恐袭引发的数据灾难&lt;/li&gt;
+&lt;li&gt;其他……&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;其他网络攻击事件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#其他网络攻击事件&#34;&gt;#&lt;/a&gt; 其他网络攻击事件&lt;/h2&gt;
+&lt;p&gt;前述 6 个基本分类之外的信息安全事件。&lt;/p&gt;
+&lt;p&gt;除了分类之外，还可以对信息安全事件&lt;strong&gt;分级&lt;/strong&gt;。&lt;br /&gt;
+分级主要考虑三个方面的影响&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;信息系统的&lt;strong&gt;重要程度&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;系统损失&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;社会影响&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;信息安全属性&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#信息安全属性&#34;&gt;#&lt;/a&gt; 信息安全属性&lt;/h1&gt;
+&lt;p&gt;信息安全属性主要有如下几种：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;保密性（机密性）&lt;/li&gt;
+&lt;li&gt;完整性&lt;/li&gt;
+&lt;li&gt;鉴别性（可认证性）&lt;/li&gt;
+&lt;li&gt;不可否认性（不可抵赖性）&lt;/li&gt;
+&lt;li&gt;可用性&lt;/li&gt;
+&lt;li&gt;可靠性&lt;/li&gt;
+&lt;li&gt;可追究性&lt;/li&gt;
+&lt;li&gt;可控性&lt;/li&gt;
+&lt;li&gt;保障&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;保密性机密性-confidentiality&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#保密性机密性-confidentiality&#34;&gt;#&lt;/a&gt; 保密性（机密性 Confidentiality）&lt;/h2&gt;
+&lt;div class=&#34;note primary no-icon&#34;&gt;
+&lt;p&gt;保证信息与信息系统&lt;strong&gt;不被非授权者所获取或利用&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;包括：&lt;strong&gt;数据的保密性&lt;/strong&gt; 和 &lt;strong&gt;访问控制&lt;/strong&gt; 等方面内容&lt;/p&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;完整性integrity&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#完整性integrity&#34;&gt;#&lt;/a&gt; 完整性（Integrity）&lt;/h2&gt;
+&lt;div class=&#34;note primary no-icon&#34;&gt;
+&lt;p&gt;保证信息与信息系统&lt;strong&gt;正确和完备&lt;/strong&gt;，不被冒充、伪造或篡改&lt;/p&gt;
+&lt;p&gt;包括：&lt;strong&gt;数据的完整性&lt;/strong&gt;、&lt;strong&gt;系统的完整性&lt;/strong&gt; 等方面。&lt;/p&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;鉴别性可认证性authentication&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#鉴别性可认证性authentication&#34;&gt;#&lt;/a&gt; 鉴别性（可认证性，Authentication）&lt;/h2&gt;
+&lt;div class=&#34;note primary no-icon&#34;&gt;
+&lt;p&gt;保证信息与信息系统&lt;strong&gt;真实&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;包括：&lt;strong&gt;实体身份的真实性&lt;/strong&gt;、&lt;strong&gt;数据和系统的真实性&lt;/strong&gt; 等方面。&lt;/p&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;不可否认性不可抵赖性non-repudiation&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#不可否认性不可抵赖性non-repudiation&#34;&gt;#&lt;/a&gt; 不可否认性（不可抵赖性，Non-Repudiation）&lt;/h2&gt;
+&lt;div class=&#34;note primary no-icon&#34;&gt;
+&lt;p&gt;建立有效的责任机制，&lt;strong&gt;防止用户否认其行为&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;这一点在电子商务中极为重要。&lt;/p&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;可用性availability&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#可用性availability&#34;&gt;#&lt;/a&gt; 可用性（Availability）&lt;/h2&gt;
+&lt;div class=&#34;note primary no-icon&#34;&gt;
+&lt;p&gt;保证信息与信息系统可被授权者&lt;strong&gt;在需要的时候能够访问和使用&lt;/strong&gt;。&lt;/p&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;可靠性reliability&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#可靠性reliability&#34;&gt;#&lt;/a&gt; 可靠性（Reliability）&lt;/h2&gt;
+&lt;div class=&#34;note primary no-icon&#34;&gt;
+&lt;p&gt;保证信息系统为合法用户提供&lt;strong&gt;稳定、正确&lt;/strong&gt;的信息服务。&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;注意区分可靠性与可用性，可靠性强调的是系统无故障地持续运行，而可用性关注服务总体的持续时间，高度可用的系统在任何给定的时刻都能及时地工作。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;博客&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuamlhbnNodS5jb20vcC8zMjkyNTgyMWRiZmI=&#34;&gt;可用性和可靠性的区别&lt;/span&gt; 提到了一个例子，如果系统在每小时崩溃 1ms，那么它的可用性就超过 99.9999%，但是它还是高度不可靠，因为它只能无故障运行 1 小时。与之类似，如果一个系统从来不崩溃，但是每年要停机两星期，那么它是高度可靠的，但是可用性只有 96%。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;可追究性accountability&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#可追究性accountability&#34;&gt;#&lt;/a&gt; 可追究性（Accountability）&lt;/h2&gt;
+&lt;div class=&#34;note primary no-icon&#34;&gt;
+&lt;p&gt;保证从一个实体的行为能够 &lt;strong&gt;唯一地追溯到该实体&lt;/strong&gt; ，它支持不可否认、故障隔离、事后恢复、攻击阻断等应用，具有威慑作用，支持法律事务&lt;/p&gt;
+&lt;p&gt;其结果可以&lt;strong&gt;保证一个实体对其行为负责&lt;/strong&gt;。&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;!! 这个感觉就是不可否认性嘛，不过 ppt 上是这么写的就这么记吧 - -！！&lt;/p&gt;
+&lt;h2 id=&#34;可控性controlability&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#可控性controlability&#34;&gt;#&lt;/a&gt; 可控性（Controlability）&lt;/h2&gt;
+&lt;div class=&#34;note primary no-icon&#34;&gt;
+&lt;p&gt;指对信息和信息系统实施有效的 &lt;strong&gt;安全监控管理&lt;/strong&gt;，防止非法利用信息和信息系统&lt;/p&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;保障assurance&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#保障assurance&#34;&gt;#&lt;/a&gt; 保障（Assurance）&lt;/h2&gt;
+&lt;div class=&#34;note primary no-icon&#34;&gt;
+&lt;p&gt;为在具体实现和实施过程中，保密性、完整性、可用性和可追究性等得到足够满足，提供信心基础。&lt;/p&gt;
+&lt;p&gt;这种信心基础主要通过 &lt;strong&gt;认证和认可&lt;/strong&gt; 来实现。&lt;/p&gt;
+&lt;/div&gt;
+&lt;h1 id=&#34;信息安全保障体系结构及信息安全防御模型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#信息安全保障体系结构及信息安全防御模型&#34;&gt;#&lt;/a&gt; 信息安全保障体系结构及信息安全防御模型&lt;/h1&gt;
+&lt;p&gt;信息安全保障体系包括&lt;strong&gt;人&lt;/strong&gt;、&lt;strong&gt;政策&lt;/strong&gt;（包括法律、法规、制度、管理) 和&lt;strong&gt;技术&lt;/strong&gt;三大要素&lt;/p&gt;
+&lt;p&gt;主要内涵是 &lt;strong&gt;实现&lt;/strong&gt; 保密性、鉴别性、完整性、可用性等 &lt;strong&gt;各种安全属性&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;目标：&lt;strong&gt;保证信息和信息系统的安全性&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;信息安全防御模型主要有以下几步&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;风险评估 (Evaluation)&lt;/li&gt;
+&lt;li&gt;制定策略 (Policy)&lt;/li&gt;
+&lt;li&gt;实施保护 (Protection)&lt;/li&gt;
+&lt;li&gt;监测 (Detection)&lt;/li&gt;
+&lt;li&gt;响应 (Reaction)&lt;/li&gt;
+&lt;li&gt;恢复 (Restoration)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;风险评估-evaluation&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#风险评估-evaluation&#34;&gt;#&lt;/a&gt; 风险评估 (Evaluation)&lt;/h2&gt;
+&lt;p&gt;对信息系统进行全面的风险评估&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;需要对信息系统应用需求、网络基础设施、外部内部环境、安全威胁、人员、政策法规、安全技术等具有全面的了解&lt;/li&gt;
+&lt;li&gt;善于应用各种方法、手段、工具对系统风险进行人工和自动分析，给出全面细致的风险评估。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;制定策略-policy&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#制定策略-policy&#34;&gt;#&lt;/a&gt; 制定策略 (Policy)&lt;/h2&gt;
+&lt;p&gt;安全策略是安全模型的核心&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;后续的 防护、检测、响应和恢复 各个阶段都是依据安全策略实施的&lt;/li&gt;
+&lt;li&gt;安全策略为安全管理提供管理方向和支持手段&lt;/li&gt;
+&lt;li&gt;策略体系的建立包括 安全策略的&lt;strong&gt;制订&lt;/strong&gt;、&lt;strong&gt;评估&lt;/strong&gt;、&lt;strong&gt;执行&lt;/strong&gt;等&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;实施保护-protection&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#实施保护-protection&#34;&gt;#&lt;/a&gt; 实施保护 (Protection)&lt;/h2&gt;
+&lt;p&gt;采用一切可能的方法、技术和手段防止信息及信息系统遭受安全威胁，减少和降低遭受入侵和攻击的可能&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;实现保密性、完整性、可用性、可控性和不可否认性等安全属性。&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;提高边界防御能力&lt;/li&gt;
+&lt;li&gt;信息处理环节的保护&lt;/li&gt;
+&lt;li&gt;信息传输保护&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;监测-detection&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#监测-detection&#34;&gt;#&lt;/a&gt; 监测 (Detection)&lt;/h2&gt;
+&lt;p&gt;在系统实施保护之后根据安全策略对信息系统实施监控和检测&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;对 &lt;strong&gt;系统运行状态&lt;/strong&gt; 进行监视和控制，发现异常，并可能作出 &lt;strong&gt;动态调整&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;对已部署的系统及其安全防护进行检查测量&lt;/li&gt;
+&lt;li&gt;是动态响应和加强防护的依据，是强制落实安全策略的手段&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;响应-reaction&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#响应-reaction&#34;&gt;#&lt;/a&gt; 响应 (Reaction)&lt;/h2&gt;
+&lt;p&gt;已知一个攻击 (入侵) 事件发生之后所进行的处理&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;把系统调整到安全状态&lt;/li&gt;
+&lt;li&gt;对于危及安全的事件、行为、过程，及时做出处理&lt;/li&gt;
+&lt;li&gt;杜绝危害进一步扩大，力求系统保持提供正常的服务。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;恢复-restoration&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#恢复-restoration&#34;&gt;#&lt;/a&gt; 恢复 (Restoration)&lt;/h2&gt;
+&lt;p&gt;恢复可以分为 &lt;strong&gt;系统恢复&lt;/strong&gt; 和 &lt;strong&gt;信息恢复&lt;/strong&gt; 。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;系统恢复是指修补安全事件所利用的系统缺陷，如 &lt;strong&gt;系统升级&lt;/strong&gt;、&lt;strong&gt;软件升级&lt;/strong&gt; 和 &lt;strong&gt;打补丁&lt;/strong&gt; 等方法&lt;strong&gt;去除系统漏洞或后门&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;信息恢复是指&lt;strong&gt;恢复丢失的数据&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;恢复完重新进行风险评估，如此循环&lt;/p&gt;
+&lt;h1 id=&#34;风险评估与等级保护&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#风险评估与等级保护&#34;&gt;#&lt;/a&gt; 风险评估与等级保护&lt;/h1&gt;
+&lt;h2 id=&#34;等级保护&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#等级保护&#34;&gt;#&lt;/a&gt; 等级保护&lt;/h2&gt;
+&lt;p&gt;GB17859-1999《计算机信息系统安全保护等级划分准则》&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;第一级：用户自主保护级（相当于 C1 级）&lt;/li&gt;
+&lt;li&gt;第二级：系统审计保护级（相当于 C2 级）&lt;/li&gt;
+&lt;li&gt;第三级：安全标记保护级（相当于 B1 级）&lt;/li&gt;
+&lt;li&gt;第四级：结构化保护级（相当于 B2 级）&lt;/li&gt;
+&lt;li&gt;第五级：访问验证保护级（相当于 B3-A1 级）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;信息安全技术原则&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#信息安全技术原则&#34;&gt;#&lt;/a&gt; 信息安全技术原则&lt;/h2&gt;
+&lt;h3 id=&#34;最小化原则&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#最小化原则&#34;&gt;#&lt;/a&gt; 最小化原则&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;受保护的敏感信息&lt;/strong&gt; 只能在&lt;strong&gt;一定范围&lt;/strong&gt;内被共享&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;履行工作职责和职能的安全主体，在法律和相关安全策略允许的前提下，为满足工作需要而被授予其访问信息的适当权限，称为最小化原则。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;分权制衡原则&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#分权制衡原则&#34;&gt;#&lt;/a&gt; 分权制衡原则&lt;/h3&gt;
+&lt;p&gt;在信息系统中，对所有权限应该进行适当地划分&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;每个授权主体只能拥有其中的&lt;strong&gt;一部分权限&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;使他们之间&lt;strong&gt;相互制约&lt;/strong&gt;、相互监督，共同保证信息系统的安全。&lt;/li&gt;
+&lt;li&gt;如果 — 个授权主体分配的权限过大，无人监督和制约，就隐含了滥用权力的安全隐患。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;安全隔离原则&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安全隔离原则&#34;&gt;#&lt;/a&gt; 安全隔离原则&lt;/h3&gt;
+&lt;p&gt;将信息的主体与客体分离，按照一定的安全策略，在可控和安全的前提下实施主体对客体的访问。&lt;/p&gt;
+&lt;h1 id=&#34;密码技术基本概念及基本术语&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#密码技术基本概念及基本术语&#34;&gt;#&lt;/a&gt; 密码技术基本概念及基本术语&lt;/h1&gt;
+&lt;h2 id=&#34;密码技术基本概念&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#密码技术基本概念&#34;&gt;#&lt;/a&gt; 密码技术基本概念&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;参考博客：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI2MTM5MDQ1L2FydGljbGUvZGV0YWlscy8xMDMxNTMxNzI=&#34;&gt;密码安全之古典密码、对称密码&lt;/span&gt;&lt;br /&gt;
+&lt;strong&gt;古典密码&lt;/strong&gt;侧重于&lt;strong&gt;加密算法&lt;/strong&gt;的精心设计与保密性，而&lt;strong&gt;现代密码&lt;/strong&gt;侧重于&lt;strong&gt;对密钥的保密&lt;/strong&gt;，公开加密所用的算法。&lt;br /&gt;
+现代密码再以密钥细分就会分为对称加密和非对称加密。&lt;strong&gt;对称加密&lt;/strong&gt;，就是&lt;strong&gt;加密时和解密时的密钥是一样的&lt;/strong&gt;；而&lt;strong&gt;非对称加密&lt;/strong&gt;则是加密密钥和解密&lt;strong&gt;密钥不同&lt;/strong&gt;。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;古典密码&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#古典密码&#34;&gt;#&lt;/a&gt; 古典密码&lt;/h3&gt;
+&lt;p&gt;置换密码 or 替代密码&lt;br /&gt;
+置换密码顾名思义，就是单纯的置换明文为密文&lt;br /&gt;
+凯撒密码即为典型的替代法加密，可以被轻易破解&lt;/p&gt;
+&lt;h3 id=&#34;现代密码&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#现代密码&#34;&gt;#&lt;/a&gt; 现代密码&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;1949 年香农发表论文《保密系统的通信理论》标志着现代密码学的诞生&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;常用术语&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#常用术语&#34;&gt;#&lt;/a&gt; 常用术语&lt;/h3&gt;
+&lt;p&gt;数据保密通信系统的有关术语如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;明文 (Plain text)&lt;/strong&gt;：需要安全保护的原始信息 / 数据，常记为  &lt;code&gt;m&lt;/code&gt;  。所有明文构成 &lt;strong&gt;明文空间&lt;/strong&gt;，常记为  &lt;code&gt;M&lt;/code&gt; 。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;密文 (Cipher text)&lt;/strong&gt;：原始数据经加密变换得到的数据，常记为  &lt;code&gt;c&lt;/code&gt; 。所有密文构成 &lt;strong&gt;密文空间&lt;/strong&gt;，常记为  &lt;code&gt;C&lt;/code&gt; 。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;加密 (Encryption)&lt;/strong&gt;: &lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;c&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;E&lt;/mi&gt;&lt;mrow&gt;&lt;mi&gt;k&lt;/mi&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;mo stretchy=&#34;false&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;m&lt;/mi&gt;&lt;mo stretchy=&#34;false&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;c=E_{k1}(m)&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.43056em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mrel&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1em;vertical-align:-0.25em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.05764em;&#34;&gt;E&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t vlist-t2&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.33610799999999996em;&#34;&gt;&lt;span style=&#34;top:-2.5500000000000003em;margin-left:-0.05764em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;&lt;span class=&#34;mord mathnormal mtight&#34; style=&#34;margin-right:0.03148em;&#34;&gt;k&lt;/span&gt;&lt;span class=&#34;mord mtight&#34;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-s&#34;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.15em;&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mopen&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;m&lt;/span&gt;&lt;span class=&#34;mclose&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;解密 (Decryption)&lt;/strong&gt;: &lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;m&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;D&lt;/mi&gt;&lt;mrow&gt;&lt;mi&gt;k&lt;/mi&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;mo stretchy=&#34;false&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;c&lt;/mi&gt;&lt;mo stretchy=&#34;false&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;m=D_{k2}(c)&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.43056em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;m&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mrel&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1em;vertical-align:-0.25em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.02778em;&#34;&gt;D&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t vlist-t2&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.33610799999999996em;&#34;&gt;&lt;span style=&#34;top:-2.5500000000000003em;margin-left:-0.02778em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;&lt;span class=&#34;mord mathnormal mtight&#34; style=&#34;margin-right:0.03148em;&#34;&gt;k&lt;/span&gt;&lt;span class=&#34;mord mtight&#34;&gt;2&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-s&#34;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.15em;&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mopen&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;mclose&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;密钥 (Key)&lt;/strong&gt;：用于加解密的秘密信息。所有密钥构成 &lt;strong&gt;密钥空间&lt;/strong&gt;，常记为  &lt;code&gt;K&lt;/code&gt; 。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;公众信道&lt;/strong&gt;：数据公开传递的信道，也称公共信道。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;秘密信道&lt;/strong&gt;：代指安全信道，用于&lt;strong&gt;传递密钥&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;密码体制 (Cipher System)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;对于 &lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;m&lt;/mi&gt;&lt;mo&gt;∈&lt;/mo&gt;&lt;mi&gt;M&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;m∈M&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.5782em;vertical-align:-0.0391em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;m&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mrel&#34;&gt;∈&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.68333em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.10903em;&#34;&gt;M&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;、 &lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;k&lt;/mi&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mo separator=&#34;true&#34;&gt;,&lt;/mo&gt;&lt;mi&gt;k&lt;/mi&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;mo&gt;∈&lt;/mo&gt;&lt;mi&gt;K&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;k1,k2∈K&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.8888799999999999em;vertical-align:-0.19444em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.03148em;&#34;&gt;k&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;mpunct&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.16666666666666666em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.03148em;&#34;&gt;k&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mrel&#34;&gt;∈&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.68333em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.07153em;&#34;&gt;K&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;，有五元组（ &lt;code&gt;M,C,K,E,D&lt;/code&gt; ）称为一个密码体制，其中 &lt;code&gt;E&lt;/code&gt;  和  &lt;code&gt;D&lt;/code&gt;  代表&lt;strong&gt;密码算法&lt;/strong&gt;：具体的变换过程或数学方法。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;加密可以看做是 &lt;strong&gt;将密钥与明文混合变换&lt;/strong&gt; 的过程&lt;/li&gt;
+&lt;li&gt;解密是 &lt;strong&gt;从密文中剥离密钥&lt;/strong&gt; 的过程，因此也称脱密过程。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Kerchhoffs 假设 &lt;br /&gt;
+一个密码体制，对于所有密钥，加密和解密算法迅速有效。&lt;br /&gt;
+密码体制的 &lt;strong&gt;安全性&lt;/strong&gt; 不应该依赖于算法的保密，而&lt;strong&gt;仅依赖密钥的保密&lt;/strong&gt;。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;对称密码体制与公钥密码体制&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#对称密码体制与公钥密码体制&#34;&gt;#&lt;/a&gt; 对称密码体制与公钥密码体制&lt;/h1&gt;
+&lt;p&gt;对称密钥密码体制：加密与解密使用相同密钥 (单钥)&lt;br /&gt;
+ 公钥密码体制：加密与解密使用不同密钥 (双钥)&lt;/p&gt;
+&lt;h2 id=&#34;对称密码体制&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#对称密码体制&#34;&gt;#&lt;/a&gt; 对称密码体制&lt;/h2&gt;
+&lt;h3 id=&#34;基本特点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#基本特点&#34;&gt;#&lt;/a&gt; 基本特点&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;单钥：加密与解密使用相同密钥&lt;/li&gt;
+&lt;li&gt;依赖关系：加密密钥与解密密钥 &lt;strong&gt;存在明显的依赖关系&lt;/strong&gt;，由其中一个可以很容易推导出另一个。&lt;/li&gt;
+&lt;li&gt;共享密钥：对称密码体制多使用同一个密钥加密和解密，称为 &lt;strong&gt;加解密双方共享密钥&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;通过安全信道传递密钥&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;对称密码体制分类如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;分组密码 (Block cipher)&lt;/li&gt;
+&lt;li&gt;序列密码 (Sequential cipher)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;分组密码-block-cipher&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#分组密码-block-cipher&#34;&gt;#&lt;/a&gt; 分组密码 (Block cipher)&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;分组&lt;/li&gt;
+&lt;li&gt;对每个分组进行加密&lt;/li&gt;
+&lt;li&gt;得到登场的密文分组&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;先将明文划分成若干等长的块分组，如每个分组长 64 比特、128 比特，然后再分别对每个分组进行加密，得到等长的密文分组。&lt;/p&gt;
+&lt;p&gt;解密过程也类似。有些密码体制解密算法与加密算法完全一样，如 &lt;code&gt;DES&lt;/code&gt;  等。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;分组密码设计的两个思想如下：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;扩散 (Diffusion)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;将明文及密钥的影响尽可能迅速地&lt;strong&gt;散布到较多的输出密文中&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;典型操作就是 &lt;strong&gt;置换 (如重排字符顺序）&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;混淆 (Confusion)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;使作用于明文的密钥和密文之间的关系&lt;strong&gt;复杂化&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;使明文和密文、密文和密钥之间的&lt;strong&gt;统计相关性极小化&lt;/strong&gt;，从而使统计分析攻击不能奏效。&lt;/li&gt;
+&lt;li&gt;混淆通常采用 &lt;strong&gt;代换&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;序列密码-sequential-cipher&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#序列密码-sequential-cipher&#34;&gt;#&lt;/a&gt; 序列密码 (Sequential cipher)&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;通过 &lt;strong&gt;密钥种子&lt;/strong&gt; 生成任意长度的字节流（随机序列）&lt;/li&gt;
+&lt;li&gt;将生成的随机序列 &lt;strong&gt;按位或按字节&lt;/strong&gt; 与明文进行混合（异或等）&lt;/li&gt;
+&lt;li&gt;得到密文序列&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;把明文以位或字节为单位进行加密，一般是与密钥（由密钥种子产生的任意长度的字节流）进行混合（如异或）获得密文序列。也称 &lt;strong&gt;流密码 (Stream cipher)&lt;/strong&gt;。&lt;/p&gt;
+&lt;h3 id=&#34;feistel网络结构&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#feistel网络结构&#34;&gt;#&lt;/a&gt; Feistel 网络结构&lt;/h3&gt;
+&lt;p&gt;分组密码一般采用 &lt;strong&gt;多轮相同的迭代操作&lt;/strong&gt;（轮操作），从而实现明文与密钥充分地混淆和扩散。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;许多分组密码体制采用了 Feistel 网络结构。&lt;/li&gt;
+&lt;li&gt;Feistel 结构保证无论 &lt;strong&gt;轮函数  &lt;code&gt;F&lt;/code&gt; &lt;/strong&gt; 是一个如何复杂的变换过程，都 &lt;strong&gt;不影响加密与解密过程的一致性&lt;/strong&gt;，实现&lt;strong&gt;加密过程的可逆性&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;轮函数 &lt;code&gt;F&lt;/code&gt; &lt;/strong&gt; 具有良好的非线性性，增加密码分析的难度。&lt;/li&gt;
+&lt;li&gt;分组密码通过多轮处理增加了混淆效果，&lt;strong&gt;每一轮使用不同的轮密钥&lt;/strong&gt;（由初始密钥扩展得到)。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;依据 Feistel 结构作为基本结构的有 &lt;code&gt;DES&lt;/code&gt; 、 &lt;code&gt;RC6&lt;/code&gt; 、 &lt;code&gt;MARS&lt;/code&gt;  等加密算法。&lt;/p&gt;
+&lt;p&gt;推荐阅读：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2Fwb2xsb25fa3JqL2FydGljbGUvZGV0YWlscy83NTAxNDIxOA==&#34;&gt;Feistel 网络结构与 DES 加密算法的框架简单分析&lt;/span&gt;&lt;/p&gt;
+&lt;h2 id=&#34;公钥密码体制&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#公钥密码体制&#34;&gt;#&lt;/a&gt; 公钥密码体制&lt;/h2&gt;
+&lt;h3 id=&#34;基本特点-2&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#基本特点-2&#34;&gt;#&lt;/a&gt; 基本特点&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;双钥：加密与解密使用不同密钥&lt;/li&gt;
+&lt;li&gt;算法：陷门单向函数&lt;/li&gt;
+&lt;li&gt;依赖某个特殊的数学问题（大数分解、离散对数等）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;公钥密码体制有两个完全不同的密钥，而且其中一个可以公开（公钥，常用于加密），另一个需要保密（私钥，常用于解密）&lt;/p&gt;
+&lt;p&gt;公钥密码的算法是一种 &lt;strong&gt;陷门单向函数 &lt;code&gt;f&lt;/code&gt; &lt;/strong&gt; :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;对 &lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;f&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.8888799999999999em;vertical-align:-0.19444em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.10764em;&#34;&gt;f&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt; 定义域中的 &lt;strong&gt;任意  &lt;code&gt;x&lt;/code&gt; &lt;/strong&gt; 都 &lt;strong&gt;易于计算&lt;/strong&gt; &lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;mo stretchy=&#34;false&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo stretchy=&#34;false&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;f(x)&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1em;vertical-align:-0.25em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.10764em;&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;mopen&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;mclose&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;对 &lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;f&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.8888799999999999em;vertical-align:-0.19444em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.10764em;&#34;&gt;f&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt; 值域中 &lt;strong&gt;几乎所有  &lt;code&gt;y&lt;/code&gt; &lt;/strong&gt;，即使  &lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;f&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.8888799999999999em;vertical-align:-0.19444em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.10764em;&#34;&gt;f&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt; 已知，要计算 &lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msup&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;mrow&gt;&lt;mo&gt;−&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mrow&gt;&lt;/msup&gt;&lt;mo stretchy=&#34;false&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;mo stretchy=&#34;false&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;f^{-1}(y)&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1.064108em;vertical-align:-0.25em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.10764em;&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.8141079999999999em;&#34;&gt;&lt;span style=&#34;top:-3.063em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;−&lt;/span&gt;&lt;span class=&#34;mord mtight&#34;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mopen&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.03588em;&#34;&gt;y&lt;/span&gt;&lt;span class=&#34;mclose&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt; 也是不可行的&lt;/li&gt;
+&lt;li&gt;当给定某些辅助信息（陷门〉时才易于计算 &lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msup&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;mrow&gt;&lt;mo&gt;−&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mrow&gt;&lt;/msup&gt;&lt;mo stretchy=&#34;false&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;mo stretchy=&#34;false&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;f^{-1}(y)&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1.064108em;vertical-align:-0.25em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.10764em;&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.8141079999999999em;&#34;&gt;&lt;span style=&#34;top:-3.063em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;−&lt;/span&gt;&lt;span class=&#34;mord mtight&#34;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mopen&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.03588em;&#34;&gt;y&lt;/span&gt;&lt;span class=&#34;mclose&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;此时称 &lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;f&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.8888799999999999em;vertical-align:-0.19444em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.10764em;&#34;&gt;f&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt; 是一个 &lt;strong&gt;陷门单向函数&lt;/strong&gt;，辅助信息 (陷门信息) 作为秘密密钥。&lt;/p&gt;
+&lt;p&gt;公钥密码体制一般要借助某个特殊的数学问题，如数论中的大数分解、离散对数等数学难解问题，&lt;strong&gt;构造单向函数&lt;/strong&gt;，因此，这类密码的&lt;strong&gt;安全强度取决于它所依据的问题的计算复杂度&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;目前的公钥密码体制主要有两类:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;基于 &lt;strong&gt;大整数因子分解问题&lt;/strong&gt; 的公钥密码体制，如  &lt;code&gt;RSA&lt;/code&gt;  体制&lt;/li&gt;
+&lt;li&gt;基于 &lt;strong&gt;离散对数问题&lt;/strong&gt; 的公钥密码体制，如  &lt;code&gt;EIGmal&lt;/code&gt;  密码体制、椭圆曲线密码体制。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;数字签名技术及其特性&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#数字签名技术及其特性&#34;&gt;#&lt;/a&gt; 数字签名技术及其特性&lt;/h1&gt;
+&lt;h3 id=&#34;什么是数字签名&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#什么是数字签名&#34;&gt;#&lt;/a&gt; 什么是数字签名&lt;/h3&gt;
+&lt;p&gt;一个假想的例子如下&lt;/p&gt;
+&lt;p&gt;路人甲要通过网络传输一份文档给路人乙，乙接收到这份文档后:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;乙能确认这份文档的 &lt;strong&gt;真实性&lt;/strong&gt; 吗？（&lt;ins class=&#34;wavy&#34;&gt;确实来自于甲，而不是其他人冒充甲发送的&lt;/ins&gt;）&lt;/li&gt;
+&lt;li&gt;乙能确定这份文档的 &lt;strong&gt;正确性&lt;/strong&gt; 吗？（&lt;ins class=&#34;wavy&#34;&gt;在传输过程中没有被篡改&lt;/ins&gt;）？&lt;/li&gt;
+&lt;li&gt;甲如果否认曾经发送过该文档怎么办？ &lt;strong&gt;不可否认性&lt;/strong&gt;（&lt;ins class=&#34;wavy&#34;&gt;实际上确实是甲发送的&lt;/ins&gt;）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这就需要数字签名：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;数字签名必须使用某些 &lt;strong&gt;对于签名者来讲具有唯一性&lt;/strong&gt; 的信息，以 &lt;strong&gt;防止其伪造和否认&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;数字签名的 &lt;strong&gt;生成与验证&lt;/strong&gt; 都必须是 &lt;strong&gt;相对容易&lt;/strong&gt; 的，且在出现纠纷时可通过 &lt;strong&gt;可信的第三方&lt;/strong&gt; TTP 仲裁 。&lt;/li&gt;
+&lt;li&gt;公钥密码技术为数字签名提供了理论依据:
+&lt;ul&gt;
+&lt;li&gt;公钥密码体制中的私钥是&lt;strong&gt;私有&lt;/strong&gt;的、&lt;strong&gt;保密&lt;/strong&gt;的，其他人无法获得，可作为持有者的&lt;strong&gt;唯一性信息&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;数字签名机制使用公钥密码技术，使 &lt;strong&gt;消息接收者&lt;/strong&gt; &lt;strong&gt;相信&lt;/strong&gt; 收到的消息来自声称的 &lt;strong&gt;消息发送者&lt;/strong&gt;（消息主体的识别与鉴别 ——&lt;strong&gt; 鉴别性保护&lt;/strong&gt;），并&lt;strong&gt;信任该消息&lt;/strong&gt;（消息被正确地传递，没有被篡改 ——&lt;strong&gt; 完整性保护&lt;/strong&gt;)，同时&lt;strong&gt;消息签名者不能否认签发了该消息&lt;/strong&gt;（&lt;strong&gt;不可否认性保护&lt;/strong&gt;)。&lt;/p&gt;
+&lt;p&gt;也就是说，数字签名可以实现 3 个安全属性的保护&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;鉴别性：实体和消息的真实性认证&lt;/li&gt;
+&lt;li&gt;完整性&lt;/li&gt;
+&lt;li&gt;不可否认性&lt;/li&gt;
+&lt;/ul&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://ysx.cosine.ren/back-end/go_learning_3/</guid>
             <title>Go语言初上手（三）编码规范与性能优化 | 青训营</title>
@@ -2687,118 +3100,6 @@ Output: [-1]
 &lt;/ul&gt;
 &lt;p&gt;第二天来短信，挂了呢（果然呢）&lt;/p&gt;
  ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">https://ysx.cosine.ren/coding-train/leetcode/offer/day19/</guid>
-            <title>剑指offer day19 搜索与回溯算法（中等）</title>
-            <link>https://ysx.cosine.ren/coding-train/leetcode/offer/day19/</link>
-            <category term="题目记录" scheme="https://ysx.cosine.ren/categories/coding-train/" />
-            <category term="剑指offer" scheme="https://ysx.cosine.ren/categories/coding-train/offer/" />
-            <category term="leetcode" scheme="https://ysx.cosine.ren/tags/leetcode/" />
-            <category term="树" scheme="https://ysx.cosine.ren/tags/%E6%A0%91/" />
-            <category term="dfs/bfs" scheme="https://ysx.cosine.ren/tags/dfs-bfs/" />
-            <category term="递归" scheme="https://ysx.cosine.ren/tags/%E9%80%92%E5%BD%92/" />
-            <pubDate>Sun, 17 Apr 2022 19:48:00 +0800</pubDate>
-            <description><![CDATA[ &lt;p&gt;day19 题目： &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vcHJvYmxlbXMvcWl1LTEybi1sY29mLw==&#34;&gt;剑指 Offer 64. 求 1+2+…+n&lt;/span&gt;、&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vcHJvYmxlbXMvZXItY2hhLXNvdS1zdW8tc2h1LWRlLXp1aS1qaW4tZ29uZy1nb25nLXp1LXhpYW4tbGNvZi8=&#34;&gt;剑指 Offer 68 - I. 二叉搜索树的最近公共祖先&lt;/span&gt;、&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vcHJvYmxlbXMvZXItY2hhLXNodS1kZS16dWktamluLWdvbmctZ29uZy16dS14aWFuLWxjb2Yv&#34;&gt;剑指 Offer 68 - II. 二叉树的最近公共祖先&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;知识点：树、递归、dfs/bfs，难度为中等、简单、简单&lt;/p&gt;
-&lt;p&gt;学习计划链接：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vc3R1ZHktcGxhbi9sY29mLz9wcm9ncmVzcz03am43MGpy&#34;&gt;「剑指 Offer」 - 学习计划&lt;/span&gt;&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;题目&lt;/th&gt;
-&lt;th&gt;知识点&lt;/th&gt;
-&lt;th&gt;难度&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vcHJvYmxlbXMvcWl1LTEybi1sY29mLw==&#34;&gt;剑指 Offer 64. 求 1+2+…+n&lt;/span&gt;&lt;/td&gt;
-&lt;td&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vdGFnL2JpdC1tYW5pcHVsYXRpb24=&#34;&gt;位运算&lt;/span&gt;、&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vdGFnL3JlY3Vyc2lvbg==&#34;&gt;递归&lt;/span&gt;、&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vdGFnL2JyYWludGVhc2Vy&#34;&gt;脑筋急转弯&lt;/span&gt;&lt;/td&gt;
-&lt;td&gt;中等&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vcHJvYmxlbXMvZXItY2hhLXNvdS1zdW8tc2h1LWRlLXp1aS1qaW4tZ29uZy1nb25nLXp1LXhpYW4tbGNvZi8=&#34;&gt;剑指 Offer 68 - I. 二叉搜索树的最近公共祖先&lt;/span&gt;&lt;/td&gt;
-&lt;td&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vdGFnL3RyZWU=&#34;&gt;树&lt;/span&gt;、&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vdGFnL2RlcHRoLWZpcnN0LXNlYXJjaA==&#34;&gt;深度优先搜索&lt;/span&gt;、&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vdGFnL2JpbmFyeS1zZWFyY2gtdHJlZQ==&#34;&gt;二叉搜索树&lt;/span&gt;&lt;/td&gt;
-&lt;td&gt;简单&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vcHJvYmxlbXMvZXItY2hhLXNodS1kZS16dWktamluLWdvbmctZ29uZy16dS14aWFuLWxjb2Yv&#34;&gt;剑指 Offer 68 - II. 二叉树的最近公共祖先&lt;/span&gt;&lt;/td&gt;
-&lt;td&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vdGFnL3RyZWU=&#34;&gt;树&lt;/span&gt;、&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vdGFnL2RlcHRoLWZpcnN0LXNlYXJjaA==&#34;&gt;深度优先搜索&lt;/span&gt;、&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vdGFnL2JpbmFyeS10cmVl&#34;&gt;二叉树&lt;/span&gt;&lt;/td&gt;
-&lt;td&gt;简单&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h1 id=&#34;剑指-offer-64-求12n&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#剑指-offer-64-求12n&#34;&gt;#&lt;/a&gt; &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vcHJvYmxlbXMvcWl1LTEybi1sY29mLw==&#34;&gt;剑指 Offer 64. 求 1+2+…+n&lt;/span&gt;&lt;/h1&gt;
-&lt;p&gt;求  &lt;code&gt;1+2+...+n&lt;/code&gt;  ，要求不能使用乘除法、for、while、if、else、switch、case 等关键字及条件判断语句（A?B:C）。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;示例 1：&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;输入: n = 3
-输出: 6
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;示例 2：&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;输入: n = 9
-输出: 45
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;限制：&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;1 &amp;lt;= n &amp;lt;= 10000&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;思路与代码&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#思路与代码&#34;&gt;#&lt;/a&gt; 思路与代码&lt;/h2&gt;
-&lt;p&gt;看这题的 tag：脑筋急转弯就能发现不对劲……&lt;/p&gt;
-&lt;p&gt;主要就是用短路运算符来代替条件判断&lt;/p&gt;
-&lt;figure class=&#34;highlight javascript&#34;&gt;&lt;figcaption data-lang=&#34;javascript&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;/**&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; * @param &amp;#123;number&amp;#125; n&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; * @return &amp;#123;number&amp;#125;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; */&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;token function-variable function&#34;&gt;sumNums&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token parameter&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    n &lt;span class=&#34;token operator&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;n &lt;span class=&#34;token operator&#34;&gt;+=&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;sumNums&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;n&lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; n&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h1 id=&#34;剑指-offer-68-i-二叉搜索树的最近公共祖先&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#剑指-offer-68-i-二叉搜索树的最近公共祖先&#34;&gt;#&lt;/a&gt; &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vcHJvYmxlbXMvZXItY2hhLXNvdS1zdW8tc2h1LWRlLXp1aS1qaW4tZ29uZy1nb25nLXp1LXhpYW4tbGNvZi8=&#34;&gt;剑指 Offer 68 - I. 二叉搜索树的最近公共祖先&lt;/span&gt;&lt;/h1&gt;
-&lt;p&gt;给定一个二叉搜索树，找到该树中两个指定节点的最近公共祖先。&lt;br /&gt;
-&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9iYWlrZS5iYWlkdS5jb20vaXRlbS8lRTYlOUMlODAlRTglQkYlOTElRTUlODUlQUMlRTUlODUlQjElRTclQTUlOTYlRTUlODUlODgvODkxODgzND9mcj1hbGFkZGlu&#34;&gt;百度百科&lt;/span&gt;中最近公共祖先的定义为：“对于有根树 T 的两个结点 p、q，最近公共祖先表示为一个结点 x，满足 x 是 p、q 的祖先且 x 的深度尽可能大（&lt;strong&gt;一个节点也可以是它自己的祖先&lt;/strong&gt;）。”&lt;/p&gt;
-&lt;p&gt;例如，给定如下二叉搜索树:  root = [6,2,8,0,4,7,9,null,null,3,5]&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/bc7700522f0a4880ba8b5735e0d7fc7d~tplv-k3u1fbpfcp-zoom-1.image&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;示例 1:&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;输入: root = [6,2,8,0,4,7,9,null,null,3,5], p = 2, q = 8
-输出: 6 
-解释: 节点 2 和节点 8 的最近公共祖先是 6。
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;示例 2:&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;输入: root = [6,2,8,0,4,7,9,null,null,3,5], p = 2, q = 4
-输出: 2
-解释: 节点 2 和节点 4 的最近公共祖先是 2, 因为根据定义最近公共祖先节点可以为节点本身。
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;说明:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;所有节点的值都是唯一的。&lt;/li&gt;
-&lt;li&gt;p、q 为不同节点且均存在于给定的二叉搜索树中。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;注意：本题与主站 235 题相同：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vcHJvYmxlbXMvbG93ZXN0LWNvbW1vbi1hbmNlc3Rvci1vZi1hLWJpbmFyeS1zZWFyY2gtdHJlZS8=&#34;&gt;https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-search-tree/&lt;/span&gt;&lt;/p&gt;
-&lt;h2 id=&#34;思路与代码-2&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#思路与代码-2&#34;&gt;#&lt;/a&gt; 思路与代码&lt;/h2&gt;
-&lt;p&gt;根据之前&lt;a href=&#34;https://ysx.cosine.ren/cn/coding-train/leetcode/bytedance/bytedance-day17/#%E6%80%9D%E8%B7%AF-2&#34;&gt;冲刺春招 - 精选笔面试 66 题大通关 17&lt;/a&gt; 的经验，思路一为先从一个节点往上走将沿途的 vis 置为 true，再从另一个结点往上走，遇到 vis 为 true 的就是最近共同祖先，返回。&lt;/p&gt;
-&lt;figure class=&#34;highlight javascript&#34;&gt;&lt;figcaption data-lang=&#34;javascript&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;/**&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; * @param &amp;#123;TreeNode&amp;#125; root&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; * @param &amp;#123;TreeNode&amp;#125; p&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; * @param &amp;#123;TreeNode&amp;#125; q&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; * @return &amp;#123;TreeNode&amp;#125;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; */&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;token function-variable function&#34;&gt;lowestCommonAncestor&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token parameter&#34;&gt;root&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; p&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; q&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;!&lt;/span&gt;root&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;null&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;let&lt;/span&gt; fa &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Map&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;dfs&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token parameter&#34;&gt;rt&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; pre&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;rt &lt;span class=&#34;token operator&#34;&gt;===&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;null&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        fa&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;set&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;rt&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; pre&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token function&#34;&gt;dfs&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;rt&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;left&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; rt&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token function&#34;&gt;dfs&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;rt&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;right&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; rt&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;15&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;16&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token function&#34;&gt;dfs&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;root&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;null&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;17&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;let&lt;/span&gt; vis &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Map&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;18&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;let&lt;/span&gt; nowv &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; q&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;19&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;while&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;nowv&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;20&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        vis&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;set&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;nowv&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token boolean&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;21&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;fa&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;has&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;nowv&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;22&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            nowv &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; fa&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;nowv&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;23&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;24&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    nowv &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; p&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;25&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;while&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;nowv&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;26&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;vis&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;has&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;nowv&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;27&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; nowv&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;28&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;fa&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;has&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;nowv&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;29&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            nowv &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; fa&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;nowv&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;30&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;31&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;思路二则是利用二叉搜索树的性质，从根节点开始遍历，官方题解如下：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;若当前节点值大于  &lt;code&gt;p&lt;/code&gt;  和  &lt;code&gt;q&lt;/code&gt;  的值，说明  &lt;code&gt;p&lt;/code&gt;  和  &lt;code&gt;q&lt;/code&gt;  应该在当前节点的左子树，将当前节点移动到它的左子节点；&lt;/li&gt;
-&lt;li&gt;若当前节点的值小于  &lt;code&gt;p&lt;/code&gt;  和  &lt;code&gt;q&lt;/code&gt;  的值，说明  &lt;code&gt;p&lt;/code&gt;  和  &lt;code&gt;q&lt;/code&gt;  应该在当前节点的右子树，将当前节点移动到它的右子节点；&lt;/li&gt;
-&lt;li&gt;若等于当前节点的值不满足上述两条要求，那么说明当前节点就是「分岔点」。此时， &lt;code&gt;p&lt;/code&gt;  和  &lt;code&gt;q&lt;/code&gt;  要么在当前节点的不同的子树中，要么其中一个就是当前节点。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&#34;highlight javascript&#34;&gt;&lt;figcaption data-lang=&#34;javascript&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;/**&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; * @param &amp;#123;TreeNode&amp;#125; root&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; * @param &amp;#123;TreeNode&amp;#125; p&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; * @param &amp;#123;TreeNode&amp;#125; q&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; * @return &amp;#123;TreeNode&amp;#125;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; */&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;token function-variable function&#34;&gt;lowestCommonAncestor&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token parameter&#34;&gt;root&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; p&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; q&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;!&lt;/span&gt;root&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;null&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;root&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;val &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt; p&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;val &lt;span class=&#34;token operator&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; root&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;val &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt; q&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;val&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;lowestCommonAncestor&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;root&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;right&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; p&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; q&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;else&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;root&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;val &lt;span class=&#34;token operator&#34;&gt;&gt;&lt;/span&gt; p&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;val &lt;span class=&#34;token operator&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; root&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;val &lt;span class=&#34;token operator&#34;&gt;&gt;&lt;/span&gt; q&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;val&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;lowestCommonAncestor&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;root&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;left&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; p&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; q&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;else&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; root&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h1 id=&#34;剑指-offer-68-ii-二叉树的最近公共祖先&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#剑指-offer-68-ii-二叉树的最近公共祖先&#34;&gt;#&lt;/a&gt; &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vcHJvYmxlbXMvZXItY2hhLXNodS1kZS16dWktamluLWdvbmctZ29uZy16dS14aWFuLWxjb2Yv&#34;&gt;剑指 Offer 68 - II. 二叉树的最近公共祖先&lt;/span&gt;&lt;/h1&gt;
-&lt;p&gt;给定一个二叉树，找到该树中两个指定节点的最近公共祖先。&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9iYWlrZS5iYWlkdS5jb20vaXRlbS8lRTYlOUMlODAlRTglQkYlOTElRTUlODUlQUMlRTUlODUlQjElRTclQTUlOTYlRTUlODUlODgvODkxODgzND9mcj1hbGFkZGlu&#34;&gt;百度百科&lt;/span&gt;中最近公共祖先的定义为：“对于有根树 T 的两个结点 p、q，最近公共祖先表示为一个结点 x，满足 x 是 p、q 的祖先且 x 的深度尽可能大（&lt;strong&gt;一个节点也可以是它自己的祖先&lt;/strong&gt;）。”&lt;/p&gt;
-&lt;p&gt;例如，给定如下二叉树:  root = [3,5,1,6,2,0,8,null,null,7,4]&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ed3ce8239e9e460aad44bd1fedadd2de~tplv-k3u1fbpfcp-zoom-1.image&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;示例 1:&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;输入: root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 1
-输出: 3
-解释: 节点 5 和节点 1 的最近公共祖先是节点 3。
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;示例 2:&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;输入: root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 4
-输出: 5
-解释: 节点 5 和节点 4 的最近公共祖先是节点 5。因为根据定义最近公共祖先节点可以为节点本身。
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;说明:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;所有节点的值都是唯一的。&lt;/li&gt;
-&lt;li&gt;p、q 为不同节点且均存在于给定的二叉树中。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;注意：本题与主站 236 题相同：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vcHJvYmxlbXMvbG93ZXN0LWNvbW1vbi1hbmNlc3Rvci1vZi1hLWJpbmFyeS10cmVlLw==&#34;&gt;https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree/&lt;/span&gt;&lt;/p&gt;
-&lt;h2 id=&#34;思路与代码-3&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#思路与代码-3&#34;&gt;#&lt;/a&gt; 思路与代码&lt;/h2&gt;
-&lt;p&gt;用上题的思路 1 就好了。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;fa&lt;/code&gt;  存每个结点的父节点，从上向下遍历一次初始化 &lt;code&gt;fa&lt;/code&gt; ，再从下往上初始化  &lt;code&gt;vis&lt;/code&gt;&lt;/p&gt;
-&lt;figure class=&#34;highlight javascript&#34;&gt;&lt;figcaption data-lang=&#34;javascript&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;token function-variable function&#34;&gt;lowestCommonAncestor&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token parameter&#34;&gt;root&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; p&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; q&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;!&lt;/span&gt;root&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;null&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;let&lt;/span&gt; fa &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Map&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;dfs&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token parameter&#34;&gt;rt&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; pre&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;rt &lt;span class=&#34;token operator&#34;&gt;===&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;null&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        fa&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;set&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;rt&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; pre&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token function&#34;&gt;dfs&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;rt&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;left&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; rt&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token function&#34;&gt;dfs&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;rt&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;right&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; rt&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token function&#34;&gt;dfs&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;root&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;null&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;let&lt;/span&gt; vis &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Map&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;let&lt;/span&gt; nowv &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; q&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;while&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;nowv&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        vis&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;set&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;nowv&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token boolean&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;15&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;fa&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;has&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;nowv&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;16&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            nowv &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; fa&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;nowv&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;17&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;18&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    nowv &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; p&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;19&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;while&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;nowv&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;20&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;vis&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;has&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;nowv&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;21&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; nowv&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;22&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;fa&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;has&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;nowv&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;23&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            nowv &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; fa&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;nowv&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;24&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;25&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt; ]]></description>
         </item>
     </channel>
 </rss>
